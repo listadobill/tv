@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testador de Lista M3U</title>
+  <style>
+    body {
+      background-color: #000000;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+    }
+
+    .form-container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .form-container label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .form-container input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    .form-container button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #333333;
+      color: #ffffff;
+      border: none;
+      font-size: 18px;
+    }
+
+    .result-container {
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px solid #ffffff;
+    }
+
+    .result-container pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    .video-container {
+      max-width: 800px;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+
+    video {
+      width: 100%;
+    }
+
+    .video-buttons-container {
+      margin-top: 20px;
+    }
+
+    .video-buttons-container button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #333333;
+      color: #ffffff;
+      border: none;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <label for="m3u-input">Insira a lista M3U:</label>
+    <input type="text" id="m3u-input" placeholder="Cole a lista M3U aqui">
+    <button onclick="testPlaylist()">Testar Lista</button>
+  </div>
+
+  <div class="result-container">
+    <pre id="result"></pre>
+  </div>
+
+  <div class="video-container">
+    <video id="video-player" controls></video>
+  </div>
+
+  <div class="video-buttons-container" id="video-buttons-container"></div>
+
+  <script>
+    function testPlaylist() {
+      var m3uInput = document.getElementById("m3u-input");
+      var resultContainer = document.getElementById("result");
+      var videoButtonsContainer = document.getElementById("video-buttons-container");
+      var playlist = m3uInput.value.trim();
+      var videoPlayer = document.getElementById("video-player");
+
+      if (playlist) {
+        fetch(playlist)
+          .then(function(response) {
+            if (response.ok) {
+              response.text().then(function(data) {
+                var lines = data.split("\n");
+                var sources = [];
+                
+                for (var i = 0; i < lines.length; i++) {
+                  var line = lines[i].trim();
+
+                  if (line && !line.startsWith("#")) {
+                    sources.push(line);
+                  }
+                }
+
+                if (sources.length > 0) {
+                  resultContainer.textContent = "A lista M3U está acessível. Fontes encontradas:";
+                  resultContainer.textContent += "\n" + sources.join("\n");
+                  playVideo(sources[0], videoPlayer);
+
+                  videoButtonsContainer.innerHTML = ""; // Limpa os botões existentes
+
+                  // Ordena as fontes em ordem alfabética
+                  sources.sort();
+
+                  // Cria um botão para cada fonte
+                  for (var j = 0; j < sources.length; j++) {
+                    var videoUrl = sources[j];
+                    var videoName = getVideoName(videoUrl);
+
+                    var button = document.createElement("button");
+                    button.textContent = videoName;
+                    button.addEventListener("click", function() {
+                      playVideo(videoUrl, videoPlayer);
+                    });
+
+                    videoButtonsContainer.appendChild(button);
+                  }
+                } else {
+                  resultContainer.textContent = "A lista M3U não contém fontes de vídeo.";
+                }
+              });
+            } else {
+              resultContainer.textContent = "A lista M3U não está acessível.";
+            }
+          })
+          .catch(function(error) {
+            console.log("Erro ao carregar a lista M3U:", error);
+            resultContainer.textContent = "Erro ao carregar a lista M3U.";
+          });
+      } else {
+        resultContainer.textContent = "Por favor, insira uma lista M3U válida.";
+      }
+    }
+
+    function playVideo(videoUrl, videoPlayer) {
+      if (Hls.isSupported()) {
+        var hls = new Hls();
+        hls.loadSource(videoUrl);
+        hls.attachMedia(videoPlayer);
+        hls.on(Hls.Events.MANIFEST_PARSED, function() {
+          videoPlayer.play();
+        });
+      } else if (videoPlayer.canPlayType("application/vnd.apple.mpegurl")) {
+        videoPlayer.src = videoUrl;
+        videoPlayer.addEventListener("loadedmetadata", function() {
+          videoPlayer.play();
+        });
+      }
+    }
+
+    function getVideoName(videoUrl) {
+      var parts = videoUrl.split("/");
+      return parts[parts.length - 1];
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</body>
+</html>
