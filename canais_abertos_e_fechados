@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recomendação de VLC</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>CANAIS DO BILL</h1>
+    
+    <button onclick="openChannelList()">CANAIS DE TV</button>
+    
+    <p>SE NÃO ABRIR O REPRODUTOR, COPIE E COLE MANUALMENTE NOS REPRODUTORES RECOMENDADOS: <a href="https://bit.ly/11941386627" target="_blank">https://bit.ly/11941386627</a></p>
+    
+    <p>Recomendamos a instalação do VLC para reproduzir os canais de TV no Computador e a instalação do Simple IPTV para dispositivos móveis e TV BOX.</p>
+    
+    <button onclick="downloadVLC()">Baixe o VLC para PC aqui</button>
+    
+    <button onclick="downloadSimpleIPTV()">Baixe o Simple IPTV para Móveis e TV BOX aqui</button>
+    
+    <button onclick="copyLink()">Copiar link</button>
+    
+    <script>
+        function openChannelList() {
+            window.location.href = "https://bit.ly/11941386627";
+        }
+        
+        function downloadVLC() {
+            window.open("http://www.videolan.org");
+        }
+        
+        function downloadSimpleIPTV() {
+            window.open("https://drive.google.com/file/d/1vUUCdGvQVjodBOhb0ZfXizZwRJFXNgAi/view?usp=share_link");
+        }
+        
+        function copyLink() {
+            var link = "https://bit.ly/11941386627";
+            navigator.clipboard.writeText(link)
+                .then(function() {
+                    alert("O link foi copiado para a área de transferência. Cole-o no reprodutor de mídia desejado.");
+                })
+                .catch(function() {
+                    alert("Não foi possível copiar o link para a área de transferência. Por favor, copie-o manualmente.");
+                });
+        }
+    </script>
+</body>
+</html>
