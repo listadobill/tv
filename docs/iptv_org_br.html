@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TV DO BILL</title>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <style>
+    body {
+      background-color: #000000;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+    }
+
+    .video-container {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    .video-player {
+      width: 60%;
+      height: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .video-list {
+      width: 40%;
+      padding: 20px;
+      overflow-y: auto;
+      max-height: 100vh;
+      position: relative;
+    }
+
+    .video-list h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .video-list button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #FF0000; /* Vermelho */
+      color: #ffffff;
+      border: none;
+      text-align: left;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="color: #FF0000;">IPTV ORG BR</h1>
+  <div class="video-container">
+    <div class="video-list">
+      <h2></h2>
+      <div id="video-buttons"></div>
+    </div>
+    <video class="video-player" controls></video>
+  </div>
+
+  <script>
+    var videoPlayer = document.querySelector(".video-player");
+    var videoButtons = document.getElementById("video-buttons");
+
+    function loadVideos() {
+      fetch("https://iptv-org.github.io/iptv/countries/br.m3u")
+        .then(function(response) {
+          return response.text();
+        })
+        .then(function(data) {
+          var lines = data.split("\n");
+          var videos = [];
+          var currentVideo = {};
+
+          for (var i = 0; i < lines.length; i++) {
+            var line = lines[i].trim();
+
+            if (line.startsWith("#EXTINF:")) {
+              currentVideo.title = line.substring(line.indexOf(",") + 1);
+            } else if (line && !line.startsWith("#")) {
+              currentVideo.url = line;
+              videos.push(currentVideo);
+              currentVideo = {};
+            }
+          }
+
+          videos.forEach(function(video) {
+            var button = document.createElement("button");
+            button.textContent = video.title;
+            button.addEventListener("click", function() {
+              playVideo(video.url);
+              videoPlayer.requestFullscreen(); // Abrir em tela cheia
+            });
+            videoButtons.appendChild(button);
+          });
+        })
+        .catch(function(error) {
+          console.log("Erro ao carregar a lista de vídeos:", error);
+        });
+    }
+
+    function playVideo(videoUrl) {
+      if (Hls.isSupported()) {
+        var hls = new Hls();
+        hls.loadSource(videoUrl);
+        hls.attachMedia(videoPlayer);
+        hls.on(Hls.Events.MANIFEST_PARSED, function() {
+          videoPlayer.play();
+        });
+      } else if (videoPlayer.canPlayType("application/vnd.apple.mpegurl")) {
+        videoPlayer.src = videoUrl;
+        videoPlayer.addEventListener("loadedmetadata", function() {
+          videoPlayer.play();
+        });
+      }
+    }
+
+    window.addEventListener("load", loadVideos);
+  </script>
+  
+  <button onclick="playVideo('https://iptv-org.github.io/iptv/countries/br.m3u')">TV IPTVCAT</button>
+</body>
+</html>
