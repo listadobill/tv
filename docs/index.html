@@ -32,11 +32,24 @@
       margin-bottom: 20px;
     }
 
+    .observation {
+      margin-top: 20px;
+    }
+
+    .observation p {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
     .button-container {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      margin-top: 10px;
+    }
+
+    .button-container:last-child {
       margin-top: 20px;
     }
 
@@ -50,12 +63,35 @@
       font-size: 18px;
       cursor: pointer;
       margin-bottom: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #b50009;
     }
   </style>
 </head>
 <body>
   <h1>TV DO BILL</h1>
   <h2>A TV grátis para todos</h2>
+
+  <div class="observation">
+    <p>Para computadores, use o player VLC.</p>
+    <div class="button-container">
+      <a href="https://www.videolan.org" class="button">Baixar VLC</a>
+    </div>
+  </div>
+
+  <div class="observation">
+    <p>Para Android, use o Simple Player IPTV.</p>
+    <div class="button-container">
+      <a href="https://drive.google.com/file/d/1VIVHTBWVMHEj6Wc9jVU1LP6vVtsQKkg1/view?usp=share_link" class="button">Baixar Simple Player IPTV</a>
+    </div>
+  </div>
+
+  <div class="observation">
+    <p>Listas de Canais</p>
+  </div>
 
   <div class="button-container">
     <a href="https://listadobill.github.io/tv/m3u" class="button">Listas para Players externos</a>
