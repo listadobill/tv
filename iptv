@@ -1,0 +1,12 @@
+#EXTM3U
+#EXTINF:0 tvg-id="tvdoBill" tvg-name="TV do Bill" tvg-logo="logo_tvdoBill.png" group-title="Canais",TV do Bill
+http://exemplo.com/tvdoBill.m3u8
+
+#################### MEUS CANAIS #################
+
+#EXTINF:0 tvg-id="tvdoBill" tvg-name="TV do Bill" tvg-logo="logo_tvdoBill.png" group-title="Canais", CANAIS DO BILL
+http://exemplo.com/tvdoBill.m3u8
+
+#EXTINF:0 tvg-id="tvdoBill" tvg-name="CATEDRAL DO ROCK" tvg-logo="logo_tvdoBill.png" group-title="Canais", CATEDRAL DO ROCK
+https://stmv1.srvstm.com/catedraldorock/catedraldorock/chunklist_w76877264.m3u8
+    
