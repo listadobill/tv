@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Busca de Filmes e Séries no Internet Archive</title>
+  <style>
+    .cover {
+      width: 150px;
+      height: 200px;
+      margin: 10px;
+      float: left;
+    }
+  </style>
+</head>
+<body>
+  <h1>Busca de Filmes e Séries no Internet Archive</h1>
+  
+  <form>
+    <input type="text" id="searchInput" placeholder="Digite o termo de busca">
+    <button type="button" onclick="searchMovies()">Buscar</button>
+  </form>
+
+  <div id="results"></div>
+
+  <script>
+    function searchMovies() {
+      var searchQuery = document.getElementById("searchInput").value;
+
+      var url = "https://archive.org/advancedsearch.php?q=";
+      url += encodeURIComponent(searchQuery);
+      url += "&and[]=mediatype%3A%22movies%22&and[]=languageSorter%3A%22Portuguese%22&sort=-week&page=4&output=json";
+
+      fetch(url)
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(data) {
+          displayResults(data.response.docs);
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+    }
+
+    function displayResults(results) {
+      var resultsContainer = document.getElementById("results");
+      resultsContainer.innerHTML = "";
+
+      results.forEach(function(result) {
+        var coverUrl = "https://archive.org/services/img/" + result.identifier;
+        var title = result.title;
+
+        var coverDiv = document.createElement("div");
+        coverDiv.className = "cover";
+
+        var coverImg = document.createElement("img");
+        coverImg.src = coverUrl;
+        coverImg.alt = title;
+
+        coverDiv.appendChild(coverImg);
+        resultsContainer.appendChild(coverDiv);
+      });
+    }
+  </script>
+</body>
+</html>
