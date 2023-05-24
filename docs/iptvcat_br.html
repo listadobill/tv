@@ -59,7 +59,7 @@
       <h2></h2>
       <div id="video-buttons"></div>
     </div>
-    <video class="video-player" controls></video>
+    <video class="video-player" controls autoplay loop></video>
   </div>
 
   <script>
@@ -120,6 +120,12 @@
     }
 
     window.addEventListener("load", loadVideos);
+
+    // Reiniciar o vídeo automaticamente ao atingir o final
+    videoPlayer.addEventListener("ended", function() {
+      videoPlayer.currentTime = 0;
+      videoPlayer.play();
+    });
   </script>
   
 </body>
