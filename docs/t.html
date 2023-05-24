@@ -48,15 +48,21 @@
       results.forEach(function(result) {
         var coverUrl = "https://archive.org/services/img/" + result.identifier;
         var title = result.title;
+        var itemUrl = "https://archive.org/details/" + result.identifier;
 
         var coverDiv = document.createElement("div");
         coverDiv.className = "cover";
+
+        var coverLink = document.createElement("a");
+        coverLink.href = itemUrl;
+        coverLink.target = "_blank";
 
         var coverImg = document.createElement("img");
         coverImg.src = coverUrl;
         coverImg.alt = title;
 
-        coverDiv.appendChild(coverImg);
+        coverLink.appendChild(coverImg);
+        coverDiv.appendChild(coverLink);
         resultsContainer.appendChild(coverDiv);
       });
     }
