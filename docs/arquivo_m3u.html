@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gerador de arquivo .m3u</title>
+  <script>
+    window.onload = function() {
+      // URLs das fontes IPTV
+      var urls = [
+        "https://list.iptvcat.com/my_list/61173e0c39375c2a65a69fd1466e40bc.m3u8",
+        "https://iptv-org.github.io/iptv/index.country.m3u",
+        "https://listadobill.github.io/tv/canais"
+      ];
+
+      var combinedContent = "";
+      var unavailableSources = [];
+
+      // Função para obter o conteúdo de uma URL
+      function getIPTVContent(url, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", url);
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+              callback(xhr.responseText);
+            } else {
+              unavailableSources.push(url);
+              callback(null);
+            }
+          }
+        };
+        xhr.send();
+      }
+
+      // Função para combinar o conteúdo das URLs IPTV
+      function combineContent() {
+        var completedRequests = 0;
+
+        urls.forEach(function(url) {
+          getIPTVContent(url, function(content) {
+            if (content) {
+              combinedContent += content + "\n";
+            }
+            completedRequests++;
+
+            // Verifica se todas as solicitações foram concluídas
+            if (completedRequests === urls.length) {
+              generateM3UFile(combinedContent);
+              displayUnavailableSources();
+            }
+          });
+        });
+      }
+
+      // Função para gerar o arquivo .m3u e permitir o download
+      function generateM3UFile(content) {
+        var element = document.createElement("a");
+        var file = new Blob([content], {type: "application/octet-stream"});
+        element.href = URL.createObjectURL(file);
+        element.download = "canaisdobill.m3u"; // Altere o nome do arquivo aqui
+        element.style.display = "none";
+        document.body.appendChild(element);
+        element.click();
+        document.body.removeChild(element);
+      }
+
+      // Função para exibir as fontes indisponíveis na página
+      function displayUnavailableSources() {
+        var container = document.getElementById("unavailable-sources");
+        if (unavailableSources.length > 0) {
+          var warning = document.createElement("p");
+          warning.className = "warning";
+          warning.textContent = "As seguintes fontes estão indisponíveis:";
+          container.appendChild(warning);
+
+          unavailableSources.forEach(function(url) {
+            var source = document.createElement("p");
+            source.className = "warning";
+            source.textContent = url;
+            container.appendChild(source);
+          });
+        }
+      }
+
+      // Inicia a combinação do conteúdo
+      combineContent();
+    };
+  </script>
+</head>
+<body>
+  <h1>Gerador de arquivo .m3u</h1>
+  <div id="unavailable-sources"></div>
+  <p>Clique no botão abaixo para gerar e baixar o arquivo .m3u combinado:</p>
+  <button onclick="combineContent()">Gerar e Baixar</button>
+</body>
+</html>
