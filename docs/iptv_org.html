@@ -59,7 +59,7 @@
       <h2></h2>
       <div id="video-buttons"></div>
     </div>
-    <video class="video-player" controls></video>
+    <video class="video-player" controls loop></video>
   </div>
 
   <script>
@@ -117,6 +117,18 @@
           videoPlayer.play();
         });
       }
+
+      videoPlayer.addEventListener("ended", function() {
+        // Reiniciar o vídeo ao atingir o final
+        videoPlayer.currentTime = 0;
+        videoPlayer.play();
+      });
+
+      videoPlayer.addEventListener("error", function() {
+        // Reiniciar o vídeo em caso de erro
+        videoPlayer.currentTime = 0;
+        videoPlayer.play();
+      });
     }
 
     window.addEventListener("load", loadVideos);
