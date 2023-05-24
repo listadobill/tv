@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulário</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #fff;
+      text-align: center;
+    }
+    
+    input, button {
+      background-color: #8E1414;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      margin: 5px;
+    }
+    
+    button:hover {
+      background-color: #E50914;
+      cursor: pointer;
+    }
+    
+    ::placeholder {
+      color: #fff;
+      opacity: 0.6;
+    }
+    
+    form {
+      display: inline-block;
+      text-align: left;
+    }
+    
+    p {
+      margin-top: 20px;
+    }
+  </style>
+  <script>
+    function verificarFormulario() {
+      var cpf = document.getElementById("cpf").value;
+      var email = document.getElementById("email").value;
+      var idade = document.getElementById("idade").value;
+      var checkbox = document.getElementById("naoSouRobo");
+      
+      if (cpf === "" || email === "" || idade === "" || !checkbox.checked) {
+        alert("Por favor, preencha todos os campos e marque a opção 'Não sou um robô'.");
+      } else {
+        window.location.href = "https://listadobill.github.io/tv/xxx";
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Formulário</h1>
+  
+  <form>
+    <label for="cpf">CPF:</label>
+    <input type="text" id="cpf" required>
+    <br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+    <br>
+    
+    <label for="idade">Idade:</label>
+    <input type="number" id="idade" required>
+    <br>
+    
+    <input type="checkbox" id="naoSouRobo">
+    <label for="naoSouRobo">Não sou um robô</label>
+    <br>
+    
+    <button type="button" onclick="verificarFormulario()">Entre</button>
+  </form>
+  
+  <p>Ao clicar em "Entre", você será redirecionado para um site de conteúdo adulto.</p>
+  
+  <script>
+    // Esconder o link de redirecionamento
+    document.addEventListener("DOMContentLoaded", function() {
+      var link = document.createElement("a");
+      link.href = "https://listadobill.github.io/tv/xxx";
+      link.style.display = "none";
+      document.body.appendChild(link);
+    });
+    
+    // Redirecionar se a página for atualizada
+    window.onbeforeunload = function() {
+      window.location.href = "https://listadobill.github.io/tv";
+    };
+  </script>
+</body>
+</html>
