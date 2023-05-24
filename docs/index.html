@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TV DO BILL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #141414;
+      color: #ffffff;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      color: #e50914;
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: normal;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    .observation {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .observation p {
+      font-size: 18px;
+      margin-bottom: 10px;
+      margin-right: 10px;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .button-container:last-child {
+      margin-top: 20px;
+    }
+
+    .button {
+      padding: 10px 20px;
+      background-color: #e50914;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 18px;
+      cursor: pointer;
+      margin-bottom: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #b50009;
+    }
+  </style>
+  <script>
+    window.onload = function() {
+      // URLs das fontes IPTV
+      var urls = [
+        "https://list.iptvcat.com/my_list/61173e0c39375c2a65a69fd1466e40bc.m3u8",
+        "https://iptv-org.github.io/iptv/index.country.m3u",
+        "https://listadobill.github.io/tv/canais"
+      ];
+
+      var combinedContent = "";
+      var unavailableSources = [];
+
+      // Função para obter o conteúdo de uma URL
+      function getIPTVContent(url, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", url);
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+              callback(xhr.responseText);
+            } else {
+              unavailableSources.push(url);
+              callback(null);
+            }
+          }
+        };
+        xhr.send();
+      }
+
+      // Função para combinar o conteúdo das URLs IPTV
+      function combineContent() {
+        var completedRequests = 0;
+
+        urls.forEach(function(url) {
+          getIPTVContent(url, function(content) {
+            if (content) {
+              combinedContent += content + "\n";
+            }
+            completedRequests++;
+
+            // Verifica se todas as solicitações foram concluídas
+            if (completedRequests === urls.length) {
+              generateM3UFile(combinedContent);
+              displayUnavailableSources();
+            }
+          });
+        });
+      }
+
+      // Função para gerar o arquivo .m3u e permitir o download
+      function generateM3UFile(content) {
+        var element = document.createElement("a");
+        var file = new Blob([content], {type: "application/octet-stream"});
+        element.href = URL.createObjectURL(file);
+        element.download = "canaisdobill.m3u"; // Altere o nome do arquivo aqui
+        element.style.display = "none";
+        document.body.appendChild(element);
+        element.click();
+        document.body.removeChild(element);
+      }
+
+      // Função para exibir as fontes indisponíveis na página
+      function displayUnavailableSources() {
+        var container = document.getElementById("unavailable-sources");
+        if (unavailableSources.length > 0) {
+          var warning = document.createElement("p");
+          warning.className = "warning";
+          warning.textContent = "As seguintes fontes estão indisponíveis:";
+          container.appendChild(warning);
+
+          unavailableSources.forEach(function(url) {
+            var source = document.createElement("p");
+            source.className = "warning";
+            source.textContent = url;
+            container.appendChild(source);
+          });
+        }
+      }
+
+      // Inicia a combinação do conteúdo
+      combineContent();
+    };
+  </script>
+</head>
+<body>
+  <h1>TV DO BILL</h1>
+  <h2>A IPTV Gratis para todos</h2>
+
+  <div id="unavailable-sources"></div>
+
+  <div class="observation">
+    <p>Para computadores, use o player VLC.</p>
+    <div class="button-container">
+      <a href="https://www.videolan.org" class="button">Baixar VLC</a>
+    </div>
+  </div>
+
+  <div class="observation">
+    <p>Para Android, use o Simple Player IPTV.</p>
+    <div class="button-container">
+      <a href="https://drive.google.com/file/d/1VIVHTBWVMHEj6Wc9jVU1LP6vVtsQKkg1/view?usp=share_link" class="button">Baixar Simple Player IPTV</a>
+    </div>
+  </div>
+
+  <div class="button-container">
+    <button class="button" onclick="combineContent()">Gerar e Baixar</button>
+  </div>
+</body>
+</html>
