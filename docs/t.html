@@ -6,6 +6,10 @@
     pre {
       white-space: pre-wrap;
     }
+    .warning {
+      color: red;
+      font-weight: bold;
+    }
   </style>
   <script>
     window.onload = function() {
@@ -17,14 +21,20 @@
       ];
 
       var combinedContent = "";
+      var unavailableSources = [];
 
       // Função para obter o conteúdo de uma URL
       function getIPTVContent(url, callback) {
         var xhr = new XMLHttpRequest();
         xhr.open("GET", url);
         xhr.onreadystatechange = function() {
-          if (xhr.readyState === 4 && xhr.status === 200) {
-            callback(xhr.responseText);
+          if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+              callback(xhr.responseText);
+            } else {
+              unavailableSources.push(url);
+              callback(null);
+            }
           }
         };
         xhr.send();
@@ -36,12 +46,15 @@
 
         urls.forEach(function(url) {
           getIPTVContent(url, function(content) {
-            combinedContent += content + "\n";
+            if (content) {
+              combinedContent += content + "\n";
+            }
             completedRequests++;
 
             // Verifica se todas as solicitações foram concluídas
             if (completedRequests === urls.length) {
               displayCombinedContent(combinedContent);
+              displayUnavailableSources();
             }
           });
         });
@@ -55,6 +68,24 @@
         container.appendChild(pre);
       }
 
+      // Função para exibir as fontes indisponíveis na página
+      function displayUnavailableSources() {
+        var container = document.getElementById("unavailable-sources");
+        if (unavailableSources.length > 0) {
+          var warning = document.createElement("p");
+          warning.className = "warning";
+          warning.textContent = "As seguintes fontes estão indisponíveis:";
+          container.appendChild(warning);
+
+          unavailableSources.forEach(function(url) {
+            var source = document.createElement("p");
+            source.className = "warning";
+            source.textContent = url;
+            container.appendChild(source);
+          });
+        }
+      }
+
       // Inicia a combinação do conteúdo
       combineContent();
     };
@@ -62,6 +93,7 @@
 </head>
 <body>
   <h1>Conteúdo .m3u combinado</h1>
+  <div id="unavailable-sources"></div>
   <div id="combined-content"></div>
 </body>
 </html>
