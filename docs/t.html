@@ -1,55 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Listas IPTV</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <title>Conteúdo .m3u combinado</title>
+  <style>
+    pre {
+      white-space: pre-wrap;
+    }
+  </style>
+  <script>
+    window.onload = function() {
+      // URLs das fontes IPTV
+      var urls = [
+        "https://list.iptvcat.com/my_list/61173e0c39375c2a65a69fd1466e40bc.m3u8",
+        "https://iptv-org.github.io/iptv/index.country.m3u",
+        "https://raw.githubusercontent.com/listadobill/tv/main/pluto.m3u"
+      ];
+
+      var combinedContent = "";
+
+      // Função para obter o conteúdo de uma URL
+      function getIPTVContent(url, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", url);
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            callback(xhr.responseText);
+          }
+        };
+        xhr.send();
+      }
+
+      // Função para combinar o conteúdo das URLs IPTV
+      function combineContent() {
+        var completedRequests = 0;
+
+        urls.forEach(function(url) {
+          getIPTVContent(url, function(content) {
+            combinedContent += content + "\n";
+            completedRequests++;
+
+            // Verifica se todas as solicitações foram concluídas
+            if (completedRequests === urls.length) {
+              displayCombinedContent(combinedContent);
+            }
+          });
+        });
+      }
+
+      // Função para exibir o conteúdo combinado na página
+      function displayCombinedContent(content) {
+        var container = document.getElementById("combined-content");
+        var pre = document.createElement("pre");
+        pre.textContent = content;
+        container.appendChild(pre);
+      }
+
+      // Inicia a combinação do conteúdo
+      combineContent();
+    };
+  </script>
 </head>
 <body>
-    <h1>Listas IPTV</h1>
-
-    <div>
-        <textarea id="m3uContent" rows="10" cols="50"></textarea>
-    </div>
-
-    <script>
-        function loadM3UContent() {
-            var catiptvURL = "https://list.iptvcat.com/my_list/61173e0c39375c2a65a69fd1466e40bc.m3u8";
-            var iptvorgURL = "https://iptv-org.github.io/iptv/index.country.m3u";
-            var plutoURL = "https://i.mjh.nz/PlutoTV/br.m3u8";
-
-            var urls = [catiptvURL, iptvorgURL, plutoURL];
-            var allChannels = [];
-
-            var requestsCompleted = 0;
-
-            urls.forEach(function(url) {
-                $.get(url, function(data) {
-                    var lines = data.split("\n");
-
-                    lines.forEach(function(line) {
-                        if (line.startsWith("#EXTINF")) {
-                            var channelInfo = line.split(",");
-                            var channelName = channelInfo[1];
-                            allChannels.push(channelName);
-                        }
-                    });
-
-                    requestsCompleted++;
-
-                    if (requestsCompleted === urls.length) {
-                        var content = "#EXTM3U\n";
-                        allChannels.sort();
-                        allChannels.forEach(function(channel) {
-                            content += "#EXTINF:-1," + channel + "\n";
-                        });
-
-                        document.getElementById('m3uContent').value = content;
-                    }
-                });
-            });
-        }
-
-        loadM3UContent();
-    </script>
+  <h1>Conteúdo .m3u combinado</h1>
+  <div id="combined-content"></div>
 </body>
 </html>
