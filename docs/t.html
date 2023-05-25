@@ -107,6 +107,7 @@
                     function playChannel(url) {
                         videoPlayer.src = url;
                         videoPlayer.play();
+                        videoPlayer.requestFullscreen();
                     }
                 })
                 .catch(function(error) {
