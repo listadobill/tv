@@ -54,6 +54,17 @@
             width: 80%;
             max-width: 800px;
         }
+
+        #fullscreen-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            background-color: transparent;
+            border: none;
+            color: #ffffff;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -64,6 +75,7 @@
         </div>
         <div id="iptv-player-container">
             <video id="iptv-player" controls></video>
+            <button id="fullscreen-button" onclick="toggleFullscreen()">&#x26F6;</button>
         </div>
     </div>
 
@@ -107,13 +119,42 @@
                     function playChannel(url) {
                         videoPlayer.src = url;
                         videoPlayer.play();
-                        videoPlayer.requestFullscreen();
                     }
                 })
                 .catch(function(error) {
                     console.error("Erro ao carregar a playlist IPTV:", error);
                 });
         });
+
+        function toggleFullscreen() {
+            var videoPlayer = document.getElementById("iptv-player");
+
+            if (videoPlayer.requestFullscreen) {
+                if (!document.fullscreenElement) {
+                    videoPlayer.requestFullscreen();
+                } else {
+                    document.exitFullscreen();
+                }
+            } else if (videoPlayer.mozRequestFullScreen) { // Firefox
+                if (!document.mozFullScreenElement) {
+                    videoPlayer.mozRequestFullScreen();
+                } else {
+                    document.mozCancelFullScreen();
+                }
+            } else if (videoPlayer.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                if (!document.webkitFullscreenElement) {
+                    videoPlayer.webkitRequestFullscreen();
+                } else {
+                    document.webkitExitFullscreen();
+                }
+            } else if (videoPlayer.msRequestFullscreen) { // IE/Edge
+                if (!document.msFullscreenElement) {
+                    videoPlayer.msRequestFullscreen();
+                } else {
+                    document.msExitFullscreen();
+                }
+            }
+        }
     </script>
 </body>
 </html>
