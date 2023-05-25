@@ -10,7 +10,7 @@
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #222;
+            background-color: #000;
             color: #fff;
         }
 
@@ -24,7 +24,7 @@
 
         #channel-list {
             width: 300px;
-            background-color: #333;
+            background-color: #222;
             overflow-y: auto;
             padding: 20px;
             box-sizing: border-box;
@@ -32,8 +32,16 @@
 
         #channel-list h2 {
             font-size: 20px;
-            margin-top: 0;
+            margin: 0;
+            color: #f00;
+            text-align: center;
+        }
+
+        #channel-list p {
+            font-size: 16px;
+            margin: 0;
             color: #fff;
+            text-align: center;
         }
 
         #channel-list button {
@@ -52,7 +60,7 @@
 
         #channel-list button:hover,
         #channel-list button:focus {
-            background-color: #fff;
+            background-color: #f00;
             color: #000;
         }
 
@@ -75,10 +83,17 @@
         #fullscreen-button {
             font-size: 20px;
             padding: 10px 20px;
-            background-color: #fc0;
+            background-color: #f00;
             border: none;
-            color: #222;
+            color: #000;
             cursor: pointer;
+        }
+
+        #tv-slogan {
+            font-size: 16px;
+            margin-top: 10px;
+            color: #fff;
+            text-align: center;
         }
     </style>
 </head>
@@ -86,10 +101,12 @@
     <div id="container">
         <div id="channel-list">
             <h2>TV DO BILL</h2>
+            <p>A TV de Graça de Verdade!</p>
             <div id="channel-buttons"></div>
         </div>
         <div id="iptv-player-container">
             <video id="iptv-player" controls loop></video>
+            <div id="tv-slogan">A TV de Graça de Verdade!</div>
             <button id="fullscreen-button" onclick="toggleFullscreen()">PARA ABRIR TELA CHEIA CLIC NO CANTO INFERIOR DIREITO DA TELA DE REPRODUÇÃO</button>
         </div>
     </div>
@@ -125,14 +142,6 @@
                     channels.forEach(function(channel) {
                         var button = document.createElement("button");
                         button.textContent = channel.name.toUpperCase();
-                        button.addEventListener("mouseover", function() {
-                            button.style.backgroundColor = "#fff";
-                            button.style.color = "#000";
-                        });
-                        button.addEventListener("mouseout", function() {
-                            button.style.backgroundColor = "transparent";
-                            button.style.color = "#fff";
-                        });
                         button.addEventListener("click", function() {
                             Channel(channel.url);
                         });
