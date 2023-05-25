@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Player IPTV</title>
+</head>
+<body>
+    <h1>Lista de Canais IPTV</h1>
+    <ul id="channel-list"></ul>
+    <video id="iptv-player" controls autoplay></video>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var playlistUrl = "https://raw.githubusercontent.com/listadobill/tv/main/c.m3u";
+            var channelList = document.getElementById("channel-list");
+            var videoPlayer = document.getElementById("iptv-player");
+
+            fetch(playlistUrl)
+                .then(function(response) {
+                    return response.text();
+                })
+                .then(function(data) {
+                    var playlistLines = data.split("\n");
+                    var channels = [];
+                    var currentChannel = null;
+
+                    for (var i = 0; i < playlistLines.length; i++) {
+                        var line = playlistLines[i].trim();
+                        if (line.startsWith("#EXTINF:")) {
+                            // Início de um novo canal
+                            if (currentChannel !== null) {
+                                channels.push(currentChannel);
+                            }
+                            currentChannel = {
+                                name: line.substr(8),
+                                url: ""
+                            };
+                        } else if (line.startsWith("http")) {
+                            // URL do canal
+                            currentChannel.url = line;
+                        }
+                    }
+
+                    if (currentChannel !== null) {
+                        channels.push(currentChannel);
+                    }
+
+                    // Exibir a lista de canais
+                    for (var j = 0; j < channels.length; j++) {
+                        var channelItem = document.createElement("li");
+                        channelItem.textContent = channels[j].name;
+                        channelItem.addEventListener("click", function(index) {
+                            return function() {
+                                playChannel(index);
+                            };
+                        }(j));
+                        channelList.appendChild(channelItem);
+                    }
+
+                    // Função para reproduzir o canal selecionado
+                    function playChannel(index) {
+                        var channelUrl = channels[index].url;
+                        videoPlayer.src = channelUrl;
+                    }
+                })
+                .catch(function(error) {
+                    console.error("Erro ao carregar a playlist IPTV:", error);
+                });
+        });
+    </script>
+</body>
+</html>
