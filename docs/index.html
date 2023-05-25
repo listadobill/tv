@@ -71,11 +71,40 @@
             justify-content: center;
             background-color: #111;
             padding: 20px;
+            position: relative;
         }
 
         #iptv-player {
             width: 100%;
             height: 100%;
+        }
+
+        #reconnect-overlay {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 30px;
+            height: 30px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #reconnect-overlay::after {
+            content: "";
+            width: 10px;
+            height: 10px;
+            border: 2px solid #fff;
+            border-right-color: transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
 
         #fullscreen-reminder {
@@ -98,7 +127,8 @@
             <div id="channel-buttons"></div>
         </div>
         <div id="iptv-player-container">
-            <video id="iptv-player" controls autoplay loop></video>
+            <div id="reconnect-overlay"></div>
+            <video id="iptv-player" controls autoplay></video>
         </div>
     </div>
 
@@ -107,6 +137,9 @@
             var playlistUrl = "https://raw.githubusercontent.com/listadobill/tv/main/c.m3u";
             var channelButtonsContainer = document.getElementById("channel-buttons");
             var videoPlayer = document.getElementById("iptv-player");
+            var reconnectOverlay = document.getElementById("reconnect-overlay");
+
+            var currentChannelUrl = ""; // Variável para armazenar a URL do canal atual
 
             fetch(playlistUrl)
                 .then(function(response) {
@@ -134,7 +167,7 @@
                         var button = document.createElement("button");
                         button.textContent = channel.name.toUpperCase();
                         button.addEventListener("click", function() {
-                            Channel(channel.url);
+                            playChannel(channel.url);
                         });
                         channelButtonsContainer.appendChild(button);
                     });
@@ -143,24 +176,40 @@
                     console.error("Erro ao carregar a playlist IPTV:", error);
                 });
 
-            function Channel(url) {
+            function playChannel(url) {
+                currentChannelUrl = url;
                 videoPlayer.src = url;
                 videoPlayer.play();
             }
 
             videoPlayer.addEventListener("ended", function() {
-                restartVideo();
+                reconnectVideo();
             });
 
-            function restartVideo() {
-                videoPlayer.currentTime = 0;
-                videoPlayer.play();
+            videoPlayer.addEventListener("error", function() {
+                reconnectVideo();
+            });
+
+            function reconnectVideo() {
+                if (currentChannelUrl) {
+                    videoPlayer.src = "";
+                    videoPlayer.load();
+                    videoPlayer.src = currentChannelUrl;
+                    videoPlayer.play();
+                    showReconnectOverlay();
+                }
             }
 
-            videoPlayer.addEventListener("error", function() {
-                // Lógica para lidar com a falha na reprodução do vídeo
-                // Pode ser exibir uma mensagem de erro, tentar reconectar, carregar outro vídeo, etc.
-                console.error("Erro na reprodução do vídeo");
+            function showReconnectOverlay() {
+                reconnectOverlay.style.display = "block";
+            }
+
+            function hideReconnectOverlay() {
+                reconnectOverlay.style.display = "none";
+            }
+
+            videoPlayer.addEventListener("canplay", function() {
+                hideReconnectOverlay();
             });
         });
     </script>
