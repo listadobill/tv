@@ -2141,3 +2141,1638 @@ http://castlempire.site:8080/UserTest1Brasil_00n/6KneMfnELkrN/183452
 #EXTINF:-1 tvg-id="" tvg-name="VIP_BR:VIVA HD" tvg-logo="" group-title="Brasil OP2",VIP_BR:VIVA HD
 http://castlempire.site:8080/UserTest2Brasil_00n/F82gA72YLEFn/183454
 
+#EXTM3U
+#EXTINF:-1,GLOBO SP FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/715
+#EXTINF:-1,GLOBO SP FHD H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/714
+#EXTINF:-1,GLOBO SP HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/741
+#EXTINF:-1,GLOBO SP SD 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/492
+#EXTINF:-1,GLOBO RJ FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/362
+#EXTINF:-1,GLOBO RJ H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/76673
+#EXTINF:-1,GLOBO RJ HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/335
+#EXTINF:-1,GLOBO RJ SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/491
+#EXTINF:-1,89 FM ROCK (RADIOS)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/185
+#EXTINF:-1,A&E FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/851
+#EXTINF:-1,A&E FHD H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/210
+#EXTINF:-1,A&E HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/1
+#EXTINF:-1,A&E SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/444
+#EXTINF:-1,ALL SPORTS FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/31745
+#EXTINF:-1,AMC FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/840
+#EXTINF:-1,AMC FHD H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/211
+#EXTINF:-1,AMC HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/2
+#EXTINF:-1,AMC SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/445
+#EXTINF:-1,ANIMAL PLANET FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/804
+#EXTINF:-1,ANIMAL PLANET H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/212
+#EXTINF:-1,ANIMAL PLANET HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/3
+#EXTINF:-1,ANIMAL PLANET SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/446
+#EXTINF:-1,ANTENA 1 FM ( RADIOS)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/177
+#EXTINF:-1,ARTE 1 FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/876
+#EXTINF:-1,ARTE 1 HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/130
+#EXTINF:-1,ARTE 1 SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/2956
+#EXTINF:-1,AXN FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/835
+#EXTINF:-1,AXN FHD H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/213
+#EXTINF:-1,AXN HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/4
+#EXTINF:-1,AXN SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/447
+#EXTINF:-1,BABY TV HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/448
+#EXTINF:-1,BABY TV SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/76674
+#EXTINF:-1,BAND BAHIA HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/449
+#EXTINF:-1,BAND BSB HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/319
+#EXTINF:-1,BAND CAMPINAS FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/388
+#EXTINF:-1,BAND CAMPINAS HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/320
+#EXTINF:-1,BAND CURITIBA FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/408
+#EXTINF:-1,BAND CURITIBA HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/358
+#EXTINF:-1,BAND MINAS FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/311
+#EXTINF:-1,BAND MINAS HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/310
+#EXTINF:-1,BAND NEWS FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/866
+#EXTINF:-1,BAND NEWS FHD H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/214
+#EXTINF:-1,BAND NEWS HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/103
+#EXTINF:-1,BAND NEWS SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/451
+#EXTINF:-1,BAND RJ FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/307
+#EXTINF:-1,BAND RJ HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/321
+#EXTINF:-1,BAND RS HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/322
+#EXTINF:-1,BAND SERGIPE HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/323
+#EXTINF:-1,BAND SP FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/868
+#EXTINF:-1,BAND SP FHD H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/76679
+#EXTINF:-1,BAND SP HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/324
+#EXTINF:-1,BAND SP SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/450
+#EXTINF:-1,BAND SPORTS FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/768
+#EXTINF:-1,BAND SPORTS H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/215
+#EXTINF:-1,BAND SPORTS HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/5
+#EXTINF:-1,BAND SPORTS SD 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/452
+#EXTINF:-1,BAND TV GOIANIA H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/299
+#EXTINF:-1,BAND TV GOIÂNIA HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/87
+#EXTINF:-1,ABC NEWS
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/880
+#EXTINF:-1,BBC WORLD HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/134
+#EXTINF:-1,BH FM (RADIOS)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/192
+#EXTINF:-1,BIS FHD 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/881
+#EXTINF:-1,BIS H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/216
+#EXTINF:-1,BIS HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/6
+#EXTINF:-1,BIS SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/453
+#EXTINF:-1,BORA FILMES
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/63052
+#EXTINF:-1,CANAL BRASIL FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/883
+#EXTINF:-1,CANAL BRASIL H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/218
+#EXTINF:-1,CANAL BRASIL HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/135
+#EXTINF:-1,CANAL BRASIL SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/455
+#EXTINF:-1,CANAL DO BOI
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/456
+#EXTINF:-1,CANAL RURAL
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/198
+#EXTINF:-1,CANAL SONY FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/219
+#EXTINF:-1,CANAL SONY FHD H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/844
+#EXTINF:-1,CANAL SONY HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/7
+#EXTINF:-1,CANAL SONY SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/457
+#EXTINF:-1,CANÇÃO NOVA HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/199
+#EXTINF:-1,CANÇÃO NOVA SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/458
+#EXTINF:-1,CARTOON NETWORK FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/823
+#EXTINF:-1,CARTOON NETWORK H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/220
+#EXTINF:-1,CARTOON NETWORK HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/8
+#EXTINF:-1,CARTOON NETWORK SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/459
+#EXTINF:-1,CARTOONITO FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/822
+#EXTINF:-1,CARTOONITO H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/217
+#EXTINF:-1,CARTOONITO HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/122
+#EXTINF:-1,CARTOONITO SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/454
+#EXTINF:-1,CBN (RADIOS)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/178
+#EXTINF:-1,CHEFE TV
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/161
+#EXTINF:-1,CIDADE FM (RADIOS)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/190
+#EXTINF:-1,CINE SKY 1
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/686
+#EXTINF:-1,CINE SKY 2
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/687
+#EXTINF:-1,CINE SKY 3
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/688
+#EXTINF:-1,CINE SKY 4
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/689
+#EXTINF:-1,CINE SKY 5
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/690
+#EXTINF:-1,CINEMAX FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/841
+#EXTINF:-1,CINEMAX FHD H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/221
+#EXTINF:-1,CINEMAX HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/9
+#EXTINF:-1,CINEMAX SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/460
+#EXTINF:-1,CLUBINHO FUN
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/63863
+#EXTINF:-1,CNN BRASIL FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/306
+#EXTINF:-1,CNN BRASIL HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/102
+#EXTINF:-1,CNN BRASIL SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/588
+#EXTINF:-1,COMBATE FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/784
+#EXTINF:-1,COMBATE H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/222
+#EXTINF:-1,COMBATE HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/10
+#EXTINF:-1,COMBATE SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/461
+#EXTINF:-1,COMEDY CENTRAL FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/858
+#EXTINF:-1,COMEDY CENTRAL H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/223
+#EXTINF:-1,COMEDY CENTRAL HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/11
+#EXTINF:-1,COMEDY CENTRAL SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/462
+#EXTINF:-1,LIBERTADORES (JOGO 1)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/117
+#EXTINF:-1,LIBERTADORES (JOGO 2)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/118
+#EXTINF:-1,LIBERTADORES (JOGO 3)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/120
+#EXTINF:-1,LIBERTADORES (JOGO 4)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/147
+#EXTINF:-1,Curta !
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/463
+#EXTINF:-1,DAZN 01 HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/325
+#EXTINF:-1,DAZN 02 HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/326
+#EXTINF:-1,DAZN 03 HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/327
+#EXTINF:-1,DAZN 04 HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/111
+#EXTINF:-1,DISCOVERY CHANNEL FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/808
+#EXTINF:-1,DISCOVERY CHANNEL H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/224
+#EXTINF:-1,DISCOVERY CHANNEL HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/12
+#EXTINF:-1,DISCOVERY CHANNEL SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/464
+#EXTINF:-1,DISCOVERY H&H FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/807
+#EXTINF:-1,DISCOVERY H&H H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/226
+#EXTINF:-1,DISCOVERY H&H HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/14
+#EXTINF:-1,DISCOVERY H&H SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/465
+#EXTINF:-1,DISCOVERY KIDS FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/824
+#EXTINF:-1,DISCOVERY KIDS H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/227
+#EXTINF:-1,DISCOVERY KIDS HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/15
+#EXTINF:-1,DISCOVERY KIDS SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/466
+#EXTINF:-1,DISCOVERY SCIENCE FHD 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/820
+#EXTINF:-1,DISCOVERY SCIENCE H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/228
+#EXTINF:-1,DISCOVERY SCIENCE HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/16
+#EXTINF:-1,DISCOVERY SCIENCE SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/76670
+#EXTINF:-1,DISCOVERY THEATER FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/821
+#EXTINF:-1,DISCOVERY THEATER H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/229
+#EXTINF:-1,DISCOVERY THEATER HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/17
+#EXTINF:-1,DISCOVERY THEATER SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/76671
+#EXTINF:-1,DISCOVERY TURBO FHD 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/818
+#EXTINF:-1,DISCOVERY TURBO H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/230
+#EXTINF:-1,DISCOVERY TURBO HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/18
+#EXTINF:-1,DISCOVERY TURBO SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/467
+#EXTINF:-1,DISCOVERY WORLD FHD 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/802
+#EXTINF:-1,DISCOVERY WORLD H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/231
+#EXTINF:-1,DISCOVERY WORLD HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/19
+#EXTINF:-1,DISCOVERY WORLD SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/76672
+#EXTINF:-1,DISNEY CHANNEL FHD 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/825
+#EXTINF:-1,DISNEY CHANNEL H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/232
+#EXTINF:-1,DISNEY CHANNEL HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/20
+#EXTINF:-1,DISNEY CHANNEL SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/3906
+#EXTINF:-1,DOG TV FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/780
+#EXTINF:-1,DOG TV HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/138
+#EXTINF:-1,E! FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/864
+#EXTINF:-1,E! H265 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/234
+#EXTINF:-1,E! HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/22
+#EXTINF:-1,E! SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/471
+#EXTINF:-1,ELEVEN SPORTS CHANNEL (JOGO 1)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/166
+#EXTINF:-1,ELEVEN SPORTS CHANNEL (JOGO 2)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/167
+#EXTINF:-1,ELEVEN SPORTS CHANNEL (JOGO 3)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/168
+#EXTINF:-1,ELEVEN SPORTS CHANNEL (JOGO 4)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/169
+#EXTINF:-1,ELEVEN SPORTS CHANNEL (JOGO 5)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/170
+#EXTINF:-1,ELEVEN SPORTS CHANNEL (JOGO 6)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/171
+#EXTINF:-1,ELEVEN SPORTS CHANNEL (JOGO 7)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/172
+#EXTINF:-1,ELEVEN SPORTS CHANNELL (JOGO 8)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/173
+#EXTINF:-1,ELEVEN SPORTS CHANNELL (JOGO 9)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/174
+#EXTINF:-1,ELEVEN SPORTS CHANNEL (JOGO 10)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/175
+#EXTINF:-1,ENTRETENDO FILMES
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/63864
+#EXTINF:-1,GLOBO EPTV CAMPINAS FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/364
+#EXTINF:-1,GLOBO EPTV CAMPINAS HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/363
+#EXTINF:-1,GLOBO EPTV CAMPINAS SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/473
+#EXTINF:-1,GLOBO EPTV RIBEIRAO PRETO FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/368
+#EXTINF:-1,GLOBO EPTV RIBEIRAO PRETO HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/729
+#EXTINF:-1,GLOBO EPTV RIBEIRAO PRETO SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/474
+#EXTINF:-1,GLOBO EPTV SAO CARLOS SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/472
+#EXTINF:-1,GLOBO EPTV SUL DE MINAS FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/369
+#EXTINF:-1,GLOBO EPTV SUL DE MINAS HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/728
+#EXTINF:-1,ESPN FHD 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/769
+#EXTINF:-1,ESPN H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/238
+#EXTINF:-1,ESPN HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/24
+#EXTINF:-1,ESPN SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/477
+#EXTINF:-1,ESPN 2 FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/771
+#EXTINF:-1,ESPN 2 H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/236
+#EXTINF:-1,ESPN 2 HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/25
+#EXTINF:-1,ESPN 2 SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/475
+#EXTINF:-1,ESPN 3 FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/772
+#EXTINF:-1,ESPN 3 H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/237
+#EXTINF:-1,ESPN 3 HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/23
+#EXTINF:-1,ESPN 3 SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/476
+#EXTINF:-1,ESPN 4 FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/86676
+#EXTINF:-1,ESPN 4 SD 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/483
+#EXTINF:-1,ESPN 4 HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/86689
+#EXTINF:-1,ESPN EXTRA FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/770
+#EXTINF:-1,ESPN EXTRA H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/235
+#EXTINF:-1,ESPN EXTRA HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/26
+#EXTINF:-1,ESPN EXTRA SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/76661
+#EXTINF:-1,ESTADIO TNT JOGO 1
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/328
+#EXTINF:-1,ESTADIO TNT JOGO 2
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/329
+#EXTINF:-1,ESTADIO TNT JOGO 3
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/330
+#EXTINF:-1,ESTADIO TNT JOGO 4
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/331
+#EXTINF:-1,FILM & ART FHD 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/855
+#EXTINF:-1,FILM & ART HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/125
+#EXTINF:-1,FILM & ART SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/478
+#EXTINF:-1,FISH TV FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/239
+#EXTINF:-1,FISH TV SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/479
+#EXTINF:-1,FLA TV
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/142
+#EXTINF:-1,FOOD  NETWORK FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/863
+#EXTINF:-1,FOOD NETWORK H265 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/240
+#EXTINF:-1,FOOD NETWORK HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/27
+#EXTINF:-1,FOOD NETWORK SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/480
+#EXTINF:-1,FOX SPORTS 2 FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/773
+#EXTINF:-1,FOX SPORTS 2 H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/245
+#EXTINF:-1,FOX SPORTS 2 HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/32
+#EXTINF:-1,FOX SPORTS 2 SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/484
+#EXTINF:-1,FURACAO TV (01)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/200
+#EXTINF:-1,HBO MAX 01
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/78527
+#EXTINF:-1,FUTURA
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/485
+#EXTINF:-1,FX FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/842
+#EXTINF:-1,FX FHD H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/246
+#EXTINF:-1,FX HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/34
+#EXTINF:-1,FX SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/486
+#EXTINF:-1,GAUCHA ZH (Radios)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/180
+#EXTINF:-1,GAZETA FM (RADIOS)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/188
+#EXTINF:-1,TV GAZETA HD SP
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/333
+#EXTINF:-1,GERAÇÃO FUNK FM (RADIOS)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/191
+#EXTINF:-1,GLOBO TV BAHIA  FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/379
+#EXTINF:-1,GLOBO TV BAHIA HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/380
+#EXTINF:-1,GLOBO TV BRASILIA FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/719
+#EXTINF:-1,GLOBO TV BRASILIA HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/334
+#EXTINF:-1,RECORD BRASILIA HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/487
+#EXTINF:-1,GLOBO INTEGRAÇÃO MG FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/396
+#EXTINF:-1,GLOBO INTEGRAÇÃO MG HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/395
+#EXTINF:-1,GLOBO INTER DO VALE FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/392
+#EXTINF:-1,GLOBO INTER TV RJ FHD ( REGIAO SERRANA)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/390
+#EXTINF:-1,GLOBO INTER TV RJ HD (REGIAO SERRANA)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/389
+#EXTINF:-1,GLOBO INTER VALE MG HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/391
+#EXTINF:-1,GLOBO JOAÇABA FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/752
+#EXTINF:-1,GLOBO JOAÇABA HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/753
+#EXTINF:-1,GLOBO JUIZ DE FORA MG FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/750
+#EXTINF:-1,GLOBO JUIZ DE FORA MG HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/751
+#EXTINF:-1,GLOBO MINAS FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/720
+#EXTINF:-1,GLOBO MINAS HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/724
+#EXTINF:-1,GLOBO MINAS SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/488
+#EXTINF:-1,GLOBO MOGI DAS CRUZES FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/754
+#EXTINF:-1,GLOBO MOGI DAS CRUZES HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/755
+#EXTINF:-1,GLOBO MONTES CLAROS MG FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/744
+#EXTINF:-1,GLOBO MONTES CLAROS MG HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/745
+#EXTINF:-1,GLOBO NEWS FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/853
+#EXTINF:-1,GLOBO NEWS FHD H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/247
+#EXTINF:-1,GLOBO NEWS HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/35
+#EXTINF:-1,GLOBO NEWS SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/489
+#EXTINF:-1,GLOBO NORDESTE FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/393
+#EXTINF:-1,GLOBO NORDESTE HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/394
+#EXTINF:-1,GLOBO NORDESTE SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/490
+#EXTINF:-1,GLOBO NSC BLUMENAU FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/430
+#EXTINF:-1,GLOBO NSC BLUMENAU HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/431
+#EXTINF:-1,GLOBO NSC TV CHAPECO FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/418
+#EXTINF:-1,GLOBO NSC TV CHAPECO HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/417
+#EXTINF:-1,GLOBO NSC TV FLORIANOPOLIS FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/76677
+#EXTINF:-1,GLOBO NSC TV FLORIANOPOLIS HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/725
+#EXTINF:-1,GLOBO NSC TV BLUMENAU SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/76678
+#EXTINF:-1,GLOBO NSC TV JOINVILLE FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/731
+#EXTINF:-1,GLOBO NSC TV JOINVILLE HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/732
+#EXTINF:-1,GLOBO PARAIBA HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/718
+#EXTINF:-1,GLOBO PRESIDENTE PRUDENTE SP FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/748
+#EXTINF:-1,GLOBO PRESIDENTE PRUDENTE SP HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/749
+#EXTINF:-1,GLOBO RBS CAXIAS FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/373
+#EXTINF:-1,GLOBO RBS CAXIAS HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/372
+#EXTINF:-1,GLOBO RBS PASSO FUNDO FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/416
+#EXTINF:-1,GLOBO RBS PASSO FUNDO HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/415
+#EXTINF:-1,GLOBO RBS PELOTAS FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/374
+#EXTINF:-1,GLOBO RBS PELOTAS HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/375
+#EXTINF:-1,GLOBO RBS PORTO ALEGRE FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/743
+#EXTINF:-1,GLOBO RBS PORTO ALEGRE HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/337
+#EXTINF:-1,GLOBO RBS PORTO ALEGRE SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/532
+#EXTINF:-1,GLOBO RBS TV STA MARIA HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/800
+#EXTINF:-1,GLOBO RECIFE HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/76688
+#EXTINF:-1,GLOBO RPC CASCAVEL FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/402
+#EXTINF:-1,GLOBO RPC CASCAVEL HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/401
+#EXTINF:-1,GLOBO RPC CURITIBA FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/406
+#EXTINF:-1,GLOBO RPC CURITIBA HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/405
+#EXTINF:-1,GLOBO RPC CURITIBA SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/539
+#EXTINF:-1,GLOBO RPC FOZ DO IGUAÇU FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/376
+#EXTINF:-1,GLOBO RPC FOZ DO IGUAÇU HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/730
+#EXTINF:-1,GLOBO RPC PARANA HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/357
+#EXTINF:-1,GLOBO RPC PARANAVAI FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/735
+#EXTINF:-1,GLOBO RPC PARANAVAI HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/736
+#EXTINF:-1,GLOBO TV ASA BRANCA PE FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/139
+#EXTINF:-1,GLOBO TV ASA BRANCA PE HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/717
+#EXTINF:-1,GLOBO TV BAHIA SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/565
+#EXTINF:-1,GLOBO TV CABO BRANCO JOAO PESSOA  FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/420
+#EXTINF:-1,GLOBO TV CABO BRANCO JOAO PESSOA HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/419
+#EXTINF:-1,GLOBO TV CABUGI FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/440
+#EXTINF:-1,GLOBO TV CABUGI HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/441
+#EXTINF:-1,GLOBO TV CENTRO AMERICA SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/567
+#EXTINF:-1,GLOBO TV CLUBE PI HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/716
+#EXTINF:-1,GLOBO TV GAZETA ALAGOAS FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/425
+#EXTINF:-1,GLOBO TV GAZETA ALAGOAS HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/424
+#EXTINF:-1,GLOBO TV GAZETA ALAGOAS SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/746
+#EXTINF:-1,GLOBO TV GAZETA VITORIA ES FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/414
+#EXTINF:-1,GLOBO TV GAZETA VITORIA ES HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/413
+#EXTINF:-1,GLOBO TV GAZETA SUL ES FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/78530
+#EXTINF:-1,GLOBO TV GAZETA SUL ES HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/78531
+#EXTINF:-1,GLOBO TV INTEGRAÇÃO ARAXÁ FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/410
+#EXTINF:-1,GLOBO TV INTEGRAÇÃO ARAXÁ HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/409
+#EXTINF:-1,GLOBO TV INTEGRAÇÃO UBERABA FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/313
+#EXTINF:-1,GLOBO TV INTEGRAÇÃO UBERABA HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/411
+#EXTINF:-1,GLOBO TV INTER CABUGI SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/502
+#EXTINF:-1,GLOBO TV LIBERAL BELEM SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/570
+#EXTINF:-1,GLOBO TV LIBERAL HD (BELEM)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/365
+#EXTINF:-1,GLOBO TV MIRANTE HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/721
+#EXTINF:-1,GLOBO TV MORENA FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/733
+#EXTINF:-1,GLOBO TV MORENA HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/734
+#EXTINF:-1,GLOBO TV REDE AMAZONICA MANAUS HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/757
+#EXTINF:-1,GLOBO TV REDE AMAZONICA MANAUS SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/756
+#EXTINF:-1,GLOBO TV REDE AMAZONICA PORTO VELHO FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/427
+#EXTINF:-1,GLOBO TV REDE AMAZONICA PORTO VELHO HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/426
+#EXTINF:-1,GLOBO TV REDE AMAZONICA PORTO VELHO SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/422
+#EXTINF:-1,GLOBO TV SANTA CRUZ
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/352
+#EXTINF:-1,GLOBO TV SERGIPE HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/336
+#EXTINF:-1,GLOBO TV SUBAE HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/353
+#EXTINF:-1,GLOBO TV TEM BAURU FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/737
+#EXTINF:-1,GLOBO TV TEM BAURU HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/738
+#EXTINF:-1,GLOBO TV TEM BAURU SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/573
+#EXTINF:-1,GLOBO TV TEM SOROCABA FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/314
+#EXTINF:-1,GLOBO TV TEM SOROCABA HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/412
+#EXTINF:-1,GLOBO TV TEM SOROCABA SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/575
+#EXTINF:-1,GLOBO TV TRIBUNA SANTOS FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/384
+#EXTINF:-1,GLOBO TV TRIBUNA SANTOS HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/383
+#EXTINF:-1,GLOBO TV TRIBUNA SANTOS SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/576
+#EXTINF:-1,GLOBO TV VANGUARDA HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/577
+#EXTINF:-1,GLOBO TV VANGUARDA SJC FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/377
+#EXTINF:-1,GLOBO TV VANGUARDA SJC HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/378
+#EXTINF:-1,GLOBO TV VERDES MARES FORTALEZA FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/76701
+#EXTINF:-1,GLOBO TV VERDES MARES FORTALEZA FHD (H265)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/76702
+#EXTINF:-1,GLOBO TV VERDES MARES FORTALEZA HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/366
+#EXTINF:-1,GLOBO TV VERDES MARES FORTALEZA SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/578
+#EXTINF:-1,GLOOB FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/827
+#EXTINF:-1,GLOOB H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/248
+#EXTINF:-1,GLOOB HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/37
+#EXTINF:-1,GLOOB SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/493
+#EXTINF:-1,GNT FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/862
+#EXTINF:-1,GNT H265 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/249
+#EXTINF:-1,GNT HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/38
+#EXTINF:-1,GNT SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/494
+#EXTINF:-1,HBO 2 FHD 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/793
+#EXTINF:-1,HBO 2 H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/254
+#EXTINF:-1,HBO 2 HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/39
+#EXTINF:-1,HBO 2 SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/499
+#EXTINF:-1,HBO FAMILY FHD 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/795
+#EXTINF:-1,HBO FAMILY HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/40
+#EXTINF:-1,HBO FAMILY SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/496
+#EXTINF:-1,HBO FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/792
+#EXTINF:-1,HBO H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/251
+#EXTINF:-1,HBO HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/41
+#EXTINF:-1,HBO SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/495
+#EXTINF:-1,HBO MAX 02
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/204
+#EXTINF:-1,HBO MAX 03
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/205
+#EXTINF:-1,HBO MAX 04
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/206
+#EXTINF:-1,HBO MAX 05
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/76696
+#EXTINF:-1,HBO MAX 06
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/76697
+#EXTINF:-1,HBO MAX 07
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/76698
+#EXTINF:-1,HBO MAX 08
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/76699
+#EXTINF:-1,HBO MAX 09
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/76700
+#EXTINF:-1,HBO MUNDI FHD 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/797
+#EXTINF:-1,HBO MUNDI H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/260
+#EXTINF:-1,HBO MUNDI HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/48
+#EXTINF:-1,HBO PLUS FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/794
+#EXTINF:-1,HBO PLUS H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/252
+#EXTINF:-1,HBO PLUS HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/42
+#EXTINF:-1,HBO PLUS SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/497
+#EXTINF:-1,HBO POP FHD 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/799
+#EXTINF:-1,HBO POP H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/262
+#EXTINF:-1,HBO POP HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/50
+#EXTINF:-1,HBO SIGNATURE FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/796
+#EXTINF:-1,HBO SIGNATURE H265 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/253
+#EXTINF:-1,HBO SIGNATURE HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/43
+#EXTINF:-1,HBO SIGNATURE SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/498
+#EXTINF:-1,HBO XTREME FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/798
+#EXTINF:-1,HBO XTREME FHD H265 :
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/261
+#EXTINF:-1,HBO XTREME HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/49
+#EXTINF:-1,HBO XTREME SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/76662
+#EXTINF:-1,HELLO TV
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/63867
+#EXTINF:-1,HGTV FHD 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/861
+#EXTINF:-1,HGTV H265 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/225
+#EXTINF:-1,HGTV HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/13
+#EXTINF:-1,HISTORY FHD 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/781
+#EXTINF:-1,HISTORY H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/255
+#EXTINF:-1,HISTORY HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/45
+#EXTINF:-1,HISTORY SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/584
+#EXTINF:-1,HISTORY 2 FHD 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/806
+#EXTINF:-1,HISTORY 2 H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/256
+#EXTINF:-1,HISTORY 2 HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/44
+#EXTINF:-1,HISTORY 2 SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/500
+#EXTINF:-1,INSPIRE TV
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/63866
+#EXTINF:-1,INVESTIGAÇAO DISCOVERY FHD 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/819
+#EXTINF:-1,INVESTIGAÇAO DISCOVERY H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/257
+#EXTINF:-1,INVESTIGAÇAO DISCOVERY HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/46
+#EXTINF:-1,INVESTIGAÇAO DISCOVERY SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/501
+#EXTINF:-1,ISTV HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/31746
+#EXTINF:-1,JOVEM PAM SP (RADIOS)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/176
+#EXTINF:-1,JOVEM PAN FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/886
+#EXTINF:-1,JOVEM PAN FHD H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/76659
+#EXTINF:-1,JOVEM PAN HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/209
+#EXTINF:-1,JOVEM PAN SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/76660
+#EXTINF:-1,LBV - BOA VONTADE
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/53957
+#EXTINF:-1,LIFETIME FHD 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/801
+#EXTINF:-1,LIFETIME H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/258
+#EXTINF:-1,LIFETIME HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/47
+#EXTINF:-1,LIFETIME SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/503
+#EXTINF:-1,STAR + 1
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/113
+#EXTINF:-1,LOVE NATURE HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/305
+#EXTINF:-1,MEGAPIX FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/843
+#EXTINF:-1,MEGAPIX FHD H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/263
+#EXTINF:-1,MEGAPIX HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/51
+#EXTINF:-1,MEGAPIX SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/507
+#EXTINF:-1,MIX FM SP (RADIOS)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/183
+#EXTINF:-1,MTV FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/854
+#EXTINF:-1,MTV H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/264
+#EXTINF:-1,MTV HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/52
+#EXTINF:-1,MTV LIVE HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/197
+#EXTINF:-1,MTV SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/508
+#EXTINF:-1,MULTISHOW FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/860
+#EXTINF:-1,MULTISHOW H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/265
+#EXTINF:-1,MULTISHOW HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/53
+#EXTINF:-1,MULTISHOW SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/509
+#EXTINF:-1,MUSIC BOX BRASIL HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/511
+#EXTINF:-1,MUSIC BOX BRASIL SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/510
+#EXTINF:-1,NATGEO FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/805
+#EXTINF:-1,NATGEO H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/266
+#EXTINF:-1,NATGEO HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/54
+#EXTINF:-1,NATGEO SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/514
+#EXTINF:-1,NHK FHD (JAPONES)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/404
+#EXTINF:-1,NHK HD (JAPONES)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/403
+#EXTINF:-1,NICK JR FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/831
+#EXTINF:-1,NICK JR H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/270
+#EXTINF:-1,NICK JR HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/58
+#EXTINF:-1,NICK JR SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/516
+#EXTINF:-1,NICKELODEON FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/830
+#EXTINF:-1,NICKELODEON H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/269
+#EXTINF:-1,NICKELODEON HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/57
+#EXTINF:-1,NICKELODEON SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/517
+#EXTINF:-1,NOVA PLAY FILMES E SERIES
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/60181
+#EXTINF:-1,NOVO TEMPO HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/106
+#EXTINF:-1,NOVO TEMPO SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/586
+#EXTINF:-1,OFF FHD 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/859
+#EXTINF:-1,OFF H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/271
+#EXTINF:-1,OFF HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/59
+#EXTINF:-1,OFF SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/518
+#EXTINF:-1,PARAMOUNT FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/845
+#EXTINF:-1,PARAMOUNT FHD H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/272
+#EXTINF:-1,PARAMOUNT HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/60
+#EXTINF:-1,PARAMOUNT SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/519
+#EXTINF:-1,Pluto TV Action Sports
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/49018
+#EXTINF:-1,Pluto TV Anime
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/49002
+#EXTINF:-1,Pluto TV Backcountry
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/49019
+#EXTINF:-1,Pluto Tv Canal Summer
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/49014
+#EXTINF:-1,Pluto TV Cine Clássicos
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/48995
+#EXTINF:-1,Pluto TV Cine Comédia
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/48989
+#EXTINF:-1,Pluto TV Cine Drama
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/48990
+#EXTINF:-1,Pluto TV Cine Família
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/48996
+#EXTINF:-1,Pluto TV Cine Romance
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/48991
+#EXTINF:-1,Pluto TV Cine Sucessos
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/48987
+#EXTINF:-1,Pluto TV Cine Terror
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/48993
+#EXTINF:-1,Pluto TV Comédia
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/49008
+#EXTINF:-1,Pluto tv European League of Football
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/49016
+#EXTINF:-1,Pluto TV Filmes Ação
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/48988
+#EXTINF:-1,Pluto TV Filmes Nacionais
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/48994
+#EXTINF:-1,Pluto TV Filmes Suspense
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/48992
+#EXTINF:-1,Pluto TV Investigação
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/49005
+#EXTINF:-1,Pluto Tv Jovem Pan
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/49000
+#EXTINF:-1,Pluto TV Junior
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/49010
+#EXTINF:-1,Pluto tv Minecraftv
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/49015
+#EXTINF:-1,Pluto TV Mistérios
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/49006
+#EXTINF:-1,Pluto TV Motorvision
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/49017
+#EXTINF:-1,Pluto Tv Naruto
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/49003
+#EXTINF:-1,Pluto Tv Nosey Escândalos
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/49001
+#EXTINF:-1,Pluto TV Paramount+
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/48997
+#EXTINF:-1,Pluto Tv Porta dos Fundos
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/49009
+#EXTINF:-1,Pluto TV Retrô
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/48999
+#EXTINF:-1,Pluto TV Shows por Stingray
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/49011
+#EXTINF:-1,Pluto TV Sports
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/49013
+#EXTINF:-1,Pluto TV Séries
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/48998
+#EXTINF:-1,Pluto Tv Tokusato
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/49004
+#EXTINF:-1,Pluto Tv USA Kickboxing
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/49012
+#EXTINF:-1,Pluto Tv Vevo Country
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/49020
+#EXTINF:-1,Pluto Tv Vevo Pop
+http://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5d93b635b43dd1a399b39eee/master.m3u8?advertisingId=&appName=web&appVersion=unknown&appStoreUrl=&architecture=&buildVersion=&clientTime=0&deviceDNT=0&deviceId=1c8068a2-7089-11eb-842e-ed7bad763363&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&sid=f01ebfed-7ad5-4d03-b1ca-023870fcb436&userId=&serverSideAds=true
+#EXTINF:-1,Pluto TV Vida Real
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/49007
+#EXTINF:-1,POLISHOP TV
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/522
+#EXTINF:-1,POP FM (RADIOS)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/196
+#EXTINF:-1,PREMIERE CLUBES  H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/273
+#EXTINF:-1,PREMIERE CLUBES FHD 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/775
+#EXTINF:-1,PREMIERE CLUBES HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/67
+#EXTINF:-1,PREMIERE CLUBES SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/531
+#EXTINF:-1,PREMIERE 2 FHD 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/815
+#EXTINF:-1,PREMIERE 2 FHD H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/274
+#EXTINF:-1,PREMIERE 2 HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/61
+#EXTINF:-1,PREMIERE 2 SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/523
+#EXTINF:-1,PREMIERE 3 FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/814
+#EXTINF:-1,PREMIERE 3 FHD H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/275
+#EXTINF:-1,PREMIERE 3 HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/62
+#EXTINF:-1,PREMIERE 3 SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/524
+#EXTINF:-1,PREMIERE 4 FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/813
+#EXTINF:-1,PREMIERE 4 FHD H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/276
+#EXTINF:-1,PREMIERE 4 HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/63
+#EXTINF:-1,PREMIERE 4 SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/525
+#EXTINF:-1,PREMIERE 5 FHD 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/812
+#EXTINF:-1,PREMIERE 5 FHD H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/277
+#EXTINF:-1,PREMIERE 5 HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/64
+#EXTINF:-1,PREMIERE 5 SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/526
+#EXTINF:-1,PREMIERE 6 FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/811
+#EXTINF:-1,PREMIERE 6 FHD H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/278
+#EXTINF:-1,PREMIERE 6 HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/65
+#EXTINF:-1,PREMIERE 6 SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/527
+#EXTINF:-1,PREMIERE 7 FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/810
+#EXTINF:-1,PREMIERE 7 FHD H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/279
+#EXTINF:-1,PREMIERE 7 HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/66
+#EXTINF:-1,PREMIERE 7 SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/528
+#EXTINF:-1,RADIO EVANGELIZAR FM
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/31743
+#EXTINF:-1,RADIO SERTANEJA FM (RADIOS)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/186
+#EXTINF:-1,RECORD NEWS FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/867
+#EXTINF:-1,RECORD NEWS HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/104
+#EXTINF:-1,RECORD NEWS SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/533
+#EXTINF:-1,RECORD TV SP FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/727
+#EXTINF:-1,RECORD TV SP HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/726
+#EXTINF:-1,RECORD TV SP SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/534
+#EXTINF:-1,RECORD TV RJ FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/87102
+#EXTINF:-1,RECORD TV RJ HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/345
+#EXTINF:-1,RECORD TV RJ SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/76666
+#EXTINF:-1,RECORD TV BAHIA HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/151
+#EXTINF:-1,RECORD TV BAHIA SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/598
+#EXTINF:-1,RECORD TV BELEM HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/342
+#EXTINF:-1,RECORD TV BELEM SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/76669
+#EXTINF:-1,RECORD TV BRASILIA FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/338
+#EXTINF:-1,RECORD TV BRASILIA SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/76663
+#EXTINF:-1,RECORD TV CAMPINAS FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/387
+#EXTINF:-1,RECORD TV CAMPINAS HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/354
+#EXTINF:-1,RECORD TV GOIANIA FHD H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/280
+#EXTINF:-1,RECORD TV GOIANIA HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/68
+#EXTINF:-1,RECORD TV GOIANIA SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/76664
+#EXTINF:-1,RECORD TV MANAUS HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/371
+#EXTINF:-1,RECORD TV MANAUS SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/76665
+#EXTINF:-1,RECORD TV MINAS FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/112
+#EXTINF:-1,RECORD TV MINAS HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/344
+#EXTINF:-1,RECORD TV MINAS SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/312
+#EXTINF:-1,RECORD TV PARANAIBA MG HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/351
+#EXTINF:-1,RECORD TV PARANÁ FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/398
+#EXTINF:-1,RECORD TV PARANÁ HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/360
+#EXTINF:-1,RECORD TV RS FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/442
+#EXTINF:-1,RECORD TV RS HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/339
+#EXTINF:-1,RECORD TV RS SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/76668
+#EXTINF:-1,RECORD TV SANTA CATARINA HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/356
+#EXTINF:-1,RECORD TV SANTOS HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/343
+#EXTINF:-1,RECORD TV SERGIPE HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/341
+#EXTINF:-1,RECORD TV SJRP HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/340
+#EXTINF:-1,RED BULL TV FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/31744
+#EXTINF:-1,TV REDE GOSPEL FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/157
+#EXTINF:-1,REDE BRASIL SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/536
+#EXTINF:-1,TV REDE GOSPEL HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/152
+#EXTINF:-1,REDE MOSAICO
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/63865
+#EXTINF:-1,REDE SUPER
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/596
+#EXTINF:-1,REDE TV FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/869
+#EXTINF:-1,REDE TV HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/69
+#EXTINF:-1,REDE VIDA
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/538
+#EXTINF:-1,REDE VIDA FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/31749
+#EXTINF:-1,RIT TV HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/162
+#EXTINF:-1,SAMBA E PAGODE FM (RADIOS)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/193
+#EXTINF:-1,SBT BRASILIA HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/346
+#EXTINF:-1,SBT CAMPINAS FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/386
+#EXTINF:-1,SBT CAMPINAS HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/385
+#EXTINF:-1,SBT CIDADE VERDE PI
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/59921
+#EXTINF:-1,SBT TAILANDIA PA
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/59919
+#EXTINF:-1,SBT INTERIOR FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/59920
+#EXTINF:-1,SBT PARANÁ FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/397
+#EXTINF:-1,SBT PARANÁ HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/359
+#EXTINF:-1,SBT RECIFE SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/68341
+#EXTINF:-1,SBT RJ FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/370
+#EXTINF:-1,SBT RJ HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/367
+#EXTINF:-1,SBT RJ SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/76680
+#EXTINF:-1,SBT RS HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/347
+#EXTINF:-1,SBT SERGIPE HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/348
+#EXTINF:-1,SBT SERRA DOURADA FHD H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/76682
+#EXTINF:-1,SBT SERRA DOURADA HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/76683
+#EXTINF:-1,SBT SP FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/870
+#EXTINF:-1,SBT SP FHD H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/76681
+#EXTINF:-1,SBT SP HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/429
+#EXTINF:-1,SBT SP SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/540
+#EXTINF:-1,SBT TV ALTEROSA MG FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/897
+#EXTINF:-1,SBT TV ALTEROSA MG HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/896
+#EXTINF:-1,SBT TV ARATU BAHIA HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/349
+#EXTINF:-1,SBT TV JANGADEIRO FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/76684
+#EXTINF:-1,SBT TV JANGADEIRO HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/76685
+#EXTINF:-1,SBT TV JORNAL PERNAMBUCO
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/76686
+#EXTINF:-1,SHOP TIME FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/885
+#EXTINF:-1,SHOP TIME HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/150
+#EXTINF:-1,SPACE FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/846
+#EXTINF:-1,SPACE FHD H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/282
+#EXTINF:-1,SPACE HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/70
+#EXTINF:-1,SPACE SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/543
+#EXTINF:-1,SPORTV FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/776
+#EXTINF:-1,SPORTV H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/285
+#EXTINF:-1,SPORTV HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/73
+#EXTINF:-1,SPORTV HD*
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/87150
+#EXTINF:-1,SPORTV SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/544
+#EXTINF:-1,SPORTV 2 FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/777
+#EXTINF:-1,SPORTV 2 H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/283
+#EXTINF:-1,SPORTV 2 HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/71
+#EXTINF:-1,SPORTV 2 SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/545
+#EXTINF:-1,SPORTV 3 FHD 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/778
+#EXTINF:-1,SPORTV 3 H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/284
+#EXTINF:-1,SPORTV 3 HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/72
+#EXTINF:-1,SPORTV 3 SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/546
+#EXTINF:-1,STAR + 2
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/202
+#EXTINF:-1,STAR + 3
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/207
+#EXTINF:-1,STAR + 4
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/208
+#EXTINF:-1,STAR CHANNEL FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/836
+#EXTINF:-1,STAR CHANNEL H265 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/241
+#EXTINF:-1,STAR CHANNEL HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/28
+#EXTINF:-1,STAR CHANNEL SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/481
+#EXTINF:-1,CINECANAL FHD 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/837
+#EXTINF:-1,CINECANAL HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/29
+#EXTINF:-1,CINECANAL SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/482
+#EXTINF:-1,STUDIO UNIVERSAL FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/847
+#EXTINF:-1,STUDIO UNIVERSAL FHD H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/286
+#EXTINF:-1,STUDIO UNIVERSAL HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/74
+#EXTINF:-1,STUDIO UNIVERSAL SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/547
+#EXTINF:-1,SUPER GOSPEL
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/35627
+#EXTINF:-1,SYFY FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/857
+#EXTINF:-1,SYFY FHD H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/287
+#EXTINF:-1,SYFY HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/75
+#EXTINF:-1,SYFY SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/548
+#EXTINF:-1,TBS FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/856
+#EXTINF:-1,TBS FHD H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/288
+#EXTINF:-1,TBS HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/76
+#EXTINF:-1,TBS SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/549
+#EXTINF:-1,TCM FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/877
+#EXTINF:-1,TCM HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/131
+#EXTINF:-1,TCM SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/550
+#EXTINF:-1,TELECINE ACTION FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/787
+#EXTINF:-1,TELECINE ACTION H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/289
+#EXTINF:-1,TELECINE ACTION HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/77
+#EXTINF:-1,TELECINE ACTION SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/551
+#EXTINF:-1,TELECINE CULT FHD 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/791
+#EXTINF:-1,TELECINE CULT H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/290
+#EXTINF:-1,TELECINE CULT HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/78
+#EXTINF:-1,TELECINE CULT SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/552
+#EXTINF:-1,TELECINE FUN FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/790
+#EXTINF:-1,TELECINE FUN H265 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/291
+#EXTINF:-1,TELECINE FUN HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/79
+#EXTINF:-1,TELECINE FUN SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/553
+#EXTINF:-1,TELECINE PIPOCA FHD 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/789
+#EXTINF:-1,TELECINE PIPOCA H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/292
+#EXTINF:-1,TELECINE PIPOCA HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80
+#EXTINF:-1,TELECINE PIPOCA SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/554
+#EXTINF:-1,TELECINE PREMIUM FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/786
+#EXTINF:-1,TELECINE PREMIUM H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/293
+#EXTINF:-1,TELECINE PREMIUM HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/81
+#EXTINF:-1,TELECINE PREMIUM SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/555
+#EXTINF:-1,TELECINE TOUCH FHD 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/788
+#EXTINF:-1,TELECINE TOUCH H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/294
+#EXTINF:-1,TELECINE TOUCH HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/82
+#EXTINF:-1,TELECINE TOUCH SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/556
+#EXTINF:-1,TLC FHD 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/809
+#EXTINF:-1,TLC H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/295
+#EXTINF:-1,TLC HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/83
+#EXTINF:-1,TLC SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/558
+#EXTINF:-1,TNT FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/785
+#EXTINF:-1,TNT FHD H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/296
+#EXTINF:-1,TNT HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/84
+#EXTINF:-1,TNT SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/559
+#EXTINF:-1,TNT SERIES FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/849
+#EXTINF:-1,TNT SERIES FHD H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/297
+#EXTINF:-1,TNT SERIES HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/85
+#EXTINF:-1,TNT SERIES SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/560
+#EXTINF:-1,TOONCAST FHD 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/834
+#EXTINF:-1,TOONCAST HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/124
+#EXTINF:-1,TOONCAST SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/561
+#EXTINF:-1,TOP 40 FM (RADIOS)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/194
+#EXTINF:-1,TRAVEL BOX BRASIL FHD 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/884
+#EXTINF:-1,TRAVEL BOX BRASIL HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/136
+#EXTINF:-1,TRUT TV FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/878
+#EXTINF:-1,TRUT TV HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/132
+#EXTINF:-1,TRUT TV SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/562
+#EXTINF:-1,GLOBO TV BRASILIA H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/434
+#EXTINF:-1,GLOBO TV ANHANGUERA GO FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/432
+#EXTINF:-1,GLOBO TV BRASILIA SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/563
+#EXTINF:-1,TV APARECIDA
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/564
+#EXTINF:-1,TV BRASIL
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/121
+#EXTINF:-1,TV CHANNEL NETWORK SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/60252
+#EXTINF:-1,TV CINE ENTRETENDIMENTO
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/60183
+#EXTINF:-1,TV CULTURA
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/568
+#EXTINF:-1,TV CÂMARA
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/566
+#EXTINF:-1,TV ESCOLA
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/589
+#EXTINF:-1,TV EVANGELIZAR HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/31750
+#EXTINF:-1,WEB TV EXTREME
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/60182
+#EXTINF:-1,TV GLOOBINHO FHD 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/828
+#EXTINF:-1,TV GLOOBINHO HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/123
+#EXTINF:-1,TV GLOOBINHO SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/3905
+#EXTINF:-1,GLOBO TV INTEGRAÇÃO DIVINÓPOLIS FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/438
+#EXTINF:-1,GLOBO TV INTEGRAÇÃO DIVINÓPOLIS HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/439
+#EXTINF:-1,TV JUSTIÇA
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/569
+#EXTINF:-1,TV NSPORTS HD (JOGO 1)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/163
+#EXTINF:-1,TV NSPORTS HD (JOGO 2)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/164
+#EXTINF:-1,TV NSPORTS HD (JOGO 3)
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/165
+#EXTINF:-1,TV RA-TIM-BUM HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/88
+#EXTINF:-1,TV RA-TIM-BUM SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/571
+#EXTINF:-1,TV SENADO
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/572
+#EXTINF:-1,TV SERIES SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/60180
+#EXTINF:-1,TV UNIVERSAL HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/31748
+#EXTINF:-1,TVR VARIEDADES
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/71138
+#EXTINF:-1,CBS NEWS
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/67587
+#EXTINF:-1,UNIVERSAL CHANNEL FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/848
+#EXTINF:-1,UNIVERSAL CHANNEL FHD H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/301
+#EXTINF:-1,UNIVERSAL CHANNEL HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/90
+#EXTINF:-1,UNIVERSAL CHANNEL SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/585
+#EXTINF:-1,VH1 FHD H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/302
+#EXTINF:-1,VH1 HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/91
+#EXTINF:-1,VH1 SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/2958
+#EXTINF:-1,MIX FM DF
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/187
+#EXTINF:-1,VIVA FHD 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/865
+#EXTINF:-1,VIVA HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/92
+#EXTINF:-1,VIVA SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/580
+#EXTINF:-1,WARNER CHANNEL FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/850
+#EXTINF:-1,WARNER CHANNEL FHD H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/303
+#EXTINF:-1,WARNER CHANNEL HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/93
+#EXTINF:-1,WARNER CHANNEL SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/581
+#EXTINF:-1,WOOHOO TV FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/875
+#EXTINF:-1,WOOHOO TV H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/304
+#EXTINF:-1,WOOHOO TV HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/129
+#EXTINF:-1,WOOHOO TV SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/582
+#EXTINF:-1,ZOOMOO FHD 
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/832
+#EXTINF:-1,ZOOMOO HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/833
+#EXTINF:-1,ZOOMOO SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/583
+#EXTINF:-1,CINE SKY 6
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/77381
+#EXTINF:-1,GLOBO TV ANHANGUERA GO HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/86
+#EXTINF:-1,RADIO GLOBO RJ
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/79894
+#EXTINF:-1,RADIO DUMONT FM
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80123
+#EXTINF:-1,RADIO SANTO ANDRE FM
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80144
+#EXTINF:-1,Rádio Cultura 103.3 FM São Paulo
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80145
+#EXTINF:-1,Rádio FM O Dia FM 100.5 Rio de Janeiro
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80146
+#EXTINF:-1,Rádio Litoral 94.5 FM Cabo Frio
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80148
+#EXTINF:-1,Rádio Positividade 104.5 FM Rio de Janeiro
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80150
+#EXTINF:-1,JOVEM PAN LOVE FM
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80153
+#EXTINF:-1,Rádio Antena 1 103.7 FM Rio De Janeiro
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80154
+#EXTINF:-1,TV GIDEOES
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80159
+#EXTINF:-1,SBT TV ARATU BAHIA SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80160
+#EXTINF:-1,BONS TEMPOS TV
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80161
+#EXTINF:-1,BAND 4K
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80551
+#EXTINF:-1,RECORD 4K
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80552
+#EXTINF:-1,PREMIERE CLUBES 4K
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80553
+#EXTINF:-1,TELECINE PREMIUM 4K
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80554
+#EXTINF:-1,TNT 4K
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80555
+#EXTINF:-1,TNT SERIES 4K
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80556
+#EXTINF:-1,ANIMAL PLANET 4K
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80557
+#EXTINF:-1,CARTOON NETWORK 4K
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80558
+#EXTINF:-1,COMBATE 4K
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80559
+#EXTINF:-1,DISCOVERY CHANNEL 4K
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80560
+#EXTINF:-1,STAR CHANNEL 4K
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80561
+#EXTINF:-1,ESPN 4 4K
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80562
+#EXTINF:-1,GLOBO 4K
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80563
+#EXTINF:-1,HBO 4K
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80564
+#EXTINF:-1,MEGAPIX 4K
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80565
+#EXTINF:-1,MULTISHOW 4K
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80566
+#EXTINF:-1,SBT 4K
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80567
+#EXTINF:-1,SPACE 4K
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80568
+#EXTINF:-1,SPORTV 4K
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80569
+#EXTINF:-1,HBO XTREME 4K
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80570
+#EXTINF:-1,ESPN 4K
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80571
+#EXTINF:-1,NATGEO 4K
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80572
+#EXTINF:-1,FOX SPORTS 2 4K
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80573
+#EXTINF:-1,REDE TV 4K
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80574
+#EXTINF:-1,TELECINE PIPOCA 4K
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/80575
+#EXTINF:-1,JOVEM PAN NEWS 4K
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/81009
+#EXTINF:-1,REDE SECULO 21 SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/82126
+#EXTINF:-1,TV PAI ETERNO HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/82127
+#EXTINF:-1,TV PAI ETERNO SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/82128
+#EXTINF:-1,GLN TV
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/82855
+#EXTINF:-1,TV DIARIO NORDESTE
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/82856
+#EXTINF:-1,NBA LEAGUE PASS 01
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/83025
+#EXTINF:-1,NBA LEAGUE PASS 02
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/83026
+#EXTINF:-1,NBA LEAGUE PASS 03
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/83027
+#EXTINF:-1,NBA LEAGUE PASS 04
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/83028
+#EXTINF:-1,NBA LEAGUE PASS 05
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/83029
+#EXTINF:-1,NBA LEAGUE PASS 06
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/83030
+#EXTINF:-1,NBA LEAGUE PASS 07
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/83031
+#EXTINF:-1,PRIME VIDEO 1 HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/83809
+#EXTINF:-1,PRIME VIDEO 2 HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/83810
+#EXTINF:-1,PRIME VIDEO 3 HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/83811
+#EXTINF:-1,PRIME VIDEO 4 HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/83812
+#EXTINF:-1,GLOBOPLAY+ 01
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/85879
+#EXTINF:-1,GLOBOPLAY+ 02
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/85880
+#EXTINF:-1,MODO VIAGEM FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/85999
+#EXTINF:-1,MODO VIAGEM H265
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/86000
+#EXTINF:-1,MODO VIAGEM HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/86001
+#EXTINF:-1,MODO VIAGEM SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/86002
+#EXTINF:-1,GLOBO TV ANHANGUERA GO SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/86090
+#EXTINF:-1,UFC Fight Pass FHD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/86157
+#EXTINF:-1,COPA DO BRASIL 01
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/86387
+#EXTINF:-1,COPA DO BRASIL 02
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/86388
+#EXTINF:-1,COPA DO BRASIL 03
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/86389
+#EXTINF:-1,COPA DO BRASIL 04
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/86390
+#EXTINF:-1,COPA DO BRASIL 05
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/86391
+#EXTINF:-1,COPA DO BRASIL 06
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/86392
+#EXTINF:-1,COPA DO BRASIL 07
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/86393
+#EXTINF:-1,GLOBO NSC CRICIUMA HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/86414
+#EXTINF:-1,PPV EVENTOS EXTRAS 01
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/86510
+#EXTINF:-1,PPV EVENTOS EXTRAS 02
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/86511
+#EXTINF:-1,GLOBO TV RIO SUL HD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/86682
+#EXTINF:-1,GLOBO TV RIO SUL SD
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/86683
+#EXTINF:-1,A GRANDE CONQUISTA 01
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/86759
+#EXTINF:-1,A GRANDE CONQUISTA 02
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/86760
+#EXTINF:-1,A GRANDE CONQUISTA 03
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/86761
+#EXTINF:-1,A GRANDE CONQUISTA 04
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/86762
+#EXTINF:-1,NBA LEAGUE PASS 08
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/86913
+#EXTINF:-1,NBA LEAGUE PASS 09
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/86914
+#EXTINF:-1,NBA LEAGUE PASS 10
+http://meuplay.shop:80/eb7l5xix/zvw0ztfb/86915
+
+
