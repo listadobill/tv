@@ -72,27 +72,49 @@
             justify-content: center;
             background-color: #000;
             padding: 20px;
+            position: relative;
         }
 
         #iptv-player {
             width: 100%;
-            max-width: 800px;
-            height: auto;
+            height: 100%;
+            object-fit: contain;
+            transition: opacity 0.3s;
+        }
+
+        #iptv-player.video-playing {
+            opacity: 1;
         }
 
         #fullscreen-button {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
             font-size: 20px;
             padding: 10px 20px;
             background-color: #e50914;
             border: none;
             color: #fff;
             cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        #iptv-player-container:hover #fullscreen-button,
+        #iptv-player-container:focus #fullscreen-button {
+            opacity: 1;
         }
 
         #fixed-content {
             position: fixed;
             top: 20px;
             left: 20px;
+            opacity: 1;
+            transition: opacity 0.3s;
+        }
+
+        #iptv-player-container.video-playing #fixed-content {
+            opacity: 0;
         }
     </style>
 </head>
@@ -163,6 +185,8 @@
             function Channel(url) {
                 videoPlayer.src = url;
                 videoPlayer.play();
+                videoPlayer.classList.add("video-playing");
+                document.getElementById("fixed-content").style.opacity = "0";
             }
 
             function toggleFullscreen() {
