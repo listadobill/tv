@@ -47,10 +47,13 @@
             font-size: 16px;
             color: #fff;
             cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
         }
 
-        #channel-list button:hover {
-            background-color: #444;
+        #channel-list button:hover,
+        #channel-list button:focus {
+            background-color: #fff;
+            color: #000;
         }
 
         #iptv-player-container {
@@ -122,6 +125,14 @@
                     channels.forEach(function(channel) {
                         var button = document.createElement("button");
                         button.textContent = channel.name.toUpperCase();
+                        button.addEventListener("mouseover", function() {
+                            button.style.backgroundColor = "#fff";
+                            button.style.color = "#000";
+                        });
+                        button.addEventListener("mouseout", function() {
+                            button.style.backgroundColor = "transparent";
+                            button.style.color = "#fff";
+                        });
                         button.addEventListener("click", function() {
                             Channel(channel.url);
                         });
