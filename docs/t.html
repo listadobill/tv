@@ -67,7 +67,6 @@
         #iptv-player-container {
             flex-grow: 1;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
             background-color: #111;
@@ -76,24 +75,7 @@
 
         #iptv-player {
             width: 100%;
-            max-width: 800px;
-            height: auto;
-        }
-
-        #fullscreen-button {
-            font-size: 20px;
-            padding: 10px 20px;
-            background-color: #f00;
-            border: none;
-            color: #000;
-            cursor: pointer;
-        }
-
-        #tv-slogan {
-            font-size: 16px;
-            margin-top: 10px;
-            color: #fff;
-            text-align: center;
+            height: 100%;
         }
     </style>
 </head>
@@ -106,8 +88,6 @@
         </div>
         <div id="iptv-player-container">
             <video id="iptv-player" controls loop></video>
-            <div id="tv-slogan">A TV de Graça de Verdade!</div>
-            <button id="fullscreen-button" onclick="toggleFullscreen()">PARA ABRIR TELA CHEIA CLIC NO CANTO INFERIOR DIREITO DA TELA DE REPRODUÇÃO</button>
         </div>
     </div>
 
@@ -155,34 +135,6 @@
             function Channel(url) {
                 videoPlayer.src = url;
                 videoPlayer.play();
-            }
-
-            function toggleFullscreen() {
-                if (videoPlayer.requestFullscreen) {
-                    if (!document.fullscreenElement) {
-                        videoPlayer.requestFullscreen();
-                    } else {
-                        document.exitFullscreen();
-                    }
-                } else if (videoPlayer.mozRequestFullScreen) { // Firefox
-                    if (!document.mozFullScreenElement) {
-                        videoPlayer.mozRequestFullScreen();
-                    } else {
-                        document.mozCancelFullScreen();
-                    }
-                } else if (videoPlayer.webkitRequestFullscreen) { // Chrome, Safari and Opera
-                    if (!document.webkitFullscreenElement) {
-                        videoPlayer.webkitRequestFullscreen();
-                    } else {
-                        document.webkitExitFullscreen();
-                    }
-                } else if (videoPlayer.msRequestFullscreen) { // IE/Edge
-                    if (!document.msFullscreenElement) {
-                        videoPlayer.msRequestFullscreen();
-                    } else {
-                        document.msExitFullscreen();
-                    }
-                }
             }
         });
     </script>
