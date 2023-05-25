@@ -1,18 +1,21 @@
 #EXTM3U
-#EXTINF:-1 tvg-logo="", Atualização 25/05/2023
+
+
+#EXTINF:-1 tvg-logo="", 01 - Atualização 25/05/2023
 http://stream1.example.com/live/stream.m3u8
 
-#EXTINF:-1 tvg-logo="", 01 -  Para computadores, use o player VLC de preferencia.
+#EXTINF:-1 tvg-logo="", 02 -  Para computadores,
 http://stream2.example.com/live/stream.m3u8
-
-#EXTINF:-1 tvg-logo="", 02 - Para Android um IPTV Player de sua preferencia, use um que tenha "Loop" automatico.
+EXTINF:-1 tvg-logo="", 02 - use o player VLC de preferencia.
 http://stream2.example.com/live/stream.m3u8
 
 #EXTINF:-1 tvg-logo="", 03 - Para Android um IPTV Player de sua preferencia, use um que tenha "Loop" automatico.
+http://stream2.example.com/live/stream.m3u8
+#EXTINF:-1 tvg-logo="", 03 - use um que tenha "Loop" automatico.
 http://stream2.example.com/live/stream.m3u8
 
 #EXTINF:-1 tvg-logo="", 04 - Nossa Lista de canais - https://is.gd/8RhxXi
 http://stream2.example.com/live/stream.m3u8
 
-#EXTINF:-1 tvg-logo="", 04 - Alguns canais podem estar oscilando
+#EXTINF:-1 tvg-logo="", 05 - Alguns canais podem estar oscilando
 http://stream2.example.com/live/stream.m3u8
