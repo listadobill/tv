@@ -6,8 +6,7 @@
     <style>
         body {
             display: flex;
-            align-items: flex-start; /* Alinhar no topo */
-            justify-content: center;
+            align-items: center;
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
@@ -28,6 +27,7 @@
             background-color: #000;
             overflow-y: auto;
             padding: 20px;
+            margin-top: 60px; /* Ajuste a margem superior conforme necessário */
             box-sizing: border-box;
         }
 
@@ -88,16 +88,22 @@
             color: #fff;
             cursor: pointer;
         }
+
+        #fixed-content {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+        }
     </style>
 </head>
 <body>
     <div id="container">
         <div id="channel-list">
-            <div id="channel-scroll">
+            <div id="fixed-content">
                 <h1>TV DO BILL</h1>
                 <h2>A TV Stream de Graça de Verdade!</h2>
-                <div id="channel-buttons"></div>
             </div>
+            <div id="channel-buttons"></div>
         </div>
         <div id="iptv-player-container">
             <video id="iptv-player" controls loop></video>
@@ -109,7 +115,6 @@
         document.addEventListener("DOMContentLoaded", function() {
             var playlistUrl = "https://raw.githubusercontent.com/listadobill/tv/main/c.m3u";
             var channelButtonsContainer = document.getElementById("channel-buttons");
-            var channelScrollContainer = document.getElementById("channel-scroll");
             var videoPlayer = document.getElementById("iptv-player");
 
             fetch(playlistUrl)
