@@ -1,1 +1,21 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirecionamento de Link</title>
+  <script>
+    function redirectLink() {
+      var inputLink = document.getElementById("input-link").value;
+      
+      if (inputLink === "https://listadobill.github.io/iptv") {
+        window.location.href = "https://raw.githubusercontent.com/listadobill/tv/main/c.m3u";
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Redirecionamento de Link</h1>
+  <label for="input-link">Insira o link:</label>
+  <input type="text" id="input-link">
+  <button onclick="redirectLink()">Redirecionar</button>
+</body>
+</html>
