@@ -46,6 +46,7 @@
         #iptv-player-container {
             flex-grow: 1;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
         }
@@ -65,6 +66,15 @@
             color: #ffffff;
             cursor: pointer;
         }
+
+        #fullscreen-toggle-button {
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            border: none;
+            color: #ffffff;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -76,6 +86,7 @@
         <div id="iptv-player-container">
             <video id="iptv-player" controls></video>
             <button id="fullscreen-button" onclick="toggleFullscreen()">&#x26F6;</button>
+            <button id="fullscreen-toggle-button" onclick="toggleFullscreenManually()">ABRIR TELA CHEIA</button>
         </div>
     </div>
 
@@ -109,52 +120,57 @@
 
                     channels.forEach(function(channel) {
                         var button = document.createElement("button");
-                        button.textContent = channel.name;
+                        button.textContent = channel.name.toUpperCase();
                         button.addEventListener("click", function() {
-                            playChannel(channel.url);
+                            Channel(channel.url);
                         });
                         channelButtonsContainer.appendChild(button);
                     });
-
-                    function playChannel(url) {
-                        videoPlayer.src = url;
-                        videoPlayer.play();
-                    }
                 })
                 .catch(function(error) {
                     console.error("Erro ao carregar a playlist IPTV:", error);
                 });
-        });
 
-        function toggleFullscreen() {
-            var videoPlayer = document.getElementById("iptv-player");
+            function Channel(url) {
+                videoPlayer.src = url;
+                videoPlayer.play();
+                toggleFullscreenManually();
+            }
 
-            if (videoPlayer.requestFullscreen) {
-                if (!document.fullscreenElement) {
-                    videoPlayer.requestFullscreen();
-                } else {
-                    document.exitFullscreen();
-                }
-            } else if (videoPlayer.mozRequestFullScreen) { // Firefox
-                if (!document.mozFullScreenElement) {
-                    videoPlayer.mozRequestFullScreen();
-                } else {
-                    document.mozCancelFullScreen();
-                }
-            } else if (videoPlayer.webkitRequestFullscreen) { // Chrome, Safari and Opera
-                if (!document.webkitFullscreenElement) {
-                    videoPlayer.webkitRequestFullscreen();
-                } else {
-                    document.webkitExitFullscreen();
-                }
-            } else if (videoPlayer.msRequestFullscreen) { // IE/Edge
-                if (!document.msFullscreenElement) {
-                    videoPlayer.msRequestFullscreen();
-                } else {
-                    document.msExitFullscreen();
+            function toggleFullscreen() {
+                if (videoPlayer.requestFullscreen) {
+                    if (!document.fullscreenElement) {
+                        videoPlayer.requestFullscreen();
+                    } else {
+                        document.exitFullscreen();
+                    }
+                } else if (videoPlayer.mozRequestFullScreen) { // Firefox
+                    if (!document.mozFullScreenElement) {
+                        videoPlayer.mozRequestFullScreen();
+                    } else {
+                        document.mozCancelFullScreen();
+                    }
+                } else if (videoPlayer.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                    if (!document.webkitFullscreenElement) {
+                        videoPlayer.webkitRequestFullscreen();
+                    } else {
+                        document.webkitExitFullscreen();
+                    }
+                } else if (videoPlayer.msRequestFullscreen) { // IE/Edge
+                    if (!document.msFullscreenElement) {
+                        videoPlayer.msRequestFullscreen();
+                    } else {
+                        document.msExitFullscreen();
+                    }
                 }
             }
-        }
+
+            function toggleFullscreenManually() {
+                if (!document.fullscreenElement) {
+                    videoPlayer.requestFullscreen();
+                }
+            }
+        });
     </script>
 </body>
 </html>
