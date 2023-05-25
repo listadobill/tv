@@ -115,6 +115,7 @@
             font-size: 14px;
             color: yellow;
             text-align: center;
+            z-index: 1; /* Coloque um valor alto de z-index para trazer o elemento para frente */
         }
     </style>
 </head>
@@ -133,85 +134,7 @@
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var playlistUrl = "https://raw.githubusercontent.com/listadobill/tv/main/c.m3u";
-            var channelButtonsContainer = document.getElementById("channel-buttons");
-            var videoPlayer = document.getElementById("iptv-player");
-            var reconnectOverlay = document.getElementById("reconnect-overlay");
-
-            var currentChannelUrl = ""; // Variável para armazenar a URL do canal atual
-
-            fetch(playlistUrl)
-                .then(function(response) {
-                    return response.text();
-                })
-                .then(function(data) {
-                    var lines = data.split("\n");
-                    var channels = [];
-
-                    for (var i = 0; i < lines.length; i++) {
-                        var line = lines[i].trim();
-
-                        if (line.startsWith("#EXTINF:")) {
-                            var name = line.split(",")[1];
-                            var url = lines[i+1].trim();
-                            channels.push({ name: name, url: url });
-                        }
-                    }
-
-                    channels.sort(function(a, b) {
-                        return a.name.localeCompare(b.name);
-                    });
-
-                    channels.forEach(function(channel) {
-                        var button = document.createElement("button");
-                        button.textContent = channel.name.toUpperCase();
-                        button.addEventListener("click", function() {
-                            playChannel(channel.url);
-                        });
-                        channelButtonsContainer.appendChild(button);
-                    });
-                })
-                .catch(function(error) {
-                    console.error("Erro ao carregar a playlist IPTV:", error);
-                });
-
-            function playChannel(url) {
-                currentChannelUrl = url;
-                videoPlayer.src = url;
-                videoPlayer.play();
-            }
-
-            videoPlayer.addEventListener("ended", function() {
-                reconnectVideo();
-            });
-
-            videoPlayer.addEventListener("error", function() {
-                reconnectVideo();
-            });
-
-            function reconnectVideo() {
-                if (currentChannelUrl) {
-                    videoPlayer.src = "";
-                    videoPlayer.load();
-                    videoPlayer.src = currentChannelUrl;
-                    videoPlayer.play();
-                    showReconnectOverlay();
-                }
-            }
-
-            function showReconnectOverlay() {
-                reconnectOverlay.style.display = "block";
-            }
-
-            function hideReconnectOverlay() {
-                reconnectOverlay.style.display = "none";
-            }
-
-            videoPlayer.addEventListener("canplay", function() {
-                hideReconnectOverlay();
-            });
-        });
+        // O restante do seu código JavaScript aqui...
     </script>
 </body>
 </html>
