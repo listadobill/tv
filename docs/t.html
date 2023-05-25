@@ -6,45 +6,71 @@
     <style>
         body {
             display: flex;
-            flex-direction: column;
             align-items: center;
-            justify-content: center;
             height: 100vh;
             margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #channel-list {
+            width: 300px;
+            background-color: #f0f0f0;
+            overflow-y: auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        #channel-list button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #ffffff;
+            border: none;
+            text-align: left;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #channel-list button:hover {
+            background-color: #e0e0e0;
+        }
+
+        #iptv-player-container {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         #iptv-player {
             width: 80%;
             max-width: 800px;
         }
-
-        #channel-list {
-            list-style-type: none;
-            padding: 0;
-            margin: 20px 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .channel-button {
-            margin: 5px;
-            padding: 10px 15px;
-            background-color: #f0f0f0;
-            border: none;
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
-    <h1>Lista de Canais IPTV</h1>
-    <ul id="channel-list"></ul>
-    <video id="iptv-player" controls></video>
+    <div id="container">
+        <div id="channel-list">
+            <h2>Lista de Canais IPTV</h2>
+            <div id="channel-buttons"></div>
+        </div>
+        <div id="iptv-player-container">
+            <video id="iptv-player" controls></video>
+        </div>
+    </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var playlistUrl = "https://raw.githubusercontent.com/listadobill/tv/main/c.m3u";
-            var channelList = document.getElementById("channel-list");
+            var channelButtonsContainer = document.getElementById("channel-buttons");
             var videoPlayer = document.getElementById("iptv-player");
 
             fetch(playlistUrl)
@@ -65,24 +91,22 @@
                         }
                     }
 
-                    for (var j = 0; j < channels.length; j++) {
-                        var channelItem = document.createElement("li");
-                        var channelButton = document.createElement("button");
-                        channelButton.textContent = channels[j].name;
-                        channelButton.className = "channel-button";
-                        channelButton.addEventListener("click", function(index) {
-                            return function() {
-                                playChannel(index);
-                            };
-                        }(j));
-                        channelItem.appendChild(channelButton);
-                        channelList.appendChild(channelItem);
-                    }
+                    channels.sort(function(a, b) {
+                        return a.name.localeCompare(b.name);
+                    });
 
-                    function playChannel(index) {
-                        var channelUrl = channels[index].url;
-                        videoPlayer.src = channelUrl;
-                        videoPlayer.requestFullscreen();
+                    channels.forEach(function(channel) {
+                        var button = document.createElement("button");
+                        button.textContent = channel.name;
+                        button.addEventListener("click", function() {
+                            playChannel(channel.url);
+                        });
+                        channelButtonsContainer.appendChild(button);
+                    });
+
+                    function playChannel(url) {
+                        videoPlayer.src = url;
+                        videoPlayer.play();
                     }
                 })
                 .catch(function(error) {
