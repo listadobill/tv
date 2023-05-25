@@ -3,11 +3,43 @@
 <head>
     <meta charset="utf-8">
     <title>Player IPTV</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #iptv-player {
+            width: 80%;
+            max-width: 800px;
+        }
+
+        #channel-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .channel-button {
+            margin: 5px;
+            padding: 10px 15px;
+            background-color: #f0f0f0;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <h1>Lista de Canais IPTV</h1>
     <ul id="channel-list"></ul>
-    <video id="iptv-player" controls autoplay></video>
+    <video id="iptv-player" controls></video>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -35,18 +67,22 @@
 
                     for (var j = 0; j < channels.length; j++) {
                         var channelItem = document.createElement("li");
-                        channelItem.textContent = channels[j].name;
-                        channelItem.addEventListener("click", function(index) {
+                        var channelButton = document.createElement("button");
+                        channelButton.textContent = channels[j].name;
+                        channelButton.className = "channel-button";
+                        channelButton.addEventListener("click", function(index) {
                             return function() {
                                 playChannel(index);
                             };
                         }(j));
+                        channelItem.appendChild(channelButton);
                         channelList.appendChild(channelItem);
                     }
 
                     function playChannel(index) {
                         var channelUrl = channels[index].url;
                         videoPlayer.src = channelUrl;
+                        videoPlayer.requestFullscreen();
                     }
                 })
                 .catch(function(error) {
