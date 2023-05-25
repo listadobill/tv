@@ -98,7 +98,7 @@
             <div id="channel-buttons"></div>
         </div>
         <div id="iptv-player-container">
-            <video id="iptv-player" controls loop autoplay></video>
+            <video id="iptv-player" controls autoplay loop></video>
         </div>
     </div>
 
@@ -145,6 +145,15 @@
 
             function Channel(url) {
                 videoPlayer.src = url;
+                videoPlayer.play();
+            }
+
+            videoPlayer.addEventListener("ended", function() {
+                restartVideo();
+            });
+
+            function restartVideo() {
+                videoPlayer.currentTime = 0;
                 videoPlayer.play();
             }
         });
