@@ -148,18 +148,20 @@
                 videoPlayer.play();
             }
 
-            videoPlayer.addEventListener("error", function() {
-                reconnectVideo();
-            });
-
-            videoPlayer.addEventListener("pause", function() {
+            videoPlayer.addEventListener("ended", function() {
                 reconnectVideo();
             });
 
             function reconnectVideo() {
-                videoPlayer.load();
+                videoPlayer.currentTime = 0;
                 videoPlayer.play();
             }
+
+            videoPlayer.addEventListener("error", function() {
+                // Lógica para lidar com a falha na reprodução do vídeo
+                // Pode ser exibir uma mensagem de erro, tentar reconectar, carregar outro vídeo, etc.
+                console.error("Erro na reprodução do vídeo");
+            });
         });
     </script>
 </body>
