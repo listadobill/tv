@@ -71,11 +71,40 @@
             justify-content: center;
             background-color: #111;
             padding: 20px;
+            position: relative; /* Adicionado */
         }
 
         #iptv-player {
             width: 100%;
             height: 100%;
+        }
+
+        #reconnect-overlay { /* Adicionado */
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 30px;
+            height: 30px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #reconnect-overlay::after { /* Adicionado */
+            content: "";
+            width: 10px;
+            height: 10px;
+            border: 2px solid #fff;
+            border-right-color: transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite; /* Adicionado */
+        }
+
+        @keyframes spin { /* Adicionado */
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
 
         #fullscreen-reminder {
@@ -98,6 +127,7 @@
             <div id="channel-buttons"></div>
         </div>
         <div id="iptv-player-container">
+            <div id="reconnect-overlay"></div> <!-- Adicionado -->
             <video id="iptv-player" controls autoplay></video>
         </div>
     </div>
@@ -107,6 +137,7 @@
             var playlistUrl = "https://raw.githubusercontent.com/listadobill/tv/main/c.m3u";
             var channelButtonsContainer = document.getElementById("channel-buttons");
             var videoPlayer = document.getElementById("iptv-player");
+            var reconnectOverlay = document.getElementById("reconnect-overlay"); // Adicionado
 
             fetch(playlistUrl)
                 .then(function(response) {
