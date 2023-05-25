@@ -6,7 +6,8 @@
     <style>
         body {
             display: flex;
-            align-items: center;
+            align-items: flex-start; /* Alinhar no topo */
+            justify-content: center;
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
@@ -38,7 +39,8 @@
 
         #channel-list h2 {
             font-size: 18px;
-            margin-top: 0;
+            margin-top: 10px;
+            margin-bottom: 0;
             color: #888;
         }
 
@@ -91,9 +93,11 @@
 <body>
     <div id="container">
         <div id="channel-list">
-            <h1>TV DO BILL</h1>
-            <h2>A TV Stream de Graça de Verdade!</h2>
-            <div id="channel-buttons"></div>
+            <div id="channel-scroll">
+                <h1>TV DO BILL</h1>
+                <h2>A TV Stream de Graça de Verdade!</h2>
+                <div id="channel-buttons"></div>
+            </div>
         </div>
         <div id="iptv-player-container">
             <video id="iptv-player" controls loop></video>
@@ -105,6 +109,7 @@
         document.addEventListener("DOMContentLoaded", function() {
             var playlistUrl = "https://raw.githubusercontent.com/listadobill/tv/main/c.m3u";
             var channelButtonsContainer = document.getElementById("channel-buttons");
+            var channelScrollContainer = document.getElementById("channel-scroll");
             var videoPlayer = document.getElementById("iptv-player");
 
             fetch(playlistUrl)
