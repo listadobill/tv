@@ -15,7 +15,7 @@
     window.onload = function() {
       // URLs das fontes IPTV
       var urls = [
-        "https://list.iptvcat.com/my_list/61173e0c39375c2a65a69fd1466e40bc.m3u8",
+        "https://raw.githubusercontent.com/listadobill/tv/main/cattvbr.m3u",
         "https://iptv-org.github.io/iptv/index.country.m3u",
         "https://raw.githubusercontent.com/listadobill/tv/main/pluto.m3u"
       ];
@@ -62,10 +62,49 @@
 
       // Função para exibir o conteúdo combinado na página
       function displayCombinedContent(content) {
+        var channels = extractChannels(content);
+        var sortedContent = buildM3UContent(channels);
+
         var container = document.getElementById("combined-content");
         var pre = document.createElement("pre");
-        pre.textContent = content;
+        pre.textContent = sortedContent;
         container.appendChild(pre);
+      }
+
+      // Função para extrair os canais do conteúdo
+      function extractChannels(content) {
+        var lines = content.trim().split("\n");
+        var channels = [];
+        var currentChannel = "";
+
+        lines.forEach(function(line) {
+          if (line.startsWith("#EXTINF:")) {
+            if (currentChannel !== "") {
+              channels.push(currentChannel);
+            }
+            currentChannel = line + "\n";
+          } else {
+            currentChannel += line + "\n";
+          }
+        });
+
+        if (currentChannel !== "") {
+          channels.push(currentChannel);
+        }
+
+        return channels;
+      }
+
+      // Função para ordenar e construir o conteúdo .m3u
+      function buildM3UContent(channels) {
+        channels.sort();
+
+        var sortedContent = "";
+        channels.forEach(function(channel) {
+          sortedContent += channel;
+        });
+
+        return sortedContent;
       }
 
       // Função para exibir as fontes indisponíveis na página
