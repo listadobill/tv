@@ -1,18 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Lista de Canais</title>
+    <title>Baixe o Reprodutor VLC ou MXplayer</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #000000;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            margin-top: 40px;
+            font-size: 28px;
+        }
+
+        #channel-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        li {
+            margin: 10px;
+            text-align: center;
+        }
+
+        a {
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 16px;
+            background-color: #e50914;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            width: 200px;
+            margin: 0 auto;
+        }
+
+        a:hover {
+            background-color: #b4070f;
+        }
+    </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <h1>Lista de Canais</h1>
+    <h1>Baixe o Reprodutor VLC ou MXplayer</h1>
     <ul id="channel-list"></ul>
 
     <script>
         $(document).ready(function() {
             $.get('https://raw.githubusercontent.com/listadobill/tv/main/plutotv_br.m3u', function(data) {
                 const channelList = parseM3U(data);
-                displayChannels(channelList);
+                const sortedChannelList = sortChannelsAlphabetically(channelList);
+                displayChannels(sortedChannelList);
             });
         });
 
@@ -34,6 +80,10 @@
             }
 
             return channelList;
+        }
+
+        function sortChannelsAlphabetically(channelList) {
+            return channelList.sort((a, b) => a.name.localeCompare(b.name));
         }
 
         function displayChannels(channelList) {
