@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="description" content="Elite Video Player"/>
+	<meta property="og:title" content="Elite Video Player by _CreativeMedia_"/>
+	<meta property="og:image" content="http://creativeinteractivemedia.com/player/imgFB/elite.png"/>
+	<link rel="stylesheet" href="css/elite.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="css/elite-font-awesome.css" type="text/css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" type="text/css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+	<script src="https://player.vimeo.com/api/player.js"></script>
+	<script src="js/jquery.mCustomScrollbar.js" type="text/javascript"></script> 
+	<script src="js/THREEx.FullScreen.js"></script>
+	<script src="js/videoPlayer.js" type="text/javascript"></script>
+	<script src="js/Playlist.js" type="text/javascript"></script>
+	<script src="js/vast.js" type="text/javascript"></script>
+
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function($) {
+			videoPlayer = $("#Elite_video_player").Video({   
+				googleAnalyticsTrackingCode: "UA-87467628-3",
+				instanceName: "player1",
+				instanceTheme: "dark",
+				autohideControls: 5,
+				hideControlsOnMouseOut: "No",
+				playerLayout: "fixedSize",
+				videoPlayerWidth: 1006,
+				videoPlayerHeight: 420,
+				videoRatio: 16/9,
+				videoRatioMobile: 16/9,
+				videoRatioStretch: false,
+				iOSPlaysinline: true,
+				floatPlayerOutsideViewport: false,
+				pauseStickyOutsideViewport: false,
+				lightBox: false,
+				lightBoxAutoplay: false,
+				lightBoxThumbnail: "images/preview_images/poster.jpg",
+				lightBoxThumbnailAutoSize: false,
+				lightBoxThumbnailWidth: 400,
+				lightBoxThumbnailHeight: 220,
+				lightBoxCloseOnOutsideClick: true,
+				playlist: "Right playlist",
+				playlistShowOnlyThumbnails: false,
+				playlistOrder: "",
+				playlistScrollType: "light",
+				playlistBehaviourOnPageload: "opened (default)",
+				autoplay: true,
+				colorAccent: "#cc181e",
+				vimeoColor: "cc181e",
+				youtubeControls: "custom controls",
+				youtubeSkin: "dark",
+				youtubeColor: "red",
+				youtubeQuality: "default",
+				youtubeShowRelatedVideos: "Yes",
+				videoPlayerShadow: "effect1",
+				loadRandomVideoOnStart: "No",
+				shuffle: "No",
+				posterImg: "images/preview_images/poster.jpg",
+				posterImgOnVideoFinish: "images/preview_images/poster2.jpg",
+				onFinish: "Play next video",
+				nowPlayingText: "Yes",
+				HTML5VideoQuality: "HD",
+				HTML5videoThumbnails: "vtt",
+				preloadSelfHosted: "none",
+				rightClickMenu: true,
+				hideVideoSource: false,
+				showAllControls: true,
+				allowSkipAd: true,
+				showAdvertiserName: false,
+				advertiserName: "",
+				rewindShow: "Yes",
+				qualityShow: "Yes",
+				infoShow: "Yes",
+				shareShow: "Yes",
+				fastForwardShow: "Yes",
+				fastBackwardShow: "Yes",
+				stepFastForward: 5,
+				stepFastBackward: 5,
+				facebookShow: "Yes",
+				twitterShow: "Yes",
+				facebookShareName: "Elite video player",
+				facebookShareLink: "",
+				facebookShareDescription: "Elite Video Player",
+				facebookSharePicture: "",
+				twitterText: "Elite video player",
+				twitterLink: "",
+				twitterHashtags: "wordpressvideoplayer",
+				twitterVia: "Creative media",
+				logoShow: "Yes",
+				logoClickable: "Yes",
+				logoPath: "images/logo/logo.png",
+				logoGoToLink: "",
+				logoPosition: "bottom-left",
+				embedShow: "Yes",
+				embedCodeSrc: "www.yourwebsite.com/videoplayer/index.html",
+				embedCodeW: "746",
+				embedCodeH: "420",
+				embedShareLink: "www.yourwebsite.com/videoplayer/index.html",
+				showGlobalPrerollAds: false,
+				globalPrerollAds: "url1;url2;url3;url4;url5",
+				globalPrerollAdsSkipTimer: 0,
+				globalPrerollAdsGotoLink: "",
+				advertisementTitle: "Advertisement",
+				skipAdvertisementText: "Skip advertisement",
+				skipAdText: "You can skip this ad in",
+				mutedNotificationText: "Video has no sound",
+				playBtnTooltipTxt: "Play",
+				pauseBtnTooltipTxt: "Pause",
+				rewindBtnTooltipTxt: "Rewind",
+				downloadVideoBtnTooltipTxt: "Download video",
+				qualityBtnOpenedTooltipTxt: "Close settings",
+				qualityBtnClosedTooltipTxt: "Settings",
+				ccShowOnHTML5Videos: true,
+				ccShowOnVideoLoad: true,
+				ccBtnOpenedTooltipTxt: "Hide captions",
+				ccBtnClosedTooltipTxt: "Show captions",
+				muteBtnTooltipTxt: "Mute",
+				unmuteBtnTooltipTxt: "Unmute",
+				fullscreenBtnTooltipTxt: "Fullscreen",
+				exitFullscreenBtnTooltipTxt: "Exit fullscreen",
+				fullscreenADBtnTooltipTxt: "Watch advertisement in fullscreen",
+				exitFullscreenADBtnTooltipTxt: "Exit fullscreen",
+				infoBtnTooltipTxt: "Show info",
+				embedBtnTooltipTxt: "Embed",
+				shareBtnTooltipTxt: "Share",
+				volumeTooltipTxt: "Volume",
+				fastForwardBtnTooltipTxt: "Fast forward",
+				fastBackwardBtnTooltipTxt: "Fast backward",
+				playlistBtnClosedTooltipTxt: "Show playlist",
+				playlistBtnOpenedTooltipTxt: "Hide playlist",
+				facebookBtnTooltipTxt: "Share on Facebook",
+				twitterBtnTooltipTxt: "Share on Twitter",
+				lastBtnTooltipTxt: "Go to last video",
+				firstBtnTooltipTxt: "Go to first video",
+				nextBtnTooltipTxt: "Play next video",
+				previousBtnTooltipTxt: "Play previous video",
+				shuffleBtnOnTooltipTxt: "Shuffle on",
+				shuffleBtnOffTooltipTxt: "Shuffle off",
+				nowPlayingTooltipTxt: "NOW PLAYING",
+				embedWindowTitle1: "SHARE THIS PLAYER:",
+					embedWindowTitle2: "EMBED THIS VIDEO IN YOUR SITE:",
+				embedWindowTitle3: "SHARE LINK TO THIS PLAYER:",
+				copyTxt: "Copy",
+				copiedTxt: "Copied",
+				youtubePlaylistID: "",
+				youtubeChannelID: "",
+				videosLoadTimeout: 5,
+				videosLoadText: "Loading",
+				}   
+			);
+		});
+	</script>
+</head>
+<body>
+	<div id="Elite_video_player" style="margin: 0 auto;">
+		<div id="video_container">
+			<video id="video1" class="video-js vjs-default-skin" preload="none" poster="images/poster.jpg">
+				<source src="video/video.mp4" type="video/mp4">
+				<source src="video/video.webm" type="video/webm">
+			</video>
+		</div>
+	</div>
+</body>
+</html>
