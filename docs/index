@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>TV DO BILL</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      background-color: #141414;
+    }
+
+    .header {
+      background-color: #141414;
+      color: #e50914;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 36px;
+      margin: 0;
+      font-weight: bold;
+    }
+
+    .header p {
+      font-size: 18px;
+      margin: 10px 0 0;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .content {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .button-frame {
+      display: inline-block;
+      padding: 10px;
+      border: 2px solid #fff;
+      transition: border-color 0.3s ease;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    .button-frame:hover,
+    .button-frame:focus {
+      border-color: #e50914;
+    }
+
+    .button-frame img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .gallery {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .arrow {
+      font-size: 40px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .footer {
+      background-color: #141414;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+    
+    .instruction {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div class="header">
+    <h1>TV DO BILL</h1>
+    <p>A TV stream grátis de verdade</p>
+  </div>
+
+  <div class="content">
+    <div class="gallery">
+      <div class="arrow" onclick="changeIcon(-1)">&lt;</div>
+      <div class="button-frame">
+        <a href="https://listadobill.github.io/tv/">
+          <img id="icon" src="https://www.minhaoperadora.com.br/wp-content/uploads/2020/01/Confira-qual-canal-foi-o-mais-visto-da-TV-paga-em-2019.jpg" alt="Lista Provisória">
+        </a>
+        <p>Lista Provisória</p>
+      </div>
+      <div class="arrow" onclick="changeIcon(1)">&gt;</div>
+    </div>
+    <p class="instruction">Selecione o Stream desejado usando as setas</p>
+  </div>
+
+  <div class="footer">
+    <p>É normal eventualmente um canal, vídeo ou lista não funcionar, tenha paciência</p>
+  </div>
+
+  <script>
+    var icons = [
+      "https://www.minhaoperadora.com.br/wp-content/uploads/2020/01/Confira-qual-canal-foi-o-mais-visto-da-TV-paga-em-2019.jpg",
+      "https://acontecendoaqui.com.br/wp-content/uploads/2020/08/pluto_tv_2.jpg"
+    ];
+    var currentIconIndex = 0;
+    var iconElement = document.getElementById("icon");
+
+    function changeIcon(direction) {
+      currentIconIndex += direction;
+
+      if (currentIconIndex < 0) {
+        currentIconIndex = icons.length - 1;
+      } else if (currentIconIndex >= icons.length) {
+        currentIconIndex = 0;
+      }
+
+      iconElement.src = icons[currentIconIndex];
+    }
+  </script>
+</body>
+
+</html>
