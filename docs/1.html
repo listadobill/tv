@@ -213,9 +213,16 @@
                 hideReconnectOverlay();
             });
 
-            // Função para abrir o player automaticamente
-            videoPlayer.addEventListener("canplay", function() {
-                videoPlayer.play();
+            videoPlayer.addEventListener("play", function() {
+                if (videoPlayer.requestFullscreen) {
+                    videoPlayer.requestFullscreen();
+                } else if (videoPlayer.mozRequestFullScreen) {
+                    videoPlayer.mozRequestFullScreen();
+                } else if (videoPlayer.webkitRequestFullscreen) {
+                    videoPlayer.webkitRequestFullscreen();
+                } else if (videoPlayer.msRequestFullscreen) {
+                    videoPlayer.msRequestFullscreen();
+                }
             });
         });
     </script>
