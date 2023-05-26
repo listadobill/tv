@@ -143,8 +143,31 @@
     const leftArrow = document.querySelector('.arrow.left');
     const rightArrow = document.querySelector('.arrow.right');
     const carouselWidth = carousel.offsetWidth;
-    const buttonFrames = document.querySelectorAll('.button-frame');
+    let buttonFrames = Array.from(document.querySelectorAll('.button-frame'));
     let currentIndex = 0;
+
+    // Ordenar os ícones em ordem alfabética
+    buttonFrames.sort((a, b) => {
+      const titleA = a.querySelector('p').textContent.toUpperCase();
+      const titleB = b.querySelector('p').textContent.toUpperCase();
+      if (titleA < titleB) {
+        return -1;
+      }
+      if (titleA > titleB) {
+        return 1;
+      }
+      return 0;
+    });
+
+    // Remover os ícones existentes no carrossel
+    while (carousel.firstChild) {
+      carousel.firstChild.remove();
+    }
+
+    // Adicionar os ícones em ordem ao carrossel
+    buttonFrames.forEach((buttonFrame) => {
+      carousel.appendChild(buttonFrame);
+    });
 
     leftArrow.addEventListener('click', () => {
       currentIndex = (currentIndex - 1 + buttonFrames.length) % buttonFrames.length;
