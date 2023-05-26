@@ -32,17 +32,30 @@
       color: #fff;
     }
 
-    .content {
-      text-align: center;
+    .carousel-container {
+      width: 100%;
+      overflow: hidden;
       margin-top: 50px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .carousel {
+      display: flex;
+      transition: transform 0.5s ease;
     }
 
     .button-frame {
-      display: inline-block;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       padding: 10px;
       border: 2px solid #fff;
       transition: border-color 0.3s ease;
       margin: 10px;
+      flex: 0 0 auto;
     }
 
     .button-frame:hover,
@@ -51,14 +64,37 @@
     }
 
     .button-frame img {
-      max-width: 100%;
-      height: auto;
+      max-width: 80px;
+      height: 80px;
     }
 
     .content p {
       font-size: 16px;
       color: #fff;
       margin-top: 10px;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 24px;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .arrow.left {
+      left: 10px;
+    }
+
+    .arrow.right {
+      right: 10px;
+    }
+
+    .selected {
+      border-color: #e50914;
     }
 
     .footer {
@@ -78,25 +114,64 @@
     <p>A TV stream grátis de verdade</p>
   </div>
 
-  <div class="content">
-    <div class="button-frame">
-      <a href="https://listadobill.github.io/tv/plutotvbr">
-        <img src="https://acontecendoaqui.com.br/wp-content/uploads/2020/08/pluto_tv_2.jpg" alt="Pluto TV Brasil">
-      </a>
-    </div>
-    <p>Pluto TV BR</p>
+  <div class="carousel-container">
+    <div class="arrow left">&lt;</div>
+    <div class="carousel">
+      <div class="button-frame">
+        <a href="https://listadobill.github.io/tv/plutotvbr">
+          <img src="https://acontecendoaqui.com.br/wp-content/uploads/2020/08/pluto_tv_2.jpg" alt="Pluto TV Brasil">
+        </a>
+        <p>Pluto TV BR</p>
+      </div>
 
-    <div class="button-frame">
-      <a href="https://listadobill.github.io/tv/provisoria">
-        <img src="https://www.minhaoperadora.com.br/wp-content/uploads/2020/01/Confira-qual-canal-foi-o-mais-visto-da-TV-paga-em-2019.jpg" alt="Lista Provisória">
-      </a>
+      <div class="button-frame">
+        <a href="https://listadobill.github.io/tv/provisoria">
+          <img src="https://www.minhaoperadora.com.br/wp-content/uploads/2020/01/Confira-qual-canal-foi-o-mais-visto-da-TV-paga-em-2019.jpg" alt="Lista Provisória">
+        </a>
+        <p>Lista Provisória</p>
+      </div>
     </div>
-    <p>Lista Provisória</p>
+    <div class="arrow right">&gt;</div>
   </div>
 
   <div class="footer">
     <p>É normal eventualmente um canal, vídeo ou lista não funcionar, tenha paciência</p>
   </div>
+
+  <script>
+    const carousel = document.querySelector('.carousel');
+    const leftArrow = document.querySelector('.arrow.left');
+    const rightArrow = document.querySelector('.arrow.right');
+    const carouselWidth = carousel.offsetWidth;
+    const buttonFrames = document.querySelectorAll('.button-frame');
+    let currentIndex = 0;
+
+    leftArrow.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + buttonFrames.length) % buttonFrames.length;
+      scrollCarousel();
+      highlightSelectedButton();
+    });
+
+    rightArrow.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % buttonFrames.length;
+      scrollCarousel();
+      highlightSelectedButton();
+    });
+
+    function scrollCarousel() {
+      const buttonWidth = buttonFrames[0].offsetWidth;
+      carousel.style.transform = `translateX(${-currentIndex * buttonWidth}px)`;
+    }
+
+    function highlightSelectedButton() {
+      buttonFrames.forEach((buttonFrame, index) => {
+        buttonFrame.classList.remove('selected');
+        if (index === currentIndex) {
+          buttonFrame.classList.add('selected');
+        }
+      });
+    }
+  </script>
 </body>
 
 </html>
