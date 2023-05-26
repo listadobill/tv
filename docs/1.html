@@ -115,7 +115,7 @@
             font-size: 14px;
             color: yellow;
             text-align: center;
-            z-index: 1; /* Coloque um valor alto de z-index para trazer o elemento para frente */
+            z-index: 9999; /* Colocado em um z-index alto para trazer para frente */
         }
     </style>
 </head>
@@ -139,6 +139,8 @@
             var channelButtonsContainer = document.getElementById("channel-buttons");
             var videoPlayer = document.getElementById("iptv-player");
             var reconnectOverlay = document.getElementById("reconnect-overlay");
+
+            var currentChannelUrl = ""; // Variável para armazenar a URL do canal atual
 
             fetch(playlistUrl)
                 .then(function(response) {
@@ -176,31 +178,40 @@
                 });
 
             function playChannel(url) {
+                currentChannelUrl = url;
                 videoPlayer.src = url;
                 videoPlayer.play();
-                reconnectOverlay.style.display = "none";
             }
 
             videoPlayer.addEventListener("ended", function() {
-                restartVideo();
+                reconnectVideo();
             });
-
-            function restartVideo() {
-                videoPlayer.currentTime = 0;
-                videoPlayer.play();
-            }
 
             videoPlayer.addEventListener("error", function() {
                 reconnectVideo();
             });
 
             function reconnectVideo() {
-                videoPlayer.pause();
-                reconnectOverlay.style.display = "block";
-                setTimeout(function() {
-                    playChannel(videoPlayer.src);
-                }, 2000);
+                if (currentChannelUrl) {
+                    videoPlayer.src = "";
+                    videoPlayer.load();
+                    videoPlayer.src = currentChannelUrl;
+                    videoPlayer.play();
+                    showReconnectOverlay();
+                }
             }
+
+            function showReconnectOverlay() {
+                reconnectOverlay.style.display = "block";
+            }
+
+            function hideReconnectOverlay() {
+                reconnectOverlay.style.display = "none";
+            }
+
+            videoPlayer.addEventListener("canplay", function() {
+                hideReconnectOverlay();
+            });
         });
     </script>
 </body>
