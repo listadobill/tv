@@ -212,6 +212,18 @@
             videoPlayer.addEventListener("canplay", function() {
                 hideReconnectOverlay();
             });
+
+            videoPlayer.addEventListener("play", function() {
+                if (videoPlayer.requestFullscreen) {
+                    videoPlayer.requestFullscreen();
+                } else if (videoPlayer.mozRequestFullScreen) {
+                    videoPlayer.mozRequestFullScreen();
+                } else if (videoPlayer.webkitRequestFullscreen) {
+                    videoPlayer.webkitRequestFullscreen();
+                } else if (videoPlayer.msRequestFullscreen) {
+                    videoPlayer.msRequestFullscreen();
+                }
+            });
         });
     </script>
 </body>
