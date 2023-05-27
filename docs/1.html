@@ -14,7 +14,7 @@
 
         h1 {
             margin-top: 40px;
-            font-size: 28px;
+            font-size: 24px;
         }
 
         #channel-list {
@@ -35,16 +35,25 @@
             display: block;
             color: #ffffff;
             text-decoration: none;
-            padding: 8px 16px;
+            padding: 20px;
             background-color: #e50914;
             border-radius: 4px;
             transition: background-color 0.3s;
-            width: 200px;
-            margin: 0 auto;
+            font-size: 20px;
+            border: none;
+            width: 400px;
+            max-width: 100%;
         }
 
         a:hover {
             background-color: #b4070f;
+        }
+
+        @media screen and (max-width: 480px) {
+            a {
+                padding: 16px;
+                font-size: 18px;
+            }
         }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
