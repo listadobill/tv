@@ -1,114 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Baixe o Reprodutor VLC ou MXplayer. Navegador baixe o Open Browser</title>
+    <title>Lista de Canais</title>
     <style>
         body {
-            text-align: center;
-            background-color: #000000;
-            color: #ffffff;
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            text-align: center;
+            background-color: #141414;
+            color: #fff;
         }
 
         h1 {
-            margin-top: 40px;
-            font-size: 24px;
+            margin-top: 20px;
+            font-size: 28px;
         }
 
-        #channel-list {
+        .button-list {
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 0;
-            margin: 0;
-            list-style: none;
+            margin-top: 40px;
         }
 
-        li {
-            margin: 10px;
-            text-align: center;
-        }
-
-        a {
-            display: block;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 20px;
+        .button-list button {
+            margin-bottom: 10px;
+            width: 200px;
+            height: 50px;
             background-color: #e50914;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-            font-size: 20px;
+            color: #fff;
+            font-size: 18px;
             border: none;
-            width: 400px;
-            max-width: 100%;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
 
-        a:hover {
-            background-color: #b4070f;
-        }
-
-        @media screen and (max-width: 480px) {
-            a {
-                padding: 16px;
-                font-size: 18px;
-            }
+        .button-list button:hover {
+            background-color: #b2070f;
         }
     </style>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <h1>Baixe o Reprodutor VLC ou MXplayer. Navegador baixe o Open Browser</h1>
-    <ul id="channel-list"></ul>
+    <h1>Listas de Canais</h1>
+    <div class="button-list">
+        <button onclick="gerarArquivo()">Clicar para executar no Player IPTV</button>
+        <button onclick="baixarPlayer()">BAIXE O PLAYER IPTV AQUI</button>
+    </div>
 
     <script>
-        $(document).ready(function() {
-            $.get('https://raw.githubusercontent.com/listadobill/tv/main/c.m3u', function(data) {
-                const channelList = parseM3U(data);
-                const sortedChannelList = sortChannelsAlphabetically(channelList);
-                displayChannels(sortedChannelList);
-            });
-        });
-
-        function parseM3U(data) {
-            const lines = data.split('\n');
-            const channelList = [];
-            let channel = {};
-
-            for (let i = 0; i < lines.length; i++) {
-                const line = lines[i].trim();
-
-                if (line.startsWith('#EXTINF:')) {
-                    channel.name = line.split(',')[1];
-                } else if (line.startsWith('http')) {
-                    channel.videoUrl = line;
-                    channelList.push(channel);
-                    channel = {};
-                }
-            }
-
-            return channelList;
-        }
-
-        function sortChannelsAlphabetically(channelList) {
-            return channelList.sort((a, b) => a.name.localeCompare(b.name));
-        }
-
-        function displayChannels(channelList) {
-            const channelListElement = document.getElementById('channel-list');
+        function gerarArquivo() {
+            var url = "https://raw.githubusercontent.com/listadobill/tv/main/c.m3u";
             
-            channelList.forEach(channel => {
-                const channelLink = document.createElement('a');
-                channelLink.href = channel.videoUrl;
-                channelLink.target = '_blank';
-                channelLink.textContent = channel.name;
-                
-                const listItem = document.createElement('li');
-                listItem.appendChild(channelLink);
-                
-                channelListElement.appendChild(listItem);
-            });
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    var filename = "canais.m3u";
+                    var element = document.createElement('a');
+                    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(data));
+                    element.setAttribute('download', filename);
+                    element.style.display = 'none';
+                    document.body.appendChild(element);
+                    element.click();
+                    document.body.removeChild(element);
+                })
+                .catch(error => console.error(error));
+        }
+
+        function baixarPlayer() {
+            var playerUrl = "https://drive.google.com/file/d/1vUUCdGvQVjodBOhb0ZfXizZwRJFXNgAi/view?usp=drive_link";
+            window.open(playerUrl, "_blank");
         }
     </script>
 </body>
