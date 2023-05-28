@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>TV DO BILL</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      background-color: #141414;
+    }
+
+    .header {
+      background-color: #141414;
+      color: #e50914;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 36px;
+      margin: 0;
+      font-weight: bold;
+    }
+
+    .header p {
+      font-size: 18px;
+      margin: 10px 0 0;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .carousel-container {
+      width: 100%;
+      overflow: hidden;
+      margin-top: 50px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .carousel {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .button-frame {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+      border: 2px solid #fff;
+      transition: border-color 0.3s ease;
+      margin: 10px;
+      flex: 0 0 auto;
+    }
+
+    .button-frame:hover,
+    .button-frame:focus {
+      border-color: #e50914;
+    }
+
+    .button-frame img {
+      max-width: 80px;
+      height: 80px;
+    }
+
+    .content p {
+      font-size: 16px;
+      color: #fff;
+      margin-top: 10px;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 24px;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .arrow.left {
+      left: 10px;
+    }
+
+    .arrow.right {
+      right: 10px;
+    }
+
+    .selected {
+      border-color: #e50914;
+    }
+
+    .footer {
+      background-color: #141414;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div class="header">
+    <h1>TV DO BILL</h1>
+    <p>A TV stream grátis de verdade</p>
+  </div>
+
+  <div class="carousel-container">
+    <div class="arrow left">&lt;</div>
+    <div class="carousel">
+      <div class="button-frame">
+        <a href="https://listadobill.github.io/tv/android_plutotvbr">
+          <img src="https://acontecendoaqui.com.br/wp-content/uploads/2020/08/pluto_tv_2.jpg" alt="Pluto TV Brasil">
+        </a>
+        <p>Pluto TV BR</p>
+      </div>
+
+      <div class="button-frame">
+        <a href="https://listadobill.github.io/tv/provisoria">
+          <img src="https://www.minhaoperadora.com.br/wp-content/uploads/2020/01/Confira-qual-canal-foi-o-mais-visto-da-TV-paga-em-2019.jpg" alt="Lista Provisória">
+        </a>
+        <p>Lista Provisória</p>
+      </div>
+
+      <div class="button-frame">
+        <a href="https://listadobill.github.io/tv/iptv_org_br.html">
+          <img src="https://archive.org/download/canais-tv-iptv-org_202203/Canais%20TV%20IPTV%20Org.jpg" alt="IPTV ORG BR">
+        </a>
+        <p>IPTV ORG BR</p>
+      </div>
+    </div>
+    <div class="arrow right">&gt;</div>
+  </div>
+
+  <div class="footer">
+    <p>É normal eventualmente um canal, vídeo ou lista não funcionar, tenha paciência</p>
+  </div>
+
+  <script>
+    const carousel = document.querySelector('.carousel');
+    const leftArrow = document.querySelector('.arrow.left');
+    const rightArrow = document.querySelector('.arrow.right');
+    const carouselWidth = carousel.offsetWidth;
+    let buttonFrames = Array.from(document.querySelectorAll('.button-frame'));
+    let currentIndex = 0;
+
+    // Ordenar os ícones em ordem alfabética
+    buttonFrames.sort((a, b) => {
+      const titleA = a.querySelector('p').textContent.toUpperCase();
+      const titleB = b.querySelector('p').textContent.toUpperCase();
+      if (titleA < titleB) {
+        return -1;
+      }
+      if (titleA > titleB) {
+        return 1;
+      }
+      return 0;
+    });
+
+    // Remover os ícones existentes no carrossel
+    while (carousel.firstChild) {
+      carousel.firstChild.remove();
+    }
+
+    // Adicionar os ícones em ordem ao carrossel
+    buttonFrames.forEach((buttonFrame) => {
+      carousel.appendChild(buttonFrame);
+    });
+
+    leftArrow.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + buttonFrames.length) % buttonFrames.length;
+      scrollCarousel();
+      highlightSelectedButton();
+    });
+
+    rightArrow.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % buttonFrames.length;
+      scrollCarousel();
+      highlightSelectedButton();
+    });
+
+    function scrollCarousel() {
+      const buttonWidth = buttonFrames[0].offsetWidth;
+      carousel.style.transform = `translateX(${-currentIndex * buttonWidth}px)`;
+    }
+
+    function highlightSelectedButton() {
+      buttonFrames.forEach((buttonFrame, index) => {
+        buttonFrame.classList.remove('selected');
+        if (index === currentIndex) {
+          buttonFrame.classList.add('selected');
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
