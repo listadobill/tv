@@ -1,4 +1,8 @@
 #EXTM3U
+
+#EXTINF:-1 tvg-logo="", 
+https://i.mjh.nz/PlutoTV/5fa97a8a75cc210007c9041d-alt.m3u8
+
 #EXTINF:-1 tvg-logo="", 01 - Atualização 26/05/2023
 https://i.mjh.nz/PlutoTV/5fa97a8a75cc210007c9041d-alt.m3u8
 
@@ -6,6 +10,8 @@ https://i.mjh.nz/PlutoTV/5fa97a8a75cc210007c9041d-alt.m3u8
 https://i.mjh.nz/PlutoTV/5fa97a8a75cc210007c9041d-alt.m3u8
 #EXTINF:-1 channel-id="pluto-5fa97a8a75cc210007c9041d" tvg-id="5fa97a8a75cc210007c9041d" tvg-chno="1" tvg-logo="https://images.pluto.tv/channels/5fa97a8a75cc210007c9041d/colorLogoPNG.png" group-title="Pluto TV", 03 - Guia de Canais
 https://i.mjh.nz/PlutoTV/5fa97a8a75cc210007c9041d-alt.m3u8
+
+
 
 
 #########################################################################################################################################################
