@@ -3,55 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultado da busca</title>
+    <title>Resultados de busca</title>
     <style>
-        .search-box {
-            width: 400px;
-            margin: 20px auto;
-            padding: 10px;
-            border: 1px solid #ccc;
-            text-align: center;
+        body {
+            background-color: #141414;
+            color: #fff;
+            font-family: Arial, sans-serif;
         }
-        .search-results {
-            width: 400px;
+        
+        .container {
+            max-width: 800px;
             margin: 0 auto;
-            padding: 10px;
-            border: 1px solid #ccc;
+            padding: 20px;
+        }
+        
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+        }
+        
+        .search-results {
+            background-color: #1e1e1e;
+            padding: 20px;
+        }
+        
+        .search-results h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .search-results p {
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
-    <div class="search-box">
-        <h2>Realizar busca</h2>
-        <form id="search-form">
-            <input type="text" id="search-query" placeholder="Digite sua busca">
-            <button type="submit">Buscar</button>
-        </form>
-    </div>
-
-    <div class="search-results" id="search-results">
-        <!-- Aqui serão exibidos os resultados da busca -->
+    <div class="container">
+        <div class="header">
+            <h1>Resultados da busca</h1>
+            <a href="https://solidtorrents.to/search?q=dublado&sort=date" target="_blank">Ver tudo</a>
+        </div>
+        
+        <div class="search-results" id="search-results">
+            <!-- Aqui serão exibidos os resultados da busca -->
+        </div>
     </div>
 
     <script>
-        document.getElementById('search-form').addEventListener('submit', function(e) {
-            e.preventDefault(); // Impede o envio do formulário
-
-            var query = document.getElementById('search-query').value; // Obtém o valor da busca
-
-            // Faz a requisição para obter os resultados da busca
-            fetch('https://solidtorrents.to/?q=' + encodeURIComponent(query))
-                .then(function(response) {
-                    return response.text(); // Converte a resposta para texto
-                })
-                .then(function(html) {
-                    var resultsContainer = document.getElementById('search-results');
-                    resultsContainer.innerHTML = html; // Insere o HTML dos resultados na caixa
-                })
-                .catch(function(error) {
-                    console.log('Ocorreu um erro:', error);
-                });
-        });
+        fetch('https://solidtorrents.to/search?q=dublado&sort=date')
+            .then(function(response) {
+                return response.text();
+            })
+            .then(function(html) {
+                var resultsContainer = document.getElementById('search-results');
+                resultsContainer.innerHTML = html;
+            })
+            .catch(function(error) {
+                console.log('Ocorreu um erro:', error);
+            });
     </script>
 </body>
 </html>
