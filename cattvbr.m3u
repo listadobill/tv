@@ -1,28 +1,28 @@
-#EXTINF:-1 tvg-logo="", 04 - Nossa Lista de canais - https://is.gd/oPVwGU
-http://stream2.example.com/live/stream.m3u8
-
-########################################################################################################################
-########################################################################################################################
-
 #EXTM3U
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",AGRO BRASIL
-http://168.205.87.198:8555/live/1221/123456/7.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",AGRO BRASIL
 http://168.205.87.198:8555/live/michele/123456/7.ts?checkedby:iptvcat.com
+#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",AGRO BRASIL
+http://168.205.87.198:8555/live/1431/123456/7.ts?checkedby:iptvcat.com
+#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",AGRO BRASIL
+http://168.205.87.198:8555/live/1221/123456/7.ts?checkedby:iptvcat.com
+#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",AGRO CANAL
+http://168.205.87.198:8555/live/1431/123456/10.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",AGRO CANAL
 http://168.205.87.198:8555/live/1221/123456/10.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",AGRO CANAL
 http://168.205.87.198:8555/live/michele/123456/10.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Sport",ALL SPORTS
-http://168.205.87.198:8555/live/1221/123456/148.ts?checkedby:iptvcat.com
+http://168.205.87.198:8555/live/1431/123456/148.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Sport",ALL SPORTS
 http://168.205.87.198:8555/live/michele/123456/148.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Sport",ALL SPORTS
-http://168.205.87.198:8555/live/1431/123456/148.ts?checkedby:iptvcat.com
+http://168.205.87.198:8555/live/1221/123456/148.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",AWTV
 http://168.205.87.198:8555/live/1431/123456/181.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/KgetM8j.png" group-title="General",Adesso TV (720p)
 https://cdn.jmvstream.com/w/LVW-9715/LVW9715_12B26T62tm/playlist.m3u8?checkedby:iptvcat.com
+#EXTINF:0 tvg-country="BR" tvg-logo="https://www.costadosol.tv.br/site/wp-content/uploads/2017/12/agro-brasil.png" group-title="Hobby",Agro Brasil TV
+http://45.162.230.234:1935/agrobrasiltv/agrobrasiltv/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://listaiptv.gratis/logos/imagens/agrocanal.png" group-title="Undefined",AgroBrasil TV
 https://server.flixtv.com.br/agrobrasiltv/agrobrasiltv/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/c1QqslA.png" group-title="General",Alpha Channel (720p)
@@ -39,20 +39,16 @@ https://stmv1.srvif.com/animetv/animetv/playlist.m3u8?checkedby:iptvcat.com
 http://168.205.87.198:8555/live/1221/123456/19.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",BAND
 http://168.205.87.198:8555/live/michele/123456/19.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",BAND
-http://168.205.87.198:8555/live/1431/123456/19.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",BOA VONTADE TV
 http://168.205.87.198:8555/live/michele/123456/21.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",BOA VONTADE TV
-http://168.205.87.198:8555/live/1431/123456/21.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",BOA VONTADE TV
 http://168.205.87.198:8555/live/1221/123456/21.ts?checkedby:iptvcat.com
+#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",CANAL DO BOI
+http://168.205.87.198:8555/live/1221/123456/167.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",CANAL DO BOI
 http://168.205.87.198:8555/live/1431/123456/167.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",CANAL DO BOI
 http://168.205.87.198:8555/live/michele/123456/167.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",CANAL DO BOI
-http://168.205.87.198:8555/live/1221/123456/167.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",CANAL RURAL
 http://168.205.87.198:8555/live/1431/123456/166.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",CANAL RURAL
@@ -60,39 +56,31 @@ http://168.205.87.198:8555/live/1221/123456/166.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",CANAL RURAL
 http://168.205.87.198:8555/live/michele/123456/166.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",CANAL SAÚDE
-http://168.205.87.198:8555/live/1431/123456/165.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",CANAL SAÚDE
 http://168.205.87.198:8555/live/1221/123456/165.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",CANAL SAÚDE
 http://168.205.87.198:8555/live/michele/123456/165.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",CANÇÃO NOVA
-http://168.205.87.198:8555/live/1431/123456/25.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",CANÇÃO NOVA
 http://168.205.87.198:8555/live/michele/123456/25.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",CANÇÃO NOVA
-http://168.205.87.198:8555/live/1221/123456/25.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",CHESPIRITO
-http://168.205.87.198:8555/live/1221/123456/159.ts?checkedby:iptvcat.com
+http://168.205.87.198:8555/live/1431/123456/25.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",CHESPIRITO
 http://168.205.87.198:8555/live/1431/123456/159.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",CHESPIRITO
 http://168.205.87.198:8555/live/michele/123456/159.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",CLASSIQUE TV
-http://168.205.87.198:8555/live/1431/123456/190.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/CNN_Brasil.svg/512px-CNN_Brasil.svg.png" group-title="News",CNN Brasil (1080p) [Not 24/7]
 https://ythls.onrender.com/channel/UCvdwhh_fDyWccR42-rReZLw.m3u8?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",CNT
-http://168.205.87.198:8555/live/1221/123456/150.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",CNT
-http://168.205.87.198:8555/live/1431/123456/150.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",CNT
 http://168.205.87.198:8555/live/michele/123456/150.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/S0ISpmU.png" group-title="Undefined",CWB TV (720p)
 https://59d39900ebfb8.streamlock.net/cwbtv/cwbtv/playlist.m3u8?checkedby:iptvcat.com
+#EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/co7TCWC.png" group-title="News",Canal 38
+https://cdn.jmvstream.com/w/LVW-8503/LVW8503_d0V5oduFlK/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/7SE4CkE.png" group-title="Undefined",Canal FDR (1080p)
 https://stmv1.transmissaodigital.com/ronald6259/ronald6259/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/hs2YVJ3.png" group-title="General",Canal Ricos (480p)
 https://5d82644094cc0.streamlock.net/ricostv/ricostv/playlist.m3u8?checkedby:iptvcat.com
+#EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/SnaIMgj.png" group-title="Entertainment",Chroma TV (480p)
+https://5c483b9d1019c.streamlock.net/8054/8054/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/XN6jjMR.png" group-title="General",ConecTV Brasil (720p)
 https://stream01.msolutionbrasil.com.br/hls/conectv/live.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/qHwTWlz.png" group-title="Entertainment",Conecta+ TV (720p)
@@ -108,31 +96,27 @@ http://stmv1.transmissaodigital.com/ronald6259/ronald6259/playlist.m3u8?checkedb
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",FISH TV
 http://168.205.87.198:8555/live/1431/123456/62.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",FISH TV
-http://168.205.87.198:8555/live/1221/123456/62.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",FISH TV
 http://168.205.87.198:8555/live/michele/123456/62.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",FUTURA
-http://168.205.87.198:8555/live/1221/123456/67.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",FUTURA
 http://168.205.87.198:8555/live/michele/123456/67.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/NF6PL8O.png" group-title="General",Fala Litoral (480p)
 https://5c483b9d1019c.streamlock.net/falalitoraltv/falalitoraltv/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",GAZETA
-http://168.205.87.198:8555/live/1221/123456/69.ts?checkedby:iptvcat.com
+http://168.205.87.198:8555/live/1431/123456/69.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",GAZETA
 http://168.205.87.198:8555/live/michele/123456/69.ts?checkedby:iptvcat.com
+#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",GAZETA
+http://168.205.87.198:8555/live/1221/123456/69.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/aoq9CGU.png" group-title="Religious",Gospel Cartoon (360p)
 https://stmv1.srvif.com/gospelcartoon/gospelcartoon/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://listaiptv.gratis/logos/imagens/ainraga.png" group-title="Undefined",IURD TV
 https://644398c.ha.azioncdn.net/primary/tvuniversal_480p.sdp/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="News",JP NEWS
-http://168.205.87.198:8555/live/1221/123456/161.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="News",JP NEWS
 http://168.205.87.198:8555/live/michele/123456/161.ts?checkedby:iptvcat.com
+#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="News",JP NEWS
+http://168.205.87.198:8555/live/1221/123456/161.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Jovem_Pan_logo_2018.svg/320px-Jovem_Pan_logo_2018.svg.png" group-title="News",Jovem Pan News (1080p)
 https://d6yfbj4xxtrod.cloudfront.net/out/v1/7836eb391ec24452b149f3dc6df15bbd/index.m3u8?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Kids",KIDS
-http://168.205.87.198:8555/live/1221/123456/143.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Kids",KIDS
 http://168.205.87.198:8555/live/1431/123456/143.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Kids",KIDS
@@ -142,11 +126,9 @@ https://srv1.zcast.com.br/kpoptv/kpoptv/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/y0LSin2.png" group-title="General",Lavras CE TV (480p)
 https://stmv1.srvstm.com/igor8605/igor8605/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",MASTER TV
-http://168.205.87.198:8555/live/1431/123456/74.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",MASTER TV
 http://168.205.87.198:8555/live/michele/123456/74.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",MASTER TV
-http://168.205.87.198:8555/live/1221/123456/74.ts?checkedby:iptvcat.com
+http://168.205.87.198:8555/live/1431/123456/74.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/TDEDNLK.png" group-title="General",MKK Web TV (720p) [Not 24/7]
 https://video01.logicahost.com.br/mkkwebtv/mkkwebtv/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/haXHFCT.png" group-title="Music",Master Show TV (360p)
@@ -157,8 +139,6 @@ https://ndrint.akamaized.net/hls/live/2020766/ndr_int/index.m3u8?checkedby:iptvc
 https://caikron.com.br:19360/criciuma/criciuma.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",NOVO TEMPO
 http://168.205.87.198:8555/live/1221/123456/149.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",NOVO TEMPO
-http://168.205.87.198:8555/live/1431/123456/149.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/IK3F9Uq.png" group-title="Local",Nova Era TV
 http://wz3.dnip.com.br:1935/novaeratv/novaeratv.sdp/live.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/cgN2hfm.png" group-title="Undefined",Nova TV Agrotour (360p)
@@ -174,15 +154,15 @@ https://ocko-live-dash.ssl.cdn.cra.cz/cra_live2/ocko_gold.stream.1.smil/manifest
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",POLISHOP
 http://168.205.87.198:8555/live/1431/123456/153.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",POLISHOP
-http://168.205.87.198:8555/live/1221/123456/153.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",POLISHOP
 http://168.205.87.198:8555/live/michele/123456/153.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",PORTAL
-http://168.205.87.198:8555/live/michele/123456/82.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",PORTAL
 http://168.205.87.198:8555/live/1431/123456/82.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",PORTAL
+http://168.205.87.198:8555/live/michele/123456/82.ts?checkedby:iptvcat.com
+#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",PORTAL
 http://168.205.87.198:8555/live/1221/123456/82.ts?checkedby:iptvcat.com
+#EXTINF:0 tvg-country="BR;PE" tvg-logo="https://i.imgur.com/01KEiEp.png" group-title="General",Perú Channel (720p)
+https://stmv1.duvoxtv.com.br/peruchannel/peruchannel/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/lH4RT7b.png" group-title="News",Plena TV (720p)
 https://cdn.jmvstream.com/w/LVW-9591/LVW9591_PmXtgATnaS/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/PMptSP3.png" group-title="General",Primer TV (1080p)
@@ -190,49 +170,51 @@ http://200.194.238.229:8383/live/primer/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",RATIMBUM
 http://168.205.87.198:8555/live/michele/123456/84.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",RATIMBUM
+http://168.205.87.198:8555/live/1221/123456/84.ts?checkedby:iptvcat.com
+#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",RATIMBUM
 http://168.205.87.198:8555/live/1431/123456/84.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",RECORD MINAS
 http://168.205.87.198:8555/live/michele/123456/96.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",RECORD MINAS
-http://168.205.87.198:8555/live/1221/123456/96.ts?checkedby:iptvcat.com
+http://168.205.87.198:8555/live/1431/123456/96.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="News",RECORD NEWS
 http://168.205.87.198:8555/live/michele/123456/97.ts?checkedby:iptvcat.com
+#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="News",RECORD NEWS
+http://168.205.87.198:8555/live/1431/123456/97.ts?checkedby:iptvcat.com
+#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="News",RECORD NEWS
+http://168.205.87.198:8555/live/1221/123456/97.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",REDE FAMILIA
 http://168.205.87.198:8555/live/michele/123456/151.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",REDE FAMILIA
 http://168.205.87.198:8555/live/1431/123456/151.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",REDE FAMILIA
-http://168.205.87.198:8555/live/1221/123456/151.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",REDE GENESIS
 http://168.205.87.198:8555/live/michele/123456/98.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",REDE GENESIS
 http://168.205.87.198:8555/live/1221/123456/98.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",REDE METROPOLE
-http://168.205.87.198:8555/live/1221/123456/99.ts?checkedby:iptvcat.com
+#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",REDE GENESIS
+http://168.205.87.198:8555/live/1431/123456/98.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",REDE METROPOLE
 http://168.205.87.198:8555/live/michele/123456/99.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",REDE MINAS
-http://168.205.87.198:8555/live/1221/123456/101.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",REDE MINAS
-http://168.205.87.198:8555/live/1431/123456/101.ts?checkedby:iptvcat.com
+#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",REDE METROPOLE
+http://168.205.87.198:8555/live/1431/123456/99.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",REDE MINAS
 http://168.205.87.198:8555/live/michele/123456/101.ts?checkedby:iptvcat.com
+#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",REDE MINAS
+http://168.205.87.198:8555/live/1221/123456/101.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",REDE SUPER
-http://168.205.87.198:8555/live/1221/123456/163.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",REDE SUPER
-http://168.205.87.198:8555/live/1431/123456/163.ts?checkedby:iptvcat.com
+http://168.205.87.198:8555/live/michele/123456/163.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",REDE TV
-http://168.205.87.198:8555/live/1221/123456/102.ts?checkedby:iptvcat.com
+http://168.205.87.198:8555/live/1431/123456/102.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",REDE TV
 http://168.205.87.198:8555/live/michele/123456/102.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",REDE VIDA
-http://168.205.87.198:8555/live/michele/123456/103.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",REDE VIDA
-http://168.205.87.198:8555/live/1431/123456/103.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",REDE VIDA
 http://168.205.87.198:8555/live/1221/123456/103.ts?checkedby:iptvcat.com
+#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",REDE VIDA
+http://168.205.87.198:8555/live/michele/123456/103.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",RIT
 http://168.205.87.198:8555/live/1221/123456/168.ts?checkedby:iptvcat.com
+#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",RIT
+http://168.205.87.198:8555/live/michele/123456/168.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Russia-today-logo.svg/512px-Russia-today-logo.svg.png" group-title="News",RT en Español (1080p)
 https://cdn.odysee.live/content/9f638b94d11d879726ae55dd5a0923621b96a45b/master.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BB;BR;CA;PA" tvg-logo="https://i.imgur.com/1nN4rEP.png" group-title="Undefined",Rai Italia America (360p)
@@ -256,29 +238,15 @@ http://stream.mediawork.cz/retrotv/smil:retrotv2.smil/chunklist.m3u8?checkedby:i
 #EXTINF:0 tvg-country="BR" tvg-logo="https://img.radios.com.br/radio/xl/radio13488_1558098324.jpg" group-title="News",Rádio Jornal
 https://evpp.mm.uol.com.br/ne10/radiojornal-recife-avra-video-web.sdp/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/p1Q6udv.png" group-title="Undefined",SBT
-https://evpp.mm.uol.com.br/ne10/ne10.smil/chunklist.m3u8?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/p1Q6udv.png" group-title="Undefined",SBT
 https://evpp.mm.uol.com.br/ne10/ne10.smil/chunklist_w654628617_b216000_sleng.m3u8?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",SBT ALTEROSA
-http://168.205.87.198:8555/live/1431/123456/104.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",SBT ALTEROSA
-http://168.205.87.198:8555/live/1221/123456/104.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",SBT ALTEROSA
 http://168.205.87.198:8555/live/michele/123456/104.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/IkZfa4j.png" group-title="General",SBT Interior (720p)
 https://cdn.jmvstream.com/w/LVW-10801/LVW10801_Xvg4R0u57n/playlist.m3u8?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/IUDRW8l.png" group-title="General",SBT TV Jornal Recife (720p) [Not 24/7]
-https://evpp.mm.uol.com.br/ne10/ne10.smil/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",SECULO 21
 http://168.205.87.198:8555/live/1431/123456/106.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",SECULO 21
-http://168.205.87.198:8555/live/1221/123456/106.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",SECULO 21
-http://168.205.87.198:8555/live/michele/123456/106.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",SESC TV
 http://168.205.87.198:8555/live/michele/123456/107.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",SESC TV
-http://168.205.87.198:8555/live/1431/123456/107.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",SESC TV
 http://168.205.87.198:8555/live/1221/123456/107.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",SHOPTIME
@@ -294,25 +262,19 @@ http://flash1.crossdigital.com.br/2063/2063/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/b5xOCsC.png" group-title="General",Sertão TV (720p)
 http://wz4.dnip.com.br/sertaotv/sertaotv.sdp/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",SÉRIES CLÁSSICAS
-http://168.205.87.198:8555/live/1431/123456/160.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",SÉRIES CLÁSSICAS
-http://168.205.87.198:8555/live/1221/123456/160.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",SÉRIES CLÁSSICAS
 http://168.205.87.198:8555/live/michele/123456/160.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/aMuMVvB.png" group-title="News",TCM 10 HD (1080p)
 https://live.tcm10.com.br/tcm10hd/stream.m3u8?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",TCM HD
-http://168.205.87.198:8555/live/1431/123456/187.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/I7XGMhj.png" group-title="News",TV A Folha (720p)
 https://video01.logicahost.com.br/tvafolha/tvafolha/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/qeo2oPM.png" group-title="Undefined",TV A7 Plus (1080p)
 https://srv3.zcast.com.br/wellington7720/wellington7720/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",TV APARECIDA
-http://168.205.87.198:8555/live/michele/123456/131.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",TV APARECIDA
 http://168.205.87.198:8555/live/1221/123456/131.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",TV APARECIDA
 http://168.205.87.198:8555/live/1431/123456/131.ts?checkedby:iptvcat.com
+#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",TV APARECIDA
+http://168.205.87.198:8555/live/michele/123456/131.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/Bpmqjmo.png" group-title="News",TV Alagonet (360p)
 https://stmv2.voxtvhd.com.br/alagonet/alagonet/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/eqmOhtP.png" group-title="General",TV Aliança Catarinense (720p)
@@ -325,14 +287,10 @@ https://ythls.onrender.com/channel/UCLyH0n2yMR9mmkYvXkwJTTw.m3u8?checkedby:iptvc
 http://168.205.87.198:8555/live/1431/123456/134.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",TV BRASIL
 http://168.205.87.198:8555/live/michele/123456/134.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",TV BRASIL
-http://168.205.87.198:8555/live/1221/123456/134.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",TV BRASIL 2
-http://168.205.87.198:8555/live/michele/123456/135.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",TV BRASIL 2
 http://168.205.87.198:8555/live/1431/123456/135.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",TV BRASIL 2
-http://168.205.87.198:8555/live/1221/123456/135.ts?checkedby:iptvcat.com
+http://168.205.87.198:8555/live/michele/123456/135.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",TV BRUSQUE
 http://168.205.87.198:8555/live/1431/123456/183.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/JxsyXCD.png" group-title="General",TV Beltrão (1080p)
@@ -342,9 +300,9 @@ https://srv3.zcast.com.br/tvboqueirao/tvboqueirao/playlist.m3u8?checkedby:iptvca
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/noqGfuy.png" group-title="General",TV Brasil Oeste (720p)
 https://5ad482a77183d.streamlock.net/operacaotbomt.com/operacaotbomt.com/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/5gvGC0P.png" group-title="Entertainment",TV CN Agitos (360p)
-https://serv2.videovox.pw/cnagitos/cnagitos/playlist.m3u8?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/5gvGC0P.png" group-title="Entertainment",TV CN Agitos (360p)
 http://serv2.videovox.pw/cnagitos/cnagitos/playlist.m3u8?checkedby:iptvcat.com
+#EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/5gvGC0P.png" group-title="Entertainment",TV CN Agitos (360p)
+https://serv2.videovox.pw/cnagitos/cnagitos/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/KX3fner.png" group-title="General",TV COM Santos (416p)
 https://srv1.zcast.com.br/tvcomsantos/tvcomsantos/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/evKq5ze.png" group-title="General",TV Candidés (1080p)
@@ -366,9 +324,9 @@ https://d28367vmhj4ljz.cloudfront.net/out/v1/f26e176ce67244de862cd9b21d823934/in
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/JdCKNZ4.png" group-title="Entertainment",TV Curuça (360p)
 https://stmv1.srvif.com/tvcurucasp/tvcurucasp/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",TV CÂMARA
-http://168.205.87.198:8555/live/1431/123456/136.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",TV CÂMARA
 http://168.205.87.198:8555/live/1221/123456/136.ts?checkedby:iptvcat.com
+#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",TV CÂMARA
+http://168.205.87.198:8555/live/1431/123456/136.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",TV CÂMARA
 http://168.205.87.198:8555/live/michele/123456/136.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/hEd25Cr.png" group-title="General",TV Difusora Leste (1080p)
@@ -377,8 +335,6 @@ https://stream.amsolution.net.br:8443/live/60d0a8ea6b884/index.m3u8?checkedby:ip
 https://stream.amsolution.net.br:8443/live/60ce4ae4b9d4c/index.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/uBntXf1.png" group-title="General;Undefined",TV Diário do Sertão,TVDS
 http://painelvj.com.br:1935/pdsertaotv/pdsertaotv.sdp/playlist.m3u8?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",TV EVANGELIZAR
-http://168.205.87.198:8555/live/1431/123456/189.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/XLD3GbZ.png" group-title="Education",TV Educativa de Porto Alegre
 http://selpro1348.procergs.com.br:1935/tve/stve/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/tT1NVfV.png" group-title="Entertainment",TV Empire Magazine (720p)
@@ -398,13 +354,9 @@ https://stmv1.srvstm.com/iracematv/iracematv/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",TV JUSTIÇA
 http://168.205.87.198:8555/live/1431/123456/138.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",TV JUSTIÇA
-http://168.205.87.198:8555/live/1221/123456/138.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",TV JUSTIÇA
 http://168.205.87.198:8555/live/michele/123456/138.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/dnmzIhF.png" group-title="General",TV Japi (720p)
 https://stmv1.paineltv.net/tvjapi/tvjapi/playlist.m3u8?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/rOQKiMO.png" group-title="Undefined",TV Justiça (720p)
-https://ythls.onrender.com/channel/UC0qlZ5jxxueKNzUERcrllNw.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/I3iMwnY.png" group-title="Undefined",TV La Verdad [Not 24/7]
 https://ythls.onrender.com/channel/UCS5n5q3lJBXom3wVbOiUl9Q.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/W6bHHqE.png" group-title="Undefined",TV Liberdade (720p) [Not 24/7]
@@ -432,11 +384,9 @@ https://stmv1.srvif.com/tvriogrande/tvriogrande/playlist.m3u8?checkedby:iptvcat.
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/9EqSKLc.png" group-title="General",TV Rio Preto
 https://video02.logicahost.com.br/tvriopreto/tvriopreto/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",TV SENADO
-http://168.205.87.198:8555/live/1431/123456/139.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",TV SENADO
-http://168.205.87.198:8555/live/1221/123456/139.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",TV SENADO
 http://168.205.87.198:8555/live/michele/123456/139.ts?checkedby:iptvcat.com
+#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",TV SENADO
+http://168.205.87.198:8555/live/1431/123456/139.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/vJ6ZQSG.png" group-title="General",TV Sandegi (360p)
 https://video01.kshost.com.br/antonio9510/antonio9510/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://www.tvsantacruzcr.net/img/logotvsc.png" group-title="Local",TV Santa Cruz (720p) [Not 24/7]
@@ -467,8 +417,6 @@ https://cdn-grupo-10049.ciclano.io:1443/grupo-10049/grupo-10049/playlist.m3u8?ch
 http://flash.softhost.com.br:1935/ufg/tvufgweb/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/q5U0d9k.png" group-title="Undefined",TV Vila Real
 https://cdn.jmvstream.com/w/LVW-10842/LVW10842_513N26MDBL/playlist.m3u8?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/Z1uWe7g.png" group-title="Undefined",TV Vila Real
-https://cdn.jmvstream.com/w/LVW-10841/LVW10841_mT77z9o2cP/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/HRfKUzS.png" group-title="General",TV Web Paraná (720p)
 https://59f1cbe63db89.streamlock.net:1443/tvwebparana/_definst_/tvwebparana/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/WDiikWv.png" group-title="General",TVC Rio (1080p)
@@ -481,8 +429,6 @@ https://streaming.procergs.com.br:8443/tve/stve/playlist.m3u8?checkedby:iptvcat.
 http://wz3.dnip.com.br/tvnbrasil/tvnbrasil.sdp/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/c5hs2CI.jpg" group-title="Undefined",TVN Brasil
 http://painelvj.com.br:1935/tvnbrasil/tvnbrasil.sdp/live.m3u8?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/zoHBxn1.png" group-title="General",TVNBN (720p)
-https://cdn.jmvstream.com/w/LVW-8410/LVW8410_uiZOVm6vz1/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/XeqcwKe.png" group-title="General",TVitapé (720p)
 https://stream01.msolutionbrasil.com.br/hls/tvitape/live.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/vstHOYx.png" group-title="News",TVídeoNews (720p) [Not 24/7]
@@ -496,11 +442,11 @@ https://sitetv.brasilstream.com.br/hls/sitetv/index.m3u8?token=&checkedby:iptvca
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/RBcvj3Q.png" group-title="Entertainment",Urban TV (720p) [Not 24/7]
 https://video01.logicahost.com.br/urbantvlive/urbantvlive/playlist.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",VRT CHANNEL
+http://168.205.87.198:8555/live/michele/123456/146.ts?checkedby:iptvcat.com
+#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",VRT CHANNEL
 http://168.205.87.198:8555/live/1431/123456/146.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",VRT CHANNEL
 http://168.205.87.198:8555/live/1221/123456/146.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",VRT CHANNEL
-http://168.205.87.198:8555/live/michele/123456/146.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/crszh3d.png" group-title="Entertainment",VRT Channel (720p)
 https://sistemavrt.vrtchannel.tv.br:3473/stream/play.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="https://i.imgur.com/TxHWAeD.png" group-title="General",VV8 TV (720p)
@@ -508,14 +454,10 @@ https://video01.kshost.com.br/seap8272/seap8272/playlist.m3u8?checkedby:iptvcat.
 #EXTINF:0 tvg-country="AF;AL;DZ;AM;AU;BH;BB;BR;BG;KH;CA;CL;CO;DK;FI;HU;IR;IL;MN;PH;ES;TH" tvg-logo="https://i.imgur.com/tnXba28.png" group-title="News;SPAIN",WION (1080p)
 https://dai.google.com/linear/hls/event/x_dFvsORSZWERbxrltEk0g/master.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",WOOHOO
-http://168.205.87.198:8555/live/michele/123456/141.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",WOOHOO
 http://168.205.87.198:8555/live/1431/123456/141.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",WOOHOO
 http://168.205.87.198:8555/live/1221/123456/141.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",ZOOMOO
 http://168.205.87.198:8555/live/michele/123456/162.ts?checkedby:iptvcat.com
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",ZOOMOO
-http://168.205.87.198:8555/live/1221/123456/162.ts?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",ZOOMOO
 http://168.205.87.198:8555/live/1431/123456/162.ts?checkedby:iptvcat.com
