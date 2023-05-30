@@ -1,145 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" />
-    <title>Search Results for dublado | Torrentz2</title>
-    <meta name="description" content="Torrentz2 is #1 Torrent Index ever." />
-    <link rel="icon" type="image/png" href="/torrentz.ico" />
-    <link rel="stylesheet" href="/stylesheets/torrentz2.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <noscript id="deferred-styles">
-        <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-            rel="stylesheet">
-    </noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preload" as="image" href="/icons/category-movies.svg">
-    <link rel="preload" as="image" href="/icons/category-video.svg">
-    <link rel="preload" as="image" href="/icons/category-software.svg">
-    <link rel="preload" as="image" href="/icons/category-music.svg">
-    <link rel="preload" as="image" href="/icons/category-ebook.svg">
-    <link rel="preload" as="image" href="/icons/category-games.svg">
-    <link rel="preload" as="image" href="/icons/download-torrent.svg">
-    <link rel="preload" as="image" href="/icons/download-magnet.svg">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #000;
-            color: #fff;
-        }
-
-        #wrap {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        #top {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            font-size: 36px;
-            color: #558cb7;
-            margin: 0;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        ul li {
-            margin: 0 10px;
-        }
-
-        ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 20px;
-        }
-
-        .search {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .search input[type="text"] {
-            padding: 10px;
-            font-size: 16px;
-            width: 300px;
-            border: none;
-            border-radius: 5px;
-        }
-
-        .search input[type="submit"] {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #558cb7;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .results {
-            text-align: center;
-        }
-
-        .results h2 {
-            font-size: 24px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Pesquisa no Solid Torrents</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #search-form {
+      text-align: center;
+      margin-top: 50px;
+    }
+    #search-form input[type="text"] {
+      padding: 10px;
+      width: 300px;
+      font-size: 16px;
+    }
+    #search-form input[type="submit"] {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #558cb7;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    #results {
+      margin-top: 50px;
+    }
+    #results ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    #results ul li {
+      margin-bottom: 10px;
+    }
+    #results h2 {
+      text-align: center;
+    }
+  </style>
+  <script>
+    function searchSolidTorrents() {
+      var query = document.getElementById("search-input").value;
+      var url = "https://solidtorrents.to/?q=" + encodeURIComponent(query);
+      
+      fetch(url)
+        .then(response => response.text())
+        .then(data => {
+          var parser = new DOMParser();
+          var htmlDoc = parser.parseFromString(data, "text/html");
+          var searchResults = htmlDoc.querySelectorAll(".table-list > tbody > tr");
+          
+          var resultsContainer = document.getElementById("results");
+          resultsContainer.innerHTML = "";
+          
+          var ul = document.createElement("ul");
+          
+          searchResults.forEach(function(result) {
+            var li = document.createElement("li");
+            li.textContent = result.textContent;
+            ul.appendChild(li);
+          });
+          
+          resultsContainer.appendChild(ul);
+        })
+        .catch(error => {
+          console.log("Ocorreu um erro: ", error);
+        });
+    }
+  </script>
 </head>
 <body>
-    <div id="wrap">
-        <div id="top">
-            <h1><a href="/" title="Torrent2">Torrentz<sup style="color:#558cb7;">2</sup></a></h1>
-            <ul>
-                <li>
-                    <a href="javascript:void();">
-                        <form action="/search" method="get">
-                            <button type="submit" title="Today's Trending Torrents">Trending</button>
-                        </form>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void();">
-                        <form action="/search" method="get">
-                            <button type="submit" title="My Torrentz">Top</button>
-                        </form>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void();">
-                        <form action="/search" method="get">
-                            <button type="submit" title="Recently Added Torrents">New</button>
-                        </form>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <form action="/search" method="get" class="search" id="search">
-            <fieldset>
-                <input type="text" name="q" value id="thesearchbox" required value="dublado">
-                <input type="submit" id="thesearchbutton" value="Search">
-            </fieldset>
-        </form>
-        <div class="results">
-            <div> &nbsp; &nbsp; &nbsp; &nbsp;</div>
-            <h2>10000+ Torrents</h2>
-            <iframe data-aa="2026376" src="//acceptable.a-ads.com/2026376" style="border:0px; padding:0; width:100%; height:100%; overflow:hidden; background-color: transparent;"></iframe>
-            <div style="border:0px; padding:0; width:100%; height:100%; overflow:hidden; background-color: transparent;">
-                <div><script data-cfasync="false" async type="text/javascript" src="//lingerincle.com/tMlkRfzQG2VCek/51444"></script></div>
-            </div>
-        </div>
-    </div>
+  <div id="search-form">
+    <input type="text" id="search-input" placeholder="Digite sua pesquisa">
+    <input type="button" value="Buscar" onclick="searchSolidTorrents()">
+  </div>
+  
+  <div id="results">
+    <!-- Os resultados de pesquisa serão exibidos aqui -->
+  </div>
 </body>
 </html>
