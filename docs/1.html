@@ -43,5 +43,33 @@
     <h2>Pesquise seu Filme, Série, Desenho, Novela, e muito mais</h2>
     <iframe src="https://solidtorrents.to/search?q=dublado&sort=date"></iframe>
   </div>
+
+  <h1>Reprodutor de Torrent</h1>
+  <div id="player"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/webtorrent/webtorrent.min.js"></script>
+  <script>
+    var client = new WebTorrent();
+
+    var torrentId = 'https://solidtorrents.to/search?q=dublado&sort=date';
+
+    client.add(torrentId, function (torrent) {
+      var file = torrent.files.find(function (file) {
+        return file.name.endsWith('.torrent');
+      });
+
+      file.getBlobURL(function (err, url) {
+        if (err) throw err;
+
+        var video = document.createElement('video');
+        video.controls = true;
+        video.src = url;
+        video.style.width = '100%';
+        video.style.height = 'auto';
+
+        document.getElementById('player').appendChild(video);
+      });
+    });
+  </script>
 </body>
 </html>
