@@ -152,3 +152,368 @@ http://firp.me:80/mizael/mizael/277133
 http://firp.me:80/mizael/mizael/277134
 #EXTINF:-1 tvg-id="+globosat.br" tvg-name="Mais na Tela SD" tvg-logo="http://a5.vc/e5K" group-title="Canais | Variedade",Mais na Tela SD
 http://firp.me:80/mizael/mizael/277135
+#EXTM3U
+#EXTINF:-1 tvg-name="Listas Flash Ec M3U IPTV" tvg-logo="https://play-lh.googleusercontent.com/HD4WuErnigIq8cU7-YhOv9hM7uQiNs2K-dHC6GRuRxUNccDmpRaZz6v8jW9C9JbMZQ=w240-h480-rw" group-title="The Flash Apps", Listas Flash Ec M3U IPTV by The Flash Apps
+https://593apps.pro.ec/videoIPTV593.mp4
+#EXTINF:-1 tvg-id="boomerang.br" tvg-name="BOOMERANG FHD" tvg-logo="https://1.bp.blogspot.com/-n17CiRTaCyE/Xk70Nj_rjpI/AAAAAAAACDc/TsDf_fpQBlosivwrkLjoygIHYogbaV70ACLcBGAsYHQ/s1600/boomerang.png" group-title="Canais | Infantil",BOOMERANG FHD
+http://firp.me:80/mizael/mizael/86681
+#EXTINF:-1 tvg-id="boomerang.br" tvg-name="BOOMERANG HD" tvg-logo="https://1.bp.blogspot.com/-n17CiRTaCyE/Xk70Nj_rjpI/AAAAAAAACDc/TsDf_fpQBlosivwrkLjoygIHYogbaV70ACLcBGAsYHQ/s1600/boomerang.png" group-title="Canais | Infantil",BOOMERANG HD
+http://firp.me:80/mizael/mizael/86682
+#EXTINF:-1 tvg-id="boomerang.br" tvg-name="BOOMERANG SD" tvg-logo="https://1.bp.blogspot.com/-n17CiRTaCyE/Xk70Nj_rjpI/AAAAAAAACDc/TsDf_fpQBlosivwrkLjoygIHYogbaV70ACLcBGAsYHQ/s1600/boomerang.png" group-title="Canais | Infantil",BOOMERANG SD
+http://firp.me:80/mizael/mizael/86683
+#EXTINF:-1 tvg-id="cartoon.network.br" tvg-name="CARTOON NETWORK FHD" tvg-logo="https://1.bp.blogspot.com/-aondLW2i3Nw/Xk70ObLd84I/AAAAAAAACDk/UaL7ElNQW-AaFhG-9gEv2FSWp28Cci5hACLcBGAsYHQ/s1600/cartoonnetwork.png" group-title="Canais | Infantil",CARTOON NETWORK FHD
+http://firp.me:80/mizael/mizael/86704
+#EXTINF:-1 tvg-id="cartoon.network.br" tvg-name="CARTOON NETWORK HD" tvg-logo="https://1.bp.blogspot.com/-aondLW2i3Nw/Xk70ObLd84I/AAAAAAAACDk/UaL7ElNQW-AaFhG-9gEv2FSWp28Cci5hACLcBGAsYHQ/s1600/cartoonnetwork.png" group-title="Canais | Infantil",CARTOON NETWORK HD
+http://firp.me:80/mizael/mizael/86705
+#EXTINF:-1 tvg-id="cartoon.network.br" tvg-name="CARTOON NETWORK SD" tvg-logo="https://1.bp.blogspot.com/-aondLW2i3Nw/Xk70ObLd84I/AAAAAAAACDk/UaL7ElNQW-AaFhG-9gEv2FSWp28Cci5hACLcBGAsYHQ/s1600/cartoonnetwork.png" group-title="Canais | Infantil",CARTOON NETWORK SD
+http://firp.me:80/mizael/mizael/86706
+#EXTINF:-1 tvg-id="discovery.kids.br" tvg-name="DISCOVERY KIDS FHD" tvg-logo="https://1.bp.blogspot.com/-2AIyN1vVYJ4/Xk70P2tZPSI/AAAAAAAACD4/dB9uQ47TzcAMEu4qJU-lYcaBoscJWYKhgCLcBGAsYHQ/s1600/discoverykids.png" group-title="Canais | Infantil",DISCOVERY KIDS FHD
+http://firp.me:80/mizael/mizael/86780
+#EXTINF:-1 tvg-id="discovery.kids.br" tvg-name="DISCOVERY KIDS HD" tvg-logo="https://1.bp.blogspot.com/-2AIyN1vVYJ4/Xk70P2tZPSI/AAAAAAAACD4/dB9uQ47TzcAMEu4qJU-lYcaBoscJWYKhgCLcBGAsYHQ/s1600/discoverykids.png" group-title="Canais | Infantil",DISCOVERY KIDS HD
+http://firp.me:80/mizael/mizael/86781
+#EXTINF:-1 tvg-id="discovery.kids.br" tvg-name="DISCOVERY KIDS SD" tvg-logo="https://1.bp.blogspot.com/-2AIyN1vVYJ4/Xk70P2tZPSI/AAAAAAAACD4/dB9uQ47TzcAMEu4qJU-lYcaBoscJWYKhgCLcBGAsYHQ/s1600/discoverykids.png" group-title="Canais | Infantil",DISCOVERY KIDS SD
+http://firp.me:80/mizael/mizael/86782
+#EXTINF:-1 tvg-id="gloob.br" tvg-name="GLOOB FHD" tvg-logo="https://1.bp.blogspot.com/-_Sup4b2u1Fw/Xk70XYrRbSI/AAAAAAAACFM/dltfrlbQAWw-oxFUijzgnnskPf-06OVJACLcBGAsYHQ/s1600/gloob.png" group-title="Canais | Infantil",GLOOB FHD
+http://firp.me:80/mizael/mizael/86947
+#EXTINF:-1 tvg-id="gloob.br" tvg-name="GLOOB HD" tvg-logo="https://1.bp.blogspot.com/-_Sup4b2u1Fw/Xk70XYrRbSI/AAAAAAAACFM/dltfrlbQAWw-oxFUijzgnnskPf-06OVJACLcBGAsYHQ/s1600/gloob.png" group-title="Canais | Infantil",GLOOB HD
+http://firp.me:80/mizael/mizael/86948
+#EXTINF:-1 tvg-id="gloob.br" tvg-name="GLOOB SD" tvg-logo="https://1.bp.blogspot.com/-_Sup4b2u1Fw/Xk70XYrRbSI/AAAAAAAACFM/dltfrlbQAWw-oxFUijzgnnskPf-06OVJACLcBGAsYHQ/s1600/gloob.png" group-title="Canais | Infantil",GLOOB SD
+http://firp.me:80/mizael/mizael/86949
+#EXTINF:-1 tvg-id="gloobinho.br" tvg-name="GLOOBINHO FHD" tvg-logo="https://1.bp.blogspot.com/-7SdhnvUtEPE/Xs6cEfXF-3I/AAAAAAAAF9Y/rPBaexsYDfIepZeOjx_Z-PMhVaMm_NN-gCLcBGAsYHQ/s1600/GLOOBINHO.png" group-title="Canais | Infantil",GLOOBINHO FHD
+http://firp.me:80/mizael/mizael/86950
+#EXTINF:-1 tvg-id="gloobinho.br" tvg-name="GLOOBINHO HD" tvg-logo="https://1.bp.blogspot.com/-7SdhnvUtEPE/Xs6cEfXF-3I/AAAAAAAAF9Y/rPBaexsYDfIepZeOjx_Z-PMhVaMm_NN-gCLcBGAsYHQ/s1600/GLOOBINHO.png" group-title="Canais | Infantil",GLOOBINHO HD
+http://firp.me:80/mizael/mizael/86951
+#EXTINF:-1 tvg-id="gloobinho.br" tvg-name="GLOOBINHO SD" tvg-logo="https://1.bp.blogspot.com/-7SdhnvUtEPE/Xs6cEfXF-3I/AAAAAAAAF9Y/rPBaexsYDfIepZeOjx_Z-PMhVaMm_NN-gCLcBGAsYHQ/s1600/GLOOBINHO.png" group-title="Canais | Infantil",GLOOBINHO SD
+http://firp.me:80/mizael/mizael/86952
+#EXTINF:-1 tvg-id="nick.jr.br" tvg-name="NICK JR FHD" tvg-logo="https://1.bp.blogspot.com/-thB8BgXTYgk/Xk70c2Wv28I/AAAAAAAACGE/wdseOpQ-3jkj2n1e2QMaIrQnB4a70yzFQCLcBGAsYHQ/s1600/nickjr.png" group-title="Canais | Infantil",NICK JR FHD
+http://firp.me:80/mizael/mizael/87088
+#EXTINF:-1 tvg-id="nick.jr.br" tvg-name="NICK JR HD" tvg-logo="https://1.bp.blogspot.com/-thB8BgXTYgk/Xk70c2Wv28I/AAAAAAAACGE/wdseOpQ-3jkj2n1e2QMaIrQnB4a70yzFQCLcBGAsYHQ/s1600/nickjr.png" group-title="Canais | Infantil",NICK JR HD
+http://firp.me:80/mizael/mizael/87089
+#EXTINF:-1 tvg-id="nick.jr.br" tvg-name="NICK JR SD" tvg-logo="https://1.bp.blogspot.com/-thB8BgXTYgk/Xk70c2Wv28I/AAAAAAAACGE/wdseOpQ-3jkj2n1e2QMaIrQnB4a70yzFQCLcBGAsYHQ/s1600/nickjr.png" group-title="Canais | Infantil",NICK JR SD
+http://firp.me:80/mizael/mizael/87090
+#EXTINF:-1 tvg-id="nick.br" tvg-name="NICKELODEON FHD" tvg-logo="https://1.bp.blogspot.com/-NshftfFiUg0/Xk70chBGcxI/AAAAAAAACGA/EIQEzc-XyAkryBvxiUq8OHG2yI1Qv9RfwCLcBGAsYHQ/s1600/nick.png" group-title="Canais | Infantil",NICKELODEON FHD
+http://firp.me:80/mizael/mizael/87092
+#EXTINF:-1 tvg-id="nick.br" tvg-name="NICKELODEON HD" tvg-logo="https://1.bp.blogspot.com/-NshftfFiUg0/Xk70chBGcxI/AAAAAAAACGA/EIQEzc-XyAkryBvxiUq8OHG2yI1Qv9RfwCLcBGAsYHQ/s1600/nick.png" group-title="Canais | Infantil",NICKELODEON HD
+http://firp.me:80/mizael/mizael/87093
+#EXTINF:-1 tvg-id="nick.br" tvg-name="NICKELODEON SD" tvg-logo="https://1.bp.blogspot.com/-NshftfFiUg0/Xk70chBGcxI/AAAAAAAACGA/EIQEzc-XyAkryBvxiUq8OHG2yI1Qv9RfwCLcBGAsYHQ/s1600/nick.png" group-title="Canais | Infantil",NICKELODEON SD
+http://firp.me:80/mizael/mizael/87094
+#EXTINF:-1 tvg-id="" tvg-name="PLAYKIDS" tvg-logo="https://1.bp.blogspot.com/-cC-GMWfYjdQ/XmUkBKPFyFI/AAAAAAAACXM/dJojiBmAwWEw5jpcVBAyQG2VQf0kFpNnwCK4BGAYYCw/s400/play%2Bkids.png" group-title="Canais | Infantil",PLAYKIDS
+http://firp.me:80/mizael/mizael/87120
+#EXTINF:-1 tvg-id="tooncast.br" tvg-name="TOONCAST FHD" tvg-logo="https://1.bp.blogspot.com/-X81PcYk1Bh4/Xk70kb6xZLI/AAAAAAAACHU/qwKEZ7lIBq0D1CVFISjLunD5_BSKoui1gCLcBGAsYHQ/s1600/tooncast.png" group-title="Canais | Infantil",TOONCAST FHD
+http://firp.me:80/mizael/mizael/87382
+#EXTINF:-1 tvg-id="tooncast.br" tvg-name="TOONCAST HD" tvg-logo="https://1.bp.blogspot.com/-X81PcYk1Bh4/Xk70kb6xZLI/AAAAAAAACHU/qwKEZ7lIBq0D1CVFISjLunD5_BSKoui1gCLcBGAsYHQ/s1600/tooncast.png" group-title="Canais | Infantil",TOONCAST HD
+http://firp.me:80/mizael/mizael/87383
+#EXTINF:-1 tvg-id="tooncast.br" tvg-name="TOONCAST SD" tvg-logo="https://1.bp.blogspot.com/-X81PcYk1Bh4/Xk70kb6xZLI/AAAAAAAACHU/qwKEZ7lIBq0D1CVFISjLunD5_BSKoui1gCLcBGAsYHQ/s1600/tooncast.png" group-title="Canais | Infantil",TOONCAST SD
+http://firp.me:80/mizael/mizael/87384
+#EXTINF:-1 tvg-id="tv.ra.tim.bum.br" tvg-name="TV RA TIM BUM FHD" tvg-logo="https://2.bp.blogspot.com/-PoyMSzIr24E/XupD-zDa27I/AAAAAAAAGWo/1bPCe_4hEW0okuEXraZhm-OulljSc-xjQCK4BGAYYCw/s400/tv%2Bra%2Btim%2Bbum.png" group-title="Canais | Infantil",TV RA TIM BUM FHD
+http://firp.me:80/mizael/mizael/87412
+#EXTINF:-1 tvg-id="tv.ra.tim.bum.br" tvg-name="TV RA TIM BUM HD" tvg-logo="https://2.bp.blogspot.com/-PoyMSzIr24E/XupD-zDa27I/AAAAAAAAGWo/1bPCe_4hEW0okuEXraZhm-OulljSc-xjQCK4BGAYYCw/s400/tv%2Bra%2Btim%2Bbum.png" group-title="Canais | Infantil",TV RA TIM BUM HD
+http://firp.me:80/mizael/mizael/87413
+#EXTINF:-1 tvg-id="tv.ra.tim.bum.br" tvg-name="TV RA TIM BUM SD" tvg-logo="https://2.bp.blogspot.com/-PoyMSzIr24E/XupD-zDa27I/AAAAAAAAGWo/1bPCe_4hEW0okuEXraZhm-OulljSc-xjQCK4BGAYYCw/s400/tv%2Bra%2Btim%2Bbum.png" group-title="Canais | Infantil",TV RA TIM BUM SD
+http://firp.me:80/mizael/mizael/87414
+#EXTINF:-1 tvg-id="woohoo.br" tvg-name="WOOHOO FHD" tvg-logo="https://3.bp.blogspot.com/-QGBXbuvWJkU/XmQHi8ltKRI/AAAAAAAACRQ/Zrr0EbyMyvILzvQ4_V59HIDsZdHiMtkpACK4BGAYYCw/s400/WOOHOO.png" group-title="Canais | Infantil",WOOHOO FHD
+http://firp.me:80/mizael/mizael/87444
+#EXTINF:-1 tvg-id="woohoo.br" tvg-name="WOOHOO HD" tvg-logo="https://3.bp.blogspot.com/-QGBXbuvWJkU/XmQHi8ltKRI/AAAAAAAACRQ/Zrr0EbyMyvILzvQ4_V59HIDsZdHiMtkpACK4BGAYYCw/s400/WOOHOO.png" group-title="Canais | Infantil",WOOHOO HD
+http://firp.me:80/mizael/mizael/87445
+#EXTINF:-1 tvg-id="woohoo.br" tvg-name="WOOHOO SD" tvg-logo="https://3.bp.blogspot.com/-QGBXbuvWJkU/XmQHi8ltKRI/AAAAAAAACRQ/Zrr0EbyMyvILzvQ4_V59HIDsZdHiMtkpACK4BGAYYCw/s400/WOOHOO.png" group-title="Canais | Infantil",WOOHOO SD
+http://firp.me:80/mizael/mizael/87446
+#EXTINF:-1 tvg-id="zoomoo.br" tvg-name="ZOOMO FHD" tvg-logo="https://3.bp.blogspot.com/-j5uz1zttHEo/XmUi8BK3sYI/AAAAAAAACXE/-90cQil00OUb0mhWc1mp3PjBzcunSnsdwCK4BGAYYCw/s400/zoomoo.png" group-title="Canais | Infantil",ZOOMO FHD
+http://firp.me:80/mizael/mizael/87451
+#EXTINF:-1 tvg-id="zoomoo.br" tvg-name="ZOOMOO HD" tvg-logo="https://3.bp.blogspot.com/-j5uz1zttHEo/XmUi8BK3sYI/AAAAAAAACXE/-90cQil00OUb0mhWc1mp3PjBzcunSnsdwCK4BGAYYCw/s400/zoomoo.png" group-title="Canais | Infantil",ZOOMOO HD
+http://firp.me:80/mizael/mizael/87452
+#EXTINF:-1 tvg-id="zoomoo.br" tvg-name="ZOOMOO SD" tvg-logo="https://3.bp.blogspot.com/-j5uz1zttHEo/XmUi8BK3sYI/AAAAAAAACXE/-90cQil00OUb0mhWc1mp3PjBzcunSnsdwCK4BGAYYCw/s400/zoomoo.png" group-title="Canais | Infantil",ZOOMOO SD
+http://firp.me:80/mizael/mizael/87453
+#EXTM3U
+#EXTINF:-1 tvg-name="Listas Flash Ec M3U IPTV" tvg-logo="https://play-lh.googleusercontent.com/HD4WuErnigIq8cU7-YhOv9hM7uQiNs2K-dHC6GRuRxUNccDmpRaZz6v8jW9C9JbMZQ=w240-h480-rw" group-title="The Flash Apps", Listas Flash Ec M3U IPTV by The Flash Apps
+https://593apps.pro.ec/videoIPTV593.mp4
+#EXTINF:-1 tvg-id="telecine.action.br" tvg-name="TELECINE ACTION FHD" tvg-logo="http://dns.cdnfc.xyz:80/images/b7ac7dc3145b2be99f99cf133e57b8ab.png" group-title="Canais | TeleCine",TELECINE ACTION FHD
+http://firp.me:80/mizael/mizael/235943
+#EXTINF:-1 tvg-id="telecine.action.br" tvg-name="TELECINE ACTION HD" tvg-logo="https://i.imgur.com/a1MplP5.png" group-title="Canais | TeleCine",TELECINE ACTION HD
+http://firp.me:80/mizael/mizael/235944
+#EXTINF:-1 tvg-id="telecine.action.br" tvg-name="TELECINE ACTION SD" tvg-logo="https://i.imgur.com/a1MplP5.png" group-title="Canais | TeleCine",TELECINE ACTION SD
+http://firp.me:80/mizael/mizael/235945
+#EXTINF:-1 tvg-id="telecine.cult.br" tvg-name="TELECINE CULT FHD" tvg-logo="https://i.imgur.com/YbyynJv.png" group-title="Canais | TeleCine",TELECINE CULT FHD
+http://firp.me:80/mizael/mizael/235946
+#EXTINF:-1 tvg-id="telecine.cult.br" tvg-name="TELECINE CULT HD" tvg-logo="https://i.imgur.com/YbyynJv.png" group-title="Canais | TeleCine",TELECINE CULT HD
+http://firp.me:80/mizael/mizael/235947
+#EXTINF:-1 tvg-id="telecine.cult.br" tvg-name="TELECINE CULT SD" tvg-logo="https://i.imgur.com/YbyynJv.png" group-title="Canais | TeleCine",TELECINE CULT SD
+http://firp.me:80/mizael/mizael/235948
+#EXTINF:-1 tvg-id="telecine.fun.br" tvg-name="TELECINE FUN FHD" tvg-logo="http://dns.cdnfc.xyz:80/images/342a5938e1365029bd318632384ee7a6.png" group-title="Canais | TeleCine",TELECINE FUN FHD
+http://firp.me:80/mizael/mizael/235949
+#EXTINF:-1 tvg-id="telecine.fun.br" tvg-name="TELECINE FUN HD" tvg-logo="http://dns.cdnfc.xyz:80/images/342a5938e1365029bd318632384ee7a6.png" group-title="Canais | TeleCine",TELECINE FUN HD
+http://firp.me:80/mizael/mizael/235950
+#EXTINF:-1 tvg-id="telecine.fun.br" tvg-name="TELECINE FUN SD" tvg-logo="http://dns.cdnfc.xyz:80/images/342a5938e1365029bd318632384ee7a6.png" group-title="Canais | TeleCine",TELECINE FUN SD
+http://firp.me:80/mizael/mizael/235951
+#EXTINF:-1 tvg-id="telecine.pipoca.br" tvg-name="TELECINE PIPOCA FHD" tvg-logo="https://i.imgur.com/NxQKbyQ.png" group-title="Canais | TeleCine",TELECINE PIPOCA FHD
+http://firp.me:80/mizael/mizael/235952
+#EXTINF:-1 tvg-id="telecine.pipoca.br" tvg-name="TELECINE PIPOCA HD" tvg-logo="https://i.imgur.com/NxQKbyQ.png" group-title="Canais | TeleCine",TELECINE PIPOCA HD
+http://firp.me:80/mizael/mizael/235953
+#EXTINF:-1 tvg-id="telecine.pipoca.br" tvg-name="TELECINE PIPOCA SD" tvg-logo="https://i.imgur.com/NxQKbyQ.png" group-title="Canais | TeleCine",TELECINE PIPOCA SD
+http://firp.me:80/mizael/mizael/235954
+#EXTINF:-1 tvg-id="telecine.premium.br" tvg-name="TELECINE PREMIUM FHD" tvg-logo="https://i.imgur.com/FpddICg.png" group-title="Canais | TeleCine",TELECINE PREMIUM FHD
+http://firp.me:80/mizael/mizael/235955
+#EXTINF:-1 tvg-id="telecine.premium.br" tvg-name="TELECINE PREMIUM HD" tvg-logo="https://i.imgur.com/FpddICg.png" group-title="Canais | TeleCine",TELECINE PREMIUM HD
+http://firp.me:80/mizael/mizael/235956
+#EXTINF:-1 tvg-id="telecine.premium.br" tvg-name="TELECINE PREMIUM SD" tvg-logo="https://i.imgur.com/FpddICg.png" group-title="Canais | TeleCine",TELECINE PREMIUM SD
+http://firp.me:80/mizael/mizael/235957
+#EXTINF:-1 tvg-id="telecine.touch.br" tvg-name="TELECINE TOUCH FHD" tvg-logo="https://i.imgur.com/MvEwir3.png" group-title="Canais | TeleCine",TELECINE TOUCH FHD
+http://firp.me:80/mizael/mizael/235958
+#EXTINF:-1 tvg-id="telecine.touch.br" tvg-name="TELECINE TOUCH HD" tvg-logo="https://i.imgur.com/MvEwir3.png" group-title="Canais | TeleCine",TELECINE TOUCH HD
+http://firp.me:80/mizael/mizael/235959
+#EXTINF:-1 tvg-id="telecine.touch.br" tvg-name="TELECINE TOUCH SD" tvg-logo="https://i.imgur.com/MvEwir3.png" group-title="Canais | TeleCine",TELECINE TOUCH SD
+http://firp.me:80/mizael/mizael/235960
+#EXTM3U
+#EXTINF:-1 tvg-name="Listas Flash Ec M3U IPTV" tvg-logo="https://play-lh.googleusercontent.com/HD4WuErnigIq8cU7-YhOv9hM7uQiNs2K-dHC6GRuRxUNccDmpRaZz6v8jW9C9JbMZQ=w240-h480-rw" group-title="The Flash Apps", Listas Flash Ec M3U IPTV by The Flash Apps
+https://593apps.pro.ec/videoIPTV593.mp4
+#EXTINF:-1 tvg-id="hbo.2.br" tvg-name="HBO 2 FHD" tvg-logo="http://dns.cdnfc.xyz:80/images/a7f9c898c812805f26c4ea1e490201da.png" group-title=" Canais | HBO",HBO 2 FHD
+http://firp.me:80/mizael/mizael/86963
+#EXTINF:-1 tvg-id="hbo.2.br" tvg-name="HBO 2 HD" tvg-logo="https://1.bp.blogspot.com/-lDifYsJ1bkU/Xk70YgIlO9I/AAAAAAAACFY/H1zNEDSJMCwy4RC_c_8ol0eGstwkb4R7gCLcBGAsYHQ/s1600/hbo2.png" group-title=" Canais | HBO",HBO 2 HD
+http://firp.me:80/mizael/mizael/86964
+#EXTINF:-1 tvg-id="hbo.2.br" tvg-name="HBO 2 SD" tvg-logo="https://1.bp.blogspot.com/-lDifYsJ1bkU/Xk70YgIlO9I/AAAAAAAACFY/H1zNEDSJMCwy4RC_c_8ol0eGstwkb4R7gCLcBGAsYHQ/s1600/hbo2.png" group-title=" Canais | HBO",HBO 2 SD
+http://firp.me:80/mizael/mizael/86965
+#EXTINF:-1 tvg-id="hbo.family.br" tvg-name="HBO FAMILY FHD" tvg-logo="https://i.imgur.com/alOqjXS.png" group-title=" Canais | HBO",HBO FAMILY FHD
+http://firp.me:80/mizael/mizael/86968
+#EXTINF:-1 tvg-id="hbo.family.br" tvg-name="HBO FAMILY HD" tvg-logo="https://i.imgur.com/alOqjXS.png" group-title=" Canais | HBO",HBO FAMILY HD
+http://firp.me:80/mizael/mizael/86969
+#EXTINF:-1 tvg-id="hbo.family.br" tvg-name="HBO FAMILY SD" tvg-logo="https://i.imgur.com/alOqjXS.png" group-title=" Canais | HBO",HBO FAMILY SD
+http://firp.me:80/mizael/mizael/86970
+#EXTINF:-1 tvg-id="hbo.br" tvg-name="HBO FHD" tvg-logo="https://1.bp.blogspot.com/-KUhkg79gvtE/Xk70Ycy0l6I/AAAAAAAACFU/FSdt9HsRs98gkzltg-oGA049omcb1KWlQCLcBGAsYHQ/s1600/hbo.png" group-title=" Canais | HBO",HBO FHD
+http://firp.me:80/mizael/mizael/86971
+#EXTINF:-1 tvg-id="hbo.br" tvg-name="HBO HD" tvg-logo="https://1.bp.blogspot.com/-KUhkg79gvtE/Xk70Ycy0l6I/AAAAAAAACFU/FSdt9HsRs98gkzltg-oGA049omcb1KWlQCLcBGAsYHQ/s1600/hbo.png" group-title=" Canais | HBO",HBO HD
+http://firp.me:80/mizael/mizael/86973
+#EXTINF:-1 tvg-id="hbo.br" tvg-name="HBO SD" tvg-logo="https://1.bp.blogspot.com/-KUhkg79gvtE/Xk70Ycy0l6I/AAAAAAAACFU/FSdt9HsRs98gkzltg-oGA049omcb1KWlQCLcBGAsYHQ/s1600/hbo.png" group-title=" Canais | HBO",HBO SD
+http://firp.me:80/mizael/mizael/86997
+#EXTINF:-1 tvg-id="hbo.mundi.br" tvg-name="HBO MUNDI FHD" tvg-logo="https://1.bp.blogspot.com/-iDOUNw5LOkk/Xk8wvRpCdNI/AAAAAAAACJU/pBSJbJCTe8QU0img-Ad3NJlUVfXGKfapQCK4BGAYYCw/s400/HBO%2BMUND.png" group-title=" Canais | HBO",HBO MUNDI FHD
+http://firp.me:80/mizael/mizael/86980
+#EXTINF:-1 tvg-id="hbo.mundi.br" tvg-name="HBO MUNDI HD" tvg-logo="https://1.bp.blogspot.com/-iDOUNw5LOkk/Xk8wvRpCdNI/AAAAAAAACJU/pBSJbJCTe8QU0img-Ad3NJlUVfXGKfapQCK4BGAYYCw/s400/HBO%2BMUND.png" group-title=" Canais | HBO",HBO MUNDI HD
+http://firp.me:80/mizael/mizael/86982
+#EXTINF:-1 tvg-id="hbo.mundi.br" tvg-name="HBO MUNDI SD" tvg-logo="https://1.bp.blogspot.com/-iDOUNw5LOkk/Xk8wvRpCdNI/AAAAAAAACJU/pBSJbJCTe8QU0img-Ad3NJlUVfXGKfapQCK4BGAYYCw/s400/HBO%2BMUND.png" group-title=" Canais | HBO",HBO MUNDI SD
+http://firp.me:80/mizael/mizael/86984
+#EXTINF:-1 tvg-id="hbo.plus.br" tvg-name="HBO PLUS FHD" tvg-logo="https://i.imgur.com/ohFIcQ8.png" group-title=" Canais | HBO",HBO PLUS FHD
+http://firp.me:80/mizael/mizael/86986
+#EXTINF:-1 tvg-id="hbo.plus.br" tvg-name="HBO PLUS HD" tvg-logo="https://i.imgur.com/ohFIcQ8.png" group-title=" Canais | HBO",HBO PLUS HD
+http://firp.me:80/mizael/mizael/86988
+#EXTINF:-1 tvg-id="hbo.plus.br" tvg-name="HBO PLUS SD" tvg-logo="https://i.imgur.com/ohFIcQ8.png" group-title=" Canais | HBO",HBO PLUS SD
+http://firp.me:80/mizael/mizael/86990
+#EXTINF:-1 tvg-id="hbo.pop.br" tvg-name="HBO POP FHD" tvg-logo="https://3.bp.blogspot.com/-cTWZC_SgeNg/Xk8w0j0Lk6I/AAAAAAAACJc/XYy3GlG6s7MGUPoSHeQ-f0ptS8qA3wmAACK4BGAYYCw/s400/HBO%2BPOP.png" group-title=" Canais | HBO",HBO POP FHD
+http://firp.me:80/mizael/mizael/86992
+#EXTINF:-1 tvg-id="hbo.pop.br" tvg-name="HBO POP HD" tvg-logo="https://3.bp.blogspot.com/-cTWZC_SgeNg/Xk8w0j0Lk6I/AAAAAAAACJc/XYy3GlG6s7MGUPoSHeQ-f0ptS8qA3wmAACK4BGAYYCw/s400/HBO%2BPOP.png" group-title=" Canais | HBO",HBO POP HD
+http://firp.me:80/mizael/mizael/86994
+#EXTINF:-1 tvg-id="hbo.pop.br" tvg-name="HBO POP SD" tvg-logo="https://3.bp.blogspot.com/-cTWZC_SgeNg/Xk8w0j0Lk6I/AAAAAAAACJc/XYy3GlG6s7MGUPoSHeQ-f0ptS8qA3wmAACK4BGAYYCw/s400/HBO%2BPOP.png" group-title=" Canais | HBO",HBO POP SD
+http://firp.me:80/mizael/mizael/86996
+#EXTINF:-1 tvg-id="hbo.signature.br" tvg-name="HBO SIGNATURE FHD" tvg-logo="https://i.imgur.com/vuLKMg0.png" group-title=" Canais | HBO",HBO SIGNATURE FHD
+http://firp.me:80/mizael/mizael/86999
+#EXTINF:-1 tvg-id="hbo.signature.br" tvg-name="HBO SIGNATURE HD" tvg-logo="https://i.imgur.com/vuLKMg0.png" group-title=" Canais | HBO",HBO SIGNATURE HD
+http://firp.me:80/mizael/mizael/87001
+#EXTINF:-1 tvg-id="hbo.signature.br" tvg-name="HBO SIGNATURE SD" tvg-logo="https://i.imgur.com/vuLKMg0.png" group-title=" Canais | HBO",HBO SIGNATURE SD
+http://firp.me:80/mizael/mizael/87003
+#EXTINF:-1 tvg-id="hbo.xtreme.br" tvg-name="HBO Xtreme FHD" tvg-logo="https://3.bp.blogspot.com/-wpkT1kBB508/XmQfxsbum-I/AAAAAAAACTI/CWh7uRsUWmsEWbF8du8SchSJrkHM3-EAwCK4BGAYYCw/s400/HBO%2BXTRE.png" group-title=" Canais | HBO",HBO Xtreme FHD
+http://firp.me:80/mizael/mizael/87006
+#EXTINF:-1 tvg-id="hbo.xtreme.br" tvg-name="HBO Xtreme HD" tvg-logo="https://i.imgur.com/pptVcOH.png" group-title=" Canais | HBO",HBO Xtreme HD
+http://firp.me:80/mizael/mizael/87008
+#EXTINF:-1 tvg-id="hbo.xtreme.br" tvg-name="HBO Xtreme SD" tvg-logo="https://3.bp.blogspot.com/-wpkT1kBB508/XmQfxsbum-I/AAAAAAAACTI/CWh7uRsUWmsEWbF8du8SchSJrkHM3-EAwCK4BGAYYCw/s400/HBO%2BXTRE.png" group-title=" Canais | HBO",HBO Xtreme SD
+http://firp.me:80/mizael/mizael/87009
+#EXTM3U
+#EXTINF:-1 tvg-name="Listas Flash Ec M3U IPTV" tvg-logo="https://play-lh.googleusercontent.com/HD4WuErnigIq8cU7-YhOv9hM7uQiNs2K-dHC6GRuRxUNccDmpRaZz6v8jW9C9JbMZQ=w240-h480-rw" group-title="The Flash Apps", Listas Flash Ec M3U IPTV by The Flash Apps
+https://593apps.pro.ec/videoIPTV593.mp4
+#EXTINF:-1 tvg-id="animal.planet.br" tvg-name="ANIMAL PLANET FHD" tvg-logo="http://dns.cdnfc.xyz:80/images/37288e62601868f21fc4f7a49f23e4e5.png" group-title="Canais | Documentários ",ANIMAL PLANET FHD
+http://firp.me:80/mizael/mizael/259583
+#EXTINF:-1 tvg-id="animal.planet.br" tvg-name="ANIMAL PLANET HD" tvg-logo="http://dns.cdnfc.xyz:80/images/37288e62601868f21fc4f7a49f23e4e5.png" group-title="Canais | Documentários ",ANIMAL PLANET HD
+http://firp.me:80/mizael/mizael/259584
+#EXTINF:-1 tvg-id="animal.planet.br" tvg-name="ANIMAL PLANET SD" tvg-logo="http://dns.cdnfc.xyz:80/images/37288e62601868f21fc4f7a49f23e4e5.png" group-title="Canais | Documentários ",ANIMAL PLANET SD
+http://firp.me:80/mizael/mizael/259585
+#EXTINF:-1 tvg-id="discovery.br" tvg-name="DISCOVERY CHANNEL FHD" tvg-logo="https://1.bp.blogspot.com/-jOsKBN8bN_I/XxL3ob_XwcI/AAAAAAAAGqQ/A7rJE7xV9Gc87ekkA6iQSdRmm1Kg46_0gCK4BGAYYCw/s1600/discovery-channel.png" group-title="Canais | Documentários ",DISCOVERY CHANNEL FHD
+http://firp.me:80/mizael/mizael/259586
+#EXTINF:-1 tvg-id="discovery.br" tvg-name="DISCOVERY CHANNEL HD" tvg-logo="https://1.bp.blogspot.com/-jOsKBN8bN_I/XxL3ob_XwcI/AAAAAAAAGqQ/A7rJE7xV9Gc87ekkA6iQSdRmm1Kg46_0gCK4BGAYYCw/s1600/discovery-channel.png" group-title="Canais | Documentários ",DISCOVERY CHANNEL HD
+http://firp.me:80/mizael/mizael/259587
+#EXTINF:-1 tvg-id="discovery.br" tvg-name="DISCOVERY CHANNEL SD" tvg-logo="https://1.bp.blogspot.com/-jOsKBN8bN_I/XxL3ob_XwcI/AAAAAAAAGqQ/A7rJE7xV9Gc87ekkA6iQSdRmm1Kg46_0gCK4BGAYYCw/s1600/discovery-channel.png" group-title="Canais | Documentários ",DISCOVERY CHANNEL SD
+http://firp.me:80/mizael/mizael/259588
+#EXTINF:-1 tvg-id="discovery.home.health.br" tvg-name="DISCOVERY HOME & HEALTH FHD" tvg-logo="https://i.imgur.com/mrLyn2i.png" group-title="Canais | Documentários ",DISCOVERY HOME & HEALTH FHD
+http://firp.me:80/mizael/mizael/259589
+#EXTINF:-1 tvg-id="discovery.home.health.br" tvg-name="DISCOVERY HOME & HEALTH HD" tvg-logo="https://i.imgur.com/mrLyn2i.png" group-title="Canais | Documentários ",DISCOVERY HOME & HEALTH HD
+http://firp.me:80/mizael/mizael/259590
+#EXTINF:-1 tvg-id="discovery.br" tvg-name="DISCOVERY HOME & HEALTH SD" tvg-logo="https://i.imgur.com/mrLyn2i.png" group-title="Canais | Documentários ",DISCOVERY HOME & HEALTH SD
+http://firp.me:80/mizael/mizael/259591
+#EXTINF:-1 tvg-id="discovery.science.br" tvg-name="DISCOVERY SCIENCE FHD" tvg-logo="https://1.bp.blogspot.com/-Nn1tKtDj6sY/Xk70QqLw0DI/AAAAAAAACEA/0RwNd0pPQzsv-qwLGMcUIBRCgLK-Vs50ACLcBGAsYHQ/s1600/discoveryscience.png" group-title="Canais | Documentários ",DISCOVERY SCIENCE FHD
+http://firp.me:80/mizael/mizael/259592
+#EXTINF:-1 tvg-id="discovery.science.br" tvg-name="DISCOVERY SCIENCE HD" tvg-logo="https://1.bp.blogspot.com/-Nn1tKtDj6sY/Xk70QqLw0DI/AAAAAAAACEA/0RwNd0pPQzsv-qwLGMcUIBRCgLK-Vs50ACLcBGAsYHQ/s1600/discoveryscience.png" group-title="Canais | Documentários ",DISCOVERY SCIENCE HD
+http://firp.me:80/mizael/mizael/259593
+#EXTINF:-1 tvg-id="discovery.science.br" tvg-name="DISCOVERY SCIENCE SD" tvg-logo="https://1.bp.blogspot.com/-Nn1tKtDj6sY/Xk70QqLw0DI/AAAAAAAACEA/0RwNd0pPQzsv-qwLGMcUIBRCgLK-Vs50ACLcBGAsYHQ/s1600/discoveryscience.png" group-title="Canais | Documentários ",DISCOVERY SCIENCE SD
+http://firp.me:80/mizael/mizael/259594
+#EXTINF:-1 tvg-id="discovery.theater.br" tvg-name="DISCOVERY THEATER FHD" tvg-logo="https://1.bp.blogspot.com/-zmhzL_q8BuE/Xk70Q4GLrTI/AAAAAAAACEE/5VO8WJ7wWMAq17Ha1OP0hbtgrqoF1vFrQCLcBGAsYHQ/s1600/discoverytheater.png" group-title="Canais | Documentários ",DISCOVERY THEATER FHD
+http://firp.me:80/mizael/mizael/259595
+#EXTINF:-1 tvg-id="discovery.theater.br" tvg-name="DISCOVERY THEATER HD" tvg-logo="https://1.bp.blogspot.com/-zmhzL_q8BuE/Xk70Q4GLrTI/AAAAAAAACEE/5VO8WJ7wWMAq17Ha1OP0hbtgrqoF1vFrQCLcBGAsYHQ/s1600/discoverytheater.png" group-title="Canais | Documentários ",DISCOVERY THEATER HD
+http://firp.me:80/mizael/mizael/259596
+#EXTINF:-1 tvg-id="discovery.theater.br" tvg-name="DISCOVERY THEATER SD" tvg-logo="https://1.bp.blogspot.com/-zmhzL_q8BuE/Xk70Q4GLrTI/AAAAAAAACEE/5VO8WJ7wWMAq17Ha1OP0hbtgrqoF1vFrQCLcBGAsYHQ/s1600/discoverytheater.png" group-title="Canais | Documentários ",DISCOVERY THEATER SD
+http://firp.me:80/mizael/mizael/259597
+#EXTINF:-1 tvg-id="tlc.br" tvg-name="DISCOVERY TLC FHD" tvg-logo="https://2.bp.blogspot.com/-kIUVI9_YPPE/XmP60ycdyPI/AAAAAAAACPY/r6d1IMJFvDQsE-Il4Cic1BnuJN47QvI0ACK4BGAYYCw/s400/TLC.png" group-title="Canais | Documentários ",DISCOVERY TLC FHD
+http://firp.me:80/mizael/mizael/259598
+#EXTINF:-1 tvg-id="tlc.br" tvg-name="DISCOVERY TLC HD" tvg-logo="https://2.bp.blogspot.com/-kIUVI9_YPPE/XmP60ycdyPI/AAAAAAAACPY/r6d1IMJFvDQsE-Il4Cic1BnuJN47QvI0ACK4BGAYYCw/s400/TLC.png" group-title="Canais | Documentários ",DISCOVERY TLC HD
+http://firp.me:80/mizael/mizael/259599
+#EXTINF:-1 tvg-id="tlc.br" tvg-name="DISCOVERY TLC SD" tvg-logo="https://2.bp.blogspot.com/-kIUVI9_YPPE/XmP60ycdyPI/AAAAAAAACPY/r6d1IMJFvDQsE-Il4Cic1BnuJN47QvI0ACK4BGAYYCw/s400/TLC.png" group-title="Canais | Documentários ",DISCOVERY TLC SD
+http://firp.me:80/mizael/mizael/259600
+#EXTINF:-1 tvg-id="discovery.turbo.br" tvg-name="DISCOVERY TURBO FHD" tvg-logo="https://i.imgur.com/ii81dHw.png" group-title="Canais | Documentários ",DISCOVERY TURBO FHD
+http://firp.me:80/mizael/mizael/259601
+#EXTINF:-1 tvg-id="discovery.turbo.br" tvg-name="DISCOVERY TURBO HD" tvg-logo="https://i.imgur.com/ii81dHw.png" group-title="Canais | Documentários ",DISCOVERY TURBO HD
+http://firp.me:80/mizael/mizael/259602
+#EXTINF:-1 tvg-id="discovery.turbo.br" tvg-name="DISCOVERY TURBO SD" tvg-logo="https://i.imgur.com/ii81dHw.png" group-title="Canais | Documentários ",DISCOVERY TURBO SD
+http://firp.me:80/mizael/mizael/259603
+#EXTINF:-1 tvg-id="discovery.world.br" tvg-name="DISCOVERY WORLD FHD" tvg-logo="https://1.bp.blogspot.com/-nb1EQ-vyLXg/Xk70RwCpZSI/AAAAAAAACEM/6W2YKWTTrLEyrgWbh52Q7ixjjsGSlWnhgCLcBGAsYHQ/s1600/discoveryworld.png" group-title="Canais | Documentários ",DISCOVERY WORLD FHD
+http://firp.me:80/mizael/mizael/259604
+#EXTINF:-1 tvg-id="discovery.turbo.br" tvg-name="DISCOVERY WORLD HD" tvg-logo="https://1.bp.blogspot.com/-nb1EQ-vyLXg/Xk70RwCpZSI/AAAAAAAACEM/6W2YKWTTrLEyrgWbh52Q7ixjjsGSlWnhgCLcBGAsYHQ/s1600/discoveryworld.png" group-title="Canais | Documentários ",DISCOVERY WORLD HD
+http://firp.me:80/mizael/mizael/259605
+#EXTINF:-1 tvg-id="discovery.world.br" tvg-name="DISCOVERY WORLD SD" tvg-logo="https://1.bp.blogspot.com/-nb1EQ-vyLXg/Xk70RwCpZSI/AAAAAAAACEM/6W2YKWTTrLEyrgWbh52Q7ixjjsGSlWnhgCLcBGAsYHQ/s1600/discoveryworld.png" group-title="Canais | Documentários ",DISCOVERY WORLD SD
+http://firp.me:80/mizael/mizael/259606
+#EXTINF:-1 tvg-id="fishtv.br" tvg-name="FISH TV FHD" tvg-logo="https://2.bp.blogspot.com/-WkDVS4pbZUI/XmBBcYkuGyI/AAAAAAAACMY/vQW_GWMw5sMLFhcqeHvGXlge8RqdwVMHwCK4BGAYYCw/s400/FISH%2BTV.png" group-title="Canais | Documentários ",FISH TV FHD
+http://firp.me:80/mizael/mizael/259607
+#EXTINF:-1 tvg-id="fishtv.br" tvg-name="FISH TV HD" tvg-logo="https://2.bp.blogspot.com/-WkDVS4pbZUI/XmBBcYkuGyI/AAAAAAAACMY/vQW_GWMw5sMLFhcqeHvGXlge8RqdwVMHwCK4BGAYYCw/s400/FISH%2BTV.png" group-title="Canais | Documentários ",FISH TV HD
+http://firp.me:80/mizael/mizael/259608
+#EXTINF:-1 tvg-id="fishtv.br" tvg-name="FISH TV SD" tvg-logo="https://2.bp.blogspot.com/-WkDVS4pbZUI/XmBBcYkuGyI/AAAAAAAACMY/vQW_GWMw5sMLFhcqeHvGXlge8RqdwVMHwCK4BGAYYCw/s400/FISH%2BTV.png" group-title="Canais | Documentários ",FISH TV SD
+http://firp.me:80/mizael/mizael/259609
+#EXTINF:-1 tvg-id="h2.br" tvg-name="H2 FHD" tvg-logo="https://1.bp.blogspot.com/-uh9tauhKWww/Xk70ZxoWtWI/AAAAAAAACFo/MthwzRm9VcY96cemup2ZY_4hclxsCYvygCLcBGAsYHQ/s1600/history2.png" group-title="Canais | Documentários ",H2 FHD
+http://firp.me:80/mizael/mizael/259610
+#EXTINF:-1 tvg-id="h2.br" tvg-name="H2 HD" tvg-logo="https://1.bp.blogspot.com/-uh9tauhKWww/Xk70ZxoWtWI/AAAAAAAACFo/MthwzRm9VcY96cemup2ZY_4hclxsCYvygCLcBGAsYHQ/s1600/history2.png" group-title="Canais | Documentários ",H2 HD
+http://firp.me:80/mizael/mizael/259611
+#EXTINF:-1 tvg-id="h2.br" tvg-name="H2 SD" tvg-logo="https://1.bp.blogspot.com/-uh9tauhKWww/Xk70ZxoWtWI/AAAAAAAACFo/MthwzRm9VcY96cemup2ZY_4hclxsCYvygCLcBGAsYHQ/s1600/history2.png" group-title="Canais | Documentários ",H2 SD
+http://firp.me:80/mizael/mizael/259612
+#EXTINF:-1 tvg-id="hgtv.br" tvg-name="HGTV  SD" tvg-logo="https://i.imgur.com/Qzols33.png" group-title="Canais | Documentários ",HGTV  SD
+http://firp.me:80/mizael/mizael/259613
+#EXTINF:-1 tvg-id="hgtv.br" tvg-name="HGTV FHD" tvg-logo="https://i.imgur.com/Qzols33.png" group-title="Canais | Documentários ",HGTV FHD
+http://firp.me:80/mizael/mizael/259614
+#EXTINF:-1 tvg-id="hgtv.br" tvg-name="HGTV HD" tvg-logo="https://i.imgur.com/Qzols33.png" group-title="Canais | Documentários ",HGTV HD
+http://firp.me:80/mizael/mizael/259615
+#EXTINF:-1 tvg-id="history.br" tvg-name="HISTORY CHANNEL FHD" tvg-logo="https://1.bp.blogspot.com/-A_BkkBW2TRg/Xk70ZvLLFqI/AAAAAAAACFk/UdNNhHr_eyIX7YInVJ1owphUbFoBmsq4ACLcBGAsYHQ/s1600/history.png" group-title="Canais | Documentários ",HISTORY CHANNEL FHD
+http://firp.me:80/mizael/mizael/259616
+#EXTINF:-1 tvg-id="history.br" tvg-name="HISTORY CHANNEL HD" tvg-logo="https://1.bp.blogspot.com/-A_BkkBW2TRg/Xk70ZvLLFqI/AAAAAAAACFk/UdNNhHr_eyIX7YInVJ1owphUbFoBmsq4ACLcBGAsYHQ/s1600/history.png" group-title="Canais | Documentários ",HISTORY CHANNEL HD
+http://firp.me:80/mizael/mizael/259617
+#EXTINF:-1 tvg-id="history.br" tvg-name="HISTORY CHANNEL SD" tvg-logo="https://1.bp.blogspot.com/-A_BkkBW2TRg/Xk70ZvLLFqI/AAAAAAAACFk/UdNNhHr_eyIX7YInVJ1owphUbFoBmsq4ACLcBGAsYHQ/s1600/history.png" group-title="Canais | Documentários ",HISTORY CHANNEL SD
+http://firp.me:80/mizael/mizael/259618
+#EXTINF:-1 tvg-id="investigacao.discovery.br" tvg-name="ID - INVESTIGAÇÃO DISCOVERY FHD" tvg-logo="https://1.bp.blogspot.com/-Gecf4_UVW7Y/Xk70aNhiV0I/AAAAAAAACFs/1iczvzGT0XMxMqNaIWca9KCEgxaiuPuEgCLcBGAsYHQ/s1600/investigationdiscovery.png" group-title="Canais | Documentários ",ID - INVESTIGAÇÃO DISCOVERY FHD
+http://firp.me:80/mizael/mizael/259619
+#EXTINF:-1 tvg-id="investigacao.discovery.br" tvg-name="ID - INVESTIGAÇÃO DISCOVERY HD" tvg-logo="https://1.bp.blogspot.com/-Gecf4_UVW7Y/Xk70aNhiV0I/AAAAAAAACFs/1iczvzGT0XMxMqNaIWca9KCEgxaiuPuEgCLcBGAsYHQ/s1600/investigationdiscovery.png" group-title="Canais | Documentários ",ID - INVESTIGAÇÃO DISCOVERY HD
+http://firp.me:80/mizael/mizael/259620
+#EXTINF:-1 tvg-id="investigacao.discovery.br" tvg-name="ID - INVESTIGAÇÃO DISCOVERY SD" tvg-logo="https://1.bp.blogspot.com/-Gecf4_UVW7Y/Xk70aNhiV0I/AAAAAAAACFs/1iczvzGT0XMxMqNaIWca9KCEgxaiuPuEgCLcBGAsYHQ/s1600/investigationdiscovery.png" group-title="Canais | Documentários ",ID - INVESTIGAÇÃO DISCOVERY SD
+http://firp.me:80/mizael/mizael/259621
+#EXTINF:-1 tvg-id="national.geographic.br" tvg-name="NATIONAL GEOGRAPHIC FHD" tvg-logo="https://i.imgur.com/lm2Zp28.png" group-title="Canais | Documentários ",NATIONAL GEOGRAPHIC FHD
+http://firp.me:80/mizael/mizael/259625
+#EXTINF:-1 tvg-id="national.geographic.br" tvg-name="NATIONAL GEOGRAPHIC HD" tvg-logo="https://i.imgur.com/lm2Zp28.png" group-title="Canais | Documentários ",NATIONAL GEOGRAPHIC HD
+http://firp.me:80/mizael/mizael/259626
+#EXTINF:-1 tvg-id="national.geographic.br" tvg-name="NATIONAL GEOGRAPHIC SD" tvg-logo="https://i.imgur.com/lm2Zp28.png" group-title="Canais | Documentários ",NATIONAL GEOGRAPHIC SD
+http://firp.me:80/mizael/mizael/259627
+#EXTM3U
+#EXTINF:-1 tvg-name="Listas Flash Ec M3U IPTV" tvg-logo="https://play-lh.googleusercontent.com/HD4WuErnigIq8cU7-YhOv9hM7uQiNs2K-dHC6GRuRxUNccDmpRaZz6v8jW9C9JbMZQ=w240-h480-rw" group-title="The Flash Apps", Listas Flash Ec M3U IPTV by The Flash Apps
+https://593apps.pro.ec/videoIPTV593.mp4
+#EXTINF:-1 tvg-id="bandsports.br" tvg-name="BAND SPORTS FHD" tvg-logo="https://i.imgur.com/ymD1Kpy.png" group-title="Canais | Esportes",BAND SPORTS FHD
+http://firp.me:80/mizael/mizael/277034
+#EXTINF:-1 tvg-id="bandsports.br" tvg-name="BAND SPORTS HD" tvg-logo="https://i.imgur.com/ymD1Kpy.png" group-title="Canais | Esportes",BAND SPORTS HD
+http://firp.me:80/mizael/mizael/277035
+#EXTINF:-1 tvg-id="bandsports.br" tvg-name="BAND SPORTS SD" tvg-logo="https://i.imgur.com/ymD1Kpy.png" group-title="Canais | Esportes",BAND SPORTS SD
+http://firp.me:80/mizael/mizael/277036
+#EXTINF:-1 tvg-id="combate.br" tvg-name="COMBATE FHD" tvg-logo="http://dns.cdnfc.xyz:80/images/758d8b1cbf0b6cee37110825fead0f77.png" group-title="Canais | Esportes",COMBATE FHD
+http://firp.me:80/mizael/mizael/277037
+#EXTINF:-1 tvg-id="combate.br" tvg-name="COMBATE HD" tvg-logo="https://1.bp.blogspot.com/-ya115tslPUU/Xk70OyJbtYI/AAAAAAAACDs/dp5hFTRJ54cf0cv0c855d-MKSr5ov_-xgCLcBGAsYHQ/s1600/combate.png" group-title="Canais | Esportes",COMBATE HD
+http://firp.me:80/mizael/mizael/277038
+#EXTINF:-1 tvg-id="combate.br" tvg-name="COMBATE SD" tvg-logo="https://1.bp.blogspot.com/-ya115tslPUU/Xk70OyJbtYI/AAAAAAAACDs/dp5hFTRJ54cf0cv0c855d-MKSr5ov_-xgCLcBGAsYHQ/s1600/combate.png" group-title="Canais | Esportes",COMBATE SD
+http://firp.me:80/mizael/mizael/277039
+#EXTINF:-1 tvg-id="fox.sports.2.br" tvg-name="FOX SPORT 2 FHD" tvg-logo="https://i.imgur.com/5QO6eXE.png" group-title="Canais | Esportes",FOX SPORT 2 FHD
+http://firp.me:80/mizael/mizael/277044
+#EXTINF:-1 tvg-id="fox.sports.2.br" tvg-name="FOX SPORT 2 FHD²" tvg-logo="http://dns.cdnfc.xyz:80/images/e3d819a68effeb02fe07ef9ef4bf0380.png" group-title="Canais | Esportes",FOX SPORT 2 FHD²
+http://firp.me:80/mizael/mizael/277045
+#EXTINF:-1 tvg-id="fox.sports.2.br" tvg-name="FOX SPORTS 2 HD" tvg-logo="https://i.imgur.com/5QO6eXE.png" group-title="Canais | Esportes",FOX SPORTS 2 HD
+http://firp.me:80/mizael/mizael/277046
+#EXTINF:-1 tvg-id="fox.sports.2.br" tvg-name="FOX SPORTS 2 SD" tvg-logo="https://i.imgur.com/5QO6eXE.png" group-title="Canais | Esportes",FOX SPORTS 2 SD
+http://firp.me:80/mizael/mizael/277047
+#EXTINF:-1 tvg-id="off.br" tvg-name="OFF FHD" tvg-logo="https://4.bp.blogspot.com/-ymMQqU8o9w4/XmQF4ZEEykI/AAAAAAAACRE/twbhOl3niJIoKhnYFk_-al4ULYFLKqiAgCK4BGAYYCw/s400/OFF.png" group-title="Canais | Esportes",OFF FHD
+http://firp.me:80/mizael/mizael/277048
+#EXTINF:-1 tvg-id="off.br" tvg-name="OFF HD" tvg-logo="https://4.bp.blogspot.com/-ymMQqU8o9w4/XmQF4ZEEykI/AAAAAAAACRE/twbhOl3niJIoKhnYFk_-al4ULYFLKqiAgCK4BGAYYCw/s400/OFF.png" group-title="Canais | Esportes",OFF HD
+http://firp.me:80/mizael/mizael/277049
+#EXTINF:-1 tvg-id="off.br" tvg-name="OFF SD" tvg-logo="https://4.bp.blogspot.com/-ymMQqU8o9w4/XmQF4ZEEykI/AAAAAAAACRE/twbhOl3niJIoKhnYFk_-al4ULYFLKqiAgCK4BGAYYCw/s400/OFF.png" group-title="Canais | Esportes",OFF SD
+http://firp.me:80/mizael/mizael/277050
+#EXTINF:-1 tvg-id="" tvg-name="UFC Fight Pass" tvg-logo="https://i.imgur.com/UlJqpmf.png" group-title="Canais | Esportes",UFC Fight Pass
+http://firp.me:80/mizael/mizael/402384
+#EXTINF:-1 tvg-id="" tvg-name="UFC Fight Pass 2" tvg-logo="https://i.imgur.com/UlJqpmf.png" group-title="Canais | Esportes",UFC Fight Pass 2
+http://firp.me:80/mizael/mizael/406504
+#EXTINF:-1 tvg-id="" tvg-name="UFC Fight Pass 3" tvg-logo="https://i.imgur.com/UlJqpmf.png" group-title="Canais | Esportes",UFC Fight Pass 3
+http://firp.me:80/mizael/mizael/406505
+#EXTINF:-1 tvg-id="" tvg-name="UFC Fight Pass 4" tvg-logo="https://i.imgur.com/UlJqpmf.png" group-title="Canais | Esportes",UFC Fight Pass 4
+http://firp.me:80/mizael/mizael/406507
+#EXTINF:-1 tvg-id="" tvg-name="UFC Fight Pass 5" tvg-logo="https://i.imgur.com/UlJqpmf.png" group-title="Canais | Esportes",UFC Fight Pass 5
+http://firp.me:80/mizael/mizael/406506
+#EXTM3U
+#EXTINF:-1 tvg-name="Listas Flash Ec M3U IPTV" tvg-logo="https://play-lh.googleusercontent.com/HD4WuErnigIq8cU7-YhOv9hM7uQiNs2K-dHC6GRuRxUNccDmpRaZz6v8jW9C9JbMZQ=w240-h480-rw" group-title="The Flash Apps", Listas Flash Ec M3U IPTV by The Flash Apps
+https://593apps.pro.ec/videoIPTV593.mp4
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV FHD" tvg-logo="https://i.imgur.com/gULDKB3.png" group-title="Canais | SporTV",SPORTV FHD
+http://firp.me:80/mizael/mizael/277051
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV FHD²" tvg-logo="https://i.imgur.com/gULDKB3.png" group-title="Canais | SporTV",SPORTV FHD²
+http://firp.me:80/mizael/mizael/277052
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV HD" tvg-logo="https://i.imgur.com/gULDKB3.png" group-title="Canais | SporTV",SPORTV HD
+http://firp.me:80/mizael/mizael/277053
+#EXTINF:-1 tvg-id="sportv.br" tvg-name="SPORTV SD" tvg-logo="https://i.imgur.com/gULDKB3.png" group-title="Canais | SporTV",SPORTV SD
+http://firp.me:80/mizael/mizael/277054
+#EXTINF:-1 tvg-id="sportv2.br" tvg-name="SPORTV 2 FHD" tvg-logo="https://i.imgur.com/uQnMRtt.png" group-title="Canais | SporTV",SPORTV 2 FHD
+http://firp.me:80/mizael/mizael/277055
+#EXTINF:-1 tvg-id="sportv2.br" tvg-name="SPORTV 2 FHD²" tvg-logo="http://dns.cdnfc.xyz:80/images/1720b67138d8c44b0e3515690a0dca39.png" group-title="Canais | SporTV",SPORTV 2 FHD²
+http://firp.me:80/mizael/mizael/277056
+#EXTINF:-1 tvg-id="sportv2.br" tvg-name="SPORTV 2 HD" tvg-logo="https://i.imgur.com/uQnMRtt.png" group-title="Canais | SporTV",SPORTV 2 HD
+http://firp.me:80/mizael/mizael/277057
+#EXTINF:-1 tvg-id="sportv2.br" tvg-name="SPORTV 2 SD" tvg-logo="https://i.imgur.com/uQnMRtt.png" group-title="Canais | SporTV",SPORTV 2 SD
+http://firp.me:80/mizael/mizael/277058
+#EXTINF:-1 tvg-id="sportv3.br" tvg-name="SPORTV 3 FHD" tvg-logo="https://i.imgur.com/0sTcFeE.png" group-title="Canais | SporTV",SPORTV 3 FHD
+http://firp.me:80/mizael/mizael/277059
+#EXTINF:-1 tvg-id="sportv3.br" tvg-name="SPORTV 3 FHD²" tvg-logo="http://dns.cdnfc.xyz:80/images/f4c1f24d2fc02e94e1f4366e2ff6d5f0.png" group-title="Canais | SporTV",SPORTV 3 FHD²
+http://firp.me:80/mizael/mizael/277060
+#EXTINF:-1 tvg-id="sportv3.br" tvg-name="SPORTV 3 HD" tvg-logo="https://i.imgur.com/0sTcFeE.png" group-title="Canais | SporTV",SPORTV 3 HD
+http://firp.me:80/mizael/mizael/277061
+#EXTINF:-1 tvg-id="sportv3.br" tvg-name="SPORTV 3 SD" tvg-logo="https://i.imgur.com/0sTcFeE.png" group-title="Canais | SporTV",SPORTV 3 SD
+http://firp.me:80/mizael/mizael/277062
+#EXTINF:-1 tvg-id="CNNBrasil" tvg-name="SPORTV 4 FHD" tvg-logo="https://i.imgur.com/iajVgtM.png" group-title="Canais | SporTV",SPORTV 4 FHD
+http://firp.me:80/mizael/mizael/277063
+#EXTINF:-1 tvg-id="CNNBrasil" tvg-name="SPORTV 4 HD" tvg-logo="https://i.imgur.com/iajVgtM.png" group-title="Canais | SporTV",SPORTV 4 HD
+http://firp.me:80/mizael/mizael/277064
+#EXTINF:-1 tvg-id="CNNBrasil" tvg-name="SPORTV 4 SD" tvg-logo="https://i.imgur.com/iajVgtM.png" group-title="Canais | SporTV",SPORTV 4 SD
+http://firp.me:80/mizael/mizael/277065
+#EXTINF:-1 tvg-id="" tvg-name="SPORTV PLUS HD" tvg-logo="https://i.imgur.com/Mem1lqw.png" group-title="Canais | SporTV",SPORTV PLUS HD
+http://firp.me:80/mizael/mizael/277066
+#EXTM3U
+#EXTINF:-1 tvg-name="Listas Flash Ec M3U IPTV" tvg-logo="https://play-lh.googleusercontent.com/HD4WuErnigIq8cU7-YhOv9hM7uQiNs2K-dHC6GRuRxUNccDmpRaZz6v8jW9C9JbMZQ=w240-h480-rw" group-title="The Flash Apps", Listas Flash Ec M3U IPTV by The Flash Apps
+https://593apps.pro.ec/videoIPTV593.mp4
+#EXTINF:-1 tvg-id="espn.brasil.br" tvg-name="ESPN FHD" tvg-logo="http://dns.cdnfc.xyz:80/images/15fb376f5ed64f8f09d390130d0baace.png" group-title="Canais | ESPN",ESPN FHD
+http://firp.me:80/mizael/mizael/277136
+#EXTINF:-1 tvg-id="espn.brasil.br" tvg-name="ESPN FHD²" tvg-logo="https://i.imgur.com/w0k0QqA.png" group-title="Canais | ESPN",ESPN FHD²
+http://firp.me:80/mizael/mizael/277137
+#EXTINF:-1 tvg-id="espn.brasil.br" tvg-name="ESPN HD" tvg-logo="http://dns.cdnfc.xyz:80/images/15fb376f5ed64f8f09d390130d0baace.png" group-title="Canais | ESPN",ESPN HD
+http://firp.me:80/mizael/mizael/277138
+#EXTINF:-1 tvg-id="espn.brasil.br" tvg-name="ESPN SD" tvg-logo="http://dns.cdnfc.xyz:80/images/15fb376f5ed64f8f09d390130d0baace.png" group-title="Canais | ESPN",ESPN SD
+http://firp.me:80/mizael/mizael/277139
+#EXTINF:-1 tvg-id="espn.br" tvg-name="ESPN 2 FHD" tvg-logo="https://i.imgur.com/jEIYIFR.png" group-title="Canais | ESPN",ESPN 2 FHD
+http://firp.me:80/mizael/mizael/277140
+#EXTINF:-1 tvg-id="espn.br" tvg-name="ESPN 2 FHD²" tvg-logo="http://dns.cdnfc.xyz:80/images/a5b2718c75617834e6f20c098405c684.png" group-title="Canais | ESPN",ESPN 2 FHD²
+http://firp.me:80/mizael/mizael/277141
+#EXTINF:-1 tvg-id="espn.br" tvg-name="ESPN 2 HD" tvg-logo="https://i.imgur.com/jEIYIFR.png" group-title="Canais | ESPN",ESPN 2 HD
+http://firp.me:80/mizael/mizael/277142
+#EXTINF:-1 tvg-id="espn.br" tvg-name="ESPN 2 SD" tvg-logo="https://i.imgur.com/jEIYIFR.png" group-title="Canais | ESPN",ESPN 2 SD
+http://firp.me:80/mizael/mizael/277143
+#EXTINF:-1 tvg-id="CNNBrasil" tvg-name="ESPN 3 FHD" tvg-logo="https://i.imgur.com/joLAfqH.png" group-title="Canais | ESPN",ESPN 3 FHD
+http://firp.me:80/mizael/mizael/277144
+#EXTINF:-1 tvg-id="CNNBrasil" tvg-name="ESPN 3 FHD²" tvg-logo="http://dns.cdnfc.xyz:80/images/851f18f6e64fdb2e5df1056c2db285af.png" group-title="Canais | ESPN",ESPN 3 FHD²
+http://firp.me:80/mizael/mizael/277145
+#EXTINF:-1 tvg-id="CNNBrasil" tvg-name="ESPN 3 HD" tvg-logo="https://i.imgur.com/joLAfqH.png" group-title="Canais | ESPN",ESPN 3 HD
+http://firp.me:80/mizael/mizael/277146
+#EXTINF:-1 tvg-id="CNNBrasil" tvg-name="ESPN 3 SD" tvg-logo="https://i.imgur.com/joLAfqH.png" group-title="Canais | ESPN",ESPN 3 SD
+http://firp.me:80/mizael/mizael/277147
+#EXTINF:-1 tvg-id="fox.sports.br" tvg-name="ESPN 4 FHD" tvg-logo="https://i.imgur.com/3OiOlDZ.png" group-title="Canais | ESPN",ESPN 4 FHD
+http://firp.me:80/mizael/mizael/277148
+#EXTINF:-1 tvg-id="fox.sports.br" tvg-name="ESPN 4 FHD²" tvg-logo="http://dns.cdnfc.xyz:80/images/8fd956ad82c94ff3af53646176da5b64.png" group-title="Canais | ESPN",ESPN 4 FHD²
+http://firp.me:80/mizael/mizael/277149
+#EXTINF:-1 tvg-id="fox.sports.br" tvg-name="ESPN 4 HD" tvg-logo="https://i.imgur.com/3OiOlDZ.png" group-title="Canais | ESPN",ESPN 4 HD
+http://firp.me:80/mizael/mizael/277150
+#EXTINF:-1 tvg-id="fox.sports.br" tvg-name="ESPN 4 SD" tvg-logo="https://i.imgur.com/3OiOlDZ.png" group-title="Canais | ESPN",ESPN 4 SD
+http://firp.me:80/mizael/mizael/277151
+#EXTINF:-1 tvg-id="espn.extra.br" tvg-name="ESPN EXTRA FHD" tvg-logo="https://2.bp.blogspot.com/-IrchTJzKX_Y/XmUM5jakpdI/AAAAAAAACVY/W4Em0dmFMC8nkeEFnd3fcxhDEpp6RCIvQCK4BGAYYCw/s400/ESPN%2BEX.png" group-title="Canais | ESPN",ESPN EXTRA FHD
+http://firp.me:80/mizael/mizael/277152
+#EXTINF:-1 tvg-id="espn.extra.br" tvg-name="ESPN EXTRA FHD²" tvg-logo="http://dns.cdnfc.xyz:80/images/5430e4499501d38160569e3a08c0b691.png" group-title="Canais | ESPN",ESPN EXTRA FHD²
+http://firp.me:80/mizael/mizael/277153
+#EXTINF:-1 tvg-id="espn.extra.br" tvg-name="ESPN EXTRA HD" tvg-logo="https://2.bp.blogspot.com/-IrchTJzKX_Y/XmUM5jakpdI/AAAAAAAACVY/W4Em0dmFMC8nkeEFnd3fcxhDEpp6RCIvQCK4BGAYYCw/s400/ESPN%2BEX.png" group-title="Canais | ESPN",ESPN EXTRA HD
+http://firp.me:80/mizael/mizael/277154
+#EXTINF:-1 tvg-id="espn.extra.br" tvg-name="ESPN EXTRA SD" tvg-logo="https://2.bp.blogspot.com/-IrchTJzKX_Y/XmUM5jakpdI/AAAAAAAACVY/W4Em0dmFMC8nkeEFnd3fcxhDEpp6RCIvQCK4BGAYYCw/s400/ESPN%2BEX.png" group-title="Canais | ESPN",ESPN EXTRA SD
+http://firp.me:80/mizael/mizael/277155
