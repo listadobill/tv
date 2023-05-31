@@ -31,3 +31,124 @@ http://firp.me:80/mizael/mizael/87530
 http://firp.me:80/mizael/mizael/87531
 #EXTINF:-1 tvg-id="" tvg-name="JP NEWS SD" tvg-logo="http://dns.cdnfc.xyz:80/images/246203778e19a29296dc594a84de9948.png" group-title=" Canais | Noticia",JP NEWS SD
 http://firp.me:80/mizael/mizael/122981
+
+#EXTINF:-1 tvg-name="Listas Flash Ec M3U IPTV" tvg-logo="https://play-lh.googleusercontent.com/HD4WuErnigIq8cU7-YhOv9hM7uQiNs2K-dHC6GRuRxUNccDmpRaZz6v8jW9C9JbMZQ=w240-h480-rw" group-title="The Flash Apps", Listas Flash Ec M3U IPTV by The Flash Apps
+https://593apps.pro.ec/videoIPTV593.mp4
+#EXTINF:-1 tvg-id="arte.1.br" tvg-name="ARTE 1 FHD" tvg-logo="https://i.imgur.com/1iyqRDD.png" group-title="Canais | Variedade",ARTE 1 FHD
+http://firp.me:80/mizael/mizael/86630
+#EXTINF:-1 tvg-id="arte.1.br" tvg-name="ARTE 1 HD" tvg-logo="https://i.imgur.com/1iyqRDD.png" group-title="Canais | Variedade",ARTE 1 HD
+http://firp.me:80/mizael/mizael/86631
+#EXTINF:-1 tvg-id="arte.1.br" tvg-name="ARTE 1 SD" tvg-logo="https://i.imgur.com/1iyqRDD.png" group-title="Canais | Variedade",ARTE 1 SD
+http://firp.me:80/mizael/mizael/86632
+#EXTINF:-1 tvg-id="bis.br" tvg-name="BIS FHD" tvg-logo="https://lh3.googleusercontent.com/-yVYicJSoe8w/X20sIRtB1lI/AAAAAAAAHFg/fbQpRXyXErkxj1s65WKdKUm6oPzM63BpgCLcBGAsYHQ/BIS.png" group-title="Canais | Variedade",BIS FHD
+http://firp.me:80/mizael/mizael/86676
+#EXTINF:-1 tvg-id="bis.br" tvg-name="BIS HD" tvg-logo="https://lh3.googleusercontent.com/-yVYicJSoe8w/X20sIRtB1lI/AAAAAAAAHFg/fbQpRXyXErkxj1s65WKdKUm6oPzM63BpgCLcBGAsYHQ/BIS.png" group-title="Canais | Variedade",BIS HD
+http://firp.me:80/mizael/mizael/86677
+#EXTINF:-1 tvg-id="bis.br" tvg-name="BIS SD" tvg-logo="https://lh3.googleusercontent.com/-yVYicJSoe8w/X20sIRtB1lI/AAAAAAAAHFg/fbQpRXyXErkxj1s65WKdKUm6oPzM63BpgCLcBGAsYHQ/BIS.png" group-title="Canais | Variedade",BIS SD
+http://firp.me:80/mizael/mizael/86678
+#EXTINF:-1 tvg-id="canal.brasil.br" tvg-name="CANAL BRASIL FHD" tvg-logo="https://4.bp.blogspot.com/-b8D2NrA1s2c/XuaMBfQ2_DI/AAAAAAAAGTo/0RWS41wGtLUS_PQON9oJkv55C7h5SEHtwCK4BGAYYCw/s1600/TV%2BBRASIL.png" group-title="Canais | Variedade",CANAL BRASIL FHD
+http://firp.me:80/mizael/mizael/86694
+#EXTINF:-1 tvg-id="canal.brasil.br" tvg-name="CANAL BRASIL HD" tvg-logo="https://4.bp.blogspot.com/-b8D2NrA1s2c/XuaMBfQ2_DI/AAAAAAAAGTo/0RWS41wGtLUS_PQON9oJkv55C7h5SEHtwCK4BGAYYCw/s1600/TV%2BBRASIL.png" group-title="Canais | Variedade",CANAL BRASIL HD
+http://firp.me:80/mizael/mizael/86695
+#EXTINF:-1 tvg-id="canal.rural.br" tvg-name="CANAL RURAL" tvg-logo="https://i.imgur.com/a8DWbPb.png" group-title="Canais | Variedade",CANAL RURAL
+http://firp.me:80/mizael/mizael/86697
+#EXTINF:-1 tvg-id="chef.br" tvg-name="CHEF TV FHD" tvg-logo="https://2.bp.blogspot.com/-klY3hVFgj0U/XuaUO9iujWI/AAAAAAAAGUk/rxAEcrXUfYY67d8dYuoGOjC83n2prc_PgCK4BGAYYCw/s1600/CHEF.png" group-title="Canais | Variedade",CHEF TV FHD
+http://firp.me:80/mizael/mizael/86712
+#EXTINF:-1 tvg-id="chef.br" tvg-name="CHEF TV HD" tvg-logo="https://2.bp.blogspot.com/-klY3hVFgj0U/XuaUO9iujWI/AAAAAAAAGUk/rxAEcrXUfYY67d8dYuoGOjC83n2prc_PgCK4BGAYYCw/s1600/CHEF.png" group-title="Canais | Variedade",CHEF TV HD
+http://firp.me:80/mizael/mizael/86713
+#EXTINF:-1 tvg-id="comedy.central.br" tvg-name="COMEDY CENTRAL FHD" tvg-logo="https://1.bp.blogspot.com/-Nbl1xKywDX4/Xk70PRed9GI/AAAAAAAACDw/0MAoqSfWmZIhGxK8iGzKN3Q0HjHS-bYOgCLcBGAsYHQ/s1600/comedycentral.png" group-title="Canais | Variedade",COMEDY CENTRAL FHD
+http://firp.me:80/mizael/mizael/86734
+#EXTINF:-1 tvg-id="comedy.central.br" tvg-name="COMEDY CENTRAL HD" tvg-logo="https://1.bp.blogspot.com/-Nbl1xKywDX4/Xk70PRed9GI/AAAAAAAACDw/0MAoqSfWmZIhGxK8iGzKN3Q0HjHS-bYOgCLcBGAsYHQ/s1600/comedycentral.png" group-title="Canais | Variedade",COMEDY CENTRAL HD
+http://firp.me:80/mizael/mizael/86735
+#EXTINF:-1 tvg-id="comedy.central.br" tvg-name="COMEDY CENTRAL SD" tvg-logo="https://1.bp.blogspot.com/-Nbl1xKywDX4/Xk70PRed9GI/AAAAAAAACDw/0MAoqSfWmZIhGxK8iGzKN3Q0HjHS-bYOgCLcBGAsYHQ/s1600/comedycentral.png" group-title="Canais | Variedade",COMEDY CENTRAL SD
+http://firp.me:80/mizael/mizael/86736
+#EXTINF:-1 tvg-id="curta.br" tvg-name="CURTA!" tvg-logo="https://1.bp.blogspot.com/-hlxENZGF5Gs/XuaSgOkMfOI/AAAAAAAAGUY/OqWjyDiKVWcFroN7Z6EoFZ7at7FMUWMPwCK4BGAYYCw/s1600/CURTA.png" group-title="Canais | Variedade",CURTA!
+http://firp.me:80/mizael/mizael/86754
+#EXTINF:-1 tvg-id="dogtv.br" tvg-name="DOG TV" tvg-logo="http://dns.cdnfc.xyz:80/images/983109053e89f54e4a894cbd5712c3ae.png" group-title="Canais | Variedade",DOG TV
+http://firp.me:80/mizael/mizael/86798
+#EXTINF:-1 tvg-id="e.br" tvg-name="E! FHD" tvg-logo="https://3.bp.blogspot.com/-p11362iIZW8/XmP736_KsGI/AAAAAAAACPk/ViHbgXo2BDkd_p85Qs4rWKx-nUei_z5tQCK4BGAYYCw/s400/E.png" group-title="Canais | Variedade",E! FHD
+http://firp.me:80/mizael/mizael/86805
+#EXTINF:-1 tvg-id="e.br" tvg-name="E! HD" tvg-logo="https://3.bp.blogspot.com/-p11362iIZW8/XmP736_KsGI/AAAAAAAACPk/ViHbgXo2BDkd_p85Qs4rWKx-nUei_z5tQCK4BGAYYCw/s400/E.png" group-title="Canais | Variedade",E! HD
+http://firp.me:80/mizael/mizael/86806
+#EXTINF:-1 tvg-id="e.br" tvg-name="E! SD" tvg-logo="https://3.bp.blogspot.com/-p11362iIZW8/XmP736_KsGI/AAAAAAAACPk/ViHbgXo2BDkd_p85Qs4rWKx-nUei_z5tQCK4BGAYYCw/s400/E.png" group-title="Canais | Variedade",E! SD
+http://firp.me:80/mizael/mizael/86807
+#EXTINF:-1 tvg-id="food.network.br" tvg-name="FOOD NETWORK FHD" tvg-logo="https://2.bp.blogspot.com/-NV7YyPJDcdE/XmP88hrWo6I/AAAAAAAACPw/lIOC5Ros_oA7HQOzAk__lJJb7Gd_aYQMwCK4BGAYYCw/s400/FOOD.png" group-title="Canais | Variedade",FOOD NETWORK FHD
+http://firp.me:80/mizael/mizael/86849
+#EXTINF:-1 tvg-id="food.network.br" tvg-name="FOOD NETWORK HD" tvg-logo="https://2.bp.blogspot.com/-NV7YyPJDcdE/XmP88hrWo6I/AAAAAAAACPw/lIOC5Ros_oA7HQOzAk__lJJb7Gd_aYQMwCK4BGAYYCw/s400/FOOD.png" group-title="Canais | Variedade",FOOD NETWORK HD
+http://firp.me:80/mizael/mizael/86850
+#EXTINF:-1 tvg-id="food.network.br" tvg-name="FOOD NETWORK SD" tvg-logo="https://2.bp.blogspot.com/-NV7YyPJDcdE/XmP88hrWo6I/AAAAAAAACPw/lIOC5Ros_oA7HQOzAk__lJJb7Gd_aYQMwCK4BGAYYCw/s400/FOOD.png" group-title="Canais | Variedade",FOOD NETWORK SD
+http://firp.me:80/mizael/mizael/86851
+#EXTINF:-1 tvg-id="gnt.br" tvg-name="GNT FHD" tvg-logo="https://3.bp.blogspot.com/-iCbjYIDrwhE/XmP_eN3d_iI/AAAAAAAACQI/gVXF4j0G4Dwz8ZDiKaI8Qgth5DSUrcscgCK4BGAYYCw/s400/GNT.png" group-title="Canais | Variedade",GNT FHD
+http://firp.me:80/mizael/mizael/86954
+#EXTINF:-1 tvg-id="gnt.br" tvg-name="GNT HD" tvg-logo="https://3.bp.blogspot.com/-iCbjYIDrwhE/XmP_eN3d_iI/AAAAAAAACQI/gVXF4j0G4Dwz8ZDiKaI8Qgth5DSUrcscgCK4BGAYYCw/s400/GNT.png" group-title="Canais | Variedade",GNT HD
+http://firp.me:80/mizael/mizael/86955
+#EXTINF:-1 tvg-id="gnt.br" tvg-name="GNT SD" tvg-logo="https://3.bp.blogspot.com/-iCbjYIDrwhE/XmP_eN3d_iI/AAAAAAAACQI/gVXF4j0G4Dwz8ZDiKaI8Qgth5DSUrcscgCK4BGAYYCw/s400/GNT.png" group-title="Canais | Variedade",GNT SD
+http://firp.me:80/mizael/mizael/86956
+#EXTINF:-1 tvg-id="loading.br" tvg-name="Loading." tvg-logo="https://i.imgur.com/XHFo2XM.png" group-title="Canais | Variedade",Loading.
+http://firp.me:80/mizael/mizael/87043
+#EXTINF:-1 tvg-id="mtv.brasil.br" tvg-name="MTV FHD" tvg-logo="https://4.bp.blogspot.com/-4OqHYBVILTY/XmQB_z6eDgI/AAAAAAAACQg/tAJcgLZMA-Ug-KRlmabY97czaYBKypDPwCK4BGAYYCw/s400/MTV.png" group-title="Canais | Variedade",MTV FHD
+http://firp.me:80/mizael/mizael/87063
+#EXTINF:-1 tvg-id="mtv.br" tvg-name="MTV HD" tvg-logo="https://4.bp.blogspot.com/-4OqHYBVILTY/XmQB_z6eDgI/AAAAAAAACQg/tAJcgLZMA-Ug-KRlmabY97czaYBKypDPwCK4BGAYYCw/s400/MTV.png" group-title="Canais | Variedade",MTV HD
+http://firp.me:80/mizael/mizael/87064
+#EXTINF:-1 tvg-id="mtv.br" tvg-name="MTV SD" tvg-logo="https://4.bp.blogspot.com/-4OqHYBVILTY/XmQB_z6eDgI/AAAAAAAACQg/tAJcgLZMA-Ug-KRlmabY97czaYBKypDPwCK4BGAYYCw/s400/MTV.png" group-title="Canais | Variedade",MTV SD
+http://firp.me:80/mizael/mizael/87065
+#EXTINF:-1 tvg-id="multishow.br" tvg-name="MULTISHOW FHD" tvg-logo="https://2.bp.blogspot.com/-YLvYyrLM0Tc/XmQENo4hcuI/AAAAAAAACQs/jKWMWXYMuvIhu7iXvLJCm-9BEONKMcqxwCK4BGAYYCw/s400/MULTICHO.png" group-title="Canais | Variedade",MULTISHOW FHD
+http://firp.me:80/mizael/mizael/87068
+#EXTINF:-1 tvg-id="multishow.br" tvg-name="MULTISHOW HD" tvg-logo="https://2.bp.blogspot.com/-YLvYyrLM0Tc/XmQENo4hcuI/AAAAAAAACQs/jKWMWXYMuvIhu7iXvLJCm-9BEONKMcqxwCK4BGAYYCw/s400/MULTICHO.png" group-title="Canais | Variedade",MULTISHOW HD
+http://firp.me:80/mizael/mizael/87069
+#EXTINF:-1 tvg-id="multishow.br" tvg-name="MULTISHOW SD" tvg-logo="https://2.bp.blogspot.com/-YLvYyrLM0Tc/XmQENo4hcuI/AAAAAAAACQs/jKWMWXYMuvIhu7iXvLJCm-9BEONKMcqxwCK4BGAYYCw/s400/MULTICHO.png" group-title="Canais | Variedade",MULTISHOW SD
+http://firp.me:80/mizael/mizael/87070
+#EXTINF:-1 tvg-id="music.box.brasil.br" tvg-name="MUSIC BOX BRAZIL" tvg-logo="https://i.imgur.com/hG4FScx.png" group-title="Canais | Variedade",MUSIC BOX BRAZIL
+http://firp.me:80/mizael/mizael/87071
+#EXTINF:-1 tvg-id="Polishop.br" tvg-name="POLISHOP TV" tvg-logo="https://i.imgur.com/pkXYvKG.png" group-title="Canais | Variedade",POLISHOP TV
+http://firp.me:80/mizael/mizael/87122
+#EXTINF:-1 tvg-id="Polishop.br" tvg-name="POLISHOP TV HD" tvg-logo="https://i.imgur.com/pkXYvKG.png" group-title="Canais | Variedade",POLISHOP TV HD
+http://firp.me:80/mizael/mizael/87123
+#EXTINF:-1 tvg-id="prime.box.brazil.br" tvg-name="PRIME BOX BRASIL" tvg-logo="https://1.bp.blogspot.com/-8twQMS6VXK8/Xk70eAyheRI/AAAAAAAACGU/Ydqk_t9dTc8TrakV_Y7U1KAuy8oKgntcwCLcBGAsYHQ/s1600/primeboxbrasil.png" group-title="Canais | Variedade",PRIME BOX BRASIL
+http://firp.me:80/mizael/mizael/87156
+#EXTINF:-1 tvg-id="prime.box.brazil.br" tvg-name="PRIME BOX MUSIC" tvg-logo="https://1.bp.blogspot.com/-8twQMS6VXK8/Xk70eAyheRI/AAAAAAAACGU/Ydqk_t9dTc8TrakV_Y7U1KAuy8oKgntcwCLcBGAsYHQ/s1600/primeboxbrasil.png" group-title="Canais | Variedade",PRIME BOX MUSIC
+http://firp.me:80/mizael/mizael/87157
+#EXTINF:-1 tvg-id="rit.br" tvg-name="RIT TV HD" tvg-logo="https://pbs.twimg.com/profile_images/1593065506/LOGO_RIT.png" group-title="Canais | Variedade",RIT TV HD
+http://firp.me:80/mizael/mizael/87209
+#EXTINF:-1 tvg-id="" tvg-name="TCM HD" tvg-logo="https://1.bp.blogspot.com/-ejxsKor1rMM/Xs6r7OACh6I/AAAAAAAAF-Y/xpIIigM60HcE0CsVPuQ_lAvCFZjCN9exgCLcBGAsYHQ/s1600/TCM.png" group-title="Canais | Variedade",TCM HD
+http://firp.me:80/mizael/mizael/87325
+#EXTINF:-1 tvg-id="" tvg-name="TCM SD" tvg-logo="https://1.bp.blogspot.com/-ejxsKor1rMM/Xs6r7OACh6I/AAAAAAAAF-Y/xpIIigM60HcE0CsVPuQ_lAvCFZjCN9exgCLcBGAsYHQ/s1600/TCM.png" group-title="Canais | Variedade",TCM SD
+http://firp.me:80/mizael/mizael/87326
+#EXTINF:-1 tvg-id="terra.viva.br" tvg-name="TERRA VIVA HD" tvg-logo="https://i.imgur.com/5onKR9w.png" group-title="Canais | Variedade",TERRA VIVA HD
+http://firp.me:80/mizael/mizael/87365
+#EXTINF:-1 tvg-id="travel.box.brazil.br" tvg-name="TRAVEL BOX BRASIL HD" tvg-logo="https://i.imgur.com/pqQfCXb.png" group-title="Canais | Variedade",TRAVEL BOX BRASIL HD
+http://firp.me:80/mizael/mizael/87385
+#EXTINF:-1 tvg-id="trutv.br" tvg-name="TRU TV FHD" tvg-logo="https://i.imgur.com/ZdsdatP.png" group-title="Canais | Variedade",TRU TV FHD
+http://firp.me:80/mizael/mizael/87387
+#EXTINF:-1 tvg-id="trutv.br" tvg-name="TRU TV HD" tvg-logo="https://i.imgur.com/ZdsdatP.png" group-title="Canais | Variedade",TRU TV HD
+http://firp.me:80/mizael/mizael/87388
+#EXTINF:-1 tvg-id="tv.camara.br" tvg-name="TV Camara HD" tvg-logo="https://i.imgur.com/ff0loif.png" group-title="Canais | Variedade",TV Camara HD
+http://firp.me:80/mizael/mizael/87397
+#EXTINF:-1 tvg-id="tv.escola.br" tvg-name="Tv Escola" tvg-logo="https://i.imgur.com/WOhkgBc.png" group-title="Canais | Variedade",Tv Escola
+http://firp.me:80/mizael/mizael/87402
+#EXTINF:-1 tvg-id="tv.justica.br" tvg-name="TV Justica" tvg-logo="https://i.imgur.com/M1BlgLK.png" group-title="Canais | Variedade",TV Justica
+http://firp.me:80/mizael/mizael/87405
+#EXTINF:-1 tvg-id="tv.senado.br" tvg-name="TV Senado" tvg-logo="https://i.imgur.com/7gWHEsX.png" group-title="Canais | Variedade",TV Senado
+http://firp.me:80/mizael/mizael/87415
+#EXTINF:-1 tvg-id="viva.br" tvg-name="VIVA FHD" tvg-logo="https://1.bp.blogspot.com/-gzJ5_MSSOwg/XuaF6AmkuEI/AAAAAAAAGTc/fDaVktznrYkMT0WeqzSdBUlpltn87s3qQCK4BGAYYCw/s1600/VIVA.png" group-title="Canais | Variedade",VIVA FHD
+http://firp.me:80/mizael/mizael/87436
+#EXTINF:-1 tvg-id="viva.br" tvg-name="VIVA HD" tvg-logo="https://1.bp.blogspot.com/-gzJ5_MSSOwg/XuaF6AmkuEI/AAAAAAAAGTc/fDaVktznrYkMT0WeqzSdBUlpltn87s3qQCK4BGAYYCw/s1600/VIVA.png" group-title="Canais | Variedade",VIVA HD
+http://firp.me:80/mizael/mizael/87437
+#EXTINF:-1 tvg-id="viva.br" tvg-name="VIVA SD" tvg-logo="https://1.bp.blogspot.com/-gzJ5_MSSOwg/XuaF6AmkuEI/AAAAAAAAGTc/fDaVktznrYkMT0WeqzSdBUlpltn87s3qQCK4BGAYYCw/s1600/VIVA.png" group-title="Canais | Variedade",VIVA SD
+http://firp.me:80/mizael/mizael/87438
+#EXTINF:-1 tvg-id="" tvg-name="TV Brasil" tvg-logo="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/112010/untitled-1_197.png?itok=1VZuZOR-" group-title="Canais | Variedade",TV Brasil
+http://firp.me:80/mizael/mizael/87532
+#EXTINF:-1 tvg-id="mtv.live.br" tvg-name="MTV Live FHD" tvg-logo="http://dns.cdnfc.xyz:80/images/0fa26698cbb66924c36b80febe0d6d0a.png" group-title="Canais | Variedade",MTV Live FHD
+http://firp.me:80/mizael/mizael/266411
+#EXTINF:-1 tvg-id="mtv.live.br" tvg-name="MTV Live HD" tvg-logo="http://dns.cdnfc.xyz:80/images/0fa26698cbb66924c36b80febe0d6d0a.png" group-title="Canais | Variedade",MTV Live HD
+http://firp.me:80/mizael/mizael/266412
+#EXTINF:-1 tvg-id="mtv.live.br" tvg-name="MTV Live SD" tvg-logo="http://dns.cdnfc.xyz:80/images/0fa26698cbb66924c36b80febe0d6d0a.png" group-title="Canais | Variedade",MTV Live SD
+http://firp.me:80/mizael/mizael/266413
+#EXTINF:-1 tvg-id="" tvg-name="MTV 00s HD" tvg-logo="https://static.wikia.nocookie.net/dreamlogos/images/5/5e/MTV_00s_logo.png/revision/latest/scale-to-width-down/250?cb=20201106173216" group-title="Canais | Variedade",MTV 00s HD
+http://firp.me:80/mizael/mizael/266414
+#EXTINF:-1 tvg-id="+globosat.br" tvg-name="Mais na Tela FHD" tvg-logo="http://a5.vc/e5K" group-title="Canais | Variedade",Mais na Tela FHD
+http://firp.me:80/mizael/mizael/277133
+#EXTINF:-1 tvg-id="+globosat.br" tvg-name="Mais na Tela HD" tvg-logo="http://a5.vc/e5K" group-title="Canais | Variedade",Mais na Tela HD
+http://firp.me:80/mizael/mizael/277134
+#EXTINF:-1 tvg-id="+globosat.br" tvg-name="Mais na Tela SD" tvg-logo="http://a5.vc/e5K" group-title="Canais | Variedade",Mais na Tela SD
+http://firp.me:80/mizael/mizael/277135
