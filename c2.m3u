@@ -517,3 +517,562 @@ http://firp.me:80/mizael/mizael/277153
 http://firp.me:80/mizael/mizael/277154
 #EXTINF:-1 tvg-id="espn.extra.br" tvg-name="ESPN EXTRA SD" tvg-logo="https://2.bp.blogspot.com/-IrchTJzKX_Y/XmUM5jakpdI/AAAAAAAACVY/W4Em0dmFMC8nkeEFnd3fcxhDEpp6RCIvQCK4BGAYYCw/s400/ESPN%2BEX.png" group-title="Canais | ESPN",ESPN EXTRA SD
 http://firp.me:80/mizael/mizael/277155
+#EXTINF:-1 tvg-id="RecordTV Brasília" tvg-name="RECORD SC" tvg-logo="http://dns.cdnfc.xyz:80/images/de17f0f24b49f8364187891f8550ffbb.png" group-title=" Canais | Abertos",RECORD SC
+http://firp.me:80/mizael/mizael/277193
+#EXTM3U
+#EXTINF:-1 tvg-name="Listas Flash Ec M3U IPTV" tvg-logo="https://play-lh.googleusercontent.com/HD4WuErnigIq8cU7-YhOv9hM7uQiNs2K-dHC6GRuRxUNccDmpRaZz6v8jW9C9JbMZQ=w240-h480-rw" group-title="The Flash Apps", Listas Flash Ec M3U IPTV by The Flash Apps
+https://593apps.pro.ec/videoIPTV593.mp4
+#EXTINF:-1 tvg-id="" tvg-name="Cine Comédia" tvg-logo="http://origemdasfontes.ga:80/images/915cd3ea884ea4bc3fa4ed0684f51276.png" group-title="Canais | Cine Filmes",Cine Comédia
+http://firp.me:80/mizael/mizael/344653
+#EXTINF:-1 tvg-id="" tvg-name="Cine Vingadores" tvg-logo="http://origemdasfontes.ga:80/images/915cd3ea884ea4bc3fa4ed0684f51276.png" group-title="Canais | Cine Filmes",Cine Vingadores
+http://firp.me:80/mizael/mizael/344654
+#EXTINF:-1 tvg-id="" tvg-name="Cine Marvel" tvg-logo="http://origemdasfontes.ga:80/images/915cd3ea884ea4bc3fa4ed0684f51276.png" group-title="Canais | Cine Filmes",Cine Marvel
+http://firp.me:80/mizael/mizael/344655
+#EXTINF:-1 tvg-id="" tvg-name="Cine Terror" tvg-logo="http://origemdasfontes.ga:80/images/915cd3ea884ea4bc3fa4ed0684f51276.png" group-title="Canais | Cine Filmes",Cine Terror
+http://firp.me:80/mizael/mizael/344658
+#EXTINF:-1 tvg-id="" tvg-name="Cine Oscar" tvg-logo="http://origemdasfontes.ga:80/images/915cd3ea884ea4bc3fa4ed0684f51276.png" group-title="Canais | Cine Filmes",Cine Oscar
+http://firp.me:80/mizael/mizael/344659
+#EXTINF:-1 tvg-id="" tvg-name="Cine Romance" tvg-logo="http://origemdasfontes.ga:80/images/915cd3ea884ea4bc3fa4ed0684f51276.png" group-title="Canais | Cine Filmes",Cine Romance
+http://firp.me:80/mizael/mizael/344664
+#EXTINF:-1 tvg-id="" tvg-name="Cine Familia" tvg-logo="http://origemdasfontes.ga:80/images/915cd3ea884ea4bc3fa4ed0684f51276.png" group-title="Canais | Cine Filmes",Cine Familia
+http://firp.me:80/mizael/mizael/344665
+#EXTINF:-1 tvg-id="" tvg-name="Cine Super Lançamentos" tvg-logo="http://origemdasfontes.ga:80/images/915cd3ea884ea4bc3fa4ed0684f51276.png" group-title="Canais | Cine Filmes",Cine Super Lançamentos
+http://firp.me:80/mizael/mizael/344666
+#EXTINF:-1 tvg-id="" tvg-name="Cine Pipoca #1 (Lançamentos TeleCine)" tvg-logo="http://origemdasfontes.ga:80/images/88d3d0bfa7041c2d1909c4a9c9618b23.png" group-title="Canais | Cine Filmes",Cine Pipoca #1 (Lançamentos TeleCine)
+http://firp.me:80/mizael/mizael/344667
+#EXTINF:-1 tvg-id="" tvg-name="Cine Pipoca #2 (Lançamentos TeleCine)" tvg-logo="http://origemdasfontes.ga:80/images/88d3d0bfa7041c2d1909c4a9c9618b23.png" group-title="Canais | Cine Filmes",Cine Pipoca #2 (Lançamentos TeleCine)
+http://firp.me:80/mizael/mizael/344668
+#EXTINF:-1 tvg-id="" tvg-name="Cine Pipoca #3 (Lançamentos TeleCine)" tvg-logo="http://origemdasfontes.ga:80/images/88d3d0bfa7041c2d1909c4a9c9618b23.png" group-title="Canais | Cine Filmes",Cine Pipoca #3 (Lançamentos TeleCine)
+http://firp.me:80/mizael/mizael/344669
+#EXTINF:-1 tvg-id="" tvg-name="Cine Pipoca #4 (Lançamentos TeleCine)" tvg-logo="http://origemdasfontes.ga:80/images/88d3d0bfa7041c2d1909c4a9c9618b23.png" group-title="Canais | Cine Filmes",Cine Pipoca #4 (Lançamentos TeleCine)
+http://firp.me:80/mizael/mizael/344670
+#EXTINF:-1 tvg-id="" tvg-name="Cine Pipoca #5 (Lançamentos TeleCine)" tvg-logo="http://origemdasfontes.ga:80/images/88d3d0bfa7041c2d1909c4a9c9618b23.png" group-title="Canais | Cine Filmes",Cine Pipoca #5 (Lançamentos TeleCine)
+http://firp.me:80/mizael/mizael/344671
+#EXTINF:-1 tvg-id="" tvg-name="Cine GO #1 (Lançamentos HBO)" tvg-logo="http://origemdasfontes.ga:80/images/79cd400a81dff3d20956e2c948f8f3e1.png" group-title="Canais | Cine Filmes",Cine GO #1 (Lançamentos HBO)
+http://firp.me:80/mizael/mizael/344672
+#EXTINF:-1 tvg-id="" tvg-name="Cine GO #2 (Lançamentos HBO)" tvg-logo="http://origemdasfontes.ga:80/images/79cd400a81dff3d20956e2c948f8f3e1.png" group-title="Canais | Cine Filmes",Cine GO #2 (Lançamentos HBO)
+http://firp.me:80/mizael/mizael/344673
+#EXTINF:-1 tvg-id="" tvg-name="Cine GO #3 (Lançamentos HBO)" tvg-logo="http://origemdasfontes.ga:80/images/79cd400a81dff3d20956e2c948f8f3e1.png" group-title="Canais | Cine Filmes",Cine GO #3 (Lançamentos HBO)
+http://firp.me:80/mizael/mizael/344674
+#EXTM3U
+#EXTINF:-1 tvg-name="Listas Flash Ec M3U IPTV" tvg-logo="https://play-lh.googleusercontent.com/HD4WuErnigIq8cU7-YhOv9hM7uQiNs2K-dHC6GRuRxUNccDmpRaZz6v8jW9C9JbMZQ=w240-h480-rw" group-title="The Flash Apps", Listas Flash Ec M3U IPTV by The Flash Apps
+https://593apps.pro.ec/videoIPTV593.mp4
+#EXTINF:-1 tvg-id="animal.planet.br" tvg-name="Animal Planet 4K" tvg-logo="https://3.bp.blogspot.com/-IKw48vRj0ng/XxL4tVLxx-I/AAAAAAAAGrk/3PBqZhVTiR0vVDocG7B7vfrUtxbdcRV-QCK4BGAYYCw/s1600/Animal%2BPlanet.png" group-title=" Canais | 4K",Animal Planet 4K
+http://firp.me:80/mizael/mizael/356695
+#EXTINF:-1 tvg-id="axn.br" tvg-name="AXN 4K" tvg-logo="https://2.bp.blogspot.com/-nBtQ5UkiBI4/XmQcIAhLVYI/AAAAAAAACSk/posGzR9eqD4zllrPY3vGIk6wsFYBJtlRQCK4BGAYYCw/s400/AXN.png" group-title=" Canais | 4K",AXN 4K
+http://firp.me:80/mizael/mizael/356696
+#EXTINF:-1 tvg-id="" tvg-name="Band 4K" tvg-logo="https://1.bp.blogspot.com/-iNdvmlc8qBg/XuZtPikP6FI/AAAAAAAAGSI/4Y97dMF3v0INvDtHEVpDW3qYumvgKLsUQCLcBGAsYHQ/s1600/band.png" group-title=" Canais | 4K",Band 4K
+http://firp.me:80/mizael/mizael/356697
+#EXTINF:-1 tvg-id="" tvg-name="Cartoon Network 4K" tvg-logo="https://1.bp.blogspot.com/-aondLW2i3Nw/Xk70ObLd84I/AAAAAAAACDk/UaL7ElNQW-AaFhG-9gEv2FSWp28Cci5hACLcBGAsYHQ/s1600/cartoonnetwork.png" group-title=" Canais | 4K",Cartoon Network 4K
+http://firp.me:80/mizael/mizael/356698
+#EXTINF:-1 tvg-id="cnn.brasil.br" tvg-name="CNN Brasil 4K" tvg-logo="https://3.bp.blogspot.com/-uRmPHuH0Nq0/XpSRkyOBozI/AAAAAAAACvI/XRneLRhfGWQ6f0W1KtSe_LoxLSp5GPIvwCK4BGAYYCw/s400/cnn%2Bbrasil.png" group-title=" Canais | 4K",CNN Brasil 4K
+http://firp.me:80/mizael/mizael/356699
+#EXTINF:-1 tvg-id="" tvg-name="Combate 4K" tvg-logo="https://1.bp.blogspot.com/-ya115tslPUU/Xk70OyJbtYI/AAAAAAAACDs/dp5hFTRJ54cf0cv0c855d-MKSr5ov_-xgCLcBGAsYHQ/s1600/combate.png" group-title=" Canais | 4K",Combate 4K
+http://firp.me:80/mizael/mizael/356700
+#EXTINF:-1 tvg-id="comedy.central.br" tvg-name="Comedy Central 4K" tvg-logo="https://1.bp.blogspot.com/-Nbl1xKywDX4/Xk70PRed9GI/AAAAAAAACDw/0MAoqSfWmZIhGxK8iGzKN3Q0HjHS-bYOgCLcBGAsYHQ/s1600/comedycentral.png" group-title=" Canais | 4K",Comedy Central 4K
+http://firp.me:80/mizael/mizael/356701
+#EXTINF:-1 tvg-id="" tvg-name="Discovery Channel 4K" tvg-logo="https://1.bp.blogspot.com/-jOsKBN8bN_I/XxL3ob_XwcI/AAAAAAAAGqQ/A7rJE7xV9Gc87ekkA6iQSdRmm1Kg46_0gCK4BGAYYCw/s1600/discovery-channel.png" group-title=" Canais | 4K",Discovery Channel 4K
+http://firp.me:80/mizael/mizael/356702
+#EXTINF:-1 tvg-id="discovery.home.health.br" tvg-name="Discovery H&H 4K" tvg-logo="https://i.imgur.com/mrLyn2i.png" group-title=" Canais | 4K",Discovery H&H 4K
+http://firp.me:80/mizael/mizael/356703
+#EXTINF:-1 tvg-id="discovery.turbo.br" tvg-name="Discovery Turbo 4K" tvg-logo="https://i.imgur.com/ii81dHw.png" group-title=" Canais | 4K",Discovery Turbo 4K
+http://firp.me:80/mizael/mizael/356704
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 4 4K" tvg-logo="" group-title=" Canais | 4K",ESPN 4 4K
+http://firp.me:80/mizael/mizael/356705
+#EXTINF:-1 tvg-id="espn.brasil.br" tvg-name="ESPN 4K" tvg-logo="https://1.bp.blogspot.com/-6WHUXIszhSo/Xk70ThUHf7I/AAAAAAAACEg/SiQTddgay9gyeGmfwBsvm57Fd4glh4wfgCLcBGAsYHQ/s1600/espn.png" group-title=" Canais | 4K",ESPN 4K
+http://firp.me:80/mizael/mizael/356706
+#EXTINF:-1 tvg-id="" tvg-name="Gazeta 4K" tvg-logo="https://4.bp.blogspot.com/-02UGvCVbggU/XuaRaj-VeVI/AAAAAAAAGUM/7Fjv0FqRVKU5ayqXoD88a66CeM6hKdVlACK4BGAYYCw/s1600/GASETA.png" group-title=" Canais | 4K",Gazeta 4K
+http://firp.me:80/mizael/mizael/356707
+#EXTINF:-1 tvg-id="" tvg-name="Globo 4K" tvg-logo="https://1.bp.blogspot.com/-kvKDW0ssDKA/XuZtQDA9CDI/AAAAAAAAGSQ/tOanK92ir5oAlUm2czxh5hhdIhNOtkgSgCLcBGAsYHQ/s1600/globo.png" group-title=" Canais | 4K",Globo 4K
+http://firp.me:80/mizael/mizael/356708
+#EXTINF:-1 tvg-id="globo.news.br" tvg-name="Globo News 4K" tvg-logo="https://i.imgur.com/HM13dsp.png" group-title=" Canais | 4K",Globo News 4K
+http://firp.me:80/mizael/mizael/356709
+#EXTINF:-1 tvg-id="gnt.br" tvg-name="GNT 4K" tvg-logo="https://3.bp.blogspot.com/-iCbjYIDrwhE/XmP_eN3d_iI/AAAAAAAACQI/gVXF4j0G4Dwz8ZDiKaI8Qgth5DSUrcscgCK4BGAYYCw/s400/GNT.png" group-title=" Canais | 4K",GNT 4K
+http://firp.me:80/mizael/mizael/356710
+#EXTINF:-1 tvg-id="" tvg-name="HBO 4K" tvg-logo="https://1.bp.blogspot.com/-KUhkg79gvtE/Xk70Ycy0l6I/AAAAAAAACFU/FSdt9HsRs98gkzltg-oGA049omcb1KWlQCLcBGAsYHQ/s1600/hbo.png" group-title=" Canais | 4K",HBO 4K
+http://firp.me:80/mizael/mizael/356711
+#EXTINF:-1 tvg-id="" tvg-name="Megapix 4K" tvg-logo="https://1.bp.blogspot.com/-KYJNJ8ofZhQ/Xk70bsae15I/AAAAAAAACF4/bu4pFKpyK3I802HKsQJEP4f8S7_KLRUXgCLcBGAsYHQ/s1600/megapix.png" group-title=" Canais | 4K",Megapix 4K
+http://firp.me:80/mizael/mizael/356712
+#EXTINF:-1 tvg-id="" tvg-name="Multishow 4K" tvg-logo="https://2.bp.blogspot.com/-YLvYyrLM0Tc/XmQENo4hcuI/AAAAAAAACQs/jKWMWXYMuvIhu7iXvLJCm-9BEONKMcqxwCK4BGAYYCw/s400/MULTICHO.png" group-title=" Canais | 4K",Multishow 4K
+http://firp.me:80/mizael/mizael/356713
+#EXTINF:-1 tvg-id="" tvg-name="National Geographics 4K" tvg-logo="https://i.imgur.com/lm2Zp28.png" group-title=" Canais | 4K",National Geographics 4K
+http://firp.me:80/mizael/mizael/356714
+#EXTINF:-1 tvg-id="" tvg-name="Premiere Clubes 4K" tvg-logo="https://i.imgur.com/7Fldyki.png" group-title=" Canais | 4K",Premiere Clubes 4K
+http://firp.me:80/mizael/mizael/356715
+#EXTINF:-1 tvg-id="" tvg-name="Record 4K" tvg-logo="https://1.bp.blogspot.com/-cURvB4vtUWc/XuZtQg1ss_I/AAAAAAAAGSU/gFlk4yhYtfQS3BSWD-qJ1bwF5KJ3o-3PgCLcBGAsYHQ/s1600/record.png" group-title=" Canais | 4K",Record 4K
+http://firp.me:80/mizael/mizael/356716
+#EXTINF:-1 tvg-id="" tvg-name="Rede TV! 4K" tvg-logo="https://4.bp.blogspot.com/-pxizaydz0KU/XuaBRdLGHbI/AAAAAAAAGTQ/ffLhCGhhPKgTtVrzNX731VcYlpgvo4bmQCK4BGAYYCw/s1600/REDE%2BTV.png" group-title=" Canais | 4K",Rede TV! 4K
+http://firp.me:80/mizael/mizael/356717
+#EXTINF:-1 tvg-id="" tvg-name="SBT 4K" tvg-logo="https://1.bp.blogspot.com/-YS31-jUiYM0/XuZtQl56F-I/AAAAAAAAGSY/O2A1FJO9GIMaygR2CofFftwLzU6Gl98hgCLcBGAsYHQ/s1600/sbt.png" group-title=" Canais | 4K",SBT 4K
+http://firp.me:80/mizael/mizael/356718
+#EXTINF:-1 tvg-id="" tvg-name="SporTV 4K" tvg-logo="https://i.imgur.com/a1cWlz2.png" group-title=" Canais | 4K",SporTV 4K
+http://firp.me:80/mizael/mizael/356719
+#EXTINF:-1 tvg-id="" tvg-name="Star Channel 4K" tvg-logo="https://i.imgur.com/cEmW9yV.png" group-title=" Canais | 4K",Star Channel 4K
+http://firp.me:80/mizael/mizael/356720
+#EXTINF:-1 tvg-id="telecine.action.br" tvg-name="TeleCine Action 4K" tvg-logo="https://i.imgur.com/a1MplP5.png" group-title=" Canais | 4K",TeleCine Action 4K
+http://firp.me:80/mizael/mizael/356721
+#EXTINF:-1 tvg-id="" tvg-name="Telecine Pipoca 4K" tvg-logo="https://i.imgur.com/NxQKbyQ.png" group-title=" Canais | 4K",Telecine Pipoca 4K
+http://firp.me:80/mizael/mizael/356722
+#EXTINF:-1 tvg-id="" tvg-name="Telecine Premium 4K" tvg-logo="https://i.imgur.com/FpddICg.png" group-title=" Canais | 4K",Telecine Premium 4K
+http://firp.me:80/mizael/mizael/356723
+#EXTINF:-1 tvg-id="" tvg-name="TNT 4K" tvg-logo="https://i.imgur.com/ChcqhL3.png" group-title=" Canais | 4K",TNT 4K
+http://firp.me:80/mizael/mizael/356724
+#EXTINF:-1 tvg-id="" tvg-name="TNT Series 4K" tvg-logo="https://2.bp.blogspot.com/-y7VHTV5DRjI/XmQJE5dYI6I/AAAAAAAACRc/Elj48OGVvq0c0xzuK0Ksgct432_EKU1xgCK4BGAYYCw/s400/TNT%2BSERIES.png" group-title=" Canais | 4K",TNT Series 4K
+http://firp.me:80/mizael/mizael/356725
+#EXTINF:-1 tvg-id="universal.br" tvg-name="Universal Channel 4K" tvg-logo="https://i.imgur.com/DwTOLsG.png" group-title=" Canais | 4K",Universal Channel 4K
+http://firp.me:80/mizael/mizael/356726
+#EXTINF:-1 tvg-id="viva.br" tvg-name="Viva 4K" tvg-logo="https://1.bp.blogspot.com/-gzJ5_MSSOwg/XuaF6AmkuEI/AAAAAAAAGTc/fDaVktznrYkMT0WeqzSdBUlpltn87s3qQCK4BGAYYCw/s1600/VIVA.png" group-title=" Canais | 4K",Viva 4K
+http://firp.me:80/mizael/mizael/356727
+#EXTM3U
+#EXTINF:-1 tvg-name="Listas Flash Ec M3U IPTV" tvg-logo="https://play-lh.googleusercontent.com/HD4WuErnigIq8cU7-YhOv9hM7uQiNs2K-dHC6GRuRxUNccDmpRaZz6v8jW9C9JbMZQ=w240-h480-rw" group-title="The Flash Apps", Listas Flash Ec M3U IPTV by The Flash Apps
+https://593apps.pro.ec/videoIPTV593.mp4
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 1" tvg-logo="https://i.imgur.com/1DnqGWV.png" group-title="Canais | Eleven Sports",ELEVEN SPORTS 1
+http://firp.me:80/mizael/mizael/269438
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 2" tvg-logo="https://i.imgur.com/1DnqGWV.png" group-title="Canais | Eleven Sports",ELEVEN SPORTS 2
+http://firp.me:80/mizael/mizael/269439
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 3" tvg-logo="https://i.imgur.com/1DnqGWV.png" group-title="Canais | Eleven Sports",ELEVEN SPORTS 3
+http://firp.me:80/mizael/mizael/269440
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 4" tvg-logo="https://i.imgur.com/1DnqGWV.png" group-title="Canais | Eleven Sports",ELEVEN SPORTS 4
+http://firp.me:80/mizael/mizael/269441
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 5" tvg-logo="https://i.imgur.com/1DnqGWV.png" group-title="Canais | Eleven Sports",ELEVEN SPORTS 5
+http://firp.me:80/mizael/mizael/269442
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 6" tvg-logo="https://i.imgur.com/1DnqGWV.png" group-title="Canais | Eleven Sports",ELEVEN SPORTS 6
+http://firp.me:80/mizael/mizael/269443
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 7" tvg-logo="https://i.imgur.com/1DnqGWV.png" group-title="Canais | Eleven Sports",ELEVEN SPORTS 7
+http://firp.me:80/mizael/mizael/269444
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 8" tvg-logo="https://i.imgur.com/1DnqGWV.png" group-title="Canais | Eleven Sports",ELEVEN SPORTS 8
+http://firp.me:80/mizael/mizael/269445
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 9" tvg-logo="https://i.imgur.com/1DnqGWV.png" group-title="Canais | Eleven Sports",ELEVEN SPORTS 9
+http://firp.me:80/mizael/mizael/269446
+#EXTINF:-1 tvg-id="" tvg-name="ELEVEN SPORTS 10" tvg-logo="https://i.imgur.com/1DnqGWV.png" group-title="Canais | Eleven Sports",ELEVEN SPORTS 10
+http://firp.me:80/mizael/mizael/269447
+#EXTINF:-1 tvg-id="" tvg-name="Eleven Sports HD 12" tvg-logo="https://i.imgur.com/1DnqGWV.png" group-title="Canais | Eleven Sports",Eleven Sports HD 12
+http://firp.me:80/mizael/mizael/269448
+#EXTINF:-1 tvg-id="" tvg-name="Eleven Sports HD 13" tvg-logo="https://i.imgur.com/1DnqGWV.png" group-title="Canais | Eleven Sports",Eleven Sports HD 13
+http://firp.me:80/mizael/mizael/269449
+#EXTINF:-1 tvg-id="" tvg-name="Eleven Sports HD 14" tvg-logo="https://i.imgur.com/1DnqGWV.png" group-title="Canais | Eleven Sports",Eleven Sports HD 14
+http://firp.me:80/mizael/mizael/269450
+#EXTINF:-1 tvg-id="" tvg-name="Eleven Sports HD 15" tvg-logo="https://i.imgur.com/1DnqGWV.png" group-title="Canais | Eleven Sports",Eleven Sports HD 15
+http://firp.me:80/mizael/mizael/269451
+#EXTINF:-1 tvg-id="" tvg-name="Eleven Sports HD 16" tvg-logo="https://i.imgur.com/1DnqGWV.png" group-title="Canais | Eleven Sports",Eleven Sports HD 16
+http://firp.me:80/mizael/mizael/269452
+#EXTINF:-1 tvg-id="" tvg-name="Eleven Sports HD 17" tvg-logo="https://i.imgur.com/1DnqGWV.png" group-title="Canais | Eleven Sports",Eleven Sports HD 17
+http://firp.me:80/mizael/mizael/269453
+#EXTINF:-1 tvg-id="" tvg-name="Eleven Sports HD 18" tvg-logo="https://i.imgur.com/1DnqGWV.png" group-title="Canais | Eleven Sports",Eleven Sports HD 18
+http://firp.me:80/mizael/mizael/269454
+#EXTINF:-1 tvg-id="" tvg-name="Eleven Sports HD 19" tvg-logo="https://i.imgur.com/1DnqGWV.png" group-title="Canais | Eleven Sports",Eleven Sports HD 19
+http://firp.me:80/mizael/mizael/269455
+#EXTINF:-1 tvg-id="nsc.chapeco.br" tvg-name="RBS TV Chapecó" tvg-logo="http://www.fontedoscanais.xyz/logos/canais/globo.png" group-title=" Canais | Globo",RBS TV Chapecó
+http://firp.me:80/mizael/mizael/381798
+#EXTINF:-1 tvg-id="nsc.chapeco.br" tvg-name="RBS TV Chapecó²" tvg-logo="http://www.fontedoscanais.xyz/logos/canais/globo.png" group-title=" Canais | Globo",RBS TV Chapecó²
+http://firp.me:80/mizael/mizael/381799
+#EXTINF:-1 tvg-id="nsc.criciuma.br" tvg-name="RBS TV Criciúma" tvg-logo="http://www.fontedoscanais.xyz/logos/canais/globo.png" group-title=" Canais | Globo",RBS TV Criciúma
+http://firp.me:80/mizael/mizael/381800
+#EXTINF:-1 tvg-id="rbs.florianopolis.br" tvg-name="RBS TV Florianópolis" tvg-logo="http://www.fontedoscanais.xyz/logos/canais/globo.png" group-title=" Canais | Globo",RBS TV Florianópolis
+http://firp.me:80/mizael/mizael/381801
+#EXTINF:-1 tvg-id="nsc.joinville.br" tvg-name="RBS TV Joinville" tvg-logo="http://www.fontedoscanais.xyz/logos/canais/globo.png" group-title=" Canais | Globo",RBS TV Joinville
+http://firp.me:80/mizael/mizael/381802
+#EXTM3U
+#EXTINF:-1 tvg-name="Listas Flash Ec M3U IPTV" tvg-logo="https://play-lh.googleusercontent.com/HD4WuErnigIq8cU7-YhOv9hM7uQiNs2K-dHC6GRuRxUNccDmpRaZz6v8jW9C9JbMZQ=w240-h480-rw" group-title="The Flash Apps", Listas Flash Ec M3U IPTV by The Flash Apps
+https://593apps.pro.ec/videoIPTV593.mp4
+#EXTINF:-1 tvg-id="" tvg-name="24h Cavalo de Fogo" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",24h Cavalo de Fogo
+http://firp.me:80/mizael/mizael/401313
+#EXTINF:-1 tvg-id="" tvg-name="24H Cozinha pratica" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",24H Cozinha pratica
+http://firp.me:80/mizael/mizael/401314
+#EXTINF:-1 tvg-id="" tvg-name="24h Peppa Pig" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",24h Peppa Pig
+http://firp.me:80/mizael/mizael/401315
+#EXTINF:-1 tvg-id="" tvg-name="24h Tokusato" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",24h Tokusato
+http://firp.me:80/mizael/mizael/401316
+#EXTINF:-1 tvg-id="" tvg-name="24h Trap" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",24h Trap
+http://firp.me:80/mizael/mizael/401317
+#EXTINF:-1 tvg-id="" tvg-name="24hs Igreja Universal" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",24hs Igreja Universal
+http://firp.me:80/mizael/mizael/401318
+#EXTINF:-1 tvg-id="" tvg-name="ALADIN 24HS" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",ALADIN 24HS
+http://firp.me:80/mizael/mizael/401319
+#EXTINF:-1 tvg-id="" tvg-name="As Meninas Superpoderosas 24HS" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",As Meninas Superpoderosas 24HS
+http://firp.me:80/mizael/mizael/401320
+#EXTINF:-1 tvg-id="" tvg-name="AUTHENTIC GAMES 24hs" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",AUTHENTIC GAMES 24hs
+http://firp.me:80/mizael/mizael/401321
+#EXTINF:-1 tvg-id="" tvg-name="BACKARDIGANS 2 24hs" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",BACKARDIGANS 2 24hs
+http://firp.me:80/mizael/mizael/401322
+#EXTINF:-1 tvg-id="" tvg-name="BACKARDIGANS 24hs" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",BACKARDIGANS 24hs
+http://firp.me:80/mizael/mizael/401323
+#EXTINF:-1 tvg-id="" tvg-name="BEN 10 24HS" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",BEN 10 24HS
+http://firp.me:80/mizael/mizael/401324
+#EXTINF:-1 tvg-id="" tvg-name="Bob 24hs" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",Bob 24hs
+http://firp.me:80/mizael/mizael/401325
+#EXTINF:-1 tvg-id="" tvg-name="BOB ESPONJA 24HS" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",BOB ESPONJA 24HS
+http://firp.me:80/mizael/mizael/401326
+#EXTINF:-1 tvg-id="" tvg-name="CAO CORAGEM 24HS" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",CAO CORAGEM 24HS
+http://firp.me:80/mizael/mizael/401327
+#EXTINF:-1 tvg-id="" tvg-name="Caverna do Dragão 24HS" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",Caverna do Dragão 24HS
+http://firp.me:80/mizael/mizael/401328
+#EXTINF:-1 tvg-id="" tvg-name="CBN SÃO PAULO" tvg-logo="https://i.imgur.com/uGdj3zb.png" group-title="Canais | 24H",CBN SÃO PAULO
+http://firp.me:80/mizael/mizael/401329
+#EXTINF:-1 tvg-id="" tvg-name="CENTRAL KIDS 24HRS" tvg-logo="" group-title="Canais | 24H",CENTRAL KIDS 24HRS
+http://firp.me:80/mizael/mizael/401330
+#EXTINF:-1 tvg-id="" tvg-name="Chapolin Colorado 24hs" tvg-logo="http://4.bp.blogspot.com/_7I5nCXuIlps/SabOe9V8lUI/AAAAAAAASg8/FM3wEel-1yg/s400/chapolin.PNG" group-title="Canais | 24H",Chapolin Colorado 24hs
+http://firp.me:80/mizael/mizael/401331
+#EXTINF:-1 tvg-id="" tvg-name="CHAVES DESENHO 24HS" tvg-logo="" group-title="Canais | 24H",CHAVES DESENHO 24HS
+http://firp.me:80/mizael/mizael/401332
+#EXTINF:-1 tvg-id="" tvg-name="CINE KIDS 24HRS" tvg-logo="" group-title="Canais | 24H",CINE KIDS 24HRS
+http://firp.me:80/mizael/mizael/401333
+#EXTINF:-1 tvg-id="" tvg-name="Corrida Maluca" tvg-logo="" group-title="Canais | 24H",Corrida Maluca
+http://firp.me:80/mizael/mizael/401334
+#EXTINF:-1 tvg-id="" tvg-name="Desenhos Disney 24HS" tvg-logo="" group-title="Canais | 24H",Desenhos Disney 24HS
+http://firp.me:80/mizael/mizael/401335
+#EXTINF:-1 tvg-id="" tvg-name="Digimon 24HS" tvg-logo="" group-title="Canais | 24H",Digimon 24HS
+http://firp.me:80/mizael/mizael/401336
+#EXTINF:-1 tvg-id="" tvg-name="DRAGON BALL 24HS" tvg-logo="" group-title="Canais | 24H",DRAGON BALL 24HS
+http://firp.me:80/mizael/mizael/401337
+#EXTINF:-1 tvg-id="" tvg-name="DRAGON BALL SUPER 24HS" tvg-logo="" group-title="Canais | 24H",DRAGON BALL SUPER 24HS
+http://firp.me:80/mizael/mizael/401338
+#EXTINF:-1 tvg-id="" tvg-name="DRAGON BALL Z 24HS" tvg-logo="" group-title="Canais | 24H",DRAGON BALL Z 24HS
+http://firp.me:80/mizael/mizael/401339
+#EXTINF:-1 tvg-id="" tvg-name="Galinha Pintadinha 24hs" tvg-logo="" group-title="Canais | 24H",Galinha Pintadinha 24hs
+http://firp.me:80/mizael/mizael/401340
+#EXTINF:-1 tvg-id="" tvg-name="He-Man 24hs" tvg-logo="" group-title="Canais | 24H",He-Man 24hs
+http://firp.me:80/mizael/mizael/401341
+#EXTINF:-1 tvg-id="" tvg-name="HOMEM ARANHA 24HS" tvg-logo="" group-title="Canais | 24H",HOMEM ARANHA 24HS
+http://firp.me:80/mizael/mizael/401342
+#EXTINF:-1 tvg-id="" tvg-name="Hércules 24hs" tvg-logo="" group-title="Canais | 24H",Hércules 24hs
+http://firp.me:80/mizael/mizael/401343
+#EXTINF:-1 tvg-id="" tvg-name="Jack-Chan 24hs" tvg-logo="" group-title="Canais | 24H",Jack-Chan 24hs
+http://firp.me:80/mizael/mizael/401344
+#EXTINF:-1 tvg-id="" tvg-name="Jaclkie Chan 24hs" tvg-logo="" group-title="Canais | 24H",Jaclkie Chan 24hs
+http://firp.me:80/mizael/mizael/401345
+#EXTINF:-1 tvg-id="" tvg-name="Jaspion 24HS" tvg-logo="" group-title="Canais | 24H",Jaspion 24HS
+http://firp.me:80/mizael/mizael/401346
+#EXTINF:-1 tvg-id="" tvg-name="JIRAYA O Incrível Ninja 24HS" tvg-logo="" group-title="Canais | 24H",JIRAYA O Incrível Ninja 24HS
+http://firp.me:80/mizael/mizael/401347
+#EXTINF:-1 tvg-id="" tvg-name="Kenan e Kel 24hs" tvg-logo="" group-title="Canais | 24H",Kenan e Kel 24hs
+http://firp.me:80/mizael/mizael/401348
+#EXTINF:-1 tvg-id="" tvg-name="KPOP TV" tvg-logo="" group-title="Canais | 24H",KPOP TV
+http://firp.me:80/mizael/mizael/401349
+#EXTINF:-1 tvg-id="" tvg-name="Luluzinha 24HS" tvg-logo="" group-title="Canais | 24H",Luluzinha 24HS
+http://firp.me:80/mizael/mizael/401350
+#EXTINF:-1 tvg-id="" tvg-name="Mega bots 24hs" tvg-logo="" group-title="Canais | 24H",Mega bots 24hs
+http://firp.me:80/mizael/mizael/401351
+#EXTINF:-1 tvg-id="" tvg-name="Megabots 24hs" tvg-logo="" group-title="Canais | 24H",Megabots 24hs
+http://firp.me:80/mizael/mizael/401352
+#EXTINF:-1 tvg-id="" tvg-name="MegaMan 24hs" tvg-logo="" group-title="Canais | 24H",MegaMan 24hs
+http://firp.me:80/mizael/mizael/401353
+#EXTINF:-1 tvg-id="" tvg-name="Mortal Kombat 24hs" tvg-logo="" group-title="Canais | 24H",Mortal Kombat 24hs
+http://firp.me:80/mizael/mizael/401354
+#EXTINF:-1 tvg-id="" tvg-name="Mr.Ben 24hs" tvg-logo="" group-title="Canais | 24H",Mr.Ben 24hs
+http://firp.me:80/mizael/mizael/401355
+#EXTINF:-1 tvg-id="" tvg-name="Naruto 24HS" tvg-logo="" group-title="Canais | 24H",Naruto 24HS
+http://firp.me:80/mizael/mizael/401356
+#EXTINF:-1 tvg-id="" tvg-name="O Fantástico Mundo de Gumball 24hs" tvg-logo="" group-title="Canais | 24H",O Fantástico Mundo de Gumball 24hs
+http://firp.me:80/mizael/mizael/401357
+#EXTINF:-1 tvg-id="" tvg-name="O MASKARA 24HS" tvg-logo="" group-title="Canais | 24H",O MASKARA 24HS
+http://firp.me:80/mizael/mizael/401358
+#EXTINF:-1 tvg-id="" tvg-name="OS CAVALEIROS DO ZODIACO 24HS" tvg-logo="" group-title="Canais | 24H",OS CAVALEIROS DO ZODIACO 24HS
+http://firp.me:80/mizael/mizael/401359
+#EXTINF:-1 tvg-id="" tvg-name="OS FLINTSTONES 24hs" tvg-logo="" group-title="Canais | 24H",OS FLINTSTONES 24hs
+http://firp.me:80/mizael/mizael/401360
+#EXTINF:-1 tvg-id="" tvg-name="OS SIMPSONS 24HS" tvg-logo="" group-title="Canais | 24H",OS SIMPSONS 24HS
+http://firp.me:80/mizael/mizael/401361
+#EXTINF:-1 tvg-id="" tvg-name="Os Vingadores 24hs" tvg-logo="" group-title="Canais | 24H",Os Vingadores 24hs
+http://firp.me:80/mizael/mizael/401362
+#EXTINF:-1 tvg-id="" tvg-name="Padrinhos Magicos 24HS" tvg-logo="" group-title="Canais | 24H",Padrinhos Magicos 24HS
+http://firp.me:80/mizael/mizael/401363
+#EXTINF:-1 tvg-id="" tvg-name="Papa-Léguas 24HS" tvg-logo="" group-title="Canais | 24H",Papa-Léguas 24HS
+http://firp.me:80/mizael/mizael/401364
+#EXTINF:-1 tvg-id="" tvg-name="OS CAVALEIROS DO ZODIACO 24HS" tvg-logo="" group-title="Canais | 24H",OS CAVALEIROS DO ZODIACO 24HS
+http://firp.me:80/mizael/mizael/401365
+#EXTINF:-1 tvg-id="" tvg-name="OS FLINTSTONES 24hs" tvg-logo="" group-title="Canais | 24H",OS FLINTSTONES 24hs
+http://firp.me:80/mizael/mizael/401366
+#EXTINF:-1 tvg-id="" tvg-name="OS SIMPSONS 24HS" tvg-logo="" group-title="Canais | 24H",OS SIMPSONS 24HS
+http://firp.me:80/mizael/mizael/401367
+#EXTINF:-1 tvg-id="" tvg-name="Os Vingadores 24hs" tvg-logo="" group-title="Canais | 24H",Os Vingadores 24hs
+http://firp.me:80/mizael/mizael/401368
+#EXTINF:-1 tvg-id="" tvg-name="Padrinhos Magicos 24HS" tvg-logo="" group-title="Canais | 24H",Padrinhos Magicos 24HS
+http://firp.me:80/mizael/mizael/401369
+#EXTINF:-1 tvg-id="" tvg-name="Papa-Léguas 24HS" tvg-logo="" group-title="Canais | 24H",Papa-Léguas 24HS
+http://firp.me:80/mizael/mizael/401370
+#EXTINF:-1 tvg-id="" tvg-name="Peixonautas 24 HRS" tvg-logo="" group-title="Canais | 24H",Peixonautas 24 HRS
+http://firp.me:80/mizael/mizael/401371
+#EXTINF:-1 tvg-id="" tvg-name="PERNALONGA 24HS" tvg-logo="" group-title="Canais | 24H",PERNALONGA 24HS
+http://firp.me:80/mizael/mizael/401372
+#EXTINF:-1 tvg-id="" tvg-name="PICA PAU 24HS" tvg-logo="" group-title="Canais | 24H",PICA PAU 24HS
+http://firp.me:80/mizael/mizael/401373
+#EXTINF:-1 tvg-id="" tvg-name="Pink-e-Cerebro 24hs" tvg-logo="" group-title="Canais | 24H",Pink-e-Cerebro 24hs
+http://firp.me:80/mizael/mizael/401374
+#EXTINF:-1 tvg-id="" tvg-name="Pinky e o Cérebro 24HS" tvg-logo="" group-title="Canais | 24H",Pinky e o Cérebro 24HS
+http://firp.me:80/mizael/mizael/401375
+#EXTINF:-1 tvg-id="" tvg-name="POKEMON 24HS" tvg-logo="" group-title="Canais | 24H",POKEMON 24HS
+http://firp.me:80/mizael/mizael/401376
+#EXTINF:-1 tvg-id="" tvg-name="Popeye O Marinheiro 24hs" tvg-logo="" group-title="Canais | 24H",Popeye O Marinheiro 24hs
+http://firp.me:80/mizael/mizael/401377
+#EXTINF:-1 tvg-id="" tvg-name="Sailor Moon 24hs" tvg-logo="" group-title="Canais | 24H",Sailor Moon 24hs
+http://firp.me:80/mizael/mizael/401378
+#EXTINF:-1 tvg-id="" tvg-name="Scooby-Doo 24HS" tvg-logo="" group-title="Canais | 24H",Scooby-Doo 24HS
+http://firp.me:80/mizael/mizael/401379
+#EXTINF:-1 tvg-id="" tvg-name="South Park 24HS" tvg-logo="" group-title="Canais | 24H",South Park 24HS
+http://firp.me:80/mizael/mizael/401380
+#EXTINF:-1 tvg-id="" tvg-name="Super Choque 24hs" tvg-logo="" group-title="Canais | 24H",Super Choque 24hs
+http://firp.me:80/mizael/mizael/401381
+#EXTINF:-1 tvg-id="" tvg-name="Thundercats 24hs" tvg-logo="" group-title="Canais | 24H",Thundercats 24hs
+http://firp.me:80/mizael/mizael/401382
+#EXTINF:-1 tvg-id="" tvg-name="Thundercats 24HS" tvg-logo="" group-title="Canais | 24H",Thundercats 24HS
+http://firp.me:80/mizael/mizael/401383
+#EXTINF:-1 tvg-id="" tvg-name="TIMAO E PUMBA 24HS" tvg-logo="" group-title="Canais | 24H",TIMAO E PUMBA 24HS
+http://firp.me:80/mizael/mizael/401384
+#EXTINF:-1 tvg-id="" tvg-name="Tres Espias Demais 24hs" tvg-logo="" group-title="Canais | 24H",Tres Espias Demais 24hs
+http://firp.me:80/mizael/mizael/401385
+#EXTINF:-1 tvg-id="" tvg-name="Uma Família da Pesada 24hs" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",Uma Família da Pesada 24hs
+http://firp.me:80/mizael/mizael/401386
+#EXTINF:-1 tvg-id="" tvg-name="visoes da raven 24HS" tvg-logo="" group-title="Canais | 24H",visoes da raven 24HS
+http://firp.me:80/mizael/mizael/401387
+#EXTINF:-1 tvg-id="" tvg-name="X-MEN 24HS" tvg-logo="" group-title="Canais | 24H",X-MEN 24HS
+http://firp.me:80/mizael/mizael/401388
+#EXTINF:-1 tvg-id="" tvg-name="[24H] 3 Palavrinhas" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] 3 Palavrinhas
+http://firp.me:80/mizael/mizael/401389
+#EXTINF:-1 tvg-id="" tvg-name="[24H] A Culpa é do Cabral 01" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] A Culpa é do Cabral 01
+http://firp.me:80/mizael/mizael/401390
+#EXTINF:-1 tvg-id="" tvg-name="[24H] A Mansão Foster" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] A Mansão Foster
+http://firp.me:80/mizael/mizael/401391
+#EXTINF:-1 tvg-id="" tvg-name="[24H] As Meninas Superpoderosas" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] As Meninas Superpoderosas
+http://firp.me:80/mizael/mizael/401392
+#EXTINF:-1 tvg-id="" tvg-name="[24h] Bita e os Animais" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24h] Bita e os Animais
+http://firp.me:80/mizael/mizael/401393
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Caillou" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Caillou
+http://firp.me:80/mizael/mizael/401394
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Cake boss" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Cake boss
+http://firp.me:80/mizael/mizael/401395
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Cake Boss" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Cake Boss
+http://firp.me:80/mizael/mizael/401396
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Capitao Caverna" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Capitao Caverna
+http://firp.me:80/mizael/mizael/401397
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Capitão Caverna" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Capitão Caverna
+http://firp.me:80/mizael/mizael/401398
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Cascão A Turma da Monica" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Cascão A Turma da Monica
+http://firp.me:80/mizael/mizael/401399
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Cavaleiros do Zodiaco 1" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Cavaleiros do Zodiaco 1
+http://firp.me:80/mizael/mizael/401400
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Cavaleiros do Zodiaco 2" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Cavaleiros do Zodiaco 2
+http://firp.me:80/mizael/mizael/401401
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Cavaleiros do Zodiaco 3" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Cavaleiros do Zodiaco 3
+http://firp.me:80/mizael/mizael/401402
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Caverna do Dragão 1" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Caverna do Dragão 1
+http://firp.me:80/mizael/mizael/401403
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Coragem o Cão Covarde 1" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Coragem o Cão Covarde 1
+http://firp.me:80/mizael/mizael/401404
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Corrida Maluca 1" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Corrida Maluca 1
+http://firp.me:80/mizael/mizael/401405
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Digimon 1" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Digimon 1
+http://firp.me:80/mizael/mizael/401406
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Digimon 15º Aniversário" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Digimon 15º Aniversário
+http://firp.me:80/mizael/mizael/401407
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Dora a Aventureira" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Dora a Aventureira
+http://firp.me:80/mizael/mizael/401408
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Dragon Ball 1" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Dragon Ball 1
+http://firp.me:80/mizael/mizael/401409
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Dragon Ball 2" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Dragon Ball 2
+http://firp.me:80/mizael/mizael/401410
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Dragon Ball Heroes" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Dragon Ball Heroes
+http://firp.me:80/mizael/mizael/401411
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Dragon Ball Super 1" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Dragon Ball Super 1
+http://firp.me:80/mizael/mizael/401412
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Dragon Ball Super 2" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Dragon Ball Super 2
+http://firp.me:80/mizael/mizael/401413
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Dragon Ball Super 3" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Dragon Ball Super 3
+http://firp.me:80/mizael/mizael/401414
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Dragon Ball Z 1" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Dragon Ball Z 1
+http://firp.me:80/mizael/mizael/401415
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Dragon Ball Z 2" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Dragon Ball Z 2
+http://firp.me:80/mizael/mizael/401416
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Eu a Patroa e as Crianças 1" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Eu a Patroa e as Crianças 1
+http://firp.me:80/mizael/mizael/401417
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Eu a Patroa e as Crianças 2" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Eu a Patroa e as Crianças 2
+http://firp.me:80/mizael/mizael/401418
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Fate" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Fate
+http://firp.me:80/mizael/mizael/401419
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Flash" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Flash
+http://firp.me:80/mizael/mizael/401420
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Futurama" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Futurama
+http://firp.me:80/mizael/mizael/401421
+#EXTINF:-1 tvg-id="" tvg-name="[24h] Galinha Pintadinha" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24h] Galinha Pintadinha
+http://firp.me:80/mizael/mizael/401422
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Game of Thrones" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Game of Thrones
+http://firp.me:80/mizael/mizael/401423
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Masha e o Urso" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Masha e o Urso
+http://firp.me:80/mizael/mizael/401424
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Moranguinho 1" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Moranguinho 1
+http://firp.me:80/mizael/mizael/401425
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Naruto" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Naruto
+http://firp.me:80/mizael/mizael/401426
+#EXTINF:-1 tvg-id="" tvg-name="[24H] O Clube das Winx" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] O Clube das Winx
+http://firp.me:80/mizael/mizael/401427
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Os Flinstones" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Os Flinstones
+http://firp.me:80/mizael/mizael/401428
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Os Padrinhos Mágicos" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Os Padrinhos Mágicos
+http://firp.me:80/mizael/mizael/401429
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Os Padrinhos Mágicos 02" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Os Padrinhos Mágicos 02
+http://firp.me:80/mizael/mizael/401430
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Os Simpsons 01" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Os Simpsons 01
+http://firp.me:80/mizael/mizael/401431
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Os Simpsons 02" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Os Simpsons 02
+http://firp.me:80/mizael/mizael/401432
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Os Simpsons 03" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Os Simpsons 03
+http://firp.me:80/mizael/mizael/401433
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Os Simpsons 04" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Os Simpsons 04
+http://firp.me:80/mizael/mizael/401434
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Patati e Patata" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Patati e Patata
+http://firp.me:80/mizael/mizael/401435
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Pica Pau 01" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Pica Pau 01
+http://firp.me:80/mizael/mizael/401436
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Pink-e-Cerebro" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Pink-e-Cerebro
+http://firp.me:80/mizael/mizael/401437
+#EXTINF:-1 tvg-id="" tvg-name="[24H] PJ Masks" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] PJ Masks
+http://firp.me:80/mizael/mizael/401438
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Pocoyo" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Pocoyo
+http://firp.me:80/mizael/mizael/401439
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Popeye" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Popeye
+http://firp.me:80/mizael/mizael/401440
+#EXTINF:-1 tvg-id="" tvg-name="[24H] South Park" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] South Park
+http://firp.me:80/mizael/mizael/401441
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Todo Mundo Odeia o Chris 1" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Todo Mundo Odeia o Chris 1
+http://firp.me:80/mizael/mizael/401442
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Todo Mundo Odeia o Chris 2" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Todo Mundo Odeia o Chris 2
+http://firp.me:80/mizael/mizael/401443
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Tom & Jerry" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Tom & Jerry
+http://firp.me:80/mizael/mizael/401444
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Um Maluco no Pedaço 1" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Um Maluco no Pedaço 1
+http://firp.me:80/mizael/mizael/401445
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Um Maluco no Pedaço 2" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Um Maluco no Pedaço 2
+http://firp.me:80/mizael/mizael/401446
+#EXTINF:-1 tvg-id="" tvg-name="[24h] Ursinhos Carinhos" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24h] Ursinhos Carinhos
+http://firp.me:80/mizael/mizael/401447
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Vai que Cola 1" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Vai que Cola 1
+http://firp.me:80/mizael/mizael/401448
+#EXTINF:-1 tvg-id="" tvg-name="[24H] Vai que Cola 2" tvg-logo="https://i.imgur.com/RBcHT39.png" group-title="Canais | 24H",[24H] Vai que Cola 2
+http://firp.me:80/mizael/mizael/401449
+#EXTM3U
+#EXTINF:-1 tvg-name="Listas Flash Ec M3U IPTV" tvg-logo="https://play-lh.googleusercontent.com/HD4WuErnigIq8cU7-YhOv9hM7uQiNs2K-dHC6GRuRxUNccDmpRaZz6v8jW9C9JbMZQ=w240-h480-rw" group-title="The Flash Apps", Listas Flash Ec M3U IPTV by The Flash Apps
+https://593apps.pro.ec/videoIPTV593.mp4
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Familia Dinosauro" tvg-logo="http://origemdasfontes.ga:80/images/cfbe1c23efa070770dac9d87b4f841b8.jpg" group-title="Canais | 24H Desenhos",24 Horas Familia Dinosauro
+http://firp.me:80/mizael/mizael/344564
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Galinha Pintadinha" tvg-logo="http://origemdasfontes.ga:80/images/3f10a22949f0f15dd9b70f8b6f84acfb.jpg" group-title="Canais | 24H Desenhos",24 Horas Galinha Pintadinha
+http://firp.me:80/mizael/mizael/344566
+#EXTINF:-1 tvg-id="" tvg-name="24 Dragon Ball GT" tvg-logo="https://vignette.wikia.nocookie.net/dublagem/images/6/67/Dragon-ball-gt.jpg/revision/latest?cb=20200613013335&path-prefix=pt-br" group-title="Canais | 24H Desenhos",24 Dragon Ball GT
+http://firp.me:80/mizael/mizael/344568
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Dragon Ball Super" tvg-logo="http://origemdasfontes.ga:80/images/9346c7ace517b19f5ccf61f8d1f8853d.jpg" group-title="Canais | 24H Desenhos",24 Horas Dragon Ball Super
+http://firp.me:80/mizael/mizael/344569
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Peppa Pig" tvg-logo="http://origemdasfontes.ga:80/images/d1185a19b90ad9114180ba71352f54ef.jpg" group-title="Canais | 24H Desenhos",24 Horas Peppa Pig
+http://firp.me:80/mizael/mizael/344570
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas As Aventuras de Tintim" tvg-logo="http://origemdasfontes.ga:80/images/b8d2365b24101fc6ecd1bd6dc9701697.jpg" group-title="Canais | 24H Desenhos",24 Horas As Aventuras de Tintim
+http://firp.me:80/mizael/mizael/344571
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Medabots" tvg-logo="http://origemdasfontes.ga:80/images/68a3c694e21671b2d720a86bdf1c5984.jpg" group-title="Canais | 24H Desenhos",24 Horas Medabots
+http://firp.me:80/mizael/mizael/344572
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Caverna do Dragão" tvg-logo="http://origemdasfontes.ga:80/images/0cf5e8ae0e3650252a0bd6b507baecbe.jpg" group-title="Canais | 24H Desenhos",24 Horas Caverna do Dragão
+http://firp.me:80/mizael/mizael/344573
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Turma da Mônica" tvg-logo="http://origemdasfontes.ga:80/images/8b3c0317a0ae053a85fff031ff482e95.jpg" group-title="Canais | 24H Desenhos",24 Horas Turma da Mônica
+http://firp.me:80/mizael/mizael/344574
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Aladdin" tvg-logo="http://origemdasfontes.ga:80/images/7db361b78d2839a7f8306897b9161404.jpg" group-title="Canais | 24H Desenhos",24 Horas Aladdin
+http://firp.me:80/mizael/mizael/344575
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Coragem, o Cão Covarde" tvg-logo="http://origemdasfontes.ga:80/images/b8d2365b24101fc6ecd1bd6dc9701697.jpg" group-title="Canais | 24H Desenhos",24 Horas Coragem, o Cão Covarde
+http://firp.me:80/mizael/mizael/344576
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas A Pantera Cor-de-Rosa" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTQLbUPZaBPcwzxCSsHrvltGUQq4OFhrN76wlotThhMpbQqleWI" group-title="Canais | 24H Desenhos",24 Horas A Pantera Cor-de-Rosa
+http://firp.me:80/mizael/mizael/344577
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Castelo Rá-Tim-Bum" tvg-logo="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSqn_rzB44ZxE7ahbcXlaXqIvmaWszq8UoXEkNqwJ-k7LqoiVdR" group-title="Canais | 24H Desenhos",24 Horas Castelo Rá-Tim-Bum
+http://firp.me:80/mizael/mizael/344578
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas O Fantastico Mundo de Bobby" tvg-logo="https://blogclimax.files.wordpress.com/2013/12/0070a-ofantc3a1sticomundodebobby1.gif?w=400&h=236" group-title="Canais | 24H Desenhos",24 Horas O Fantastico Mundo de Bobby
+http://firp.me:80/mizael/mizael/344580
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas O Máskara" tvg-logo="http://origemdasfontes.ga:80/images/c23fdb6b3ee0d82dcb75e770923a1be9.jpg" group-title="Canais | 24H Desenhos",24 Horas O Máskara
+http://firp.me:80/mizael/mizael/344581
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Os Padrinhos Mágicos" tvg-logo="http://origemdasfontes.ga:80/images/c09d6e2fbebf95ae6fde1994781d2712.jpg" group-title="Canais | 24H Desenhos",24 Horas Os Padrinhos Mágicos
+http://firp.me:80/mizael/mizael/344582
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Os Simpsons" tvg-logo="http://origemdasfontes.ga:80/images/6a028953b6e5a395f678a8adbf6e9bea.jpg" group-title="Canais | 24H Desenhos",24 Horas Os Simpsons
+http://firp.me:80/mizael/mizael/344583
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Patrulha Canina" tvg-logo="https://bumerangbrinquedos.vteximg.com.br/arquivos/ids/174954/PATRULHA-CANINA-M.jpg?v=636756496116330000" group-title="Canais | 24H Desenhos",24 Horas Patrulha Canina
+http://firp.me:80/mizael/mizael/344584
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Naruto" tvg-logo="http://origemdasfontes.ga:80/images/3a215b803a0bd4937d567ad42fd37843.jpg" group-title="Canais | 24H Desenhos",24 Horas Naruto
+http://firp.me:80/mizael/mizael/344585
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Rick and Morty" tvg-logo="http://origemdasfontes.ga:80/images/27d9bcda33ee2339ce07592c157c7539.jpg" group-title="Canais | 24H Desenhos",24 Horas Rick and Morty
+http://firp.me:80/mizael/mizael/344586
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas South Park" tvg-logo="http://origemdasfontes.ga:80/images/694cf7f2562d8220011c2b931813cc9c.jpg" group-title="Canais | 24H Desenhos",24 Horas South Park
+http://firp.me:80/mizael/mizael/344587
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Scooby-Doo" tvg-logo="http://origemdasfontes.ga:80/images/895338cfc4431633c7ca7df531835c81.jpg" group-title="Canais | 24H Desenhos",24 Horas Scooby-Doo
+http://firp.me:80/mizael/mizael/344588
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Homem-Aranha" tvg-logo="http://origemdasfontes.ga:80/images/b8d2365b24101fc6ecd1bd6dc9701697.jpg" group-title="Canais | 24H Desenhos",24 Horas Homem-Aranha
+http://firp.me:80/mizael/mizael/344589
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Futurama" tvg-logo="https://vignette.wikia.nocookie.net/en.futurama/images/6/67/Futurama-01_0.jpg/revision/latest?cb=20141012181430" group-title="Canais | 24H Desenhos",24 Horas Futurama
+http://firp.me:80/mizael/mizael/344590
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas He-Man" tvg-logo="http://origemdasfontes.ga:80/images/bb7bc03c5315481fc4b3bef79563df65.jpg" group-title="Canais | 24H Desenhos",24 Horas He-Man
+http://firp.me:80/mizael/mizael/344591
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Apenas um Show" tvg-logo="http://origemdasfontes.ga:80/images/2bc9d02895a8fe4a24ed23a9dffbca18.jpg" group-title="Canais | 24H Desenhos",24 Horas Apenas um Show
+http://firp.me:80/mizael/mizael/344592
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas As Aventuras de Jackie Chan" tvg-logo="http://origemdasfontes.ga:80/images/ec79c66fc9cc21c2fe08edb76c6b905a.jpg" group-title="Canais | 24H Desenhos",24 Horas As Aventuras de Jackie Chan
+http://firp.me:80/mizael/mizael/344593
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Mundo Bita" tvg-logo="http://origemdasfontes.ga:80/images/bf8ad2e583c81edfd7f97d579c12ba12.jpg" group-title="Canais | 24H Desenhos",24 Horas Mundo Bita
+http://firp.me:80/mizael/mizael/344594
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Tom e Jerry" tvg-logo="http://origemdasfontes.ga:80/images/f189d05ef4b396d32317e476b4bd7b22.jpg" group-title="Canais | 24H Desenhos",24 Horas Tom e Jerry
+http://firp.me:80/mizael/mizael/344595
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Popeye" tvg-logo="https://cdn.mensagenscomamor.com/content/images/p000005342.jpg?v=0&w=400&h=225&c=1" group-title="Canais | 24H Desenhos",24 Horas Popeye
+http://firp.me:80/mizael/mizael/344596
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Bob Esponja" tvg-logo="https://images.livrariasaraiva.com.br/imagemnet/imagem.aspx/?pro_id=4259515&qld=90&l=830&a=-1=1007943217" group-title="Canais | 24H Desenhos",24 Horas Bob Esponja
+http://firp.me:80/mizael/mizael/344597
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas As Meninas Superpoderosas" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRui2jxmv63K_bEPGnAkYpx3KbvTP9XxTmon8MG_A5gkyopQprT" group-title="Canais | 24H Desenhos",24 Horas As Meninas Superpoderosas
+http://firp.me:80/mizael/mizael/344599
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Ben 10" tvg-logo="http://origemdasfontes.ga:80/images/e6463e7987372c0eb24fdfc41c5d05cb.jpg" group-title="Canais | 24H Desenhos",24 Horas Ben 10
+http://firp.me:80/mizael/mizael/344600
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Chaves Em Desenho Animado" tvg-logo="http://origemdasfontes.ga:80/images/94321f278d3955acf0c0588e744e37bc.jpg" group-title="Canais | 24H Desenhos",24 Horas Chaves Em Desenho Animado
+http://firp.me:80/mizael/mizael/344601
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Beyblade" tvg-logo="http://origemdasfontes.ga:80/images/b8d2365b24101fc6ecd1bd6dc9701697.jpg" group-title="Canais | 24H Desenhos",24 Horas Beyblade
+http://firp.me:80/mizael/mizael/344602
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Capitão Planeta" tvg-logo="http://origemdasfontes.ga:80/images/e835ec8f07c6b97584bd308f14ddd06a.jpg" group-title="Canais | 24H Desenhos",24 Horas Capitão Planeta
+http://firp.me:80/mizael/mizael/344603
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Dora a Aventureira" tvg-logo="https://assetsgn.nowonline.com.br/assets/p186113_b_v7_bb.jpg?api_key=snfwq54bnzvgucd7cqvgt86r" group-title="Canais | 24H Desenhos",24 Horas Dora a Aventureira
+http://firp.me:80/mizael/mizael/344606
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Bob Zoom" tvg-logo="http://origemdasfontes.ga:80/images/884268653abd480d75f493ab046ea9c7.png" group-title="Canais | 24H Desenhos",24 Horas Bob Zoom
+http://firp.me:80/mizael/mizael/344607
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Johnny Bravo" tvg-logo="http://origemdasfontes.ga:80/images/475e08bd657f36a4b8f47b16f3b41f21.jpg" group-title="Canais | 24H Desenhos",24 Horas Johnny Bravo
+http://firp.me:80/mizael/mizael/344608
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Digimon" tvg-logo="http://origemdasfontes.ga:80/images/8485286445132de23b8052239f75c2b3.png" group-title="Canais | 24H Desenhos",24 Horas Digimon
+http://firp.me:80/mizael/mizael/344609
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Doug" tvg-logo="http://origemdasfontes.ga:80/images/b4d7bc3a720800b176c2cbb546efec81.jpg" group-title="Canais | 24H Desenhos",24 Horas Doug
+http://firp.me:80/mizael/mizael/344610
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Luluzinha" tvg-logo="https://vignette.wikia.nocookie.net/turmadaluluzinha/images/0/07/Luluzinha.jpg/revision/latest?cb=20160525181016&path-prefix=pt-br" group-title="Canais | 24H Desenhos",24 Horas Luluzinha
+http://firp.me:80/mizael/mizael/344611
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Baby Looney Tunes" tvg-logo="http://origemdasfontes.ga:80/images/1f9bb3c96f800022aca68d4d2ef5c38c.jpg" group-title="Canais | 24H Desenhos",24 Horas Baby Looney Tunes
+http://firp.me:80/mizael/mizael/344612
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Pica-Pau" tvg-logo="https://lojasaraiva.vteximg.com.br/arquivos/ids/222546/1004444042.jpg?v=636968229968770000" group-title="Canais | 24H Desenhos",24 Horas Pica-Pau
+http://firp.me:80/mizael/mizael/344613
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Hora de Aventura" tvg-logo="https://images.livrariasaraiva.com.br/imagemnet/imagem.aspx/?pro_id=9745412&qld=90&l=830&a=-1=1007943217" group-title="Canais | 24H Desenhos",24 Horas Hora de Aventura
+http://firp.me:80/mizael/mizael/344614
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Mickey Mouse" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRS4yQG1NkMVW5PCdOteJiPpL51RmI4RPH50g&usqp=CAU" group-title="Canais | 24H Desenhos",24 Horas Mickey Mouse
+http://firp.me:80/mizael/mizael/344615
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas A Casa do Mickey Mouse" tvg-logo="http://origemdasfontes.ga:80/images/b3a1d80e315cf6451e653b24ad86c6ac.jpg" group-title="Canais | 24H Desenhos",24 Horas A Casa do Mickey Mouse
+http://firp.me:80/mizael/mizael/344616
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Os Cavaleiros do Zodiaco" tvg-logo="http://origemdasfontes.ga:80/images/b8d2365b24101fc6ecd1bd6dc9701697.jpg" group-title="Canais | 24H Desenhos",24 Horas Os Cavaleiros do Zodiaco
+http://firp.me:80/mizael/mizael/344617
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas O Show da Luna" tvg-logo="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRM3W_dXn1mnFFSXib5-DgEH244S-8A6XJ9IJ7d1fr48cWZYP5x" group-title="Canais | 24H Desenhos",24 Horas O Show da Luna
+http://firp.me:80/mizael/mizael/344618
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Pokémon" tvg-logo="https://secureservercdn.net/198.71.233.254/dd2.a4b.myftpupload.com/wp-content/uploads/2017/08/https-2F2Fs3-ap-southeast-2.amazonaws.com2Fvms-tv-images-prod2F20172F022F586222FPOKE_Pokemon_1920.jpg?time=1587665537" group-title="Canais | 24H Desenhos",24 Horas Pokémon
+http://firp.me:80/mizael/mizael/344619
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Timão e Pumba" tvg-logo="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRaqBLB3cjQx-854LvQNe7qPFTw7t6MGWfCTMBgtn1BOjmKCgMk" group-title="Canais | 24H Desenhos",24 Horas Timão e Pumba
+http://firp.me:80/mizael/mizael/344620
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Batman e Robin" tvg-logo="http://origemdasfontes.ga:80/images/68ff0db30b201ff8e144fa7fb8b9e39a.jpg" group-title="Canais | 24H Desenhos",24 Horas Batman e Robin
+http://firp.me:80/mizael/mizael/344627
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Power Rangers" tvg-logo="https://i1.wp.com/www.theilluminerdi.com/wp-content/uploads/2020/02/mighty-morphin-power-rangers-reunion.jpg?resize=1200%2C640&ssl=1" group-title="Canais | 24H Desenhos",24 Horas Power Rangers
+http://firp.me:80/mizael/mizael/344628
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Sítio do Picapau Amarelo" tvg-logo="http://origemdasfontes.ga:80/images/e784135842680652895ca0cdc385f237.jpg" group-title="Canais | 24H Desenhos",24 Horas Sítio do Picapau Amarelo
+http://firp.me:80/mizael/mizael/344630
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Dragon Ball Kai" tvg-logo="http://origemdasfontes.ga:80/images/cc6b85c5986c9abbcd209d081c83c0a5.jpg" group-title="Canais | 24H Desenhos",24 Horas Dragon Ball Kai
+http://firp.me:80/mizael/mizael/344637
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Os Flintstones" tvg-logo="http://origemdasfontes.ga:80/images/b11c16467f93c499527544a09fd0e70a.jpg" group-title="Canais | 24H Desenhos",24 Horas Os Flintstones
+http://firp.me:80/mizael/mizael/344660
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Tio Patinhas" tvg-logo="http://origemdasfontes.ga:80/images/d9fae0900f6b6afc812a86193a0b42c7.jpg" group-title="Canais | 24H Desenhos",24 Horas Tio Patinhas
+http://firp.me:80/mizael/mizael/344677
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Os Cavaleiros do Zodiaco - Saint Seiya" tvg-logo="http://origemdasfontes.ga:80/images/52acfc0301ea28c8d7ea2614dd323f83.jpg" group-title="Canais | 24H Desenhos",24 Horas Os Cavaleiros do Zodiaco - Saint Seiya
+http://firp.me:80/mizael/mizael/344678
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Yu Yu Hakusho" tvg-logo="http://origemdasfontes.ga:80/images/57bf83ad9208f9e13b7ec47289d7168a.jpg" group-title="Canais | 24H Desenhos",24 Horas Yu Yu Hakusho
+http://firp.me:80/mizael/mizael/344679
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Os Jetsons" tvg-logo="http://origemdasfontes.ga:80/images/17bea06aeb32fe682bd6ba7dfcad5c52.jpg" group-title="Canais | 24H Desenhos",24 Horas Os Jetsons
+http://firp.me:80/mizael/mizael/344681
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas InuYasha" tvg-logo="http://origemdasfontes.ga:80/images/0863d652200f4216ab306f3efd0ce325.jpg" group-title="Canais | 24H Desenhos",24 Horas InuYasha
+http://firp.me:80/mizael/mizael/344684
+#EXTINF:-1 tvg-id="" tvg-name="24 Horas Os Simpson (Antigo)" tvg-logo="http://origemdasfontes.ga:80/images/b284a193c5d1d9a0ed6c56f788c8994e.jpg" group-title="Canais | 24H Desenhos",24 Horas Os Simpson (Antigo)
+http://firp.me:80/mizael/mizael/344685
