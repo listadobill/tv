@@ -1,0 +1,33 @@
+#EXTM3U
+#EXTINF:-1 tvg-name="Listas Flash Ec M3U IPTV" tvg-logo="https://play-lh.googleusercontent.com/HD4WuErnigIq8cU7-YhOv9hM7uQiNs2K-dHC6GRuRxUNccDmpRaZz6v8jW9C9JbMZQ=w240-h480-rw" group-title="The Flash Apps", Listas Flash Ec M3U IPTV by The Flash Apps
+https://593apps.pro.ec/videoIPTV593.mp4
+#EXTINF:-1 tvg-id="band.news.br" tvg-name="BAND NEWS FHD" tvg-logo="http://dns.cdnfc.xyz:80/images/9c6af5c3ff24dac5945c7397daa43466.png" group-title=" Canais | Noticia",BAND NEWS FHD
+http://firp.me:80/mizael/mizael/86657
+#EXTINF:-1 tvg-id="band.news.br" tvg-name="BAND NEWS HD" tvg-logo="http://dns.cdnfc.xyz:80/images/9c6af5c3ff24dac5945c7397daa43466.png" group-title=" Canais | Noticia",BAND NEWS HD
+http://firp.me:80/mizael/mizael/86658
+#EXTINF:-1 tvg-id="band.news.br" tvg-name="BAND NEWS SD" tvg-logo="http://dns.cdnfc.xyz:80/images/9c6af5c3ff24dac5945c7397daa43466.png" group-title=" Canais | Noticia",BAND NEWS SD
+http://firp.me:80/mizael/mizael/86659
+#EXTINF:-1 tvg-id="cnn.brasil.br" tvg-name="CNN BRASIL FHD" tvg-logo="http://dns.cdnfc.xyz:80/images/f0703a2da7ddcb681772b1780c7601ff.png" group-title=" Canais | Noticia",CNN BRASIL FHD
+http://firp.me:80/mizael/mizael/86724
+#EXTINF:-1 tvg-id="cnn.brasil.br" tvg-name="CNN BRASIL HD" tvg-logo="http://dns.cdnfc.xyz:80/images/f0703a2da7ddcb681772b1780c7601ff.png" group-title=" Canais | Noticia",CNN BRASIL HD
+http://firp.me:80/mizael/mizael/86725
+#EXTINF:-1 tvg-id="cnn.brasil.br" tvg-name="CNN BRASIL SD" tvg-logo="http://dns.cdnfc.xyz:80/images/f0703a2da7ddcb681772b1780c7601ff.png" group-title=" Canais | Noticia",CNN BRASIL SD
+http://firp.me:80/mizael/mizael/86726
+#EXTINF:-1 tvg-id="globo.news.br" tvg-name="GLOBO NEWS FHD" tvg-logo="http://dns.cdnfc.xyz:80/images/67430e342bdacf60aa10602b5967ec85.png" group-title=" Canais | Noticia",GLOBO NEWS FHD
+http://firp.me:80/mizael/mizael/86906
+#EXTINF:-1 tvg-id="globo.news.br" tvg-name="GLOBO NEWS HD" tvg-logo="http://dns.cdnfc.xyz:80/images/67430e342bdacf60aa10602b5967ec85.png" group-title=" Canais | Noticia",GLOBO NEWS HD
+http://firp.me:80/mizael/mizael/86907
+#EXTINF:-1 tvg-id="globo.news.br" tvg-name="GLOBO NEWS SD" tvg-logo="http://dns.cdnfc.xyz:80/images/67430e342bdacf60aa10602b5967ec85.png" group-title=" Canais | Noticia",GLOBO NEWS SD
+http://firp.me:80/mizael/mizael/86908
+#EXTINF:-1 tvg-id="record.news.br" tvg-name="RECORD NEWS FHD" tvg-logo="http://dns.cdnfc.xyz:80/images/b42c43a34aa12f292e470108265ddb3b.png" group-title=" Canais | Noticia",RECORD NEWS FHD
+http://firp.me:80/mizael/mizael/87177
+#EXTINF:-1 tvg-id="record.news.br" tvg-name="RECORD NEWS HD" tvg-logo="http://dns.cdnfc.xyz:80/images/b42c43a34aa12f292e470108265ddb3b.png" group-title=" Canais | Noticia",RECORD NEWS HD
+http://firp.me:80/mizael/mizael/87178
+#EXTINF:-1 tvg-id="record.news.br" tvg-name="RECORD NEWS SD" tvg-logo="http://dns.cdnfc.xyz:80/images/b42c43a34aa12f292e470108265ddb3b.png" group-title=" Canais | Noticia",RECORD NEWS SD
+http://firp.me:80/mizael/mizael/87179
+#EXTINF:-1 tvg-id="Jovem Pan News" tvg-name="JP NEWS FHD" tvg-logo="http://dns.cdnfc.xyz:80/images/246203778e19a29296dc594a84de9948.png" group-title=" Canais | Noticia",JP NEWS FHD
+http://firp.me:80/mizael/mizael/87530
+#EXTINF:-1 tvg-id="Jovem Pan News" tvg-name="JP NEWS HD" tvg-logo="http://dns.cdnfc.xyz:80/images/246203778e19a29296dc594a84de9948.png" group-title=" Canais | Noticia",JP NEWS HD
+http://firp.me:80/mizael/mizael/87531
+#EXTINF:-1 tvg-id="" tvg-name="JP NEWS SD" tvg-logo="http://dns.cdnfc.xyz:80/images/246203778e19a29296dc594a84de9948.png" group-title=" Canais | Noticia",JP NEWS SD
+http://firp.me:80/mizael/mizael/122981
