@@ -67,7 +67,7 @@
     var videoButtons = document.getElementById("video-buttons");
 
     function loadVideos() {
-      fetch("https://iptv-org.github.io/iptv/categories/xxx.m3u")
+      fetch("https://raw.githubusercontent.com/listadobill/tv/main/xxx.m3u")
         .then(function(response) {
           return response.text();
         })
