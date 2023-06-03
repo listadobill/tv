@@ -1,126 +1,230 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TV DO BILL</title>
-  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-  <style>
-    body {
-      background-color: #000000;
-      color: #ffffff;
-      font-family: Arial, sans-serif;
-    }
+    <meta charset="utf-8">
+    <title>TV DO BILL</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
 
-    .video-container {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      justify-content: flex-start;
-    }
+        #container {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            overflow: hidden;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
 
-    .video-player {
-      width: 60%;
-      height: auto;
-      position: relative;
-      z-index: 1;
-    }
+        #channel-list {
+            width: 300px;
+            background-color: #222;
+            overflow-y: auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
 
-    .video-list {
-      width: 40%;
-      padding: 20px;
-      overflow-y: auto;
-      max-height: 100vh;
-      position: relative;
-    }
+        #channel-list h2 {
+            font-size: 20px;
+            margin: 0;
+            color: #f00;
+            text-align: center;
+        }
 
-    .video-list h2 {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
+        #channel-list p {
+            font-size: 16px;
+            margin: 0;
+            color: #fff;
+            text-align: center;
+        }
 
-    .video-list button {
-      display: block;
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      background-color: #FF0000; /* Vermelho */
-      color: #ffffff;
-      border: none;
-      text-align: left;
-      font-size: 18px;
-    }
-  </style>
+        #channel-list button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: transparent;
+            border: none;
+            text-align: left;
+            font-size: 16px;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #channel-list button:hover,
+        #channel-list button:focus {
+            background-color: #f00;
+            color: #000;
+        }
+
+        #iptv-player-container {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #111;
+            padding: 20px;
+            position: relative;
+        }
+
+        #iptv-player {
+            width: 100%;
+            height: 100%;
+        }
+
+        #reconnect-overlay {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 30px;
+            height: 30px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #reconnect-overlay::after {
+            content: "";
+            width: 10px;
+            height: 10px;
+            border: 2px solid #fff;
+            border-right-color: transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        #fullscreen-reminder {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            color: yellow;
+            text-align: center;
+            z-index: 9999; /* Colocado em um z-index alto para trazer para frente */
+        }
+    </style>
 </head>
 <body>
-  <h1 style="color: #FF0000;">CANAIS DE MUSICA</h1>
-  <div class="video-container">
-    <div class="video-list">
-      <h2></h2>
-      <div id="video-buttons"></div>
+    <div id="fullscreen-reminder">Para abrir em tela cheia, clique no botão do canto inferior direito do reprodutor. O botão se parece com uma janelinha, igual no Youtube.</div>
+    <div id="container">
+        <div id="channel-list">
+            <h2>TV DO BILL</h2>
+            <p>A TV de Graça de Verdade!</p>
+            <div id="channel-buttons"></div>
+        </div>
+        <div id="iptv-player-container">
+            <div id="reconnect-overlay"></div>
+            <video id="iptv-player" controls autoplay></video>
+        </div>
     </div>
-    <video class="video-player" controls autoplay loop></video>
-  </div>
 
-  <script>
-    var videoPlayer = document.querySelector(".video-player");
-    var videoButtons = document.getElementById("video-buttons");
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var playlistUrl = "https://iptv-org.github.io/iptv/categories/music.m3u";
+            var channelButtonsContainer = document.getElementById("channel-buttons");
+            var videoPlayer = document.getElementById("iptv-player");
+            var reconnectOverlay = document.getElementById("reconnect-overlay");
 
-    function loadVideos() {
-      fetch("https://iptv-org.github.io/iptv/categories/music.m3u")
-        .then(function(response) {
-          return response.text();
-        })
-        .then(function(data) {
-          var lines = data.split("\n");
-          var videos = [];
-          var currentVideo = {};
+            var currentChannelUrl = ""; // Variável para armazenar a URL do canal atual
 
-          for (var i = 0; i < lines.length; i++) {
-            var line = lines[i].trim();
+            fetch(playlistUrl)
+                .then(function(response) {
+                    return response.text();
+                })
+                .then(function(data) {
+                    var lines = data.split("\n");
+                    var channels = [];
 
-            if (line.startsWith("#EXTINF:")) {
-              currentVideo.title = line.substring(line.indexOf(",") + 1);
-            } else if (line && !line.startsWith("#")) {
-              currentVideo.url = line;
-              videos.push(currentVideo);
-              currentVideo = {};
+                    for (var i = 0; i < lines.length; i++) {
+                        var line = lines[i].trim();
+
+                        if (line.startsWith("#EXTINF:")) {
+                            var name = line.split(",")[1];
+                            var url = lines[i+1].trim();
+                            channels.push({ name: name, url: url });
+                        }
+                    }
+
+                    channels.sort(function(a, b) {
+                        return a.name.localeCompare(b.name);
+                    });
+
+                    channels.forEach(function(channel) {
+                        var button = document.createElement("button");
+                        button.textContent = channel.name.toUpperCase();
+                        button.addEventListener("click", function() {
+                            playChannel(channel.url);
+                        });
+                        channelButtonsContainer.appendChild(button);
+                    });
+                })
+                .catch(function(error) {
+                    console.error("Erro ao carregar a playlist IPTV:", error);
+                });
+
+            function playChannel(url) {
+                currentChannelUrl = url;
+                videoPlayer.src = url;
+                videoPlayer.play();
             }
-          }
 
-          videos.forEach(function(video) {
-            var button = document.createElement("button");
-            button.textContent = video.title;
-            button.addEventListener("click", function() {
-              playVideo(video.url);
-              videoPlayer.requestFullscreen(); // Abrir em tela cheia
+            videoPlayer.addEventListener("ended", function() {
+                reconnectVideo();
             });
-            videoButtons.appendChild(button);
-          });
-        })
-        .catch(function(error) {
-          console.log("Erro ao carregar a lista de vídeos:", error);
-        });
-    }
 
-    function playVideo(videoUrl) {
-      if (Hls.isSupported()) {
-        var hls = new Hls();
-        hls.loadSource(videoUrl);
-        hls.attachMedia(videoPlayer);
-        hls.on(Hls.Events.MANIFEST_PARSED, function() {
-          videoPlayer.play();
-        });
-      } else if (videoPlayer.canPlayType("application/vnd.apple.mpegurl")) {
-        videoPlayer.src = videoUrl;
-        videoPlayer.addEventListener("loadedmetadata", function() {
-          videoPlayer.play();
-        });
-      }
-    }
+            videoPlayer.addEventListener("error", function() {
+                reconnectVideo();
+            });
 
-    window.addEventListener("load", loadVideos);
-  </script>
-  
+            function reconnectVideo() {
+                if (currentChannelUrl) {
+                    videoPlayer.src = "";
+                    videoPlayer.load();
+                    videoPlayer.src = currentChannelUrl;
+                    videoPlayer.play();
+                    showReconnectOverlay();
+                }
+            }
+
+            function showReconnectOverlay() {
+                reconnectOverlay.style.display = "block";
+            }
+
+            function hideReconnectOverlay() {
+                reconnectOverlay.style.display = "none";
+            }
+
+            videoPlayer.addEventListener("canplay", function() {
+                hideReconnectOverlay();
+            });
+
+            videoPlayer.addEventListener("play", function() {
+                if (videoPlayer.requestFullscreen) {
+                    videoPlayer.requestFullscreen();
+                } else if (videoPlayer.mozRequestFullScreen) {
+                    videoPlayer.mozRequestFullScreen();
+                } else if (videoPlayer.webkitRequestFullscreen) {
+                    videoPlayer.webkitRequestFullscreen();
+                } else if (videoPlayer.msRequestFullscreen) {
+                    videoPlayer.msRequestFullscreen();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
