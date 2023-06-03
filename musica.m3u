@@ -1,4 +1,10 @@
 #EXTM3U
+
+#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",CATEDRAL DO ROCK
+https://stmv1.srvstm.com/catedraldorock/catedraldorock/chunklist_w1897386854.m3u8
+
+
+
 #EXTINF:0 tvg-country="UN" tvg-logo="https://github.com/geonsey/Free2ViewTV/blob/master/images/logos/StingrayMusic_512x512.png?raw=true" group-title="Undefined",406 Stingray Classic Rock
 https://ott-linear-channels.stingray.com/v1/master/734895816ccb1e836f8c1e81f772244d9be0077c/101/master.m3u8?checkedby:iptvcat.com
 #EXTINF:0 tvg-country="UN" tvg-logo="https://github.com/geonsey/Free2ViewTV/blob/master/images/logos/StingrayMusic_512x512.png?raw=true" group-title="Undefined",407 Stingray Rock Alternative
