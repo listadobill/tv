@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Listagem de Filmes</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <h1>Listagem de Filmes</h1>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Título</th>
+        <th>Ano</th>
+        <th>Diretor</th>
+        <th>Classificação</th>
+      </tr>
+    </thead>
+    <tbody id="movies-list">
+      <!-- Os dados dos filmes serão adicionados dinamicamente aqui -->
+    </tbody>
+  </table>
+
+  <script>
+    // Chamada à API para obter a listagem de filmes
+    fetch('https://api.warezcdn.com/1sd8fusad129ud1ddha0/movies/list/0')
+      .then(response => response.json())
+      .then(data => {
+        const moviesList = document.getElementById('movies-list');
+        data.movies.forEach(movie => {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td>${movie.title}</td>
+            <td>${movie.year}</td>
+            <td>${movie.director}</td>
+            <td>${movie.rating}</td>
+          `;
+          moviesList.appendChild(row);
+        });
+      })
+      .catch(error => console.error(error));
+  </script>
+</body>
+</html>
