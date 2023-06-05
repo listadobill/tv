@@ -7,18 +7,6 @@ http://stream1.example.com/live/stream.m3u8
 #EXTINF:-1 tvg-logo="", CANAIS EM TESTE DO BILL
 http://stream1.example.com/live/stream.m3u8
 
-#EXTINF:-1,GLOBO NEWS DO BILL
-https://br.embedflix.net/p2p/globonews/chunks.m3u8?nimblesessionid=5017863&wmsAuthSign=c2VydmVyX3RpbWU9Ni81LzIwMjMgOTozODoxMCBQTSZoYXNoX3ZhbHVlPUNIVmZ2cDBsQ01qcmRKZ0ZXNHZTQUE9PSZ2YWxpZG1pbnV0ZXM9OTA=
-
-
-
-
-#EXTM3U
-#EXTINF:-1 tvg-logo="", LISTA PROVISÓRIA
-http://stream1.example.com/live/stream.m3u8
-
-
-
 #EXTM3U
 #EXTINF:-1,GLOBO SP FHD
 http://meuplay.shop:80/eb7l5xix/zvw0ztfb/715
