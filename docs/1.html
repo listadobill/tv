@@ -44,21 +44,8 @@
             text-align: center;
         }
 
-        .category {
-            margin-bottom: 20px;
-        }
-
-        .category h3 {
-            font-size: 16px;
-            margin: 0;
-            color: #fff;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #fff;
-        }
-
-        .channel-button {
-            display: flex;
-            align-items: center;
+        #channel-list button {
+            display: block;
             width: 100%;
             padding: 10px;
             margin-bottom: 10px;
@@ -71,16 +58,21 @@
             transition: background-color 0.3s, color 0.3s;
         }
 
-        .channel-button:hover,
-        .channel-button:focus {
+        #channel-list button:hover,
+        #channel-list button:focus {
             background-color: #f00;
             color: #000;
         }
 
-        .channel-button-icon {
-            margin-right: 10px;
-            width: 20px;
-            height: 20px;
+        #channel-filter {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #111;
+            color: #fff;
+            border: none;
+            box-sizing: border-box;
+            font-size: 16px;
         }
 
         #iptv-player-container {
@@ -134,7 +126,7 @@
             font-size: 14px;
             color: yellow;
             text-align: center;
-            z-index: 9999;
+            z-index: 9999; /* Colocado em um z-index alto para trazer para frente */
         }
     </style>
 </head>
@@ -144,6 +136,7 @@
         <div id="channel-list">
             <h2>TV DO BILL</h2>
             <p>A TV de Graça de Verdade!</p>
+            <input type="text" id="channel-filter" placeholder="Filtrar canais">
             <div id="channel-buttons"></div>
         </div>
         <div id="iptv-player-container">
@@ -158,6 +151,7 @@
             var channelButtonsContainer = document.getElementById("channel-buttons");
             var videoPlayer = document.getElementById("iptv-player");
             var reconnectOverlay = document.getElementById("reconnect-overlay");
+            var channelFilter = document.getElementById("channel-filter");
 
             var currentChannelUrl = ""; // Variável para armazenar a URL do canal atual
 
@@ -168,7 +162,6 @@
                 .then(function(data) {
                     var lines = data.split("\n");
                     var channels = [];
-                    var currentCategory = null;
 
                     for (var i = 0; i < lines.length; i++) {
                         var line = lines[i].trim();
@@ -176,57 +169,38 @@
                         if (line.startsWith("#EXTINF:")) {
                             var name = line.split(",")[1];
                             var url = lines[i+1].trim();
-                            var categoryMatch = line.match(/group-title="([^"]+)"/i);
-                            var category = categoryMatch ? categoryMatch[1] : "Sem categoria";
-
-                            if (currentCategory !== category) {
-                                if (currentCategory !== null) {
-                                    addCategoryToChannelList(currentCategory, channels);
-                                    channels = [];
-                                }
-                                currentCategory = category;
-                            }
-
                             channels.push({ name: name, url: url });
                         }
                     }
 
-                    if (currentCategory !== null) {
-                        addCategoryToChannelList(currentCategory, channels);
-                    }
+                    channels.sort(function(a, b) {
+                        return a.name.localeCompare(b.name);
+                    });
 
-                    function addCategoryToChannelList(category, channels) {
-                        var categoryContainer = document.createElement("div");
-                        categoryContainer.className = "category";
-
-                        var categoryTitle = document.createElement("h3");
-                        categoryTitle.textContent = category.toUpperCase();
-                        categoryContainer.appendChild(categoryTitle);
-
-                        channels.forEach(function(channel) {
-                            var button = createChannelButton(channel.name, channel.url);
-                            categoryContainer.appendChild(button);
-                        });
-
-                        channelButtonsContainer.appendChild(categoryContainer);
-                    }
-
-                    function createChannelButton(name, url) {
+                    channels.forEach(function(channel) {
                         var button = document.createElement("button");
-                        button.className = "channel-button";
-                        button.textContent = name.toUpperCase();
+                        button.textContent = channel.name.toUpperCase();
                         button.addEventListener("click", function() {
-                            playChannel(url);
+                            playChannel(channel.url);
                         });
+                        channelButtonsContainer.appendChild(button);
+                    });
 
-                        var iconUrl = "https://example.com/icons/" + name.toLowerCase() + ".png"; // Substitua pela URL correta para o ícone do canal
-                        var icon = document.createElement("img");
-                        icon.className = "channel-button-icon";
-                        icon.src = iconUrl;
-                        button.insertBefore(icon, button.firstChild);
+                    channelFilter.addEventListener("input", function(event) {
+                        var filterValue = event.target.value.toLowerCase();
+                        var buttons = channelButtonsContainer.getElementsByTagName("button");
 
-                        return button;
-                    }
+                        for (var i = 0; i < buttons.length; i++) {
+                            var button = buttons[i];
+                            var channelName = button.textContent.toLowerCase();
+
+                            if (channelName.indexOf(filterValue) > -1) {
+                                button.style.display = "block";
+                            } else {
+                                button.style.display = "none";
+                            }
+                        }
+                    });
                 })
                 .catch(function(error) {
                     console.error("Erro ao carregar a playlist IPTV:", error);
