@@ -49,6 +49,17 @@
       background-color: #B2070F;
     }
 
+    #player-container {
+      flex: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #player {
+      width: 100%;
+      height: 100%;
+    }
   </style>
 </head>
 <body>
@@ -56,18 +67,34 @@
     <h1>TV DO BILL</h1>
     <h2>A TV Stream grátis de verdade</h2>
     <ul>
-      <li><button onclick="openPlayer('https://embedflix.net/tv/band-tv-sp')">Band TV SP</button></li>
-      <li><button onclick="openPlayer('https://embedflix.net/tv/globo-sp')">Globo SP</button></li>
-      <li><button onclick="openPlayer('https://embedflix.net/tv/br-globo-news-hd')">Globo News HD</button></li>
-      <li><button onclick="openPlayer('https://embedflix.net/tv/record-tv-sp')">Record TV SP</button></li>
+      <li><button data-src="https://embedflix.net/tv/band-tv-sp">Band TV SP</button></li>
+      <li><button data-src="https://embedflix.net/tv/globo-sp">Globo SP</button></li>
+      <li><button data-src="https://embedflix.net/tv/br-globo-news-hd">Globo News HD</button></li>
+      <li><button data-src="https://embedflix.net/tv/record-tv-sp">Record TV SP</button></li>
       <!-- Adicione mais botões aqui, se necessário -->
     </ul>
   </div>
 
+  <div id="player-container">
+    <iframe id="player" src=""></iframe>
+  </div>
+
   <script>
-    function openPlayer(link) {
-      window.open(link, "_blank");
-    }
+    var linkList = document.getElementById("link-list");
+    var player = document.getElementById("player");
+    var playerContainer = document.getElementById("player-container");
+
+    linkList.addEventListener("click", function(event) {
+      event.preventDefault();
+      if (event.target.tagName === "BUTTON") {
+        var link = event.target.getAttribute("data-src");
+        var channelName = event.target.textContent;
+        player.src = link;
+        player.style.display = "block";
+        document.title = "Player - " + channelName;
+        playerContainer.requestFullscreen();
+      }
+    });
   </script>
 </body>
 </html>
