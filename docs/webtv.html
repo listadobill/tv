@@ -72,6 +72,7 @@
       <li><button data-src="https://embedflix.net/tv/globo-sp">Globo SP</button></li>
       <li><button data-src="https://embedflix.net/tv/hbo-mundi">HBO Mundi</button></li>
       <li><button data-src="https://embedflix.net/tv/br-globo-news-hd">Globo News HD</button></li>
+      <li><button data-src="https://sinalpublico.com/player3/ch.php?canal=globonews">Globo News</button></li>
       <li><button data-src="https://embedflix.net/tv/record-tv-sp">Record TV SP</button></li>
       <li><button data-src="https://embedflix.net/tv/sportv-2-hd">Sport tv 2</button></li>
       <li><button data-src="https://embedflix.net/tv/sportv-3-hd">Sport tv 3</button></li>
@@ -81,13 +82,10 @@
     </ul>
   </div>
 
-  <div id="player-container">
-    <iframe id="player" src=""></iframe>
-  </div>
+  <div id="player-container"></div>
 
   <script>
     var linkList = document.getElementById("link-list");
-    var player = document.getElementById("player");
     var playerContainer = document.getElementById("player-container");
 
     linkList.addEventListener("click", function(event) {
@@ -95,10 +93,8 @@
       if (event.target.tagName === "BUTTON") {
         var link = event.target.getAttribute("data-src");
         var channelName = event.target.textContent;
-        player.src = link;
-        player.style.display = "block";
-        document.title = "Player - " + channelName;
-        playerContainer.requestFullscreen();
+        window.location.href = link;
+        playerContainer.innerHTML = "Now playing: " + channelName;
       }
     });
   </script>
