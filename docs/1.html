@@ -1,6 +1,36 @@
 <!DOCTYPE html>
 <html>
+<head><!DOCTYPE html>
+<html>
 <head>
+  <title>Captura de link M3U/M3U8</title>
+</head>
+<body>
+  <button id="captureButton">Capturar link M3U/M3U8</button>
+
+  <script>
+    document.getElementById("captureButton").addEventListener("click", function() {
+      var iframeUrl = "https://sinalpublico.com/player3/ch.php?canal=globonews"; // Substitua pela URL do iframe
+
+      fetch(iframeUrl)
+        .then(response => response.text())
+        .then(data => {
+          var match = data.match(/(https?:\/\/[^\s]+)/);
+          if (match && match.length > 0) {
+            var videoUrl = match[0];
+            console.log("Link do vídeo em formato M3U/M3U8:", videoUrl);
+          } else {
+            console.log("Não foi possível encontrar o link do vídeo.");
+          }
+        })
+        .catch(error => {
+          console.log("Ocorreu um erro ao obter o link do vídeo:", error);
+        });
+    });
+  </script>
+</body>
+</html>
+
   <title>Reprodução de vídeo e download</title>
 </head>
 <body>
