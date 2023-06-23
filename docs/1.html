@@ -8,7 +8,18 @@
     </style>
 </head>
 <body>
-    <!-- Conteúdo HTML aqui -->
+    <div id="fullscreen-reminder">Para abrir em tela cheia, clique no botão do canto inferior direito do reprodutor. O botão se parece com uma janelinha, igual no Youtube.</div>
+    <div id="container">
+        <div id="channel-list">
+            <h2>TV DO BILL</h2>
+            <p>A TV de Graça de Verdade!</p>
+            <div id="channel-buttons"></div>
+        </div>
+        <div id="iptv-player-container">
+            <div id="reconnect-overlay"></div>
+            <video id="iptv-player" controls autoplay></video>
+        </div>
+    </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
