@@ -12,6 +12,9 @@ https://br.embedflix.net/p2p/globonews/chunks.m3u8
 
 ############# PRIME ################
 
+#EXTINF:0 tvg-country="BR" tvg-logo="https://img.utdstc.com/icon/8d0/5dc/8d05dcf1d6034e9b6dffbab81f64ca8e61a135cc2c738e641b081d4611ba3ca2:200" group-title="PRIME VIDEO", PRIME VIDEO 1
+https://br.embedflix.net/p2p/primevideo/chunks.m3u8
+
 #EXTINF:0 tvg-country="BR" tvg-logo="https://img.utdstc.com/icon/8d0/5dc/8d05dcf1d6034e9b6dffbab81f64ca8e61a135cc2c738e641b081d4611ba3ca2:200" group-title="PRIME VIDEO", PRIME VIDEO 2
 https://br.embedflix.net/p2p/primevideo2/chunks.m3u8
 
