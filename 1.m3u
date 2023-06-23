@@ -1,4 +1,4 @@
 #EXTM3U
 
-#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="Undefined",Teste
+#EXTINF:0 tvg-country="BR" tvg-logo="https://s2.glbimg.com/1Sx6hxliiHryHvgT3_d0j5v70YI=/1200x630/s.glbimg.com/jo/g1/f/original/2010/10/14/globonewslogo.jpg" group-title="NOTICIAS",Teste
 https://br.embedflix.net/p2p/globonews/chunks.m3u8
