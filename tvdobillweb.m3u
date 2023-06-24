@@ -10,6 +10,17 @@ https://live-cm-ah-08-15.video.globo.com/j/eyJhbGciOiJSUzUxMiIsImtpZCI6IjEiLCJ0e
 #EXTINF:0 tvg-country="BR" tvg-logo="https://s2.glbimg.com/1Sx6hxliiHryHvgT3_d0j5v70YI=/1200x630/s.glbimg.com/jo/g1/f/original/2010/10/14/globonewslogo.jpg" group-title="NOTICIAS", GLOBO NEWS
 https://embedflix.net/tv/br-globo-news-hd
 
+############## PARAMOUNT ################
+
+#EXTINF:0 tvg-country="BR" tvg-logo="https://skdesu.com/wp-content/uploads/2022/12/paramout-plus.jpg" group-title="PARAMOUNT", PARAMOUNT PLUS 1
+https://embedflix.net/tv/paramount-plus
+
+#EXTINF:0 tvg-country="BR" tvg-logo="https://skdesu.com/wp-content/uploads/2022/12/paramout-plus.jpg" group-title="PARAMOUNT", PARAMOUNT PLUS 2
+https://embedflix.net/tv/paramount-plus-2
+
+#EXTINF:0 tvg-country="BR" tvg-logo="https://skdesu.com/wp-content/uploads/2022/12/paramout-plus.jpg" group-title="PARAMOUNT", PARAMOUNT PLUS 3
+https://embedflix.net/tv/paramount-plus-3
+
 ############# PRIME ################
 
 #EXTINF:0 tvg-country="BR" tvg-logo="https://img.utdstc.com/icon/8d0/5dc/8d05dcf1d6034e9b6dffbab81f64ca8e61a135cc2c738e641b081d4611ba3ca2:200" group-title="PRIME VIDEO", PRIME VIDEO 1
