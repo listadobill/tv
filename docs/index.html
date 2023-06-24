@@ -56,8 +56,9 @@
     }
 
     .button-frame img {
-      max-width: 80px;
-      height: 80px;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
     }
 
     .content p {
@@ -97,6 +98,12 @@
     .iptv-list a {
       color: #fff;
       text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .button-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
     }
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1">
