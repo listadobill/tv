@@ -35,19 +35,15 @@ https://embedflix.net/tv/prime-tv-3
 ############# TNT ################
 
 #EXTINF:0 tvg-country="BR" tvg-logo="https://tntsports.com.br/__export/1610630796918/sites/esporteinterativo/arte/apps/facebook_20210114.jpg" group-title="TNT SPORTS", TNT SPORTS 1
-https://br.embedflix.net/p2p/tntsport/chunks.m3u8
+
 
 #EXTINF:0 tvg-country="BR" tvg-logo="https://tntsports.com.br/__export/1610630796918/sites/esporteinterativo/arte/apps/facebook_20210114.jpg" group-title="TNT SPORTS", TNT SPORTS 2
-https://br.embedflix.net/p2p/tntsport2/chunks.m3u8
 
 
 #EXTINF:0 tvg-country="BR" tvg-logo="https://tntsports.com.br/__export/1610630796918/sites/esporteinterativo/arte/apps/facebook_20210114.jpg" group-title="TNT SPORTS", TNT SPORTS 3
-https://br.embedflix.net/p2p/tntsport3/chunks.m3u8
 
 
 #EXTINF:0 tvg-country="BR" tvg-logo="https://tntsports.com.br/__export/1610630796918/sites/esporteinterativo/arte/apps/facebook_20210114.jpg" group-title="TNT SPORTS", TNT SPORTS 4
-https://br.embedflix.net/p2p/tntsport4/chunks.m3u8
 
 
 #EXTINF:0 tvg-country="BR" tvg-logo="https://tntsports.com.br/__export/1610630796918/sites/esporteinterativo/arte/apps/facebook_20210114.jpg" group-title="TNT SPORTS", TNT SPORTS 5
-https://br.embedflix.net/p2p/tntsport5/chunks.m3u8
