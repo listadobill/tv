@@ -2,8 +2,12 @@
 
 ############# ABERTOS ################
 
-#EXTINF:0 tvg-country="BR" tvg-logo="https://ntvb.com.br/wp-content/uploads/2022/11/30-11-2.jpg" group-title="ABERTOS", NSC (GLOBO SC)
-https://live-nsc-sc-01.video.globo.com/j/eyJhbGciOiJSUzUxMiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJjb3VudHJ5X2NvZGUiOiJCUiIsImRvbWFpbiI6ImxpdmUtbnNjLXNjLTAxLnZpZGVvLmdsb2JvLmNvbSIsImV4cCI6MTY4NzgyMTc0NywiaWF0IjoxNjg3NzM1MzQ3LCJpc3MiOiJwbGF5YmFjay1hcGktcHJvZC1nY3AiLCJvd25lciI6IjhjNTEyMGU2LWYyM2UtNDdiMy1hNDM1LWY5ODk2YmNmOTZhNyIsInBhdGgiOiIvbnUvZihiTWluPTIwMDAsaT0yKS9nbG9iby1jcmkvcGxheWxpc3QubTN1OCJ9.GjR6feKkw8JFUbD6MkNSsuj59Xp2DZcjGMe1QR9kB2W3_Q1J7iTTKIXXOLW7PULuWCuvhY8CQZP13rj0ptKmoK7uoErhbR4m9YdhIrlDPMBGqqwcBzaFkifKAPIL-0ueD1R28xQLjS1j5Y_dBBGn7bbiqluVyUHK93PvOV3dWYQUuGYloPl7seIh6r8BWeaS-s6uoX1lcWs5sHoIU94A3QlzKKfNf6wiS6bmh3YZuxUj_g8BNm2IUa_MLui0AvQgsFYPjyscn8nm3bWI8BHDMFbVcFqtFxDLATD4uajDDcslvjDPv-EF9Hmx8EiKSwGv2xyWGGq-xjFilmlae_Bhlg/nu/f(bMin=2000,i=2)/globo-cri/globo-cri-audio_1=96000-video=3442944.m3u8
+#EXTINF:0 tvg-country="BR" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a2/Logo_globo_principal-laranja.png" group-title="ABERTOS", GLOBO RJ
+https://br.embedflix.net/p2p/globorj_720p/chunks.m3u8
+
+#EXTINF:0 tvg-country="BR" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a2/Logo_globo_principal-laranja.png" group-title="ABERTOS", GLOBO SP
+https://br.embedflix.net/p2p/globosp_720p/chunks.m3u8
+
 ############# NOTíCIAS ################
 
 #EXTINF:0 tvg-country="BR" tvg-logo="https://s2.glbimg.com/1Sx6hxliiHryHvgT3_d0j5v70YI=/1200x630/s.glbimg.com/jo/g1/f/original/2010/10/14/globonewslogo.jpg" group-title="NOTICIAS", GLOBO NEWS
