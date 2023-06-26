@@ -1,8 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Player de TV</title>
+    <title>TV DO BILL - Modo Noturno</title>
     <style>
+        body {
+            color: #ffffff;
+            background-color: #1c1c1c;
+            transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        }
+
+        h1 {
+            color: #d32f2f;
+            text-align: center;
+            font-size: 32px;
+            margin-top: 20px;
+        }
+
         .container {
             display: flex;
             flex-direction: row;
@@ -12,16 +25,25 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            max-height: 500px; /* Defina a altura máxima desejada para a lista de canais */
-            overflow-y: auto; /* Adiciona uma barra de rolagem vertical */
+            max-height: 500px;
+            overflow-y: auto;
         }
 
         .channel-list button {
             margin-bottom: 5px;
             padding: 10px;
             font-size: 16px;
-            width: 200px; /* Defina a largura desejada para os botões */
-            height: 40px; /* Defina a altura desejada para os botões */
+            width: 200px;
+            height: 40px;
+            background-color: #1c1c1c;
+            color: #ffffff;
+            border: 1px solid #d32f2f;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .channel-list button:hover {
+            background-color: #d32f2f;
+            color: #ffffff;
         }
 
         .video-player {
@@ -32,7 +54,7 @@
     <script src="https://vjs.zencdn.net/7.15.4/video.js"></script>
 </head>
 <body>
-    <h1>Player de TV</h1>
+    <h1>TV DO BILL</h1>
     <div class="container">
         <div class="channel-list" id="channel-list"></div>
         <video id="video-player" class="video-js vjs-default-skin" controls></video>
