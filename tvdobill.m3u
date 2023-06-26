@@ -26,7 +26,10 @@ https://br.embedflix.net/p2p/tntsport4/chunks.m3u8
 https://br.embedflix.net/p2p/tntsport5/chunks.m3u8
 
 ############# FILMES ################
+## TELECINE ##
 
+#EXTINF:0 tvg-country="BR" tvg-logo="https://cdn.mundodastribos.com/2021/05/Programacao-Telecine-Touch-3.jpg" group-title="FILMES", TELECINE TOUCH
+https://br.embedflix.net/p2p/telecinetouch/chunks.m3u8
 
 
 ############# NOTíCIAS ################
