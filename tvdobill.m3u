@@ -27,6 +27,10 @@ https://br.embedflix.net/p2p/tntsport5/chunks.m3u8
 
 ############# FILMES ################
 
+
+#EXTINF:0 tvg-country="BR" tvg-logo="https://focalizando.com.br/sites/default/files/inline-images/hbo-2-ao-vivo-24-horas.webp" group-title="FILMES", HBO 2
+https://br.embedflix.net/p2p/hbo2/chunks.m3u8
+
 #EXTINF:0 tvg-country="BR" tvg-logo="https://tvmap.com.br/images/ch/665.jpg" group-title="FILMES", HBO POP
 https://br.embedflix.net/p2p/hbopop/chunks.m3u8
 
