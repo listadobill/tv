@@ -24,6 +24,9 @@ https://embedflix.net/tv/tnt-sports-5
 
 ############# FILMES ################
 
+#EXTINF:0 tvg-country="BR" tvg-logo="https://focalizando.com.br/sites/default/files/inline-images/hbo-2-ao-vivo-24-horas.webp" group-title="FILMES", HBO 2
+https://embedflix.net/tv/hbo-2
+
 #EXTINF:0 tvg-country="BR" tvg-logo="https://tvmap.com.br/images/ch/665.jpg" group-title="FILMES", HBO POP
 https://embedflix.net/tv/hbo-pop
 
