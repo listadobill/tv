@@ -23,7 +23,9 @@ https://embedflix.net/tv/tnt-sports-4
 https://embedflix.net/tv/tnt-sports-5
 
 ############# FILMES ################
-## TELECINE ##
+
+#EXTINF:0 tvg-country="BR" tvg-logo="https://cdn.mitvstatic.com/channels/br_telecine-cult-hd_m.png" group-title="FILMES", TELECINE CULT
+https://embedflix.net/tv/telecine-cult
 
 #EXTINF:0 tvg-country="BR" tvg-logo="https://cdn.mundodastribos.com/2021/05/Programacao-Telecine-Touch-3.jpg" group-title="FILMES", TELECINE TOUCH
 https://embedflix.net/tv/telecine-touch
