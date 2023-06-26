@@ -24,6 +24,9 @@ https://embedflix.net/tv/tnt-sports-5
 
 ############# FILMES ################
 
+#EXTINF:0 tvg-country="BR" tvg-logo="https://tvmap.com.br/images/ch/665.jpg" group-title="FILMES", HBO POP
+https://embedflix.net/tv/hbo-pop
+
 #EXTINF:0 tvg-country="BR" tvg-logo="https://cdn.mitvstatic.com/channels/br_telecine-cult-hd_m.png" group-title="FILMES", TELECINE CULT
 https://embedflix.net/tv/telecine-cult
 
