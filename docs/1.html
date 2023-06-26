@@ -127,8 +127,25 @@
             videoPlayer.play();
         }
 
+        // Solicita a exibição em tela cheia automaticamente
+        function requestFullscreen() {
+            var videoPlayer = videojs('video-player');
+            if (videoPlayer.requestFullscreen) {
+                videoPlayer.requestFullscreen();
+            } else if (videoPlayer.mozRequestFullScreen) {
+                videoPlayer.mozRequestFullScreen();
+            } else if (videoPlayer.webkitRequestFullscreen) {
+                videoPlayer.webkitRequestFullscreen();
+            } else if (videoPlayer.msRequestFullscreen) {
+                videoPlayer.msRequestFullscreen();
+            }
+        }
+
         // Carrega a lista de canais ao carregar a página
-        window.addEventListener('load', loadChannelList);
+        window.addEventListener('load', function() {
+            loadChannelList();
+            requestFullscreen();
+        });
     </script>
 </body>
 </html>
