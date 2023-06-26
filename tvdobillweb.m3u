@@ -31,7 +31,7 @@ https://embedflix.net/tv/tnt-sports-4
 #EXTINF:0 tvg-country="BR" tvg-logo="https://tntsports.com.br/__export/1610630796918/sites/esporteinterativo/arte/apps/facebook_20210114.jpg" group-title="ESPORTES", TNT SPORTS 5
 https://embedflix.net/tv/tnt-sports-5
 
-############# FILMES ################
+############# FILMES E SÉRIES ################
 
 #EXTINF:0 tvg-country="BR" tvg-logo="https://focalizando.com.br/sites/default/files/inline-images/hbo-2-ao-vivo-24-horas.webp" group-title="FILMES", HBO 2
 https://embedflix.net/tv/hbo-2
@@ -44,6 +44,9 @@ https://embedflix.net/tv/telecine-cult
 
 #EXTINF:0 tvg-country="BR" tvg-logo="https://cdn.mundodastribos.com/2021/05/Programacao-Telecine-Touch-3.jpg" group-title="FILMES", TELECINE TOUCH
 https://embedflix.net/tv/telecine-touch
+
+#EXTINF:0 tvg-country="BR" tvg-logo="https://www.logolynx.com/images/logolynx/ae/ae12d815c5924d83769610227fe5d635.jpeg" group-title="FILMES", TNT
+https://br.embedflix.net/p2p/tnt/chunks.m3u8
 
 ############# NOTÍCIAS ################
 
