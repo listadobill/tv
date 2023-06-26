@@ -27,6 +27,9 @@ https://br.embedflix.net/p2p/tntsport5/chunks.m3u8
 
 ############# FILMES ################
 
+#EXTINF:0 tvg-country="BR" tvg-logo="https://tvmap.com.br/images/ch/665.jpg" group-title="FILMES", HBO POP
+https://br.embedflix.net/p2p/hbopop/chunks.m3u8
+
 #EXTINF:0 tvg-country="BR" tvg-logo="https://cdn.mitvstatic.com/channels/br_telecine-cult-hd_m.png" group-title="FILMES", TELECINE CULT
 https://br.embedflix.net/p2p/telecinecult/chunks.m3u8
 
