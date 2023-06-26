@@ -49,6 +49,9 @@ https://br.embedflix.net/p2p/telecinecult/chunks.m3u8
 #EXTINF:0 tvg-country="BR" tvg-logo="https://cdn.mundodastribos.com/2021/05/Programacao-Telecine-Touch-3.jpg" group-title="FILMES", TELECINE TOUCH
 https://br.embedflix.net/p2p/telecinetouch/chunks.m3u8
 
+#EXTINF:0 tvg-country="BR" tvg-logo="https://www.logolynx.com/images/logolynx/ae/ae12d815c5924d83769610227fe5d635.jpeg" group-title="FILMES", TNT
+https://br.embedflix.net/p2p/tnt/chunks.m3u8
+
 
 ############# NOTíCIAS ################
 
