@@ -125,11 +125,8 @@
             var videoPlayer = videojs('video-player');
             videoPlayer.src(url);
             videoPlayer.play();
-        }
 
-        // Solicita a exibição em tela cheia automaticamente
-        function requestFullscreen() {
-            var videoPlayer = videojs('video-player');
+            // Solicita a exibição em tela cheia quando o vídeo começa a ser reproduzido
             if (videoPlayer.requestFullscreen) {
                 videoPlayer.requestFullscreen();
             } else if (videoPlayer.mozRequestFullScreen) {
@@ -142,10 +139,7 @@
         }
 
         // Carrega a lista de canais ao carregar a página
-        window.addEventListener('load', function() {
-            loadChannelList();
-            requestFullscreen();
-        });
+        window.addEventListener('load', loadChannelList);
     </script>
 </body>
 </html>
