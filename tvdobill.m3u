@@ -10,6 +10,15 @@ https://br.embedflix.net/p2p/globosp_720p/chunks.m3u8
 
 ############# ESPORTES ################
 
+#EXTINF:0 tvg-country="BR" tvg-logo="https://cdn.dm.com.br/img/inline/120000/412x0/inline_00120756_00-3.webp?fallback=https%3A%2F%2Fcdn.dm.com.br%2Fimg%2Finline%2F120000%2Finline_00120756_00.jpg%3Fxid%3D546755&xid=546755" group-title="ESPORTES", COMMENBOL 1
+https://br.embedflix.net/p2p/conmeboltv/chunks.m3u8
+
+#EXTINF:0 tvg-country="BR" tvg-logo="https://cdn.dm.com.br/img/inline/120000/412x0/inline_00120756_00-3.webp?fallback=https%3A%2F%2Fcdn.dm.com.br%2Fimg%2Finline%2F120000%2Finline_00120756_00.jpg%3Fxid%3D546755&xid=546755" group-title="ESPORTES", COMMENBOL 2
+https://br.embedflix.net/p2p/conmeboltv2/chunks.m3u8
+
+#EXTINF:0 tvg-country="BR" tvg-logo="https://cdn.dm.com.br/img/inline/120000/412x0/inline_00120756_00-3.webp?fallback=https%3A%2F%2Fcdn.dm.com.br%2Fimg%2Finline%2F120000%2Finline_00120756_00.jpg%3Fxid%3D546755&xid=546755" group-title="ESPORTES", COMMENBOL 3
+https://br.embedflix.net/p2p/conmeboltv3/chunks.m3u8
+
 #EXTINF:0 tvg-country="BR" tvg-logo="https://tntsports.com.br/__export/1610630796918/sites/esporteinterativo/arte/apps/facebook_20210114.jpg" group-title="ESPORTES", TNT SPORTS 1
 https://br.embedflix.net/p2p/tntsport/chunks.m3u8
 
