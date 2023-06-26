@@ -22,6 +22,12 @@ https://embedflix.net/tv/tnt-sports-4
 #EXTINF:0 tvg-country="BR" tvg-logo="https://tntsports.com.br/__export/1610630796918/sites/esporteinterativo/arte/apps/facebook_20210114.jpg" group-title="ESPORTES", TNT SPORTS 5
 https://embedflix.net/tv/tnt-sports-5
 
+############# FILMES ################
+## TELECINE ##
+
+#EXTINF:0 tvg-country="BR" tvg-logo="https://cdn.mundodastribos.com/2021/05/Programacao-Telecine-Touch-3.jpg" group-title="FILMES", TELECINE TOUCH
+https://embedflix.net/tv/telecine-touch
+
 ############# NOTÍCIAS ################
 
 #EXTINF:0 tvg-country="BR" tvg-logo="https://s2.glbimg.com/1Sx6hxliiHryHvgT3_d0j5v70YI=/1200x630/s.glbimg.com/jo/g1/f/original/2010/10/14/globonewslogo.jpg" group-title="NOTICIAS", GLOBO NEWS
