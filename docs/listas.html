@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Arquivo .m3u em Texto Puro</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var urls = [
+        "https://raw.githubusercontent.com/listadobill/tv/main/tvdobill.m3u",
+        "https://iptv-org.github.io/iptv/countries/br.m3u",
+        "https://iptv-org.github.io/iptv/subdivisions/br-sc.m3u"
+      ];
+
+      var combinedM3U = "";
+
+      $.each(urls, function(index, url) {
+        $.ajax({
+          url: url,
+          async: false,
+          success: function(data) {
+            combinedM3U += data + "\n";
+          }
+        });
+      });
+
+      $("#m3u-content").text(combinedM3U);
+    });
+  </script>
+</head>
+
+<body>
+  <pre id="m3u-content"></pre>
+</body>
+</html>
