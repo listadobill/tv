@@ -43,7 +43,7 @@
             text-align: left;
         }
 
-        .channel-list button:hover {
+        .channel-list button.selected {
             background-color: #d32f2f;
             color: #ffffff;
         }
@@ -89,6 +89,7 @@
                         button.textContent = channel.name;
                         button.addEventListener('click', function() {
                             playChannel(channel.url);
+                            highlightSelectedButton(button);
                         });
                         channelList.appendChild(button);
                     });
@@ -140,6 +141,19 @@
             } else if (videoPlayer.msRequestFullscreen) {
                 videoPlayer.msRequestFullscreen();
             }
+        }
+
+        // Função para destacar o botão selecionado
+        function highlightSelectedButton(selectedButton) {
+            var buttons = document.querySelectorAll('.channel-list button');
+
+            // Remove a classe 'selected' de todos os botões
+            buttons.forEach(function(button) {
+                button.classList.remove('selected');
+            });
+
+            // Adiciona a classe 'selected' apenas ao botão selecionado
+            selectedButton.classList.add('selected');
         }
 
         // Carrega a lista de canais ao carregar a página
