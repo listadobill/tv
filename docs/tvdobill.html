@@ -67,38 +67,43 @@
     </div>
 
     <script>
-        // URL da lista de canais
-        var playlistURL = 'https://raw.githubusercontent.com/listadobill/tv/main/tvdobill.m3u';
+        // URLs das listas de canais
+        var playlistURLs = [
+            'https://raw.githubusercontent.com/listadobill/tv/main/tvdobill.m3u',
+            'https://iptv-org.github.io/iptv/countries/br.m3u'
+        ];
 
-        // Função para carregar a lista de canais
-        function loadChannelList() {
+        // Função para carregar as listas de canais
+        function loadChannelLists() {
             var channelList = document.getElementById('channel-list');
 
-            // Faz uma requisição para obter a lista de canais
-            var xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    var channels = parseM3U(xhr.responseText);
+            playlistURLs.forEach(function (playlistURL) {
+                // Faz uma requisição para obter a lista de canais
+                var xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        var channels = parseM3U(xhr.responseText);
 
-                    // Ordena os canais em ordem alfabética
-                    channels.sort(function(a, b) {
-                        return a.name.localeCompare(b.name);
-                    });
-
-                    // Cria os botões para cada canal
-                    channels.forEach(function(channel) {
-                        var button = document.createElement('button');
-                        button.textContent = channel.name;
-                        button.addEventListener('click', function() {
-                            playChannel(channel.url);
-                            highlightSelectedButton(button);
+                        // Ordena os canais em ordem alfabética
+                        channels.sort(function (a, b) {
+                            return a.name.localeCompare(b.name);
                         });
-                        channelList.appendChild(button);
-                    });
-                }
-            };
-            xhr.open('GET', playlistURL, true);
-            xhr.send();
+
+                        // Cria os botões para cada canal
+                        channels.forEach(function (channel) {
+                            var button = document.createElement('button');
+                            button.textContent = channel.name;
+                            button.addEventListener('click', function () {
+                                playChannel(channel.url);
+                                highlightSelectedButton(button);
+                            });
+                            channelList.appendChild(button);
+                        });
+                    }
+                };
+                xhr.open('GET', playlistURL, true);
+                xhr.send();
+            });
         }
 
         // Função para analisar o arquivo M3U e extrair os canais
@@ -108,7 +113,7 @@
             var channelName = null;
             var channelURL = null;
 
-            lines.forEach(function(line) {
+            lines.forEach(function (line) {
                 line = line.trim();
 
                 if (line.startsWith('#EXTINF:')) {
@@ -164,7 +169,7 @@
             var buttons = document.querySelectorAll('.channel-list button');
 
             // Remove a classe 'selected' de todos os botões
-            buttons.forEach(function(button) {
+            buttons.forEach(function (button) {
                 button.classList.remove('selected');
             });
 
@@ -172,8 +177,8 @@
             selectedButton.classList.add('selected');
         }
 
-        // Carrega a lista de canais ao carregar a página
-        window.addEventListener('load', loadChannelList);
+        // Carrega as listas de canais ao carregar a página
+        window.addEventListener('load', loadChannelLists);
     </script>
 </body>
 </html>
