@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Arquivo .m3u em Texto Puro</title>
+  <title>LISTAS IPTV DO BILL</title>
+  <style>
+    .raw-view {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+  </style>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     $(document).ready(function() {
@@ -23,7 +29,7 @@
         });
       });
 
-      $("#m3u-content").text(combinedM3U);
+      $("#m3u-content").text(combinedM3U).addClass("raw-view");
     });
   </script>
 </head>
