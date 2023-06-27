@@ -45,7 +45,7 @@ https://br.embedflix.net/p2p/tntsport5/chunks.m3u8
 
 ############# FILMES E SÉRIES ################
 
-#EXTINF:0 tvg-country="BR" tvg-logo="http://midiafatos.com.br/wp-content/uploads/2017/02/fx_N.png" group-title="FILMES", FX (FORA DO AR)
+#EXTINF:0 tvg-country="BR" tvg-logo="http://midiafatos.com.br/wp-content/uploads/2017/02/fx_N.png" group-title="FILMES", FX
 https://br.embedflix.net/p2p/fx/chunks.m3u8
 
 #EXTINF:0 tvg-country="BR" tvg-logo="https://focalizando.com.br/sites/default/files/inline-images/hbo-2-ao-vivo-24-horas.webp" group-title="FILMES", HBO 2
