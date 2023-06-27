@@ -24,23 +24,25 @@
         .channel-list {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            max-height: 500px;
-            overflow-y: auto;
+            align-items: center;
+            justify-content: flex-start;
+            max-height: 90vh;
+            overflow-y: scroll;
+            scrollbar-width: thin;
         }
 
         .channel-list button {
-            margin-bottom: 5px;
+            margin-bottom: 10px;
             padding: 10px;
-            font-size: 16px;
-            width: 200px;
-            height: 40px;
+            font-size: 24px;
+            width: 80%;
+            max-width: 400px;
             background-color: #1c1c1c;
             color: #ffffff;
             border: 1px solid #d32f2f;
             transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
             align-items: center;
-            text-align: left;
+            text-align: center;
         }
 
         .channel-list button.selected {
@@ -49,9 +51,9 @@
         }
 
         .video-player {
-            max-width: 600px; /* Defina o tamanho máximo do player de vídeo */
-            width: 100%; /* Ocupa todo o espaço disponível no contêiner */
-            margin-right: 20px;
+            max-width: 70%;
+            width: 100%;
+            height: auto;
         }
     </style>
     <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet">
