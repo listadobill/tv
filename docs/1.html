@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TV DO BILL - Modo Noturno</title>
+  <title>TV DO BILL - A TV stream grátis de verdade</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -69,10 +69,37 @@
       background-color: #c41e2d;
     }
 
-    @media (max-width: 768px) {
-      .button-grid {
-        flex-wrap: wrap;
-      }
+    .footer {
+      background-color: #141414;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .iptv-list {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .iptv-list h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .iptv-list ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .iptv-list li {
+      margin-bottom: 5px;
+    }
+
+    .iptv-list a {
+      color: #fff;
+      text-decoration: none;
     }
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -101,10 +128,23 @@
       <button onclick="loadPage('https://listadobill.github.io/tv/smarttv_plutotvbr')">Pluto TV BR</button>
     </div>
 
-    <!-- Nova entrada adicionada -->
     <div class="button-frame">
       <button onclick="loadPage('https://warezcdn.com/listing.php?type=movies')">FILMES E SÉRIES - SERVIDOR 1</button>
     </div>
+  </div>
+
+  <div class="footer">
+    <p>É normal eventualmente um canal, vídeo ou lista não funcionar, tenha paciência</p>
+  </div>
+
+  <div class="iptv-list">
+    <h2>Nossas listas para aplicativos IPTV:</h2>
+    <ul>
+      <li><a href="https://is.gd/30CHK5">IPTV-ORG BR - https://is.gd/30CHK5</a></li>
+      <li><a href="https://is.gd/iRxQt6">TV DO BILL - IPTV - https://is.gd/iRxQt6</a></li>
+      <li><a href="https://is.gd/bW0K4a">LISTA PROVISÓRIA 2 - https://is.gd/bW0K4a</a></li>
+      <li><a href="https://is.gd/4Fbg5w">PLUTO TV BR - https://is.gd/4Fbg5w</a></li>
+    </ul>
   </div>
 
   <script>
