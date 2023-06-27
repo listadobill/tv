@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TV DO BILL - Modo Noturno</title>
+  <title>TV DO BILL - A TV stream grátis de verdade</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      color: #ccc;
+      color: #fff;
       background-color: #141414;
     }
 
     .header {
-      background-color: #141414;
-      color: #e50914;
+      background-color: transparent;
       padding: 20px;
       text-align: center;
     }
@@ -22,20 +21,18 @@
       font-size: 36px;
       margin: 0;
       font-weight: bold;
+      color: #e73844;
     }
 
     .header p {
       font-size: 18px;
       margin: 10px 0 0;
       font-weight: bold;
-      color: #fff;
     }
 
     .button-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      justify-items: center;
+      display: flex;
+      justify-content: center;
       align-items: center;
       padding: 20px;
       margin-top: 50px;
@@ -48,23 +45,28 @@
       padding: 10px;
       border: 2px solid #fff;
       transition: border-color 0.3s ease;
+      margin: 0 10px;
     }
 
     .button-frame:hover,
     .button-frame:focus {
-      border-color: #e50914;
+      border-color: #c41e2d;
     }
 
-    .button-frame img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-    }
-
-    .content p {
-      font-size: 16px;
+    .button-frame button {
+      background-color: #e73844;
       color: #fff;
-      margin-top: 10px;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button-frame button:hover,
+    .button-frame button:focus {
+      background-color: #c41e2d;
     }
 
     .footer {
@@ -99,65 +101,35 @@
       color: #fff;
       text-decoration: none;
     }
-
-    @media (max-width: 768px) {
-      .button-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      }
-    }
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
   <div class="header">
-    <h1>TV DO BILL</h1>
+    <h1 style="color: #e73844;">TV DO BILL</h1>
     <p>A TV stream grátis de verdade</p>
   </div>
 
   <div class="button-grid">
     <div class="button-frame">
-      <a href="https://listadobill.github.io/tv/iptv_org_br.html">
-        <img src="https://archive.org/download/canais-tv-iptv-org_202203/Canais%20TV%20IPTV%20Org.jpg" alt="IPTV ORG BR">
-      </a>
-      <p>IPTV ORG BR</p>
+      <button onclick="loadPage('https://listadobill.github.io/tv/iptv_org_br.html')">IPTV ORG BR</button>
     </div>
 
     <div class="button-frame">
-      <a href="https://listadobill.github.io/tv/tvdobill">
-        <img src="https://www.minhaoperadora.com.br/wp-content/uploads/2020/01/Confira-qual-canal-foi-o-mais-visto-da-TV-paga-em-2019.jpg" alt="TV DO BILL - SMARTTV">
-      </a>
-      <p>TV DO BILL - SMART</p>
+      <button onclick="loadPage('https://listadobill.github.io/tv/tvdobill')">TV DO BILL - SMART</button>
     </div>
 
     <div class="button-frame">
-      <a href="https://listadobill.github.io/tv/provisoria">
-        <img src="https://www.minhaoperadora.com.br/wp-content/uploads/2020/01/Confira-qual-canal-foi-o-mais-visto-da-TV-paga-em-2019.jpg" alt="LISTA PROVISÓRIA">
-      </a>
-      <p>LISTA PROVISÓRIA</p>
+      <button onclick="loadPage('https://listadobill.github.io/tv/provisoria')">LISTA PROVISÓRIA</button>
     </div>
 
     <div class="button-frame">
-      <a href="https://listadobill.github.io/tv/smarttv_plutotvbr">
-        <img src="https://acontecendoaqui.com.br/wp-content/uploads/2020/08/pluto_tv_2.jpg" alt="Pluto TV Brasil">
-      </a>
-      <p>Pluto TV BR</p>
+      <button onclick="loadPage('https://listadobill.github.io/tv/smarttv_plutotvbr')">Pluto TV BR</button>
     </div>
 
-    <!-- Nova entrada adicionada -->
     <div class="button-frame">
-      <a href="https://warezcdn.com/listing.php?type=movies">
-        <img src="https://5d77b6650f30653298b56a83.static-01.com/l/images/ce5feaa9860fe80e89869ad415563216173809d5.jpg" alt="FILMES E SÉRIES - SERVIDOR 1">
-      </a>
-      <p>FILMES E SÉRIES - SERVIDOR 1</p>
-    </div>
-
-    <!-- Novo botão adicionado -->
-    <div class="button-frame">
-      <a href="https://listadobill.github.io/tv/tvdobillweb">
-        <img src="https://puretrend.com.br/wp-content/uploads/2021/04/Tv-Online.jpg" alt="TV DO BILL - COMPUTADORES E CELULARES">
-      </a>
-      <p>TV DO BILL - COMPUTADORES E CELULARES</p>
+      <button onclick="loadPage('https://warezcdn.com/listing.php?type=movies')">FILMES E SÉRIES - SERVIDOR 1</button>
     </div>
   </div>
 
@@ -169,10 +141,16 @@
     <h2>Nossas listas para aplicativos IPTV:</h2>
     <ul>
       <li><a href="https://is.gd/30CHK5">IPTV-ORG BR - https://is.gd/30CHK5</a></li>
-      <li><a href="https://is.gd/8RhxXi">TV DO BILL - IPTV - https://is.gd/iRxQt6</a></li>
+      <li><a href="https://is.gd/iRxQt6">TV DO BILL - IPTV - https://is.gd/iRxQt6</a></li>
       <li><a href="https://is.gd/bW0K4a">LISTA PROVISÓRIA 2 - https://is.gd/bW0K4a</a></li>
       <li><a href="https://is.gd/4Fbg5w">PLUTO TV BR - https://is.gd/4Fbg5w</a></li>
     </ul>
   </div>
+
+  <script>
+    function loadPage(url) {
+      window.location.href = url;
+    }
+  </script>
 </body>
 </html>
