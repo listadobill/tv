@@ -143,6 +143,20 @@
             } else if (videoPlayer.msRequestFullscreen) {
                 videoPlayer.msRequestFullscreen();
             }
+
+            // Lidar com erros de reprodução do vídeo
+            videoPlayer.on('error', handleVideoError);
+        }
+
+        // Função para lidar com erros de reprodução de vídeo
+        function handleVideoError() {
+            // Exibir uma mensagem de erro ao usuário
+            console.log('Ocorreu um erro na reprodução do vídeo.');
+
+            // Recarregar o vídeo
+            var videoPlayer = videojs('video-player');
+            videoPlayer.src(videoPlayer.src()); // Recarregar o vídeo
+            videoPlayer.play(); // Iniciar a reprodução novamente
         }
 
         // Função para destacar o botão selecionado
