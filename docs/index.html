@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TV DO BILL - A TV stream grátis de verdade</title>
+  <title>TV DO BILL - Modo Noturno</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -101,6 +101,29 @@
       color: #fff;
       text-decoration: none;
     }
+
+    .top-right {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .top-right button {
+      background-color: #e73844;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-left: 10px;
+    }
+
+    .top-right button:hover,
+    .top-right button:focus {
+      background-color: #c41e2d;
+    }
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -111,25 +134,30 @@
     <p>A TV stream grátis de verdade</p>
   </div>
 
+  <div class="top-right">
+    <button onclick="loadPage('https://drive.google.com/file/d/1OeAvvaBMvnsj6WEnjgbvmKerjBsGk38A/view?usp=drive_link')">APP DO BILL</button>
+    <button onclick="loadPage('https://drive.google.com/file/d/1TjkCJ5vv8FRlxRGfou21Ry1iTFmRXDRx/view?usp=sharing')">BLOQUEADOR DE ANÚNCIO PARA ANDROID</button>
+  </div>
+
   <div class="button-grid">
     <div class="button-frame">
       <button onclick="loadPage('https://listadobill.github.io/tv/iptv_org_br.html')">IPTV ORG BR</button>
+      <p>IPTV ORG BR</p>
     </div>
 
     <div class="button-frame">
       <button onclick="loadPage('https://listadobill.github.io/tv/tvdobill')">TV DO BILL - SMART</button>
+      <p>TV DO BILL - SMART</p>
     </div>
 
     <div class="button-frame">
       <button onclick="loadPage('https://listadobill.github.io/tv/provisoria')">LISTA PROVISÓRIA</button>
+      <p>LISTA PROVISÓRIA</p>
     </div>
 
     <div class="button-frame">
       <button onclick="loadPage('https://listadobill.github.io/tv/smarttv_plutotvbr')">Pluto TV BR</button>
-    </div>
-
-    <div class="button-frame">
-      <button onclick="loadPage('https://warezcdn.com/listing.php?type=movies')">FILMES E SÉRIES - SERVIDOR 1</button>
+      <p>Pluto TV BR</p>
     </div>
   </div>
 
