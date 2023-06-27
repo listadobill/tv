@@ -10,11 +10,14 @@ https://br.embedflix.net/p2p/globosp_720p/chunks.m3u8
 
 ############# DOCUMENTÁRIOS ################
 
+#EXTINF:0 tvg-country="BR" tvg-logo="http://2.bp.blogspot.com/-050AUHplpUI/VFuobCREnsI/AAAAAAAAkCE/Zs_lGMgmA74/s1600/D.Turbo.png" group-title="DOCUMENTÁRIOS", INVESTIGAÇÃO DISCOVERY
+https://br.embedflix.net/p2p/discoveryinvesticacao/chunks.m3u8
+
 #EXTINF:0 tvg-country="BR" tvg-logo="https://logospng.org/download/animal-planet/animal-planet-4096.png" group-title="DOCUMENTÁRIOS", ANIMAL PLANET
 https://br.embedflix.net/p2p/animalplanet/chunks.m3u8
 
-#EXTINF:0 tvg-country="BR" tvg-logo="https://observatoriodatv.uol.com.br/wp-content/uploads/2017/05/Produ%C3%A7%C3%A3o-local-Anatomia-do-Crime-estreia-no-Investiga%C3%A7%C3%A3o-Discovery.jpg" group-title="DOCUMENTÁRIOS", INVESTIGAÇÃO DISCOVERY
-https://br.embedflix.net/p2p/discoveryinvesticacao/chunks.m3u8
+#EXTINF:0 tvg-country="BR" tvg-logo="https://observatoriodatv.uol.com.br/wp-content/uploads/2017/05/Produ%C3%A7%C3%A3o-local-Anatomia-do-Crime-estreia-no-Investiga%C3%A7%C3%A3o-Discovery.jpg" group-title="DOCUMENTÁRIOS", DISCOVERY TURBO
+https://br.embedflix.net/p2p/discoveryturbo/chunks.m3u8
 
 ############# ESPORTES ################
 
