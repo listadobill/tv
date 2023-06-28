@@ -1,77 +1,282 @@
 #EXTM3U
 
-############# ABERTOS ################
+############################## ENBEDFLIX #########################
 
-#EXTINF:0 tvg-country="BR" tvg-logo="https://ntvb.com.br/wp-content/uploads/2022/11/30-11-2.jpg" group-title="ABERTOS", GLOBO
-https://globoplay.globo.com/tv-globo/ao-vivo/6120663/
+#EXTINF:-1,Animal Planet
+https://embedflix.net/tv/animal-planet
 
-############# ESPORTES ################
+#EXTINF:-1,Band TV SP
+https://embedflix.net/tv/band-tv-sp
 
-#EXTINF:0 tvg-country="BR" tvg-logo="https://cdn.dm.com.br/img/inline/120000/412x0/inline_00120756_00-3.webp?fallback=https%3A%2F%2Fcdn.dm.com.br%2Fimg%2Finline%2F120000%2Finline_00120756_00.jpg%3Fxid%3D546755&xid=546755" group-title="ESPORTES", COMMENBOL 1
-https://embedflix.net/tv/conmebol-tv-1-hd
+#EXTINF:-1,BandNews
+https://embedflix.net/tv/bandnews
 
-#EXTINF:0 tvg-country="BR" tvg-logo="https://cdn.dm.com.br/img/inline/120000/412x0/inline_00120756_00-3.webp?fallback=https%3A%2F%2Fcdn.dm.com.br%2Fimg%2Finline%2F120000%2Finline_00120756_00.jpg%3Fxid%3D546755&xid=546755" group-title="ESPORTES", COMMENBOL 2
-https://embedflix.net/tv/conmebol-tv-2-hd
+#EXTINF:-1,BandSport
+https://embedflix.net/tv/bandsport
 
-#EXTINF:0 tvg-country="BR" tvg-logo="https://cdn.dm.com.br/img/inline/120000/412x0/inline_00120756_00-3.webp?fallback=https%3A%2F%2Fcdn.dm.com.br%2Fimg%2Finline%2F120000%2Finline_00120756_00.jpg%3Fxid%3D546755&xid=546755" group-title="ESPORTES", COMMENBOL 3
-https://embedflix.net/tv/conmebol-tv-3-hd
-
-#EXTINF:0 tvg-country="BR" tvg-logo="https://tntsports.com.br/__export/1610630796918/sites/esporteinterativo/arte/apps/facebook_20210114.jpg" group-title="ESPORTES", TNT SPORTS 1
-https://embedflix.net/tv/tnt-sports
-
-#EXTINF:0 tvg-country="BR" tvg-logo="https://tntsports.com.br/__export/1610630796918/sites/esporteinterativo/arte/apps/facebook_20210114.jpg" group-title="ESPORTES", TNT SPORTS 2
-https://embedflix.net/tv/tnt-sports-2
-
-#EXTINF:0 tvg-country="BR" tvg-logo="https://tntsports.com.br/__export/1610630796918/sites/esporteinterativo/arte/apps/facebook_20210114.jpg" group-title="ESPORTES", TNT SPORTS 3
-https://embedflix.net/tv/tnt-sports-3
-
-#EXTINF:0 tvg-country="BR" tvg-logo="https://tntsports.com.br/__export/1610630796918/sites/esporteinterativo/arte/apps/facebook_20210114.jpg" group-title="ESPORTES", TNT SPORTS 4
-https://embedflix.net/tv/tnt-sports-4
-
-#EXTINF:0 tvg-country="BR" tvg-logo="https://tntsports.com.br/__export/1610630796918/sites/esporteinterativo/arte/apps/facebook_20210114.jpg" group-title="ESPORTES", TNT SPORTS 5
-https://embedflix.net/tv/tnt-sports-5
-
-############# FILMES E SÉRIES ################
-
-#EXTINF:0 tvg-country="BR" tvg-logo="https://focalizando.com.br/sites/default/files/inline-images/hbo-2-ao-vivo-24-horas.webp" group-title="FILMES", HBO 2
-https://embedflix.net/tv/hbo-2
-
-#EXTINF:0 tvg-country="BR" tvg-logo="https://tvmap.com.br/images/ch/665.jpg" group-title="FILMES", HBO POP
-https://embedflix.net/tv/hbo-pop
-
-#EXTINF:0 tvg-country="BR" tvg-logo="https://cdn.mitvstatic.com/channels/br_telecine-cult-hd_m.png" group-title="FILMES", TELECINE CULT
-https://embedflix.net/tv/telecine-cult
-
-#EXTINF:0 tvg-country="BR" tvg-logo="https://cdn.mundodastribos.com/2021/05/Programacao-Telecine-Touch-3.jpg" group-title="FILMES", TELECINE TOUCH
-https://embedflix.net/tv/telecine-touch
-
-#EXTINF:0 tvg-country="BR" tvg-logo="https://www.logolynx.com/images/logolynx/ae/ae12d815c5924d83769610227fe5d635.jpeg" group-title="FILMES", TNT
-https://embedflix.net/tv/tnt
-
-############# NOTÍCIAS ################
-
-#EXTINF:0 tvg-country="BR" tvg-logo="https://s2.glbimg.com/1Sx6hxliiHryHvgT3_d0j5v70YI=/1200x630/s.glbimg.com/jo/g1/f/original/2010/10/14/globonewslogo.jpg" group-title="NOTICIAS", GLOBO NEWS
+#EXTINF:-1,BR Globo News HD
 https://embedflix.net/tv/br-globo-news-hd
 
-############## PARAMOUNT ################
+#EXTINF:-1,Cartoon Network
+https://embedflix.net/tv/cartoon-network
 
-#EXTINF:0 tvg-country="BR" tvg-logo="https://skdesu.com/wp-content/uploads/2022/12/paramout-plus.jpg" group-title="PARAMOUNT", PARAMOUNT PLUS 1
+#EXTINF:-1,CNN Brasil HD
+https://embedflix.net/tv/cnn-brasil-hd
+
+#EXTINF:-1,Comedy Central
+https://embedflix.net/tv/comedy-central
+
+#EXTINF:-1,Combate
+https://embedflix.net/tv/combate
+
+#EXTINF:-1,Conmebol TV 1 HD
+https://embedflix.net/tv/conmebol-tv-1-hd
+
+#EXTINF:-1,Conmebol TV 2 HD
+https://embedflix.net/tv/conmebol-tv-2-hd
+
+#EXTINF:-1,Conmebol TV 3 HD
+https://embedflix.net/tv/conmebol-tv-3-hd
+
+#EXTINF:-1,Discovery Channel HD
+https://embedflix.net/tv/discovery-channel-hd
+
+#EXTINF:-1,Discovery Kids
+https://embedflix.net/tv/discovery-kids
+
+#EXTINF:-1,Discovery Turbo
+https://embedflix.net/tv/discovery-turbo
+
+#EXTINF:-1,Discovery World
+https://embedflix.net/tv/discovery-world
+
+#EXTINF:-1,Disney Channel
+https://embedflix.net/tv/disney-channel
+
+#EXTINF:-1,Disney XD
+https://embedflix.net/tv/disney-xd
+
+#EXTINF:-1,DAZN
+https://embedflix.net/tv/dazn
+
+#EXTINF:-1,DAZN 2
+https://embedflix.net/tv/dazn-2
+
+#EXTINF:-1,DAZN 3
+https://embedflix.net/tv/dazn-3
+
+#EXTINF:-1,ESPN
+https://embedflix.net/tv/espn
+
+#EXTINF:-1,ESPN 2
+https://embedflix.net/tv/espn-2
+
+#EXTINF:-1,ESPN 3
+https://embedflix.net/tv/espn-3
+
+#EXTINF:-1,ESPN 4
+https://embedflix.net/tv/espn-4
+
+#EXTINF:-1,ESPN Extra
+https://embedflix.net/tv/espn-extra
+
+#EXTINF:-1,FX HD
+https://embedflix.net/tv/fx-hd
+
+#EXTINF:-1,Fox Sport 2 HD
+https://embedflix.net/tv/fox-sport-2-hd
+
+#EXTINF:-1,Fox Sport 3 HD
+https://embedflix.net/tv/fox-sport-3-hd
+
+#EXTINF:-1,Globo Rio
+https://embedflix.net/tv/globo-rio
+
+#EXTINF:-1,Globo SP
+https://embedflix.net/tv/globo-sp
+
+#EXTINF:-1,Gloob
+https://embedflix.net/tv/gloob
+
+#EXTINF:-1,Gloobinho
+https://embedflix.net/tv/gloobinho
+
+#EXTINF:-1,H2
+https://embedflix.net/tv/h2
+
+#EXTINF:-1,HBO 2
+https://embedflix.net/tv/hbo-2
+
+#EXTINF:-1,HBO Family
+https://embedflix.net/tv/hbo-family
+
+#EXTINF:-1,HBO Max
+https://embedflix.net/tv/hbo-max
+
+#EXTINF:-1,HBO Max 2
+https://embedflix.net/tv/hbo-max-2
+
+#EXTINF:-1,HBO Max 3
+https://embedflix.net/tv/hbo-max-3
+
+#EXTINF:-1,HBO Max 4
+https://embedflix.net/tv/hbo-max-4
+
+#EXTINF:-1,HBO Max 5
+https://embedflix.net/tv/hbo-max-5
+
+#EXTINF:-1,HBO Mundi
+https://embedflix.net/tv/hbo-mundi
+
+#EXTINF:-1,HBO Plus
+https://embedflix.net/tv/hbo-plus
+
+#EXTINF:-1,HBO Pop
+https://embedflix.net/tv/hbo-pop
+
+#EXTINF:-1,HBO Signature
+https://embedflix.net/tv/hbo-signature
+
+#EXTINF:-1,HBO Xtreme
+https://embedflix.net/tv/hbo-xtreme
+
+#EXTINF:-1,History Channel
+https://embedflix.net/tv/history-channel
+
+#EXTINF:-1,Investigação Discovery
+https://embedflix.net/tv/investigacao-discovery
+
+#EXTINF:-1,Megapix
+https://embedflix.net/tv/megapix
+
+#EXTINF:-1,Multishow
+https://embedflix.net/tv/multishow
+
+#EXTINF:-1,National Geographic
+https://embedflix.net/tv/national-geographic
+
+#EXTINF:-1,Nick Jr
+https://embedflix.net/tv/nick-jr
+
+#EXTINF:-1,Nickelodeon
+https://embedflix.net/tv/nickelodeon
+
+#EXTINF:-1,Paramount Plus
 https://embedflix.net/tv/paramount-plus
 
-#EXTINF:0 tvg-country="BR" tvg-logo="https://skdesu.com/wp-content/uploads/2022/12/paramout-plus.jpg" group-title="PARAMOUNT", PARAMOUNT PLUS 2
+#EXTINF:-1,Paramount Plus 2
 https://embedflix.net/tv/paramount-plus-2
 
-#EXTINF:0 tvg-country="BR" tvg-logo="https://skdesu.com/wp-content/uploads/2022/12/paramout-plus.jpg" group-title="PARAMOUNT", PARAMOUNT PLUS 3
+#EXTINF:-1,Paramount Plus 3
 https://embedflix.net/tv/paramount-plus-3
 
-############# PRIME ################
+#EXTINF:-1,PFC Clubes FHD
+https://embedflix.net/tv/pfc-clubes-fhd
 
-#EXTINF:0 tvg-country="BR" tvg-logo="https://img.utdstc.com/icon/8d0/5dc/8d05dcf1d6034e9b6dffbab81f64ca8e61a135cc2c738e641b081d4611ba3ca2:200" group-title="PRIME VIDEO", PRIME VIDEO 1
+#EXTINF:-1,PRFC 1 HD
+https://embedflix.net/tv/prfc-1-hd
+
+#EXTINF:-1,PRFC 2 HD
+https://embedflix.net/tv/prfc-2-hd
+
+#EXTINF:-1,PRFC 3 HD
+https://embedflix.net/tv/prfc-3-hd
+
+#EXTINF:-1,PRFC 4 HD
+https://embedflix.net/tv/prfc-4-hd
+
+#EXTINF:-1,PRFC 5 HD
+https://embedflix.net/tv/prfc-5-hd
+
+#EXTINF:-1,PRFC 6 HD
+https://embedflix.net/tv/prfc-6-hd
+
+#EXTINF:-1,PRFC 7 HD
+https://embedflix.net/tv/prfc-7-hd
+
+#EXTINF:-1,PRFC 8 HD
+https://embedflix.net/tv/prfc-8-hd
+
+#EXTINF:-1,Prime TV
 https://embedflix.net/tv/prime-tv
 
-#EXTINF:0 tvg-country="BR" tvg-logo="https://img.utdstc.com/icon/8d0/5dc/8d05dcf1d6034e9b6dffbab81f64ca8e61a135cc2c738e641b081d4611ba3ca2:200" group-title="PRIME VIDEO", PRIME VIDEO 2
+#EXTINF:-1,Prime TV 2
 https://embedflix.net/tv/prime-tv-2
 
-#EXTINF:0 tvg-country="BR" tvg-logo="https://img.utdstc.com/icon/8d0/5dc/8d05dcf1d6034e9b6dffbab81f64ca8e61a135cc2c738e641b081d4611ba3ca2:200" group-title="PRIME VIDEO", PRIME VIDEO 3
+#EXTINF:-1,Prime TV 3
 https://embedflix.net/tv/prime-tv-3
 
+#EXTINF:-1,RedeTV
+https://embedflix.net/tv/redetv
+
+#EXTINF:-1,Record TV SP
+https://embedflix.net/tv/record-tv-sp
+
+#EXTINF:-1,SBT
+https://embedflix.net/tv/sbt
+
+#EXTINF:-1,Space
+https://embedflix.net/tv/space
+
+#EXTINF:-1,Sportv HD
+https://embedflix.net/tv/sportv-hd
+
+#EXTINF:-1,Star 1 HD
+https://embedflix.net/tv/star-1-hd
+
+#EXTINF:-1,Star 2 HD
+https://embedflix.net/tv/star-2-hd
+
+#EXTINF:-1,Star 3 HD
+https://embedflix.net/tv/star-3-hd
+
+#EXTINF:-1,Star 4 HD
+https://embedflix.net/tv/star-4-hd
+
+#EXTINF:-1,Star Channel HD
+https://embedflix.net/tv/star-channel-hd
+
+#EXTINF:-1,Star Life HD
+https://embedflix.net/tv/star-life-hd
+
+#EXTINF:-1,TNT
+https://embedflix.net/tv/tnt
+
+#EXTINF:-1,TNT Series
+https://embedflix.net/tv/tnt-series
+
+#EXTINF:-1,TNT Sports
+https://embedflix.net/tv/tnt-sports
+
+#EXTINF:-1,TNT Sports 2
+https://embedflix.net/tv/tnt-sports-2
+
+#EXTINF:-1,TNT Sports 3
+https://embedflix.net/tv/tnt-sports-3
+
+#EXTINF:-1,TNT Sports 4
+https://embedflix.net/tv/tnt-sports-4
+
+#EXTINF:-1,TNT Sports 5
+https://embedflix.net/tv/tnt-sports-5
+
+#EXTINF:-1,Tooncast
+https://embedflix.net/tv/tooncast
+
+#EXTINF:-1,Telecine Action HD
+https://embedflix.net/tv/telecine-action-hd
+
+#EXTINF:-1,Telecine Cult
+https://embedflix.net/tv/telecine-cult
+
+#EXTINF:-1,Telecine Fun HD
+https://embedflix.net/tv/telecine-fun-hd
+
+#EXTINF:-1,Telecine Pipoca HD
+https://embedflix.net/tv/telecine-pipoca-hd
+
+#EXTINF:-1,Telecine Premium HD
+https://embedflix.net/tv/telecine-premium-hd
+
+#EXTINF:-1,Warner Channel
+https://embedflix.net/tv/warner-channel
