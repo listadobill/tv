@@ -7,16 +7,21 @@
             display: flex;
             background-color: #333;
             color: #fff;
+            margin: 0;
+            padding: 0;
         }
 
         #channel-list {
             flex: 1;
             padding: 20px;
+            overflow-y: auto; /* Habilita a rolagem vertical */
+            overflow-x: hidden; /* Esconde a rolagem horizontal */
         }
 
         #channel-player {
             flex: 2;
             padding: 20px;
+            position: relative; /* Posicionamento relativo para o player */
         }
 
         ul {
@@ -42,6 +47,14 @@
 
         button:hover {
             background-color: #ff6666;
+        }
+
+        iframe {
+            position: absolute; /* Posicionamento absoluto para o iframe */
+            width: 90%;
+            height: 12%;
+            top: 0;
+            left: 0;
         }
 
         @media (prefers-color-scheme: dark) {
@@ -80,10 +93,23 @@
             playerContainer.firstChild.requestFullscreen();
         }
 
+        // Função para ajustar o tamanho do iframe com base na resolução da tela
+        function adjustIframeSize() {
+            var iframe = document.querySelector("#channel-player iframe");
+            var channelList = document.querySelector("#channel-list");
+            var screenHeight = window.innerHeight;
+
+            // Subtrai a altura da lista de canais do tamanho da janela
+            var availableHeight = screenHeight - channelList.clientHeight;
+
+            // Ajusta o tamanho do iframe para 90% da altura disponível
+            iframe.style.height = availableHeight * 0.9 + "px";
+        }
+
         // Função para carregar a lista de canais
         function loadChannels() {
             var channelList = document.querySelector("#channel-list ul");
-            var playlistURL = "https://raw.githubusercontent.com/listadobill/tv/main/tvweb.m3u";
+            var playlistURL = "https://raw.githubusercontent.com/listadobill/tv/main/web.m3u";
 
             fetch(playlistURL)
                 .then(response => response.text())
@@ -120,7 +146,11 @@
         // Carrega os canais ao carregar a página
         window.onload = function() {
             loadChannels();
+            adjustIframeSize(); // Ajusta o tamanho do iframe inicialmente
         };
+
+        // Atualiza o tamanho do iframe quando a janela do navegador for redimensionada
+        window.addEventListener("resize", adjustIframeSize);
     </script>
 </body>
 </html>
