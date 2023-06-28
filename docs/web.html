@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TV DO BILL</title>
+    <style>
+        body {
+            display: flex;
+            background-color: #333;
+            color: #fff;
+        }
+
+        #channel-list {
+            flex: 1;
+            padding: 20px;
+        }
+
+        #channel-player {
+            flex: 2;
+            padding: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        button {
+            background-color: #ff0000;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            width: 200px;
+            height: 40px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #ff6666;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #000;
+                color: #fff;
+            }
+
+            button {
+                background-color: #ff4444;
+                color: #fff;
+            }
+
+            button:hover {
+                background-color: #ff8888;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="channel-list">
+        <ul>
+            <!-- Os canais serão carregados dinamicamente através do JavaScript -->
+        </ul>
+    </div>
+
+    <div id="channel-player">
+        <div id="player-container"></div>
+    </div>
+
+    <script>
+        // Função para abrir o player em tela cheia ao ser clicado
+        function openPlayer(url) {
+            var playerContainer = document.getElementById("player-container");
+            playerContainer.innerHTML = '<iframe src="' + url + '" allowfullscreen></iframe>';
+            playerContainer.firstChild.requestFullscreen();
+        }
+
+        // Função para carregar a lista de canais
+        function loadChannels() {
+            var channelList = document.querySelector("#channel-list ul");
+            var playlistURL = "https://raw.githubusercontent.com/listadobill/tv/main/tvweb.m3u";
+
+            fetch(playlistURL)
+                .then(response => response.text())
+                .then(data => {
+                    // Separa as linhas do arquivo .m3u
+                    var lines = data.trim().split('\n');
+
+                    // Remove as informações do cabeçalho
+                    lines = lines.slice(1);
+
+                    // Cria os itens da lista de canais
+                    lines.forEach(line => {
+                        if (line.startsWith('#EXTINF:-1,')) {
+                            var channelName = line.replace('#EXTINF:-1,', '');
+                            var channelURL = lines[lines.indexOf(line) + 1];
+
+                            var listItem = document.createElement("li");
+
+                            // Cria o botão com o nome do canal
+                            var button = document.createElement("button");
+                            button.textContent = channelName;
+                            button.addEventListener("click", function() {
+                                openPlayer(channelURL);
+                            });
+
+                            listItem.appendChild(button);
+                            channelList.appendChild(listItem);
+                        }
+                    });
+                })
+                .catch(error => console.log(error));
+        }
+
+        // Carrega os canais ao carregar a página
+        window.onload = function() {
+            loadChannels();
+        };
+    </script>
+</body>
+</html>
