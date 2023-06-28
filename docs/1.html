@@ -1,28 +1,174 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="https://embedflix.net/img/favicon/32.png" sizes="32x32">
-<link rel="icon" href="https://embedflix.net/img/favicon/192.png" sizes="192x192">
-<title>Assistir BR: Globo News HD Online HD - Embedder.net</title>
+    <title>TV DO BILL1</title>
+    <style>
+        body {
+            display: flex;
+            background-color: #333;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
 
-<link rel="stylesheet" href="https://embedflix.net/css/selectize.min.css?v=1.0.0.1">
-<link rel="stylesheet" href="https://embedflix.net/css/player.css?v=1.0.0.1">
-<link rel="stylesheet" href="https://embedflix.net/css/lancaster_io.css?v=1.0.0.1">
-<link rel="stylesheet" href="https://embedflix.net/css/remixicon.css?v=1.0.0.1">
+        #channel-list {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto; /* Habilita a rolagem vertical */
+            overflow-x: hidden; /* Esconde a rolagem horizontal */
+            position: relative; /* Posicionamento relativo para permitir o ajuste dos botões */
+            z-index: 2; /* Define a ordem de empilhamento para ficar sobre o player */
+        }
 
-<script src="https://embedflix.net/js/jquery.min.js?v=1.0.0.1"></script>
-<meta name="a.validate.02" content="5GSRoRplTEVOnXcnOW2DypTe9dKHPEet5E60" />
-<script type="text/javascript">
-$(document).on({
-    "contextmenu": function(e) {
-        e.preventDefault();
-    }
-});
-</script>
+        #channel-list ul {
+            background-color: rgba(0, 0, 0, 0); /* Define a transparência do fundo */
+            padding: 10px;
+            border-radius: 5px;
+        }
 
-<script type="text/javascript">
-/*<![CDATA[/* */
-(function(){if(window.b6d79e45136661625b0e17f8077d4dce) return; window.b6d79e45136661625b0e17f8077d4dce="EWK9_K3vuz7uMY_xONL_2fHKD2SkJQEQq9U3Onugz004CRSYW0SPLeDbdF1UIU381uBsuIGYdKPI8FY";var b=['wpbDjhAbZhJVEg/CkcOd','wqZswofCunw4VcK7FMKJw6A3w5fCsEYDw7VER8Ox','NiAS','wr7Dq8O+w7xPBSzDlA==','KcO+w4rDksOsa8Op','wo3CvnZt','wrbCq8OGSQ==','wofDgUbCoSEXe8KXw7xzXQY=','SsKLCMKPw6UaNcOEw7HCjBTDimBUw4wFwpfDnsKVwqJ2w6E=','JcOvw5jDg8OqPcKyw4s=','AB3CtMKWw7E0w6kKEm3CnVVE','KcK+H8KAwohAwrB7w7NqwrTCjw==','wrHCscOERcOwKw==','w4rDrVTCscKzwo3DucORw40xw6dAw6Qdw6cAF8KfEF0lwrDCl8OwwqkwSw81w5ZYQGYLVnnCmWTCjcKDworCi8OHWsKlw6VrGcOV','w4gvBcO+wpDDow==.
+        #channel-player {
+            flex: 2;
+            padding: 20px;
+            position: relative; /* Posicionamento relativo para o player */
+            z-index: 1; /* Define a ordem de empilhamento para ficar abaixo da lista */
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        button {
+            background-color: #ff0000;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            width: 200px;
+            height: 40px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #ff6666;
+        }
+
+        iframe {
+            width: 100%;
+            height: calc(100vh - 40px); /* Subtrai a altura do player-container */
+            position: fixed; /* Posicionamento fixo para o iframe */
+            top: 0;
+            left: 0;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #000;
+                color: #fff;
+            }
+
+            button {
+                background-color: #ff4444;
+                color: #fff;
+            }
+
+            button:hover {
+                background-color: #ff8888;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="channel-list">
+        <ul>
+            <!-- Os canais serão carregados dinamicamente através do JavaScript -->
+        </ul>
+    </div>
+
+    <div id="channel-player">
+        <div id="player-container"></div>
+    </div>
+
+    <script>
+        // Função para abrir o player em tela cheia ao ser clicado
+        function openPlayer(url) {
+            var playerContainer = document.getElementById("player-container");
+            playerContainer.innerHTML = '<iframe src="' + url + '" allowfullscreen></iframe>';
+            playerContainer.firstChild.requestFullscreen();
+        }
+
+        // Função para ajustar o tamanho do iframe com base na resolução da tela
+        function adjustIframeSize() {
+            var iframe = document.querySelector("#channel-player iframe");
+            var screenHeight = window.innerHeight;
+
+            // Ajusta o tamanho do iframe para ocupar toda a altura disponível
+            iframe.style.height = screenHeight + "px";
+        }
+
+        // Função para carregar a lista de canais
+        function loadChannels() {
+            var channelList = document.querySelector("#channel-list ul");
+            var playlistURL = "https://raw.githubusercontent.com/listadobill/tv/main/web.m3u";
+
+            fetch(playlistURL)
+                .then(response => response.text())
+                .then(data => {
+                    // Separa as linhas do arquivo .m3u
+                    var lines = data.trim().split('\n');
+
+                    // Remove as informações do cabeçalho
+                    lines = lines.slice(1);
+
+                    // Cria os itens da lista de canais
+                    lines.forEach(line => {
+                        if (line.startsWith('#EXTINF:-1,')) {
+                            var channelName = line.replace('#EXTINF:-1,', '');
+                            var channelURL = lines[lines.indexOf(line) + 1];
+
+                            var listItem = document.createElement("li");
+
+                            // Cria o botão com o nome do canal
+                            var button = document.createElement("button");
+                            button.textContent = channelName;
+                            button.addEventListener("click", function() {
+                                openPlayer(channelURL);
+                            });
+
+                            listItem.appendChild(button);
+                            channelList.appendChild(listItem);
+                        }
+                    });
+
+                    // Carrega um canal aleatório
+                    var randomChannel = Math.floor(Math.random() * lines.length);
+                    var randomChannelURL = lines[randomChannel + 1];
+                    openPlayer(randomChannelURL);
+                })
+                .catch(error => console.log(error));
+        }
+
+        // Carrega os canais ao carregar a página
+        window.onload = function() {
+            loadChannels();
+            adjustIframeSize(); // Ajusta o tamanho do iframe inicialmente
+        };
+
+        // Atualiza o tamanho do iframe quando a janela do navegador for redimensionada
+        window.addEventListener("resize", adjustIframeSize);
+
+        // Inicia automaticamente o player assim que a página for carregada
+        window.addEventListener("load", function() {
+            var iframe = document.querySelector("#player-container iframe");
+            if (iframe) {
+                iframe.src += "&autoplay=1";
+            }
+        });
+    </script>
+</body>
+</html>
