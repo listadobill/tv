@@ -144,6 +144,11 @@
                             channelList.appendChild(listItem);
                         }
                     });
+
+                    // Carrega um canal aleatório
+                    var randomChannel = Math.floor(Math.random() * lines.length);
+                    var randomChannelURL = lines[randomChannel + 1];
+                    openPlayer(randomChannelURL);
                 })
                 .catch(error => console.log(error));
         }
@@ -156,6 +161,14 @@
 
         // Atualiza o tamanho do iframe quando a janela do navegador for redimensionada
         window.addEventListener("resize", adjustIframeSize);
+
+        // Inicia automaticamente o player assim que a página for carregada
+        window.addEventListener("load", function() {
+            var iframe = document.querySelector("#player-container iframe");
+            if (iframe) {
+                iframe.src += "&autoplay=1";
+            }
+        });
     </script>
 </body>
 </html>
