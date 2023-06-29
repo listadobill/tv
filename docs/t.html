@@ -49,12 +49,28 @@
                         link.on("click", function(e) {
                             e.preventDefault();
                             var channelUrl = $(this).attr("href");
-                            channelIframe.attr("src", channelUrl);
+                            openFullscreen(channelUrl);
                         });
                     }
                 }
             });
         });
+
+        function openFullscreen(url) {
+            var elem = document.getElementById("channelIframe");
+
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.mozRequestFullScreen) { /* Firefox */
+                elem.mozRequestFullScreen();
+            } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) { /* IE/Edge */
+                elem.msRequestFullscreen();
+            }
+
+            elem.src = url;
+        }
     </script>
 </head>
 <body>
