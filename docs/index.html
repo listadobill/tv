@@ -110,20 +110,13 @@
     </div>
 
     <div id="channel-player">
-        <div id="player-container"></div>
+        <!-- Conteúdo do player -->
     </div>
 
     <script>
         // Função para abrir uma nova página na mesma aba
         function openPage(url) {
             window.location.href = url;
-        }
-
-        // Função para abrir o player em tela cheia ao ser clicado
-        function openPlayer(url) {
-            var playerContainer = document.getElementById("player-container");
-            playerContainer.innerHTML = '<iframe src="' + url + '" allowfullscreen></iframe>';
-            playerContainer.firstChild.requestFullscreen();
         }
 
         // Função para ajustar o tamanho do iframe com base na resolução da tela
@@ -161,7 +154,7 @@
                             var button = document.createElement("button");
                             button.textContent = channelName;
                             button.addEventListener("click", function() {
-                                openPlayer(channelURL);
+                                openPage(channelURL);
                             });
 
                             listItem.appendChild(button);
@@ -181,53 +174,10 @@
         window.onload = function() {
             loadChannels();
             adjustIframeSize(); // Ajusta o tamanho do iframe inicialmente
-            playVideo(); // Reproduz o vídeo automaticamente
         };
 
         // Atualiza o tamanho do iframe quando a janela do navegador for redimensionada
         window.addEventListener("resize", adjustIframeSize);
-
-        // Função para reproduzir o vídeo automaticamente
-        function playVideo() {
-            var iframe = document.querySelector("#player-container iframe");
-            if (iframe) {
-                var promise = iframe.play();
-
-                if (promise !== undefined) {
-                    promise.then(_ => {
-                        // Reprodução automática iniciada com sucesso
-                    }).catch(error => {
-                        // A reprodução automática foi bloqueada
-                        // Pode ser necessário interagir com a página para permitir a reprodução automática
-                        console.log("Reprodução automática bloqueada:", error);
-                    });
-                }
-            }
-        }
-
-        // Função para ajustar a rolagem da lista ao passar o cursor
-        function adjustListScroll(event) {
-            var channelList = document.getElementById("channel-list");
-            var mouseY = event.clientY;
-            var listTop = channelList.getBoundingClientRect().top;
-            var listHeight = channelList.offsetHeight;
-
-            // Calcula a posição do cursor em relação à lista
-            var cursorPosition = mouseY - listTop;
-
-            // Ajusta a rolagem da lista
-            if (cursorPosition < 50) {
-                // Se o cursor estiver próximo ao topo da lista, rola para cima
-                channelList.scrollTop -= 10;
-            } else if (cursorPosition > listHeight - 50) {
-                // Se o cursor estiver próximo ao final da lista, rola para baixo
-                channelList.scrollTop += 10;
-            }
-        }
-
-        // Adiciona o evento de ajuste da rolagem ao passar o cursor na lista
-        var channelList = document.getElementById("channel-list");
-        channelList.addEventListener("mousemove", adjustListScroll);
 
     </script>
 </body>
