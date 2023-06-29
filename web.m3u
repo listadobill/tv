@@ -12,7 +12,9 @@ https://vivaldi.com/pt-br/
 
 #EXTINF:-1,ADICIONE A TV DO
 https://listadobill.github.io/tv/
-#EXTINF:-1,BILL NOS FAVORITOS
+#EXTINF:-1,BILL NOS
+https://listadobill.github.io/tv/
+#EXTINF:-1,FAVORITOS
 https://listadobill.github.io/tv/
 
 #EXTINF:-1,Animal Planet
