@@ -12,9 +12,6 @@ https://embedflix.net/tv/bandnews
 #EXTINF:-1,BandSport
 https://embedflix.net/tv/bandsport
 
-#EXTINF:-1,BR Globo News HD
-https://embedflix.net/tv/br-globo-news-hd
-
 #EXTINF:-1,Cartoon Network
 https://embedflix.net/tv/cartoon-network
 
@@ -86,6 +83,9 @@ https://embedflix.net/tv/fox-sport-2-hd
 
 #EXTINF:-1,Fox Sport 3 HD
 https://embedflix.net/tv/fox-sport-3-hd
+
+#EXTINF:-1,Globo News HD
+https://embedflix.net/tv/br-globo-news-hd
 
 #EXTINF:-1,Globo Rio
 https://embedflix.net/tv/globo-rio
