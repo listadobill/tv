@@ -97,14 +97,14 @@
 </head>
 <body>
     <div id="button-container">
-        <button onclick="openPlayer('https://listadobill.github.io/tv/web')">TV WEB</button>
-        <button onclick="openPlayer('https://listadobill.github.io/tv/tvdobill')">CANAIS IPTV</button>
-        <button onclick="openPlayer('https://listadobill.github.io/tv/provisoria')">IPTV PROVISÓRIO</button>
-        <button onclick="openPlayer('https://pluto.tv/live-tv/')">PLUTO TV</button>
+        <button onclick="openPage('https://listadobill.github.io/tv')">TV WEB</button>
+        <button onclick="openPage('https://listadobill.github.io/tv/tvdobill')">CANAIS IPTV</button>
+        <button onclick="openPage('https://listadobill.github.io/tv/provisoria')">IPTV PROVISÓRIO</button>
+        <button onclick="openPage('https://pluto.tv/live-tv')">PLUTO TV</button>
     </div>
 
     <div id="channel-list">
-        <ul>
+        <ul id="channel-list-ul">
             <!-- Os canais serão carregados dinamicamente através do JavaScript -->
         </ul>
     </div>
@@ -114,6 +114,11 @@
     </div>
 
     <script>
+        // Função para abrir uma nova página na mesma aba
+        function openPage(url) {
+            window.location.href = url;
+        }
+
         // Função para abrir o player em tela cheia ao ser clicado
         function openPlayer(url) {
             var playerContainer = document.getElementById("player-container");
@@ -132,7 +137,7 @@
 
         // Função para carregar a lista de canais
         function loadChannels() {
-            var channelList = document.querySelector("#channel-list ul");
+            var channelList = document.querySelector("#channel-list-ul");
             var playlistURL = "https://raw.githubusercontent.com/listadobill/tv/main/web.m3u";
 
             fetch(playlistURL)
@@ -199,6 +204,31 @@
                 }
             }
         }
+
+        // Função para ajustar a rolagem da lista ao passar o cursor
+        function adjustListScroll(event) {
+            var channelList = document.getElementById("channel-list");
+            var mouseY = event.clientY;
+            var listTop = channelList.getBoundingClientRect().top;
+            var listHeight = channelList.offsetHeight;
+
+            // Calcula a posição do cursor em relação à lista
+            var cursorPosition = mouseY - listTop;
+
+            // Ajusta a rolagem da lista
+            if (cursorPosition < 50) {
+                // Se o cursor estiver próximo ao topo da lista, rola para cima
+                channelList.scrollTop -= 10;
+            } else if (cursorPosition > listHeight - 50) {
+                // Se o cursor estiver próximo ao final da lista, rola para baixo
+                channelList.scrollTop += 10;
+            }
+        }
+
+        // Adiciona o evento de ajuste da rolagem ao passar o cursor na lista
+        var channelList = document.getElementById("channel-list");
+        channelList.addEventListener("mousemove", adjustListScroll);
+
     </script>
 </body>
 </html>
