@@ -2,8 +2,16 @@
 <html>
 <head>
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
         #channel-list-container {
-            height: 400px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
             width: 200px;
             overflow-y: auto;
             overflow-x: hidden;
@@ -85,6 +93,15 @@
                     }
                 });
             });
+
+        // Adjust the height of the channel list container to match the window height
+        window.addEventListener('resize', () => {
+            const channelListContainer = document.getElementById('channel-list-container');
+            channelListContainer.style.height = `${window.innerHeight}px`;
+        });
+
+        // Trigger the resize event initially to set the height
+        window.dispatchEvent(new Event('resize'));
     </script>
 </body>
 </html>
