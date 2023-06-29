@@ -104,7 +104,7 @@
     </div>
 
     <div id="channel-list">
-        <ul>
+        <ul id="channel-list-ul">
             <!-- Os canais serão carregados dinamicamente através do JavaScript -->
         </ul>
     </div>
@@ -137,7 +137,7 @@
 
         // Função para carregar a lista de canais
         function loadChannels() {
-            var channelList = document.querySelector("#channel-list ul");
+            var channelList = document.querySelector("#channel-list-ul");
             var playlistURL = "https://raw.githubusercontent.com/listadobill/tv/main/web.m3u";
 
             fetch(playlistURL)
@@ -205,23 +205,30 @@
             }
         }
 
-        // Função para controlar a rolagem da lista usando o cursor da Smart TV
-        function handleCursorScroll(event) {
-            var channelList = document.querySelector("#channel-list");
-            var delta = event.deltaY;
+        // Função para ajustar a rolagem da lista ao passar o cursor
+        function adjustListScroll(event) {
+            var channelList = document.getElementById("channel-list");
+            var mouseY = event.clientY;
+            var listTop = channelList.getBoundingClientRect().top;
+            var listHeight = channelList.offsetHeight;
 
-            // Verifica a direção do movimento do cursor
-            if (delta < 0) {
-                // Movimento para cima
-                channelList.scrollTop -= 100; // Ajuste a quantidade de pixels a serem rolados para cima
-            } else {
-                // Movimento para baixo
-                channelList.scrollTop += 100; // Ajuste a quantidade de pixels a serem rolados para baixo
+            // Calcula a posição do cursor em relação à lista
+            var cursorPosition = mouseY - listTop;
+
+            // Ajusta a rolagem da lista
+            if (cursorPosition < 50) {
+                // Se o cursor estiver próximo ao topo da lista, rola para cima
+                channelList.scrollTop -= 10;
+            } else if (cursorPosition > listHeight - 50) {
+                // Se o cursor estiver próximo ao final da lista, rola para baixo
+                channelList.scrollTop += 10;
             }
         }
 
-        // Adiciona o evento de rolagem ao cursor da Smart TV
-        window.addEventListener("wheel", handleCursorScroll);
+        // Adiciona o evento de ajuste da rolagem ao passar o cursor na lista
+        var channelList = document.getElementById("channel-list");
+        channelList.addEventListener("mousemove", adjustListScroll);
+
     </script>
 </body>
 </html>
