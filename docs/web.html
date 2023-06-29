@@ -159,18 +159,16 @@
         window.onload = function() {
             loadChannels();
             adjustIframeSize(); // Ajusta o tamanho do iframe inicialmente
-        };
 
-        // Atualiza o tamanho do iframe quando a janela do navegador for redimensionada
-        window.addEventListener("resize", adjustIframeSize);
-
-        // Inicia automaticamente o player assim que a página for carregada
-        window.addEventListener("load", function() {
+            // Inicia automaticamente o player assim que a página for carregada
             var iframe = document.querySelector("#player-container iframe");
             if (iframe) {
                 iframe.src += "&autoplay=1";
             }
-        });
+        };
+
+        // Atualiza o tamanho do iframe quando a janela do navegador for redimensionada
+        window.addEventListener("resize", adjustIframeSize);
     </script>
 </body>
 </html>
