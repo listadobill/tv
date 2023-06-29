@@ -159,16 +159,29 @@
         window.onload = function() {
             loadChannels();
             adjustIframeSize(); // Ajusta o tamanho do iframe inicialmente
-
-            // Inicia automaticamente o player assim que a página for carregada
-            var iframe = document.querySelector("#player-container iframe");
-            if (iframe) {
-                iframe.src += "&autoplay=1";
-            }
+            playVideo(); // Reproduz o vídeo automaticamente
         };
 
         // Atualiza o tamanho do iframe quando a janela do navegador for redimensionada
         window.addEventListener("resize", adjustIframeSize);
+
+        // Função para reproduzir o vídeo automaticamente
+        function playVideo() {
+            var iframe = document.querySelector("#player-container iframe");
+            if (iframe) {
+                var promise = iframe.play();
+
+                if (promise !== undefined) {
+                    promise.then(_ => {
+                        // Reprodução automática iniciada com sucesso
+                    }).catch(error => {
+                        // A reprodução automática foi bloqueada
+                        // Pode ser necessário interagir com a página para permitir a reprodução automática
+                        console.log("Reprodução automática bloqueada:", error);
+                    });
+                }
+            }
+        }
     </script>
 </body>
 </html>
