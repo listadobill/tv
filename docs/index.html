@@ -1,183 +1,204 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TV DO BILL</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      color: #fff;
-      background-color: #141414;
-    }
+    <title>TV DO BILL - CANAIS WEB</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #333;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
 
-    .header {
-      background-color: transparent;
-      padding: 20px;
-      text-align: left;
-    }
+        #button-container {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            z-index: 3;
+            margin-top: 20px;
+        }
 
-    .header h1 {
-      font-size: 36px;
-      margin: 0;
-      font-weight: bold;
-      color: #e73844;
-    }
+        #channel-list {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto; /* Habilita a rolagem vertical */
+            overflow-x: hidden; /* Esconde a rolagem horizontal */
+            position: relative; /* Posicionamento relativo para permitir o ajuste dos botões */
+            z-index: 2; /* Define a ordem de empilhamento para ficar sobre o player */
+            align-self: flex-start; /* Alinha à esquerda */
+        }
 
-    .header p {
-      font-size: 18px;
-      margin: 10px 0 0;
-      font-weight: bold;
-      text-align: left;
-    }
+        #channel-list ul {
+            background-color: rgba(0, 0, 0, 0); /* Define a transparência do fundo */
+            padding: 10px;
+            border-radius: 5px;
+            position: relative; /* Posicionamento relativo para trazer para frente */
+            z-index: 2; /* Define a ordem de empilhamento para ficar sobre o player */
+        }
 
-    .button-grid {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      margin-top: 50px;
-    }
+        #channel-player {
+            flex: 2;
+            padding: 20px;
+            position: relative; /* Posicionamento relativo para o player */
+            z-index: 1; /* Define a ordem de empilhamento para ficar abaixo da lista */
+        }
 
-    .button-frame {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 10px;
-      border: 2px solid #fff;
-      transition: border-color 0.3s ease;
-      margin: 0 10px;
-    }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
 
-    .button-frame:hover,
-    .button-frame:focus {
-      border-color: #c41e2d;
-    }
+        button {
+            background-color: #ff0000;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            width: 200px;
+            height: 40px;
+            border-radius: 5px;
+        }
 
-    .button-frame button {
-      background-color: #e73844;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
+        button:hover {
+            background-color: #ff6666;
+        }
 
-    .button-frame button:hover,
-    .button-frame button:focus {
-      background-color: #c41e2d;
-    }
+        iframe {
+            width: 100%;
+            height: 100%; /* Alterado para ocupar toda a altura da tela */
+            position: fixed; /* Posicionamento fixo para o iframe */
+            top: 0;
+            left: 0;
+        }
 
-    .footer {
-      background-color: #141414;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-      font-size: 14px;
-    }
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #000;
+                color: #fff;
+            }
 
-    .iptv-list {
-      margin-top: 20px;
-      text-align: center;
-    }
+            button {
+                background-color: #ff4444;
+                color: #fff;
+            }
 
-    .iptv-list h2 {
-      font-size: 20px;
-      margin-bottom: 10px;
-    }
-
-    .iptv-list ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .iptv-list li {
-      margin-bottom: 5px;
-    }
-
-    .iptv-list a {
-      color: #fff;
-      text-decoration: none;
-    }
-
-    .top-right {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-    }
-
-    .top-right button {
-      background-color: #e73844;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      margin-left: 10px;
-    }
-
-    .top-right button:hover,
-    .top-right button:focus {
-      background-color: #c41e2d;
-    }
-  </style>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+            button:hover {
+                background-color: #ff8888;
+            }
+        }
+    </style>
 </head>
-
 <body>
-  <div class="header">
-    <h1 style="color: #e73844;">TV DO BILL</h1>
-    <p>A TV stream grátis de verdade</p>
-  </div>
-
-  <div class="top-right">
-    <button onclick="loadPage('https://drive.google.com/file/d/1OeAvvaBMvnsj6WEnjgbvmKerjBsGk38A/view?usp=drive_link')">APP DO BILL</button>
-    <button onclick="loadPage('https://drive.google.com/file/d/1TjkCJ5vv8FRlxRGfou21Ry1iTFmRXDRx/view?usp=sharing')">BLOQUEADOR DE ANÚNCIO PARA ANDROID</button>
-  </div>
-
-  <div class="button-grid">
-    <div class="button-frame">
-      <button onclick="loadPage('https://listadobill.github.io/tv/web')">TV WEB</button>
-      <p>TV WEB</p>
+    <div id="button-container">
+        <button onclick="openPlayer('https://listadobill.github.io/tv/web')">TV WEB</button>
+        <button onclick="openPlayer('https://listadobill.github.io/tv/tvdobill')">CANAIS IPTV</button>
+        <button onclick="openPlayer('https://listadobill.github.io/tv/provisoria')">IPTV PROVISÓRIO</button>
+        <button onclick="openPlayer('https://pluto.tv/live-tv/')">PLUTO TV</button>
     </div>
 
-    <div class="button-frame">
-      <button onclick="loadPage('https://listadobill.github.io/tv/tvdobill')">TV DO BILL</button>
-      <p>TV DO BILL</p>
+    <div id="channel-list">
+        <ul>
+            <!-- Os canais serão carregados dinamicamente através do JavaScript -->
+        </ul>
     </div>
 
-    <div class="button-frame">
-      <button onclick="loadPage('https://listadobill.github.io/tv/provisoria')">LISTA PROVISÓRIA</button>
-      <p>LISTA PROVISÓRIA</p>
+    <div id="channel-player">
+        <div id="player-container"></div>
     </div>
 
-    <div class="button-frame">
-      <button onclick="loadPage('https://listadobill.github.io/tv/smarttv_plutotvbr')">Pluto TV BR</button>
-      <p>Pluto TV BR</p>
-    </div>
-  </div>
+    <script>
+        // Função para abrir o player em tela cheia ao ser clicado
+        function openPlayer(url) {
+            var playerContainer = document.getElementById("player-container");
+            playerContainer.innerHTML = '<iframe src="' + url + '" allowfullscreen></iframe>';
+            playerContainer.firstChild.requestFullscreen();
+        }
 
-  <div class="footer">
-    <p>É normal eventualmente um canal, vídeo ou lista não funcionar, tenha paciência</p>
-  </div>
+        // Função para ajustar o tamanho do iframe com base na resolução da tela
+        function adjustIframeSize() {
+            var iframe = document.querySelector("#channel-player iframe");
+            var screenHeight = window.innerHeight;
 
-  <div class="iptv-list">
-    <h2>Nossas listas para aplicativos IPTV:</h2>
-    <ul>
-      <li><a href="https://is.gd/B9akFm">TV DO BILL - https://is.gd/B9akFm</a></li>
-      <li><a href="https://is.gd/bW0K4a">LISTA PROVISÓRIA - https://is.gd/bW0K4a</a></li>
-    </ul>
-  </div>
+            // Ajusta o tamanho do iframe para ocupar toda a altura disponível
+            iframe.style.height = screenHeight + "px";
+        }
 
-  <script>
-    function loadPage(url) {
-      window.location.href = url;
-    }
-  </script>
+        // Função para carregar a lista de canais
+        function loadChannels() {
+            var channelList = document.querySelector("#channel-list ul");
+            var playlistURL = "https://raw.githubusercontent.com/listadobill/tv/main/web.m3u";
+
+            fetch(playlistURL)
+                .then(response => response.text())
+                .then(data => {
+                    // Separa as linhas do arquivo .m3u
+                    var lines = data.trim().split('\n');
+
+                    // Remove as informações do cabeçalho
+                    lines = lines.slice(1);
+
+                    // Cria os itens da lista de canais
+                    lines.forEach(line => {
+                        if (line.startsWith('#EXTINF:-1,')) {
+                            var channelName = line.replace('#EXTINF:-1,', '');
+                            var channelURL = lines[lines.indexOf(line) + 1];
+
+                            var listItem = document.createElement("li");
+
+                            // Cria o botão com o nome do canal
+                            var button = document.createElement("button");
+                            button.textContent = channelName;
+                            button.addEventListener("click", function() {
+                                openPlayer(channelURL);
+                            });
+
+                            listItem.appendChild(button);
+                            channelList.appendChild(listItem);
+                        }
+                    });
+
+                    // Carrega um canal aleatório
+                    var randomChannel = Math.floor(Math.random() * lines.length);
+                    var randomChannelURL = lines[randomChannel + 1];
+                    openPlayer(randomChannelURL);
+                })
+                .catch(error => console.log(error));
+        }
+
+        // Carrega os canais ao carregar a página
+        window.onload = function() {
+            loadChannels();
+            adjustIframeSize(); // Ajusta o tamanho do iframe inicialmente
+            playVideo(); // Reproduz o vídeo automaticamente
+        };
+
+        // Atualiza o tamanho do iframe quando a janela do navegador for redimensionada
+        window.addEventListener("resize", adjustIframeSize);
+
+        // Função para reproduzir o vídeo automaticamente
+        function playVideo() {
+            var iframe = document.querySelector("#player-container iframe");
+            if (iframe) {
+                var promise = iframe.play();
+
+                if (promise !== undefined) {
+                    promise.then(_ => {
+                        // Reprodução automática iniciada com sucesso
+                    }).catch(error => {
+                        // A reprodução automática foi bloqueada
+                        // Pode ser necessário interagir com a página para permitir a reprodução automática
+                        console.log("Reprodução automática bloqueada:", error);
+                    });
+                }
+            }
+        }
+    </script>
 </body>
 </html>
