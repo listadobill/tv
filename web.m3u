@@ -1,174 +1,280 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>TV DO BILL - CANAIS WEB</title>
-    <style>
-        body {
-            display: flex;
-            background-color: #333;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-        }
+#EXTM3U
 
-        #channel-list {
-            flex: 1;
-            padding: 20px;
-            overflow-y: auto; /* Habilita a rolagem vertical */
-            overflow-x: hidden; /* Esconde a rolagem horizontal */
-            position: relative; /* Posicionamento relativo para permitir o ajuste dos botões */
-            z-index: 2; /* Define a ordem de empilhamento para ficar sobre o player */
-        }
+#EXTINF:-1,Animal Planet
+https://embedflix.net/tv/animal-planet
 
-        #channel-list ul {
-            background-color: rgba(0, 0, 0, 0); /* Define a transparência do fundo */
-            padding: 10px;
-            border-radius: 5px;
-        }
+#EXTINF:-1,Band TV SP
+https://embedflix.net/tv/band-tv-sp
 
-        #channel-player {
-            flex: 2;
-            padding: 20px;
-            position: relative; /* Posicionamento relativo para o player */
-            z-index: 1; /* Define a ordem de empilhamento para ficar abaixo da lista */
-        }
+#EXTINF:-1,BandNews
+https://embedflix.net/tv/bandnews
 
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+#EXTINF:-1,BandSport
+https://embedflix.net/tv/bandsport
 
-        button {
-            background-color: #ff0000;
-            color: #000;
-            border: none;
-            padding: 10px 20px;
-            margin-bottom: 10px;
-            font-size: 16px;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-            cursor: pointer;
-            width: 200px;
-            height: 40px;
-            border-radius: 5px;
-        }
+#EXTINF:-1,BR Globo News HD
+https://embedflix.net/tv/br-globo-news-hd
 
-        button:hover {
-            background-color: #ff6666;
-        }
+#EXTINF:-1,Cartoon Network
+https://embedflix.net/tv/cartoon-network
 
-        iframe {
-            width: 100%;
-            height: calc(100vh - 40px); /* Subtrai a altura do player-container */
-            position: fixed; /* Posicionamento fixo para o iframe */
-            top: 0;
-            left: 0;
-        }
+#EXTINF:-1,CNN Brasil HD
+https://embedflix.net/tv/cnn-brasil-hd
 
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: #000;
-                color: #fff;
-            }
+#EXTINF:-1,Comedy Central
+https://embedflix.net/tv/comedy-central
 
-            button {
-                background-color: #ff4444;
-                color: #fff;
-            }
+#EXTINF:-1,Combate
+https://embedflix.net/tv/combate
 
-            button:hover {
-                background-color: #ff8888;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div id="channel-list">
-        <ul>
-            <!-- Os canais serão carregados dinamicamente através do JavaScript -->
-        </ul>
-    </div>
+#EXTINF:-1,Conmebol TV 1 HD
+https://embedflix.net/tv/conmebol-tv-1-hd
 
-    <div id="channel-player">
-        <div id="player-container"></div>
-    </div>
+#EXTINF:-1,Conmebol TV 2 HD
+https://embedflix.net/tv/conmebol-tv-2-hd
 
-    <script>
-        // Função para abrir o player em tela cheia ao ser clicado
-        function openPlayer(url) {
-            var playerContainer = document.getElementById("player-container");
-            playerContainer.innerHTML = '<iframe src="' + url + '" allowfullscreen></iframe>';
-            playerContainer.firstChild.requestFullscreen();
-        }
+#EXTINF:-1,Conmebol TV 3 HD
+https://embedflix.net/tv/conmebol-tv-3-hd
 
-        // Função para ajustar o tamanho do iframe com base na resolução da tela
-        function adjustIframeSize() {
-            var iframe = document.querySelector("#channel-player iframe");
-            var screenHeight = window.innerHeight;
+#EXTINF:-1,Discovery Channel HD
+https://embedflix.net/tv/discovery-channel-hd
 
-            // Ajusta o tamanho do iframe para ocupar toda a altura disponível
-            iframe.style.height = screenHeight + "px";
-        }
+#EXTINF:-1,Discovery Kids
+https://embedflix.net/tv/discovery-kids
 
-        // Função para carregar a lista de canais
-        function loadChannels() {
-            var channelList = document.querySelector("#channel-list ul");
-            var playlistURL = "https://raw.githubusercontent.com/listadobill/tv/main/web.m3u";
+#EXTINF:-1,Discovery Turbo
+https://embedflix.net/tv/discovery-turbo
 
-            fetch(playlistURL)
-                .then(response => response.text())
-                .then(data => {
-                    // Separa as linhas do arquivo .m3u
-                    var lines = data.trim().split('\n');
+#EXTINF:-1,Discovery World
+https://embedflix.net/tv/discovery-world
 
-                    // Remove as informações do cabeçalho
-                    lines = lines.slice(1);
+#EXTINF:-1,Disney Channel
+https://embedflix.net/tv/disney-channel
 
-                    // Cria os itens da lista de canais
-                    lines.forEach(line => {
-                        if (line.startsWith('#EXTINF:-1,')) {
-                            var channelName = line.replace('#EXTINF:-1,', '');
-                            var channelURL = lines[lines.indexOf(line) + 1];
+#EXTINF:-1,Disney XD
+https://embedflix.net/tv/disney-xd
 
-                            var listItem = document.createElement("li");
+#EXTINF:-1,Dazn
+https://embedflix.net/tv/dazn
 
-                            // Cria o botão com o nome do canal
-                            var button = document.createElement("button");
-                            button.textContent = channelName;
-                            button.addEventListener("click", function() {
-                                openPlayer(channelURL);
-                            });
+#EXTINF:-1,Dazn 2
+https://embedflix.net/tv/dazn-2
 
-                            listItem.appendChild(button);
-                            channelList.appendChild(listItem);
-                        }
-                    });
+#EXTINF:-1,Dazn 3
+https://embedflix.net/tv/dazn-3
 
-                    // Carrega um canal aleatório
-                    var randomChannel = Math.floor(Math.random() * lines.length);
-                    var randomChannelURL = lines[randomChannel + 1];
-                    openPlayer(randomChannelURL);
-                })
-                .catch(error => console.log(error));
-        }
+#EXTINF:-1,ESPN
+https://embedflix.net/tv/espn
 
-        // Carrega os canais ao carregar a página
-        window.onload = function() {
-            loadChannels();
-            adjustIframeSize(); // Ajusta o tamanho do iframe inicialmente
-        };
+#EXTINF:-1,ESPN 2
+https://embedflix.net/tv/espn-2
 
-        // Atualiza o tamanho do iframe quando a janela do navegador for redimensionada
-        window.addEventListener("resize", adjustIframeSize);
+#EXTINF:-1,ESPN 3
+https://embedflix.net/tv/espn-3
 
-        // Inicia automaticamente o player assim que a página for carregada
-        window.addEventListener("load", function() {
-            var iframe = document.querySelector("#player-container iframe");
-            if (iframe) {
-                iframe.src += "&autoplay=1";
-            }
-        });
-    </script>
-</body>
-</html>
+#EXTINF:-1,ESPN 4
+https://embedflix.net/tv/espn-4
+
+#EXTINF:-1,ESPN Extra
+https://embedflix.net/tv/espn-extra
+
+#EXTINF:-1,FX HD
+https://embedflix.net/tv/fx-hd
+
+#EXTINF:-1,Fox Sport 2 HD
+https://embedflix.net/tv/fox-sport-2-hd
+
+#EXTINF:-1,Fox Sport 3 HD
+https://embedflix.net/tv/fox-sport-3-hd
+
+#EXTINF:-1,Globo Rio
+https://embedflix.net/tv/globo-rio
+
+#EXTINF:-1,Globo SP
+https://embedflix.net/tv/globo-sp
+
+#EXTINF:-1,Gloob
+https://embedflix.net/tv/gloob
+
+#EXTINF:-1,Gloobinho
+https://embedflix.net/tv/gloobinho
+
+#EXTINF:-1,H2
+https://embedflix.net/tv/h2
+
+#EXTINF:-1,HBO 2
+https://embedflix.net/tv/hbo-2
+
+#EXTINF:-1,HBO Family
+https://embedflix.net/tv/hbo-family
+
+#EXTINF:-1,HBO Max
+https://embedflix.net/tv/hbo-max
+
+#EXTINF:-1,HBO Max 2
+https://embedflix.net/tv/hbo-max-2
+
+#EXTINF:-1,HBO Max 3
+https://embedflix.net/tv/hbo-max-3
+
+#EXTINF:-1,HBO Max 4
+https://embedflix.net/tv/hbo-max-4
+
+#EXTINF:-1,HBO Max 5
+https://embedflix.net/tv/hbo-max-5
+
+#EXTINF:-1,HBO Mundi
+https://embedflix.net/tv/hbo-mundi
+
+#EXTINF:-1,HBO Plus
+https://embedflix.net/tv/hbo-plus
+
+#EXTINF:-1,HBO Pop
+https://embedflix.net/tv/hbo-pop
+
+#EXTINF:-1,HBO Signature
+https://embedflix.net/tv/hbo-signature
+
+#EXTINF:-1,HBO Xtreme
+https://embedflix.net/tv/hbo-xtreme
+
+#EXTINF:-1,History Channel
+https://embedflix.net/tv/history-channel
+
+#EXTINF:-1,Investigação Discovery
+https://embedflix.net/tv/investigacao-discovery
+
+#EXTINF:-1,Megapix
+https://embedflix.net/tv/megapix
+
+#EXTINF:-1,Multishow
+https://embedflix.net/tv/multishow
+
+#EXTINF:-1,National Geographic
+https://embedflix.net/tv/national-geographic
+
+#EXTINF:-1,Nick Jr.
+https://embedflix.net/tv/nick-jr
+
+#EXTINF:-1,Nickelodeon
+https://embedflix.net/tv/nickelodeon
+
+#EXTINF:-1,Paramount Plus
+https://embedflix.net/tv/paramount-plus
+
+#EXTINF:-1,Paramount Plus 2
+https://embedflix.net/tv/paramount-plus-2
+
+#EXTINF:-1,Paramount Plus 3
+https://embedflix.net/tv/paramount-plus-3
+
+#EXTINF:-1,PFC Clubes FHD
+https://embedflix.net/tv/pfc-clubes-fhd
+
+#EXTINF:-1,PRFC 1 HD
+https://embedflix.net/tv/prfc-1-hd
+
+#EXTINF:-1,PRFC 2 HD
+https://embedflix.net/tv/prfc-2-hd
+
+#EXTINF:-1,PRFC 3 HD
+https://embedflix.net/tv/prfc-3-hd
+
+#EXTINF:-1,PRFC 4 HD
+https://embedflix.net/tv/prfc-4-hd
+
+#EXTINF:-1,PRFC 5 HD
+https://embedflix.net/tv/prfc-5-hd
+
+#EXTINF:-1,PRFC 6 HD
+https://embedflix.net/tv/prfc-6-hd
+
+#EXTINF:-1,PRFC 7 HD
+https://embedflix.net/tv/prfc-7-hd
+
+#EXTINF:-1,PRFC 8 HD
+https://embedflix.net/tv/prfc-8-hd
+
+#EXTINF:-1,Prime TV
+https://embedflix.net/tv/prime-tv
+
+#EXTINF:-1,Prime TV 2
+https://embedflix.net/tv/prime-tv-2
+
+#EXTINF:-1,Prime TV 3
+https://embedflix.net/tv/prime-tv-3
+
+#EXTINF:-1,RedeTV
+https://embedflix.net/tv/redetv
+
+#EXTINF:-1,Record TV SP
+https://embedflix.net/tv/record-tv-sp
+
+#EXTINF:-1,SBT
+https://embedflix.net/tv/sbt
+
+#EXTINF:-1,Space
+https://embedflix.net/tv/space
+
+#EXTINF:-1,Sportv HD
+https://embedflix.net/tv/sportv-hd
+
+#EXTINF:-1,Star 1 HD
+https://embedflix.net/tv/star-1-hd
+
+#EXTINF:-1,Star 2 HD
+https://embedflix.net/tv/star-2-hd
+
+#EXTINF:-1,Star 3 HD
+https://embedflix.net/tv/star-3-hd
+
+#EXTINF:-1,Star 4 HD
+https://embedflix.net/tv/star-4-hd
+
+#EXTINF:-1,Star Channel HD
+https://embedflix.net/tv/star-channel-hd
+
+#EXTINF:-1,Star Life HD
+https://embedflix.net/tv/star-life-hd
+
+#EXTINF:-1,TNT
+https://embedflix.net/tv/tnt
+
+#EXTINF:-1,TNT Series
+https://embedflix.net/tv/tnt-series
+
+#EXTINF:-1,TNT Sports
+https://embedflix.net/tv/tnt-sports
+
+#EXTINF:-1,TNT Sports 2
+https://embedflix.net/tv/tnt-sports-2
+
+#EXTINF:-1,TNT Sports 3
+https://embedflix.net/tv/tnt-sports-3
+
+#EXTINF:-1,TNT Sports 4
+https://embedflix.net/tv/tnt-sports-4
+
+#EXTINF:-1,TNT Sports 5
+https://embedflix.net/tv/tnt-sports-5
+
+#EXTINF:-1,Tooncast
+https://embedflix.net/tv/tooncast
+
+#EXTINF:-1,Telecine Action HD
+https://embedflix.net/tv/telecine-action-hd
+
+#EXTINF:-1,Telecine Cult
+https://embedflix.net/tv/telecine-cult
+
+#EXTINF:-1,Telecine Fun HD
+https://embedflix.net/tv/telecine-fun-hd
+
+#EXTINF:-1,Telecine Pipoca HD
+https://embedflix.net/tv/telecine-pipoca-hd
+
+#EXTINF:-1,Telecine Premium HD
+https://embedflix.net/tv/telecine-premium-hd
+
+#EXTINF:-1,Warner Channel
+https://embedflix.net/tv/warner-channel
