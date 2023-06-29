@@ -2,106 +2,59 @@
 <html>
 <head>
     <style>
-        body {
+        html, body {
             margin: 0;
             padding: 0;
+            height: 100%;
         }
 
-        #channel-list-container {
-            position: fixed;
-            top: 0;
+        #channelList {
+            position: absolute;
             left: 0;
+            top: 0;
             bottom: 0;
-            width: 200px;
-            overflow-y: auto;
-            overflow-x: hidden;
+            width: 30%;
+            overflow-y: scroll;
+            padding: 20px;
         }
 
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        .channel-button {
-            display: inline-block;
-            width: 150px;
-            height: 40px;
-            padding: 10px;
-            background-color: #eaeaea;
+        #channelIframe {
+            position: absolute;
+            left: 30%;
+            top: 0;
+            right: 0;
+            bottom: 0;
             border: none;
-            cursor: pointer;
-            text-align: center;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-            color: #333333;
-        }
-
-        .channel-button:hover {
-            background-color: #dddddd;
-        }
-
-        .channel-button.selected {
-            background-color: #a8dadc;
         }
     </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.get("https://raw.githubusercontent.com/listadobill/tv/main/web.m3u", function(data) {
+                var lines = data.split("\n");
+                var channelList = $("#channelList ul");
+
+                for (var i = 0; i < lines.length; i++) {
+                    if (lines[i].startsWith("#EXTINF")) {
+                        var channelInfo = lines[i].substring(lines[i].indexOf(",") + 1);
+                        var channelLink = lines[i + 1];
+
+                        var listItem = $("<li></li>");
+                        var link = $("<a></a>").attr("href", channelLink).text(channelInfo);
+
+                        listItem.append(link);
+                        channelList.append(listItem);
+                    }
+                }
+            });
+        });
+    </script>
 </head>
 <body>
-    <div id="channel-list-container">
-        <ul id="channel-list">
-            <!-- Use JavaScript to dynamically populate the list -->
-        </ul>
+    <div id="channelList">
+        <ul></ul>
     </div>
 
-    <script>
-        // Fetch the channel list from the URL
-        fetch('https://raw.githubusercontent.com/listadobill/tv/main/web.m3u')
-            .then(response => response.text())
-            .then(data => {
-                const lines = data.split('\n');
-                const listElement = document.getElementById('channel-list');
-                let channelName = '';
-                let channelLink = '';
-
-                // Iterate over the lines and extract channel names and links
-                lines.forEach(line => {
-                    if (line.startsWith('#EXTINF:-1,')) {
-                        channelName = line.substring(11);
-                    } else if (line.startsWith('https://')) {
-                        channelLink = line;
-
-                        const listItem = document.createElement('li');
-                        const button = document.createElement('a');
-                        button.className = 'channel-button';
-                        button.textContent = channelName;
-                        button.href = channelLink;
-                        button.target = '_blank'; // Open in a new tab
-                        listItem.appendChild(button);
-                        listElement.appendChild(listItem);
-
-                        // Add event listener to toggle selection
-                        button.addEventListener('click', () => {
-                            button.classList.toggle('selected');
-                        });
-
-                        channelName = '';
-                        channelLink = '';
-                    }
-                });
-            });
-
-        // Adjust the height of the channel list container to match the window height
-        window.addEventListener('resize', () => {
-            const channelListContainer = document.getElementById('channel-list-container');
-            channelListContainer.style.height = `${window.innerHeight}px`;
-        });
-
-        // Trigger the resize event initially to set the height
-        window.dispatchEvent(new Event('resize'));
-    </script>
+    <iframe id="channelIframe" src=""></iframe>
 </body>
 </html>
