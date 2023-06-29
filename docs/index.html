@@ -100,7 +100,7 @@
         <button onclick="openPage('https://listadobill.github.io/tv')">TV WEB</button>
         <button onclick="openPage('https://listadobill.github.io/tv/tvdobill')">CANAIS IPTV</button>
         <button onclick="openPage('https://listadobill.github.io/tv/provisoria')">IPTV PROVISÓRIO</button>
-        <button onclick="openPage('https://pluto.tv/live-tv/')">PLUTO TV</button>
+        <button onclick="openPage('https://pluto.tv/live-tv')">PLUTO TV</button>
     </div>
 
     <div id="channel-list">
@@ -114,9 +114,9 @@
     </div>
 
     <script>
-        // Função para abrir uma nova página ao ser clicado
+        // Função para abrir uma nova página na mesma aba
         function openPage(url) {
-            window.open(url, "_blank");
+            window.location.href = url;
         }
 
         // Função para abrir o player em tela cheia ao ser clicado
