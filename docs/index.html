@@ -204,6 +204,24 @@
                 }
             }
         }
+
+        // Função para controlar a rolagem da lista usando o cursor da Smart TV
+        function handleCursorScroll(event) {
+            var channelList = document.querySelector("#channel-list");
+            var delta = event.deltaY;
+
+            // Verifica a direção do movimento do cursor
+            if (delta < 0) {
+                // Movimento para cima
+                channelList.scrollTop -= 100; // Ajuste a quantidade de pixels a serem rolados para cima
+            } else {
+                // Movimento para baixo
+                channelList.scrollTop += 100; // Ajuste a quantidade de pixels a serem rolados para baixo
+            }
+        }
+
+        // Adiciona o evento de rolagem ao cursor da Smart TV
+        window.addEventListener("wheel", handleCursorScroll);
     </script>
 </body>
 </html>
