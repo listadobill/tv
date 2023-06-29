@@ -17,15 +17,6 @@
             overflow-y: scroll;
             padding: 20px;
         }
-
-        #channelIframe {
-            position: absolute;
-            left: 30%;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            border: none;
-        }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
@@ -44,6 +35,12 @@
 
                         listItem.append(link);
                         channelList.append(listItem);
+
+                        link.on("click", function(e) {
+                            e.preventDefault();
+                            var channelUrl = $(this).attr("href");
+                            window.location.href = channelUrl;
+                        });
                     }
                 }
             });
@@ -54,7 +51,5 @@
     <div id="channelList">
         <ul></ul>
     </div>
-
-    <iframe id="channelIframe" src=""></iframe>
 </body>
 </html>
