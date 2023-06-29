@@ -17,6 +17,15 @@
             overflow-y: scroll;
             padding: 20px;
         }
+
+        #channelIframe {
+            position: absolute;
+            left: 30%;
+            top: 0;
+            width: 70%;
+            height: 100%;
+            border: none;
+        }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
@@ -24,6 +33,7 @@
             $.get("https://raw.githubusercontent.com/listadobill/tv/main/web.m3u", function(data) {
                 var lines = data.split("\n");
                 var channelList = $("#channelList ul");
+                var channelIframe = $("#channelIframe");
 
                 for (var i = 0; i < lines.length; i++) {
                     if (lines[i].startsWith("#EXTINF")) {
@@ -39,7 +49,7 @@
                         link.on("click", function(e) {
                             e.preventDefault();
                             var channelUrl = $(this).attr("href");
-                            window.location.href = channelUrl;
+                            channelIframe.attr("src", channelUrl);
                         });
                     }
                 }
@@ -51,5 +61,7 @@
     <div id="channelList">
         <ul></ul>
     </div>
+
+    <iframe id="channelIframe" src=""></iframe>
 </body>
 </html>
