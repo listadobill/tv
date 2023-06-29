@@ -24,6 +24,8 @@
             background-color: rgba(0, 0, 0, 0); /* Define a transparência do fundo */
             padding: 10px;
             border-radius: 5px;
+            position: relative; /* Posicionamento relativo para trazer para frente */
+            z-index: 2; /* Define a ordem de empilhamento para ficar sobre o player */
         }
 
         #channel-player {
@@ -60,7 +62,7 @@
 
         iframe {
             width: 100%;
-            height: calc(100vh - 40px); /* Subtrai a altura do player-container */
+            height: 100%; /* Alterado para ocupar toda a altura da tela */
             position: fixed; /* Posicionamento fixo para o iframe */
             top: 0;
             left: 0;
