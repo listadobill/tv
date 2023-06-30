@@ -4,10 +4,18 @@
     <title>TV DO BILL</title>
     <style>
         body {
-            background-color: #000;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Impede a exibição da barra de rolagem */
+            overflow: hidden;
+        }
+
+        #background-iframe {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
         }
 
         #channel-list {
@@ -17,8 +25,8 @@
             width: 100%;
             height: 100vh;
             z-index: 1;
-            overflow-y: scroll; /* Habilita a rolagem vertical */
-            background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo semi-transparente */
+            overflow-y: scroll;
+            background-color: rgba(0, 0, 0, 0.8);
             color: #fff;
             padding: 20px;
         }
@@ -84,9 +92,9 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo semi-transparente mais escura */
+            background-color: rgba(0, 0, 0, 0.7);
             z-index: -1;
-            opacity: 0.8; /* Ajuste a opacidade aqui */
+            opacity: 0.8;
         }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -110,7 +118,8 @@
                         link.click(function(event) {
                             event.preventDefault();
                             var channelUrl = $(this).attr("href");
-                            window.location.href = channelUrl;
+                            $("#background-iframe").attr("src", channelUrl);
+                            $("#background-iframe")[0].requestFullscreen(); // Abrir em tela cheia
                         });
 
                         listItem.append(link);
@@ -160,6 +169,8 @@
     </script>
 </head>
 <body>
+    <iframe id="background-iframe" frameborder="0"></iframe>
+
     <ul id="button-list">
         <li><button onclick="window.location.href='https://listadobill.github.io/tv/'">CANAIS ABERTOS E FECHADOS</button></li>
         <li><button onclick="window.location.href='https://listadobill.github.io/tv/provisoria'">IPTV</button></li>
