@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>TV DO BILL - CANAIS WEB</title>
+    <title>TV DO BILL</title>
     <style>
         body {
             background-color: #000;
@@ -122,6 +122,7 @@
                             var channelUrl = $(this).attr("href");
                             player.src = channelUrl;
                             player.play();
+                            player.requestFullscreen(); // Solicita o modo de tela cheia
                         });
 
                         listItem.append(link);
