@@ -4,181 +4,184 @@
     <title>TV DO BILL - CANAIS WEB</title>
     <style>
         body {
-            display: flex;
-            flex-direction: column;
-            background-color: #333;
-            color: #fff;
+            background-color: #000;
             margin: 0;
             padding: 0;
-        }
-
-        #button-container {
-            display: flex;
-            justify-content: center;
-            position: relative;
-            z-index: 3;
-            margin-top: 20px;
+            overflow: hidden; /* Impede a exibição da barra de rolagem */
         }
 
         #channel-list {
-            flex: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30%;
+            height: 100vh;
+            z-index: 1; /* Define a ordem de empilhamento para ficar acima do player */
+            overflow-y: scroll; /* Habilita a rolagem vertical */
+            background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo semi-transparente */
+            color: #fff;
             padding: 20px;
-            overflow-y: auto; /* Habilita a rolagem vertical */
-            overflow-x: hidden; /* Esconde a rolagem horizontal */
-            position: relative; /* Posicionamento relativo para permitir o ajuste dos botões */
-            z-index: 2; /* Define a ordem de empilhamento para ficar sobre o player */
-            align-self: flex-start; /* Alinha à esquerda */
         }
 
         #channel-list ul {
-            background-color: rgba(0, 0, 0, 0); /* Define a transparência do fundo */
-            padding: 10px;
-            border-radius: 5px;
-            position: relative; /* Posicionamento relativo para trazer para frente */
-            z-index: 2; /* Define a ordem de empilhamento para ficar sobre o player */
-        }
-
-        #channel-player {
-            flex: 2;
-            padding: 20px;
-            position: relative; /* Posicionamento relativo para o player */
-            z-index: 1; /* Define a ordem de empilhamento para ficar abaixo da lista */
-        }
-
-        ul {
             list-style: none;
             padding: 0;
             margin: 0;
         }
 
-        button {
-            background-color: #ff0000;
-            color: #000;
+        #channel-list ul li {
+            margin-bottom: 10px;
+        }
+
+        #channel-list ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        #player {
+            width: 70%;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 0; /* Define a ordem de empilhamento para ficar abaixo da lista */
+        }
+
+        .selected a,
+        button:hover {
+            color: #f00;
+            animation: red-glow 1s infinite alternate;
+        }
+
+        @keyframes red-glow {
+            0% {
+                color: #fff;
+            }
+            100% {
+                color: #f00;
+            }
+        }
+
+        #button-list {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 2; /* Coloca a lista na frente do player */
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #button-list li {
+            margin-bottom: 10px;
+        }
+
+        #button-list li button {
+            position: relative;
+            background-color: transparent;
+            color: #fff;
             border: none;
             padding: 10px 20px;
-            margin-bottom: 10px;
             font-size: 16px;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
             cursor: pointer;
-            width: 200px;
-            height: 40px;
-            border-radius: 5px;
         }
 
-        button:hover {
-            background-color: #ff6666;
-        }
-
-        iframe {
-            width: 100%;
-            height: 100%; /* Alterado para ocupar toda a altura da tela */
-            position: fixed; /* Posicionamento fixo para o iframe */
+        #button-list li button::before {
+            content: "";
+            position: absolute;
             top: 0;
             left: 0;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: #000;
-                color: #fff;
-            }
-
-            button {
-                background-color: #ff4444;
-                color: #fff;
-            }
-
-            button:hover {
-                background-color: #ff8888;
-            }
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo semi-transparente mais escura */
+            z-index: -1;
+            opacity: 0.8; /* Ajuste a opacidade aqui */
         }
     </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.get("https://raw.githubusercontent.com/listadobill/tv/main/c.m3u", function(data) {
+                var lines = data.split("\n");
+                var channelList = $("#channel-list ul");
+                var player = $("#player")[0];
+                var selectedChannelIndex = 0;
+                var buttonList = $("#button-list li button");
+                var selectedButtonIndex = 0;
+
+                for (var i = 0; i < lines.length; i++) {
+                    if (lines[i].startsWith("#EXTINF")) {
+                        var channelInfo = lines[i].substring(lines[i].indexOf(",") + 1);
+                        var channelLink = lines[i + 1];
+
+                        var listItem = $("<li></li>");
+                        var link = $("<a></a>").attr("href", channelLink).text(channelInfo);
+
+                        link.click(function(event) {
+                            event.preventDefault();
+                            var channelUrl = $(this).attr("href");
+                            player.src = channelUrl;
+                            player.play();
+                        });
+
+                        listItem.append(link);
+                        channelList.append(listItem);
+                    }
+                }
+
+                function selectChannel(index) {
+                    var channels = channelList.children();
+                    channels.removeClass("selected");
+                    channels.eq(index).addClass("selected");
+                    channels.eq(index).find("a").focus();
+                }
+
+                function selectButton(index) {
+                    buttonList.removeClass("selected");
+                    buttonList.eq(index).addClass("selected");
+                    buttonList.eq(index).focus();
+                }
+
+                selectChannel(selectedChannelIndex);
+                selectButton(selectedButtonIndex);
+
+                $(document).keydown(function(e) {
+                    var key = e.which;
+
+                    if (key === 38) { // Seta para cima
+                        e.preventDefault();
+                        selectedChannelIndex = (selectedChannelIndex > 0) ? selectedChannelIndex - 1 : 0;
+                        selectChannel(selectedChannelIndex);
+                    } else if (key === 40) { // Seta para baixo
+                        e.preventDefault();
+                        selectedChannelIndex = (selectedChannelIndex < channelList.children().length - 1) ? selectedChannelIndex + 1 : channelList.children().length - 1;
+                        selectChannel(selectedChannelIndex);
+                    } else if (key === 37) { // Seta para a esquerda
+                        e.preventDefault();
+                        selectedButtonIndex = (selectedButtonIndex > 0) ? selectedButtonIndex - 1 : 0;
+                        selectButton(selectedButtonIndex);
+                    } else if (key === 39) { // Seta para a direita
+                        e.preventDefault();
+                        selectedButtonIndex = (selectedButtonIndex < buttonList.length - 1) ? selectedButtonIndex + 1 : buttonList.length - 1;
+                        selectButton(selectedButtonIndex);
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 <body>
-    <div id="button-container">
-        <button onclick="openPage('https://listadobill.github.io/tv')">TV WEB</button>
-        <button onclick="openPage('https://listadobill.github.io/tv/tvdobill')">CANAIS IPTV</button>
-        <button onclick="openPage('https://listadobill.github.io/tv/provisoria')">IPTV PROVISÓRIO</button>
-        <button onclick="openPage('https://pluto.tv/live-tv')">PLUTO TV</button>
-    </div>
+    <ul id="button-list">
+        <li><button onclick="window.location.href='https://listadobill.github.io/tv/'">CANAIS ABERTOS E FECHADOS</button></li>
+        <li><button onclick="window.location.href='https://listadobill.github.io/tv/provisoria'">IPTV</button></li>
+        <li><button onclick="window.location.href='https://listadobill.github.io/tv/tvdobill'">IPTV DO BILL</button></li>
+        <li><button onclick="window.location.href='https://listadobill.github.io/tv/smarttv_plutotvbr.html'">PLUTO TV IPTV</button></li>
+    </ul>
 
     <div id="channel-list">
-        <ul id="channel-list-ul">
-            <!-- Os canais serão carregados dinamicamente através do JavaScript -->
-        </ul>
+        <ul></ul>
     </div>
 
-    <div id="channel-player">
-        <!-- Conteúdo do player -->
-    </div>
-
-    <script>
-        // Função para abrir uma nova página na mesma aba
-        function openPage(url) {
-            window.location.href = url;
-        }
-
-        // Função para ajustar o tamanho do iframe com base na resolução da tela
-        function adjustIframeSize() {
-            var iframe = document.querySelector("#channel-player iframe");
-            var screenHeight = window.innerHeight;
-
-            // Ajusta o tamanho do iframe para ocupar toda a altura disponível
-            iframe.style.height = screenHeight + "px";
-        }
-
-        // Função para carregar a lista de canais
-        function loadChannels() {
-            var channelList = document.querySelector("#channel-list-ul");
-            var playlistURL = "https://raw.githubusercontent.com/listadobill/tv/main/web.m3u";
-
-            fetch(playlistURL)
-                .then(response => response.text())
-                .then(data => {
-                    // Separa as linhas do arquivo .m3u
-                    var lines = data.trim().split('\n');
-
-                    // Remove as informações do cabeçalho
-                    lines = lines.slice(1);
-
-                    // Cria os itens da lista de canais
-                    lines.forEach(line => {
-                        if (line.startsWith('#EXTINF:-1,')) {
-                            var channelName = line.replace('#EXTINF:-1,', '');
-                            var channelURL = lines[lines.indexOf(line) + 1];
-
-                            var listItem = document.createElement("li");
-
-                            // Cria o botão com o nome do canal
-                            var button = document.createElement("button");
-                            button.textContent = channelName;
-                            button.addEventListener("click", function() {
-                                openPage(channelURL);
-                            });
-
-                            listItem.appendChild(button);
-                            channelList.appendChild(listItem);
-                        }
-                    });
-
-                    // Carrega um canal aleatório
-                    var randomChannel = Math.floor(Math.random() * lines.length);
-                    var randomChannelURL = lines[randomChannel + 1];
-                    openPlayer(randomChannelURL);
-                })
-                .catch(error => console.log(error));
-        }
-
-        // Carrega os canais ao carregar a página
-        window.onload = function() {
-            loadChannels();
-            adjustIframeSize(); // Ajusta o tamanho do iframe inicialmente
-        };
-
-        // Atualiza o tamanho do iframe quando a janela do navegador for redimensionada
-        window.addEventListener("resize", adjustIframeSize);
-
-    </script>
+    <video id="player" controls></video>
 </body>
 </html>
