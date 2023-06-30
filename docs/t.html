@@ -7,16 +7,15 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
-            background-color: black; /* Adiciona o fundo preto */
+            background-color: rgba(0, 0, 0, 0.5); /* Fundo preto com 50% de opacidade */
         }
 
         #background-iframe {
             position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80%;
-            height: 80%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             z-index: 0;
         }
 
@@ -71,6 +70,9 @@
             list-style: none;
             padding: 0;
             margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
         }
 
         #button-list li {
@@ -79,7 +81,7 @@
 
         #button-list li button {
             position: relative;
-            background-color: transparent;
+            background-color: rgba(0, 0, 0, 0.5); /* Fundo preto opaco com 50% de opacidade */
             color: #fff;
             border: none;
             padding: 10px 20px;
@@ -136,6 +138,7 @@
                 // Trata o clique no botão de reprodução
                 $("#play-button").click(function(event) {
                     event.stopPropagation(); // Evita a propagação do evento para a lista de canais
+                    $("#background-iframe")[0].requestFullscreen(); // Abrir em tela cheia
                     // Insira aqui o código para reproduzir o vídeo
                 });
 
@@ -165,11 +168,7 @@
     </script>
 </head>
 <body>
-    <div id="channel-list">
-        <ul>
-            <li><a href="#" id="play-button">Play</a></li>
-        </ul>
-    </div>
+    <iframe id="background-iframe" frameborder="0"></iframe>
 
     <ul id="button-list">
         <li><button onclick="window.location.href='https://listadobill.github.io/tv/'">CANAIS ABERTOS E FECHADOS</button></li>
@@ -178,6 +177,10 @@
         <li><button onclick="window.location.href='https://listadobill.github.io/tv/smarttv_plutotvbr.html'">PLUTO TV IPTV</button></li>
     </ul>
 
-    <iframe id="background-iframe" frameborder="0"></iframe>
+    <div id="channel-list">
+        <ul>
+            
+        </ul>
+    </div>
 </body>
 </html>
