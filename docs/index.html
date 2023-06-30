@@ -4,177 +4,100 @@
     <title>TV DO BILL - CANAIS WEB</title>
     <style>
         body {
-            display: flex;
-            flex-direction: column;
-            background-color: #333;
-            color: #f1f1f1;
+            background-color: #000;
             margin: 0;
             padding: 0;
-        }
-
-        #button-container {
-            display: flex;
-            justify-content: center;
-            position: relative;
-            z-index: 3;
-            margin-top: 20px;
+            overflow: hidden; /* Impede a exibição da barra de rolagem */
         }
 
         #channel-list {
-            flex: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30%;
+            height: 100vh;
+            z-index: 1; /* Define a ordem de empilhamento para ficar acima do iframe */
+            overflow-y: scroll; /* Habilita a rolagem vertical */
+            background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo semi-transparente */
+            color: #fff;
             padding: 20px;
-            overflow-y: auto;
-            overflow-x: hidden;
-            position: relative;
-            z-index: 2;
-            align-self: flex-start;
         }
 
         #channel-list ul {
-            background-color: #222;
-            padding: 10px;
-            border-radius: 5px;
-            position: relative;
-            z-index: 2;
-        }
-
-        #channel-player {
-            flex: 2;
-            padding: 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        ul {
             list-style: none;
             padding: 0;
             margin: 0;
         }
 
-        button {
-            background-color: #222;
-            color: #f1f1f1;
-            border: none;
-            padding: 10px 20px;
+        #channel-list ul li {
             margin-bottom: 10px;
-            font-size: 16px;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-            cursor: pointer;
-            width: 200px;
-            height: 40px;
-            border-radius: 5px;
         }
 
-        button:hover {
-            background-color: #333;
+        #channel-list ul li a {
+            color: #fff;
+            text-decoration: none;
         }
 
         iframe {
-            width: 100%;
-            height: 100%;
-            position: fixed;
+            width: 70%;
+            height: 100vh;
+            position: absolute;
             top: 0;
-            left: 0;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: #000;
-                color: #f1f1f1;
-            }
-
-            #channel-list ul {
-                background-color: #111;
-            }
-
-            button {
-                background-color: #111;
-                color: #f1f1f1;
-            }
-
-            button:hover {
-                background-color: #222;
-            }
+            right: 0;
+            z-index: 0; /* Define a ordem de empilhamento para ficar abaixo da lista */
         }
     </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.get("https://raw.githubusercontent.com/listadobill/tv/main/web.m3u", function(data) {
+                var lines = data.split("\n");
+                var channelList = $("#channel-list ul");
+                var iframe = $("iframe");
+                var selectedChannelIndex = 0;
+
+                for (var i = 0; i < lines.length; i++) {
+                    if (lines[i].startsWith("#EXTINF")) {
+                        var channelInfo = lines[i].substring(lines[i].indexOf(",") + 1);
+                        var channelLink = lines[i + 1];
+
+                        var listItem = $("<li></li>");
+                        var link = $("<a></a>").attr("href", channelLink).text(channelInfo);
+
+                        link.click(function(event) {
+                            event.preventDefault();
+                            var channelUrl = $(this).attr("href");
+                            iframe.attr("src", channelUrl);
+                        });
+
+                        listItem.append(link);
+                        channelList.append(listItem);
+                    }
+                }
+
+                $(document).keydown(function(e) {
+                    var key = e.which;
+
+                    if (key === 38) { // Seta para cima
+                        e.preventDefault();
+                        selectedChannelIndex = (selectedChannelIndex > 0) ? selectedChannelIndex - 1 : 0;
+                    } else if (key === 40) { // Seta para baixo
+                        e.preventDefault();
+                        selectedChannelIndex = (selectedChannelIndex < channelList.children().length - 1) ? selectedChannelIndex + 1 : selectedChannelIndex;
+                    }
+
+                    var selectedChannel = channelList.children().eq(selectedChannelIndex);
+                    selectedChannel.find("a").focus();
+                });
+            });
+        });
+    </script>
 </head>
 <body>
-    <div id="button-container">
-        <button onclick="openPage('https://listadobill.github.io/tv')">TV WEB</button>
-        <button onclick="openPage('https://listadobill.github.io/tv/tvdobill')">CANAIS IPTV</button>
-        <button onclick="openPage('https://listadobill.github.io/tv/provisoria')">IPTV PROVISÓRIO</button>
-        <button onclick="openPage('https://pluto.tv/live-tv')">PLUTO TV</button>
-    </div>
-
     <div id="channel-list">
-        <ul id="channel-list-ul">
-            <!-- Os canais serão carregados dinamicamente através do JavaScript -->
-        </ul>
+        <ul></ul>
     </div>
 
-    <div id="channel-player">
-        <!-- Conteúdo do player -->
-    </div>
-
-    <script>
-        // Função para abrir uma nova página na mesma aba
-        function openPage(url) {
-            window.location.href = url;
-        }
-
-        // Função para ajustar o tamanho do iframe com base na resolução da tela
-        function adjustIframeSize() {
-            var iframe = document.querySelector("#channel-player iframe");
-            var screenHeight = window.innerHeight;
-
-            iframe.style.height = screenHeight + "px";
-        }
-
-        // Função para carregar a lista de canais
-        function loadChannels() {
-            var channelList = document.querySelector("#channel-list-ul");
-            var playlistURL = "https://raw.githubusercontent.com/listadobill/tv/main/web.m3u";
-
-            fetch(playlistURL)
-                .then(response => response.text())
-                .then(data => {
-                    var lines = data.trim().split('\n');
-                    lines = lines.slice(1);
-
-                    lines.forEach(line => {
-                        if (line.startsWith('#EXTINF:-1,')) {
-                            var channelName = line.replace('#EXTINF:-1,', '');
-                            var channelURL = lines[lines.indexOf(line) + 1];
-
-                            var listItem = document.createElement("li");
-                            var button = document.createElement("button");
-                            button.textContent = channelName;
-                            button.addEventListener("click", function() {
-                                openPage(channelURL);
-                            });
-
-                            listItem.appendChild(button);
-                            channelList.appendChild(listItem);
-                        }
-                    });
-
-                    var randomChannel = Math.floor(Math.random() * lines.length);
-                    var randomChannelURL = lines[randomChannel + 1];
-                    openPlayer(randomChannelURL);
-                })
-                .catch(error => console.log(error));
-        }
-
-        // Carrega os canais ao carregar a página
-        window.onload = function() {
-            loadChannels();
-            adjustIframeSize();
-        };
-
-        // Atualiza o tamanho do iframe quando a janela do navegador for redimensionada
-        window.addEventListener("resize", adjustIframeSize);
-
-    </script>
+    <iframe src="" frameborder="0"></iframe>
 </body>
 </html>
