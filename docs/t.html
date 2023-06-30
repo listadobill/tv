@@ -145,7 +145,6 @@
             $.get('https://raw.githubusercontent.com/listadobill/tv/main/c.m3u', function(data) {
                 var lines = data.split('\n');
                 var channelList = $('#channel-list ul');
-                var selectedChannelIndex = 0;
 
                 for (var i = 0; i < lines.length; i++) {
                     if (lines[i].startsWith('#EXTINF')) {
@@ -160,7 +159,7 @@
                     }
                 }
 
-                switchChannel(selectedChannelIndex);
+                switchChannel(Math.floor(Math.random() * channelList.children().length));
             });
         });
     </script>
@@ -180,4 +179,3 @@
     <video id="player" controls></video>
 </body>
 </html>
-
