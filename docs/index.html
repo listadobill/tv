@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>TV DO BILL - A TV de Graça para todos</title>
+    <title>TV DO BILL</title>
     <style>
         body {
             background-color: #000;
@@ -56,6 +56,19 @@
             top: 20px;
             left: 50%;
             transform: translateX(-50%);
+            background-color: #f00;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            z-index: 2; /* Coloca o botão na frente de todos os elementos */
+        }
+
+        #iptv-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
             background-color: #f00;
             color: #fff;
             border: none;
@@ -122,6 +135,7 @@
 </head>
 <body>
     <button id="access-button" onclick="window.location.href='https://listadobill.github.io/tv/'">CANAIS ABERTOS E FECHADOS</button>
+    <button id="iptv-button" onclick="window.location.href='https://listadobill.github.io/tv/provisoria'">IPTV</button>
     
     <div id="channel-list">
         <ul></ul>
