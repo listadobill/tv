@@ -14,9 +14,9 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 30%;
+            width: 100%;
             height: 100vh;
-            z-index: 1; /* Define a ordem de empilhamento para ficar acima do iframe */
+            z-index: 1;
             overflow-y: scroll; /* Habilita a rolagem vertical */
             background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo semi-transparente */
             color: #fff;
@@ -38,15 +38,6 @@
             text-decoration: none;
         }
 
-        iframe {
-            width: 70%;
-            height: 100vh;
-            position: absolute;
-            top: 0;
-            right: 0;
-            z-index: 0; /* Define a ordem de empilhamento para ficar abaixo da lista */
-        }
-
         .selected a,
         button:hover {
             color: #f00;
@@ -66,7 +57,7 @@
             position: absolute;
             top: 20px;
             right: 20px;
-            z-index: 2; /* Coloca a lista na frente do iframe */
+            z-index: 2;
             list-style: none;
             padding: 0;
             margin: 0;
@@ -104,7 +95,6 @@
             $.get("https://raw.githubusercontent.com/listadobill/tv/main/web.m3u", function(data) {
                 var lines = data.split("\n");
                 var channelList = $("#channel-list ul");
-                var iframe = $("iframe");
                 var selectedChannelIndex = 0;
                 var buttonList = $("#button-list li button");
                 var selectedButtonIndex = 0;
@@ -120,8 +110,7 @@
                         link.click(function(event) {
                             event.preventDefault();
                             var channelUrl = $(this).attr("href");
-                            iframe.attr("src", channelUrl);
-                            iframe[0].requestFullscreen(); // Solicita o modo de tela cheia
+                            window.location.href = channelUrl;
                         });
 
                         listItem.append(link);
@@ -181,7 +170,5 @@
     <div id="channel-list">
         <ul></ul>
     </div>
-
-    <iframe src="" frameborder="0"></iframe>
 </body>
 </html>
