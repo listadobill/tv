@@ -4,30 +4,21 @@
     <title>TV DO BILL</title>
     <style>
         body {
+            background-color: #000;
             margin: 0;
             padding: 0;
-            overflow: hidden;
-            background-color: rgba(0, 0, 0, 0.5); /* Fundo preto com 50% de opacidade */
-        }
-
-        #background-iframe {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
+            overflow: hidden; /* Impede a exibição da barra de rolagem */
         }
 
         #channel-list {
             position: absolute;
             top: 0;
             left: 0;
-            width: 10%;
+            width: 30%;
             height: 100vh;
-            z-index: 1;
-            overflow-y: scroll;
-            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1; /* Define a ordem de empilhamento para ficar acima do player */
+            overflow-y: scroll; /* Habilita a rolagem vertical */
+            background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo semi-transparente */
             color: #fff;
             padding: 20px;
         }
@@ -45,6 +36,15 @@
         #channel-list ul li a {
             color: #fff;
             text-decoration: none;
+        }
+
+        #player {
+            width: 70%;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 0; /* Define a ordem de empilhamento para ficar abaixo da lista */
         }
 
         .selected a,
@@ -66,13 +66,10 @@
             position: absolute;
             top: 20px;
             right: 20px;
-            z-index: 2;
+            z-index: 2; /* Coloca a lista na frente do player */
             list-style: none;
             padding: 0;
             margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
         }
 
         #button-list li {
@@ -81,37 +78,131 @@
 
         #button-list li button {
             position: relative;
-            background-color: rgba(0, 0, 0, 0.5); /* Fundo preto opaco com 50% de opacidade */
+            background-color: transparent;
             color: #fff;
             border: none;
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
         }
+
+        #button-list li button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo semi-transparente mais escura */
+            z-index: -1;
+            opacity: 0.8; /* Ajuste a opacidade aqui */
+        }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
-            $.get("https://raw.githubusercontent.com/listadobill/tv/main/web.m3u", function(data) {
-                var lines = data.split("\n");
-                var channelList = $("#channel-list ul");
-                var selectedChannelIndex = 0;
-                var buttonList = $("#button-list li button");
-                var selectedButtonIndex = 0;
+            var player = document.getElementById('player');
+            var currentChannelIndex = 0;
+            var retryCount = 0;
+            var maxRetryCount = 3;
+
+            function playChannel(channelUrl) {
+                player.src = channelUrl;
+                player.play();
+                player.requestFullscreen();
+            }
+
+            function switchChannel(index) {
+                var channels = $('#channel-list ul li a');
+                channels.removeClass('selected');
+                channels.eq(index).addClass('selected');
+                channels.eq(index).focus();
+                currentChannelIndex = index;
+            }
+
+            function playNextChannel() {
+                var channels = $('#channel-list ul li a');
+                var nextIndex = currentChannelIndex + 1;
+
+                if (nextIndex >= channels.length) {
+                    nextIndex = 0;
+                }
+
+                switchChannel(nextIndex);
+                playChannel(channels.eq(nextIndex).attr('href'));
+            }
+
+            $(document).keydown(function(e) {
+                var key = e.which;
+
+                if (key === 38) { // Seta para cima
+                    e.preventDefault();
+                    var prevIndex = currentChannelIndex - 1;
+
+                    if (prevIndex < 0) {
+                        prevIndex = $('#channel-list ul li a').length - 1;
+                    }
+
+                    switchChannel(prevIndex);
+                } else if (key === 40) { // Seta para baixo
+                    e.preventDefault();
+                    var nextIndex = currentChannelIndex + 1;
+
+                    if (nextIndex >= $('#channel-list ul li a').length) {
+                        nextIndex = 0;
+                    }
+
+                    switchChannel(nextIndex);
+                } else if (key === 37) { // Seta para a esquerda
+                    e.preventDefault();
+                    player.currentTime -= 10;
+                } else if (key === 39) { // Seta para a direita
+                    e.preventDefault();
+                    player.currentTime += 10;
+                } else if (key === 32) { // Espaço (play/pause)
+                    e.preventDefault();
+
+                    if (player.paused) {
+                        player.play();
+                    } else {
+                        player.pause();
+                    }
+                } else if (key === 13) { // Enter (abrir em tela cheia)
+                    e.preventDefault();
+                    player.requestFullscreen();
+                }
+            });
+
+            player.addEventListener('ended', function() {
+                playNextChannel();
+            });
+
+            player.addEventListener('error', function() {
+                retryCount++;
+
+                if (retryCount <= maxRetryCount) {
+                    playChannel($('#channel-list ul li a').eq(currentChannelIndex).attr('href'));
+                } else {
+                    playNextChannel();
+                    retryCount = 0;
+                }
+            });
+
+            $.get('https://raw.githubusercontent.com/listadobill/tv/main/c.m3u', function(data) {
+                var lines = data.split('\n');
+                var channelList = $('#channel-list ul');
 
                 for (var i = 0; i < lines.length; i++) {
-                    if (lines[i].startsWith("#EXTINF")) {
-                        var channelInfo = lines[i].substring(lines[i].indexOf(",") + 1);
+                    if (lines[i].startsWith('#EXTINF')) {
+                        var channelInfo = lines[i].substring(lines[i].indexOf(',') + 1);
                         var channelLink = lines[i + 1];
 
-                        var listItem = $("<li></li>");
-                        var link = $("<a></a>").attr("href", channelLink).text(channelInfo);
+                        var listItem = $('<li></li>');
+                        var link = $('<a></a>').attr('href', channelLink).text(channelInfo);
 
                         link.click(function(event) {
                             event.preventDefault();
-                            var channelUrl = $(this).attr("href");
-                            $("#background-iframe").attr("src", channelUrl);
-                            $("#background-iframe")[0].requestFullscreen(); // Abrir em tela cheia
+                            playChannel($(this).attr('href'));
                         });
 
                         listItem.append(link);
@@ -119,57 +210,17 @@
                     }
                 }
 
-                function selectChannel(index) {
-                    var channels = channelList.children();
-                    channels.removeClass("selected");
-                    channels.eq(index).addClass("selected");
-                    channels.eq(index).find("a").focus();
+                var channels = $('#channel-list ul li a');
+
+                if (channels.length > 0) {
+                    switchChannel(0);
+                    playChannel(channels.eq(0).attr('href'));
                 }
-
-                function selectButton(index) {
-                    buttonList.removeClass("selected");
-                    buttonList.eq(index).addClass("selected");
-                    buttonList.eq(index).focus();
-                }
-
-                selectChannel(selectedChannelIndex);
-                selectButton(selectedButtonIndex);
-
-                // Trata o clique no botão de reprodução
-                $("#play-button").click(function(event) {
-                    event.stopPropagation(); // Evita a propagação do evento para a lista de canais
-                    $("#background-iframe")[0].requestFullscreen(); // Abrir em tela cheia
-                    // Insira aqui o código para reproduzir o vídeo
-                });
-
-                $(document).keydown(function(e) {
-                    var key = e.which;
-
-                    if (key === 38) { // Seta para cima
-                        e.preventDefault();
-                        selectedChannelIndex = (selectedChannelIndex > 0) ? selectedChannelIndex - 1 : 0;
-                        selectChannel(selectedChannelIndex);
-                    } else if (key === 40) { // Seta para baixo
-                        e.preventDefault();
-                        selectedChannelIndex = (selectedChannelIndex < channelList.children().length - 1) ? selectedChannelIndex + 1 : channelList.children().length - 1;
-                        selectChannel(selectedChannelIndex);
-                    } else if (key === 37) { // Seta para a esquerda
-                        e.preventDefault();
-                        selectedButtonIndex = (selectedButtonIndex > 0) ? selectedButtonIndex - 1 : 0;
-                        selectButton(selectedButtonIndex);
-                    } else if (key === 39) { // Seta para a direita
-                        e.preventDefault();
-                        selectedButtonIndex = (selectedButtonIndex < buttonList.length - 1) ? selectedButtonIndex + 1 : buttonList.length - 1;
-                        selectButton(selectedButtonIndex);
-                    }
-                });
             });
         });
     </script>
 </head>
 <body>
-    <iframe id="background-iframe" frameborder="0"></iframe>
-
     <ul id="button-list">
         <li><button onclick="window.location.href='https://listadobill.github.io/tv/'">CANAIS ABERTOS E FECHADOS</button></li>
         <li><button onclick="window.location.href='https://listadobill.github.io/tv/provisoria'">IPTV</button></li>
@@ -178,9 +229,9 @@
     </ul>
 
     <div id="channel-list">
-        <ul>
-            
-        </ul>
+        <ul></ul>
     </div>
+
+    <video id="player" controls></video>
 </body>
 </html>
