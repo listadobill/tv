@@ -102,14 +102,12 @@
     <script>
         $(document).ready(function() {
             var player = document.getElementById('player');
-            var currentChannelIndex = 0;
             var retryCount = 0;
             var maxRetryCount = 3;
 
             function playChannel(channelUrl) {
                 player.src = channelUrl;
                 player.play();
-                player.requestFullscreen();
             }
 
             function switchChannel(index) {
@@ -117,80 +115,37 @@
                 channels.removeClass('selected');
                 channels.eq(index).addClass('selected');
                 channels.eq(index).focus();
-                currentChannelIndex = index;
+                playChannel(channels.eq(index).attr('href'));
             }
 
-            function playNextChannel() {
-                var channels = $('#channel-list ul li a');
-                var nextIndex = currentChannelIndex + 1;
-
-                if (nextIndex >= channels.length) {
-                    nextIndex = 0;
-                }
-
-                switchChannel(nextIndex);
-                playChannel(channels.eq(nextIndex).attr('href'));
-            }
-
-            $(document).keydown(function(e) {
-                var key = e.which;
-
-                if (key === 38) { // Seta para cima
-                    e.preventDefault();
-                    var prevIndex = currentChannelIndex - 1;
-
-                    if (prevIndex < 0) {
-                        prevIndex = $('#channel-list ul li a').length - 1;
-                    }
-
-                    switchChannel(prevIndex);
-                } else if (key === 40) { // Seta para baixo
-                    e.preventDefault();
-                    var nextIndex = currentChannelIndex + 1;
-
-                    if (nextIndex >= $('#channel-list ul li a').length) {
-                        nextIndex = 0;
-                    }
-
-                    switchChannel(nextIndex);
-                } else if (key === 37) { // Seta para a esquerda
-                    e.preventDefault();
-                    player.currentTime -= 10;
-                } else if (key === 39) { // Seta para a direita
-                    e.preventDefault();
-                    player.currentTime += 10;
-                } else if (key === 32) { // Espaço (play/pause)
-                    e.preventDefault();
-
-                    if (player.paused) {
-                        player.play();
-                    } else {
-                        player.pause();
-                    }
-                } else if (key === 13) { // Enter (abrir em tela cheia)
-                    e.preventDefault();
-                    player.requestFullscreen();
-                }
-            });
-
-            player.addEventListener('ended', function() {
-                playNextChannel();
-            });
-
-            player.addEventListener('error', function() {
-                retryCount++;
-
-                if (retryCount <= maxRetryCount) {
-                    playChannel($('#channel-list ul li a').eq(currentChannelIndex).attr('href'));
+            function reconnect() {
+                if (retryCount < maxRetryCount) {
+                    retryCount++;
+                    playChannel($('#channel-list ul li a.selected').attr('href'));
                 } else {
-                    playNextChannel();
-                    retryCount = 0;
+                    // Aqui você pode adicionar uma lógica personalizada para lidar com a falha na reconexão
+                    console.log('Falha na reconexão');
                 }
+            }
+
+            $('#channel-list ul li a').click(function(event) {
+                event.preventDefault();
+                var channelUrl = $(this).attr('href');
+                playChannel(channelUrl);
+            });
+
+            $(player).on('ended', function() {
+                reconnect();
+            });
+
+            $(player).on('error', function() {
+                reconnect();
             });
 
             $.get('https://raw.githubusercontent.com/listadobill/tv/main/c.m3u', function(data) {
                 var lines = data.split('\n');
                 var channelList = $('#channel-list ul');
+                var selectedChannelIndex = 0;
 
                 for (var i = 0; i < lines.length; i++) {
                     if (lines[i].startsWith('#EXTINF')) {
@@ -200,22 +155,12 @@
                         var listItem = $('<li></li>');
                         var link = $('<a></a>').attr('href', channelLink).text(channelInfo);
 
-                        link.click(function(event) {
-                            event.preventDefault();
-                            playChannel($(this).attr('href'));
-                        });
-
                         listItem.append(link);
                         channelList.append(listItem);
                     }
                 }
 
-                var channels = $('#channel-list ul li a');
-
-                if (channels.length > 0) {
-                    switchChannel(0);
-                    playChannel(channels.eq(0).attr('href'));
-                }
+                switchChannel(selectedChannelIndex);
             });
         });
     </script>
@@ -235,3 +180,4 @@
     <video id="player" controls></video>
 </body>
 </html>
+
