@@ -126,6 +126,8 @@
                 } else {
                     // Aqui você pode adicionar uma lógica personalizada para lidar com a falha na reconexão
                     console.log('Falha na reconexão');
+                    // Autoplay caso falhe a reconexão
+                    switchChannel(Math.floor(Math.random() * $('#channel-list ul li a').length));
                 }
             }
 
