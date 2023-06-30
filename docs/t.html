@@ -3,7 +3,100 @@
 <head>
     <title>TV DO BILL</title>
     <style>
-        /* Estilos do seu código anterior */
+        body {
+            background-color: #000;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Impede a exibição da barra de rolagem */
+        }
+
+        #channel-list {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30%;
+            height: 100vh;
+            z-index: 1; /* Define a ordem de empilhamento para ficar acima do player */
+            overflow-y: scroll; /* Habilita a rolagem vertical */
+            background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo semi-transparente */
+            color: #fff;
+            padding: 20px;
+        }
+
+        #channel-list ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #channel-list ul li {
+            margin-bottom: 10px;
+        }
+
+        #channel-list ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        #player {
+            width: 70%;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 0; /* Define a ordem de empilhamento para ficar abaixo da lista */
+        }
+
+        .selected a,
+        button:hover {
+            color: #f00;
+            animation: red-glow 1s infinite alternate;
+        }
+
+        @keyframes red-glow {
+            0% {
+                color: #fff;
+            }
+            100% {
+                color: #f00;
+            }
+        }
+
+        #button-list {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 2; /* Coloca a lista na frente do player */
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #button-list li {
+            margin-bottom: 10px;
+        }
+
+        #button-list li button {
+            position: relative;
+            background-color: transparent;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #button-list li button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo semi-transparente mais escura */
+            z-index: -1;
+            opacity: 0.8; /* Ajuste a opacidade aqui */
+        }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
@@ -17,22 +110,62 @@
                 var selectedButtonIndex = 0;
 
                 for (var i = 0; i < lines.length; i++) {
-                    /* O mesmo código do seu for loop anterior */
+                    if (lines[i].startsWith("#EXTINF")) {
+                        var channelInfo = lines[i].substring(lines[i].indexOf(",") + 1);
+                        var channelLink = lines[i + 1];
+
+                        var listItem = $("<li></li>");
+                        var link = $("<a></a>").attr("href", channelLink).text(channelInfo);
+
+                        link.click(function(event) {
+                            event.preventDefault();
+                            var channelUrl = $(this).attr("href");
+                            player.src = channelUrl;
+                            player.play();
+                            player.requestFullscreen(); // Solicita o modo de tela cheia
+                        });
+
+                        listItem.append(link);
+                        channelList.append(listItem);
+                    }
                 }
 
                 function selectChannel(index) {
-                    /* O mesmo código da função selectChannel anterior */
+                    var channels = channelList.children();
+                    channels.removeClass("selected");
+                    channels.eq(index).addClass("selected");
+                    channels.eq(index).find("a").focus();
                 }
 
                 function selectButton(index) {
-                    /* O mesmo código da função selectButton anterior */
+                    buttonList.removeClass("selected");
+                    buttonList.eq(index).addClass("selected");
+                    buttonList.eq(index).focus();
                 }
 
                 selectChannel(selectedChannelIndex);
                 selectButton(selectedButtonIndex);
 
                 $(document).keydown(function(e) {
-                    /* O mesmo código do seu keydown event handler anterior */
+                    var key = e.which;
+
+                    if (key === 38) { // Seta para cima
+                        e.preventDefault();
+                        selectedChannelIndex = (selectedChannelIndex > 0) ? selectedChannelIndex - 1 : 0;
+                        selectChannel(selectedChannelIndex);
+                    } else if (key === 40) { // Seta para baixo
+                        e.preventDefault();
+                        selectedChannelIndex = (selectedChannelIndex < channelList.children().length - 1) ? selectedChannelIndex + 1 : channelList.children().length - 1;
+                        selectChannel(selectedChannelIndex);
+                    } else if (key === 37) { // Seta para a esquerda
+                        e.preventDefault();
+                        selectedButtonIndex = (selectedButtonIndex > 0) ? selectedButtonIndex - 1 : 0;
+                        selectButton(selectedButtonIndex);
+                    } else if (key === 39) { // Seta para a direita
+                        e.preventDefault();
+                        selectedButtonIndex = (selectedButtonIndex < buttonList.length - 1) ? selectedButtonIndex + 1 : buttonList.length - 1;
+                        selectButton(selectedButtonIndex);
+                    }
                 });
 
                 $(player).on('ended', function() {
@@ -43,41 +176,16 @@
                 $(player).on('error', function() {
                     player.load();
                 });
-
-                player.addEventListener('loadedmetadata', function() {
-                    player.play();
-                });
-
-                $(player).on('click', function() {
-                    if (player.requestFullscreen) {
-                        player.requestFullscreen();
-                    } else if (player.mozRequestFullScreen) {
-                        player.mozRequestFullScreen();
-                    } else if (player.webkitRequestFullscreen) {
-                        player.webkitRequestFullscreen();
-                    } else if (player.msRequestFullscreen) {
-                        player.msRequestFullscreen();
-                    }
-                });
-
-                player.addEventListener('play', function() {
-                    player.loop = true; // Ativa o modo de loop
-                });
-
-                player.addEventListener('error', function() {
-                    player.load();
-                });
-
-                player.addEventListener('canplay', function() {
-                    player.play();
-                });
             });
         });
     </script>
 </head>
 <body>
     <ul id="button-list">
-        <!-- Os mesmos botões do seu código anterior -->
+        <li><button onclick="window.location.href='https://listadobill.github.io/tv/'">CANAIS ABERTOS E FECHADOS</button></li>
+        <li><button onclick="window.location.href='https://listadobill.github.io/tv/provisoria'">IPTV</button></li>
+        <li><button onclick="window.location.href='https://listadobill.github.io/tv/tvdobill'">IPTV DO BILL</button></li>
+        <li><button onclick="window.location.href='https://listadobill.github.io/tv/smarttv_plutotvbr.html'">PLUTO TV IPTV</button></li>
     </ul>
 
     <div id="channel-list">
