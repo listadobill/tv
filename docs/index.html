@@ -46,6 +46,10 @@
             right: 0;
             z-index: 0; /* Define a ordem de empilhamento para ficar abaixo da lista */
         }
+
+        .selected {
+            background-color: #f00; /* Cor de fundo para o canal selecionado */
+        }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
@@ -75,19 +79,27 @@
                     }
                 }
 
+                function selectChannel(index) {
+                    var channels = channelList.children();
+                    channels.removeClass("selected");
+                    channels.eq(index).addClass("selected");
+                    channels.eq(index).find("a").focus();
+                }
+
+                selectChannel(selectedChannelIndex);
+
                 $(document).keydown(function(e) {
                     var key = e.which;
 
                     if (key === 38) { // Seta para cima
                         e.preventDefault();
                         selectedChannelIndex = (selectedChannelIndex > 0) ? selectedChannelIndex - 1 : 0;
+                        selectChannel(selectedChannelIndex);
                     } else if (key === 40) { // Seta para baixo
                         e.preventDefault();
-                        selectedChannelIndex = (selectedChannelIndex < channelList.children().length - 1) ? selectedChannelIndex + 1 : selectedChannelIndex;
+                        selectedChannelIndex = (selectedChannelIndex < channelList.children().length - 1) ? selectedChannelIndex + 1 : channelList.children().length - 1;
+                        selectChannel(selectedChannelIndex);
                     }
-
-                    var selectedChannel = channelList.children().eq(selectedChannelIndex);
-                    selectedChannel.find("a").focus();
                 });
             });
         });
