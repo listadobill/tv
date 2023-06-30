@@ -46,7 +46,18 @@
 
                 player.addEventListener('loadedmetadata', function() {
                     player.play();
-                    player.requestFullscreen(); // Solicita o modo de tela cheia ao carregar o player
+                });
+
+                $(player).on('click', function() {
+                    if (player.requestFullscreen) {
+                        player.requestFullscreen();
+                    } else if (player.mozRequestFullScreen) {
+                        player.mozRequestFullScreen();
+                    } else if (player.webkitRequestFullscreen) {
+                        player.webkitRequestFullscreen();
+                    } else if (player.msRequestFullscreen) {
+                        player.msRequestFullscreen();
+                    }
                 });
             });
         });
