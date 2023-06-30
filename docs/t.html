@@ -167,6 +167,15 @@
                         selectButton(selectedButtonIndex);
                     }
                 });
+
+                $(player).on('ended', function() {
+                    player.load();
+                    player.play();
+                });
+
+                $(player).on('error', function() {
+                    player.load();
+                });
             });
         });
     </script>
