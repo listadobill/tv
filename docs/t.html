@@ -7,22 +7,24 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
+            background-color: black; /* Adiciona o fundo preto */
         }
 
         #background-iframe {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 80%;
+            z-index: 0;
         }
 
         #channel-list {
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
+            width: 10%;
             height: 100vh;
             z-index: 1;
             overflow-y: scroll;
@@ -84,18 +86,6 @@
             font-size: 16px;
             cursor: pointer;
         }
-
-        #button-list li button::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            z-index: -1;
-            opacity: 0.8;
-        }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
@@ -143,6 +133,12 @@
                 selectChannel(selectedChannelIndex);
                 selectButton(selectedButtonIndex);
 
+                // Trata o clique no botão de reprodução
+                $("#play-button").click(function(event) {
+                    event.stopPropagation(); // Evita a propagação do evento para a lista de canais
+                    // Insira aqui o código para reproduzir o vídeo
+                });
+
                 $(document).keydown(function(e) {
                     var key = e.which;
 
@@ -169,7 +165,11 @@
     </script>
 </head>
 <body>
-    <iframe id="background-iframe" frameborder="0"></iframe>
+    <div id="channel-list">
+        <ul>
+            <li><a href="#" id="play-button">Play</a></li>
+        </ul>
+    </div>
 
     <ul id="button-list">
         <li><button onclick="window.location.href='https://listadobill.github.io/tv/'">CANAIS ABERTOS E FECHADOS</button></li>
@@ -178,8 +178,6 @@
         <li><button onclick="window.location.href='https://listadobill.github.io/tv/smarttv_plutotvbr.html'">PLUTO TV IPTV</button></li>
     </ul>
 
-    <div id="channel-list">
-        <ul></ul>
-    </div>
+    <iframe id="background-iframe" frameborder="0"></iframe>
 </body>
 </html>
