@@ -16,7 +16,7 @@
             left: 0;
             width: 30%;
             height: 100vh;
-            z-index: 1; /* Define a ordem de empilhamento para ficar acima do player */
+            z-index: 1; /* Define a ordem de empilhamento para ficar acima do iframe */
             overflow-y: scroll; /* Habilita a rolagem vertical */
             background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo semi-transparente */
             color: #fff;
@@ -38,7 +38,7 @@
             text-decoration: none;
         }
 
-        #player {
+        iframe {
             width: 70%;
             height: 100vh;
             position: absolute;
@@ -66,7 +66,7 @@
             position: absolute;
             top: 20px;
             right: 20px;
-            z-index: 2; /* Coloca a lista na frente do player */
+            z-index: 2; /* Coloca a lista na frente do iframe */
             list-style: none;
             padding: 0;
             margin: 0;
@@ -101,10 +101,10 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
-            $.get("https://raw.githubusercontent.com/listadobill/tv/main/c.m3u", function(data) {
+            $.get("https://raw.githubusercontent.com/listadobill/tv/main/web.m3u", function(data) {
                 var lines = data.split("\n");
                 var channelList = $("#channel-list ul");
-                var player = $("#player")[0];
+                var iframe = $("iframe");
                 var selectedChannelIndex = 0;
                 var buttonList = $("#button-list li button");
                 var selectedButtonIndex = 0;
@@ -120,9 +120,8 @@
                         link.click(function(event) {
                             event.preventDefault();
                             var channelUrl = $(this).attr("href");
-                            player.src = channelUrl;
-                            player.play();
-                            player.requestFullscreen(); // Solicita o modo de tela cheia
+                            iframe.attr("src", channelUrl);
+                            iframe[0].requestFullscreen(); // Solicita o modo de tela cheia
                         });
 
                         listItem.append(link);
@@ -167,15 +166,6 @@
                         selectButton(selectedButtonIndex);
                     }
                 });
-
-                $(player).on('ended', function() {
-                    player.load();
-                    player.play();
-                });
-
-                $(player).on('error', function() {
-                    player.load();
-                });
             });
         });
     </script>
@@ -192,6 +182,6 @@
         <ul></ul>
     </div>
 
-    <video id="player" controls></video>
+    <iframe src="" frameborder="0"></iframe>
 </body>
 </html>
