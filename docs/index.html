@@ -47,48 +47,55 @@
             z-index: 0; /* Define a ordem de empilhamento para ficar abaixo da lista */
         }
 
-        .selected {
-            background-color: #f00; /* Cor de fundo para o canal selecionado */
+        .selected a,
+        button:hover {
+            color: #f00;
+            animation: red-glow 1s infinite alternate;
         }
 
-        #access-button {
-            position: absolute;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #f00;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            z-index: 2; /* Coloca o botão na frente de todos os elementos */
+        @keyframes red-glow {
+            0% {
+                color: #fff;
+            }
+            100% {
+                color: #f00;
+            }
         }
 
-        #iptv-button {
+        #button-list {
             position: absolute;
             top: 20px;
             right: 20px;
-            background-color: #f00;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            z-index: 2; /* Coloca o botão na frente de todos os elementos */
+            z-index: 2; /* Coloca a lista na frente do iframe */
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
 
-        #bill-iptv-button {
-            position: absolute;
-            top: 20px;
-            right: 150px;
-            background-color: #f00;
+        #button-list li {
+            margin-bottom: 10px;
+        }
+
+        #button-list li button {
+            position: relative;
+            background-color: transparent;
             color: #fff;
             border: none;
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
-            z-index: 2; /* Coloca o botão na frente de todos os elementos */
+        }
+
+        #button-list li button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo semi-transparente mais escura */
+            z-index: -1;
+            opacity: 0.8; /* Ajuste a opacidade aqui */
         }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -99,6 +106,8 @@
                 var channelList = $("#channel-list ul");
                 var iframe = $("iframe");
                 var selectedChannelIndex = 0;
+                var buttonList = $("#button-list li button");
+                var selectedButtonIndex = 0;
 
                 for (var i = 0; i < lines.length; i++) {
                     if (lines[i].startsWith("#EXTINF")) {
@@ -127,7 +136,14 @@
                     channels.eq(index).find("a").focus();
                 }
 
+                function selectButton(index) {
+                    buttonList.removeClass("selected");
+                    buttonList.eq(index).addClass("selected");
+                    buttonList.eq(index).focus();
+                }
+
                 selectChannel(selectedChannelIndex);
+                selectButton(selectedButtonIndex);
 
                 $(document).keydown(function(e) {
                     var key = e.which;
@@ -140,6 +156,14 @@
                         e.preventDefault();
                         selectedChannelIndex = (selectedChannelIndex < channelList.children().length - 1) ? selectedChannelIndex + 1 : channelList.children().length - 1;
                         selectChannel(selectedChannelIndex);
+                    } else if (key === 37) { // Seta para a esquerda
+                        e.preventDefault();
+                        selectedButtonIndex = (selectedButtonIndex > 0) ? selectedButtonIndex - 1 : 0;
+                        selectButton(selectedButtonIndex);
+                    } else if (key === 39) { // Seta para a direita
+                        e.preventDefault();
+                        selectedButtonIndex = (selectedButtonIndex < buttonList.length - 1) ? selectedButtonIndex + 1 : buttonList.length - 1;
+                        selectButton(selectedButtonIndex);
                     }
                 });
             });
@@ -147,10 +171,13 @@
     </script>
 </head>
 <body>
-    <button id="access-button" onclick="window.location.href='https://listadobill.github.io/tv/'">CANAIS ABERTOS E FECHADOS</button>
-    <button id="iptv-button" onclick="window.location.href='https://listadobill.github.io/tv/provisoria'">IPTV</button>
-    <button id="bill-iptv-button" onclick="window.location.href='https://listadobill.github.io/tv/tvdobill'">IPTV DO BILL</button>
-    
+    <ul id="button-list">
+        <li><button onclick="window.location.href='https://listadobill.github.io/tv/'">CANAIS ABERTOS E FECHADOS</button></li>
+        <li><button onclick="window.location.href='https://listadobill.github.io/tv/provisoria'">IPTV</button></li>
+        <li><button onclick="window.location.href='https://listadobill.github.io/tv/tvdobill'">IPTV DO BILL</button></li>
+        <li><button onclick="window.location.href='https://listadobill.github.io/tv/smarttv_plutotvbr.html'">PLUTO TV IPTV</button></li>
+    </ul>
+
     <div id="channel-list">
         <ul></ul>
     </div>
