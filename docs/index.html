@@ -1,131 +1,180 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>TV DO BILL - CANAIS WEB</title>
     <style>
-        html, body {
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #333;
+            color: #f1f1f1;
             margin: 0;
             padding: 0;
-            height: 100%;
-            background-color: #222;
-            color: #fff;
-            overflow: hidden;
         }
 
-        #channelList {
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 30%;
-            overflow-y: scroll;
+        #button-container {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            z-index: 3;
+            margin-top: 20px;
+        }
+
+        #channel-list {
+            flex: 1;
             padding: 20px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative;
+            z-index: 2;
+            align-self: flex-start;
+        }
+
+        #channel-list ul {
+            background-color: #222;
+            padding: 10px;
+            border-radius: 5px;
+            position: relative;
+            z-index: 2;
+        }
+
+        #channel-player {
+            flex: 2;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        button {
+            background-color: #222;
+            color: #f1f1f1;
+            border: none;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            width: 200px;
+            height: 40px;
+            border-radius: 5px;
+        }
+
+        button:hover {
             background-color: #333;
         }
 
-        #channelList ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        #channelList li {
-            margin-bottom: 10px;
-            transition: background-color 0.3s ease;
-        }
-
-        #channelList li:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-
-        #channelList a {
-            display: block;
-            padding: 10px;
-            color: #fff;
-            text-decoration: none;
-        }
-
-        #channelList a:hover {
-            color: #fff;
-        }
-
-        #channelIframeContainer {
-            position: absolute;
-            left: 30%;
+        iframe {
+            width: 100%;
+            height: 100%;
+            position: fixed;
             top: 0;
-            right: 0;
-            bottom: 0;
-            overflow: hidden;
+            left: 0;
         }
 
-        #channelIframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            background-color: #000;
-            transform: scale(0.7);
-        }
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #000;
+                color: #f1f1f1;
+            }
 
-        .iframe-content {
-            width: 100%;
-            height: 100%;
+            #channel-list ul {
+                background-color: #111;
+            }
+
+            button {
+                background-color: #111;
+                color: #f1f1f1;
+            }
+
+            button:hover {
+                background-color: #222;
+            }
         }
     </style>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $.get("https://raw.githubusercontent.com/listadobill/tv/main/web.m3u", function(data) {
-                var lines = data.split("\n");
-                var channelList = $("#channelList ul");
-                var channelIframe = $("#channelIframe");
-
-                for (var i = 0; i < lines.length; i++) {
-                    if (lines[i].startsWith("#EXTINF")) {
-                        var channelInfo = lines[i].substring(lines[i].indexOf(",") + 1);
-                        var channelLink = lines[i + 1];
-
-                        var listItem = $("<li></li>");
-                        var link = $("<a></a>").attr("href", channelLink).text(channelInfo);
-
-                        listItem.append(link);
-                        channelList.append(listItem);
-
-                        link.on("click", function(e) {
-                            e.preventDefault();
-                            var channelUrl = $(this).attr("href");
-                            openFullscreen(channelUrl);
-                        });
-                    }
-                }
-
-                var randomChannelIndex = Math.floor(Math.random() * channelList.children().length);
-                var randomChannelLink = channelList.children().eq(randomChannelIndex).find("a").attr("href");
-                openFullscreen(randomChannelLink);
-            });
-
-            function openFullscreen(url) {
-                var elem = document.getElementById("channelIframe");
-
-                if (elem.requestFullscreen) {
-                    elem.requestFullscreen();
-                } else if (elem.mozRequestFullScreen) { /* Firefox */
-                    elem.mozRequestFullScreen();
-                } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
-                    elem.webkitRequestFullscreen();
-                } else if (elem.msRequestFullscreen) { /* IE/Edge */
-                    elem.msRequestFullscreen();
-                }
-
-                elem.src = url;
-            }
-        });
-    </script>
 </head>
 <body>
-    <div id="channelList">
-        <ul></ul>
+    <div id="button-container">
+        <button onclick="openPage('https://listadobill.github.io/tv')">TV WEB</button>
+        <button onclick="openPage('https://listadobill.github.io/tv/tvdobill')">CANAIS IPTV</button>
+        <button onclick="openPage('https://listadobill.github.io/tv/provisoria')">IPTV PROVISÓRIO</button>
+        <button onclick="openPage('https://pluto.tv/live-tv')">PLUTO TV</button>
     </div>
 
-    <div id="channelIframeContainer">
-        <iframe id="channelIframe" src=""></iframe>
+    <div id="channel-list">
+        <ul id="channel-list-ul">
+            <!-- Os canais serão carregados dinamicamente através do JavaScript -->
+        </ul>
     </div>
+
+    <div id="channel-player">
+        <!-- Conteúdo do player -->
+    </div>
+
+    <script>
+        // Função para abrir uma nova página na mesma aba
+        function openPage(url) {
+            window.location.href = url;
+        }
+
+        // Função para ajustar o tamanho do iframe com base na resolução da tela
+        function adjustIframeSize() {
+            var iframe = document.querySelector("#channel-player iframe");
+            var screenHeight = window.innerHeight;
+
+            iframe.style.height = screenHeight + "px";
+        }
+
+        // Função para carregar a lista de canais
+        function loadChannels() {
+            var channelList = document.querySelector("#channel-list-ul");
+            var playlistURL = "https://raw.githubusercontent.com/listadobill/tv/main/web.m3u";
+
+            fetch(playlistURL)
+                .then(response => response.text())
+                .then(data => {
+                    var lines = data.trim().split('\n');
+                    lines = lines.slice(1);
+
+                    lines.forEach(line => {
+                        if (line.startsWith('#EXTINF:-1,')) {
+                            var channelName = line.replace('#EXTINF:-1,', '');
+                            var channelURL = lines[lines.indexOf(line) + 1];
+
+                            var listItem = document.createElement("li");
+                            var button = document.createElement("button");
+                            button.textContent = channelName;
+                            button.addEventListener("click", function() {
+                                openPage(channelURL);
+                            });
+
+                            listItem.appendChild(button);
+                            channelList.appendChild(listItem);
+                        }
+                    });
+
+                    var randomChannel = Math.floor(Math.random() * lines.length);
+                    var randomChannelURL = lines[randomChannel + 1];
+                    openPlayer(randomChannelURL);
+                })
+                .catch(error => console.log(error));
+        }
+
+        // Carrega os canais ao carregar a página
+        window.onload = function() {
+            loadChannels();
+            adjustIframeSize();
+        };
+
+        // Atualiza o tamanho do iframe quando a janela do navegador for redimensionada
+        window.addEventListener("resize", adjustIframeSize);
+
+    </script>
 </body>
 </html>
