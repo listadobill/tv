@@ -14,7 +14,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 20%;
+            width: 30%;
             height: 100vh;
             z-index: 1; /* Define a ordem de empilhamento para ficar acima do iframe */
             overflow-y: scroll; /* Habilita a rolagem vertical */
@@ -49,6 +49,20 @@
 
         .selected {
             background-color: #f00; /* Cor de fundo para o canal selecionado */
+        }
+
+        #access-button {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #f00;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            z-index: 2; /* Coloca o botão na frente de todos os elementos */
         }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -107,6 +121,8 @@
     </script>
 </head>
 <body>
+    <button id="access-button" onclick="window.location.href='https://listadobill.github.io/tv/'">CANAIS ABERTOS E FECHADOS</button>
+    
     <div id="channel-list">
         <ul></ul>
     </div>
