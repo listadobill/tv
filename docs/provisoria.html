@@ -103,6 +103,7 @@
         $(document).ready(function() {
             $.get("https://raw.githubusercontent.com/listadobill/tv/main/c.m3u", function(data) {
                 var lines = data.split("\n");
+                var channels = [];
                 var channelList = $("#channel-list ul");
                 var player = $("#player")[0];
                 var selectedChannelIndex = 0;
@@ -114,20 +115,28 @@
                         var channelInfo = lines[i].substring(lines[i].indexOf(",") + 1);
                         var channelLink = lines[i + 1];
 
-                        var listItem = $("<li></li>");
-                        var link = $("<a></a>").attr("href", channelLink).text(channelInfo);
-
-                        link.click(function(event) {
-                            event.preventDefault();
-                            var channelUrl = $(this).attr("href");
-                            player.src = channelUrl;
-                            player.play();
-                            player.requestFullscreen(); // Solicita o modo de tela cheia
-                        });
-
-                        listItem.append(link);
-                        channelList.append(listItem);
+                        channels.push({ info: channelInfo, link: channelLink });
                     }
+                }
+
+                channels.sort(function(a, b) {
+                    return a.info.localeCompare(b.info); // Ordena os canais alfabeticamente
+                });
+
+                for (var j = 0; j < channels.length; j++) {
+                    var listItem = $("<li></li>");
+                    var link = $("<a></a>").attr("href", channels[j].link).text(channels[j].info);
+
+                    link.click(function(event) {
+                        event.preventDefault();
+                        var channelUrl = $(this).attr("href");
+                        player.src = channelUrl;
+                        player.play();
+                        player.requestFullscreen(); // Solicita o modo de tela cheia
+                    });
+
+                    listItem.append(link);
+                    channelList.append(listItem);
                 }
 
                 function selectChannel(index) {
