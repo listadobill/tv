@@ -103,7 +103,6 @@
         $(document).ready(function() {
             $.get("https://raw.githubusercontent.com/listadobill/tv/main/c.m3u", function(data) {
                 var lines = data.split("\n");
-                var channels = [];
                 var channelList = $("#channel-list ul");
                 var player = $("#player")[0];
                 var selectedChannelIndex = 0;
@@ -115,36 +114,20 @@
                         var channelInfo = lines[i].substring(lines[i].indexOf(",") + 1);
                         var channelLink = lines[i + 1];
 
-                        channels.push({ info: channelInfo, link: channelLink });
+                        var listItem = $("<li></li>");
+                        var link = $("<a></a>").attr("href", channelLink).text(channelInfo);
+
+                        link.click(function(event) {
+                            event.preventDefault();
+                            var channelUrl = $(this).attr("href");
+                            player.src = channelUrl;
+                            player.play();
+                            player.requestFullscreen(); // Solicita o modo de tela cheia
+                        });
+
+                        listItem.append(link);
+                        channelList.append(listItem);
                     }
-                }
-
-                channels.sort(function(a, b) {
-                    return a.info.localeCompare(b.info); // Ordena os canais alfabeticamente
-                });
-
-                for (var j = 0; j < channels.length; j++) {
-                    var listItem = $("<li></li>");
-                    var link = $("<a></a>").attr("href", channels[j].link).text(channels[j].info);
-
-                    link.click(function(event) {
-                        event.preventDefault();
-                        var channelUrl = $(this).attr("href");
-                        player.src = channelUrl;
-                        player.play();
-                        if (player.requestFullscreen) {
-                            player.requestFullscreen();
-                        } else if (player.mozRequestFullScreen) {
-                            player.mozRequestFullScreen();
-                        } else if (player.webkitRequestFullscreen) {
-                            player.webkitRequestFullscreen();
-                        } else if (player.msRequestFullscreen) {
-                            player.msRequestFullscreen();
-                        }
-                    });
-
-                    listItem.append(link);
-                    channelList.append(listItem);
                 }
 
                 function selectChannel(index) {
@@ -185,14 +168,14 @@
                     }
                 });
 
-                $(player).on('ended', function() {
+                $(player).on('error', function() {
                     player.load();
                     player.play();
                 });
 
-                $(player).on('error', function() {
-                    player.load();
-                });
+                player.src = channelList.children().eq(selectedChannelIndex).find("a").attr("href");
+                player.play();
+                player.requestFullscreen(); // Solicita o modo de tela cheia
             });
         });
     </script>
@@ -202,13 +185,17 @@
         <li><button onclick="window.location.href='https://listadobill.github.io/tv/'">CANAIS ABERTOS E FECHADOS</button></li>
         <li><button onclick="window.location.href='https://listadobill.github.io/tv/provisoria'">IPTV</button></li>
         <li><button onclick="window.location.href='https://listadobill.github.io/tv/tvdobill'">IPTV DO BILL</button></li>
-        <li><button onclick="window.location.href='https://listadobill.github.io/tv/smarttv_plutotvbr.html'">PLUTO TV IPTV</button></li>
+        <li><button onclick="window.location.href='https://listadobill.github.io/tv/smarttv_plutotvbr.html'">PLUTO TV</button></li>
+        <li><button onclick="window.location.href='https://listadobill.github.io/tv/smarttv_youtubebr.html'">YOUTUBE</button></li>
     </ul>
 
     <div id="channel-list">
-        <ul></ul>
+        <h1>TV DO BILL</h1>
+        <ul>
+            <!-- Lista de canais preenchida dinamicamente -->
+        </ul>
     </div>
 
-    <video id="player" controls></video>
+    <video id="player" autoplay controls></video>
 </body>
 </html>
