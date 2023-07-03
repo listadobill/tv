@@ -132,7 +132,15 @@
                         var channelUrl = $(this).attr("href");
                         player.src = channelUrl;
                         player.play();
-                        player.requestFullscreen(); // Solicita o modo de tela cheia
+                        if (player.requestFullscreen) {
+                            player.requestFullscreen();
+                        } else if (player.mozRequestFullScreen) {
+                            player.mozRequestFullScreen();
+                        } else if (player.webkitRequestFullscreen) {
+                            player.webkitRequestFullscreen();
+                        } else if (player.msRequestFullscreen) {
+                            player.msRequestFullscreen();
+                        }
                     });
 
                     listItem.append(link);
