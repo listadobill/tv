@@ -10,21 +10,12 @@
             background-color: rgba(0, 0, 0, 0.5); /* Fundo preto com 50% de opacidade */
         }
 
-        #background-iframe {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-        }
-
         #channel-list {
             position: absolute;
             top: 0;
             left: 0;
+            bottom: 0;
             width: 10%;
-            height: 100vh;
             z-index: 1;
             overflow-y: scroll;
             background-color: rgba(0, 0, 0, 0.8);
@@ -105,14 +96,7 @@
                         var channelLink = lines[i + 1];
 
                         var listItem = $("<li></li>");
-                        var link = $("<a></a>").attr("href", channelLink).text(channelInfo);
-
-                        link.click(function(event) {
-                            event.preventDefault();
-                            var channelUrl = $(this).attr("href");
-                            $("#background-iframe").attr("src", channelUrl);
-                            $("#background-iframe")[0].requestFullscreen(); // Abrir em tela cheia
-                        });
+                        var link = $("<a></a>").attr("href", channelLink).text(channelInfo).attr("target", "_self");
 
                         listItem.append(link);
                         channelList.append(listItem);
@@ -134,13 +118,6 @@
 
                 selectChannel(selectedChannelIndex);
                 selectButton(selectedButtonIndex);
-
-                // Trata o clique no botão de reprodução
-                $("#play-button").click(function(event) {
-                    event.stopPropagation(); // Evita a propagação do evento para a lista de canais
-                    $("#background-iframe")[0].requestFullscreen(); // Abrir em tela cheia
-                    // Insira aqui o código para reproduzir o vídeo
-                });
 
                 $(document).keydown(function(e) {
                     var key = e.which;
@@ -168,8 +145,6 @@
     </script>
 </head>
 <body>
-    <iframe id="background-iframe" frameborder="0"></iframe>
-
     <ul id="button-list">
         <li><button onclick="window.location.href='https://listadobill.github.io/tv/'">CANAIS ABERTOS E FECHADOS</button></li>
         <li><button onclick="window.location.href='https://listadobill.github.io/tv/provisoria'">IPTV</button></li>
