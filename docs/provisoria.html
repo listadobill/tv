@@ -99,7 +99,6 @@
         }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script>
         $(document).ready(function() {
             $.get("https://raw.githubusercontent.com/listadobill/tv/main/c.m3u", function(data) {
@@ -110,7 +109,6 @@
                 var selectedChannelIndex = 0;
                 var buttonList = $("#button-list li button");
                 var selectedButtonIndex = 0;
-                var hls;
 
                 for (var i = 0; i < lines.length; i++) {
                     if (lines[i].startsWith("#EXTINF")) {
@@ -132,23 +130,16 @@
                     link.click(function(event) {
                         event.preventDefault();
                         var channelUrl = $(this).attr("href");
-
-                        if (Hls.isSupported()) {
-                            if (hls) {
-                                hls.destroy();
-                            }
-
-                            hls = new Hls();
-                            hls.loadSource(channelUrl);
-                            hls.attachMedia(player);
-                            hls.on(Hls.Events.MANIFEST_PARSED, function() {
-                                player.play();
-                            });
-                        } else if (player.canPlayType("application/vnd.apple.mpegurl")) {
-                            player.src = channelUrl;
-                            player.addEventListener("canplay", function() {
-                                player.play();
-                            });
+                        player.src = channelUrl;
+                        player.play();
+                        if (player.requestFullscreen) {
+                            player.requestFullscreen();
+                        } else if (player.mozRequestFullScreen) {
+                            player.mozRequestFullScreen();
+                        } else if (player.webkitRequestFullscreen) {
+                            player.webkitRequestFullscreen();
+                        } else if (player.msRequestFullscreen) {
+                            player.msRequestFullscreen();
                         }
                     });
 
@@ -192,6 +183,15 @@
                         selectedButtonIndex = (selectedButtonIndex < buttonList.length - 1) ? selectedButtonIndex + 1 : buttonList.length - 1;
                         selectButton(selectedButtonIndex);
                     }
+                });
+
+                $(player).on('ended', function() {
+                    player.load();
+                    player.play();
+                });
+
+                $(player).on('error', function() {
+                    player.load();
                 });
             });
         });
