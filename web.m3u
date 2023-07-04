@@ -2,7 +2,7 @@
 
 #EXTINF:-1,ATUALIZADO DIA
 https:
-#EXTINF:-1,29-06-2023
+#EXTINF:-1,04-07-2023
 https:
 
 #EXTINF:-1,USE O NAVEGADOR
@@ -31,6 +31,9 @@ https://embedflix.net/tv/bandsport
 
 #EXTINF:-1,Cartoon Network
 https://embedflix.net/tv/cartoon-network
+
+#EXTINF:-1,CLASSIQUE WESTERN (FAROESTE)
+https://playerv.srvif.com/video/classiquew/2/false/false/YzNSdGRqRXVjM0oyYVdZdVkyOXQrWg==/16:9/
 
 #EXTINF:-1,CNN Brasil HD
 https://embedflix.net/tv/cnn-brasil-hd
