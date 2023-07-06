@@ -1,8 +1,8 @@
 #EXTM3U
 
-#EXTINF:-1,ATUALIZADO DIA
+#EXTINF:-1 tvg-id="ATUALIZAÇÃO" tvg-logo="https://cdn.icon-icons.com/icons2/1527/PNG/512/refresh_106672.png" group-title="ATUALIZAÇÃO",ATUALIZAÇÃO DIA
 https:
-#EXTINF:-1,04-07-2023
+#EXTINF:-1 tvg-id="ATUALIZAÇÃO" tvg-logo="https://cdn.icon-icons.com/icons2/1527/PNG/512/refresh_106672.png" group-title="ATUALIZAÇÃO",04-07-2023
 https:
 
 #EXTINF:-1,USE O NAVEGADOR
