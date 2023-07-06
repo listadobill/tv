@@ -5,20 +5,20 @@ https:
 #EXTINF:-1 tvg-id="ATUALIZAÇÃO" tvg-logo="https://cdn.icon-icons.com/icons2/1527/PNG/512/refresh_106672.png" group-title="02 - ATUALIZAÇÃO",04-07-2023
 https:
 
-#EXTINF:-1,03 - USE O NAVEGADOR
+#EXTINF:-1 tvg-id="ATUALIZAÇÃO" tvg-logo="https://play-lh.googleusercontent.com/PcRA92AlF3NafNYMb2BVFSIohyJVEgEKusVuDZj0nGKV-oQujZANLR4-enR46SqUmg" group-title="ATUALIZAÇÃO",03 - USE O NAVEGADOR
 https://vivaldi.com/pt-br/
-#EXTINF:-1,04 - VIVALDI
+#EXTINF:-1 tvg-id="ATUALIZAÇÃO" tvg-logo="https://play-lh.googleusercontent.com/PcRA92AlF3NafNYMb2BVFSIohyJVEgEKusVuDZj0nGKV-oQujZANLR4-enR46SqUmg" group-title="ATUALIZAÇÃO",04 - VIVALDI
 https://vivaldi.com/pt-br/
 
-#EXTINF:-1,05 - ADICIONE A TV DO
+#EXTINF:-1 tvg-id="ATUALIZAÇÃO" tvg-logo="https://imgs.casasbahia.com.br/55002768/1g.jpg",05 - ADICIONE A TV DO
 https://listadobill.github.io/tv/
-#EXTINF:-1,06 - BILL NOS
+#EXTINF:-1 tvg-id="ATUALIZAÇÃO" tvg-logo="https://imgs.casasbahia.com.br/55002768/1g.jpg",06 - BILL NOS
 https://listadobill.github.io/tv/
-#EXTINF:-1,07 - FAVORITOS
+#EXTINF:-1 tvg-id="ATUALIZAÇÃO" tvg-logo="https://imgs.casasbahia.com.br/55002768/1g.jpg",07 - FAVORITOS
 https://listadobill.github.io/tv/
 
 
-#EXTINF:-1 tvg-id="ATUALIZAÇÃO" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/2/20/2018_Animal_Planet_logo.svg" group-title="DOCUMENTÁRIO",Animal Planet
+#EXTINF:-1 tvg-id="ANIMAL PLANET" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/2/20/2018_Animal_Planet_logo.svg" group-title="DOCUMENTÁRIO",Animal Planet
 https://embedflix.net/tv/animal-planet
 
 #EXTINF:-1,Band TV SP
