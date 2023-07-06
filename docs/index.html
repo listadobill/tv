@@ -66,7 +66,7 @@
                 });
 
                 channels.forEach(function(channel, index) {
-                    var channelItem = $("<a></a>").attr("href", channel.link).attr("target", "_self").addClass("channel-item");
+                    var channelItem = $("<a></a>").attr("href", channel.link).attr("target", "_blank").addClass("channel-item");
                     var channelIcon = $("<img>").attr("src", channel.icon).addClass("channel-icon");
                     var channelName = $("<span></span>").text(channel.info);
 
@@ -96,6 +96,12 @@
                             break;
                         case 40: // Setinha para baixo
                             newIndex = currentIndex + 5;
+                            break;
+                        case 13: // Tecla Enter
+                            if (selectedItem.length) {
+                                var link = selectedItem.attr("href");
+                                window.open(link, "_self");
+                            }
                             break;
                     }
 
