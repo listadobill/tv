@@ -11,73 +11,30 @@
         }
 
         #channel-list {
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            width: 10%;
-            z-index: 1;
-            overflow-y: scroll;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: #fff;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-content: flex-start;
             padding: 20px;
         }
 
-        #channel-list ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        #channel-list ul li {
-            margin-bottom: 10px;
-        }
-
-        #channel-list ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .selected a,
-        button:hover {
-            color: #f00;
-            animation: red-glow 1s infinite alternate;
-        }
-
-        @keyframes red-glow {
-            0% {
-                color: #fff;
-            }
-            100% {
-                color: #f00;
-            }
-        }
-
-        #button-list {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            z-index: 2;
-            list-style: none;
-            padding: 0;
-            margin: 0;
+        .channel-item {
+            width: 150px;
+            height: 150px;
+            margin: 10px;
             display: flex;
             flex-direction: column;
-            align-items: flex-end;
-        }
-
-        #button-list li {
-            margin-bottom: 10px;
-        }
-
-        #button-list li button {
-            position: relative;
-            background-color: rgba(0, 0, 0, 0.5); /* Fundo preto opaco com 50% de opacidade */
+            align-items: center;
+            justify-content: center;
             color: #fff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .channel-icon {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
         }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -85,77 +42,47 @@
         $(document).ready(function() {
             $.get("https://raw.githubusercontent.com/listadobill/tv/main/web.m3u", function(data) {
                 var lines = data.split("\n");
-                var channelList = $("#channel-list ul");
-                var selectedChannelIndex = 0;
-                var buttonList = $("#button-list li button");
-                var selectedButtonIndex = 0;
+                var channelList = $("#channel-list");
 
+                var channels = [];
                 for (var i = 0; i < lines.length; i++) {
                     if (lines[i].startsWith("#EXTINF")) {
                         var channelInfo = lines[i].substring(lines[i].indexOf(",") + 1);
                         var channelLink = lines[i + 1];
+                        var channelIcon = getTvgLogo(lines[i]);
 
-                        var listItem = $("<li></li>");
-                        var link = $("<a></a>").attr("href", channelLink).text(channelInfo).attr("target", "_self");
-
-                        listItem.append(link);
-                        channelList.append(listItem);
+                        channels.push({ info: channelInfo, link: channelLink, icon: channelIcon });
                     }
                 }
 
-                function selectChannel(index) {
-                    var channels = channelList.children();
-                    channels.removeClass("selected");
-                    channels.eq(index).addClass("selected");
-                    channels.eq(index).find("a").focus();
-                }
+                channels.sort(function(a, b) {
+                    return a.info.localeCompare(b.info);
+                });
 
-                function selectButton(index) {
-                    buttonList.removeClass("selected");
-                    buttonList.eq(index).addClass("selected");
-                    buttonList.eq(index).focus();
-                }
+                channels.forEach(function(channel) {
+                    var channelItem = $("<a></a>").attr("href", channel.link).attr("target", "_self").addClass("channel-item");
+                    var channelIcon = $("<img>").attr("src", channel.icon).addClass("channel-icon");
+                    var channelName = $("<span></span>").text(channel.info);
 
-                selectChannel(selectedChannelIndex);
-                selectButton(selectedButtonIndex);
-
-                $(document).keydown(function(e) {
-                    var key = e.which;
-
-                    if (key === 38) { // Seta para cima
-                        e.preventDefault();
-                        selectedChannelIndex = (selectedChannelIndex > 0) ? selectedChannelIndex - 1 : 0;
-                        selectChannel(selectedChannelIndex);
-                    } else if (key === 40) { // Seta para baixo
-                        e.preventDefault();
-                        selectedChannelIndex = (selectedChannelIndex < channelList.children().length - 1) ? selectedChannelIndex + 1 : channelList.children().length - 1;
-                        selectChannel(selectedChannelIndex);
-                    } else if (key === 37) { // Seta para a esquerda
-                        e.preventDefault();
-                        selectedButtonIndex = (selectedButtonIndex > 0) ? selectedButtonIndex - 1 : 0;
-                        selectButton(selectedButtonIndex);
-                    } else if (key === 39) { // Seta para a direita
-                        e.preventDefault();
-                        selectedButtonIndex = (selectedButtonIndex < buttonList.length - 1) ? selectedButtonIndex + 1 : buttonList.length - 1;
-                        selectButton(selectedButtonIndex);
-                    }
+                    channelItem.append(channelIcon);
+                    channelItem.append(channelName);
+                    channelList.append(channelItem);
                 });
             });
         });
+
+        function getTvgLogo(line) {
+            var regex = /tvg-logo="([^"]+)"/g;
+            var matches = regex.exec(line);
+            if (matches && matches.length === 2) {
+                return matches[1];
+            }
+
+            return "placeholder.png"; // Substitua pelo caminho do ícone padrão
+        }
     </script>
 </head>
 <body>
-    <ul id="button-list">
-        <li><button onclick="window.location.href='https://listadobill.github.io/tv/filmes_e_series'">FILMES E SÉRIES</button></li>
-        <li><button onclick="window.location.href='https://listadobill.github.io/tv/provisoria'">IPTV</button></li>
-        <li><button onclick="window.location.href='https://listadobill.github.io/tv/smarttv_plutotvbr.html'">PLUTO TV IPTV</button></li>
-        <li><button onclick="window.location.href='https://listadobill.github.io/tv/tvdobill'">IPTV DO BILL</button></li>
-    </ul>
-
-    <div id="channel-list">
-        <ul>
-            
-        </ul>
-    </div>
+    <div id="channel-list"></div>
 </body>
 </html>
