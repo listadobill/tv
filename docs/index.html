@@ -30,6 +30,11 @@
             text-decoration: none;
             font-size: 14px;
             cursor: pointer; /* Torna os botões selecionáveis com o cursor */
+            border: 2px solid transparent; /* Adiciona uma borda transparente inicialmente */
+        }
+
+        .channel-item.selected {
+            border-color: #00ff00; /* Define a cor da borda para identificar a seleção */
         }
 
         .channel-icon {
@@ -60,14 +65,59 @@
                     return a.info.localeCompare(b.info);
                 });
 
-                channels.forEach(function(channel) {
+                channels.forEach(function(channel, index) {
                     var channelItem = $("<a></a>").attr("href", channel.link).attr("target", "_self").addClass("channel-item");
                     var channelIcon = $("<img>").attr("src", channel.icon).addClass("channel-icon");
                     var channelName = $("<span></span>").text(channel.info);
 
                     channelItem.append(channelIcon);
                     channelItem.append(channelName);
+                    channelItem.data("index", index); // Armazena o índice do canal como um atributo de dados
+
                     channelList.append(channelItem);
+                });
+
+                // Captura os eventos de teclado
+                $(document).keydown(function(e) {
+                    var channelItems = $(".channel-item");
+                    var selectedItem = $(".channel-item.selected");
+                    var currentIndex = selectedItem.length ? selectedItem.data("index") : -1;
+                    var newIndex;
+
+                    switch(e.keyCode) {
+                        case 37: // Setinha para a esquerda
+                            newIndex = currentIndex - 1;
+                            break;
+                        case 38: // Setinha para cima
+                            newIndex = currentIndex - 5;
+                            break;
+                        case 39: // Setinha para a direita
+                            newIndex = currentIndex + 1;
+                            break;
+                        case 40: // Setinha para baixo
+                            newIndex = currentIndex + 5;
+                            break;
+                    }
+
+                    // Verifica se o novo índice está dentro dos limites dos canais
+                    if (newIndex >= 0 && newIndex < channelItems.length) {
+                        selectedItem.removeClass("selected");
+                        var newSelectedItem = channelItems.eq(newIndex);
+                        newSelectedItem.addClass("selected");
+
+                        // Scroll automático para garantir que o item selecionado seja visível
+                        var container = $("#channel-list");
+                        var containerHeight = container.height();
+                        var scrollTop = container.scrollTop();
+                        var itemTop = newSelectedItem.position().top;
+                        var itemHeight = newSelectedItem.height();
+
+                        if (itemTop < 0) {
+                            container.scrollTop(scrollTop + itemTop);
+                        } else if (itemTop + itemHeight > containerHeight) {
+                            container.scrollTop(scrollTop + itemTop + itemHeight - containerHeight);
+                        }
+                    }
                 });
             });
         });
