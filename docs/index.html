@@ -15,6 +15,7 @@
     }
     
     .channel-button {
+      position: relative;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -36,6 +37,28 @@
       width: 100px;
       height: 100px;
       margin-bottom: 10px;
+    }
+
+    .selected-channel {
+      animation-name: pulse;
+      animation-duration: 1s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
     }
   </style>
 </head>
@@ -59,7 +82,8 @@
     function processChannelList(channelList) {
       var lines = channelList.split('\n');
       var channelDiv = document.getElementById('channel-list');
-      
+      var channelButtons = [];
+
       for (var i = 0; i < lines.length; i++) {
         var line = lines[i];
         if (line.startsWith('#EXTINF:')) {
@@ -83,8 +107,35 @@
           channelButton.appendChild(channelNameSpan);
 
           channelDiv.appendChild(channelButton);
+          channelButtons.push(channelButton);
         }
       }
+
+      var selectedChannelIndex = 0;
+      channelButtons[selectedChannelIndex].classList.add('selected-channel');
+
+      // Função para selecionar o próximo canal
+      function selectNextChannel() {
+        channelButtons[selectedChannelIndex].classList.remove('selected-channel');
+        selectedChannelIndex = (selectedChannelIndex + 1) % channelButtons.length;
+        channelButtons[selectedChannelIndex].classList.add('selected-channel');
+      }
+
+      // Função para selecionar o canal anterior
+      function selectPreviousChannel() {
+        channelButtons[selectedChannelIndex].classList.remove('selected-channel');
+        selectedChannelIndex = (selectedChannelIndex - 1 + channelButtons.length) % channelButtons.length;
+        channelButtons[selectedChannelIndex].classList.add('selected-channel');
+      }
+
+      // Adiciona os eventos das teclas para seleção de canais
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'ArrowDown') {
+          selectNextChannel();
+        } else if (event.key === 'ArrowUp') {
+          selectPreviousChannel();
+        }
+      });
     }
 
     // Ler a lista de canais e processá-la
