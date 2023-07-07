@@ -1,130 +1,96 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>TV DO BILL</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow-y: auto; /* Adiciona rolagem vertical */
-            background-color: black; /* Fundo preto */
-        }
-
-        #channel-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            align-content: flex-start;
-            padding: 20px;
-        }
-
-        .channel-item {
-            width: 150px;
-            height: 150px;
-            margin: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            text-decoration: none;
-            font-size: 14px;
-            cursor: pointer; /* Torna os botões selecionáveis com o cursor */
-            border: 2px solid transparent; /* Adiciona uma borda transparente inicialmente */
-        }
-
-        .channel-item.selected {
-            border-color: #00ff00; /* Define a cor da borda para identificar a seleção */
-        }
-
-        .channel-icon {
-            width: 80px;
-            height: 80px;
-            margin-bottom: 10px;
-        }
-    </style>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $.get("https://raw.githubusercontent.com/listadobill/tv/main/web.m3u", function(data) {
-                var lines = data.split("\n");
-                var channelList = $("#channel-list");
-
-                var channels = [];
-                for (var i = 0; i < lines.length; i++) {
-                    if (lines[i].startsWith("#EXTINF")) {
-                        var channelInfo = lines[i].substring(lines[i].indexOf(",") + 1);
-                        var channelLink = lines[i + 1];
-                        var channelIcon = getTvgLogo(lines[i]);
-
-                        channels.push({ info: channelInfo, link: channelLink, icon: channelIcon });
-                    }
-                }
-
-                channels.sort(function(a, b) {
-                    return a.info.localeCompare(b.info);
-                });
-
-                channels.forEach(function(channel, index) {
-                    var channelItem = $("<a></a>").attr("href", channel.link).addClass("channel-item");
-                    var channelIcon = $("<img>").attr("src", channel.icon).addClass("channel-icon");
-                    var channelName = $("<span></span>").text(channel.info);
-
-                    channelItem.append(channelIcon);
-                    channelItem.append(channelName);
-                    channelItem.data("index", index); // Armazena o índice do canal como um atributo de dados
-
-                    channelList.append(channelItem);
-                });
-
-                // Captura os eventos de teclado
-                $(document).keydown(function(e) {
-                    var channelItems = $(".channel-item");
-                    var selectedItem = $(".channel-item.selected");
-                    var currentIndex = selectedItem.length ? selectedItem.data("index") : -1;
-                    var newIndex;
-
-                    switch(e.keyCode) {
-                        case 37: // Setinha para a esquerda
-                            newIndex = currentIndex - 1;
-                            break;
-                        case 39: // Setinha para a direita
-                            newIndex = currentIndex + 1;
-                            break;
-                        case 13: // Tecla Enter
-                            if (selectedItem.length) {
-                                var link = selectedItem.attr("href");
-                                window.open(link, "_self");
-                            }
-                            break;
-                    }
-
-                    // Verifica se o novo índice está dentro dos limites dos canais
-                    if (newIndex >= 0 && newIndex < channelItems.length) {
-                        selectedItem.removeClass("selected");
-                        var newSelectedItem = channelItems.eq(newIndex);
-                        newSelectedItem.addClass("selected");
-
-                        // Role a página para o item selecionado
-                        var scrollPosition = newSelectedItem.offset().top - ($(window).height() / 2);
-                        $("html, body").animate({ scrollTop: scrollPosition }, 500);
-                    }
-                });
-            });
-        });
-
-        function getTvgLogo(line) {
-            var regex = /tvg-logo="([^"]+)"/g;
-            var matches = regex.exec(line);
-            if (matches && matches.length === 2) {
-                return matches[1];
-            }
-
-            return "placeholder.png"; // Substitua pelo caminho do ícone padrão
-        }
-    </script>
+  <style>
+    body {
+      background-color: #222;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+    
+    .channel-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .channel-button {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+      background-color: #333;
+      border: none;
+      border-radius: 5px;
+      font-size: 24px;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .channel-icon {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
-    <div id="channel-list"></div>
+  <div id="channel-list" class="channel-container"></div>
+
+  <script>
+    // Função para fazer uma requisição HTTP GET
+    function httpGet(url, callback) {
+      var httpRequest = new XMLHttpRequest();
+      httpRequest.onreadystatechange = function() {
+        if (httpRequest.readyState === 4 && httpRequest.status === 200) {
+          callback(httpRequest.responseText);
+        }
+      };
+      httpRequest.open('GET', url, true);
+      httpRequest.send(null);
+    }
+
+    // Função para processar a lista de canais e criar os botões
+    function processChannelList(channelList) {
+      var lines = channelList.split('\n');
+      var channelDiv = document.getElementById('channel-list');
+      
+      for (var i = 0; i < lines.length; i++) {
+        var line = lines[i];
+        if (line.startsWith('#EXTINF:')) {
+          var channelName = line.match(/,(.+)/)[1];
+          var channelIcon = line.match(/tvg-logo="([^"]+)"/);
+          var channelUrl = lines[i + 1];
+
+          var channelButton = document.createElement('a');
+          channelButton.className = 'channel-button';
+          channelButton.href = channelUrl;
+
+          if (channelIcon) {
+            var channelIconImg = document.createElement('img');
+            channelIconImg.className = 'channel-icon';
+            channelIconImg.src = channelIcon[1];
+            channelButton.appendChild(channelIconImg);
+          }
+
+          var channelNameSpan = document.createElement('span');
+          channelNameSpan.textContent = channelName;
+          channelButton.appendChild(channelNameSpan);
+
+          channelDiv.appendChild(channelButton);
+        }
+      }
+    }
+
+    // Ler a lista de canais e processá-la
+    httpGet('https://raw.githubusercontent.com/listadobill/tv/main/web.m3u', function(response) {
+      processChannelList(response);
+    });
+  </script>
 </body>
 </html>
