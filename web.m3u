@@ -7,7 +7,6 @@ https://listadobill.github.io/tv/provisoria
 #EXTINF:-1 tvg-id="IPTV" tvg-logo="https://client-vs.s3.amazonaws.com/portaldenegocio.com.br/anuncios/180220034436/iptv-em-sao-paulo-sp-45402.jpg" group-title="IPTV",02 - IPTV DO BILL - SMARTS
 https://listadobill.github.io/tv/tvdobill
 
-
 #EXTINF:-1 tvg-id="IPTV" tvg-logo="https://client-vs.s3.amazonaws.com/portaldenegocio.com.br/anuncios/180220034436/iptv-em-sao-paulo-sp-45402.jpg" group-title="IPTV",03 - PLUTO TV - SMARTS
 https://listadobill.github.io/tv/smarttv_plutotvbr.html
 
@@ -38,7 +37,7 @@ https://embedflix.net/tv/band-tv-sp
 #EXTINF:-1 tvg-id="BAND" tvg-logo="https://brazil.mom-gmr.org/uploads/tx_lfrogmom/media/7020-1071_import.png" group-title="NOTÍCIA", BAND NEWS
 https://embedflix.net/tv/bandnews
 
-#EXTINF:-1,BandSport
+#EXTINF:-1 tvg-id="BAND" tvg-logo="https://yt3.googleusercontent.com/ytc/AGIKgqN7tW03Tof7QPIUzBsG8_KwytenrABjGgG5GTLTZg=s900-c-k-c0x00ffffff-no-rj" group-title="ESPORTES",BandSport
 https://embedflix.net/tv/bandsport
 
 #EXTINF:-1,Cartoon Network
