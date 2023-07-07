@@ -1,20 +1,31 @@
 #EXTM3U
 
-#EXTINF:-1 tvg-id="ATUALIZAÇÃO" tvg-logo="https://cdn.icon-icons.com/icons2/1527/PNG/512/refresh_106672.png" group-title="ATUALIZAÇÃO",01 - ATUALIZAÇÃO DIA
+
+#EXTINF:-1 tvg-id="IPTV" tvg-logo="https://client-vs.s3.amazonaws.com/portaldenegocio.com.br/anuncios/180220034436/iptv-em-sao-paulo-sp-45402.jpg" group-title="IPTV",01 - IPTV - SMARTS
+https://listadobill.github.io/tv/provisoria
+
+#EXTINF:-1 tvg-id="IPTV" tvg-logo="https://client-vs.s3.amazonaws.com/portaldenegocio.com.br/anuncios/180220034436/iptv-em-sao-paulo-sp-45402.jpg" group-title="IPTV",02 - IPTV DO BILL - SMARTS
+https://listadobill.github.io/tv/tvdobill
+
+
+#EXTINF:-1 tvg-id="IPTV" tvg-logo="https://client-vs.s3.amazonaws.com/portaldenegocio.com.br/anuncios/180220034436/iptv-em-sao-paulo-sp-45402.jpg" group-title="IPTV",03 - PLUTO TV - SMARTS
+https://listadobill.github.io/tv/smarttv_plutotvbr.html
+
+#EXTINF:-1 tvg-id="ATUALIZAÇÃO" tvg-logo="https://cdn.icon-icons.com/icons2/1527/PNG/512/refresh_106672.png" group-title="ATUALIZAÇÃO",04 - ATUALIZAÇÃO DIA
 https:
-#EXTINF:-1 tvg-id="ATUALIZAÇÃO" tvg-logo="https://cdn.icon-icons.com/icons2/1527/PNG/512/refresh_106672.png" group-title="02 - ATUALIZAÇÃO",04-07-2023
+#EXTINF:-1 tvg-id="ATUALIZAÇÃO" tvg-logo="https://cdn.icon-icons.com/icons2/1527/PNG/512/refresh_106672.png" group-title="ATUALIZAÇÃO",05 - 04-07-2023
 https:
 
-#EXTINF:-1 tvg-id="ATUALIZAÇÃO" tvg-logo="https://play-lh.googleusercontent.com/PcRA92AlF3NafNYMb2BVFSIohyJVEgEKusVuDZj0nGKV-oQujZANLR4-enR46SqUmg" group-title="ATUALIZAÇÃO",03 - USE O NAVEGADOR
+#EXTINF:-1 tvg-id="ATUALIZAÇÃO" tvg-logo="https://play-lh.googleusercontent.com/PcRA92AlF3NafNYMb2BVFSIohyJVEgEKusVuDZj0nGKV-oQujZANLR4-enR46SqUmg" group-title="ATUALIZAÇÃO",06 - USE O NAVEGADOR
 https://vivaldi.com/pt-br/
-#EXTINF:-1 tvg-id="ATUALIZAÇÃO" tvg-logo="https://play-lh.googleusercontent.com/PcRA92AlF3NafNYMb2BVFSIohyJVEgEKusVuDZj0nGKV-oQujZANLR4-enR46SqUmg" group-title="ATUALIZAÇÃO",04 - VIVALDI
+#EXTINF:-1 tvg-id="ATUALIZAÇÃO" tvg-logo="https://play-lh.googleusercontent.com/PcRA92AlF3NafNYMb2BVFSIohyJVEgEKusVuDZj0nGKV-oQujZANLR4-enR46SqUmg" group-title="ATUALIZAÇÃO",07 - VIVALDI
 https://vivaldi.com/pt-br/
 
-#EXTINF:-1 tvg-id="ATUALIZAÇÃO" tvg-logo="https://imgs.casasbahia.com.br/55002768/1g.jpg",05 - ADICIONE A TV DO
+#EXTINF:-1 tvg-id="ATUALIZAÇÃO" tvg-logo="https://imgs.casasbahia.com.br/55002768/1g.jpg",08 - ADICIONE A TV DO
 https://listadobill.github.io/tv/
-#EXTINF:-1 tvg-id="ATUALIZAÇÃO" tvg-logo="https://imgs.casasbahia.com.br/55002768/1g.jpg",06 - BILL NOS
+#EXTINF:-1 tvg-id="ATUALIZAÇÃO" tvg-logo="https://imgs.casasbahia.com.br/55002768/1g.jpg",09 - BILL NOS
 https://listadobill.github.io/tv/
-#EXTINF:-1 tvg-id="ATUALIZAÇÃO" tvg-logo="https://imgs.casasbahia.com.br/55002768/1g.jpg",07 - FAVORITOS
+#EXTINF:-1 tvg-id="ATUALIZAÇÃO" tvg-logo="https://imgs.casasbahia.com.br/55002768/1g.jpg",10 - FAVORITOS
 https://listadobill.github.io/tv/
 
 
