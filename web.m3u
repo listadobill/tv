@@ -26,6 +26,8 @@ https://listadobill.github.io/tv/
 #EXTINF:-1 tvg-id="ATUALIZAÇÃO" tvg-logo="https://imgs.casasbahia.com.br/55002768/1g.jpg",10 - FAVORITOS
 https://listadobill.github.io/tv/
 
+#EXTINF:-1 tvg-id="FILMES E SÉRIES" tvg-logo="https://mundoconectado.com.br/uploads/chamadas/netflix-1.jpg",11 - FILMES E SERIES
+https://listadobill.github.io/tv/filmes_e_series
 
 #EXTINF:-1 tvg-id="ANIMAL PLANET" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/2/20/2018_Animal_Planet_logo.svg" group-title="DOCUMENTÁRIO",ANIMAL PLANET
 https://embedflix.net/tv/animal-planet
