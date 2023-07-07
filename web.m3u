@@ -32,10 +32,10 @@ https://listadobill.github.io/tv/
 #EXTINF:-1 tvg-id="ANIMAL PLANET" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/2/20/2018_Animal_Planet_logo.svg" group-title="DOCUMENTÁRIO",ANIMAL PLANET
 https://embedflix.net/tv/animal-planet
 
-#EXTINF:-1 tvg-id="BAND" tvg-logo="https://braziljournal.com/wp-content/uploads/2022/06/164bcbd7-9e1a-b098-6489-da08bb218aac.jpg" group-title="DOCUMENTÁRIO", BAND SP
+#EXTINF:-1 tvg-id="BAND" tvg-logo="https://braziljournal.com/wp-content/uploads/2022/06/164bcbd7-9e1a-b098-6489-da08bb218aac.jpg" group-title="ABERTO", BAND SP
 https://embedflix.net/tv/band-tv-sp
 
-#EXTINF:-1,BandNews
+#EXTINF:-1 tvg-id="BAND" tvg-logo="https://brazil.mom-gmr.org/uploads/tx_lfrogmom/media/7020-1071_import.png" group-title="NOTÍCIA", BAND NEWS
 https://embedflix.net/tv/bandnews
 
 #EXTINF:-1,BandSport
