@@ -6,8 +6,8 @@
         body {
             margin: 0;
             padding: 0;
-            overflow-y: auto;
-            background-color: black;
+            overflow-y: auto; /* Adiciona rolagem vertical */
+            background-color: black; /* Fundo preto */
         }
 
         #channel-list {
@@ -29,12 +29,12 @@
             color: #fff;
             text-decoration: none;
             font-size: 14px;
-            cursor: pointer;
-            border: 2px solid transparent;
+            cursor: pointer; /* Torna os botões selecionáveis com o cursor */
+            border: 2px solid transparent; /* Adiciona uma borda transparente inicialmente */
         }
 
         .channel-item.selected {
-            border-color: #00ff00;
+            border-color: #00ff00; /* Define a cor da borda para identificar a seleção */
         }
 
         .channel-icon {
@@ -66,17 +66,18 @@
                 });
 
                 channels.forEach(function(channel, index) {
-                    var channelItem = $("<div></div>").addClass("channel-item");
+                    var channelItem = $("<a></a>").attr("href", channel.link).addClass("channel-item");
                     var channelIcon = $("<img>").attr("src", channel.icon).addClass("channel-icon");
                     var channelName = $("<span></span>").text(channel.info);
 
                     channelItem.append(channelIcon);
                     channelItem.append(channelName);
-                    channelItem.data("index", index);
+                    channelItem.data("index", index); // Armazena o índice do canal como um atributo de dados
 
                     channelList.append(channelItem);
                 });
 
+                // Captura os eventos de teclado
                 $(document).keydown(function(e) {
                     var channelItems = $(".channel-item");
                     var selectedItem = $(".channel-item.selected");
@@ -87,14 +88,8 @@
                         case 37: // Setinha para a esquerda
                             newIndex = currentIndex - 1;
                             break;
-                        case 38: // Setinha para cima
-                            window.scrollBy(0, -150); // Rolar para cima
-                            break;
                         case 39: // Setinha para a direita
                             newIndex = currentIndex + 1;
-                            break;
-                        case 40: // Setinha para baixo
-                            window.scrollBy(0, 150); // Rolar para baixo
                             break;
                         case 13: // Tecla Enter
                             if (selectedItem.length) {
@@ -104,22 +99,15 @@
                             break;
                     }
 
+                    // Verifica se o novo índice está dentro dos limites dos canais
                     if (newIndex >= 0 && newIndex < channelItems.length) {
                         selectedItem.removeClass("selected");
                         var newSelectedItem = channelItems.eq(newIndex);
                         newSelectedItem.addClass("selected");
 
-                        var container = $("#channel-list");
-                        var containerHeight = container.height();
-                        var scrollTop = container.scrollTop();
-                        var itemTop = newSelectedItem.position().top;
-                        var itemHeight = newSelectedItem.height();
-
-                        if (itemTop < 0) {
-                            container.scrollTop(scrollTop + itemTop);
-                        } else if (itemTop + itemHeight > containerHeight) {
-                            container.scrollTop(scrollTop + itemTop + itemHeight - containerHeight);
-                        }
+                        // Role a página para o item selecionado
+                        var scrollPosition = newSelectedItem.offset().top - ($(window).height() / 2);
+                        $("html, body").animate({ scrollTop: scrollPosition }, 500);
                     }
                 });
             });
