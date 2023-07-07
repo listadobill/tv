@@ -6,6 +6,7 @@
       background-color: #222;
       color: #fff;
       font-family: Arial, sans-serif;
+      overflow: auto;
     }
     
     .channel-container {
@@ -121,6 +122,9 @@
         channelButtons[selectedChannelIndex].classList.remove('selected-channel');
         selectedChannelIndex = (selectedChannelIndex + 1) % channelButtons.length;
         channelButtons[selectedChannelIndex].classList.add('selected-channel');
+        
+        // Rolar para o canal selecionado
+        channelButtons[selectedChannelIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
 
       // Função para selecionar o canal anterior
@@ -128,14 +132,21 @@
         channelButtons[selectedChannelIndex].classList.remove('selected-channel');
         selectedChannelIndex = (selectedChannelIndex - 1 + channelButtons.length) % channelButtons.length;
         channelButtons[selectedChannelIndex].classList.add('selected-channel');
+        
+        // Rolar para o canal selecionado
+        channelButtons[selectedChannelIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
 
-      // Adiciona os eventos das teclas para seleção de canais
+      // Adiciona os eventos das teclas para seleção de canais e abrir o link ao pressionar Enter
       document.addEventListener('keydown', function(event) {
         if (event.key === 'ArrowRight') {
           selectNextChannel();
         } else if (event.key === 'ArrowLeft') {
           selectPreviousChannel();
+        } else if (event.key === 'Enter') {
+          var selectedChannel = channelButtons[selectedChannelIndex];
+          var channelUrl = selectedChannel.href;
+          window.open(channelUrl, '_blank');
         }
       });
     }
