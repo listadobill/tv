@@ -6,8 +6,8 @@
         body {
             margin: 0;
             padding: 0;
-            overflow-y: auto; /* Adiciona rolagem vertical */
-            background-color: black; /* Fundo preto */
+            overflow-y: auto;
+            background-color: black;
         }
 
         #channel-list {
@@ -29,12 +29,12 @@
             color: #fff;
             text-decoration: none;
             font-size: 14px;
-            cursor: pointer; /* Torna os botões selecionáveis com o cursor */
-            border: 2px solid transparent; /* Adiciona uma borda transparente inicialmente */
+            cursor: pointer;
+            border: 2px solid transparent;
         }
 
         .channel-item.selected {
-            border-color: #00ff00; /* Define a cor da borda para identificar a seleção */
+            border-color: #00ff00;
         }
 
         .channel-icon {
@@ -66,18 +66,17 @@
                 });
 
                 channels.forEach(function(channel, index) {
-                    var channelItem = $("<a></a>").attr("href", channel.link).attr("target", "_blank").addClass("channel-item");
+                    var channelItem = $("<a></a>").attr("href", channel.link).addClass("channel-item"); // Removido o atributo "target"
                     var channelIcon = $("<img>").attr("src", channel.icon).addClass("channel-icon");
                     var channelName = $("<span></span>").text(channel.info);
 
                     channelItem.append(channelIcon);
                     channelItem.append(channelName);
-                    channelItem.data("index", index); // Armazena o índice do canal como um atributo de dados
+                    channelItem.data("index", index);
 
                     channelList.append(channelItem);
                 });
 
-                // Captura os eventos de teclado
                 $(document).keydown(function(e) {
                     var channelItems = $(".channel-item");
                     var selectedItem = $(".channel-item.selected");
@@ -105,13 +104,11 @@
                             break;
                     }
 
-                    // Verifica se o novo índice está dentro dos limites dos canais
                     if (newIndex >= 0 && newIndex < channelItems.length) {
                         selectedItem.removeClass("selected");
                         var newSelectedItem = channelItems.eq(newIndex);
                         newSelectedItem.addClass("selected");
 
-                        // Scroll automático para garantir que o item selecionado seja visível
                         var container = $("#channel-list");
                         var containerHeight = container.height();
                         var scrollTop = container.scrollTop();
