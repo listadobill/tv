@@ -1,6 +1,5 @@
 #EXTM3U
 
-
 #EXTINF:-1 tvg-id="IPTV" tvg-logo="https://client-vs.s3.amazonaws.com/portaldenegocio.com.br/anuncios/180220034436/iptv-em-sao-paulo-sp-45402.jpg" group-title="IPTV",01 - IPTV - SMARTS
 https://listadobill.github.io/tv/provisoria
 
@@ -40,7 +39,7 @@ https://embedflix.net/tv/bandnews
 #EXTINF:-1 tvg-id="BAND" tvg-logo="https://yt3.googleusercontent.com/ytc/AGIKgqN7tW03Tof7QPIUzBsG8_KwytenrABjGgG5GTLTZg=s900-c-k-c0x00ffffff-no-rj" group-title="ESPORTES",BandSport
 https://embedflix.net/tv/bandsport
 
-#EXTINF:-1,Cartoon Network
+#EXTINF:-1 tvg-id="CARTOON NETWORK" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/640px-Cartoon_Network_2010_logo.svg.png" group-title="INFANTIL",CARTOON NETWORK
 https://embedflix.net/tv/cartoon-network
 
 #EXTINF:-1,CLASSIQUE WESTERN (FAROESTE)
