@@ -42,7 +42,7 @@ https://embedflix.net/tv/bandsport
 #EXTINF:-1 tvg-id="CARTOON NETWORK" tvg-logo="https://w7.pngwing.com/pngs/289/648/png-transparent-cartoon-network-too-cartoon-network-arabic-television-channel-1682-television-text-logo.png" group-title="INFANTIL",CARTOON NETWORK
 https://embedflix.net/tv/cartoon-network
 
-#EXTINF:-1,CLASSIQUE WESTERN (FAROESTE)
+#EXTINF:-1 tvg-id="CLASSIQUE WESTERN" tvg-logo="https://cultura.uol.com.br/upload/radio/interprete/20210106164713_design-sem-nome-17-.jpg" group-title="FILMES",CLASSIQUE WESTERN (FAROESTE)
 https://playerv.srvif.com/video/classiquew/2/false/false/YzNSdGRqRXVjM0oyYVdZdVkyOXQrWg==/16:9/
 
 #EXTINF:-1,CNN Brasil HD
