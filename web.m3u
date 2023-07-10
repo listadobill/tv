@@ -55,10 +55,10 @@ https://embedflix.net/tv/cartoon-network
 #EXTINF:-1 tvg-id="CNN" tvg-logo="https://uploads.metropoles.com/wp-content/uploads/2020/06/02145532/cnn-brasil5.jpg" group-title="NOTICIA",CNN
 https://embedflix.net/tv/cnn-brasil-hd
 
-#EXTINF:-1 tvg-id="COMEDY CENTRAL" tvg-logo="https://i0.wp.com/cloud.estacaonerd.com/wp-content/uploads/2021/08/12103840/COMEDY-CENTRAL-1024x507.png?resize=1024%2C507&ssl=1" group-title="ENTRETENIMENTO",COMEDY CENTAL
+#EXTINF:-1 tvg-id="COMEDY CENTRAL" tvg-logo="https://s3.glbimg.com/v1/AUTH_d293cd467b2749dfa7046f74d82537d0/prod/home-share-combate-343f6619.png" group-title="ESPORTES",COMEDY CENTRAL
 https://embedflix.net/tv/comedy-central
 
-#EXTINF:-1,Combate
+#EXTINF:-1 tvg-id="COMBATE" tvg-logo="https://i0.wp.com/cloud.estacaonerd.com/wp-content/uploads/2021/08/12103840/COMEDY-CENTRAL-1024x507.png?resize=1024%2C507&ssl=1" group-title="ENTRETENIMENTO",COMBATE
 https://embedflix.net/tv/combate
 
 #EXTINF:-1,Conmebol TV 1 HD
