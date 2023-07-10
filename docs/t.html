@@ -27,6 +27,7 @@
     const channelsList = document.getElementById('channels');
     const videoPlayer = document.getElementById('player');
     let currentChannelIndex = 0;
+    let nextFragmentUrl = '';
 
     // Função para carregar a lista de canais
     function loadChannels() {
@@ -75,6 +76,9 @@
       videoPlayer.src = url;
       videoPlayer.play();
 
+      // Pré-carregar o próximo fragmento
+      preloadNextFragment();
+
       // Evento para detectar o fim do fragmento e iniciar o próximo
       videoPlayer.addEventListener('ended', playNextChannel);
     }
@@ -89,6 +93,32 @@
 
       const nextChannelUrl = channelsList.children[currentChannelIndex].querySelector('button').textContent;
       playChannel(nextChannelUrl);
+    }
+
+    // Função para pré-carregar o próximo fragmento
+    function preloadNextFragment() {
+      const currentSource = videoPlayer.src;
+      const nextSource = getNextFragmentUrl(currentSource);
+
+      if (nextSource) {
+        fetch(nextSource);
+      }
+    }
+
+    // Função para obter a URL do próximo fragmento
+    function getNextFragmentUrl(currentSource) {
+      if (nextFragmentUrl) {
+        return nextFragmentUrl;
+      }
+
+      const lines = currentSource.split('/');
+      const currentFragmentIndex = parseInt(lines[lines.length - 1].split('.')[0]);
+      const nextFragmentIndex = currentFragmentIndex + 1;
+
+      const nextSource = lines.slice(0, -1).join('/') + '/' + nextFragmentIndex + '.ts';
+      nextFragmentUrl = nextSource;
+
+      return nextSource;
     }
 
     // Carregar a lista de canais ao carregar a página
