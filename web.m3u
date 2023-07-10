@@ -1,5 +1,13 @@
 #EXTM3U
 
+################### CANAIS WEB #############
+
+#EXTINF:-1 tvg-id="CLASSIQUE WESTERN" tvg-logo="https://img2.gratispng.com/20180616/oss/kisspng-the-good-the-bad-and-the-ugly-tuco-sergio-leone-f-ugly-5b249b224a2ca6.8268348315291256663038.jpg" group-title="FILMES",CLASSIQUE WESTERN (FAROESTE)
+https://playerv.srvif.com/video/classiquew/2/false/false/YzNSdGRqRXVjM0oyYVdZdVkyOXQrWg==/16:9/
+
+######################### CANAIS ABERTOS E FECHADOS #######################
+
+
 #EXTINF:-1 tvg-id="IPTV" tvg-logo="https://client-vs.s3.amazonaws.com/portaldenegocio.com.br/anuncios/180220034436/iptv-em-sao-paulo-sp-45402.jpg" group-title="IPTV",01 - IPTV - SMARTS
 https://listadobill.github.io/tv/provisoria
 
@@ -43,9 +51,6 @@ https://embedflix.net/tv/bandsport
 
 #EXTINF:-1 tvg-id="CARTOON NETWORK" tvg-logo="https://w7.pngwing.com/pngs/289/648/png-transparent-cartoon-network-too-cartoon-network-arabic-television-channel-1682-television-text-logo.png" group-title="INFANTIL",CARTOON NETWORK
 https://embedflix.net/tv/cartoon-network
-
-#EXTINF:-1 tvg-id="CLASSIQUE WESTERN" tvg-logo="https://img2.gratispng.com/20180616/oss/kisspng-the-good-the-bad-and-the-ugly-tuco-sergio-leone-f-ugly-5b249b224a2ca6.8268348315291256663038.jpg" group-title="FILMES",CLASSIQUE WESTERN (FAROESTE)
-https://playerv.srvif.com/video/classiquew/2/false/false/YzNSdGRqRXVjM0oyYVdZdVkyOXQrWg==/16:9/
 
 #EXTINF:-1,CNN Brasil HD
 https://embedflix.net/tv/cnn-brasil-hd
