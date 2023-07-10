@@ -70,7 +70,7 @@ https://embedflix.net/tv/conmebol-tv-2-hd
 #EXTINF:-1 tvg-id="CONMEBOL" tvg-logo="https://cdn.conmebol.com/wp-content/uploads/2019/07/okeyconmebol-750px_26.jpg" group-title="ESPORTES",CONMEBOL 3
 https://embedflix.net/tv/conmebol-tv-3-hd
 
-#EXTINF:-1,Discovery Channel HD
+#EXTINF:-1 tvg-id="DISCOVERY" tvg-logo="https://melhorescolha.com/blog/wp-content/uploads/2019/04/discovery-programa%C3%A7ao.jpg" group-title="DOCUMENTÁRIO",DISCOVERY CHANNEL
 https://embedflix.net/tv/discovery-channel-hd
 
 #EXTINF:-1,Discovery Kids
