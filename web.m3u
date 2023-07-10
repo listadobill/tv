@@ -1,13 +1,5 @@
 #EXTM3U
 
-################### CANAIS WEB #############
-
-#EXTINF:-1 tvg-id="CLASSIQUE WESTERN" tvg-logo="https://img2.gratispng.com/20180616/oss/kisspng-the-good-the-bad-and-the-ugly-tuco-sergio-leone-f-ugly-5b249b224a2ca6.8268348315291256663038.jpg" group-title="FILMES",CLASSIQUE WESTERN (FAROESTE)
-https://playerv.srvif.com/video/classiquew/2/false/false/YzNSdGRqRXVjM0oyYVdZdVkyOXQrWg==/16:9/
-
-######################### CANAIS ABERTOS E FECHADOS #######################
-
-
 #EXTINF:-1 tvg-id="IPTV" tvg-logo="https://client-vs.s3.amazonaws.com/portaldenegocio.com.br/anuncios/180220034436/iptv-em-sao-paulo-sp-45402.jpg" group-title="IPTV",01 - IPTV - SMARTS
 https://listadobill.github.io/tv/provisoria
 
@@ -36,6 +28,14 @@ https://listadobill.github.io/tv/
 
 #EXTINF:-1 tvg-id="FILMES E SÉRIES" tvg-logo="https://mundoconectado.com.br/uploads/chamadas/netflix-1.jpg",11 - FILMES E SERIES
 https://listadobill.github.io/tv/filmes_e_series
+
+
+################### CANAIS WEB #############
+
+#EXTINF:-1 tvg-id="CLASSIQUE WESTERN" tvg-logo="https://img2.gratispng.com/20180616/oss/kisspng-the-good-the-bad-and-the-ugly-tuco-sergio-leone-f-ugly-5b249b224a2ca6.8268348315291256663038.jpg" group-title="FILMES",CLASSIQUE WESTERN (FAROESTE)
+https://playerv.srvif.com/video/classiquew/2/false/false/YzNSdGRqRXVjM0oyYVdZdVkyOXQrWg==/16:9/
+
+######################### CANAIS ABERTOS E FECHADOS #######################
 
 #EXTINF:-1 tvg-id="ANIMAL PLANET" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/2/20/2018_Animal_Planet_logo.svg" group-title="DOCUMENTÁRIO",ANIMAL PLANET
 https://embedflix.net/tv/animal-planet
