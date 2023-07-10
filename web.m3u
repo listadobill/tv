@@ -52,7 +52,7 @@ https://embedflix.net/tv/bandsport
 #EXTINF:-1 tvg-id="CARTOON NETWORK" tvg-logo="https://w7.pngwing.com/pngs/289/648/png-transparent-cartoon-network-too-cartoon-network-arabic-television-channel-1682-television-text-logo.png" group-title="INFANTIL",CARTOON NETWORK
 https://embedflix.net/tv/cartoon-network
 
-#EXTINF:-1,CNN Brasil HD
+#EXTINF:-1 tvg-id="VNN" tvg-logo="https://uploads.metropoles.com/wp-content/uploads/2020/06/02145532/cnn-brasil5.jpg" group-title="NOTICIA",CNN
 https://embedflix.net/tv/cnn-brasil-hd
 
 #EXTINF:-1,Comedy Central
