@@ -55,19 +55,19 @@ https://embedflix.net/tv/cartoon-network
 #EXTINF:-1 tvg-id="CNN" tvg-logo="https://uploads.metropoles.com/wp-content/uploads/2020/06/02145532/cnn-brasil5.jpg" group-title="NOTICIA",CNN
 https://embedflix.net/tv/cnn-brasil-hd
 
-#EXTINF:-1 tvg-id="COMEDY CENTRAL" tvg-logo="https://s3.glbimg.com/v1/AUTH_d293cd467b2749dfa7046f74d82537d0/prod/home-share-combate-343f6619.png" group-title="ESPORTES",COMEDY CENTRAL
+#EXTINF:-1 tvg-id="COMEDY CENTRAL" tvg-logo="https://s3.glbimg.com/v1/AUTH_d293cd467b2749dfa7046f74d82537d0/prod/home-share-combate-343f6619.png" group-title="ENTRETENIMENTO",COMEDY CENTRAL
 https://embedflix.net/tv/comedy-central
 
-#EXTINF:-1 tvg-id="COMBATE" tvg-logo="https://i0.wp.com/cloud.estacaonerd.com/wp-content/uploads/2021/08/12103840/COMEDY-CENTRAL-1024x507.png?resize=1024%2C507&ssl=1" group-title="ENTRETENIMENTO",COMBATE
+#EXTINF:-1 tvg-id="COMBATE" tvg-logo="https://i0.wp.com/cloud.estacaonerd.com/wp-content/uploads/2021/08/12103840/COMEDY-CENTRAL-1024x507.png?resize=1024%2C507&ssl=1" group-title="ESPORTES",COMBATE
 https://embedflix.net/tv/combate
 
-#EXTINF:-1,Conmebol TV 1 HD
+#EXTINF:-1 tvg-id="CONMEBOL" tvg-logo="https://cdn.conmebol.com/wp-content/uploads/2019/07/okeyconmebol-750px_26.jpg" group-title="ESPORTES" CONMEBOL 1
 https://embedflix.net/tv/conmebol-tv-1-hd
 
-#EXTINF:-1,Conmebol TV 2 HD
+#EXTINF:-1 tvg-id="CONMEBOL" tvg-logo="https://cdn.conmebol.com/wp-content/uploads/2019/07/okeyconmebol-750px_26.jpg" group-title="ESPORTES" CONMEBOL 2
 https://embedflix.net/tv/conmebol-tv-2-hd
 
-#EXTINF:-1,Conmebol TV 3 HD
+#EXTINF:-1 tvg-id="CONMEBOL" tvg-logo="https://cdn.conmebol.com/wp-content/uploads/2019/07/okeyconmebol-750px_26.jpg" group-title="ESPORTES" CONMEBOL 3
 https://embedflix.net/tv/conmebol-tv-3-hd
 
 #EXTINF:-1,Discovery Channel HD
