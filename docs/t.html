@@ -82,14 +82,8 @@
       // Evento para detectar o fim do fragmento e iniciar o próximo
       videoPlayer.addEventListener('timeupdate', checkNextFragment);
 
-      // Evento para verificar se o vídeo chegou ao fim e reiniciar a reprodução
-      videoPlayer.addEventListener('ended', loopChannel);
-    }
-
-    // Função para reiniciar a reprodução do canal atual
-    function loopChannel() {
-      videoPlayer.currentTime = 0;
-      videoPlayer.play();
+      // Evento para verificar se ocorreu algum erro na reprodução
+      videoPlayer.addEventListener('error', handlePlayerError);
     }
 
     // Função para pré-carregar o próximo fragmento
@@ -135,6 +129,15 @@
           preloadNextFragment();
         }
       }
+    }
+
+    // Função para lidar com erros na reprodução do vídeo
+    function handlePlayerError() {
+      console.error('Ocorreu um erro na reprodução do vídeo.');
+
+      // Reconectar e retomar a reprodução
+      const currentChannelUrl = videoPlayer.src;
+      playChannel(currentChannelUrl);
     }
 
     // Função para reproduzir o próximo canal na lista
