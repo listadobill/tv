@@ -84,6 +84,9 @@
 
       // Evento para verificar se ocorreu algum erro na reprodução
       videoPlayer.addEventListener('error', handlePlayerError);
+
+      // Evento para lidar com problemas de buffer
+      videoPlayer.addEventListener('stalled', handleStalled);
     }
 
     // Função para pré-carregar o próximo fragmento
@@ -138,6 +141,14 @@
       // Reconectar e retomar a reprodução
       const currentChannelUrl = videoPlayer.src;
       playChannel(currentChannelUrl);
+    }
+
+    // Função para lidar com problemas de buffer
+    function handleStalled() {
+      console.warn('Problemas de buffer detectados.');
+
+      // Tente reiniciar a reprodução
+      videoPlayer.play();
     }
 
     // Função para reproduzir o próximo canal na lista
