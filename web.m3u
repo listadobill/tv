@@ -73,7 +73,7 @@ https://embedflix.net/tv/conmebol-tv-3-hd
 #EXTINF:-1 tvg-id="DISCOVERY" tvg-logo="https://melhorescolha.com/blog/wp-content/uploads/2019/04/discovery-programa%C3%A7ao.jpg" group-title="DOCUMENTÁRIO",DISCOVERY CHANNEL
 https://embedflix.net/tv/discovery-channel-hd
 
-#EXTINF:-1,Discovery Kids
+#EXTINF:-1 tvg-id="DISCOVERY" tvg-logo="https://4.bp.blogspot.com/-eedy2lqpfEg/UwkstCQLk9I/AAAAAAAAhbE/n71QDA1E7qM/s1600/Discovery-Kids.png" group-title="INFANTIL",DISCOVERY KIDS
 https://embedflix.net/tv/discovery-kids
 
 #EXTINF:-1,Discovery Turbo
