@@ -1,183 +1,122 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TV DO BILL</title>
-  <style>
-    #channels {
-      list-style-type: none;
-    }
+    <title>TV DO BILL</title>
+    <style>
+        /* Estilos CSS aqui */
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.get("https://raw.githubusercontent.com/listadobill/tv/main/c.m3u", function(data) {
+                var lines = data.split("\n");
+                var channels = [];
+                var channelList = $("#channel-list ul");
+                var player = $("#player")[0];
+                var currentChannelIndex = 0;
+                var buttonList = $("#button-list li button");
+                var selectedButtonIndex = 0;
 
-    #channels li {
-      margin-bottom: 10px;
-    }
+                for (var i = 0; i < lines.length; i++) {
+                    if (lines[i].startsWith("#EXTINF")) {
+                        var channelInfo = lines[i].substring(lines[i].indexOf(",") + 1);
+                        var channelLink = lines[i + 1];
 
-    #player {
-      width: 100%;
-      height: 400px;
-    }
-  </style>
+                        channels.push({ info: channelInfo, link: channelLink });
+                    }
+                }
+
+                channels.sort(function(a, b) {
+                    return a.info.localeCompare(b.info);
+                });
+
+                function playNextChannel() {
+                    currentChannelIndex++;
+                    if (currentChannelIndex >= channels.length) {
+                        currentChannelIndex = 0;
+                    }
+                    var nextChannelUrl = channels[currentChannelIndex].link;
+                    player.src = nextChannelUrl;
+                    player.play();
+                }
+
+                for (var j = 0; j < channels.length; j++) {
+                    var listItem = $("<li></li>");
+                    var link = $("<a></a>").attr("href", channels[j].link).text(channels[j].info);
+
+                    link.click(function(event) {
+                        event.preventDefault();
+                        var channelUrl = $(this).attr("href");
+                        player.src = channelUrl;
+                        player.play();
+                        if (player.requestFullscreen) {
+                            player.requestFullscreen();
+                        } else if (player.mozRequestFullScreen) {
+                            player.mozRequestFullScreen();
+                        } else if (player.webkitRequestFullscreen) {
+                            player.webkitRequestFullscreen();
+                        } else if (player.msRequestFullscreen) {
+                            player.msRequestFullscreen();
+                        }
+                    });
+
+                    listItem.append(link);
+                    channelList.append(listItem);
+                }
+
+                function selectChannel(index) {
+                    var channels = channelList.children();
+                    channels.removeClass("selected");
+                    channels.eq(index).addClass("selected");
+                    channels.eq(index).find("a").focus();
+                }
+
+                function selectButton(index) {
+                    buttonList.removeClass("selected");
+                    buttonList.eq(index).addClass("selected");
+                    buttonList.eq(index).focus();
+                }
+
+                selectChannel(currentChannelIndex);
+                selectButton(selectedButtonIndex);
+
+                $(document).keydown(function(e) {
+                    var key = e.which;
+
+                    if (key === 38) { // Seta para cima
+                        e.preventDefault();
+                        currentChannelIndex = (currentChannelIndex > 0) ? currentChannelIndex - 1 : 0;
+                        selectChannel(currentChannelIndex);
+                    } else if (key === 40) { // Seta para baixo
+                        e.preventDefault();
+                        currentChannelIndex = (currentChannelIndex < channelList.children().length - 1) ? currentChannelIndex + 1 : channelList.children().length - 1;
+                        selectChannel(currentChannelIndex);
+                    } else if (key === 37) { // Seta para a esquerda
+                        e.preventDefault();
+                        selectedButtonIndex = (selectedButtonIndex > 0) ? selectedButtonIndex - 1 : 0;
+                        selectButton(selectedButtonIndex);
+                    } else if (key === 39) { // Seta para a direita
+                        e.preventDefault();
+                        selectedButtonIndex = (selectedButtonIndex < buttonList.length - 1) ? selectedButtonIndex + 1 : buttonList.length - 1;
+                        selectButton(selectedButtonIndex);
+                    }
+                });
+
+                $(player).on('ended', function() {
+                    playNextChannel();
+                });
+
+                $(player).on('error', function() {
+                    playNextChannel();
+                });
+
+                // Iniciar a reprodução do primeiro canal
+                playNextChannel();
+            });
+        });
+    </script>
 </head>
 <body>
-  <ul id="channels"></ul>
-
-  <video id="player" controls></video>
-
-  <script>
-    const playlistUrl = 'https://raw.githubusercontent.com/listadobill/tv/main/c.m3u';
-    const channelsList = document.getElementById('channels');
-    const videoPlayer = document.getElementById('player');
-    let currentChannelIndex = 0;
-    let nextFragmentUrl = '';
-
-    // Função para carregar a lista de canais
-    function loadChannels() {
-      fetch(playlistUrl)
-        .then(response => response.text())
-        .then(data => {
-          const lines = data.split('\n');
-          let channelName = '';
-          let channelUrl = '';
-
-          for (let i = 0; i < lines.length; i++) {
-            const line = lines[i].trim();
-
-            if (line.startsWith('#EXTINF:')) {
-              channelName = line.split(',')[1];
-            } else if (line.startsWith('http')) {
-              channelUrl = line;
-              addChannelToList(channelName, channelUrl);
-            }
-          }
-
-          // Iniciar a reprodução do primeiro canal
-          playChannel(0);
-        })
-        .catch(error => {
-          console.error('Ocorreu um erro ao carregar a lista de canais:', error);
-        });
-    }
-
-    // Função para adicionar um canal à lista
-    function addChannelToList(name, url) {
-      const listItem = document.createElement('li');
-      const button = document.createElement('button');
-      button.textContent = name;
-
-      button.addEventListener('click', () => {
-        playChannel(url);
-      });
-
-      listItem.appendChild(button);
-      channelsList.appendChild(listItem);
-    }
-
-    // Função para reproduzir um canal
-    function playChannel(url) {
-      videoPlayer.src = url;
-      videoPlayer.play();
-
-      // Pré-carregar o próximo fragmento
-      preloadNextFragment();
-
-      // Evento para detectar o fim do fragmento e iniciar o próximo
-      videoPlayer.addEventListener('timeupdate', checkNextFragment);
-
-      // Evento para verificar se ocorreu algum erro na reprodução
-      videoPlayer.addEventListener('error', handlePlayerError);
-
-      // Evento para lidar com problemas de buffer
-      videoPlayer.addEventListener('stalled', handleStalled);
-    }
-
-    // Função para pré-carregar o próximo fragmento
-    function preloadNextFragment() {
-      const currentSource = videoPlayer.src;
-      const nextSource = getNextFragmentUrl(currentSource);
-
-      if (nextSource) {
-        const nextVideo = new Audio(nextSource);
-        nextVideo.load();
-      }
-    }
-
-    // Função para obter a URL do próximo fragmento
-    function getNextFragmentUrl(currentSource) {
-      if (nextFragmentUrl) {
-        return nextFragmentUrl;
-      }
-
-      const lines = currentSource.split('/');
-      const currentFragmentIndex = parseInt(lines[lines.length - 1].split('.')[0]);
-      const nextFragmentIndex = currentFragmentIndex + 1;
-
-      const nextSource = lines.slice(0, -1).join('/') + '/' + nextFragmentIndex + '.ts';
-      nextFragmentUrl = nextSource;
-
-      return nextSource;
-    }
-
-    // Função para verificar o próximo fragmento e iniciar a reprodução contínua
-    function checkNextFragment() {
-      const currentTime = videoPlayer.currentTime;
-      const duration = videoPlayer.duration;
-      const threshold = 5; // Tempo em segundos antes do fim para iniciar o próximo fragmento
-
-      if (duration - currentTime <= threshold) {
-        const nextSource = getNextFragmentUrl(videoPlayer.src);
-
-        if (nextSource) {
-          videoPlayer.removeEventListener('timeupdate', checkNextFragment);
-          videoPlayer.src = nextSource;
-          videoPlayer.play();
-          preloadNextFragment();
-        }
-      }
-    }
-
-    // Função para lidar com erros na reprodução do vídeo
-    function handlePlayerError() {
-      console.error('Ocorreu um erro na reprodução do vídeo.');
-
-      // Reconectar e retomar a reprodução
-      reconnectAndPlay();
-    }
-
-    // Função para lidar com problemas de buffer
-    function handleStalled() {
-      console.warn('Problemas de buffer detectados.');
-
-      // Tente reiniciar a reprodução
-      videoPlayer.play();
-    }
-
-    // Função para reconectar e retomar a reprodução
-    function reconnectAndPlay() {
-      const currentChannelUrl = videoPlayer.src;
-      videoPlayer.pause();
-
-      // Remover todos os eventos do player
-      videoPlayer.removeEventListener('timeupdate', checkNextFragment);
-      videoPlayer.removeEventListener('error', handlePlayerError);
-      videoPlayer.removeEventListener('stalled', handleStalled);
-
-      // Tente reconectar e retomar a reprodução
-      playChannel(currentChannelUrl);
-    }
-
-    // Função para reproduzir o próximo canal na lista
-    function playNextChannel() {
-      currentChannelIndex++;
-
-      if (currentChannelIndex >= channelsList.children.length) {
-        currentChannelIndex = 0;
-      }
-
-      const nextChannelUrl = channelsList.children[currentChannelIndex].querySelector('button').textContent;
-      playChannel(nextChannelUrl);
-    }
-
-    // Carregar a lista de canais ao carregar a página
-    window.addEventListener('load', loadChannels);
-  </script>
+    <!-- Conteúdo HTML aqui -->
 </body>
 </html>
