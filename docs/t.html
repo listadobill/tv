@@ -81,6 +81,15 @@
 
       // Evento para detectar o fim do fragmento e iniciar o próximo
       videoPlayer.addEventListener('timeupdate', checkNextFragment);
+
+      // Evento para verificar se o vídeo chegou ao fim e reiniciar a reprodução
+      videoPlayer.addEventListener('ended', loopChannel);
+    }
+
+    // Função para reiniciar a reprodução do canal atual
+    function loopChannel() {
+      videoPlayer.currentTime = 0;
+      videoPlayer.play();
     }
 
     // Função para pré-carregar o próximo fragmento
