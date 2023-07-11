@@ -80,19 +80,7 @@
       preloadNextFragment();
 
       // Evento para detectar o fim do fragmento e iniciar o próximo
-      videoPlayer.addEventListener('ended', playNextChannel);
-    }
-
-    // Função para reproduzir o próximo canal na lista
-    function playNextChannel() {
-      currentChannelIndex++;
-
-      if (currentChannelIndex >= channelsList.children.length) {
-        currentChannelIndex = 0;
-      }
-
-      const nextChannelUrl = channelsList.children[currentChannelIndex].querySelector('button').textContent;
-      playChannel(nextChannelUrl);
+      videoPlayer.addEventListener('timeupdate', checkNextFragment);
     }
 
     // Função para pré-carregar o próximo fragmento
@@ -101,7 +89,8 @@
       const nextSource = getNextFragmentUrl(currentSource);
 
       if (nextSource) {
-        fetch(nextSource);
+        const nextVideo = new Audio(nextSource);
+        nextVideo.load();
       }
     }
 
@@ -119,6 +108,36 @@
       nextFragmentUrl = nextSource;
 
       return nextSource;
+    }
+
+    // Função para verificar o próximo fragmento e iniciar a reprodução contínua
+    function checkNextFragment() {
+      const currentTime = videoPlayer.currentTime;
+      const duration = videoPlayer.duration;
+      const threshold = 5; // Tempo em segundos antes do fim para iniciar o próximo fragmento
+
+      if (duration - currentTime <= threshold) {
+        const nextSource = getNextFragmentUrl(videoPlayer.src);
+
+        if (nextSource) {
+          videoPlayer.removeEventListener('timeupdate', checkNextFragment);
+          videoPlayer.src = nextSource;
+          videoPlayer.play();
+          preloadNextFragment();
+        }
+      }
+    }
+
+    // Função para reproduzir o próximo canal na lista
+    function playNextChannel() {
+      currentChannelIndex++;
+
+      if (currentChannelIndex >= channelsList.children.length) {
+        currentChannelIndex = 0;
+      }
+
+      const nextChannelUrl = channelsList.children[currentChannelIndex].querySelector('button').textContent;
+      playChannel(nextChannelUrl);
     }
 
     // Carregar a lista de canais ao carregar a página
