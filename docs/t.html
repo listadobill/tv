@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>IPTV Player</title>
+  <title>TV DO BILL</title>
   <style>
     #channels {
       list-style-type: none;
@@ -139,8 +139,7 @@
       console.error('Ocorreu um erro na reprodução do vídeo.');
 
       // Reconectar e retomar a reprodução
-      const currentChannelUrl = videoPlayer.src;
-      playChannel(currentChannelUrl);
+      reconnectAndPlay();
     }
 
     // Função para lidar com problemas de buffer
@@ -149,6 +148,20 @@
 
       // Tente reiniciar a reprodução
       videoPlayer.play();
+    }
+
+    // Função para reconectar e retomar a reprodução
+    function reconnectAndPlay() {
+      const currentChannelUrl = videoPlayer.src;
+      videoPlayer.pause();
+
+      // Remover todos os eventos do player
+      videoPlayer.removeEventListener('timeupdate', checkNextFragment);
+      videoPlayer.removeEventListener('error', handlePlayerError);
+      videoPlayer.removeEventListener('stalled', handleStalled);
+
+      // Tente reconectar e retomar a reprodução
+      playChannel(currentChannelUrl);
     }
 
     // Função para reproduzir o próximo canal na lista
