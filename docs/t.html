@@ -188,20 +188,16 @@
                     }
                 });
 
-                // Verifica se o vídeo está próximo do fim
-                $(player).on('timeupdate', function() {
-                    var videoDuration = player.duration;
-                    var currentTime = player.currentTime;
-                    var threshold = 2; // Tempo em segundos antes do fim para carregar o próximo fragmento
-
-                    if (videoDuration - currentTime < threshold) {
-                        player.src = currentChannelUrl; // Carrega novamente o mesmo link para continuar a reprodução
-                        player.play();
-                    }
+                // Carrega novamente o mesmo link ao final do vídeo
+                $(player).on('ended', function() {
+                    player.src = currentChannelUrl; // Carrega novamente o mesmo link para reprodução contínua
+                    player.load();
+                    player.play();
                 });
 
+                // Tratamento de erro
                 $(player).on('error', function() {
-                    player.load(); // Carrega novamente o vídeo em caso de erro
+                    player.load();
                 });
             });
         });
