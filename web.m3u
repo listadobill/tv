@@ -76,7 +76,7 @@ https://embedflix.net/tv/discovery-channel-hd
 #EXTINF:-1 tvg-id="DISCOVERY" tvg-logo="https://4.bp.blogspot.com/-eedy2lqpfEg/UwkstCQLk9I/AAAAAAAAhbE/n71QDA1E7qM/s1600/Discovery-Kids.png" group-title="INFANTIL",DISCOVERY KIDS
 https://embedflix.net/tv/discovery-kids
 
-#EXTINF:-1,Discovery Turbo
+#EXTINF:-1 tvg-id="DISCOVERY" tvg-logo="https://cdn.mitvstatic.com/channels/br_discovery-turbo-brazil_m.png" group-title="DOCUMENTÁRIO",DISCOVERY TURBO
 https://embedflix.net/tv/discovery-turbo
 
 #EXTINF:-1,Discovery World
