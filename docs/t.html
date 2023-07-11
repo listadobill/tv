@@ -106,7 +106,7 @@
                 var channels = [];
                 var channelList = $("#channel-list ul");
                 var player = $("#player")[0];
-                var currentChannelIndex = 0;
+                var selectedChannelIndex = 0;
                 var buttonList = $("#button-list li button");
                 var selectedButtonIndex = 0;
 
@@ -131,7 +131,8 @@
                         event.preventDefault();
                         var channelUrl = $(this).attr("href");
                         player.src = channelUrl;
-                        player.play();
+                        player.load(); // Carrega o vídeo
+                        player.play(); // Inicia a reprodução
                         if (player.requestFullscreen) {
                             player.requestFullscreen();
                         } else if (player.mozRequestFullScreen) {
@@ -160,7 +161,7 @@
                     buttonList.eq(index).focus();
                 }
 
-                selectChannel(currentChannelIndex);
+                selectChannel(selectedChannelIndex);
                 selectButton(selectedButtonIndex);
 
                 $(document).keydown(function(e) {
@@ -168,12 +169,12 @@
 
                     if (key === 38) { // Seta para cima
                         e.preventDefault();
-                        currentChannelIndex = (currentChannelIndex > 0) ? currentChannelIndex - 1 : 0;
-                        selectChannel(currentChannelIndex);
+                        selectedChannelIndex = (selectedChannelIndex > 0) ? selectedChannelIndex - 1 : 0;
+                        selectChannel(selectedChannelIndex);
                     } else if (key === 40) { // Seta para baixo
                         e.preventDefault();
-                        currentChannelIndex = (currentChannelIndex < channelList.children().length - 1) ? currentChannelIndex + 1 : channelList.children().length - 1;
-                        selectChannel(currentChannelIndex);
+                        selectedChannelIndex = (selectedChannelIndex < channelList.children().length - 1) ? selectedChannelIndex + 1 : channelList.children().length - 1;
+                        selectChannel(selectedChannelIndex);
                     } else if (key === 37) { // Seta para a esquerda
                         e.preventDefault();
                         selectedButtonIndex = (selectedButtonIndex > 0) ? selectedButtonIndex - 1 : 0;
@@ -184,26 +185,6 @@
                         selectButton(selectedButtonIndex);
                     }
                 });
-
-                $(player).on('ended', function() {
-                    playNextChannel();
-                });
-
-                $(player).on('error', function() {
-                    playNextChannel();
-                });
-
-                function playNextChannel() {
-                    currentChannelIndex++;
-                    if (currentChannelIndex >= channels.length) {
-                        currentChannelIndex = 0;
-                    }
-                    var nextChannelUrl = channels[currentChannelIndex].link;
-                    player.src = nextChannelUrl;
-                    player.play();
-                }
-
-                playNextChannel();
             });
         });
     </script>
