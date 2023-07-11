@@ -109,6 +109,7 @@
                 var selectedChannelIndex = 0;
                 var buttonList = $("#button-list li button");
                 var selectedButtonIndex = 0;
+                var currentChannelUrl = "";
 
                 for (var i = 0; i < lines.length; i++) {
                     if (lines[i].startsWith("#EXTINF")) {
@@ -130,6 +131,7 @@
                     link.click(function(event) {
                         event.preventDefault();
                         var channelUrl = $(this).attr("href");
+                        currentChannelUrl = channelUrl;
                         player.src = channelUrl;
                         player.load(); // Carrega o vídeo
                         player.play(); // Inicia a reprodução
@@ -184,6 +186,22 @@
                         selectedButtonIndex = (selectedButtonIndex < buttonList.length - 1) ? selectedButtonIndex + 1 : buttonList.length - 1;
                         selectButton(selectedButtonIndex);
                     }
+                });
+
+                // Verifica se o vídeo está próximo do fim
+                $(player).on('timeupdate', function() {
+                    var videoDuration = player.duration;
+                    var currentTime = player.currentTime;
+                    var threshold = 2; // Tempo em segundos antes do fim para carregar o próximo fragmento
+
+                    if (videoDuration - currentTime < threshold) {
+                        player.src = currentChannelUrl; // Carrega novamente o mesmo link para continuar a reprodução
+                        player.play();
+                    }
+                });
+
+                $(player).on('error', function() {
+                    player.load(); // Carrega novamente o vídeo em caso de erro
                 });
             });
         });
