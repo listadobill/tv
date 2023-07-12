@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8">
   <title>Player de IPTV</title>
-  <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css">
   <style>
     body {
       margin: 0;
@@ -17,11 +16,11 @@
 </head>
 <body>
   <div id="player">
-    <video id="videoPlayer" controls></video>
+    <video id="videoPlayer" controls autoplay></video>
     <div id="channelList"></div>
   </div>
 
-  <script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
   <script>
     const videoPlayer = document.getElementById('videoPlayer');
     const channelList = document.getElementById('channelList');
@@ -74,28 +73,49 @@
     function playChannel(index) {
       if (index >= 0 && index < channels.length) {
         const channel = channels[index];
-        videoPlayer.src = channel.url;
+        
+        if (Hls.isSupported()) {
+          const hls = new Hls();
+          hls.loadSource(channel.url);
+          hls.attachMedia(videoPlayer);
+          hls.on(Hls.Events.MANIFEST_PARSED, () => {
+            videoPlayer.play();
+          });
+          hls.on(Hls.Events.ERROR, (event, data) => {
+            console.error('HLS error:', data);
+            playChannel(currentChannelIndex + 1);
+          });
+        } else if (videoPlayer.canPlayType('application/vnd.apple.mpegurl')) {
+          videoPlayer.src = channel.url;
+          videoPlayer.addEventListener('loadedmetadata', () => {
+            videoPlayer.play();
+          });
+          videoPlayer.addEventListener('error', () => {
+            console.error('Video player error');
+            playChannel(currentChannelIndex + 1);
+          });
+        } else {
+          console.error('HLS is not supported');
+          playChannel(currentChannelIndex + 1);
+        }
+
         currentChannelIndex = index;
       }
     }
 
-    const player = new Plyr(videoPlayer);
-
-    player.on('ended', () => {
-      currentChannelIndex++;
-      if (currentChannelIndex >= channels.length) {
-        currentChannelIndex = 0;
-      }
-      playChannel(currentChannelIndex);
+    videoPlayer.addEventListener('ended', () => {
+      playChannel(currentChannelIndex + 1);
     });
 
-    player.on('error', () => {
-      playChannel(currentChannelIndex);
-    });
-
-    player.on('click', () => {
-      if (player.fullscreen.enabled) {
-        player.fullscreen.toggle();
+    videoPlayer.addEventListener('click', () => {
+      if (videoPlayer.requestFullscreen) {
+        videoPlayer.requestFullscreen();
+      } else if (videoPlayer.mozRequestFullScreen) {
+        videoPlayer.mozRequestFullScreen();
+      } else if (videoPlayer.webkitRequestFullscreen) {
+        videoPlayer.webkitRequestFullscreen();
+      } else if (videoPlayer.msRequestFullscreen) {
+        videoPlayer.msRequestFullscreen();
       }
     });
   </script>
