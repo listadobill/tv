@@ -1,123 +1,208 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>Player de IPTV</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
-    #player {
-      width: 100%;
-      height: 100%;
-    }
-  </style>
+    <title>TV DO BILL</title>
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+    <style>
+        body {
+            background-color: #000;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Impede a exibição da barra de rolagem */
+        }
+
+        #channel-list {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30%;
+            height: 100vh;
+            z-index: 1; /* Define a ordem de empilhamento para ficar acima do player */
+            overflow-y: scroll; /* Habilita a rolagem vertical */
+            background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo semi-transparente */
+            color: #fff;
+            padding: 20px;
+        }
+
+        #channel-list ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #channel-list ul li {
+            margin-bottom: 10px;
+        }
+
+        #channel-list ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        #player {
+            width: 70%;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 0; /* Define a ordem de empilhamento para ficar abaixo da lista */
+        }
+
+        .selected a,
+        button:hover {
+            color: #f00;
+            animation: red-glow 1s infinite alternate;
+        }
+
+        @keyframes red-glow {
+            0% {
+                color: #fff;
+            }
+            100% {
+                color: #f00;
+            }
+        }
+
+        #button-list {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 2; /* Coloca a lista na frente do player */
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #button-list li {
+            margin-bottom: 10px;
+        }
+
+        #button-list li button {
+            position: relative;
+            background-color: transparent;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #button-list li button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo semi-transparente mais escura */
+            z-index: -1;
+            opacity: 0.8; /* Ajuste a opacidade aqui */
+        }
+    </style>
 </head>
 <body>
-  <div id="player">
-    <video id="videoPlayer" controls autoplay></video>
-    <div id="channelList"></div>
-  </div>
+    <ul id="button-list">
+        <li><button onclick="window.location.href='https://listadobill.github.io/tv/'">CANAIS ABERTOS E FECHADOS</button></li>
+        <li><button onclick="window.location.href='https://listadobill.github.io/tv/provisoria'">IPTV</button></li>
+        <li><button onclick="window.location.href='https://listadobill.github.io/tv/tvdobill'">IPTV DO BILL</button></li>
+        <li><button onclick="window.location.href='https://listadobill.github.io/tv/smarttv_plutotvbr.html'">PLUTO TV IPTV</button></li>
+    </ul>
 
-  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-  <script>
-    const videoPlayer = document.getElementById('videoPlayer');
-    const channelList = document.getElementById('channelList');
-    const playlistUrl = 'https://raw.githubusercontent.com/listadobill/tv/main/c.m3u';
-    let channels = [];
-    let currentChannelIndex = 0;
+    <div id="channel-list">
+        <ul></ul>
+    </div>
 
-    fetch(playlistUrl)
-      .then(response => response.text())
-      .then(data => {
-        channels = parsePlaylistData(data);
-        renderChannelList();
-        playChannel(currentChannelIndex);
-      })
-      .catch(error => {
-        console.error('Failed to fetch playlist:', error);
-      });
+    <video id="player" controls></video>
 
-    function parsePlaylistData(data) {
-      const lines = data.split('\n');
-      const channels = [];
-      let channel = {};
+    <script src="https://cdn.plyr.io/3.6.4/plyr.polyfilled.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.get("https://raw.githubusercontent.com/listadobill/tv/main/c.m3u", function(data) {
+                var lines = data.split("\n");
+                var channels = [];
+                var channelList = $("#channel-list ul");
+                var player = new Plyr("#player");
+                var selectedChannelIndex = 0;
+                var buttonList = $("#button-list li button");
+                var selectedButtonIndex = 0;
+                var currentChannelUrl = "";
 
-      lines.forEach(line => {
-        line = line.trim();
+                for (var i = 0; i < lines.length; i++) {
+                    var line = lines[i].trim();
+                    
+                    if (line.startsWith("#EXTINF")) {
+                        var channelInfo = line.substring(line.indexOf(",") + 1);
+                        var channelLink = lines[i + 1];
 
-        if (line.startsWith('#EXTINF:')) {
-          const [, title] = line.split('#EXTINF:-1,');
-          channel.title = title;
-        } else if (line.startsWith('http')) {
-          channel.url = line;
-          channels.push(channel);
-          channel = {};
-        }
-      });
+                        channels.push({ info: channelInfo, link: channelLink });
+                    }
+                }
 
-      return channels;
-    }
+                channels.sort(function(a, b) {
+                    return a.info.localeCompare(b.info); // Ordena os canais alfabeticamente
+                });
 
-    function renderChannelList() {
-      channelList.innerHTML = '';
-      channels.forEach((channel, index) => {
-        const button = document.createElement('button');
-        button.textContent = channel.title;
-        button.addEventListener('click', () => playChannel(index));
-        channelList.appendChild(button);
-      });
-    }
+                for (var j = 0; j < channels.length; j++) {
+                    var listItem = $("<li></li>");
+                    var link = $("<a></a>").attr("href", channels[j].link).text(channels[j].info);
 
-    function playChannel(index) {
-      if (index >= 0 && index < channels.length) {
-        const channel = channels[index];
-        
-        if (Hls.isSupported()) {
-          const hls = new Hls();
-          hls.loadSource(channel.url);
-          hls.attachMedia(videoPlayer);
-          hls.on(Hls.Events.MANIFEST_PARSED, () => {
-            videoPlayer.play();
-          });
-          hls.on(Hls.Events.ERROR, (event, data) => {
-            console.error('HLS error:', data);
-            playChannel(currentChannelIndex + 1);
-          });
-        } else if (videoPlayer.canPlayType('application/vnd.apple.mpegurl')) {
-          videoPlayer.src = channel.url;
-          videoPlayer.addEventListener('loadedmetadata', () => {
-            videoPlayer.play();
-          });
-          videoPlayer.addEventListener('error', () => {
-            console.error('Video player error');
-            playChannel(currentChannelIndex + 1);
-          });
-        } else {
-          console.error('HLS is not supported');
-          playChannel(currentChannelIndex + 1);
-        }
+                    link.click(function(event) {
+                        event.preventDefault();
+                        var channelUrl = $(this).attr("href");
+                        currentChannelUrl = channelUrl;
+                        player.source = {
+                            type: 'video',
+                            sources: [{
+                                src: channelUrl,
+                                type: 'application/x-mpegURL'
+                            }]
+                        };
+                    });
 
-        currentChannelIndex = index;
-      }
-    }
+                    listItem.append(link);
+                    channelList.append(listItem);
+                }
 
-    videoPlayer.addEventListener('ended', () => {
-      playChannel(currentChannelIndex + 1);
-    });
+                function selectChannel(index) {
+                    var channels = channelList.children();
+                    channels.removeClass("selected");
+                    channels.eq(index).addClass("selected");
+                    channels.eq(index).find("a").focus();
+                }
 
-    videoPlayer.addEventListener('click', () => {
-      if (videoPlayer.requestFullscreen) {
-        videoPlayer.requestFullscreen();
-      } else if (videoPlayer.mozRequestFullScreen) {
-        videoPlayer.mozRequestFullScreen();
-      } else if (videoPlayer.webkitRequestFullscreen) {
-        videoPlayer.webkitRequestFullscreen();
-      } else if (videoPlayer.msRequestFullscreen) {
-        videoPlayer.msRequestFullscreen();
-      }
-    });
-  </script>
+                function selectButton(index) {
+                    buttonList.removeClass("selected");
+                    buttonList.eq(index).addClass("selected");
+                    buttonList.eq(index).focus();
+                }
+
+                selectChannel(selectedChannelIndex);
+                selectButton(selectedButtonIndex);
+
+                $(document).keydown(function(e) {
+                    var key = e.which;
+
+                    if (key === 38) { // Seta para cima
+                        e.preventDefault();
+                        selectedChannelIndex = (selectedChannelIndex > 0) ? selectedChannelIndex - 1 : 0;
+                        selectChannel(selectedChannelIndex);
+                    } else if (key === 40) { // Seta para baixo
+                        e.preventDefault();
+                        selectedChannelIndex = (selectedChannelIndex < channelList.children().length - 1) ? selectedChannelIndex + 1 : channelList.children().length - 1;
+                        selectChannel(selectedChannelIndex);
+                    } else if (key === 37) { // Seta para a esquerda
+                        e.preventDefault();
+                        selectedButtonIndex = (selectedButtonIndex > 0) ? selectedButtonIndex - 1 : 0;
+                        selectButton(selectedButtonIndex);
+                    } else if (key === 39) { // Seta para a direita
+                        e.preventDefault();
+                        selectedButtonIndex = (selectedButtonIndex < buttonList.length - 1) ? selectedButtonIndex + 1 : buttonList.length - 1;
+                        selectButton(selectedButtonIndex);
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
