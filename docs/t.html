@@ -2,7 +2,6 @@
 <html>
 <head>
     <title>TV DO BILL</title>
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
     <style>
         body {
             background-color: #000;
@@ -99,22 +98,6 @@
             opacity: 0.8; /* Ajuste a opacidade aqui */
         }
     </style>
-</head>
-<body>
-    <ul id="button-list">
-        <li><button onclick="window.location.href='https://listadobill.github.io/tv/'">CANAIS ABERTOS E FECHADOS</button></li>
-        <li><button onclick="window.location.href='https://listadobill.github.io/tv/provisoria'">IPTV</button></li>
-        <li><button onclick="window.location.href='https://listadobill.github.io/tv/tvdobill'">IPTV DO BILL</button></li>
-        <li><button onclick="window.location.href='https://listadobill.github.io/tv/smarttv_plutotvbr.html'">PLUTO TV IPTV</button></li>
-    </ul>
-
-    <div id="channel-list">
-        <ul></ul>
-    </div>
-
-    <video id="player" controls autoplay></video>
-
-    <script src="https://cdn.plyr.io/3.6.4/plyr.polyfilled.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
@@ -122,17 +105,14 @@
                 var lines = data.split("\n");
                 var channels = [];
                 var channelList = $("#channel-list ul");
-                var player = new Plyr("#player");
+                var player = $("#player")[0];
                 var selectedChannelIndex = 0;
                 var buttonList = $("#button-list li button");
                 var selectedButtonIndex = 0;
-                var currentChannelUrl = "";
 
                 for (var i = 0; i < lines.length; i++) {
-                    var line = lines[i].trim();
-                    
-                    if (line.startsWith("#EXTINF")) {
-                        var channelInfo = line.substring(line.indexOf(",") + 1);
+                    if (lines[i].startsWith("#EXTINF")) {
+                        var channelInfo = lines[i].substring(lines[i].indexOf(",") + 1);
                         var channelLink = lines[i + 1];
 
                         channels.push({ info: channelInfo, link: channelLink });
@@ -150,15 +130,17 @@
                     link.click(function(event) {
                         event.preventDefault();
                         var channelUrl = $(this).attr("href");
-                        currentChannelUrl = channelUrl;
-                        player.source = {
-                            type: 'video',
-                            sources: [{
-                                src: channelUrl,
-                                type: 'application/x-mpegURL'
-                            }]
-                        };
-                        player.fullscreen.enter();
+                        player.src = channelUrl;
+                        player.play();
+                        if (player.requestFullscreen) {
+                            player.requestFullscreen();
+                        } else if (player.mozRequestFullScreen) {
+                            player.mozRequestFullScreen();
+                        } else if (player.webkitRequestFullscreen) {
+                            player.webkitRequestFullscreen();
+                        } else if (player.msRequestFullscreen) {
+                            player.msRequestFullscreen();
+                        }
                     });
 
                     listItem.append(link);
@@ -203,19 +185,30 @@
                     }
                 });
 
-                // Carrega novamente o mesmo link ao final do vídeo
-                player.on('ended', function() {
-                    player.restart();
-                    player.play(); // Inicia o vídeo automaticamente
+                $(player).on('ended', function() {
+                    player.load();
+                    player.play();
                 });
 
-                // Tratamento de erro
-                player.on('error', function() {
-                    player.restart();
-                    player.play(); // Inicia o vídeo automaticamente
+                $(player).on('error', function() {
+                    player.load();
                 });
             });
         });
     </script>
+</head>
+<body>
+    <ul id="button-list">
+        <li><button onclick="window.location.href='https://listadobill.github.io/tv/'">CANAIS ABERTOS E FECHADOS</button></li>
+        <li><button onclick="window.location.href='https://listadobill.github.io/tv/provisoria'">IPTV</button></li>
+        <li><button onclick="window.location.href='https://listadobill.github.io/tv/tvdobill'">IPTV DO BILL</button></li>
+        <li><button onclick="window.location.href='https://listadobill.github.io/tv/smarttv_plutotvbr.html'">PLUTO TV IPTV</button></li>
+    </ul>
+
+    <div id="channel-list">
+        <ul></ul>
+    </div>
+
+    <video id="player" controls></video>
 </body>
 </html>
