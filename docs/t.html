@@ -158,6 +158,9 @@
                             var hls = new Hls();
                             hls.loadSource(channelUrl);
                             hls.attachMedia(player.media);
+                            hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                                player.play();
+                            });
                             player.fullscreen.enter();
                         });
 
