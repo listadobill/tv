@@ -115,97 +115,117 @@
     <video id="player" controls></video>
 
     <script src="https://cdn.plyr.io/3.6.4/plyr.polyfilled.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
-            $.ajax({
-                url: "https://raw.githubusercontent.com/listadobill/tv/main/c.m3u",
-                cache: false,
-                success: function(data) {
-                    var lines = data.split("\n");
-                    var channels = [];
-                    var channelList = $("#channel-list ul");
-                    var player = new Plyr("#player");
-                    var selectedChannelIndex = 0;
-                    var buttonList = $("#button-list li button");
-                    var selectedButtonIndex = 0;
-                    var currentChannelUrl = "";
+            $.get("https://raw.githubusercontent.com/listadobill/tv/main/c.m3u", function(data) {
+                var lines = data.split("\n");
+                var channels = [];
+                var channelList = $("#channel-list ul");
+                var player = new Plyr("#player");
+                var selectedChannelIndex = 0;
+                var buttonList = $("#button-list li button");
+                var selectedButtonIndex = 0;
+                var currentChannelUrl = "";
 
-                    for (var i = 0; i < lines.length; i++) {
-                        var line = lines[i].trim();
-                        
-                        if (line.startsWith("#EXTINF")) {
-                            var channelInfo = line.substring(line.indexOf(",") + 1);
-                            var channelLink = lines[i + 1];
+                for (var i = 0; i < lines.length; i++) {
+                    var line = lines[i].trim();
+                    
+                    if (line.startsWith("#EXTINF")) {
+                        var channelInfo = line.substring(line.indexOf(",") + 1);
+                        var channelLink = lines[i + 1];
 
-                            channels.push({ info: channelInfo, link: channelLink });
-                        }
+                        channels.push({ info: channelInfo, link: channelLink });
                     }
-
-                    channels.sort(function(a, b) {
-                        return a.info.localeCompare(b.info); // Ordena os canais alfabeticamente
-                    });
-
-                    for (var j = 0; j < channels.length; j++) {
-                        var listItem = $("<li></li>");
-                        var link = $("<a></a>").attr("href", channels[j].link).text(channels[j].info);
-
-                        link.click(function(event) {
-                            event.preventDefault();
-                            var channelUrl = $(this).attr("href");
-                            currentChannelUrl = channelUrl;
-                            var hls = new Hls();
-                            hls.loadSource(channelUrl);
-                            hls.attachMedia(player.media);
-                            hls.on(Hls.Events.MANIFEST_PARSED, function() {
-                                player.play();
-                            });
-                            player.fullscreen.enter();
-                        });
-
-                        listItem.append(link);
-                        channelList.append(listItem);
-                    }
-
-                    function selectChannel(index) {
-                        var channels = channelList.children();
-                        channels.removeClass("selected");
-                        channels.eq(index).addClass("selected");
-                        channels.eq(index).find("a").focus();
-                    }
-
-                    function selectButton(index) {
-                        buttonList.removeClass("selected");
-                        buttonList.eq(index).addClass("selected");
-                        buttonList.eq(index).focus();
-                    }
-
-                    selectChannel(selectedChannelIndex);
-                    selectButton(selectedButtonIndex);
-
-                    $(document).keydown(function(e) {
-                        var key = e.which;
-
-                        if (key === 38) { // Seta para cima
-                            e.preventDefault();
-                            selectedChannelIndex = (selectedChannelIndex > 0) ? selectedChannelIndex - 1 : 0;
-                            selectChannel(selectedChannelIndex);
-                        } else if (key === 40) { // Seta para baixo
-                            e.preventDefault();
-                            selectedChannelIndex = (selectedChannelIndex < channelList.children().length - 1) ? selectedChannelIndex + 1 : channelList.children().length - 1;
-                            selectChannel(selectedChannelIndex);
-                        } else if (key === 37) { // Seta para a esquerda
-                            e.preventDefault();
-                            selectedButtonIndex = (selectedButtonIndex > 0) ? selectedButtonIndex - 1 : 0;
-                            selectButton(selectedButtonIndex);
-                        } else if (key === 39) { // Seta para a direita
-                            e.preventDefault();
-                            selectedButtonIndex = (selectedButtonIndex < buttonList.length - 1) ? selectedButtonIndex + 1 : buttonList.length - 1;
-                            selectButton(selectedButtonIndex);
-                        }
-                    });
                 }
+
+                channels.sort(function(a, b) {
+                    return a.info.localeCompare(b.info); // Ordena os canais alfabeticamente
+                });
+
+                for (var j = 0; j < channels.length; j++) {
+                    var listItem = $("<li></li>");
+                    var link = $("<a></a>").attr("href", channels[j].link).text(channels[j].info);
+
+                    link.click(function(event) {
+                        event.preventDefault();
+                        var channelUrl = $(this).attr("href");
+                        currentChannelUrl = channelUrl;
+                        player.source = {
+                            type: 'video',
+                            sources: [{
+                                src: channelUrl,
+                                type: 'application/x-mpegURL'
+                            }]
+                        };
+                        player.fullscreen.enter();
+                    });
+
+                    listItem.append(link);
+                    channelList.append(listItem);
+                }
+
+                function selectChannel(index) {
+                    var channels = channelList.children();
+                    channels.removeClass("selected");
+                    channels.eq(index).addClass("selected");
+                    channels.eq(index).find("a").focus();
+                }
+
+                function selectButton(index) {
+                    buttonList.removeClass("selected");
+                    buttonList.eq(index).addClass("selected");
+                    buttonList.eq(index).focus();
+                }
+
+                selectChannel(selectedChannelIndex);
+                selectButton(selectedButtonIndex);
+
+                $(document).keydown(function(e) {
+                    var key = e.which;
+
+                    if (key === 38) { // Seta para cima
+                        e.preventDefault();
+                        selectedChannelIndex = (selectedChannelIndex > 0) ? selectedChannelIndex - 1 : 0;
+                        selectChannel(selectedChannelIndex);
+                    } else if (key === 40) { // Seta para baixo
+                        e.preventDefault();
+                        selectedChannelIndex = (selectedChannelIndex < channelList.children().length - 1) ? selectedChannelIndex + 1 : channelList.children().length - 1;
+                        selectChannel(selectedChannelIndex);
+                    } else if (key === 37) { // Seta para a esquerda
+                        e.preventDefault();
+                        selectedButtonIndex = (selectedButtonIndex > 0) ? selectedButtonIndex - 1 : 0;
+                        selectButton(selectedButtonIndex);
+                    } else if (key === 39) { // Seta para a direita
+                        e.preventDefault();
+                        selectedButtonIndex = (selectedButtonIndex < buttonList.length - 1) ? selectedButtonIndex + 1 : buttonList.length - 1;
+                        selectButton(selectedButtonIndex);
+                    }
+                });
+
+                // Carrega novamente o mesmo link ao final do vídeo
+                player.on('ended', function() {
+                    player.source = {
+                        type: 'video',
+                        sources: [{
+                            src: currentChannelUrl,
+                            type: 'application/x-mpegURL'
+                        }]
+                    };
+                    player.play(); // Inicia o vídeo automaticamente
+                });
+
+                // Tratamento de erro
+                player.on('error', function() {
+                    player.source = {
+                        type: 'video',
+                        sources: [{
+                            src: currentChannelUrl,
+                            type: 'application/x-mpegURL'
+                        }]
+                    };
+                    player.play(); // Inicia o vídeo automaticamente
+                });
             });
         });
     </script>
