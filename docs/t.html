@@ -115,6 +115,7 @@
     <video id="player" controls></video>
 
     <script src="https://cdn.plyr.io/3.6.4/plyr.polyfilled.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
@@ -154,13 +155,9 @@
                             event.preventDefault();
                             var channelUrl = $(this).attr("href");
                             currentChannelUrl = channelUrl;
-                            player.source = {
-                                type: 'video',
-                                sources: [{
-                                    src: channelUrl,
-                                    type: 'application/x-mpegURL'
-                                }]
-                            };
+                            var hls = new Hls();
+                            hls.loadSource(channelUrl);
+                            hls.attachMedia(player.media);
                             player.fullscreen.enter();
                         });
 
@@ -204,30 +201,6 @@
                             selectedButtonIndex = (selectedButtonIndex < buttonList.length - 1) ? selectedButtonIndex + 1 : buttonList.length - 1;
                             selectButton(selectedButtonIndex);
                         }
-                    });
-
-                    // Carrega novamente o mesmo link ao final do vídeo
-                    player.on('ended', function() {
-                        player.source = {
-                            type: 'video',
-                            sources: [{
-                                src: currentChannelUrl,
-                                type: 'application/x-mpegURL'
-                            }]
-                        };
-                        player.play(); // Inicia o vídeo automaticamente
-                    });
-
-                    // Tratamento de erro
-                    player.on('error', function() {
-                        player.source = {
-                            type: 'video',
-                            sources: [{
-                                src: currentChannelUrl,
-                                type: 'application/x-mpegURL'
-                            }]
-                        };
-                        player.play(); // Inicia o vídeo automaticamente
                     });
                 }
             });
