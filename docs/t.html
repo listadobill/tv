@@ -1,220 +1,103 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>TV DO BILL</title>
-    <style>
-        body {
-            background-color: #000;
-            margin: 0;
-            padding: 0;
-            overflow: hidden; /* Impede a exibição da barra de rolagem */
-        }
-
-        #channel-list {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 30%;
-            height: 100vh;
-            z-index: 1; /* Define a ordem de empilhamento para ficar acima do player */
-            overflow-y: scroll; /* Habilita a rolagem vertical */
-            background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo semi-transparente */
-            color: #fff;
-            padding: 20px;
-        }
-
-        #channel-list ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        #channel-list ul li {
-            margin-bottom: 10px;
-        }
-
-        #channel-list ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        #player {
-            width: 70%;
-            height: 100vh;
-            position: absolute;
-            top: 0;
-            right: 0;
-            z-index: 0; /* Define a ordem de empilhamento para ficar abaixo da lista */
-        }
-
-        .selected a,
-        button:hover {
-            color: #f00;
-            animation: red-glow 1s infinite alternate;
-        }
-
-        @keyframes red-glow {
-            0% {
-                color: #fff;
-            }
-            100% {
-                color: #f00;
-            }
-        }
-
-        #button-list {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            z-index: 2; /* Coloca a lista na frente do player */
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        #button-list li {
-            margin-bottom: 10px;
-        }
-
-        #button-list li button {
-            position: relative;
-            background-color: transparent;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        #button-list li button::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo semi-transparente mais escura */
-            z-index: -1;
-            opacity: 0.8; /* Ajuste a opacidade aqui */
-        }
-    </style>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $.get("https://raw.githubusercontent.com/listadobill/tv/main/c.m3u", function(data) {
-                var lines = data.split("\n");
-                var channels = [];
-                var channelList = $("#channel-list ul");
-                var player = $("#player")[0];
-                var selectedChannelIndex = 0;
-                var buttonList = $("#button-list li button");
-                var selectedButtonIndex = 0;
-                var currentChannelUrl = "";
-
-                for (var i = 0; i < lines.length; i++) {
-                    if (lines[i].startsWith("#EXTINF")) {
-                        var channelInfo = lines[i].substring(lines[i].indexOf(",") + 1);
-                        var channelLink = lines[i + 1];
-
-                        channels.push({ info: channelInfo, link: channelLink });
-                    }
-                }
-
-                channels.sort(function(a, b) {
-                    return a.info.localeCompare(b.info); // Ordena os canais alfabeticamente
-                });
-
-                for (var j = 0; j < channels.length; j++) {
-                    var listItem = $("<li></li>");
-                    var link = $("<a></a>").attr("href", channels[j].link).text(channels[j].info);
-
-                    link.click(function(event) {
-                        event.preventDefault();
-                        var channelUrl = $(this).attr("href");
-                        currentChannelUrl = channelUrl;
-                        player.src = channelUrl;
-                        player.load(); // Carrega o vídeo
-                        player.play(); // Inicia a reprodução
-                        if (player.requestFullscreen) {
-                            player.requestFullscreen();
-                        } else if (player.mozRequestFullScreen) {
-                            player.mozRequestFullScreen();
-                        } else if (player.webkitRequestFullscreen) {
-                            player.webkitRequestFullscreen();
-                        } else if (player.msRequestFullscreen) {
-                            player.msRequestFullscreen();
-                        }
-                    });
-
-                    listItem.append(link);
-                    channelList.append(listItem);
-                }
-
-                function selectChannel(index) {
-                    var channels = channelList.children();
-                    channels.removeClass("selected");
-                    channels.eq(index).addClass("selected");
-                    channels.eq(index).find("a").focus();
-                }
-
-                function selectButton(index) {
-                    buttonList.removeClass("selected");
-                    buttonList.eq(index).addClass("selected");
-                    buttonList.eq(index).focus();
-                }
-
-                selectChannel(selectedChannelIndex);
-                selectButton(selectedButtonIndex);
-
-                $(document).keydown(function(e) {
-                    var key = e.which;
-
-                    if (key === 38) { // Seta para cima
-                        e.preventDefault();
-                        selectedChannelIndex = (selectedChannelIndex > 0) ? selectedChannelIndex - 1 : 0;
-                        selectChannel(selectedChannelIndex);
-                    } else if (key === 40) { // Seta para baixo
-                        e.preventDefault();
-                        selectedChannelIndex = (selectedChannelIndex < channelList.children().length - 1) ? selectedChannelIndex + 1 : channelList.children().length - 1;
-                        selectChannel(selectedChannelIndex);
-                    } else if (key === 37) { // Seta para a esquerda
-                        e.preventDefault();
-                        selectedButtonIndex = (selectedButtonIndex > 0) ? selectedButtonIndex - 1 : 0;
-                        selectButton(selectedButtonIndex);
-                    } else if (key === 39) { // Seta para a direita
-                        e.preventDefault();
-                        selectedButtonIndex = (selectedButtonIndex < buttonList.length - 1) ? selectedButtonIndex + 1 : buttonList.length - 1;
-                        selectButton(selectedButtonIndex);
-                    }
-                });
-
-                // Carrega novamente o mesmo link ao final do vídeo
-                $(player).on('ended', function() {
-                    player.src = currentChannelUrl; // Carrega novamente o mesmo link para reprodução contínua
-                    player.load();
-                    player.play();
-                });
-
-                // Tratamento de erro
-                $(player).on('error', function() {
-                    player.load();
-                });
-            });
-        });
-    </script>
+  <meta charset="utf-8">
+  <title>Player de IPTV</title>
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    #player {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
 </head>
 <body>
-    <ul id="button-list">
-        <li><button onclick="window.location.href='https://listadobill.github.io/tv/'">CANAIS ABERTOS E FECHADOS</button></li>
-        <li><button onclick="window.location.href='https://listadobill.github.io/tv/provisoria'">IPTV</button></li>
-        <li><button onclick="window.location.href='https://listadobill.github.io/tv/tvdobill'">IPTV DO BILL</button></li>
-        <li><button onclick="window.location.href='https://listadobill.github.io/tv/smarttv_plutotvbr.html'">PLUTO TV IPTV</button></li>
-    </ul>
+  <div id="player">
+    <video id="videoPlayer" controls></video>
+    <div id="channelList"></div>
+  </div>
 
-    <div id="channel-list">
-        <ul></ul>
-    </div>
+  <script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
+  <script>
+    const videoPlayer = document.getElementById('videoPlayer');
+    const channelList = document.getElementById('channelList');
+    const playlistUrl = 'https://raw.githubusercontent.com/listadobill/tv/main/c.m3u';
+    let channels = [];
+    let currentChannelIndex = 0;
 
-    <video id="player" controls></video>
+    fetch(playlistUrl)
+      .then(response => response.text())
+      .then(data => {
+        channels = parsePlaylistData(data);
+        renderChannelList();
+        playChannel(currentChannelIndex);
+      })
+      .catch(error => {
+        console.error('Failed to fetch playlist:', error);
+      });
+
+    function parsePlaylistData(data) {
+      const lines = data.split('\n');
+      const channels = [];
+      let channel = {};
+
+      lines.forEach(line => {
+        line = line.trim();
+
+        if (line.startsWith('#EXTINF:')) {
+          const [, title] = line.split('#EXTINF:-1,');
+          channel.title = title;
+        } else if (line.startsWith('http')) {
+          channel.url = line;
+          channels.push(channel);
+          channel = {};
+        }
+      });
+
+      return channels;
+    }
+
+    function renderChannelList() {
+      channelList.innerHTML = '';
+      channels.forEach((channel, index) => {
+        const button = document.createElement('button');
+        button.textContent = channel.title;
+        button.addEventListener('click', () => playChannel(index));
+        channelList.appendChild(button);
+      });
+    }
+
+    function playChannel(index) {
+      if (index >= 0 && index < channels.length) {
+        const channel = channels[index];
+        videoPlayer.src = channel.url;
+        currentChannelIndex = index;
+      }
+    }
+
+    const player = new Plyr(videoPlayer);
+
+    player.on('ended', () => {
+      currentChannelIndex++;
+      if (currentChannelIndex >= channels.length) {
+        currentChannelIndex = 0;
+      }
+      playChannel(currentChannelIndex);
+    });
+
+    player.on('error', () => {
+      playChannel(currentChannelIndex);
+    });
+
+    player.on('click', () => {
+      if (player.fullscreen.enabled) {
+        player.fullscreen.toggle();
+      }
+    });
+  </script>
 </body>
 </html>
