@@ -112,7 +112,7 @@
         <ul></ul>
     </div>
 
-    <video id="player" controls></video>
+    <video id="player" controls autoplay></video>
 
     <script src="https://cdn.plyr.io/3.6.4/plyr.polyfilled.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -205,25 +205,13 @@
 
                 // Carrega novamente o mesmo link ao final do vídeo
                 player.on('ended', function() {
-                    player.source = {
-                        type: 'video',
-                        sources: [{
-                            src: currentChannelUrl,
-                            type: 'application/x-mpegURL'
-                        }]
-                    };
+                    player.restart();
                     player.play(); // Inicia o vídeo automaticamente
                 });
 
                 // Tratamento de erro
                 player.on('error', function() {
-                    player.source = {
-                        type: 'video',
-                        sources: [{
-                            src: currentChannelUrl,
-                            type: 'application/x-mpegURL'
-                        }]
-                    };
+                    player.restart();
                     player.play(); // Inicia o vídeo automaticamente
                 });
             });
