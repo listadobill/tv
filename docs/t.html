@@ -205,13 +205,25 @@
 
                 // Carrega novamente o mesmo link ao final do vídeo
                 player.on('ended', function() {
-                    player.restart();
+                    player.source = {
+                        type: 'video',
+                        sources: [{
+                            src: currentChannelUrl,
+                            type: 'application/x-mpegURL'
+                        }]
+                    };
                     player.play(); // Inicia o vídeo automaticamente
                 });
 
                 // Tratamento de erro
                 player.on('error', function() {
-                    player.restart();
+                    player.source = {
+                        type: 'video',
+                        sources: [{
+                            src: currentChannelUrl,
+                            type: 'application/x-mpegURL'
+                        }]
+                    };
                     player.play(); // Inicia o vídeo automaticamente
                 });
             });
