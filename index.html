@@ -67,8 +67,9 @@
                         itemLista.textContent = nome;
                         itemLista.addEventListener("click", function() {
                             try {
-                                document.getElementById("player-video").src = link;
-                                document.getElementById("player-video").play();
+                                const video = document.getElementById("player-video");
+                                video.src = link;
+                                video.play();
                                 document.getElementById("player-error").textContent = "";
                             } catch (error) {
                                 document.getElementById("player-error").textContent = "Não foi possível reproduzir o canal.";
