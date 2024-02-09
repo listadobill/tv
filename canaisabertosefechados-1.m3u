@@ -1,0 +1,43 @@
+#EXTM3U
+#EXTINF:-1 tvg-name="Listas Flash Ec M3U IPTV" tvg-logo="https://play-lh.googleusercontent.com/HD4WuErnigIq8cU7-YhOv9hM7uQiNs2K-dHC6GRuRxUNccDmpRaZz6v8jW9C9JbMZQ=w240-h480-rw" group-title="The Flash Apps", Listas Flash Ec M3U IPTV by The Flash Apps
+http://168.119.150.178/~appsproe/videoIPTV593.mp4
+#EXTINF:-1 tvg-id="" tvg-name="BR Globo SP HD" tvg-logo="https://images.vexels.com/media/users/3/139794/isolated/preview/63948c2cace761d17096170684e4d193-brazil-round-flag-by-vexels.png" group-title="BRAZIL ",BR Globo SP HD
+http://tvmate.icu:8080/jesus1/jesus1/21020
+#EXTINF:-1 tvg-id="" tvg-name="BR: SBT HD" tvg-logo="https://images.vexels.com/media/users/3/139794/isolated/preview/63948c2cace761d17096170684e4d193-brazil-round-flag-by-vexels.png" group-title="BRAZIL ",BR: SBT HD
+http://tvmate.icu:8080/jesus1/jesus1/20978
+#EXTINF:-1 tvg-id="" tvg-name="PT: CLUBBING TV" tvg-logo="" group-title="BRAZIL ",PT: CLUBBING TV
+http://tvmate.icu:8080/jesus1/jesus1/164850
+#EXTINF:-1 tvg-id="" tvg-name="PT: ZAP VIVA FHD" tvg-logo="" group-title="BRAZIL ",PT: ZAP VIVA FHD
+http://tvmate.icu:8080/jesus1/jesus1/164853
+#EXTINF:-1 tvg-id="" tvg-name="PT: TPA INTERNACIONAL SD" tvg-logo="" group-title="BRAZIL ",PT: TPA INTERNACIONAL SD
+http://tvmate.icu:8080/jesus1/jesus1/164855
+#EXTINF:-1 tvg-id="" tvg-name="PT: TCV INTERNACIONAL" tvg-logo="" group-title="BRAZIL ",PT: TCV INTERNACIONAL
+http://tvmate.icu:8080/jesus1/jesus1/164857
+#EXTINF:-1 tvg-id="" tvg-name="PT: TVC CABO VERDE" tvg-logo="" group-title="BRAZIL ",PT: TVC CABO VERDE
+http://tvmate.icu:8080/jesus1/jesus1/164858
+#EXTINF:-1 tvg-id="" tvg-name="PT: EURONEWS" tvg-logo="" group-title="BRAZIL ",PT: EURONEWS
+http://tvmate.icu:8080/jesus1/jesus1/164859
+#EXTINF:-1 tvg-id="" tvg-name="PT: TVI REALITY" tvg-logo="" group-title="BRAZIL ",PT: TVI REALITY
+http://tvmate.icu:8080/jesus1/jesus1/164861
+#EXTINF:-1 tvg-id="" tvg-name="BR: AMC HD" tvg-logo="" group-title="BRAZIL ",BR: AMC HD
+http://tvmate.icu:8080/jesus1/jesus1/164938
+#EXTINF:-1 tvg-id="" tvg-name="BR: RECORD HD" tvg-logo="" group-title="BRAZIL ",BR: RECORD HD
+http://tvmate.icu:8080/jesus1/jesus1/164941
+#EXTINF:-1 tvg-id="" tvg-name="BR: RECORD NEWS" tvg-logo="" group-title="BRAZIL ",BR: RECORD NEWS
+http://tvmate.icu:8080/jesus1/jesus1/164942
+#EXTINF:-1 tvg-id="" tvg-name="BR: GLOBO HD" tvg-logo="" group-title="BRAZIL ",BR: GLOBO HD
+http://tvmate.icu:8080/jesus1/jesus1/164943
+#EXTINF:-1 tvg-id="" tvg-name="BR: GLOBO MINAS HD" tvg-logo="" group-title="BRAZIL ",BR: GLOBO MINAS HD
+http://tvmate.icu:8080/jesus1/jesus1/164944
+#EXTINF:-1 tvg-id="" tvg-name="BR: GLOBO NEWS HD" tvg-logo="" group-title="BRAZIL ",BR: GLOBO NEWS HD
+http://tvmate.icu:8080/jesus1/jesus1/164945
+#EXTINF:-1 tvg-id="" tvg-name="BR: ESPN" tvg-logo="" group-title="BRAZIL ",BR: ESPN
+http://tvmate.icu:8080/jesus1/jesus1/164948
+#EXTINF:-1 tvg-id="" tvg-name="BR: HBO HD" tvg-logo="" group-title="BRAZIL ",BR: HBO HD
+http://tvmate.icu:8080/jesus1/jesus1/164950
+#EXTINF:-1 tvg-id="" tvg-name="BR: HBO FAMILY HD" tvg-logo="" group-title="BRAZIL ",BR: HBO FAMILY HD
+http://tvmate.icu:8080/jesus1/jesus1/164951
+#EXTINF:-1 tvg-id="" tvg-name="BR: HBO 2 HD" tvg-logo="" group-title="BRAZIL ",BR: HBO 2 HD
+http://tvmate.icu:8080/jesus1/jesus1/164952
+#EXTINF:-1 tvg-id="" tvg-name="BR: TNT SERIES HD" tvg-logo="" group-title="BRAZIL ",BR: TNT SERIES HD
+http://tvmate.icu:8080/jesus1/jesus1/164958
