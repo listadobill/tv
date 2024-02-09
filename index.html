@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Canais IPTV1</title>
+    <title>Lista de Canais IPTV</title>
     <link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet">
     <script src="https://vjs.zencdn.net/7.14.3/video.js"></script>
     <style>
@@ -11,16 +11,19 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            display: flex;
         }
         #canais {
-            float: left;
             width: 40%;
             padding: 20px;
+            overflow-y: auto;
         }
         #player {
-            float: left;
             width: 60%;
             padding: 20px;
+            position: fixed;
+            top: 0;
+            right: 0;
         }
         ul {
             list-style-type: none;
@@ -29,6 +32,10 @@
         li {
             padding: 5px 0;
             cursor: pointer;
+        }
+        #video-player {
+            width: 100%;
+            height: auto;
         }
     </style>
 </head>
@@ -39,7 +46,7 @@
     </div>
     <div id="player">
         <h2>Player</h2>
-        <video id="video-player" class="video-js vjs-default-skin" controls preload="auto" width="100%" height="auto"></video>
+        <video id="video-player" class="video-js vjs-default-skin" controls preload="auto"></video>
     </div>
 
     <script>
@@ -74,7 +81,6 @@
                                     type: 'application/x-mpegURL' // Assuming it's an HLS stream
                                 });
                                 player.play();
-                                player.requestFullscreen(); // Coloca o player em tela cheia
                             } catch (error) {
                                 console.error("Erro ao reproduzir o canal:", error);
                             }
