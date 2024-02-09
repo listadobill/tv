@@ -63,7 +63,7 @@
 </head>
 <body>
     <div id="canais">
-        <h2>LISTA DE CANAIS - ALGUNS PODEM ESTAR FORA OU NÃO FUNCIONAR NO SEU NAVEGADOR - 2</h2>
+        <h2>LISTA DE CANAIS - ALGUNS PODEM ESTAR FORA OU NÃO FUNCIONAR NO SEU NAVEGADOR</h2>
         <ul id="lista-canais"></ul>
     </div>
     <div id="player">
@@ -111,9 +111,14 @@
                                 });
                                 itemLista.style.color = "red";
 
-                                // Reiniciar vídeo em caso de erro
+                                // Monitorar eventos do player
                                 player.on("error", function() {
-                                    player.play();
+                                    console.log("Erro detectado. Tentando reconectar...");
+                                    player.pause(); // Pausa o player
+                                    setTimeout(() => {
+                                        player.load(); // Recarrega o vídeo
+                                        player.play(); // Continua a reprodução
+                                    }, 3000); // Espera 3 segundos antes de tentar reconectar
                                 });
                             } catch (error) {
                                 console.error("Erro ao reproduzir o canal:", error);
