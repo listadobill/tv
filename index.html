@@ -110,6 +110,11 @@
                                     channel.style.color = "#fff";
                                 });
                                 itemLista.style.color = "red";
+
+                                // Reiniciar vídeo em caso de erro
+                                player.on("error", function() {
+                                    player.play();
+                                });
                             } catch (error) {
                                 console.error("Erro ao reproduzir o canal:", error);
                             }
