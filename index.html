@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TV DO BILL - A TV GRATIS</title>
-    <link href="https://cdn.plyr.io/3.6.8/plyr.css" rel="stylesheet">
-    <script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -63,12 +62,12 @@
 </head>
 <body>
     <div id="canais">
-        <h2>LISTA DE CANAIS - ALGUNS PODEM ESTAR FORA OU NÃO FUNCIONAR NO SEU NAVEGADOR - 1</h2>
+        <h2>LISTA DE CANAIS - ALGUNS PODEM ESTAR FORA OU NÃO FUNCIONAR NO SEU NAVEGADOR</h2>
         <ul id="lista-canais"></ul>
     </div>
     <div id="player">
         <h2>Player</h2>
-        <video id="video-player" class="plyr" controls autoplay loop></video>
+        <video id="video-player" controls autoplay></video>
     </div>
 
     <script>
@@ -97,14 +96,15 @@
                         itemLista.textContent = nome;
                         itemLista.addEventListener("click", function() {
                             try {
-                                const player = new Plyr('#video-player');
-                                player.source = {
-                                    type: 'video',
-                                    sources: [{
-                                        src: link,
-                                        type: 'video/mp4'
-                                    }]
-                                };
+                                if (Hls.isSupported()) {
+                                    const video = document.getElementById('video-player');
+                                    const hls = new Hls();
+                                    hls.loadSource(link);
+                                    hls.attachMedia(video);
+                                    hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                                        video.play();
+                                    });
+                                }
                                 // Change color of selected channel
                                 const allChannels = document.querySelectorAll("#lista-canais li");
                                 allChannels.forEach(channel => {
