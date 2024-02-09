@@ -63,7 +63,7 @@
 </head>
 <body>
     <div id="canais">
-        <h2>LISTA DE CANAIS - ALGUNS PODEM ESTAR FORA OU NÃO FUNCIONAR NO SEU NAVEGADOR</h2>
+        <h2>LISTA DE CANAIS - ALGUNS PODEM ESTAR FORA OU NÃO FUNCIONAR NO SEU NAVEGADOR - 5</h2>
         <ul id="lista-canais"></ul>
     </div>
     <div id="player">
@@ -151,6 +151,38 @@
                 .catch(error => {
                     console.error("Erro ao carregar a lista de canais:", error);
                 });
+            });
+        });
+
+        // Adicione esta parte ao seu código JavaScript, dentro do evento "DOMContentLoaded"
+        document.addEventListener("DOMContentLoaded", function() {
+            const listas = [
+                // suas listas de canais...
+            ];
+
+            const listaCanaisElemento = document.getElementById("lista-canais");
+
+            listas.forEach((lista) => {
+                fetch(lista.url)
+                    .then(response => response.text())
+                    .then(data => {
+                        const linhas = data.split('\n');
+                        const canais = linhas.filter(linha => linha.startsWith('#EXTINF'));
+                        canais.forEach((canal) => {
+                            // Seu código para adicionar canais à lista...
+                        });
+                    })
+                    .catch(error => {
+                        console.error("Erro ao carregar a lista de canais:", error);
+                    });
+            });
+
+            // Adicione um evento de controle de erros ao vídeo para reconectar automaticamente em caso de falha
+            const videoPlayer = document.getElementById("video-player");
+            videoPlayer.addEventListener("error", function() {
+                console.log("Erro de reprodução detectado. Tentando reconectar...");
+                videoPlayer.load(); // Recarrega o vídeo
+                videoPlayer.play(); // Continua a reprodução
             });
         });
     </script>
