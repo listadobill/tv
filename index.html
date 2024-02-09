@@ -68,11 +68,13 @@
                         itemLista.textContent = nome;
                         itemLista.addEventListener("click", function() {
                             try {
-                                videojs("video-player").src({
+                                const player = videojs("video-player");
+                                player.src({
                                     src: link,
                                     type: 'application/x-mpegURL' // Assuming it's an HLS stream
                                 });
-                                videojs("video-player").play();
+                                player.play();
+                                player.requestFullscreen(); // Coloca o player em tela cheia
                             } catch (error) {
                                 console.error("Erro ao reproduzir o canal:", error);
                             }
