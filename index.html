@@ -38,6 +38,7 @@
     <div id="player">
         <h2>Player</h2>
         <video id="player-video" width="100%" controls></video>
+        <p id="player-error" style="color: red;"></p>
     </div>
 
     <script>
@@ -65,11 +66,20 @@
                         const itemLista = document.createElement("li");
                         itemLista.textContent = nome;
                         itemLista.addEventListener("click", function() {
-                            document.getElementById("player-video").src = link;
-                            document.getElementById("player-video").play();
+                            try {
+                                document.getElementById("player-video").src = link;
+                                document.getElementById("player-video").play();
+                                document.getElementById("player-error").textContent = "";
+                            } catch (error) {
+                                document.getElementById("player-error").textContent = "Não foi possível reproduzir o canal.";
+                                console.error("Erro ao reproduzir o canal:", error);
+                            }
                         });
                         listaCanaisElemento.appendChild(itemLista);
                     });
+                })
+                .catch(error => {
+                    console.error("Erro ao carregar a lista de canais:", error);
                 });
             });
         });
