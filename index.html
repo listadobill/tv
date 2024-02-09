@@ -69,7 +69,10 @@
                             try {
                                 const video = document.getElementById("player-video");
                                 video.src = link;
-                                video.play();
+                                video.play().catch(function(error) {
+                                    document.getElementById("player-error").textContent = "Erro ao reproduzir o canal: " + error.message;
+                                    console.error("Erro ao reproduzir o canal:", error);
+                                });
                                 document.getElementById("player-error").textContent = "";
                             } catch (error) {
                                 document.getElementById("player-error").textContent = "Não foi possível reproduzir o canal.";
