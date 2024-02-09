@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Canais IPTV</title>
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.7/plyr.css" />
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -38,14 +37,18 @@
     </div>
     <div id="player">
         <h2>Player</h2>
-        <video id="player-video" controls playsinline></video>
+        <video id="player-video" width="100%" controls></video>
         <p id="player-error" style="color: red;"></p>
     </div>
 
-    <script src="https://cdn.plyr.io/3.6.7/plyr.polyfilled.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const listas = [
+                { nome: "Canais do Brasil", url: "https://iptv-org.github.io/iptv/countries/br.m3u" },
+                { nome: "Canais de Santa Catarina", url: "https://iptv-org.github.io/iptv/subdivisions/br-sc.m3u" },
+                { nome: "Canais de Língua Portuguesa", url: "https://iptv-org.github.io/iptv/languages/por.m3u" },
+                { nome: "Canais de Língua Espanhola", url: "https://iptv-org.github.io/iptv/languages/spa.m3u" },
+                { nome: "Canais de Música", url: "https://iptv-org.github.io/iptv/categories/music.m3u" },
                 { nome: "Pluto TV", url: "https://raw.githubusercontent.com/listadobill/tv/main/plutotv_br.m3u" }
             ];
 
@@ -64,17 +67,12 @@
                         itemLista.textContent = nome;
                         itemLista.addEventListener("click", function() {
                             try {
-                                const player = new Plyr('#player-video');
-                                player.source = {
-                                    type: 'video',
-                                    sources: [
-                                        {
-                                            src: link,
-                                            type: 'video/mp4',
-                                        },
-                                    ],
-                                };
-                                player.play();
+                                const video = document.getElementById("player-video");
+                                video.src = link;
+                                video.play().catch(function(error) {
+                                    document.getElementById("player-error").textContent = "Erro ao reproduzir o canal: " + error.message;
+                                    console.error("Erro ao reproduzir o canal:", error);
+                                });
                                 document.getElementById("player-error").textContent = "";
                             } catch (error) {
                                 document.getElementById("player-error").textContent = "Não foi possível reproduzir o canal.";
