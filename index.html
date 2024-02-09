@@ -81,6 +81,7 @@
                                     type: 'application/x-mpegURL' // Assuming it's an HLS stream
                                 });
                                 player.play();
+                                player.requestFullscreen(); // Coloca o player em tela cheia
                             } catch (error) {
                                 console.error("Erro ao reproduzir o canal:", error);
                             }
