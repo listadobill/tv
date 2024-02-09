@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TV DO BILL - A TV GRATIS</title>
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet">
+    <script src="https://vjs.zencdn.net/7.14.3/video.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -62,12 +63,12 @@
 </head>
 <body>
     <div id="canais">
-        <h2>LISTA DE CANAIS - ALGUNS PODEM ESTAR FORA OU NÃO FUNCIONAR NO SEU NAVEGADOR -9</h2>
+        <h2>LISTA DE CANAIS - ALGUNS PODEM ESTAR FORA OU NÃO FUNCIONAR NO SEU NAVEGADOR</h2>
         <ul id="lista-canais"></ul>
     </div>
     <div id="player">
         <h2>Player</h2>
-        <video id="video-player" controls autoplay></video>
+        <video id="video-player" class="video-js vjs-default-skin" controls preload="auto"></video>
     </div>
 
     <script>
@@ -96,21 +97,33 @@
                         itemLista.textContent = nome;
                         itemLista.addEventListener("click", function() {
                             try {
-                                if (Hls.isSupported()) {
-                                    const video = document.getElementById('video-player');
-                                    const hls = new Hls();
-                                    hls.loadSource(link);
-                                    hls.attachMedia(video);
-                                    hls.on(Hls.Events.MANIFEST_PARSED, function() {
-                                        video.play();
-                                    });
-                                }
+                                const player = videojs("video-player");
+                                player.src({
+                                    src: link,
+                                    type: 'application/x-mpegURL' // Assuming it's an HLS stream
+                                });
+                                player.play();
+                                player.requestFullscreen(); // Coloca o player em tela cheia
                                 // Change color of selected channel
                                 const allChannels = document.querySelectorAll("#lista-canais li");
                                 allChannels.forEach(channel => {
                                     channel.style.color = "#fff";
                                 });
                                 itemLista.style.color = "red";
+
+                                // Verifica periodicamente se o vídeo está sendo reproduzido
+                                const checkInterval = setInterval(() => {
+                                    if (player.paused()) {
+                                        console.log("Vídeo interrompido. Tentando reconectar...");
+                                        player.load(); // Recarrega o vídeo
+                                        player.play(); // Continua a reprodução
+                                    }
+                                }, 5000); // Verifica a cada 5 segundos
+
+                                // Limpa o intervalo quando o canal é trocado
+                                player.on("dispose", () => {
+                                    clearInterval(checkInterval);
+                                });
                             } catch (error) {
                                 console.error("Erro ao reproduzir o canal:", error);
                             }
