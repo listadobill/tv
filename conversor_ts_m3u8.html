@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Lista IPTV</title>
+</head>
+<body>
+    <h2>Conversor de Lista IPTV</h2>
+    <button onclick="converter()">Converter para .m3u8</button><br><br>
+    <a id="link-download" style="display: none;" download="lista.m3u8"><button>Baixar Lista .m3u8</button></a>
+
+    <script>
+        function converter() {
+            const urlListaTS = 'https://raw.githubusercontent.com/listadobill/tv/main/ts.m3u';
+
+            fetch(urlListaTS)
+            .then(response => response.text())
+            .then(data => {
+                const linhas = data.split('\n');
+                let listaM3U8 = '';
+
+                for (let i = 0; i < linhas.length; i++) {
+                    if (linhas[i].trim().startsWith('#EXTINF')) {
+                        const nomeCanal = linhas[i].trim();
+                        const linkTS = linhas[i + 1].trim();
+                        const linkM3U8 = linkTS.replace('.ts', '.m3u8');
+
+                        listaM3U8 += nomeCanal + '\n';
+                        listaM3U8 += linkM3U8 + '\n';
+                    }
+                }
+
+                const blob = new Blob([listaM3U8], { type: 'application/octet-stream' });
+                const url = URL.createObjectURL(blob);
+                const linkDownload = document.getElementById('link-download');
+                linkDownload.href = url;
+                linkDownload.style.display = 'block';
+            })
+            .catch(error => {
+                console.error('Erro ao ler a lista de canais:', error);
+            });
+        }
+    </script>
+</body>
+</html>
