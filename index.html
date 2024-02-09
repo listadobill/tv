@@ -125,11 +125,21 @@
                                     clearInterval(checkInterval);
                                 });
 
-                                // Quando o vídeo termina, reconecta e reproduz novamente
-                                player.on("ended", () => {
-                                    console.log("Vídeo terminado. Reconectando e reproduzindo...");
-                                    player.currentTime(0); // Volta para o início do vídeo
-                                    player.play(); // Reproduz novamente
+                                // Verifica se o vídeo está no final e reconecta automaticamente
+                                player.on("timeupdate", () => {
+                                    const video = document.getElementById("video-player");
+                                    const currentTime = video.currentTime;
+                                    const duration = video.duration;
+                                    const buffer = 5; // margem de buffer em segundos
+
+                                    if (duration - currentTime < buffer) {
+                                        console.log("Vídeo no final. Reconectando...");
+                                        player.src({
+                                            src: link,
+                                            type: 'application/x-mpegURL'
+                                        });
+                                        player.play();
+                                    }
                                 });
                             } catch (error) {
                                 console.error("Erro ao reproduzir o canal:", error);
