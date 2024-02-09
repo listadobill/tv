@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Canais IPTV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #canais {
+            float: left;
+            width: 40%;
+            padding: 20px;
+        }
+        #player {
+            float: left;
+            width: 60%;
+            padding: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 5px 0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="canais">
+        <h2>Lista de Canais</h2>
+        <ul id="lista-canais"></ul>
+    </div>
+    <div id="player">
+        <h2>Player</h2>
+        <video id="player-video" width="100%" controls></video>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const listas = [
+                { nome: "Canais do Brasil", url: "https://iptv-org.github.io/iptv/countries/br.m3u" },
+                { nome: "Canais de Santa Catarina", url: "https://iptv-org.github.io/iptv/subdivisions/br-sc.m3u" },
+                { nome: "Canais de Língua Portuguesa", url: "https://iptv-org.github.io/iptv/languages/por.m3u" },
+                { nome: "Canais de Língua Espanhola", url: "https://iptv-org.github.io/iptv/languages/spa.m3u" },
+                { nome: "Canais de Música", url: "https://iptv-org.github.io/iptv/categories/music.m3u" },
+                { nome: "Pluto TV", url: "https://raw.githubusercontent.com/listadobill/tv/main/plutotv_br.m3u" }
+            ];
+
+            const listaCanaisElemento = document.getElementById("lista-canais");
+
+            listas.forEach((lista) => {
+                fetch(lista.url)
+                .then(response => response.text())
+                .then(data => {
+                    const linhas = data.split('\n');
+                    const canais = linhas.filter(linha => linha.startsWith('#EXTINF'));
+                    canais.forEach((canal) => {
+                        const nome = canal.split(',')[1];
+                        const link = linhas[linhas.indexOf(canal) + 1];
+                        const itemLista = document.createElement("li");
+                        itemLista.textContent = nome;
+                        itemLista.addEventListener("click", function() {
+                            document.getElementById("player-video").src = link;
+                            document.getElementById("player-video").play();
+                        });
+                        listaCanaisElemento.appendChild(itemLista);
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
