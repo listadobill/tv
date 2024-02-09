@@ -12,11 +12,29 @@
             margin: 0;
             padding: 0;
             display: flex;
+            background-color: #111;
+            color: #fff;
         }
         #canais {
             width: 40%;
             padding: 20px;
             overflow-y: auto;
+            font-size: 16px;
+        }
+        #canais h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        #canais ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #canais li {
+            padding: 8px 0;
+            cursor: pointer;
+        }
+        #canais li:hover {
+            background-color: rgba(255, 255, 255, 0.1);
         }
         #player {
             width: 60%;
@@ -25,17 +43,12 @@
             top: 0;
             right: 0;
         }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            padding: 5px 0;
-            cursor: pointer;
-        }
         #video-player {
             width: 100%;
             height: auto;
+        }
+        h2 {
+            font-size: 24px;
         }
     </style>
 </head>
