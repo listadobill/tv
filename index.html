@@ -14,15 +14,16 @@
             display: flex;
             background-color: #111;
             color: #fff;
+            flex-direction: column;
         }
         #canais {
-            width: 40%;
+            width: 100%;
             padding: 20px;
             overflow-y: auto;
-            font-size: 16px;
+            font-size: 20px;
         }
         #canais h2 {
-            font-size: 24px;
+            font-size: 28px;
             margin-bottom: 10px;
         }
         #canais ul {
@@ -34,21 +35,29 @@
             cursor: pointer;
         }
         #canais li:hover {
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 0, 0, 0.1);
         }
         #player {
-            width: 60%;
+            width: 100%;
             padding: 20px;
-            position: fixed;
-            top: 0;
-            right: 0;
         }
         #video-player {
             width: 100%;
             height: auto;
         }
         h2 {
-            font-size: 24px;
+            font-size: 28px;
+        }
+        @media only screen and (min-width: 600px) {
+            body {
+                flex-direction: row;
+            }
+            #canais {
+                width: 40%;
+            }
+            #player {
+                width: 60%;
+            }
         }
     </style>
 </head>
@@ -95,6 +104,12 @@
                                 });
                                 player.play();
                                 player.requestFullscreen(); // Coloca o player em tela cheia
+                                // Change color of selected channel
+                                const allChannels = document.querySelectorAll("#lista-canais li");
+                                allChannels.forEach(channel => {
+                                    channel.style.color = "#fff";
+                                });
+                                itemLista.style.color = "red";
                             } catch (error) {
                                 console.error("Erro ao reproduzir o canal:", error);
                             }
