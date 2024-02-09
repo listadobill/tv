@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Canais IPTV</title>
+    <link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet">
+    <script src="https://vjs.zencdn.net/7.14.3/video.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -37,8 +39,7 @@
     </div>
     <div id="player">
         <h2>Player</h2>
-        <video id="player-video" width="100%" controls></video>
-        <p id="player-error" style="color: red;"></p>
+        <video id="video-player" class="video-js vjs-default-skin" controls preload="auto" width="100%" height="auto"></video>
     </div>
 
     <script>
@@ -67,15 +68,12 @@
                         itemLista.textContent = nome;
                         itemLista.addEventListener("click", function() {
                             try {
-                                const video = document.getElementById("player-video");
-                                video.src = link;
-                                video.play().catch(function(error) {
-                                    document.getElementById("player-error").textContent = "Erro ao reproduzir o canal: " + error.message;
-                                    console.error("Erro ao reproduzir o canal:", error);
+                                videojs("video-player").src({
+                                    src: link,
+                                    type: 'application/x-mpegURL' // Assuming it's an HLS stream
                                 });
-                                document.getElementById("player-error").textContent = "";
+                                videojs("video-player").play();
                             } catch (error) {
-                                document.getElementById("player-error").textContent = "Não foi possível reproduzir o canal.";
                                 console.error("Erro ao reproduzir o canal:", error);
                             }
                         });
