@@ -63,7 +63,7 @@
 </head>
 <body>
     <div id="canais">
-        <h2>LISTA DE CANAIS - ALGUNS PODEM ESTAR FORA OU NÃO FUNCIONAR NO SEU NAVEGADOR</h2>
+        <h2>LISTA DE CANAIS - ALGUNS PODEM ESTAR FORA OU NÃO FUNCIONAR NO SEU NAVEGADOR 2 </h2>
         <ul id="lista-canais"></ul>
     </div>
     <div id="player">
@@ -123,6 +123,16 @@
                                 // Limpa o intervalo quando o canal é trocado
                                 player.on("dispose", () => {
                                     clearInterval(checkInterval);
+                                });
+
+                                // Quando o vídeo termina, reconecta e reproduz novamente
+                                player.on("ended", () => {
+                                    console.log("Vídeo terminado. Reconectando e reproduzindo...");
+                                    player.src({
+                                        src: link,
+                                        type: 'application/x-mpegURL'
+                                    });
+                                    player.play();
                                 });
                             } catch (error) {
                                 console.error("Erro ao reproduzir o canal:", error);
