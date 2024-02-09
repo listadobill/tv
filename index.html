@@ -21,6 +21,9 @@
         #player {
             width: 60%;
             padding: 20px;
+            position: fixed;
+            top: 0;
+            right: 0;
         }
         ul {
             list-style-type: none;
@@ -78,6 +81,7 @@
                                     type: 'application/x-mpegURL' // Assuming it's an HLS stream
                                 });
                                 player.play();
+                                player.requestFullscreen(); // Coloca o player em tela cheia
                             } catch (error) {
                                 console.error("Erro ao reproduzir o canal:", error);
                             }
