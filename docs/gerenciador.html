@@ -3,45 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gere4nciador de Listas IPTV</title>
+    <title>Gerenciador de Listas IPTV</title>
 </head>
 <body>
     <h1>Gerenciador de Listas IPTV</h1>
-    <button onclick="gerarArquivoM3U()">Gerar Arquivo M3U</button>
+    <button onclick="mostrarConteudoM3U()">Exibir Conteúdo M3U</button>
+    <div id="conteudoM3U"></div>
 
     <script>
-        function gerarArquivoM3U() {
+        function mostrarConteudoM3U() {
             var urls = [
                 "https://iptv-org.github.io/iptv/countries/br.m3u",
                 "https://iptv-org.github.io/iptv/subdivisions/br-sc.m3u",
-                "https://raw.githubusercontent.com/listadobill/tv/main/plutotv.m3u",
-                "https://raw.githubusercontent.com/listadobill/tv/main/canaisabertosefechados-1.m3u",
-                "https://raw.githubusercontent.com/listadobill/tv/main/ts.m3u",
-                "https://raw.githubusercontent.com/listadobill/tv/main/tsm3u8.m3u8"
+                "https://i.mjh.nz/PlutoTV/br.m3u8",
+                "http://smart.maxones.xyz/get.php?username=Q76FEUJDV4&password=P@@QvJAASJP&type=m3u_plus",
+                "http://tinyurl.com/NovaFORMIGAtv",
+                "http://painelcode.me/c91jw4a5"
             ];
 
-            var m3uContent = "#EXTM3U\n\n";
+            var m3uContent = "<h2>Conteúdo M3U</h2><pre>#EXTM3U\n\n";
 
             function getChannels(url) {
                 var xhr = new XMLHttpRequest();
-                xhr.open("GET", url, false);
+                xhr.open("GET", url, true); // Definido como assíncrono
                 xhr.onreadystatechange = function () {
                     if (xhr.readyState === 4 && xhr.status === 200) {
                         m3uContent += xhr.responseText + "\n\n";
+                        if (todasAsRespostasRecebidas()) {
+                            exibirConteudoM3U();
+                        }
                     }
                 };
                 xhr.send();
             }
 
+            var respostasRecebidas = 0;
+
+            function todasAsRespostasRecebidas() {
+                respostasRecebidas++;
+                return respostasRecebidas === urls.length;
+            }
+
+            function exibirConteudoM3U() {
+                m3uContent += "</pre>";
+                document.getElementById("conteudoM3U").innerHTML = m3uContent;
+            }
+
             for (var i = 0; i < urls.length; i++) {
                 getChannels(urls[i]);
             }
-
-            var blob = new Blob([m3uContent], { type: 'text/plain' });
-            var link = document.createElement('a');
-            link.href = window.URL.createObjectURL(blob);
-            link.download = 'todos_os_canais.m3u';
-            link.click();
         }
     </script>
 </body>
