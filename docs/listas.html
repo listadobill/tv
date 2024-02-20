@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download de Listas IPTV</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 5px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition-duration: 0.4s;
+            overflow: hidden;
+            outline: none;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Download de Listas IPTV</h1>
+
+    <button class="button" onclick="baixarLista('Canais Brasileiros', 'https://iptv-org.github.io/iptv/countries/br.m3u')">Baixar Canais Brasileiros</button>
+    <br>
+    <button class="button" onclick="baixarLista('Canais Catarinenses', 'https://iptv-org.github.io/iptv/subdivisions/br-sc.m3u')">Baixar Canais Catarinenses</button>
+    <br>
+    <button class="button" onclick="baixarLista('Pluto TV', 'https://i.mjh.nz/PlutoTV/br.m3u8')">Baixar Pluto TV</button>
+    <br>
+    <button class="button" onclick="baixarLista('CANAIS IPTV 1', 'http://168.119.150.178/~appsproe/ListasSeparadasWorld/World-Octubre-BRAZIL-.m3u')">Baixar CANAIS IPTV 1</button>
+    <br>
+    <button class="button" onclick="baixarLista('CANAIS IPTV 2', 'http://smart.maxones.xyz/get.php?username=Q76FEUJDV4&password=P@@QvJAASJP&type=m3u_plus')">Baixar CANAIS IPTV 2</button>
+    <br>
+    <button class="button" onclick="baixarLista('MEGACUBO 1', 'http://tinyurl.com/NovaFORMIGAtv')">Baixar MEGACUBO 1</button>
+    <br>
+    <button class="button" onclick="baixarLista('MEGACUBO 2', 'http://painelcode.me/c91jw4a5')">Baixar MEGACUBO 2</button>
+
+    <script>
+        function baixarLista(nomeLista, url) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", url, true);
+            xhr.responseType = "blob"; // Define o tipo de resposta como blob
+
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    var blob = new Blob([xhr.response], { type: 'text/plain' });
+                    var link = document.createElement('a');
+                    link.href = window.URL.createObjectURL(blob);
+                    link.download = nomeLista + '.m3u';
+                    link.click();
+                }
+            };
+
+            xhr.send();
+        }
+    </script>
+</body>
+</html>
