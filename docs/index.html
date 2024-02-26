@@ -6,31 +6,34 @@
     <title>TV DO BILL</title>
     <style>
         body {
-            background-color: #222;
+            background-color: #000; /* Fundo preto */
             color: #fff;
             font-family: Arial, sans-serif;
             text-align: center;
             padding-top: 50px;
         }
+        h1 {
+            text-transform: uppercase; /* Transforma o texto do título em maiúsculas */
+        }
         .button-container {
-            display: flex;
+            display: grid; /* Alinha os botões em uma grade */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Tamanho mínimo e máximo dos botões */
+            gap: 20px; /* Espaçamento entre os botões */
             justify-content: center;
             align-items: center;
-            flex-direction: column;
             margin-top: 20px;
         }
         .button {
             display: inline-block;
-            padding: 15px 40px;
+            padding: 20px 40px; /* Aumenta o espaço interno dos botões */
             margin: 10px;
-            font-size: 18px;
+            font-size: 20px; /* Aumenta o tamanho da fonte dos botões */
             text-decoration: none;
             color: #fff;
             background-color: #444;
             border: 2px solid #fff;
             border-radius: 10px;
-            width: 300px; /* largura padrão */
-            height: 60px; /* altura padrão */
+            width: 100%; /* Largura total dos botões */
             line-height: 60px;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -42,15 +45,47 @@
     </style>
 </head>
 <body>
+    <h1>TV DO BILL</h1> <!-- Título adicionado -->
     <div class="button-container">
-        <a href="https://listadobill.github.io/tv/brasileiros-orgbr" class="button">Canais Brasileiros</a>
-        <a href="https://listadobill.github.io/tv/sc-orgbr" class="button">Canais Catarinenses</a>
-        <a href="https://listadobill.github.io/tv/plutotv" class="button">Pluto TV</a>
+        <a href="https://listadobill.github.io/tv/brasileiros-orgbr" class="button">CANAIS BRASILEIROS</a>
+        <a href="https://listadobill.github.io/tv/sc-orgbr" class="button">CANAIS CATARINENSES</a>
+        <a href="https://listadobill.github.io/tv/plutotv" class="button">PLUTO TV</a>
         <a href="https://www.cxtv.com.br/tv/paises/tvs-brasil" class="button">CXTV ONLINE</a>
         <a href="https://listadobill.github.io/tv/tvonline" class="button">TV ONLINE</a>
         <a href="https://listadobill.github.io/tv/iptv" class="button">CANAIS IPTV</a>
         <a href="https://listadobill.github.io/tv/listas" class="button">BAIXAR LISTAS INDIVIDUALMENTE</a>
-        
+    </div>
+
+    <!-- Script para mostrar data, hora e número de visitantes em tempo real -->
+    <script>
+        function updateDateTime() {
+            var now = new Date();
+            var date = now.toLocaleDateString('pt-BR');
+            var time = now.toLocaleTimeString('pt-BR');
+            document.getElementById('datetime').textContent = date + ' ' + time;
+        }
+
+        function updateVisitors() {
+            // Simulando o número de visitantes com um número aleatório entre 1 e 1000
+            var visitors = Math.floor(Math.random() * 1000) + 1;
+            document.getElementById('visitors').textContent = 'Número de visitantes: ' + visitors;
+        }
+
+        // Atualiza a data, hora e número de visitantes a cada segundo
+        setInterval(function() {
+            updateDateTime();
+            updateVisitors();
+        }, 1000);
+
+        // Chama as funções para mostrar os dados pela primeira vez
+        updateDateTime();
+        updateVisitors();
+    </script>
+    
+    <!-- Elementos para mostrar data, hora e número de visitantes -->
+    <div>
+        <p id="datetime"></p>
+        <p id="visitors"></p>
     </div>
 </body>
 </html>
