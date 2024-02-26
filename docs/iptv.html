@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IPTV 1</title>
+    <title>TV DO BILL - A TV GRATIS</title>
     <link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet">
     <script src="https://vjs.zencdn.net/7.14.3/video.js"></script>
     <style>
@@ -63,18 +63,19 @@
 </head>
 <body>
     <div id="canais">
-        <h2>IPTV 1</h2>
+        <h2>LISTA DE CANAIS - ALGUNS PODEM ESTAR FORA OU NÃO FUNCIONAR NO SEU NAVEGADOR</h2>
         <ul id="lista-canais"></ul>
     </div>
     <div id="player">
-        <h2>Se não Funcionar no seu navegador adicione a lista no KODI, VLC ou outro app IPTV: https://bit.ly/listadobill</h2>
+        <h2>Se não funcionar no seu navegador adicione a lista no SS-IPTV (http://app.ss-iptv.com/), KODI, VLC ou outro app IPTV: https://bit.ly/listadobill</h2>
         <video id="video-player" class="video-js vjs-default-skin" controls preload="auto"></video>
     </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const listas = [
-                { nome: "IPTV 1", url: "    " },
+                { nome: "IPTV", url: "https://raw.githubusercontent.com/listadobill/tv/main/reserva.m3u" },          
+               
             ];
 
             const listaCanaisElemento = document.getElementById("lista-canais");
@@ -151,4 +152,3 @@
     </script>
 </body>
 </html>
-
