@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CANAIS BRASILEIROS</title>
+    <title>TV DO BILL - A TV GRATIS</title>
+    <link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet">
+    <script src="https://vjs.zencdn.net/7.14.3/video.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -61,18 +63,19 @@
 </head>
 <body>
     <div id="canais">
-        <h2>Canais Brasileiros</h2>
+        <h2>LISTA DE CANAIS - ALGUNS PODEM ESTAR FORA OU NÃO FUNCIONAR NO SEU NAVEGADOR</h2>
         <ul id="lista-canais"></ul>
     </div>
     <div id="player">
-        <h2>Se não Funcionar no seu navegador adicione a lista no KODI, VLC ou outro app IPTV: https://bit.ly/listadobill</h2>
-        <video id="video-player" class="clarpp-player" controls preload="auto"></video>
+        <h2>Se não funcionar no seu navegador adicione a lista no SS-IPTV (http://app.ss-iptv.com/), KODI, VLC ou outro app IPTV: https://bit.ly/listadobill</h2>
+        <video id="video-player" class="video-js vjs-default-skin" controls preload="auto"></video>
     </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const listas = [
-                { nome: "CANAIS BRASILEIROS", url: "https://iptv-org.github.io/iptv/countries/br.m3u" },
+                { nome: "IPTV", url: "https://raw.githubusercontent.com/listadobill/tv/main/reserva.m3u" },          
+               
             ];
 
             const listaCanaisElemento = document.getElementById("lista-canais");
@@ -83,6 +86,7 @@
                 .then(data => {
                     const linhas = data.split('\n');
                     const canais = linhas.filter(linha => linha.startsWith('#EXTINF'));
+                    canais.sort(); // Ordena os canais em ordem alfabética
                     canais.forEach((canal) => {
                         const nome = canal.split(',')[1];
                         const link = linhas[linhas.indexOf(canal) + 1];
@@ -90,8 +94,11 @@
                         itemLista.textContent = nome;
                         itemLista.addEventListener("click", function() {
                             try {
-                                const player = document.getElementById("video-player");
-                                player.src = link;
+                                const player = videojs("video-player");
+                                player.src({
+                                    src: link,
+                                    type: 'application/x-mpegURL' // Assuming it's an HLS stream
+                                });
                                 player.play();
                                 player.requestFullscreen(); // Coloca o player em tela cheia
                                 // Change color of selected channel
@@ -103,7 +110,7 @@
 
                                 // Verifica periodicamente se o vídeo está sendo reproduzido
                                 const checkInterval = setInterval(() => {
-                                    if (player.paused) {
+                                    if (player.paused()) {
                                         console.log("Vídeo interrompido. Tentando reconectar...");
                                         player.load(); // Recarrega o vídeo
                                         player.play(); // Continua a reprodução
@@ -111,22 +118,26 @@
                                 }, 5000); // Verifica a cada 5 segundos
 
                                 // Limpa o intervalo quando o canal é trocado
-                                player.onended = () => {
+                                player.on("dispose", () => {
                                     clearInterval(checkInterval);
-                                };
+                                });
 
                                 // Verifica se o vídeo está no final e reconecta automaticamente
-                                player.ontimeupdate = () => {
-                                    const currentTime = player.currentTime;
-                                    const duration = player.duration;
+                                player.on("timeupdate", () => {
+                                    const video = document.getElementById("video-player");
+                                    const currentTime = video.currentTime;
+                                    const duration = video.duration;
                                     const buffer = 5; // margem de buffer em segundos
 
                                     if (duration - currentTime < buffer) {
                                         console.log("Vídeo no final. Reconectando...");
-                                        player.src = link;
+                                        player.src({
+                                            src: link,
+                                            type: 'application/x-mpegURL'
+                                        });
                                         player.play();
                                     }
-                                };
+                                });
                             } catch (error) {
                                 console.error("Erro ao reproduzir o canal:", error);
                             }
