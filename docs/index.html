@@ -30,10 +30,14 @@
             margin: 5px 0;
             cursor: pointer;
             color: #ffffff;
-            transition: background-color 0.3s, color 0.3s;
+            transition: background-color 0.3s;
         }
         #channel-list li:hover {
             background-color: #f44336; /* Vermelho ao passar o mouse */
+            color: #ffffff;
+        }
+        #channel-list li:active {
+            background-color: #e57373; /* Vermelho claro ao clicar */
             color: #ffffff;
         }
         #video {
@@ -59,17 +63,22 @@
     <script>
         // Função para carregar e exibir a lista de canais
         async function loadChannels() {
-            const response = await fetch('https://iptv-org.github.io/iptv/languages/por.m3u');
-            const m3uText = await response.text();
-            const channelList = document.getElementById('channel-list');
-            const channels = parseM3U(m3uText);
+            try {
+                const response = await fetch('https://iptv-org.github.io/iptv/languages/por.m3u');
+                const m3uText = await response.text();
+                const channelList = document.getElementById('channel-list');
+                const channels = parseM3U(m3uText);
 
-            channels.forEach(channel => {
-                const listItem = document.createElement('li');
-                listItem.textContent = channel.name;
-                listItem.addEventListener('click', () => playChannel(channel.url));
-                channelList.appendChild(listItem);
-            });
+                channels.forEach(channel => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = channel.name;
+                    listItem.addEventListener('click', () => playChannel(channel.url));
+                    channelList.appendChild(listItem);
+                });
+            } catch (error) {
+                console.error('Erro ao carregar canais:', error);
+                document.getElementById('channel-list').innerHTML = '<li>Erro ao carregar canais.</li>';
+            }
         }
 
         // Função para analisar o arquivo M3U e retornar uma lista de canais
