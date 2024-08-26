@@ -1,125 +1,155 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IPTV Player</title>
+    <title>TV DO BILL - A TV GRATIS</title>
+    <link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet">
+    <script src="https://vjs.zencdn.net/7.14.3/video.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
-            height: 100vh;
-            overflow: hidden;
-            background-color: #1c1c1c;
-            color: #e0e0e0;
+            background-color: #111;
+            color: #fff;
+            flex-direction: column;
         }
-        #channel-list {
-            list-style-type: none;
-            padding: 20px;
-            margin: 0;
-            width: 30%;
-            background-color: #2b2b2b;
-            overflow-y: auto;
-            border-right: 1px solid #444;
-        }
-        #channel-list li {
-            padding: 10px;
-            background-color: #000000; /* Preto */
-            margin: 5px 0;
-            cursor: pointer;
-            color: #ffffff;
-            transition: background-color 0.3s;
-        }
-        #channel-list li:hover {
-            background-color: #f44336; /* Vermelho ao passar o mouse */
-            color: #ffffff;
-        }
-        #channel-list li:active {
-            background-color: #e57373; /* Vermelho claro ao clicar */
-            color: #ffffff;
-        }
-        #video {
-            width: 70%;
-            background-color: #000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        video {
+        #canais {
             width: 100%;
-            height: 100%;
+            padding: 20px;
+            overflow-y: auto;
+            font-size: 20px;
+        }
+        #canais h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        #canais ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #canais li {
+            padding: 8px 0;
+            cursor: pointer;
+        }
+        #canais li:hover {
+            background-color: rgba(255, 0, 0, 0.1);
+        }
+        #player {
+            width: 100%;
+            padding: 20px;
+        }
+        #video-player {
+            width: 100%;
+            height: auto;
+        }
+        h2 {
+            font-size: 28px;
+        }
+        @media only screen and (min-width: 600px) {
+            body {
+                flex-direction: row;
+            }
+            #canais {
+                width: 40%;
+            }
+            #player {
+                width: 60%;
+            }
         }
     </style>
 </head>
 <body>
-
-    <ul id="channel-list"></ul>
-    <div id="video">
-        <video id="video-player" controls></video>
+    <div id="canais">
+        <h2>LISTA DE CANAIS - ALGUNS PODEM ESTAR FORA OU NÃO FUNCIONAR NO SEU NAVEGADOR</h2>
+        <ul id="lista-canais"></ul>
+    </div>
+    <div id="player">
+        <h2>Se não funcionar no seu navegador adicione a lista no SS-IPTV (http://app.ss-iptv.com/), KODI, VLC ou outro app IPTV: https://bit.ly/listadobill</h2>
+        <video id="video-player" class="video-js vjs-default-skin" controls preload="auto"></video>
     </div>
 
     <script>
-        // Função para carregar e exibir a lista de canais
-        async function loadChannels() {
-            try {
-                const response = await fetch('https://iptv-org.github.io/iptv/languages/por.m3u');
-                const m3uText = await response.text();
-                const channelList = document.getElementById('channel-list');
-                const channels = parseM3U(m3uText);
+        document.addEventListener("DOMContentLoaded", function() {
+            const listas = [
+                { nome: "IPTV", url: "https://iptv-org.github.io/iptv/languages/por.m3u" },          
+               
+            ];
 
-                channels.forEach(channel => {
-                    const listItem = document.createElement('li');
-                    listItem.textContent = channel.name;
-                    listItem.addEventListener('click', () => playChannel(channel.url));
-                    channelList.appendChild(listItem);
+            const listaCanaisElemento = document.getElementById("lista-canais");
+
+            listas.forEach((lista) => {
+                fetch(lista.url)
+                .then(response => response.text())
+                .then(data => {
+                    const linhas = data.split('\n');
+                    const canais = linhas.filter(linha => linha.startsWith('#EXTINF'));
+                    canais.sort(); // Ordena os canais em ordem alfabética
+                    canais.forEach((canal) => {
+                        const nome = canal.split(',')[1];
+                        const link = linhas[linhas.indexOf(canal) + 1];
+                        const itemLista = document.createElement("li");
+                        itemLista.textContent = nome;
+                        itemLista.addEventListener("click", function() {
+                            try {
+                                const player = videojs("video-player");
+                                player.src({
+                                    src: link,
+                                    type: 'application/x-mpegURL' // Assuming it's an HLS stream
+                                });
+                                player.play();
+                                player.requestFullscreen(); // Coloca o player em tela cheia
+                                // Change color of selected channel
+                                const allChannels = document.querySelectorAll("#lista-canais li");
+                                allChannels.forEach(channel => {
+                                    channel.style.color = "#fff";
+                                });
+                                itemLista.style.color = "red";
+
+                                // Verifica periodicamente se o vídeo está sendo reproduzido
+                                const checkInterval = setInterval(() => {
+                                    if (player.paused()) {
+                                        console.log("Vídeo interrompido. Tentando reconectar...");
+                                        player.load(); // Recarrega o vídeo
+                                        player.play(); // Continua a reprodução
+                                    }
+                                }, 5000); // Verifica a cada 5 segundos
+
+                                // Limpa o intervalo quando o canal é trocado
+                                player.on("dispose", () => {
+                                    clearInterval(checkInterval);
+                                });
+
+                                // Verifica se o vídeo está no final e reconecta automaticamente
+                                player.on("timeupdate", () => {
+                                    const video = document.getElementById("video-player");
+                                    const currentTime = video.currentTime;
+                                    const duration = video.duration;
+                                    const buffer = 5; // margem de buffer em segundos
+
+                                    if (duration - currentTime < buffer) {
+                                        console.log("Vídeo no final. Reconectando...");
+                                        player.src({
+                                            src: link,
+                                            type: 'application/x-mpegURL'
+                                        });
+                                        player.play();
+                                    }
+                                });
+                            } catch (error) {
+                                console.error("Erro ao reproduzir o canal:", error);
+                            }
+                        });
+                        listaCanaisElemento.appendChild(itemLista);
+                    });
+                })
+                .catch(error => {
+                    console.error("Erro ao carregar a lista de canais:", error);
                 });
-            } catch (error) {
-                console.error('Erro ao carregar canais:', error);
-                document.getElementById('channel-list').innerHTML = '<li>Erro ao carregar canais.</li>';
-            }
-        }
-
-        // Função para analisar o arquivo M3U e retornar uma lista de canais
-        function parseM3U(m3uText) {
-            const lines = m3uText.split('\n');
-            const channels = [];
-            let currentChannel = {};
-
-            lines.forEach(line => {
-                line = line.trim();
-                if (line.startsWith('#EXTINF:')) {
-                    const name = line.split(',')[1];
-                    currentChannel = { name: name };
-                } else if (line && !line.startsWith('#')) {
-                    currentChannel.url = line;
-                    channels.push(currentChannel);
-                    currentChannel = {};
-                }
             });
-
-            return channels;
-        }
-
-        // Função para reproduzir um canal usando a tag <video>
-        function playChannel(url) {
-            const videoElement = document.getElementById('video-player');
-            videoElement.src = url;
-            videoElement.play();
-            if (videoElement.requestFullscreen) {
-                videoElement.requestFullscreen();
-            } else if (videoElement.mozRequestFullScreen) { // Firefox
-                videoElement.mozRequestFullScreen();
-            } else if (videoElement.webkitRequestFullscreen) { // Chrome, Safari, and Opera
-                videoElement.webkitRequestFullscreen();
-            } else if (videoElement.msRequestFullscreen) { // IE/Edge
-                videoElement.msRequestFullscreen();
-            }
-        }
-
-        // Carrega a lista de canais ao carregar a página
-        window.onload = loadChannels;
+        });
     </script>
 </body>
 </html>
