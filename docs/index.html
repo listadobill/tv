@@ -26,14 +26,14 @@
         }
         #channel-list li {
             padding: 10px;
-            background-color: #000000;
+            background-color: #000000; /* Preto */
             margin: 5px 0;
             cursor: pointer;
             color: #ffffff;
             transition: background-color 0.3s, color 0.3s;
         }
         #channel-list li:hover {
-            background-color: #f44336;
+            background-color: #f44336; /* Vermelho ao passar o mouse */
             color: #ffffff;
         }
         #video {
@@ -52,10 +52,9 @@
 <body>
 
     <ul id="channel-list"></ul>
-    <div id="video"></div>
-
-    <!-- Adicionando o Clappr -->
-    <script src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
+    <div id="video">
+        <video id="video-player" controls></video>
+    </div>
 
     <script>
         // Função para carregar e exibir a lista de canais
@@ -94,32 +93,20 @@
             return channels;
         }
 
-        // Função para reproduzir um canal usando o Clappr e entrar em tela cheia
+        // Função para reproduzir um canal usando a tag <video>
         function playChannel(url) {
-            const playerElement = document.getElementById('video');
-            playerElement.innerHTML = ''; // Limpa o player anterior
-
-            const player = new Clappr.Player({
-                parentId: "#video",
-                source: url,
-                autoPlay: true,
-                width: '100%',
-                height: '100%',
-            });
-
-            // Entrar em tela cheia automaticamente ao clicar
-            player.on(Clappr.Events.PLAYER_PLAY, () => {
-                const videoElement = player.core.el.querySelector('video');
-                if (videoElement.requestFullscreen) {
-                    videoElement.requestFullscreen();
-                } else if (videoElement.mozRequestFullScreen) { // Firefox
-                    videoElement.mozRequestFullScreen();
-                } else if (videoElement.webkitRequestFullscreen) { // Chrome, Safari, and Opera
-                    videoElement.webkitRequestFullscreen();
-                } else if (videoElement.msRequestFullscreen) { // IE/Edge
-                    videoElement.msRequestFullscreen();
-                }
-            });
+            const videoElement = document.getElementById('video-player');
+            videoElement.src = url;
+            videoElement.play();
+            if (videoElement.requestFullscreen) {
+                videoElement.requestFullscreen();
+            } else if (videoElement.mozRequestFullScreen) { // Firefox
+                videoElement.mozRequestFullScreen();
+            } else if (videoElement.webkitRequestFullscreen) { // Chrome, Safari, and Opera
+                videoElement.webkitRequestFullscreen();
+            } else if (videoElement.msRequestFullscreen) { // IE/Edge
+                videoElement.msRequestFullscreen();
+            }
         }
 
         // Carrega a lista de canais ao carregar a página
