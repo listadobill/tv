@@ -3,95 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TV DO BILL</title>
+    <title>IPTV Player</title>
     <style>
         body {
-            background-color: #000; /* Fundo preto */
-            color: #fff;
             font-family: Arial, sans-serif;
-            text-align: center;
-            padding-top: 50px;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #1c1c1c;
+            color: #e0e0e0;
         }
-        h1 {
-            text-transform: uppercase; /* Transforma o texto do título em maiúsculas */
+        #channel-list {
+            list-style-type: none;
+            padding: 20px;
+            margin: 0;
+            width: 30%;
+            background-color: #2b2b2b;
+            overflow-y: auto;
+            border-right: 1px solid #444;
         }
-        .button-container {
-            display: grid; /* Alinha os botões em uma grade */
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Tamanho mínimo e máximo dos botões */
-            gap: 20px; /* Espaçamento entre os botões */
+        #channel-list li {
+            padding: 10px;
+            background-color: #000000; /* Preto */
+            margin: 5px 0;
+            cursor: pointer;
+            color: #ffffff;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+        }
+        #channel-list li:hover {
+            background-color: #f44336; /* Vermelho ao passar o mouse */
+            color: #ffffff;
+            transform: scale(1.05);
+        }
+        #channel-list li:active {
+            background-color: #e57373; /* Vermelho claro ao clicar */
+            color: #ffffff;
+            transform: scale(0.95);
+        }
+        #video {
+            width: 70%;
+            background-color: #000;
+            display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 20px;
         }
-        .button {
-            display: inline-block;
-            padding: 20px 40px; /* Aumenta o espaço interno dos botões */
-            margin: 10px;
-            font-size: 20px; /* Aumenta o tamanho da fonte dos botões */
-            text-decoration: none;
-            color: #fff;
-            background-color: #444;
-            border: 2px solid #fff;
-            border-radius: 10px;
-            width: 100%; /* Largura total dos botões */
-            line-height: 60px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .button:hover {
-            background-color: #666;
-            border-color: #fff;
+        video {
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
 <body>
-    <h1>TV DO BILL</h1> <!-- Título adicionado -->
-    <div class="button-container">
-        <a href="https://listadobill.github.io/tv/brasileiros-orgbr" class="button">CANAIS BRASILEIROS</a>
-        <a href="https://listadobill.github.io/tv/orgpt" class="button">CANAIS PORTUGUESES</a>
-        <a href="https://listadobill.github.io/tv/sc-orgbr" class="button">CANAIS CATARINENSES</a>
-        <a href="https://listadobill.github.io/tv/iptv" class="button">CANAIS IPTV</a>
-        <a href="https://www.cxtv.com.br/tv/paises/tvs-brasil" class="button">CXTV ONLINE</a>
-        <a href="https://embedder.net/lib/movies" class="button">FILMES ONLINE</a>
-        <a href="https://libreflix.org/" class="button">LIBREFLIX</a>
-        <a href="https://pobreflix1.art/" class="button">POBREFLIX</a>
-        <a href="https://listadobill.github.io/tv/plutotv" class="button">PLUTO TV</a>
-        <a href="https://embedder.net/lib/shows" class="button">SÉRIES ONLINE</a>
-        <a href="https://listadobill.github.io/tv/tvonline" class="button">TV ONLINE</a>
-        <a href="http://app.ss-iptv.com/" class="button">APP SSIPTV - Por a Lista "https://bit.ly/listadobill"</a>
-        <a href="https://listadobill.github.io/tv/listas" class="button">BAIXAR LISTAS INDIVIDUALMENTE</a>
-    </div>
 
-    <!-- Script para mostrar data, hora e número de visitantes em tempo real -->
+    <ul id="channel-list"></ul>
+    <div id="video"></div>
+
+    <!-- Adicionando o Clappr -->
+    <script src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
+
     <script>
-        function updateDateTime() {
-            var now = new Date();
-            var date = now.toLocaleDateString('pt-BR');
-            var time = now.toLocaleTimeString('pt-BR');
-            document.getElementById('datetime').textContent = date + ' ' + time;
+        // Função para carregar e exibir a lista de canais
+        async function loadChannels() {
+            const response = await fetch('https://iptv-org.github.io/iptv/languages/por.m3u');
+            const m3uText = await response.text();
+            const channelList = document.getElementById('channel-list');
+            const channels = parseM3U(m3uText);
+
+            channels.forEach(channel => {
+                const listItem = document.createElement('li');
+                listItem.textContent = channel.name;
+                listItem.addEventListener('click', () => playChannel(channel.url));
+                channelList.appendChild(listItem);
+            });
         }
 
-        function updateVisitors() {
-            // Simulando o número de visitantes com um número aleatório entre 1 e 1000
-            var visitors = Math.floor(Math.random() * 1000) + 1;
-            document.getElementById('visitors').textContent = 'Número de visitantes: ' + visitors;
+        // Função para analisar o arquivo M3U e retornar uma lista de canais
+        function parseM3U(m3uText) {
+            const lines = m3uText.split('\n');
+            const channels = [];
+            let currentChannel = {};
+
+            lines.forEach(line => {
+                line = line.trim();
+                if (line.startsWith('#EXTINF:')) {
+                    const name = line.split(',')[1];
+                    currentChannel = { name: name };
+                } else if (line && !line.startsWith('#')) {
+                    currentChannel.url = line;
+                    channels.push(currentChannel);
+                    currentChannel = {};
+                }
+            });
+
+            return channels;
         }
 
-        // Atualiza a data, hora e número de visitantes a cada segundo
-        setInterval(function() {
-            updateDateTime();
-            updateVisitors();
-        }, 1000);
+        // Função para reproduzir um canal usando o Clappr e entrar em tela cheia
+        function playChannel(url) {
+            const playerElement = document.getElementById('video');
+            playerElement.innerHTML = ''; // Limpa o player anterior
 
-        // Chama as funções para mostrar os dados pela primeira vez
-        updateDateTime();
-        updateVisitors();
+            const player = new Clappr.Player({
+                parentId: "#video",
+                source: url,
+                autoPlay: true,
+                width: '100%',
+                height: '100%',
+                mute: false,
+            });
+
+            // Entrar em tela cheia automaticamente ao clicar
+            player.on(Clappr.Events.PLAYER_PLAY, () => {
+                const videoElement = player.core.el.querySelector('video');
+                if (videoElement.requestFullscreen) {
+                    videoElement.requestFullscreen();
+                } else if (videoElement.mozRequestFullScreen) { // Firefox
+                    videoElement.mozRequestFullScreen();
+                } else if (videoElement.webkitRequestFullscreen) { // Chrome, Safari, and Opera
+                    videoElement.webkitRequestFullscreen();
+                } else if (videoElement.msRequestFullscreen) { // IE/Edge
+                    videoElement.msRequestFullscreen();
+                }
+            });
+        }
+
+        // Carrega a lista de canais ao carregar a página
+        window.onload = loadChannels;
     </script>
-    
-    <!-- Elementos para mostrar data, hora e número de visitantes -->
-    <div>
-        <p id="datetime"></p>
-        <p id="visitors"></p>
-    </div>
 </body>
 </html>
