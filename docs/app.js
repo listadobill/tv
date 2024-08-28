@@ -1,10 +1,15 @@
 document.getElementById('add-channel-form').addEventListener('submit', async function(event) {
     event.preventDefault();
 
-    const channelTitle = document.getElementById('channel-title').value;
-    const m3u8Link = document.getElementById('m3u8-link').value;
+    const channelTitle = document.getElementById('channel-title').value.trim();
+    const m3u8Link = document.getElementById('m3u8-link').value.trim();
 
-    const githubToken = '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'; // Substitua pelo seu novo token de acesso pessoal
+    if (!channelTitle || !m3u8Link) {
+        document.getElementById('response').innerText = 'Por favor, preencha todos os campos.';
+        return;
+    }
+
+    const githubToken = 'SEU_NOVO_TOKEN_DE_ACESSO_PESSOAL'; // Substitua pelo seu novo token de acesso pessoal
     const repoOwner = 'listadobill';
     const repoName = 'tv';
     const filePath = 'canaisdosusuarios.m3u'; // Arquivo específico para adicionar os canais
