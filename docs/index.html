@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV DO BILL</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 90%;
+            max-width: 800px;
+            text-align: center;
+        }
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: #1e1e1e;
+            border: 2px solid #333;
+            border-radius: 8px;
+            padding: 15px;
+            transition: transform 0.2s, background-color 0.2s;
+            cursor: pointer;
+            text-decoration: none;
+            color: #ffffff;
+        }
+        .button:hover {
+            transform: scale(1.05);
+            background-color: #333;
+        }
+        .icon {
+            width: 60px;
+            height: 60px;
+            margin-right: 20px;
+            border-radius: 8px;
+        }
+        .text {
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: left;
+        }
+        @media screen and (max-width: 768px) {
+            .button {
+                flex-direction: column;
+                align-items: center;
+            }
+            .icon {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            .text {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="https://listadobill.github.io/tv/canaisabertosdelinguaportuguesa" class="button">
+            <img src="https://lisbonlanguagecafe.pt/wp-content/uploads/2019/07/portugal-brasil.jpg" alt="Canais Abertos" class="icon">
+            <span class="text">CANAIS DO BRASIL E OUTROS PAÍSES DE LÍNGUA PORTUGUESA ABERTOS</span>
+        </a>
+        <a href="https://listadobill.github.io/tv/iptv" class="button">
+            <img src="https://setplex.com/blog/wp-content/uploads/2017/08/iptv-business.jpg" alt="Lista IPTV" class="icon">
+            <span class="text">LISTA DE CANAIS IPTV</span>
+        </a>
+        <a href="https://listadobill.github.io/tv/tvonline" class="button">
+            <img src="https://stcotvfoco.com.br/2016/05/emissoras-brasileiras.jpg" alt="Canais Online" class="icon">
+            <span class="text">CANAIS ONLINE</span>
+        </a>
+    </div>
+</body>
+</html>
+
