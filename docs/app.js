@@ -4,25 +4,33 @@ document.getElementById('add-channel-form').addEventListener('submit', async fun
     const channelTitle = document.getElementById('channel-title').value;
     const m3u8Link = document.getElementById('m3u8-link').value;
 
-    const githubToken = 'SEU_GITHUB_TOKEN'; // Substitua pelo seu token de acesso pessoal
+    const githubToken = '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'; // Substitua pelo seu novo token de acesso pessoal
     const repoOwner = 'listadobill';
     const repoName = 'tv';
-    const filePath = 'caminho/para/seu/arquivo.m3u'; // Substitua pelo caminho exato do arquivo .m3u no seu repositório
+    const filePath = 'canaisdosusuarios.m3u'; // Arquivo específico para adicionar os canais
     const branch = 'main';
 
     try {
-        // Pegar o conteúdo atual do arquivo .m3u
+        // Pegar o conteúdo atual do arquivo canaisdosusuarios.m3u
         const getFileResponse = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}?ref=${branch}`, {
             headers: {
                 'Authorization': `token ${githubToken}`,
                 'Accept': 'application/vnd.github.v3+json'
             }
         });
+
+        if (!getFileResponse.ok) {
+            throw new Error('Erro ao acessar o arquivo do GitHub');
+        }
+
         const fileData = await getFileResponse.json();
-        const content = atob(fileData.content);
+        const content = atob(fileData.content); // Decodifica o conteúdo de base64 para texto
 
         // Adicionar o novo canal ao conteúdo
         const updatedContent = `${content}\n#EXTINF:-1, ${channelTitle}\n${m3u8Link}\n`;
+
+        // Re-codifica o conteúdo atualizado para base64
+        const encodedContent = btoa(unescape(encodeURIComponent(updatedContent)));
 
         // Enviar o conteúdo atualizado de volta ao GitHub
         const updateResponse = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`, {
@@ -32,8 +40,8 @@ document.getElementById('add-channel-form').addEventListener('submit', async fun
                 'Accept': 'application/vnd.github.v3+json'
             },
             body: JSON.stringify({
-                message: `Added ${channelTitle} to the .m3u`,
-                content: btoa(updatedContent),
+                message: `Added ${channelTitle} to canaisdosusuarios.m3u`,
+                content: encodedContent,
                 sha: fileData.sha,
                 branch: branch
             })
