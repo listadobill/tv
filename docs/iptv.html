@@ -11,71 +11,72 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
             background-color: #111;
             color: #fff;
-            flex-direction: column;
+            overflow: hidden;
         }
-        #canais {
+
+        #player {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-color: #000;
+        }
+
+        #video-player {
+            width: 100%;
+            height: 100%;
+        }
+
+        #canais {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 2;
             padding: 20px;
             overflow-y: auto;
-            font-size: 20px;
         }
+
         #canais h2 {
             font-size: 28px;
             margin-bottom: 10px;
         }
+
         #canais ul {
             list-style-type: none;
             padding: 0;
         }
+
         #canais li {
             padding: 8px 0;
             cursor: pointer;
         }
+
         #canais li:hover {
-            background-color: rgba(255, 0, 0, 0.1);
-        }
-        #player {
-            width: 100%;
-            padding: 20px;
-        }
-        #video-player {
-            width: 100%;
-            height: auto;
-        }
-        h2 {
-            font-size: 28px;
-        }
-        @media only screen and (min-width: 600px) {
-            body {
-                flex-direction: row;
-            }
-            #canais {
-                width: 40%;
-            }
-            #player {
-                width: 60%;
-            }
+            background-color: rgba(255, 0, 0, 0.3);
         }
     </style>
 </head>
 <body>
+    <div id="player">
+        <video id="video-player" class="video-js vjs-default-skin" controls preload="auto"></video>
+    </div>
+
     <div id="canais">
         <h2>LISTA DE CANAIS - CANAIS IPTV, PODE NÃO FUNCIONAR</h2>
         <ul id="lista-canais"></ul>
-    </div>
-    <div id="player">
-        <h2>LISTA IPTV A SER ADICIONADA</h2>
-        <video id="video-player" class="video-js vjs-default-skin" controls preload="auto"></video>
     </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const listas = [
                 { nome: "IPTV", url: "https://raw.githubusercontent.com/listadobill/tv/main/listadecanais.m3u" },          
-               
             ];
 
             const listaCanaisElemento = document.getElementById("lista-canais");
