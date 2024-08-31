@@ -90,6 +90,16 @@
                 }
             }
 
+            // Função para reconectar automaticamente em caso de falha
+            function configurarReconexao(hls) {
+                hls.on(Hls.Events.ERROR, function(event, data) {
+                    if (data.fatal === Hls.ErrorTypes.NETWORK_ERROR || data.fatal === Hls.ErrorTypes.OTHER_ERROR) {
+                        console.log('Tentando reconectar...');
+                        hls.startLoad();
+                    }
+                });
+            }
+
             var xhr = new XMLHttpRequest();
             xhr.open("GET", listaURL, true);
             xhr.onreadystatechange = function() {
@@ -124,6 +134,7 @@
                                             video.play();
                                             entrarEmTelaCheia(video);
                                         });
+                                        configurarReconexao(hls);
                                     } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
                                         video.src = url;
                                         video.addEventListener('loadedmetadata', function() {
