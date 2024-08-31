@@ -75,6 +75,60 @@
             const listaCanaisElemento = document.getElementById("lista-canais");
             const video = document.getElementById("video-player");
 
+            function carregarListaCanais() {
+                const xhr = new XMLHttpRequest();
+                xhr.open('GET', listaURL, true);
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        const data = xhr.responseText;
+                        const linhas = data.split('\n');
+
+                        linhas.forEach((linha, index) => {
+                            if (linha.startsWith('#EXTINF')) {
+                                const nome = linha.split(',')[1];
+                                const link = linhas[index + 1];
+                                const logoMatch = linha.match(/tvg-logo="([^"]+)"/);
+                                const logoURL = logoMatch ? logoMatch[1] : '';
+
+                                const itemLista = document.createElement("li");
+                                itemLista.textContent = nome;
+
+                                if (logoURL) {
+                                    const logoImg = document.createElement("img");
+                                    logoImg.src = logoURL;
+                                    itemLista.prepend(logoImg);
+                                }
+
+                                itemLista.addEventListener("click", function() {
+                                    if (Hls.isSupported()) {
+                                        const hls = new Hls();
+                                        hls.loadSource(link);
+                                        hls.attachMedia(video);
+                                        hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                                            video.play();
+                                            entrarEmTelaCheia(video); 
+                                        });
+                                    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                                        video.src = link;
+                                        video.addEventListener('loadedmetadata', function() {
+                                            video.play();
+                                            entrarEmTelaCheia(video); 
+                                        });
+                                    } else {
+                                        alert('Seu navegador não suporta HLS.');
+                                    }
+                                });
+
+                                listaCanaisElemento.appendChild(itemLista);
+                            }
+                        });
+                    } else if (xhr.readyState === 4) {
+                        console.error("Erro ao carregar a lista de canais: Status", xhr.status);
+                    }
+                };
+                xhr.send();
+            }
+
             // Função para entrar em tela cheia
             function entrarEmTelaCheia(element) {
                 if (element.requestFullscreen) {
@@ -88,54 +142,7 @@
                 }
             }
 
-            fetch(listaURL)
-                .then(response => response.text())
-                .then(data => {
-                    const linhas = data.split('\n');
-
-                    linhas.forEach((linha, index) => {
-                        if (linha.startsWith('#EXTINF')) {
-                            const nome = linha.split(',')[1];
-                            const link = linhas[index + 1];
-                            const logoMatch = linha.match(/tvg-logo="([^"]+)"/);
-                            const logoURL = logoMatch ? logoMatch[1] : '';
-
-                            const itemLista = document.createElement("li");
-                            itemLista.textContent = nome;
-
-                            if (logoURL) {
-                                const logoImg = document.createElement("img");
-                                logoImg.src = logoURL;
-                                itemLista.prepend(logoImg);
-                            }
-
-                            itemLista.addEventListener("click", function() {
-                                if (Hls.isSupported()) {
-                                    const hls = new Hls();
-                                    hls.loadSource(link);
-                                    hls.attachMedia(video);
-                                    hls.on(Hls.Events.MANIFEST_PARSED, function() {
-                                        video.play();
-                                        entrarEmTelaCheia(video); // Entrar em tela cheia ao iniciar o vídeo
-                                    });
-                                } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-                                    video.src = link;
-                                    video.addEventListener('loadedmetadata', function() {
-                                        video.play();
-                                        entrarEmTelaCheia(video); // Entrar em tela cheia ao iniciar o vídeo
-                                    });
-                                } else {
-                                    alert('Seu navegador não suporta HLS.');
-                                }
-                            });
-
-                            listaCanaisElemento.appendChild(itemLista);
-                        }
-                    });
-                })
-                .catch(error => {
-                    console.error("Erro ao carregar a lista de canais:", error);
-                });
+            carregarListaCanais();
         });
     </script>
 </body>
