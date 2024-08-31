@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TV DO BILL - WEB CANAIS IPTV ORG - CANAIS CATARINENSES</title>
+    <title>CANAIS FORNECIDOS POR IPTV ORG / CATARINENSES</title>
     <link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet">
     <script src="https://vjs.zencdn.net/7.14.3/video.js"></script>
     <style>
@@ -61,6 +61,16 @@
         #canais li:hover {
             background-color: rgba(255, 0, 0, 0.3);
         }
+
+        .categoria {
+            margin-top: 20px;
+        }
+
+        .categoria h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #ff0;
+        }
     </style>
 </head>
 <body>
@@ -69,8 +79,8 @@
     </div>
 
     <div id="canais">
-        <h2>TV DO BILL - WEB CANAIS IPTV ORG - CANAIS CATARINENSES</h2>
-        <ul id="lista-canais"></ul>
+        <h2>CANAIS FORNECIDOS POR IPTV ORG / CANAIS CATARINENSES</h2>
+        <div id="lista-canais"></div>
     </div>
 
     <script>
@@ -86,64 +96,90 @@
                 .then(response => response.text())
                 .then(data => {
                     const linhas = data.split('\n');
-                    const canais = linhas.filter(linha => linha.startsWith('#EXTINF'));
-                    canais.sort(); // Ordena os canais em ordem alfabética
-                    canais.forEach((canal) => {
-                        const nome = canal.split(',')[1];
-                        const link = linhas[linhas.indexOf(canal) + 1];
-                        const itemLista = document.createElement("li");
-                        itemLista.textContent = nome;
-                        itemLista.addEventListener("click", function() {
-                            try {
-                                const player = videojs("video-player");
-                                player.src({
-                                    src: link,
-                                    type: 'application/x-mpegURL' // Assuming it's an HLS stream
-                                });
-                                player.play();
-                                player.requestFullscreen(); // Coloca o player em tela cheia
-                                // Change color of selected channel
-                                const allChannels = document.querySelectorAll("#lista-canais li");
-                                allChannels.forEach(channel => {
-                                    channel.style.color = "#fff";
-                                });
-                                itemLista.style.color = "red";
+                    let canaisPorCategoria = {};
 
-                                // Verifica periodicamente se o vídeo está sendo reproduzido
-                                const checkInterval = setInterval(() => {
-                                    if (player.paused()) {
-                                        console.log("Vídeo interrompido. Tentando reconectar...");
-                                        player.load(); // Recarrega o vídeo
-                                        player.play(); // Continua a reprodução
-                                    }
-                                }, 5000); // Verifica a cada 5 segundos
+                    linhas.forEach((linha, index) => {
+                        if (linha.startsWith('#EXTINF')) {
+                            const categoria = linha.match(/group-title="([^"]+)"/)?.[1] || 'Sem Categoria';
+                            const nome = linha.split(',')[1];
+                            const link = linhas[index + 1];
 
-                                // Limpa o intervalo quando o canal é trocado
-                                player.on("dispose", () => {
-                                    clearInterval(checkInterval);
-                                });
-
-                                // Verifica se o vídeo está no final e reconecta automaticamente
-                                player.on("timeupdate", () => {
-                                    const video = document.getElementById("video-player");
-                                    const currentTime = video.currentTime;
-                                    const duration = video.duration;
-                                    const buffer = 5; // margem de buffer em segundos
-
-                                    if (duration - currentTime < buffer) {
-                                        console.log("Vídeo no final. Reconectando...");
-                                        player.src({
-                                            src: link,
-                                            type: 'application/x-mpegURL'
-                                        });
-                                        player.play();
-                                    }
-                                });
-                            } catch (error) {
-                                console.error("Erro ao reproduzir o canal:", error);
+                            if (!canaisPorCategoria[categoria]) {
+                                canaisPorCategoria[categoria] = [];
                             }
+
+                            canaisPorCategoria[categoria].push({ nome, link });
+                        }
+                    });
+
+                    Object.keys(canaisPorCategoria).forEach((categoria) => {
+                        const categoriaElemento = document.createElement("div");
+                        categoriaElemento.classList.add("categoria");
+
+                        const tituloCategoria = document.createElement("h3");
+                        tituloCategoria.textContent = categoria;
+                        categoriaElemento.appendChild(tituloCategoria);
+
+                        const listaCategoria = document.createElement("ul");
+
+                        canaisPorCategoria[categoria].forEach((canal) => {
+                            const itemLista = document.createElement("li");
+                            itemLista.textContent = canal.nome;
+                            itemLista.addEventListener("click", function() {
+                                try {
+                                    const player = videojs("video-player");
+                                    player.src({
+                                        src: canal.link,
+                                        type: 'application/x-mpegURL' // Assuming it's an HLS stream
+                                    });
+                                    player.play();
+                                    player.requestFullscreen(); // Coloca o player em tela cheia
+                                    // Change color of selected channel
+                                    const allChannels = document.querySelectorAll("#lista-canais li");
+                                    allChannels.forEach(channel => {
+                                        channel.style.color = "#fff";
+                                    });
+                                    itemLista.style.color = "red";
+
+                                    // Verifica periodicamente se o vídeo está sendo reproduzido
+                                    const checkInterval = setInterval(() => {
+                                        if (player.paused()) {
+                                            console.log("Vídeo interrompido. Tentando reconectar...");
+                                            player.load(); // Recarrega o vídeo
+                                            player.play(); // Continua a reprodução
+                                        }
+                                    }, 5000); // Verifica a cada 5 segundos
+
+                                    // Limpa o intervalo quando o canal é trocado
+                                    player.on("dispose", () => {
+                                        clearInterval(checkInterval);
+                                    });
+
+                                    // Verifica se o vídeo está no final e reconecta automaticamente
+                                    player.on("timeupdate", () => {
+                                        const video = document.getElementById("video-player");
+                                        const currentTime = video.currentTime;
+                                        const duration = video.duration;
+                                        const buffer = 5; // margem de buffer em segundos
+
+                                        if (duration - currentTime < buffer) {
+                                            console.log("Vídeo no final. Reconectando...");
+                                            player.src({
+                                                src: canal.link,
+                                                type: 'application/x-mpegURL'
+                                            });
+                                            player.play();
+                                        }
+                                    });
+                                } catch (error) {
+                                    console.error("Erro ao reproduzir o canal:", error);
+                                }
+                            });
+                            listaCategoria.appendChild(itemLista);
                         });
-                        listaCanaisElemento.appendChild(itemLista);
+
+                        categoriaElemento.appendChild(listaCategoria);
+                        listaCanaisElemento.appendChild(categoriaElemento);
                     });
                 })
                 .catch(error => {
