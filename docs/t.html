@@ -75,6 +75,19 @@
             const listaCanaisElemento = document.getElementById("lista-canais");
             const video = document.getElementById("video-player");
 
+            // Função para entrar em tela cheia
+            function entrarEmTelaCheia(element) {
+                if (element.requestFullscreen) {
+                    element.requestFullscreen();
+                } else if (element.mozRequestFullScreen) { // Firefox
+                    element.mozRequestFullScreen();
+                } else if (element.webkitRequestFullscreen) { // Chrome, Safari e Opera
+                    element.webkitRequestFullscreen();
+                } else if (element.msRequestFullscreen) { // IE/Edge
+                    element.msRequestFullscreen();
+                }
+            }
+
             fetch(listaURL)
                 .then(response => response.text())
                 .then(data => {
@@ -103,11 +116,13 @@
                                     hls.attachMedia(video);
                                     hls.on(Hls.Events.MANIFEST_PARSED, function() {
                                         video.play();
+                                        entrarEmTelaCheia(video); // Entrar em tela cheia ao iniciar o vídeo
                                     });
                                 } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
                                     video.src = link;
                                     video.addEventListener('loadedmetadata', function() {
                                         video.play();
+                                        entrarEmTelaCheia(video); // Entrar em tela cheia ao iniciar o vídeo
                                     });
                                 } else {
                                     alert('Seu navegador não suporta HLS.');
