@@ -66,68 +66,16 @@
     </div>
 
     <div id="canais">
-        <ul id="lista-canais"></ul>
+        <ul id="lista-canais">
+            <!-- Os itens da lista serão adicionados aqui -->
+        </ul>
     </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const listaURL = "https://raw.githubusercontent.com/listadobill/tv/main/iptv.m3u";
-            const listaCanaisElemento = document.getElementById("lista-canais");
-            const video = document.getElementById("video-player");
-
-            function carregarListaCanais() {
-                const xhr = new XMLHttpRequest();
-                xhr.open('GET', listaURL, true);
-                xhr.onreadystatechange = function() {
-                    if (xhr.readyState === 4 && xhr.status === 200) {
-                        const data = xhr.responseText;
-                        const linhas = data.split('\n');
-
-                        linhas.forEach((linha, index) => {
-                            if (linha.startsWith('#EXTINF')) {
-                                const nome = linha.split(',')[1];
-                                const link = linhas[index + 1];
-                                const logoMatch = linha.match(/tvg-logo="([^"]+)"/);
-                                const logoURL = logoMatch ? logoMatch[1] : '';
-
-                                const itemLista = document.createElement("li");
-                                itemLista.textContent = nome;
-
-                                if (logoURL) {
-                                    const logoImg = document.createElement("img");
-                                    logoImg.src = logoURL;
-                                    itemLista.prepend(logoImg);
-                                }
-
-                                itemLista.addEventListener("click", function() {
-                                    if (Hls.isSupported()) {
-                                        const hls = new Hls();
-                                        hls.loadSource(link);
-                                        hls.attachMedia(video);
-                                        hls.on(Hls.Events.MANIFEST_PARSED, function() {
-                                            video.play();
-                                            entrarEmTelaCheia(video); 
-                                        });
-                                    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-                                        video.src = link;
-                                        video.addEventListener('loadedmetadata', function() {
-                                            video.play();
-                                            entrarEmTelaCheia(video); 
-                                        });
-                                    } else {
-                                        alert('Seu navegador não suporta HLS.');
-                                    }
-                                });
-
-                                listaCanaisElemento.appendChild(itemLista);
-                            }
-                        });
-                    } else if (xhr.readyState === 4) {
-                        console.error("Erro ao carregar a lista de canais: Status", xhr.status);
-                    }
-                };
-                xhr.send();
-            }
+            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/main/iptv.m3u";
+            var listaCanaisElemento = document.getElementById("lista-canais");
+            var video = document.getElementById("video-player");
 
             // Função para entrar em tela cheia
             function entrarEmTelaCheia(element) {
@@ -142,7 +90,60 @@
                 }
             }
 
-            carregarListaCanais();
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", listaURL, true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var linhas = xhr.responseText.split('\n');
+                    for (var i = 0; i < linhas.length; i++) {
+                        if (linhas[i].startsWith('#EXTINF')) {
+                            var nome = linhas[i].split(',')[1];
+                            var link = linhas[i + 1];
+                            var logoURL = '';
+                            var logoMatch = linhas[i].match(/tvg-logo="([^"]+)"/);
+                            if (logoMatch) {
+                                logoURL = logoMatch[1];
+                            }
+
+                            var itemLista = document.createElement("li");
+                            if (logoURL) {
+                                var logoImg = document.createElement("img");
+                                logoImg.src = logoURL;
+                                itemLista.appendChild(logoImg);
+                            }
+                            var nomeTexto = document.createTextNode(nome);
+                            itemLista.appendChild(nomeTexto);
+
+                            itemLista.onclick = (function(url) {
+                                return function() {
+                                    if (Hls.isSupported()) {
+                                        var hls = new Hls();
+                                        hls.loadSource(url);
+                                        hls.attachMedia(video);
+                                        hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                                            video.play();
+                                            entrarEmTelaCheia(video);
+                                        });
+                                    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                                        video.src = url;
+                                        video.addEventListener('loadedmetadata', function() {
+                                            video.play();
+                                            entrarEmTelaCheia(video);
+                                        });
+                                    } else {
+                                        alert('Seu navegador não suporta HLS.');
+                                    }
+                                };
+                            })(link);
+
+                            listaCanaisElemento.appendChild(itemLista);
+                        }
+                    }
+                } else if (xhr.readyState === 4) {
+                    alert("Erro ao carregar a lista de canais. Verifique a URL e a conexão de rede.");
+                }
+            };
+            xhr.send();
         });
     </script>
 </body>
