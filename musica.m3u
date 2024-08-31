@@ -1,0 +1,70 @@
+#EXTM3U
+
+
+######IPTV ORG MÚSICAS #####
+#EXTINF:-1 tvg-id="963EasyRock.ph" tvg-logo="https://i.imgur.com/IMFwHbp.png" group-title="Music",96.3 Easy Rock (1080p) [Not 24/7]
+https://ythls.armelin.one/channel/UCZTlGPEnQ66TFG0m6Wa3KFQ.m3u8
+#EXTINF:-1 tvg-id="BRIDGERock.ru" tvg-logo="https://i.imgur.com/MHuwct2.png" group-title="Music",Bridge Rock (1080p) [Geo-blocked]
+https://strm.yandex.ru/kal/bridge_tv_fresh/bridge_tv_fresh0.m3u8
+#EXTINF:-1 tvg-id="LaRock22.ni" tvg-logo="https://i.ibb.co/Lzv1LQs/LaRock22.jpg" group-title="Music",La Rock 22 (1080p)
+https://cootv.cootel.com.ni:8095/Canal22_CooTel/playlist.m3u8
+#EXTINF:-1 tvg-id="NOWRock.uk" tvg-logo="https://i.imgur.com/GuM4GnX.png" group-title="Music",NOW Rock
+https://lightning-now90s-samsungnz.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="RockTV.ro" tvg-logo="https://i.imgur.com/JoPywOp.png" group-title="Music",Rock TV (720p)
+https://tv.broadcasting.ro/rocktv/85c83a80-4f71-4f2d-a8d6-43f676896bcb.m3u8
+#EXTINF:-1 tvg-id="RockTV.mk" tvg-logo="https://i.imgur.com/Y9miDQo.png" group-title="Music",Rock TV (1080p) [Not 24/7]
+https://stream.nasatv.com.mk/rocktv/hls/rocktv_live.m3u8
+#EXTINF:-1 tvg-id="StingrayClassicRock.ca" tvg-logo="https://i.imgur.com/FBgu8yB.png" group-title="Music",Stingray Classic Rock (1080p)
+https://lotus.stingray.com/manifest/ose-101ads-montreal/samsungtvplus/master.m3u8
+#EXTINF:-1 tvg-id="StingrayRockAlternative.ca" tvg-logo="https://i.imgur.com/mt8ulVX.png" group-title="Music",Stingray Rock Alternative (1080p)
+https://lotus.stingray.com/manifest/ose-102ads-montreal/samsungtvplus/master.m3u8
+#EXTINF:-1 tvg-id="VevoRetroRock.us" tvg-logo="https://i.imgur.com/H1Aap4E.png" group-title="Music",Vevo Retro Rock
+http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/61d4b38226b8a50007fe03a6/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c2ce917-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=5b34f49b-bb11-47dd-b65b-7c5074a9925c
+
+
+
+##### CXTV MUSICAS #####
+
+#EXTINF:-1 tvg-id="Retro Plus TV" tvg-logo="https://play-lh.googleusercontent.com/U73kFg4Qya85ClsrZ0r8z4srpmZ2xb_85TlGjSwNnJvYdqcGVCkVL2KmQtK0heLnCMo" group-title="Music",Retro Plus TV
+https://scl.edge.grupoz.cl/retroplus16@grupoz.cl_retrolive/live/chunklist_w1940252761.m3u8
+
+#EXTINF:-1 tvg-id="Retro Music" tvg-logo="https://www.vertvcable.com/wp-content/uploads/2022/02/retromtv.jpg" group-title="Music",Retro Music
+https://stream.mediawork.cz/retrotv/smil:retrotv2.smil/chunklist_w393778605_b1428000.m3u8
+
+#EXTINF:-1 tvg-id="Vclassic" tvg-logo="https://www.thoughtco.com/thmb/codwFBJNQfgFYipgUX5KponBJHc=/3741x2400/filters:no_upscale():max_bytes(150000):strip_icc()/photo-of-journey-73908030-5bc753b646e0fb00518cda2a.jpg" group-title="Music",Vclassic
+https://5eaccbab48461.streamlock.net:1936/8112/8112/chunklist_w136506354.m3u8
+
+#EXTINF:-1 tvg-id="89 A Rádio Rock" tvg-logo="https://static-media.streema.com/media/cache/b1/2a/b12a5621c00b22b52022dc425c3ffc5b.jpg" group-title="Music",89 A Rádio Rock
+https://live-c.cf.dmcdn.net/sec2(Lh-NOLeFYGMKp7a8ss_ZAxDtZarD_S1qfqEKCBKSz9PE8Eo-85SDgy4gZIzI2kenKBajPnw-bGj23EsmhkbuEZUQK0eTdQJyOM5h3oEon-M)/dm/3/x7wjrui/s/live-1080.m3u8#cell=lcfc
+
+#EXTINF:-1 tvg-id="Retro Plus TV" tvg-logo="https://play-lh.googleusercontent.com/U73kFg4Qya85ClsrZ0r8z4srpmZ2xb_85TlGjSwNnJvYdqcGVCkVL2KmQtK0heLnCMo" group-title="Music",Retro Plus TV
+https://scl.edge.grupoz.cl/retroplus16@grupoz.cl_retrolive/live/chunklist_w2060884929.m3u8
+
+#EXTINF:-1 tvg-id="Pulse Rock TV" tvg-logo="https://www.pulserocktv.com/logos/pulsesmall.jpg" group-title="Music",Pulse Rock TV
+https://dotfvxkfj90ca.cloudfront.net/programming/pulserocknew/chunklist.m3u8?token=27be3ad2-9e96-4704-9d1c-a14e39190f47&streamSessionId=e06bc853-bdf6-40a7-bd8b-1297e2edbf85&code=TELEATLANTIC&expires=1728345600000&playUrl=true&ctrl=34324b5f8f340cefa3c1da57608b92edc43a0146cfea4ec23f598d0f1d5425a88be9fc02fab522f5318ca0074bf2cb1eac38938bed55763bd6bc0a24854a140d
+
+#EXTINF:-1 tvg-id="Catedral do Rock" tvg-logo="https://www.cxtv.com.br/img/Tvs/Logo/webp-l/d697ec8c1724e5dc37d8999e9aa71ac3.webp" group-title="Music",Catedral do Rock
+https://stmv1.srvif.com/tvcrucilandia/tvcrucilandia/chunklist_w1874263222.m3u8
+
+#EXTINF:-1 tvg-id="The Retro Channel" tvg-logo="https://image.roku.com/channels/images/4967744e0f7c48579a84b422656d296c-hd.jpg" group-title="Music",The Retro Channel
+https://5fd5567570c0e.streamlock.net/theretrochannel/stream/chunklist_w1490677041.m3u8
+
+#EXTINF:-1 tvg-id="Vivaldi" tvg-logo="https://www.thematv.com/images/channels/vivaldi.png" group-title="Music",Vivaldi
+https://amg01297-themahqfranceme-vivalditv-plex-xh5kp.amagi.tv/playlist/amg01297-themahqfranceme-vivalditv-plex/cb7d3e167b766f8b99c33b6cd1f349f4d1536281573a87613dff5ec524c61d53d6bca595e74fed6f0fbd69a33e40340d0136d41cc07c11dfb67ba95a24004e2adfd0a233d19f7d0fb6d31f686cb97b1c58e00e0cc0520671d2e6555ad56ce5295443b949485f2088bb06e56953c789148b6d3ddaaadd32397b5c5e825b5ae1f343a2feb40b58d038f0e2011bc07e45b2d110c1d71cbbd6b631a462beac1cf7acb8c2f9b102b4f4d332e30eee467132404eb8f0b717543fccb7a9662c887968671350f4aa90ff345ccc27111b90fbba27567cd6353d732119177fbf462178152a21db28aae45ca9aeba907140369bf45a742bafdfb6e0dd183ca76ff7aee8922632c9b65c40169836980e223685e58b0cdc952ac0e278c5a67f476992c80bcbd4f2a4eab38645d3779a96a4c86c121f23220b9458a4957594788f21e69e6146362868a49440dcfc9a34574f409c8952d81261d6fd8291da0834d220561ac469d74e1d2eab10696fee39f68a360fd877599d54dd9aeef22a949a28c33e7eea1ba5907627d89b23b080d2/113/1920x1080_6046040/index.m3u8
+
+#EXTINF:-1 tvg-id="RCKTV" tvg-logo="https://www.dwdl.de/images/1609770351_rck-tv.jpg" group-title="Music",RCKTV
+https://inliveserver.com:1936/11530/11530/chunklist_w982483681.m3u8
+
+#EXTINF:-1 tvg-id="Party Tyme Karaoke" tvg-logo="https://yt3.ggpht.com/a/AATXAJxFUbGALfwDIgwl8urQ-QvRK_O7chApN77nTw=s900-c-k-c0xffffffff-no-rj-mo" group-title="Music",Party Tyme Karaoke
+https://stream.ads.ottera.tv/cl/240831cr99ag0ma2gq7j3u0gug/1280x720_2300000_0_f.m3u8?i=475_147
+
+#EXTINF:-1 tvg-id="OCKO" tvg-logo="https://1gr.cz/o/ocko/logo.jpg" group-title="Music",OCKO
+https://ocko-live-dash.ssl.cdn.cra.cz/cra_live2/ocko.stream.1.smil/chunklist_b2628000.m3u8
+
+#EXTINF:-1 tvg-id="Techno Warehouse" tvg-logo="https://www.dancetv.net/img/icons/channels/techno-warehouse.jpg" group-title="Music",Techno Warehouse
+https://m2b2.worldcast.tv:7443/dancetelevisionthree/2/dancetelevisionthree.m3u8
+
+#EXTINF:-1 tvg-id="Rockola Television" tvg-logo="https://watchdingo.com/_next/image?url=https%3A%2F%2Fcdn.watchdingo.com%2Fimages%2Fcontent%2F120442%2Flogo%2F120442.png%3Fv%3D1720011872928&w=640&q=75" group-title="Music",Rockola Television
+https://e46fa4a445464f8a9150fa7d510eb85c.mediatailor.us-west-2.amazonaws.com/v1/manifest/2d2d0d97b0e548f025b2598a69b55bf30337aa0e/npp/78f6ea1e-1306-401b-ba78-6e7d69a70a7b/2.m3u8
+
+
