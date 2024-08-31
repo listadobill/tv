@@ -96,6 +96,7 @@
                             itemLista.addEventListener("click", function() {
                                 const videoPlayer = document.getElementById("video-player");
                                 videoPlayer.src = link;
+                                videoPlayer.load(); // Recarrega o vídeo
                                 videoPlayer.play();
                             });
 
