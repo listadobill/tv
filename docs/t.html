@@ -105,6 +105,8 @@
             xhr.onreadystatechange = function() {
                 if (xhr.readyState === 4 && xhr.status === 200) {
                     var linhas = xhr.responseText.split('\n');
+                    var canais = [];
+
                     for (var i = 0; i < linhas.length; i++) {
                         if (linhas[i].startsWith('#EXTINF')) {
                             var nome = linhas[i].split(',')[1];
@@ -115,41 +117,55 @@
                                 logoURL = logoMatch[1];
                             }
 
-                            var itemLista = document.createElement("li");
-                            if (logoURL) {
-                                var logoImg = document.createElement("img");
-                                logoImg.src = logoURL;
-                                itemLista.appendChild(logoImg);
-                            }
-                            var nomeTexto = document.createTextNode(nome);
-                            itemLista.appendChild(nomeTexto);
-
-                            itemLista.onclick = (function(url) {
-                                return function() {
-                                    if (Hls.isSupported()) {
-                                        var hls = new Hls();
-                                        hls.loadSource(url);
-                                        hls.attachMedia(video);
-                                        hls.on(Hls.Events.MANIFEST_PARSED, function() {
-                                            video.play();
-                                            entrarEmTelaCheia(video);
-                                        });
-                                        configurarReconexao(hls);
-                                    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-                                        video.src = url;
-                                        video.addEventListener('loadedmetadata', function() {
-                                            video.play();
-                                            entrarEmTelaCheia(video);
-                                        });
-                                    } else {
-                                        alert('Seu navegador não suporta HLS.');
-                                    }
-                                };
-                            })(link);
-
-                            listaCanaisElemento.appendChild(itemLista);
+                            canais.push({
+                                nome: nome,
+                                link: link,
+                                logoURL: logoURL
+                            });
                         }
                     }
+
+                    // Ordenar os canais por nome
+                    canais.sort(function(a, b) {
+                        return a.nome.localeCompare(b.nome);
+                    });
+
+                    // Adicionar os canais ao DOM
+                    canais.forEach(function(canal) {
+                        var itemLista = document.createElement("li");
+                        if (canal.logoURL) {
+                            var logoImg = document.createElement("img");
+                            logoImg.src = canal.logoURL;
+                            itemLista.appendChild(logoImg);
+                        }
+                        var nomeTexto = document.createTextNode(canal.nome);
+                        itemLista.appendChild(nomeTexto);
+
+                        itemLista.onclick = (function(url) {
+                            return function() {
+                                if (Hls.isSupported()) {
+                                    var hls = new Hls();
+                                    hls.loadSource(url);
+                                    hls.attachMedia(video);
+                                    hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                                        video.play();
+                                        entrarEmTelaCheia(video);
+                                    });
+                                    configurarReconexao(hls);
+                                } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                                    video.src = url;
+                                    video.addEventListener('loadedmetadata', function() {
+                                        video.play();
+                                        entrarEmTelaCheia(video);
+                                    });
+                                } else {
+                                    alert('Seu navegador não suporta HLS.');
+                                }
+                            };
+                        })(canal.link);
+
+                        listaCanaisElemento.appendChild(itemLista);
+                    });
                 } else if (xhr.readyState === 4) {
                     alert("Erro ao carregar a lista de canais. Verifique a URL e a conexão de rede.");
                 }
