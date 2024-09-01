@@ -20,12 +20,28 @@
         #player {
             flex: 1;
             background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .video-js {
+            background-color: #000;
+        }
+
+        .video-js.fullscreen {
             width: 100%;
             height: 100%;
-            background-color: #000;
+        }
+
+        .video-js.reduced {
+            width: 600px;
+            height: 338px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 50%;
+            transform: translateY(-50%) translateX(-50%);
         }
 
         #canais {
@@ -63,7 +79,7 @@
 </head>
 <body>
     <div id="player">
-        <video id="video-player" class="video-js vjs-default-skin" controls></video>
+        <video id="video-player" class="video-js vjs-default-skin reduced" controls></video>
     </div>
 
     <div id="canais">
@@ -83,12 +99,16 @@
                 preload: 'auto'
             });
 
-            // Função para entrar em tela cheia
-            function entrarEmTelaCheia() {
+            // Função para alternar entre tela cheia e tamanho reduzido
+            function toggleFullscreen() {
                 if (video.isFullscreen()) {
                     video.exitFullscreen();
+                    video.el().classList.remove('fullscreen');
+                    video.el().classList.add('reduced');
                 } else {
                     video.requestFullscreen();
+                    video.el().classList.remove('reduced');
+                    video.el().classList.add('fullscreen');
                 }
             }
 
@@ -146,7 +166,7 @@
                             return function() {
                                 video.src({ src: url, type: 'application/x-mpegURL' });
                                 video.play();
-                                entrarEmTelaCheia();
+                                toggleFullscreen();
                                 configurarReconexao(video);
                             };
                         })(canal.link);
