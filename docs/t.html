@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IPTV Player</title>
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -22,7 +22,7 @@
             background-color: #000;
         }
 
-        #video-player {
+        .video-js {
             width: 100%;
             height: 100%;
             background-color: #000;
@@ -43,10 +43,11 @@
         }
 
         #canais li {
-            padding: 5px;
+            padding: 10px;
             cursor: pointer;
             display: flex;
             align-items: center;
+            border-bottom: 1px solid #444;
         }
 
         #canais li:hover {
@@ -54,15 +55,15 @@
         }
 
         #canais img {
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
             margin-right: 10px;
         }
     </style>
 </head>
 <body>
     <div id="player">
-        <video id="video-player" controls></video>
+        <video id="video-player" class="video-js vjs-default-skin" controls></video>
     </div>
 
     <div id="canais">
@@ -71,32 +72,32 @@
         </ul>
     </div>
 
+    <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var listaURL = "https://raw.githubusercontent.com/listadobill/tv/main/iptv.m3u";
             var listaCanaisElemento = document.getElementById("lista-canais");
-            var video = document.getElementById("video-player");
+            var video = videojs('video-player', {
+                controls: true,
+                autoplay: false,
+                preload: 'auto'
+            });
 
             // Função para entrar em tela cheia
-            function entrarEmTelaCheia(element) {
-                if (element.requestFullscreen) {
-                    element.requestFullscreen();
-                } else if (element.mozRequestFullScreen) { // Firefox
-                    element.mozRequestFullScreen();
-                } else if (element.webkitRequestFullscreen) { // Chrome, Safari e Opera
-                    element.webkitRequestFullscreen();
-                } else if (element.msRequestFullscreen) { // IE/Edge
-                    element.msRequestFullscreen();
+            function entrarEmTelaCheia() {
+                if (video.isFullscreen()) {
+                    video.exitFullscreen();
+                } else {
+                    video.requestFullscreen();
                 }
             }
 
             // Função para reconectar automaticamente em caso de falha
-            function configurarReconexao(hls) {
-                hls.on(Hls.Events.ERROR, function(event, data) {
-                    if (data.fatal === Hls.ErrorTypes.NETWORK_ERROR || data.fatal === Hls.ErrorTypes.OTHER_ERROR) {
-                        console.log('Tentando reconectar...');
-                        hls.startLoad();
-                    }
+            function configurarReconexao(player) {
+                player.on('error', function() {
+                    console.log('Tentando reconectar...');
+                    player.src({ src: video.src(), type: 'application/x-mpegURL' });
+                    player.play();
                 });
             }
 
@@ -143,24 +144,10 @@
 
                         itemLista.onclick = (function(url) {
                             return function() {
-                                if (Hls.isSupported()) {
-                                    var hls = new Hls();
-                                    hls.loadSource(url);
-                                    hls.attachMedia(video);
-                                    hls.on(Hls.Events.MANIFEST_PARSED, function() {
-                                        video.play();
-                                        entrarEmTelaCheia(video);
-                                    });
-                                    configurarReconexao(hls);
-                                } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-                                    video.src = url;
-                                    video.addEventListener('loadedmetadata', function() {
-                                        video.play();
-                                        entrarEmTelaCheia(video);
-                                    });
-                                } else {
-                                    alert('Seu navegador não suporta HLS.');
-                                }
+                                video.src({ src: url, type: 'application/x-mpegURL' });
+                                video.play();
+                                entrarEmTelaCheia();
+                                configurarReconexao(video);
                             };
                         })(canal.link);
 
