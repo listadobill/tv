@@ -30,8 +30,11 @@
         }
 
         .video-js.fullscreen {
-            width: 100%;
-            height: 100%;
+            width: 100% !important;
+            height: 100% !important;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
 
         .video-js.reduced {
@@ -105,12 +108,27 @@
                     video.exitFullscreen();
                     video.el().classList.remove('fullscreen');
                     video.el().classList.add('reduced');
+                    video.controlBar.hide();  // Oculta a barra de controle quando não estiver em tela cheia
                 } else {
                     video.requestFullscreen();
                     video.el().classList.remove('reduced');
                     video.el().classList.add('fullscreen');
+                    video.controlBar.show();  // Mostra a barra de controle quando estiver em tela cheia
                 }
             }
+
+            // Forçar o redimensionamento do vídeo
+            function ajustarTamanhoVideo() {
+                if (video.isFullscreen()) {
+                    video.el().classList.add('fullscreen');
+                    video.el().classList.remove('reduced');
+                } else {
+                    video.el().classList.add('reduced');
+                    video.el().classList.remove('fullscreen');
+                }
+            }
+
+            video.on('fullscreenchange', ajustarTamanhoVideo);
 
             // Função para reconectar automaticamente em caso de falha
             function configurarReconexao(player) {
