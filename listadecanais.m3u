@@ -4300,3 +4300,64 @@ https://m2b2.worldcast.tv:7443/dancetelevisionthree/2/dancetelevisionthree.m3u8
 
 #EXTINF:-1 tvg-id="Rockola Television" tvg-logo="https://watchdingo.com/_next/image?url=https%3A%2F%2Fcdn.watchdingo.com%2Fimages%2Fcontent%2F120442%2Flogo%2F120442.png%3Fv%3D1720011872928&w=640&q=75" group-title="Music",Rockola Television
 https://e46fa4a445464f8a9150fa7d510eb85c.mediatailor.us-west-2.amazonaws.com/v1/manifest/2d2d0d97b0e548f025b2598a69b55bf30337aa0e/npp/78f6ea1e-1306-401b-ba78-6e7d69a70a7b/2.m3u8
+
+#### 1005 - FILMES ####
+
+#EXTM3U
+
+#EXTINF:-1 tvg-id="Runtime Ação" tvg-name="Runtime Ação" tvg-logo="https://www.runtime.tv/themes/custom/run/runtime/logo.png" group-title="Filmes",Runtime Ação
+https://stream.ads.ottera.tv/cl/240901cr9t0kv3dujkfffs4ul0/1280x720_3071200_0_f.m3u8?i=728_2552
+
+#EXTINF:-1 tvg-id="Runtime Comédia" tvg-name="Runtime Comédia" tvg-logo="https://www.runtime.tv/themes/custom/run/runtime/logo.png" group-title="Filmes",Runtime Comédia
+https://stream.ads.ottera.tv/cl/240901cr9t1pf3dujkfffs5nq0/1280x720_3071200_0_f.m3u8?i=728_2553
+
+#EXTINF:-1 tvg-id="Runtime Crime" tvg-name="Runtime Crime" tvg-logo="https://www.runtime.tv/themes/custom/run/runtime/logo.png" group-title="Filmes",Runtime Crime
+https://stream.ads.ottera.tv/cl/240901cr9t1qfu120dr5u502ug/1280x720_3071200_0_f.m3u8?i=728_4864
+
+#EXTINF:-1 tvg-id="Runtime Romance" tvg-name="Runtime Romance" tvg-logo="https://www.runtime.tv/themes/custom/run/runtime/logo.png" group-title="Filmes",Runtime Romance
+https://stream.ads.ottera.tv/cl/240901cr9t2440fefbl4fgeugg/1280x720_3071200_0_f.m3u8?i=475_4866
+
+#EXTINF:-1 tvg-id="Runtime TV E FILMES" tvg-name="Runtime TV E FILMES" tvg-logo="https://www.runtime.tv/themes/custom/run/runtime/logo.png" group-title="Filmes",Runtime TV E FILMES
+https://stream.ads.ottera.tv/cl/240901cr9thnolutarlvqqbcv0/1280x720_3071200_0_f.m3u8?i=728_2153
+
+#EXTINF:-1 tvg-id="Sony One Classics" tvg-name="Sony One Classics" tvg-logo="http://logonoid.com/images/sony-pictures-logo.png" group-title="Filmes",Sony One Classics
+https://spt-sonyoneclassicas-1-br.samsung.wurl.tv/3000.m3u8
+
+#EXTINF:-1 tvg-id="Sony One Emoções" tvg-name="Sony One Emoções" tvg-logo="http://logonoid.com/images/sony-pictures-logo.png" group-title="Filmes",Sony One Emoções
+https://spt-sonyoneemocoes-1-br.samsung.wurl.tv/2000.m3u8
+
+#EXTINF:-1 tvg-id="Multi Canaiss" tvg-name="Multi Canais" tvg-logo="https://ipgotv.top/tv/multicanais/LOGO2_MULTICANAIS_TV.png" group-title="Filmes",Multi Canais
+https://stmv4.voxtvhd.com.br/multicanais/multicanais/chunklist_w2135483900.m3u8
+
+#EXTINF:-1 tvg-id="Tv Clássicos do Cinema" tvg-name="Tv Clássicos do Cinema" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhSuQyJ3dVxlF3QyurdLG3ivfagqSYlr-aLZTEj4cFHcDI2KYXrc0AfUQ4A3oo-YdSe2fheJm9PCQF4-er6pP1uCAe3UQHaD3wWO05etrGaOKOr8TyKoTzE5lWFBk-bYKPRlCcSioQ_sbd9GL0rE4CZAv8K0NxfX_-O8I3wQRJY4jvpXsVpd2FPGS1QQ42K/s16000/BANNER%20TV%201000%20OFICIAL.png" group-title="Filmes",Tv Clássicos do Cinema
+https://stmv1.srvif.com/movies1/movies1/chunklist_w644312597.m3u8
+
+
+#EXTINF:-1 tvg-id="Bons Tempos" tvg-name="Bons Tempos" tvg-logo="http://vipotv.com/wp-content/uploads/2021/03/Bons-Tempos-Tv-live-vipotv.png" group-title="Filmes",Bons Tempos
+https://stmv1.srvif.com/canal29/canal29/chunklist_w1923928782.m3u8
+
+#EXTINF:-1 tvg-id="CinePIX" tvg-name="CinePIX" tvg-logo="https://scontent-gru2-2.xx.fbcdn.net/v/t39.30808-1/361632695_750570500403565_6087494327255918335_n.jpg?stp=dst-jpg_s200x200&_nc_cat=102&ccb=1-7&_nc_sid=f4b9fd&_nc_eui2=AeHbggrvUsiID7NXr8KOuj1yLMptTd4smA0sym1N3iyYDWpmj15uC3fyyI87xZ0-urGwimg0aV5ZSOGrhHkf5n--&_nc_ohc=Hu7nBqGqaqAQ7kNvgGn3MQy&_nc_ht=scontent-gru2-2.xx&oh=00_AYAwhRS2cyIU1qDYePVR-nM7TLgIa1rT4IZrnYqMVmdI4Q&oe=66D9B899" group-title="Filmes",CinePIX
+https://stream.ads.ottera.tv/cl/240901cr9t0kphupclq9nj4r90/1920x1080_6046040_3_f.m3u8?i=728_6178
+
+#EXTINF:-1 tvg-id="GLN" tvg-name="GLN" tvg-logo="https://www.glntv.com.br/admin/assets/img/logo.png?September12024250am10" group-title="Filmes",GLN
+https://stmv1.paineltv.net/glnfilmes/glnfilmes/chunklist_w76530722.m3u8
+
+#EXTINF:-1 tvg-id="Moviesphere Brazil " tvg-name="Moviesphere Brazil " tvg-logo="https://www.runtime.tv/themes/custom/run/runtime/logo.png" group-title="Filmes",Moviesphere Brazil 
+https://stream.ads.ottera.tv/cl/240901cr9t0n7u120dr5u4vb60/1920x1080_6046040_3_f.m3u8?i=728_6178
+
+#EXTINF:-1 tvg-id="Classic TV CULT MOVIES " tvg-name="Classic TV CULT MOVIES" tvg-logo="https://ipgotv.net.br/tv/cqtv/imagem/logo_classiqueTV_site.png" group-title="Filmes",Classic TV CULT MOVIES
+https://stmv1.srvif.com/classique/classique/chunklist_w152354366.m3u8
+
+#EXTINF:-1 tvg-id="Classique Western " tvg-name="Classique Western" tvg-logo="https://ipgotv.net.br/tv/classique/imagens/logo_classiqueTV_site.png" group-title="Filmes",Classique Western (FAROESTE)
+https://stmv1.srvif.com/classiquew/classiquew/chunklist_w1950617327.m3u8
+
+#EXTINF:-1 tvg-id="1980 Channel" tvg-name="1980 Channel" tvg-logo="https://ipgotv.net.br/tv/1980_channel_linear/LOGO_1980CHANNEL.jpg" group-title="Filmes",1980 Channel
+https://stmv6.voxtvhd.com.br/channel80s/channel80s/chunklist_w445883079.m3u8
+
+#EXTINF:-1 tvg-id="Grjngo" tvg-name="Grjngo" tvg-logo="https://static.wixstatic.com/media/0e69b2_b95d085086fc46e7aba5f51308e0e74d~mv2.jpg/v1/fill/w_1920,h_1080,al_c/0e69b2_b95d085086fc46e7aba5f51308e0e74d~mv2.jpg" group-title="Filmes",Grjngo (FAROESTE)
+https://epg.provider.plex.tv/library/parts/646546f35db8ada4c8edd7e5-63489bc190b96ef5e0eb327c/variant.m3u8?url=78eb6241fa029ef814401c0e45c9d33f-2c720c4b7a4af39842c32dbf76e9d09fe04bc64b6a4b3628a4981080dd54466e392bb825b97500d1dbd5ea91b5b7d5da7c14294890759a1675f17e619d77d22b8cafe63a86729f594f732660cb42df9678af883676255af5d496b81b6a50518c53b6ed0246d3d8f395f1bb11bee5f88736ee323147a4f51c1b341721fc6377a8c638815f2cf82c0b5c2849f5bc7bddc7817b3740fea237cd636e701a4065ff6817053400d7a8d61569d9c0fc9bedc640d78dec1ad4810403227e8460e85942c370f844484e9d91fba292f7c96351d42d&x-plex-token=gQVcRz_z_P6NHdKoTjRT&x-plex-advertising-identifier=&x-plex-advertising-donottrack=0&x-plex-drm=&x-plex-device-screen-resolution=&x-plex-device-vendor=&x-plex-version=&x-plex-session-id=&x-plex-playback-session-id=&x-plex-playback-id=&x-plex-provider-streaming-start=1725160108&autoPreview=0
+
+#EXTINF:-1 tvg-id="Cine Brasil" tvg-name="Cine Brasil" tvg-logo="https://ipgotv.net.br/tv/cine-brasil/img-cine-br.png" group-title="Filmes",Cine Brasil
+https://stmv6.voxtvhd.com.br/cinebrasil/cinebrasil/chunklist_w1629182212.m3u8
+
+
