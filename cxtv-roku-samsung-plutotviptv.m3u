@@ -1,10 +1,5 @@
 #EXTM3U x-tvg-url="https://raw.githubusercontent.com/matthuisman/i.mjh.nz/master/PlutoTV/all.xml,https://iptv-org.github.io/epg/guides/br/mi.tv.epg.xml,https://raw.githubusercontent.com/matthuisman/i.mjh.nz/master/Plex/all.xml,https://raw.githubusercontent.com/matthuisman/i.mjh.nz/master/SamsungTVPlus/all.xml"
-## Itv YouTube
-## 🔗 Dicas de EPG - apps: www.digitalbroders.xyz
-## 📧 Contato e 💰 Pix: caykebarbosayt@gmail.com 
-## 🆕 22-setembro-2022 | Novos canais Pluto TV Brasil: A culpa é do Cabral; Cocoricó; Os arquivos do FBI; Rede TV; The Ed Sullivan Show - em inglês; TV Cultura.
-## 🆕 15-setembro-2022 | Novos canais brasileiros *Band RS* e **Sebrae - Canal Empreender**. Novos canais em inglês e espanhol.
-## 🆕 17-setembro-2022 | Novos canais em inglês e espanhol.
+
 ### A novidade ### A novidade ### A novidade ### A novidade ### A novidade ### A novidade ### A novidade ### A novidade 
 #EXTINF:-1 tvg-id="62e010e6cd663f0007e57dc8" tvg-logo="https://images.pluto.tv/channels/62e010e6cd663f0007e57dc8/colorLogoPNG.png" group-title="A novidade",TV Cultura - episódios | Brasil: educativos e documentários
 https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/62e010e6cd663f0007e57dc8/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=rokuChannel&deviceMake=rokuChannel&deviceDNT=1
