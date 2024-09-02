@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LISTA DE CANAIS IPTV - DESATIVE CONEXÃO SEGURA</title>
+    <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: #fff;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #player {
+            flex: 1;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .video-js {
+            background-color: #000;
+        }
+
+        .video-js.fullscreen {
+            width: 100% !important;
+            height: 100% !important;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .video-js.reduced {
+            width: 600px;
+            height: 338px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 50%;
+            transform: translateY(-50%) translateX(-50%);
+        }
+
+        #canais {
+            width: 300px;
+            background-color: #222;
+            padding: 10px;
+            overflow-y: auto;
+            border-left: 2px solid #444;
+        }
+
+        #canais ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #canais li {
+            padding: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #444;
+        }
+
+        #canais li:hover {
+            background-color: #333;
+        }
+
+        #canais img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="player">
+        <video id="video-player" class="video-js vjs-default-skin reduced" controls></video>
+    </div>
+
+    <div id="canais">
+        <ul id="lista-canais">
+            <!-- Os itens da lista serão adicionados aqui -->
+        </ul>
+    </div>
+
+    <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/main/xxx.m3u";
+            var listaCanaisElemento = document.getElementById("lista-canais");
+            var video = videojs('video-player', {
+                controls: true,
+                autoplay: false,
+                preload: 'auto'
+            });
+
+            // Função para alternar entre tela cheia e tamanho reduzido
+            function toggleFullscreen() {
+                if (video.isFullscreen()) {
+                    video.exitFullscreen();
+                    video.el().classList.remove('fullscreen');
+                    video.el().classList.add('reduced');
+                    video.controlBar.hide();  // Oculta a barra de controle quando não estiver em tela cheia
+                } else {
+                    video.requestFullscreen();
+                    video.el().classList.remove('reduced');
+                    video.el().classList.add('fullscreen');
+                    video.controlBar.show();  // Mostra a barra de controle quando estiver em tela cheia
+                }
+            }
+
+            // Forçar o redimensionamento do vídeo
+            function ajustarTamanhoVideo() {
+                if (video.isFullscreen()) {
+                    video.el().classList.add('fullscreen');
+                    video.el().classList.remove('reduced');
+                } else {
+                    video.el().classList.add('reduced');
+                    video.el().classList.remove('fullscreen');
+                }
+            }
+
+            video.on('fullscreenchange', ajustarTamanhoVideo);
+
+            // Função para reconectar automaticamente em caso de falha
+            function configurarReconexao(player) {
+                player.on('error', function() {
+                    console.log('Tentando reconectar...');
+                    player.src({ src: video.src(), type: 'application/x-mpegURL' });
+                    player.play();
+                });
+            }
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", listaURL, true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var linhas = xhr.responseText.split('\n');
+                    var canais = [];
+
+                    for (var i = 0; i < linhas.length; i++) {
+                        if (linhas[i].startsWith('#EXTINF')) {
+                            var nome = linhas[i].split(',')[1];
+                            var link = linhas[i + 1];
+                            var logoURL = '';
+                            var logoMatch = linhas[i].match(/tvg-logo="([^"]+)"/);
+                            if (logoMatch) {
+                                logoURL = logoMatch[1];
+                            }
+
+                            canais.push({
+                                nome: nome,
+                                link: link,
+                                logoURL: logoURL
+                            });
+                        }
+                    }
+
+                    // Ordenar os canais por nome
+                    canais.sort(function(a, b) {
+                        return a.nome.localeCompare(b.nome);
+                    });
+
+                    // Adicionar os canais ao DOM
+                    canais.forEach(function(canal) {
+                        var itemLista = document.createElement("li");
+                        if (canal.logoURL) {
+                            var logoImg = document.createElement("img");
+                            logoImg.src = canal.logoURL;
+                            itemLista.appendChild(logoImg);
+                        }
+                        var nomeTexto = document.createTextNode(canal.nome);
+                        itemLista.appendChild(nomeTexto);
+
+                        itemLista.onclick = (function(url) {
+                            return function() {
+                                video.src({ src: url, type: 'application/x-mpegURL' });
+                                video.play();
+                                toggleFullscreen();
+                                configurarReconexao(video);
+                            };
+                        })(canal.link);
+
+                        listaCanaisElemento.appendChild(itemLista);
+                    });
+                } else if (xhr.readyState === 4) {
+                    alert("Erro ao carregar a lista de canais. Verifique a URL e a conexão de rede.");
+                }
+            };
+            xhr.send();
+        });
+    </script>
+</body>
+</html>
