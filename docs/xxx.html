@@ -10,7 +10,8 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #111;
+            background: url('https://4.bp.blogspot.com/-kWnrYWNYmos/WNTUz2ePvvI/AAAAAAAACUs/duO0GaSF3AgCa89Hro5VVPXIGxzrVilMgCLcB/s1600/Big%2BTeen%2BOrgy.gif') no-repeat center center fixed;
+            background-size: cover;
             color: #fff;
             display: flex;
             height: 100vh;
@@ -19,10 +20,12 @@
 
         #player {
             flex: 1;
-            background-color: #000;
+            background-color: rgba(0, 0, 0, 0.8);
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
+            z-index: 1; /* Coloca o player atrás da lista de canais */
         }
 
         .video-js {
@@ -49,10 +52,15 @@
 
         #canais {
             width: 300px;
-            background-color: #222;
+            background-color: rgba(34, 34, 34, 0.8);
             padding: 10px;
             overflow-y: auto;
             border-left: 2px solid #444;
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            z-index: 2; /* Coloca a lista de canais à frente do player */
         }
 
         #canais ul {
@@ -67,10 +75,12 @@
             display: flex;
             align-items: center;
             border-bottom: 1px solid #444;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         #canais li:hover {
-            background-color: #333;
+            background-color: #4CAF50; /* Cor verde ao passar o mouse */
+            color: #fff;
         }
 
         #canais img {
