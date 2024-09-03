@@ -6,7 +6,8 @@
     <title>TV DO BILL</title>
     <style>
         body {
-            background-color: #121212;
+            background: url('https://static.wixstatic.com/media/f21f2b_1237fdb938104273808d6029aa9d3b6c~mv2.jpeg/v1/fill/w_973,h_600,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f21f2b_1237fdb938104273808d6029aa9d3b6c~mv2.jpeg') no-repeat center center fixed;
+            background-size: cover;
             color: #ffffff;
             font-family: Arial, sans-serif;
             display: flex;
@@ -20,54 +21,53 @@
             font-size: 1.2rem;
             font-weight: bold;
             text-align: center;
+            background: rgba(0, 0, 0, 0.5); /* Adiciona um fundo escuro para o texto */
+            padding: 10px;
+            border-radius: 8px;
         }
         .container {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 20px;
             width: 90%;
-            max-width: 800px;
+            max-width: 1200px;
             text-align: center;
         }
         .button {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: flex-start;
-            background-color: #1e1e1e;
-            border: 2px solid #333;
-            border-radius: 8px;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 2px solid #444;
+            border-radius: 12px;
             padding: 15px;
-            transition: transform 0.2s, background-color 0.2s;
+            transition: transform 0.3s, background-color 0.3s;
             cursor: pointer;
             text-decoration: none;
             color: #ffffff;
         }
         .button:hover {
             transform: scale(1.05);
-            background-color: #333;
+            background-color: #4CAF50; /* Cor verde para o fundo dos botões ao passar o mouse */
         }
         .icon {
-            width: 60px;
-            height: 60px;
-            margin-right: 20px;
-            border-radius: 8px;
+            width: 80px;
+            height: 80px;
+            border-radius: 12px;
+            margin-bottom: 10px;
+            object-fit: cover;
         }
         .text {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: bold;
-            text-align: left;
         }
         @media screen and (max-width: 768px) {
-            .button {
-                flex-direction: column;
-                align-items: center;
-            }
-            .icon {
-                margin-right: 0;
-                margin-bottom: 10px;
+            .container {
+                grid-template-columns: 1fr;
             }
             .text {
-                text-align: center;
+                font-size: 1rem;
             }
         }
     </style>
@@ -78,79 +78,99 @@
     </div>
     <div class="container">
         <a href="http://app.ss-iptv.com/" class="button">
-            <img src="https://i0.wp.com/www.iptvplayers.com/wp-content/uploads/2021/03/SS-IPTV-11.png?fit=1080%2C628&ssl=1" alt="Canais Abertos" class="icon">
+            <img src="https://i0.wp.com/www.iptvplayers.com/wp-content/uploads/2021/03/SS-IPTV-11.png?fit=1080%2C628&ssl=1" alt="APP SS-IPTV" class="icon">
             <span class="text">APP SS-IPTV - CASO O PLAYER WEB NÃO CARREGUE NO SEU NAVEGADOR - ADICIONE NAS CONFIGURAÇÕES A LISTA https://bit.ly/tvdobill-iptv</span>
-         </a>
+        </a>
         <a href="https://drive.google.com/file/d/1vUUCdGvQVjodBOhb0ZfXizZwRJFXNgAi/view?usp=drive_link" class="button">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiajsh7GemfO2m3pJ1Oe5ty_ivEGNZIRBw9ehq1w4DIxq9sj9_JoUE-2NVm-D5Dtp4bXANQU2GxDC2FkJ1-SQ3NDTE-u5Ioog9fR6Wf1qryuWPKjL6auKYzVZWSK9c_yvwCa1x2so-9DRhqMjlZnBTlUW4Ms3jipH-O929UX4U1QqYPgIdlwDFHVfLGEw/s640/Simple%20IPTV%20Screenshots%201.jpg" alt="Canais Abertos" class="icon">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiajsh7GemfO2m3pJ1Oe5ty_ivEGNZIRBw9ehq1w4DIxq9sj9_JoUE-2NVm-D5Dtp4bXANQU2GxDC2FkJ1-SQ3NDTE-u5Ioog9fR6Wf1qryuWPKjL6auKYzVZWSK9c_yvwCa1x2so-9DRhqMjlZnBTlUW4Ms3jipH-O929UX4U1QqYPgIdlwDFHVfLGEw/s640/Simple%20IPTV%20Screenshots%201.jpg" alt="Simple IPTV" class="icon">
             <span class="text">SIMPLE IPTV PARA TV BOX E CELULAR - ADICIONE A LISTA https://bit.ly/tvdobill-iptv</span>
         </a>
         <a href="https://listadobill.github.io/tv/canaisabertosdelinguaportuguesa" class="button">
-            <img src="https://lisbonlanguagecafe.pt/wp-content/uploads/2019/07/portugal-brasil.jpg" alt="Canais Abertos" class="icon">
-            <span class="text">CANAIS DO BRASIL E OUTROS PAÍSES DE LÍNGUA PORTUGUESA ABERTOS - IPTV ORG </span>
+            <img src="https://lisbonlanguagecafe.pt/wp-content/uploads/2019/07/portugal-brasil.jpg" alt="Canais do Brasil e Outros Países de Língua Portuguesa" class="icon">
+            <span class="text">CANAIS DO BRASIL E OUTROS PAÍSES DE LÍNGUA PORTUGUESA ABERTOS - IPTV ORG</span>
         </a>
         <a href="https://listadobill.github.io/tv/catarinenses" class="button">
-            <img src="https://besthqwallpapers.com/Uploads/21-7-2018/60141/thumb2-flag-of-santa-catarina-4k-state-of-brazil-silk-texture-santa-catarina-flag.jpg" alt="Canais Abertos" class="icon">
+            <img src="https://besthqwallpapers.com/Uploads/21-7-2018/60141/thumb2-flag-of-santa-catarina-4k-state-of-brazil-silk-texture-santa-catarina-flag.jpg" alt="Canais Catarinenses" class="icon">
             <span class="text">CANAIS CATARINENSES ABERTOS - IPTV ORG</span>
         </a>
         <a href="https://listadobill.github.io/tv/iptv" class="button">
             <img src="https://setplex.com/blog/wp-content/uploads/2017/08/iptv-business.jpg" alt="Lista IPTV" class="icon">
             <span class="text">LISTA DE CANAIS IPTV - DESATIVE CONEXÃO SEGURA</span>
-            </a>
-            <a href="https://listadobill.github.io/tv/cxtv_plutotv_roku_sansung_tv.html" class="button">
-            <img src="https://androidayuda.com/wp-content/uploads/2019/11/VER-IPTV-ANDROID.jpg" alt="Lista IPTV" class="icon">
+        </a>
+        <a href="https://listadobill.github.io/tv/cxtv_plutotv_roku_sansung_tv.html" class="button">
+            <img src="https://androidayuda.com/wp-content/uploads/2019/11/VER-IPTV-ANDROID.jpg" alt="CXTV - TV - ROKU TV - SAMSUNG TV - Pluto TV" class="icon">
             <span class="text">CXTV - TV - ROKU TV - SAMSUNG TV - Pluto TV - IPTV</span>
-         </a>
-            <a href="https://listadobill.github.io/tv/musicas" class="button">
-            <img src="https://townsquare.media/site/295/files/2022/10/attachment-BandNames.jpg?w=980&q=75" alt="Lista IPTV" class="icon">
+        </a>
+        <a href="https://listadobill.github.io/tv/musicas" class="button">
+            <img src="https://townsquare.media/site/295/files/2022/10/attachment-BandNames.jpg?w=980&q=75" alt="Canais de Músicas" class="icon">
             <span class="text">CANAIS DE MÚSICAS - IPTV</span>
-                </a>
-            <a href="https://listadobill.github.io/tv/filmes" class="button">
-            <img src="https://ciadoslivros.com.br/wp-content/uploads/2023/05/Filmes-Pixar.jpg" alt="Lista IPTV" class="icon">
+        </a>
+        <a href="https://listadobill.github.io/tv/filmes" class="button">
+            <img src="https://ciadoslivros.com.br/wp-content/uploads/2023/05/Filmes-Pixar.jpg" alt="Canais de Filmes" class="icon">
             <span class="text">CANAIS DE FILMES - IPTV</span>
         </a>
-            <a href="https://listadobill.github.io/tv/desenhos" class="button">
-            <img src="https://escolaeducacao.com.br/wp-content/uploads/2019/07/capa-18.jpg" alt="Lista IPTV" class="icon">
+        <a href="https://listadobill.github.io/tv/desenhos" class="button">
+            <img src="https://escolaeducacao.com.br/wp-content/uploads/2019/07/capa-18.jpg" alt="Canais de Desenhos" class="icon">
             <span class="text">CANAIS DE DESENHOS - IPTV</span>
         </a>
-             <a href="https://www.olhosnatv.com.br/" class="button">
-            <img src="https://www.firesticktricks.com/wp-content/uploads/2021/05/iptv.jpg" alt="Canais Online" class="icon">
+        <a href="https://www.olhosnatv.com.br/" class="button">
+            <img src="https://www.firesticktricks.com/wp-content/uploads/2021/05/iptv.jpg" alt="Olhos na TV" class="icon">
             <span class="text">OLHOS NA TV</span>
         </a>
-         <a href="https://www.cxtv.com.br/tv/paises/tvs-brasil" class="button">
-            <img src="https://www.cxtv.com.br/assets/img/ui/logo-header.webp" alt="Canais Online" class="icon">
+        <a href="https://www.cxtv.com.br/tv/paises/tvs-brasil" class="button">
+            <img src="https://www.cxtv.com.br/assets/img/ui/logo-header.webp" alt="CXTV" class="icon">
             <span class="text">CXTV - WEBSITE COM CENTENAS DE CANAIS WEB DO BRASIL E DO MUNDO</span>
         </a>
         <a href="https://listadobill.github.io/tv/tvonline" class="button">
-            <img src="https://stcotvfoco.com.br/2016/05/emissoras-brasileiras.jpg" alt="Canais Online" class="icon">
-            <span class="text">CANAIS ONLINE - USE BLOQUEADOR DE ANUNCIOS</span>
+            <img src="https://stcotv.com/wp-content/uploads/2021/09/2-1.png" alt="TV Online" class="icon">
+            <span class="text">TV ONLINE - DIVERSOS CANAIS</span>
         </a>
-         <a href="https://redecanaistv.dev/" class="button">
-            <img src="https://play-lh.googleusercontent.com/px57gpTHiYbaPNmcEARjrHvGAV9womxDd-GfeendGhSxF5cJkd5hKiAuymotcxS4AA" alt="Canais Online" class="icon">
-            <span class="text">TV ONLINE REDE CANAIS - USE BLOQUEADOR DE ANUNCIOS</span>
+        <a href="https://assista.tv/" class="button">
+            <img src="https://i.pinimg.com/originals/f9/ae/04/f9ae04e20c6d6ea12e772a89d1b4376f.png" alt="Assista TV" class="icon">
+            <span class="text">ASSISTA TV - STREAMING</span>
         </a>
-          <a href="https://varioscanais.com/" class="button">
-            <img src="https://varioscanais.com/wp-content/uploads/2023/04/logo_varioscanais.png" alt="Canais Online" class="icon">
-            <span class="text">VÁRIOS CANAIS - USE BLOQUEADOR DE ANUNCIOS</span>
+        <a href="https://streamtvg.com/" class="button">
+            <img src="https://www.tvsatellite.co/wp-content/uploads/2017/12/streamtv.png" alt="Stream TV" class="icon">
+            <span class="text">STREAM TV - STREAMING</span>
+        </a>
+        <a href="https://www.playtv.com.br/" class="button">
+            <img src="https://playtv.com.br/img/logo.png" alt="Play TV" class="icon">
+            <span class="text">PLAY TV - STREAMING</span>
+        </a>
+        <a href="https://www.iptvch.com/" class="button">
+            <img src="https://iptvch.com/images/iptvch.png" alt="IPTV CH" class="icon">
+            <span class="text">IPTV CH - STREAMING</span>
+        </a>
+        <a href="https://www.tvcanal.com/" class="button">
+            <img src="https://static.wixstatic.com/media/f21f2b_4d3d4a431bbd4d5ab4eaf6b162059760~mv2.png/v1/fill/w_375,h_375,al_c,lg_1,q_85,enc_auto/f21f2b_4d3d4a431bbd4d5ab4eaf6b162059760~mv2.png" alt="TV Canal" class="icon">
+            <span class="text">TV CANAL - STREAMING</span>
+        </a>
+        <a href="https://www.redecanais.com/" class="button">
+            <img src="https://static.wixstatic.com/media/f21f2b_1237fdb938104273808d6029aa9d3b6c~mv2.jpeg" alt="Rede Canais" class="icon">
+            <span class="text">REDE CANAIS - USE BLOQUEADOR DE ANÚNCIOS</span>
+        </a>
+        <a href="https://varioscanais.com/" class="button">
+            <img src="https://varioscanais.com/wp-content/uploads/2023/04/logo_varioscanais.png" alt="Vários Canais" class="icon">
+            <span class="text">VÁRIOS CANAIS - USE BLOQUEADOR DE ANÚNCIOS</span>
         </a>
         <a href="https://pluto.tv/" class="button">
-            <img src="https://play-lh.googleusercontent.com/px57gpTHiYbaPNmcEARjrHvGAV9womxDd-GfeendGhSxF5cJkd5hKiAuymotcxS4AA" alt="Filmes e Séries Online" class="icon">
-            <span class="text">FILMES E SÉRIES - REDE CANAIS - USE BLOQUEADOR DE ANUNCIOS</span>
+            <img src="https://play-lh.googleusercontent.com/px57gpTHiYbaPNmcEARjrHvGAV9womxDd-GfeendGhSxF5cJkd5hKiAuymotcxS4AA" alt="Filmes e Séries - Rede Canais" class="icon">
+            <span class="text">FILMES E SÉRIES - REDE CANAIS - USE BLOQUEADOR DE ANÚNCIOS</span>
         </a>
-         <a href="https://pluto.tv/" class="button">
-            <img src="https://hd-report.com/wp-content/uploads/2020/07/pluto-tv-square.png" alt="+SBT" class="icon">
+        <a href="https://pluto.tv/" class="button">
+            <img src="https://hd-report.com/wp-content/uploads/2020/07/pluto-tv-square.png" alt="Pluto TV" class="icon">
             <span class="text">PLUTO TV - STREAMING</span>
         </a>
         <a href="https://mais.sbt.com.br/" class="button">
             <img src="https://mais.sbt.com.br/_next/image?url=https%3A%2F%2Fcdn.one.accedo.tv%2Ffiles%2F659e5fafa0e84500189c674d%3FsessionKey%3D01J6DM6TGB4HXTETVPAVX628RV1FEDE23736%23asset&w=256&q=75" alt="+SBT" class="icon">
             <span class="text">+SBT - STREAMING</span>
-             </a>
+        </a>
         <a href="https://www.runtime.tv/" class="button">
-            <img src="https://www.runtime.tv/themes/custom/run/runtime/logo.png" alt="RUNTIME" class="icon">
+            <img src="https://www.runtime.tv/themes/custom/run/runtime/logo.png" alt="Runtime" class="icon">
             <span class="text">RUNTIME - STREAMING</span>
         </a>
         <a href="https://watch.plex.tv/" class="button">
-            <img src="http://www.broadbandtvnews.com/wp-content/uploads/2014/12/plex.jpg" alt="RUNTIME" class="icon">
+            <img src="http://www.broadbandtvnews.com/wp-content/uploads/2014/12/plex.jpg" alt="Plex" class="icon">
             <span class="text">PLEX - STREAMING</span>
         </a>
     </div>
