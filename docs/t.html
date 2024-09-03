@@ -24,6 +24,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
+            z-index: 1; /* Coloca o player atrás da lista de canais */
         }
 
         .video-js {
@@ -54,6 +56,11 @@
             padding: 10px;
             overflow-y: auto;
             border-left: 2px solid #444;
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            z-index: 2; /* Coloca a lista de canais à frente do player */
         }
 
         #canais ul {
