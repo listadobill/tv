@@ -10,7 +10,8 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #111;
+            background: url('https://static.wixstatic.com/media/f21f2b_1237fdb938104273808d6029aa9d3b6c~mv2.jpeg/v1/fill/w_973,h_600,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f21f2b_1237fdb938104273808d6029aa9d3b6c~mv2.jpeg') no-repeat center center fixed;
+            background-size: cover;
             color: #fff;
             display: flex;
             height: 100vh;
@@ -19,21 +20,47 @@
 
         #player {
             flex: 1;
-            background-color: #000;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1; /* Coloca o player atrás da lista de canais */
         }
 
         .video-js {
-            width: 100%;
-            height: 100%;
             background-color: #000;
+        }
+
+        .video-js.fullscreen {
+            width: 100% !important;
+            height: 100% !important;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .video-js.reduced {
+            width: 600px;
+            height: 338px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 50%;
+            transform: translateY(-50%) translateX(-50%);
         }
 
         #canais {
             width: 300px;
-            background-color: #222;
+            background-color: rgba(34, 34, 34, 0.8);
             padding: 10px;
             overflow-y: auto;
             border-left: 2px solid #444;
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            z-index: 2; /* Coloca a lista de canais à frente do player */
         }
 
         #canais ul {
@@ -48,10 +75,12 @@
             display: flex;
             align-items: center;
             border-bottom: 1px solid #444;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         #canais li:hover {
-            background-color: #333;
+            background-color: #4CAF50; /* Cor verde ao passar o mouse */
+            color: #fff;
         }
 
         #canais img {
@@ -63,7 +92,7 @@
 </head>
 <body>
     <div id="player">
-        <video id="video-player" class="video-js vjs-default-skin" controls></video>
+        <video id="video-player" class="video-js vjs-default-skin reduced" controls></video>
     </div>
 
     <div id="canais">
@@ -83,14 +112,33 @@
                 preload: 'auto'
             });
 
-            // Função para entrar em tela cheia
-            function entrarEmTelaCheia() {
+            // Função para alternar entre tela cheia e tamanho reduzido
+            function toggleFullscreen() {
                 if (video.isFullscreen()) {
                     video.exitFullscreen();
+                    video.el().classList.remove('fullscreen');
+                    video.el().classList.add('reduced');
+                    video.controlBar.hide();  // Oculta a barra de controle quando não estiver em tela cheia
                 } else {
                     video.requestFullscreen();
+                    video.el().classList.remove('reduced');
+                    video.el().classList.add('fullscreen');
+                    video.controlBar.show();  // Mostra a barra de controle quando estiver em tela cheia
                 }
             }
+
+            // Forçar o redimensionamento do vídeo
+            function ajustarTamanhoVideo() {
+                if (video.isFullscreen()) {
+                    video.el().classList.add('fullscreen');
+                    video.el().classList.remove('reduced');
+                } else {
+                    video.el().classList.add('reduced');
+                    video.el().classList.remove('fullscreen');
+                }
+            }
+
+            video.on('fullscreenchange', ajustarTamanhoVideo);
 
             // Função para reconectar automaticamente em caso de falha
             function configurarReconexao(player) {
@@ -146,7 +194,7 @@
                             return function() {
                                 video.src({ src: url, type: 'application/x-mpegURL' });
                                 video.play();
-                                entrarEmTelaCheia();
+                                toggleFullscreen();
                                 configurarReconexao(video);
                             };
                         })(canal.link);
