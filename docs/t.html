@@ -54,19 +54,21 @@
             width: 300px;
             background-color: rgba(34, 34, 34, 0.8);
             padding: 10px;
-            overflow-y: auto;
+            overflow: hidden; /* Remove a barra de rolagem */
             border-left: 2px solid #444;
-            position: absolute;
-            top: 0;
-            right: 0;
+            position: relative;
             height: 100%;
-            z-index: 2;
+            display: flex;
+            flex-direction: column;
         }
 
         #canais ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
+            overflow: hidden; /* Remove a barra de rolagem */
+            flex: 1;
+            padding-right: 30px; /* Espaço para as setas */
         }
 
         #canais li {
@@ -94,21 +96,23 @@
             background-color: rgba(34, 34, 34, 0.8);
             color: white;
             border: none;
-            width: 100%;
-            padding: 10px;
+            width: 30px;
+            height: 30px;
             cursor: pointer;
-            position: absolute;
-            z-index: 3;
             font-size: 20px;
             text-align: center;
+            border-radius: 5px;
+            position: absolute;
+            right: 0;
+            z-index: 3;
         }
 
         #scrollUp {
-            top: 0;
+            top: 10px;
         }
 
         #scrollDown {
-            bottom: 0;
+            bottom: 10px;
         }
 
         /* Customização dos controles do video.js */
@@ -213,11 +217,10 @@
         <ul id="lista-canais">
             <!-- Os itens da lista serão adicionados aqui -->
         </ul>
+        <!-- Botões de rolagem -->
+        <button id="scrollUp">▲</button>
+        <button id="scrollDown">▼</button>
     </div>
-
-    <!-- Botões de rolagem -->
-    <button id="scrollUp">▲</button>
-    <button id="scrollDown">▼</button>
 
     <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
     <script>
@@ -238,11 +241,11 @@
                 }
             }
 
-            function configurarReconexao(player) {
-                player.on('error', function() {
+            function configurarReconexao(video) {
+                video.on('error', function() {
                     setTimeout(function() {
-                        player.src({ src: player.src(), type: 'application/x-mpegURL' });
-                        player.play();
+                        video.load();
+                        video.play();
                     }, 5000); // Tenta reconectar após 5 segundos
                 });
             }
