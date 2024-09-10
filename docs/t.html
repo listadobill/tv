@@ -115,8 +115,11 @@
         .video-js .vjs-control-bar {
             font-size: 1.5em; /* Aumenta o tamanho da fonte dos controles */
             height: 70px; /* Aumenta a altura da barra de controle */
-            background: rgba(0, 0, 0, 0.7); /* Fundo translucido da barra de controle */
+            background: rgba(0, 0, 0, 0); /* Barra de controle totalmente transparente */
             border-top: 2px solid #f00; /* Borda superior vermelha */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .video-js .vjs-play-control,
@@ -131,6 +134,7 @@
             color: #f00; /* Cor dos ícones e texto dos botões */
             border: 2px solid #f00; /* Borda vermelha ao redor dos botões */
             border-radius: 5px; /* Bordas arredondadas para os botões */
+            margin: 0 5px; /* Espaçamento entre os botões */
         }
 
         .video-js .vjs-play-control:hover,
@@ -169,6 +173,35 @@
         .video-js .vjs-text-track-display {
             font-size: 1.2em; /* Aumenta o tamanho da fonte das legendas */
         }
+
+        /* Botões de controle do player centralizados e grandes */
+        .video-js .vjs-control-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .video-js .vjs-play-control,
+        .video-js .vjs-fullscreen-control {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 80px; /* Tamanho maior para os botões */
+            height: 80px; /* Tamanho maior para os botões */
+            font-size: 2em; /* Tamanho da fonte maior */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .video-js .vjs-play-control {
+            left: calc(50% - 90px); /* Posiciona o botão de play à esquerda do centro */
+        }
+
+        .video-js .vjs-fullscreen-control {
+            left: calc(50% + 10px); /* Posiciona o botão de tela cheia à direita do centro */
+        }
     </style>
 </head>
 <body>
@@ -197,54 +230,33 @@
                 preload: 'auto'
             });
 
-            // Função para alternar entre tela cheia e tamanho reduzido
             function toggleFullscreen() {
                 if (video.isFullscreen()) {
                     video.exitFullscreen();
-                    video.el().classList.remove('fullscreen');
-                    video.el().classList.add('reduced');
-                    video.controlBar.hide();
                 } else {
                     video.requestFullscreen();
-                    video.el().classList.remove('reduced');
-                    video.el().classList.add('fullscreen');
-                    video.controlBar.show();
                 }
             }
-
-            function ajustarTamanhoVideo() {
-                if (video.isFullscreen()) {
-                    video.el().classList.add('fullscreen');
-                    video.el().classList.remove('reduced');
-                } else {
-                    video.el().classList.add('reduced');
-                    video.el().classList.remove('fullscreen');
-                }
-            }
-
-            video.on('fullscreenchange', ajustarTamanhoVideo);
 
             function configurarReconexao(player) {
                 player.on('error', function() {
-                    console.log('Tentando reconectar...');
-                    player.src({ src: video.src(), type: 'application/x-mpegURL' });
-                    player.play();
+                    setTimeout(function() {
+                        player.src({ src: player.src(), type: 'application/x-mpegURL' });
+                        player.play();
+                    }, 5000); // Tenta reconectar após 5 segundos
                 });
             }
 
-            // Função de rolagem da lista
             function scrollListaCanais(direcao) {
-                var listaCanais = document.getElementById("canais");
-                var scrollAmount = 50; // Define a quantidade de pixels para rolar
-
+                var lista = document.getElementById('lista-canais');
+                var scrollAmount = 50;
                 if (direcao === 'up') {
-                    listaCanais.scrollTop -= scrollAmount;
+                    lista.scrollTop -= scrollAmount;
                 } else if (direcao === 'down') {
-                    listaCanais.scrollTop += scrollAmount;
+                    lista.scrollTop += scrollAmount;
                 }
             }
 
-            // Adicionar eventos para os botões de rolagem
             document.getElementById('scrollUp').addEventListener('click', function() {
                 scrollListaCanais('up');
             });
