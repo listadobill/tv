@@ -29,46 +29,47 @@
         }
 
         .video-js {
-            background-color: #000;
+            background-color: transparent;
         }
 
-        .video-js.fullscreen {
-            width: 100% !important;
-            height: 100% !important;
-            position: absolute;
-            top: 0;
-            left: 0;
+        .video-js .vjs-control-bar {
+            background: transparent;
         }
 
-        .video-js.reduced {
-            width: 600px;
-            height: 338px;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            top: 50%;
-            transform: translateY(-50%) translateX(-50%);
+        .video-js .vjs-play-control,
+        .video-js .vjs-fullscreen-control,
+        .video-js .vjs-progress-control,
+        .video-js .vjs-volume-control {
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+            color: #ff0; /* Cor amarela */
+        }
+
+        .video-js .vjs-play-control:hover,
+        .video-js .vjs-fullscreen-control:hover,
+        .video-js .vjs-progress-control:hover,
+        .video-js .vjs-volume-control:hover {
+            background-color: #0f0; /* Cor verde ao passar o mouse */
         }
 
         #canais {
             width: 300px;
             background-color: rgba(34, 34, 34, 0.8);
             padding: 10px;
-            overflow: hidden; /* Remove a barra de rolagem */
+            overflow-y: auto;
             border-left: 2px solid #444;
-            position: relative;
+            position: absolute;
+            top: 0;
+            right: 0;
             height: 100%;
-            display: flex;
-            flex-direction: column;
+            z-index: 2;
         }
 
         #canais ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
-            overflow: hidden; /* Remove a barra de rolagem */
-            flex: 1;
-            padding-right: 30px; /* Espaço para as setas */
         }
 
         #canais li {
@@ -91,120 +92,27 @@
             margin-right: 10px;
         }
 
-        /* Estilo para os botões de rolagem */
-        #scrollUp, #scrollDown {
-            background-color: rgba(34, 34, 34, 0.8);
-            color: white;
+        .scroll-btn {
+            background-color: #444;
+            color: #fff;
             border: none;
-            width: 30px;
-            height: 30px;
+            padding: 10px;
             cursor: pointer;
-            font-size: 20px;
-            text-align: center;
-            border-radius: 5px;
-            position: absolute;
-            right: 0;
-            z-index: 3;
-        }
-
-        #scrollUp {
-            top: 10px;
-        }
-
-        #scrollDown {
-            bottom: 10px;
-        }
-
-        /* Customização dos controles do video.js */
-        .video-js .vjs-control-bar {
-            font-size: 1.5em; /* Aumenta o tamanho da fonte dos controles */
-            height: 70px; /* Aumenta a altura da barra de controle */
-            background: rgba(0, 0, 0, 0); /* Barra de controle totalmente transparente */
-            border-top: 2px solid #f00; /* Borda superior vermelha */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .video-js .vjs-play-control,
-        .video-js .vjs-volume-control,
-        .video-js .vjs-fullscreen-control,
-        .video-js .vjs-mute-control,
-        .video-js .vjs-current-time,
-        .video-js .vjs-duration {
-            width: 60px; /* Aumenta a largura dos controles */
-            height: 60px; /* Aumenta a altura dos controles */
-            background-color: #000; /* Cor de fundo dos botões */
-            color: #f00; /* Cor dos ícones e texto dos botões */
-            border: 2px solid #f00; /* Borda vermelha ao redor dos botões */
-            border-radius: 5px; /* Bordas arredondadas para os botões */
-            margin: 0 5px; /* Espaçamento entre os botões */
-        }
-
-        .video-js .vjs-play-control:hover,
-        .video-js .vjs-volume-control:hover,
-        .video-js .vjs-fullscreen-control:hover,
-        .video-js .vjs-mute-control:hover {
-            background-color: #f00; /* Cor de fundo dos botões ao passar o mouse */
-            color: #fff; /* Cor dos ícones e texto ao passar o mouse */
-        }
-
-        .video-js .vjs-fullscreen-control {
-            color: #f00; /* Cor do ícone de tela cheia */
-        }
-
-        .video-js .vjs-fullscreen-control.vjs-control.vjs-fullscreen {
-            background-color: #f00; /* Cor de fundo quando em tela cheia */
-        }
-
-        .video-js .vjs-progress-holder {
-            height: 20px; /* Aumenta a altura da barra de progresso */
-            background-color: rgba(0, 0, 0, 0.5); /* Fundo translucido da barra de progresso */
-        }
-
-        .video-js .vjs-play-progress {
-            background-color: #4CAF50; /* Cor da parte reproduzida da barra */
-        }
-
-        .video-js .vjs-load-progress {
-            background-color: rgba(255, 255, 255, 0.3); /* Cor da parte carregada da barra */
-        }
-
-        .video-js .vjs-slider {
-            height: 100%; /* Ajusta a altura do slider */
-        }
-
-        .video-js .vjs-text-track-display {
-            font-size: 1.2em; /* Aumenta o tamanho da fonte das legendas */
-        }
-
-        /* Botões de controle do player centralizados e grandes */
-        .video-js .vjs-control-bar {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .video-js .vjs-play-control,
-        .video-js .vjs-fullscreen-control {
+            font-size: 1.5rem;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            width: 80px; /* Tamanho maior para os botões */
-            height: 80px; /* Tamanho maior para os botões */
-            font-size: 2em; /* Tamanho da fonte maior */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 10;
+            z-index: 3;
         }
 
-        .video-js .vjs-play-control {
-            left: calc(50% - 90px); /* Posiciona o botão de play à esquerda do centro */
+        .scroll-btn.up {
+            top: 10px;
+            right: 10px;
         }
 
-        .video-js .vjs-fullscreen-control {
-            left: calc(50% + 10px); /* Posiciona o botão de tela cheia à direita do centro */
+        .scroll-btn.down {
+            bottom: 10px;
+            right: 10px;
         }
     </style>
 </head>
@@ -214,12 +122,11 @@
     </div>
 
     <div id="canais">
+        <button class="scroll-btn up" onclick="scrollCanais(-100)">▲</button>
+        <button class="scroll-btn down" onclick="scrollCanais(100)">▼</button>
         <ul id="lista-canais">
             <!-- Os itens da lista serão adicionados aqui -->
         </ul>
-        <!-- Botões de rolagem -->
-        <button id="scrollUp">▲</button>
-        <button id="scrollDown">▼</button>
     </div>
 
     <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
@@ -236,37 +143,36 @@
             function toggleFullscreen() {
                 if (video.isFullscreen()) {
                     video.exitFullscreen();
+                    video.el().classList.remove('fullscreen');
+                    video.el().classList.add('reduced');
+                    video.controlBar.hide();
                 } else {
                     video.requestFullscreen();
+                    video.el().classList.remove('reduced');
+                    video.el().classList.add('fullscreen');
+                    video.controlBar.show();
                 }
             }
 
-            function configurarReconexao(video) {
-                video.on('error', function() {
-                    setTimeout(function() {
-                        video.load();
-                        video.play();
-                    }, 5000); // Tenta reconectar após 5 segundos
+            function ajustarTamanhoVideo() {
+                if (video.isFullscreen()) {
+                    video.el().classList.add('fullscreen');
+                    video.el().classList.remove('reduced');
+                } else {
+                    video.el().classList.add('reduced');
+                    video.el().classList.remove('fullscreen');
+                }
+            }
+
+            video.on('fullscreenchange', ajustarTamanhoVideo);
+
+            function configurarReconexao(player) {
+                player.on('error', function() {
+                    console.log('Tentando reconectar...');
+                    player.src({ src: video.src(), type: 'application/x-mpegURL' });
+                    player.play();
                 });
             }
-
-            function scrollListaCanais(direcao) {
-                var lista = document.getElementById('lista-canais');
-                var scrollAmount = 50;
-                if (direcao === 'up') {
-                    lista.scrollTop -= scrollAmount;
-                } else if (direcao === 'down') {
-                    lista.scrollTop += scrollAmount;
-                }
-            }
-
-            document.getElementById('scrollUp').addEventListener('click', function() {
-                scrollListaCanais('up');
-            });
-
-            document.getElementById('scrollDown').addEventListener('click', function() {
-                scrollListaCanais('down');
-            });
 
             var xhr = new XMLHttpRequest();
             xhr.open("GET", listaURL, true);
@@ -293,12 +199,10 @@
                         }
                     }
 
-                    // Ordenar os canais por nome
                     canais.sort(function(a, b) {
                         return a.nome.localeCompare(b.nome);
                     });
 
-                    // Adicionar os canais ao DOM
                     canais.forEach(function(canal) {
                         var itemLista = document.createElement("li");
                         if (canal.logoURL) {
@@ -326,6 +230,11 @@
             };
             xhr.send();
         });
+
+        function scrollCanais(direcao) {
+            var canais = document.getElementById('canais');
+            canais.scrollTop += direcao;
+        }
     </script>
 </body>
 </html>
