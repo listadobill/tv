@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LISTA DE CANAIS IPTV 02 - DESATIVE CONEXÃO SEGURA</title>
+    <title>LISTA DE CANAIS IPTV - DESATIVE CONEXÃO SEGURA</title>
     <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
     <style>
         body {
@@ -25,7 +25,7 @@
             justify-content: center;
             align-items: center;
             position: relative;
-            z-index: 1; /* Coloca o player atrás da lista de canais */
+            z-index: 1;
         }
 
         .video-js {
@@ -60,7 +60,7 @@
             top: 0;
             right: 0;
             height: 100%;
-            z-index: 2; /* Coloca a lista de canais à frente do player */
+            z-index: 2;
         }
 
         #canais ul {
@@ -79,7 +79,7 @@
         }
 
         #canais li:hover {
-            background-color: #4CAF50; /* Cor verde ao passar o mouse */
+            background-color: #4CAF50;
             color: #fff;
         }
 
@@ -87,6 +87,87 @@
             width: 40px;
             height: 40px;
             margin-right: 10px;
+        }
+
+        /* Estilo para os botões de rolagem */
+        #scrollUp, #scrollDown {
+            background-color: rgba(34, 34, 34, 0.8);
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 10px;
+            cursor: pointer;
+            position: absolute;
+            z-index: 3;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #scrollUp {
+            top: 0;
+        }
+
+        #scrollDown {
+            bottom: 0;
+        }
+
+        /* Customização dos controles do video.js */
+        .video-js .vjs-control-bar {
+            font-size: 1.5em; /* Aumenta o tamanho da fonte dos controles */
+            height: 70px; /* Aumenta a altura da barra de controle */
+            background: rgba(0, 0, 0, 0.7); /* Fundo translucido da barra de controle */
+            border-top: 2px solid #f00; /* Borda superior vermelha */
+        }
+
+        .video-js .vjs-play-control,
+        .video-js .vjs-volume-control,
+        .video-js .vjs-fullscreen-control,
+        .video-js .vjs-mute-control,
+        .video-js .vjs-current-time,
+        .video-js .vjs-duration {
+            width: 60px; /* Aumenta a largura dos controles */
+            height: 60px; /* Aumenta a altura dos controles */
+            background-color: #000; /* Cor de fundo dos botões */
+            color: #f00; /* Cor dos ícones e texto dos botões */
+            border: 2px solid #f00; /* Borda vermelha ao redor dos botões */
+            border-radius: 5px; /* Bordas arredondadas para os botões */
+        }
+
+        .video-js .vjs-play-control:hover,
+        .video-js .vjs-volume-control:hover,
+        .video-js .vjs-fullscreen-control:hover,
+        .video-js .vjs-mute-control:hover {
+            background-color: #f00; /* Cor de fundo dos botões ao passar o mouse */
+            color: #fff; /* Cor dos ícones e texto ao passar o mouse */
+        }
+
+        .video-js .vjs-fullscreen-control {
+            color: #f00; /* Cor do ícone de tela cheia */
+        }
+
+        .video-js .vjs-fullscreen-control.vjs-control.vjs-fullscreen {
+            background-color: #f00; /* Cor de fundo quando em tela cheia */
+        }
+
+        .video-js .vjs-progress-holder {
+            height: 20px; /* Aumenta a altura da barra de progresso */
+            background-color: rgba(0, 0, 0, 0.5); /* Fundo translucido da barra de progresso */
+        }
+
+        .video-js .vjs-play-progress {
+            background-color: #4CAF50; /* Cor da parte reproduzida da barra */
+        }
+
+        .video-js .vjs-load-progress {
+            background-color: rgba(255, 255, 255, 0.3); /* Cor da parte carregada da barra */
+        }
+
+        .video-js .vjs-slider {
+            height: 100%; /* Ajusta a altura do slider */
+        }
+
+        .video-js .vjs-text-track-display {
+            font-size: 1.2em; /* Aumenta o tamanho da fonte das legendas */
         }
     </style>
 </head>
@@ -101,10 +182,14 @@
         </ul>
     </div>
 
+    <!-- Botões de rolagem -->
+    <button id="scrollUp">▲</button>
+    <button id="scrollDown">▼</button>
+
     <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/main/iptv_2.m3u";
+            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/main/iptv.m3u";
             var listaCanaisElemento = document.getElementById("lista-canais");
             var video = videojs('video-player', {
                 controls: true,
@@ -118,16 +203,15 @@
                     video.exitFullscreen();
                     video.el().classList.remove('fullscreen');
                     video.el().classList.add('reduced');
-                    video.controlBar.hide();  // Oculta a barra de controle quando não estiver em tela cheia
+                    video.controlBar.hide();
                 } else {
                     video.requestFullscreen();
                     video.el().classList.remove('reduced');
                     video.el().classList.add('fullscreen');
-                    video.controlBar.show();  // Mostra a barra de controle quando estiver em tela cheia
+                    video.controlBar.show();
                 }
             }
 
-            // Forçar o redimensionamento do vídeo
             function ajustarTamanhoVideo() {
                 if (video.isFullscreen()) {
                     video.el().classList.add('fullscreen');
@@ -140,7 +224,6 @@
 
             video.on('fullscreenchange', ajustarTamanhoVideo);
 
-            // Função para reconectar automaticamente em caso de falha
             function configurarReconexao(player) {
                 player.on('error', function() {
                     console.log('Tentando reconectar...');
@@ -148,6 +231,27 @@
                     player.play();
                 });
             }
+
+            // Função de rolagem da lista
+            function scrollListaCanais(direcao) {
+                var listaCanais = document.getElementById("canais");
+                var scrollAmount = 50; // Define a quantidade de pixels para rolar
+
+                if (direcao === 'up') {
+                    listaCanais.scrollTop -= scrollAmount;
+                } else if (direcao === 'down') {
+                    listaCanais.scrollTop += scrollAmount;
+                }
+            }
+
+            // Adicionar eventos para os botões de rolagem
+            document.getElementById('scrollUp').addEventListener('click', function() {
+                scrollListaCanais('up');
+            });
+
+            document.getElementById('scrollDown').addEventListener('click', function() {
+                scrollListaCanais('down');
+            });
 
             var xhr = new XMLHttpRequest();
             xhr.open("GET", listaURL, true);
