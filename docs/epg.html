@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPG Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <h1>EPG Viewer</h1>
+    <table id="epgTable">
+        <thead>
+            <tr>
+                <th>Canal</th>
+                <th>Programa</th>
+                <th>Início</th>
+                <th>Fim</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dados do EPG serão inseridos aqui -->
+        </tbody>
+    </table>
+
+    <script>
+        async function loadEPG() {
+            try {
+                const response = await fetch('https://www.bevy.be/bevyfiles/brazil.xml');
+                if (!response.ok) throw new Error('Erro na rede: ' + response.statusText);
+                const xmlText = await response.text();
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+
+                // Verificação de erros no XML
+                const parseError = xmlDoc.querySelector('parsererror');
+                if (parseError) throw new Error('Erro ao parsear XML: ' + parseError.textContent);
+
+                const channels = xmlDoc.getElementsByTagName('channel');
+                const programmes = xmlDoc.getElementsByTagName('programme');
+
+                const tableBody = document.querySelector('#epgTable tbody');
+                tableBody.innerHTML = ''; // Limpa a tabela antes de adicionar os novos dados
+
+                for (let i = 0; i < programmes.length; i++) {
+                    const programme = programmes[i];
+                    const channelId = programme.getAttribute('channel');
+                    const start = programme.getAttribute('start');
+                    const end = programme.getAttribute('end');
+                    const title = programme.querySelector('title') ? programme.querySelector('title').textContent : 'N/A';
+
+                    let channelName = 'Unknown';
+                    for (let j = 0; j < channels.length; j++) {
+                        const channel = channels[j];
+                        if (channel.getAttribute('id') === channelId) {
+                            channelName = channel.querySelector('display-name') ? channel.querySelector('display-name').textContent : 'Unknown';
+                            break;
+                        }
+                    }
+
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${channelName}</td>
+                        <td>${title}</td>
+                        <td>${start}</td>
+                        <td>${end}</td>
+                    `;
+                    tableBody.appendChild(row);
+                }
+            } catch (error) {
+                console.error('Erro ao carregar o EPG:', error);
+                document.body.innerHTML += `<p>Erro ao carregar o EPG: ${error.message}</p>`;
+            }
+        }
+
+        loadEPG();
+    </script>
+</body>
+</html>
