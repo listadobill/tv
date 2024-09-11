@@ -165,6 +165,23 @@
             position: relative;
             z-index: 1;
         }
+
+        #info {
+            width: 300px;
+            background-color: rgba(34, 34, 34, 0.8);
+            padding: 10px;
+            border-left: 2px solid #444;
+            height: 100%;
+            overflow-y: auto;
+            position: relative;
+            z-index: 2;
+            color: #fff;
+        }
+
+        #info img {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
@@ -178,12 +195,19 @@
         <div id="player">
             <video id="video-player" class="video-js vjs-default-skin reduced" controls></video>
         </div>
+        <div class="divider"></div>
+        <div id="info">
+            <img id="channel-logo" src="" alt="Logo do Canal">
+            <h3 id="channel-name">Nome do Canal</h3>
+            <p id="epg-info">Programação do Canal</p>
+        </div>
     </div>
 
     <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var listaURL = "https://raw.githubusercontent.com/listadobill/tv/main/iptv.m3u";
+            var epgURL = "https://www.bevy.be/bevyfiles/brazil.xml";
             var listaCanaisElemento = document.getElementById("lista-canais");
             var video = videojs('video-player', {
                 controls: true,
@@ -225,6 +249,57 @@
                 });
             }
 
+            function carregarEPG(epgUrl, canalNome) {
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", epgUrl, true);
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        var parser = new DOMParser();
+                        var xml = parser.parseFromString(xhr.responseText, "text/xml");
+                        console.log('XML carregado:', xml); // Log do XML carregado
+                        var programas = extrairProgramacao(xml, canalNome);
+                        console.log('Programas extraídos:', programas); // Log dos programas extraídos
+                        mostrarProgramacao(programas);
+                    } else if (xhr.readyState === 4) {
+                        console.error('Erro ao carregar o XML:', xhr.status, xhr.statusText);
+                    }
+                };
+                xhr.send();
+            }
+
+            function extrairProgramacao(xml, canalNome) {
+                var eventos = [];
+                var programas = xml.getElementsByTagName("programme");
+                for (var i = 0; i < programas.length; i++) {
+                    var prog = programas[i];
+                    var canal = prog.getAttribute("channel");
+                    var canalElemento = xml.querySelector(`channel[id="${canal}"]`);
+                    var nomeCanal = canalElemento ? canalElemento.querySelector("display-name").textContent : "";
+                    if (nomeCanal === canalNome) {
+                        eventos.push({
+                            inicio: prog.getAttribute("start"),
+                            fim: prog.getAttribute("end"),
+                            titulo: prog.querySelector("title").textContent
+                        });
+                    }
+                }
+                return eventos;
+            }
+
+            function mostrarProgramacao(programas) {
+                var epgInfo = document.getElementById("epg-info");
+                if (programas.length === 0) {
+                    epgInfo.innerHTML = 'Nenhuma programação disponível.';
+                    return;
+                }
+                var textoEPG = programas.map(function(prog) {
+                    var inicio = new Date(parseInt(prog.inicio, 10)).toLocaleTimeString();
+                    var fim = new Date(parseInt(prog.fim, 10)).toLocaleTimeString();
+                    return `${inicio} - ${fim}: ${prog.titulo}`;
+                }).join("<br>");
+                epgInfo.innerHTML = textoEPG;
+            }
+
             var xhr = new XMLHttpRequest();
             xhr.open("GET", listaURL, true);
             xhr.onreadystatechange = function() {
@@ -264,14 +339,17 @@
                         var nomeTexto = document.createTextNode(canal.nome);
                         itemLista.appendChild(nomeTexto);
 
-                        itemLista.onclick = (function(url) {
+                        itemLista.onclick = (function(url, nome) {
                             return function() {
                                 video.src({ src: url, type: 'application/x-mpegURL' });
                                 video.play();
                                 toggleFullscreen();
                                 configurarReconexao(video);
+                                document.getElementById("channel-logo").src = canal.logoURL;
+                                document.getElementById("channel-name").textContent = nome;
+                                carregarEPG(epgURL, nome);
                             };
-                        })(canal.link);
+                        })(canal.link, canal.nome);
 
                         listaCanaisElemento.appendChild(itemLista);
                     });
@@ -284,3 +362,4 @@
     </script>
 </body>
 </html>
+
