@@ -68,6 +68,21 @@
             height: 100%;
             position: relative;
             z-index: 2;
+            scrollbar-width: thin; /* Para navegadores modernos */
+            scrollbar-color: #4CAF50 #333; /* Cor da barra e do fundo */
+        }
+
+        #canais::-webkit-scrollbar {
+            width: 16px; /* Largura da barra de rolagem */
+        }
+
+        #canais::-webkit-scrollbar-thumb {
+            background: #4CAF50; /* Cor da barra de rolagem */
+            border-radius: 8px;
+        }
+
+        #canais::-webkit-scrollbar-track {
+            background: #333; /* Cor de fundo da área de rolagem */
         }
 
         #canais ul {
