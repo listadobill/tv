@@ -1,0 +1,108 @@
+#EXTINF:-1 tvg-id="gloob.br" tvg-name="BR180:Gloob FHD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR180GloobFHD.png" group-title="BR Infantis",BR180:Gloob FHD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/65735
+#EXTINF:-1 tvg-id="ra.tim.bum.br" tvg-name="BR102:TV Ra Tim Bum" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR102TVRaTimBum.png" group-title="BR Infantis",BR102:TV Ra Tim Bum
+http://abcnew.site:8880/29us10233n01/4etfr4w23/2430
+#EXTINF:-1 tvg-id="gloob.br" tvg-name="BR181:Gloob SD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR181GloobSD.png" group-title="BR Infantis",BR181:Gloob SD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/65736
+#EXTINF:-1 tvg-id="" tvg-name="BR:-----|Noticias|-----------------------" tvg-logo="" group-title="BR Noticias",BR:-----|Noticias|-----------------------
+http://abcnew.site:8880/29us10233n01/4etfr4w23/66165
+#EXTINF:-1 tvg-id="cnn.br" tvg-name="BR079:CNN BRASIL HD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR079Premiere6.png" group-title="BR Noticias",BR079:CNN BRASIL HD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/2453
+#EXTINF:-1 tvg-id="band.news.br" tvg-name="BR007:Band News HD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR007BandNewsBR.png" group-title="BR Noticias",BR007:Band News HD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/2525
+#EXTINF:-1 tvg-id="globo.news.br" tvg-name="BR176:Globo News FHD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR176GloboNewsFHD.png" group-title="BR Noticias",BR176:Globo News FHD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/65731
+#EXTINF:-1 tvg-id="globo.news.br" tvg-name="BR177:Globo News SD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR177GloboNewsSD.png" group-title="BR Noticias",BR177:Globo News SD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/65732
+#EXTINF:-1 tvg-id="globo.news.br" tvg-name="BR045:Globo News HD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR045GloboNewsBR.png" group-title="BR Noticias",BR045:Globo News HD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/2487
+#EXTINF:-1 tvg-id="" tvg-name="BR:-----|Rede Globo|---------------------------------" tvg-logo="" group-title="BR Rede Globo",BR:-----|Rede Globo|---------------------------------
+http://abcnew.site:8880/29us10233n01/4etfr4w23/66015
+#EXTINF:-1 tvg-id="globo.rbs.poa.br" tvg-name="BR046:Globo Rbs Porto Alegre" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR046GLOBORBSTVPORTOALEGRE.png" group-title="BR Rede Globo",BR046:Globo Rbs Porto Alegre
+http://abcnew.site:8880/29us10233n01/4etfr4w23/2486
+#EXTINF:-1 tvg-id="globo.br" tvg-name="BR048:Globo HD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR048GloboBR.png" group-title="BR Rede Globo",BR048:Globo HD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/2484
+#EXTINF:-1 tvg-id="globo.rj.br" tvg-name="BR047:Globo RJ HD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR047GloboRJ.png" group-title="BR Rede Globo",BR047:Globo RJ HD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/2485
+#EXTINF:-1 tvg-id="globo.sp.br" tvg-name="BR080:Globo SP" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR080GloboSP.png" group-title="BR Rede Globo",BR080:Globo SP
+http://abcnew.site:8880/29us10233n01/4etfr4w23/2452
+#EXTINF:-1 tvg-id="globo.rj.br" tvg-name="BR179:GLOBO MINAS" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR179GloboRJSD.png" group-title="BR Rede Globo",BR179:GLOBO MINAS
+http://abcnew.site:8880/29us10233n01/4etfr4w23/65734
+#EXTINF:-1 tvg-id="globo.bahia.br" tvg-name="BR178:Globo Amazonas" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR178GloboRJFHD.png" group-title="BR Rede Globo",BR178:Globo Amazonas
+http://abcnew.site:8880/29us10233n01/4etfr4w23/65733
+#EXTINF:-1 tvg-id="" tvg-name="BR271:Globo Rio HD" tvg-logo="" group-title="BR Rede Globo",BR271:Globo Rio HD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/66007
+#EXTINF:-1 tvg-id="" tvg-name="BR270:Globo Nordeste HD" tvg-logo="" group-title="BR Rede Globo",BR270:Globo Nordeste HD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/66006
+#EXTINF:-1 tvg-id="" tvg-name="BR:-----|Canais Abertos|---------------------------------" tvg-logo="" group-title="BR Abertos",BR:-----|Canais Abertos|---------------------------------
+http://abcnew.site:8880/29us10233n01/4etfr4w23/66017
+#EXTINF:-1 tvg-id="sbt.br" tvg-name="BR230:Sbt FHD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR230SbtFHD.png" group-title="BR Abertos",BR230:Sbt FHD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/65785
+#EXTINF:-1 tvg-id="sbt.br" tvg-name="BR085:SBT HD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR085SBT.png" group-title="BR Abertos",BR085:SBT HD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/2447
+#EXTINF:-1 tvg-id="sbt.br" tvg-name="BR231:Sbt SD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR231SbtSD.png" group-title="BR Abertos",BR231:Sbt SD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/65786
+#EXTINF:-1 tvg-id="record.br" tvg-name="BR036:TV Record HD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR036TVRecord.png" group-title="BR Abertos",BR036:TV Record HD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/2496
+#EXTINF:-1 tvg-id="record.br" tvg-name="BR083:Record Amazonas" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR083Record.png" group-title="BR Abertos",BR083:Record Amazonas
+http://abcnew.site:8880/29us10233n01/4etfr4w23/2449
+#EXTINF:-1 tvg-id="rede.brasil.br" tvg-name="BR084:Rede TV HD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR084RedeTV.png" group-title="BR Abertos",BR084:Rede TV HD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/2448
+#EXTINF:-1 tvg-id="tv.brasil.br" tvg-name="BR229:Tv Brasil" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR229RedeTVSD.png" group-title="BR Abertos",BR229:Tv Brasil
+http://abcnew.site:8880/29us10233n01/4etfr4w23/65784
+#EXTINF:-1 tvg-id="band.br" tvg-name="BR006:Band HD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR006BandBR.png" group-title="BR Abertos",BR006:Band HD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/2526
+#EXTINF:-1 tvg-id="natgeo.wild.br" tvg-name="BR070:NAT GEO Wild HD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR070NATGEOWildBR.png" group-title="BR Documentarios",BR070:NAT GEO Wild HD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/2462
+#EXTINF:-1 tvg-id="tlc.br" tvg-name="BR142:Discovery TLC SD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR142DiscoveryTLCSD.png" group-title="BR Documentarios",BR142:Discovery TLC SD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/65697
+#EXTINF:-1 tvg-id="" tvg-name="BR:-----|Infantis|---------------------------------" tvg-logo="" group-title="BR Infantis",BR:-----|Infantis|---------------------------------
+http://abcnew.site:8880/29us10233n01/4etfr4w23/66016
+#EXTINF:-1 tvg-id="baby.br" tvg-name="BR017:Baby TV HD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR017BabyTV.png" group-title="BR Infantis",BR017:Baby TV HD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/2515
+#EXTINF:-1 tvg-id="boomerang.br" tvg-name="BR118:Boomerang FHD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR118BoomerangFHD.png" group-title="BR Infantis",BR118:Boomerang FHD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/65673
+#EXTINF:-1 tvg-id="boomerang.br" tvg-name="BR011:Boomerang HD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR011BoomerangBR.png" group-title="BR Infantis",BR011:Boomerang HD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/2521
+#EXTINF:-1 tvg-id="cartoon.network.br" tvg-name="BR120:Cartoon Network FHD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR120CartoonNetworkFHD.png" group-title="BR Infantis",BR120:Cartoon Network FHD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/65675
+#EXTINF:-1 tvg-id="cartoon.network.br" tvg-name="BR013:Cartoon Network HD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR013CartoonNetworkBR.png" group-title="BR Infantis",BR013:Cartoon Network HD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/2519
+#EXTINF:-1 tvg-id="cartoon.network.br" tvg-name="BR121:Cartoon Network SD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR121CartoonNetworkSD.png" group-title="BR Infantis",BR121:Cartoon Network SD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/65676
+#EXTINF:-1 tvg-id="boomerang.br" tvg-name="BR119:Boomerang SD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR119BoomerangSD.png" group-title="BR Infantis",BR119:Boomerang SD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/65674
+#EXTINF:-1 tvg-id="disney.br" tvg-name="BR147:Disney Channel FHD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR147DisneyChannelFHD.png" group-title="BR Infantis",BR147:Disney Channel FHD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/65702
+#EXTINF:-1 tvg-id="disney.br" tvg-name="BR026:Disney HD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR026DisneyBR.png" group-title="BR Infantis",BR026:Disney HD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/2506
+#EXTINF:-1 tvg-id="disney.br" tvg-name="BR148:Disney Channel SD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR148DisneyChannelSD.png" group-title="BR Infantis",BR148:Disney Channel SD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/65703
+#EXTINF:-1 tvg-id="disney.junior.br" tvg-name="BR027:DISNEY JR HD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR027DISNEYJRBR.png" group-title="BR Infantis",BR027:DISNEY JR HD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/2505
+#EXTINF:-1 tvg-id="disney.xd.br" tvg-name="BR028:Disney XD HD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR028DisneyXDBR.png" group-title="BR Infantis",BR028:Disney XD HD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/2504
+#EXTINF:-1 tvg-id="discovery.kids.br" tvg-name="BR136:Discovery Kids FHD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR136DiscoveryKidsFHD.png" group-title="BR Infantis",BR136:Discovery Kids FHD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/65691
+#EXTINF:-1 tvg-id="discovery.kids.br" tvg-name="BR021:Discovery Kids HD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR021DiscoveryKids.png" group-title="BR Infantis",BR021:Discovery Kids HD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/2511
+#EXTINF:-1 tvg-id="discovery.kids.br" tvg-name="BR137:Discovery Kids SD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR137DiscoveryKidsSD.png" group-title="BR Infantis",BR137:Discovery Kids SD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/65692
+#EXTINF:-1 tvg-id="gloobinho.br" tvg-name="BR049:Gloobinho HD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR049Gloobinho.png" group-title="BR Infantis",BR049:Gloobinho HD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/2483
+#EXTINF:-1 tvg-id="gloobinho.br" tvg-name="BR182:Gloobinho SD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR182GloobinhoSD.png" group-title="BR Infantis",BR182:Gloobinho SD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/65737
+#EXTINF:-1 tvg-id="nat.geo.kids.br" tvg-name="BR069:NAT GEO Kids HD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR069NATGEOKidsBR.png" group-title="BR Infantis",BR069:NAT GEO Kids HD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/2463
+#EXTINF:-1 tvg-id="nat.geo.kids.br" tvg-name="BR211:Nat Geo Kids SD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR211NatGeoKidsSD.png" group-title="BR Infantis",BR211:Nat Geo Kids SD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/65766
+#EXTINF:-1 tvg-id="nick.jr.br" tvg-name="BR214:Nick JR FHD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR214NickJRFHD.png" group-title="BR Infantis",BR214:Nick JR FHD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/65769
+#EXTINF:-1 tvg-id="nick.jr.br" tvg-name="BR071:NICK JR HD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR071NICKJRBR.png" group-title="BR Infantis",BR071:NICK JR HD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/2461
+#EXTINF:-1 tvg-id="nick.jr.br" tvg-name="BR215:Nick JR SD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR215NickJRSD.png" group-title="BR Infantis",BR215:Nick JR SD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/65770
+#EXTINF:-1 tvg-id="a.e.br" tvg-name="BR072:Nickelodeon FHD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR072NickelodeonBR.png" group-title="BR Infantis",BR072:Nickelodeon FHD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/2460
+#EXTINF:-1 tvg-id="" tvg-name="BR216:Nickelodeon SD" tvg-logo="http://www.tvboxgroup.com/iptv/logo/BR/BR216NickelodeonSD.png" group-title="BR Infantis",BR216:Nickelodeon SD
+http://abcnew.site:8880/29us10233n01/4etfr4w23/65771
