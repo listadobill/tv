@@ -759,6 +759,8 @@ https://stmv1.srvstm.com/wtvbrasil/wtvbrasil/playlist.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="", CANAIS ABAIXO SÃO UMA LISTA IPTV INSTAVEL QUE MUDA CONSTANTEMENTE ####
 http://example.com/stream2.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/PiNgxsI.jpg" group-title="MENU", AVISO: FORA DO AR, VÁ PARA PRÓXIMA LISTA
+https://s3.us-west-1.wasabisys.com/apkformiga/Novo%20projeto.mp4
 
 
 #EXTM3U
