@@ -1,8 +1,5 @@
+#EXTM3U
 
-Reorganizador de Lista IPTV
-
-Cole sua lista IPTV no campo abaixo e clique em "Reorganizar Lista".
-Lista Reorganizada:
 #EXTINF:-1 tvg-id="Sportv.br" tvg-logo="http://app.tvdigital.link:2095/logoscanais/SPORTV.png" tvg-name="SPORTV 4K" group-title="Canais | 4K",SPORTV 4K
 plugin://plugin.video.f4mTester/?streamtype=HLSRETRY&name=[COLOR yellow] GIF [COLOR gold]PEG [COLOR red]TV [/COLOR]&maxbitrate=0&buffer=2059&url=http://1111.wf:80/live/612785397/T431u2294M/284576
 #EXTINF:-1 tvg-id="Premiereclubes.br" tvg-logo="http://app.tvdigital.link:2095/logoscanais/PREMIERE.png" tvg-name="Premiere Clubes 4K " group-title="Canais | 4K",Premiere Clubes 4K
