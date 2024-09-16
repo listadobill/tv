@@ -1,7 +1,10 @@
 #EXTM3U
 
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="",ATULIZADO DIA 16 DE SETEMBRO DE 2024
+http://example.com/stream2.m3u
+
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="", https://listadobill.github.io/tv ####
-http://example.com/stream2.m3u8
+http://example.com/stream2.m3u
 
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="", ESTA LISTA PODE EVENTUALMENTE NÃO FUNCIONAR ALGUM CANAL OU TODOS - AGUARDE ATUALIZAÇÃO ####
 http://example.com/stream2.m3u8
