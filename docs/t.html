@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste</title>
+    <title>LISTA DE CANAIS IPTV - DESATIVE CONEXÃO SEGURA</title>
     <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
     <style>
         body {
@@ -32,7 +32,7 @@
             align-items: center;
             position: relative;
             z-index: 1;
-            overflow: hidden;
+            overflow: hidden; /* Garante que o player não sobreponha a lista de canais */
         }
 
         .video-js {
@@ -68,21 +68,21 @@
             height: 100%;
             position: relative;
             z-index: 2;
-            scrollbar-width: thin;
-            scrollbar-color: #4CAF50 #333;
+            scrollbar-width: thin; /* Para navegadores modernos */
+            scrollbar-color: #4CAF50 #333; /* Cor da barra e do fundo */
         }
 
         #canais::-webkit-scrollbar {
-            width: 20px;
+            width: 20px; /* Largura da barra de rolagem aumentada */
         }
 
         #canais::-webkit-scrollbar-thumb {
-            background: #4CAF50;
-            border-radius: 10px;
+            background: #4CAF50; /* Cor da barra de rolagem */
+            border-radius: 10px; /* Bordas arredondadas */
         }
 
         #canais::-webkit-scrollbar-track {
-            background: #333;
+            background: #333; /* Cor de fundo da área de rolagem */
         }
 
         #canais ul {
@@ -111,6 +111,7 @@
             margin-right: 10px;
         }
 
+        /* Customização dos controles do Video.js */
         .vjs-control-bar {
             font-size: 1.5em;
             background: rgba(0, 0, 0, 0.5);
@@ -182,11 +183,7 @@
     <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var listaURLs = [
-                "https://raw.githubusercontent.com/listadobill/tv/main/iptv.m3u",
-                "https://raw.githubusercontent.com/listadobill/tv/main/iptv_2.m3u",
-                
-            ];
+            var listaURL = "https://raw.githubusercontent.com/GIF553/Servidores/main/pvr.gif.peg.tv.m3u?fbclid=IwY2xjawFS0kZleHRuA2FlbQIxMAABHY_PCXHdMfY7L8fFIxMyHM7oBlMnwOHHVVH6CnSxzOz8BdMgqoLGzqZSFw_aem_j2Ip5svtHEsojb1TGGe4eg";
             var listaCanaisElemento = document.getElementById("lista-canais");
             var video = videojs('video-player', {
                 controls: true,
@@ -228,71 +225,61 @@
                 });
             }
 
-            function processarCanais(linhas) {
-                var canais = [];
-                for (var i = 0; i < linhas.length; i++) {
-                    if (linhas[i].startsWith('#EXTINF')) {
-                        var nome = linhas[i].split(',')[1];
-                        var link = linhas[i + 1];
-                        var logoURL = '';
-                        var logoMatch = linhas[i].match(/tvg-logo="([^"]+)"/);
-                        if (logoMatch) {
-                            logoURL = logoMatch[1];
-                        }
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", listaURL, true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var linhas = xhr.responseText.split('\n');
+                    var canais = [];
 
-                        canais.push({
-                            nome: nome,
-                            link: link,
-                            logoURL: logoURL
-                        });
-                    }
-                }
-                return canais;
-            }
-
-            function carregarLista(url) {
-                var xhr = new XMLHttpRequest();
-                xhr.open("GET", url, true);
-                xhr.onreadystatechange = function() {
-                    if (xhr.readyState === 4 && xhr.status === 200) {
-                        var linhas = xhr.responseText.split('\n');
-                        var canais = processarCanais(linhas);
-
-                        canais.sort(function(a, b) {
-                            return a.nome.localeCompare(b.nome);
-                        });
-
-                        canais.forEach(function(canal) {
-                            var itemLista = document.createElement("li");
-                            if (canal.logoURL) {
-                                var logoImg = document.createElement("img");
-                                logoImg.src = canal.logoURL;
-                                itemLista.appendChild(logoImg);
+                    for (var i = 0; i < linhas.length; i++) {
+                        if (linhas[i].startsWith('#EXTINF')) {
+                            var nome = linhas[i].split(',')[1];
+                            var link = linhas[i + 1];
+                            var logoURL = '';
+                            var logoMatch = linhas[i].match(/tvg-logo="([^"]+)"/);
+                            if (logoMatch) {
+                                logoURL = logoMatch[1];
                             }
-                            var nomeTexto = document.createTextNode(canal.nome);
-                            itemLista.appendChild(nomeTexto);
 
-                            itemLista.onclick = (function(url) {
-                                return function() {
-                                    video.src({ src: url, type: 'application/x-mpegURL' });
-                                    video.play();
-                                    toggleFullscreen();
-                                    configurarReconexao(video);
-                                };
-                            })(canal.link);
-
-                            listaCanaisElemento.appendChild(itemLista);
-                        });
-                    } else if (xhr.readyState === 4) {
-                        alert("Erro ao carregar a lista de canais da URL: " + url);
+                            canais.push({
+                                nome: nome,
+                                link: link,
+                                logoURL: logoURL
+                            });
+                        }
                     }
-                };
-                xhr.send();
-            }
 
-            listaURLs.forEach(function(url) {
-                carregarLista(url);
-            });
+                    canais.sort(function(a, b) {
+                        return a.nome.localeCompare(b.nome);
+                    });
+
+                    canais.forEach(function(canal) {
+                        var itemLista = document.createElement("li");
+                        if (canal.logoURL) {
+                            var logoImg = document.createElement("img");
+                            logoImg.src = canal.logoURL;
+                            itemLista.appendChild(logoImg);
+                        }
+                        var nomeTexto = document.createTextNode(canal.nome);
+                        itemLista.appendChild(nomeTexto);
+
+                        itemLista.onclick = (function(url) {
+                            return function() {
+                                video.src({ src: url, type: 'application/x-mpegURL' });
+                                video.play();
+                                toggleFullscreen();
+                                configurarReconexao(video);
+                            };
+                        })(canal.link);
+
+                        listaCanaisElemento.appendChild(itemLista);
+                    });
+                } else if (xhr.readyState === 4) {
+                    alert("Erro ao carregar a lista de canais. Verifique a URL e a conexão de rede.");
+                }
+            };
+            xhr.send();
         });
     </script>
 </body>
