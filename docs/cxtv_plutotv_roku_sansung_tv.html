@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CXTV - TV - ROKU TV - SAMSUNG TV - Pluto TV - IPTV<</title>
+    <title>CXTV - TV - ROKU TV - SAMSUNG TV - Pluto TV - IPTV</title>
     <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
     <style>
         body {
@@ -32,7 +32,7 @@
             align-items: center;
             position: relative;
             z-index: 1;
-            overflow: hidden; /* Garante que o player não sobreponha a lista de canais */
+            overflow: hidden;
         }
 
         .video-js {
@@ -68,21 +68,21 @@
             height: 100%;
             position: relative;
             z-index: 2;
-            scrollbar-width: thin; /* Para navegadores modernos */
-            scrollbar-color: #4CAF50 #333; /* Cor da barra e do fundo */
+            scrollbar-width: thin;
+            scrollbar-color: #4CAF50 #333;
         }
 
         #canais::-webkit-scrollbar {
-            width: 20px; /* Largura da barra de rolagem aumentada */
+            width: 20px;
         }
 
         #canais::-webkit-scrollbar-thumb {
-            background: #4CAF50; /* Cor da barra de rolagem */
-            border-radius: 10px; /* Bordas arredondadas */
+            background: #4CAF50;
+            border-radius: 10px;
         }
 
         #canais::-webkit-scrollbar-track {
-            background: #333; /* Cor de fundo da área de rolagem */
+            background: #333;
         }
 
         #canais ul {
@@ -111,7 +111,6 @@
             margin-right: 10px;
         }
 
-        /* Customização dos controles do Video.js */
         .vjs-control-bar {
             font-size: 1.5em;
             background: rgba(0, 0, 0, 0.5);
@@ -228,55 +227,59 @@
             var xhr = new XMLHttpRequest();
             xhr.open("GET", listaURL, true);
             xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    var linhas = xhr.responseText.split('\n');
-                    var canais = [];
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        var linhas = xhr.responseText.split('\n');
+                        var canais = [];
 
-                    for (var i = 0; i < linhas.length; i++) {
-                        if (linhas[i].startsWith('#EXTINF')) {
-                            var nome = linhas[i].split(',')[1];
-                            var link = linhas[i + 1];
-                            var logoURL = '';
-                            var logoMatch = linhas[i].match(/tvg-logo="([^"]+)"/);
-                            if (logoMatch) {
-                                logoURL = logoMatch[1];
+                        for (var i = 0; i < linhas.length; i++) {
+                            if (linhas[i].startsWith('#EXTINF')) {
+                                var nome = linhas[i].split(',')[1] || 'Desconhecido';
+                                var link = linhas[i + 1] || '';
+                                var logoURL = '';
+                                var logoMatch = linhas[i].match(/tvg-logo="([^"]+)"/);
+                                if (logoMatch) {
+                                    logoURL = logoMatch[1];
+                                }
+
+                                canais.push({
+                                    nome: nome,
+                                    link: link,
+                                    logoURL: logoURL
+                                });
                             }
-
-                            canais.push({
-                                nome: nome,
-                                link: link,
-                                logoURL: logoURL
-                            });
                         }
+
+                        canais.sort(function(a, b) {
+                            return (a.nome || '').localeCompare(b.nome || '');
+                        });
+
+                        canais.forEach(function(canal) {
+                            var itemLista = document.createElement("li");
+                            if (canal.logoURL) {
+                                var logoImg = document.createElement("img");
+                                logoImg.src = canal.logoURL;
+                                itemLista.appendChild(logoImg);
+                            }
+                            var nomeTexto = document.createTextNode(canal.nome || 'Desconhecido');
+                            itemLista.appendChild(nomeTexto);
+
+                            itemLista.onclick = (function(url) {
+                                return function() {
+                                    if (url) {
+                                        video.src({ src: url, type: 'application/x-mpegURL' });
+                                        video.play();
+                                        toggleFullscreen();
+                                        configurarReconexao(video);
+                                    }
+                                };
+                            })(canal.link);
+
+                            listaCanaisElemento.appendChild(itemLista);
+                        });
+                    } else {
+                        alert("Erro ao carregar a lista de canais. Verifique a URL e a conexão de rede.");
                     }
-
-                    canais.sort(function(a, b) {
-                        return a.nome.localeCompare(b.nome);
-                    });
-
-                    canais.forEach(function(canal) {
-                        var itemLista = document.createElement("li");
-                        if (canal.logoURL) {
-                            var logoImg = document.createElement("img");
-                            logoImg.src = canal.logoURL;
-                            itemLista.appendChild(logoImg);
-                        }
-                        var nomeTexto = document.createTextNode(canal.nome);
-                        itemLista.appendChild(nomeTexto);
-
-                        itemLista.onclick = (function(url) {
-                            return function() {
-                                video.src({ src: url, type: 'application/x-mpegURL' });
-                                video.play();
-                                toggleFullscreen();
-                                configurarReconexao(video);
-                            };
-                        })(canal.link);
-
-                        listaCanaisElemento.appendChild(itemLista);
-                    });
-                } else if (xhr.readyState === 4) {
-                    alert("Erro ao carregar a lista de canais. Verifique a URL e a conexão de rede.");
                 }
             };
             xhr.send();
