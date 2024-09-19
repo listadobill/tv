@@ -1,291 +1,286 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FORMIGAtv Player</title>
-  <link href="https://vjs.zencdn.net/7.18.1/video-js.css" rel="stylesheet">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #121212; /* Escuro para contraste */
-      color: white;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-    }
-    #content {
-      display: flex;
-      flex-direction: column;
-      height: 100vh;
-      overflow: hidden;
-    }
-    #searchContainer {
-      padding: 10px;
-      background-color: #1e1e1e; /* Tom escuro de cinza */
-      width: 100%;
-    }
-    #searchInput {
-      width: 100%;
-      max-width: 1200px;
-      padding: 10px;
-      background-color: #2c2c2c; /* Tom escuro de cinza */
-      border: none;
-      color: #00ff00; /* Verde brilhante */
-      border-radius: 5px;
-      box-sizing: border-box;
-    }
-    #channelList {
-      flex: 1;
-      overflow-y: auto;
-      background-color: #1e1e1e; /* Tom escuro de cinza */
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      padding: 10px;
-      align-content: flex-start;
-      box-sizing: border-box;
-    }
-    #channelList .channel {
-      background-color: #2c2c2c; /* Tom escuro de cinza */
-      border: 2px solid #00ff00; /* Borda verde brilhante */
-      color: white;
-      cursor: pointer;
-      border-radius: 5px;
-      overflow: hidden;
-      text-align: center;
-      transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 150px;
-      height: 150px;
-    }
-    #channelList .channel img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: cover;
-      transition: transform 0.2s;
-    }
-    #channelList .channel:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
-      background-color: #3c3c3c; /* Tom escuro de cinza claro */
-    }
-    #channelList .channel img:hover {
-      transform: scale(1.1);
-    }
-    #playerContainer {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: #000;
-      z-index: 100;
-      display: none; /* Player escondido por padrão */
-      flex-direction: column;
-    }
-    #player {
-      flex: 1;
-      width: 100%;
-      height: 100%;
-    }
-    #returnButton {
-      background-color: #ff0000; /* Vermelho brilhante */
-      border: none;
-      color: white;
-      padding: 10px;
-      font-size: 16px;
-      cursor: pointer;
-      border-radius: 5px;
-      margin: 10px;
-      align-self: flex-start;
-      transition: background-color 0.3s, transform 0.3s;
-      outline: none; /* Remove o contorno padrão */
-    }
-    #returnButton:hover {
-      background-color: #cc0000; /* Vermelho escuro para hover */
-    }
-    #returnButton:focus {
-      background-color: #cc0000; /* Vermelho escuro para foco */
-      transform: scale(1.05);
-    }
-    #loading {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: rgba(0, 0, 0, 0.8);
-      color: white;
-      padding: 20px;
-      border-radius: 10px;
-      z-index: 200;
-    }
-    #loadingProgress {
-      display: block;
-      margin-top: 10px;
-      color: #00ff00; /* Verde brilhante */
-    }
-    #loadingMessage {
-      color: #ff0000; /* Vermelho brilhante */
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LISTA DE CANAIS IPTV - DESATIVE CONEXÃO SEGURA</title>
+    <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://wallpaperaccess.com/full/1489194.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+
+        #player {
+            flex: 1;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            overflow: hidden; /* Garante que o player não sobreponha a lista de canais */
+        }
+
+        .video-js {
+            background-color: #000;
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-js.fullscreen {
+            width: 100% !important;
+            height: 100% !important;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .video-js.reduced {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        #canais {
+            width: 300px;
+            background-color: rgba(34, 34, 34, 0.8);
+            padding: 10px;
+            overflow-y: auto;
+            border-left: 2px solid #444;
+            height: 100%;
+            position: relative;
+            z-index: 2;
+            scrollbar-width: thin; /* Para navegadores modernos */
+            scrollbar-color: #4CAF50 #333; /* Cor da barra e do fundo */
+        }
+
+        #canais::-webkit-scrollbar {
+            width: 20px; /* Largura da barra de rolagem aumentada */
+        }
+
+        #canais::-webkit-scrollbar-thumb {
+            background: #4CAF50; /* Cor da barra de rolagem */
+            border-radius: 10px; /* Bordas arredondadas */
+        }
+
+        #canais::-webkit-scrollbar-track {
+            background: #333; /* Cor de fundo da área de rolagem */
+        }
+
+        #canais ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #canais li {
+            padding: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #444;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        #canais li:hover {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+
+        #canais img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        /* Customização dos controles do Video.js */
+        .vjs-control-bar {
+            font-size: 1.5em;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 0;
+            height: 80px;
+            bottom: 0;
+            position: absolute;
+            top: 10px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+
+        .vjs-control-bar .vjs-play-control,
+        .vjs-control-bar .vjs-volume-control,
+        .vjs-control-bar .vjs-fullscreen-control {
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            font-size: 1.5em;
+        }
+
+        .vjs-play-control .vjs-icon-placeholder,
+        .vjs-volume-control .vjs-icon-placeholder,
+        .vjs-fullscreen-control .vjs-icon-placeholder {
+            font-size: 2em;
+        }
+
+        .vjs-play-control {
+            background-color: #333;
+        }
+
+        .vjs-volume-control {
+            background-color: #333;
+        }
+
+        .vjs-fullscreen-control {
+            background-color: #333;
+        }
+
+        .vjs-play-control:hover,
+        .vjs-volume-control:hover,
+        .vjs-fullscreen-control:hover {
+            background-color: #4CAF50;
+        }
+
+        .divider {
+            width: 2px;
+            background-color: #444;
+            height: 100%;
+            position: relative;
+            z-index: 1;
+        }
+    </style>
 </head>
 <body>
+    <div id="container">
+        <div id="canais">
+            <ul id="lista-canais">
+                <!-- Os itens da lista serão adicionados aqui -->
+            </ul>
+        </div>
+        <div class="divider"></div>
+        <div id="player">
+            <video id="video-player" class="video-js vjs-default-skin reduced" controls></video>
+        </div>
+    </div>
 
-<div id="loading">Carregando... <span id="loadingProgress">0%</span><br><span id="loadingMessage">Baixando arquivo...</span></div>
+    <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/main/zteste.m3u";
+            var listaCanaisElemento = document.getElementById("lista-canais");
+            var video = videojs('video-player', {
+                controls: true,
+                autoplay: false,
+                preload: 'auto'
+            });
 
-<div id="content">
-  <div id="searchContainer">
-    <input type="text" id="searchInput" placeholder="Buscar canal...">
-  </div>
-  <div id="channelList">
-    <!-- Lista de canais será carregada aqui -->
-  </div>
-</div>
+            function toggleFullscreen() {
+                if (video.isFullscreen()) {
+                    video.exitFullscreen();
+                    video.el().classList.remove('fullscreen');
+                    video.el().classList.add('reduced');
+                    video.controlBar.hide();
+                } else {
+                    video.requestFullscreen();
+                    video.el().classList.remove('reduced');
+                    video.el().classList.add('fullscreen');
+                    video.controlBar.show();
+                }
+            }
 
-<div id="playerContainer">
-  <button id="returnButton" onclick="returnToChannelList()">Voltar à Lista de Canais</button>
-  <video id="player" class="video-js vjs-default-skin" controls preload="auto">
-    <source src="" type="application/x-mpegURL">
-  </video>
-</div>
+            function ajustarTamanhoVideo() {
+                if (video.isFullscreen()) {
+                    video.el().classList.add('fullscreen');
+                    video.el().classList.remove('reduced');
+                } else {
+                    video.el().classList.add('reduced');
+                    video.el().classList.remove('fullscreen');
+                }
+            }
 
-<script src="https://vjs.zencdn.net/7.18.1/video.min.js"></script>
+            video.on('fullscreenchange', ajustarTamanhoVideo);
 
-<script>
-  const m3uUrl = "https://tinyurl.com/NovaFORMIGAtv";
-  const batchSize = 20;
-  let channels = [];
-  let loadedCount = 0;
-  let totalCount = 0;
+            function configurarReconexao(player) {
+                player.on('error', function() {
+                    console.log('Tentando reconectar...');
+                    player.src({ src: video.src(), type: 'application/x-mpegURL' });
+                    player.play();
+                });
+            }
 
-  // Função para carregar o arquivo M3U
-  async function loadM3UFile(url) {
-    try {
-      const response = await fetch(url);
-      const reader = response.body.getReader();
-      const contentLength = +response.headers.get('Content-Length');
-      const decoder = new TextDecoder();
-      let receivedLength = 0;
-      let m3uText = '';
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", listaURL, true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var linhas = xhr.responseText.split('\n');
+                    var canais = [];
 
-      document.getElementById('loadingMessage').innerText = 'Baixando arquivo...';
-      
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        receivedLength += value.length;
-        m3uText += decoder.decode(value, { stream: true });
-        updateLoadingProgress(receivedLength, contentLength, 'Baixando arquivo...');
-      }
+                    for (var i = 0; i < linhas.length; i++) {
+                        if (linhas[i].startsWith('#EXTINF')) {
+                            var nome = linhas[i].split(',')[1];
+                            var link = linhas[i + 1];
+                            var logoURL = '';
+                            var logoMatch = linhas[i].match(/tvg-logo="([^"]+)"/);
+                            if (logoMatch) {
+                                logoURL = logoMatch[1];
+                            }
 
-      m3uText += decoder.decode();
-      document.getElementById('loadingMessage').innerText = 'Processando canais...';
-      processM3UFile(m3uText);
-    } catch (error) {
-      console.error("Erro ao baixar o arquivo M3U:", error);
-    }
-  }
+                            canais.push({
+                                nome: nome,
+                                link: link,
+                                logoURL: logoURL
+                            });
+                        }
+                    }
 
-  // Processamento do conteúdo M3U
-  function processM3UFile(m3uText) {
-    const lines = m3uText.split("\n");
-    let currentChannel = {};
-    totalCount = 0;
-    
-    lines.forEach(line => {
-      if (line.startsWith("#EXTINF")) {
-        const info = line.split(",");
-        currentChannel.name = info[1];
-        const logoMatch = line.match(/tvg-logo="(.*?)"/);
-        currentChannel.logo = logoMatch ? logoMatch[1] : 'https://via.placeholder.com/150';
-      } else if (line.trim() !== "" && !line.startsWith("#")) {
-        currentChannel.url = line.trim();
-        channels.push(currentChannel);
-        totalCount++;
-        currentChannel = {};
-      }
-    });
+                    canais.sort(function(a, b) {
+                        return a.nome.localeCompare(b.nome);
+                    });
 
-    document.getElementById('loadingMessage').innerText = 'Carregando canais...';
-    loadChannelsBatch();
-  }
+                    canais.forEach(function(canal) {
+                        var itemLista = document.createElement("li");
+                        if (canal.logoURL) {
+                            var logoImg = document.createElement("img");
+                            logoImg.src = canal.logoURL;
+                            itemLista.appendChild(logoImg);
+                        }
+                        var nomeTexto = document.createTextNode(canal.nome);
+                        itemLista.appendChild(nomeTexto);
 
-  // Função para carregar os ícones dos canais
-  function loadChannelsBatch() {
-    const batch = channels.slice(loadedCount, loadedCount + batchSize);
-    batch.forEach(channel => addChannelIcon(channel));
-    loadedCount += batchSize;
+                        itemLista.onclick = (function(url) {
+                            return function() {
+                                video.src({ src: url, type: 'application/x-mpegURL' });
+                                video.play();
+                                toggleFullscreen();
+                                configurarReconexao(video);
+                            };
+                        })(canal.link);
 
-    updateLoadingProgress(loadedCount, totalCount, 'Carregando canais...');
-
-    if (loadedCount < totalCount) {
-      setTimeout(loadChannelsBatch, 500);
-    } else {
-      document.getElementById("loading").style.display = "none";
-    }
-  }
-
-  // Adiciona o ícone do canal na lista
-  function addChannelIcon(channel) {
-    const channelList = document.getElementById("channelList");
-    const channelDiv = document.createElement("div");
-    channelDiv.className = "channel";
-    
-    const img = document.createElement("img");
-    img.src = channel.logo;
-    img.alt = channel.name;
-    img.title = channel.name;
-    img.onclick = () => playChannel(channel.url);
-    
-    channelDiv.appendChild(img);
-    channelList.appendChild(channelDiv);
-  }
-
-  // Atualiza o progresso de carregamento
-  function updateLoadingProgress(receivedLength, totalLength, message) {
-    const progress = Math.min(Math.round((receivedLength / totalLength) * 100), 100);
-    document.getElementById('loadingProgress').innerText = `${progress}%`;
-    document.getElementById('loadingMessage').innerText = message;
-  }
-
-  // Função para tocar o canal selecionado
-  function playChannel(url) {
-    document.getElementById("playerContainer").style.display = "flex";
-    const player = videojs('player');
-    player.src({ src: url, type: 'application/x-mpegURL' });
-    player.play();
-  }
-
-  // Função para voltar à lista de canais
-  function returnToChannelList() {
-    document.getElementById("playerContainer").style.display = "none";
-  }
-
-  // Manipular navegação com teclado
-  document.addEventListener('keydown', function(event) {
-    if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
-      // Adicione a lógica para navegar entre os canais com as setas do teclado
-      const currentFocused = document.activeElement;
-      if (currentFocused.classList.contains('channel')) {
-        let nextElement;
-        if (event.key === 'ArrowUp') {
-          nextElement = currentFocused.previousElementSibling || document.querySelector('#channelList .channel:last-child');
-        } else if (event.key === 'ArrowDown') {
-          nextElement = currentFocused.nextElementSibling || document.querySelector('#channelList .channel:first-child');
-        }
-        nextElement.focus();
-      }
-    }
-  });
-
-  // Carregar o arquivo M3U ao iniciar
-  window.onload = function() {
-    loadM3UFile(m3uUrl);
-  };
-</script>
-
+                        listaCanaisElemento.appendChild(itemLista);
+                    });
+                } else if (xhr.readyState === 4) {
+                    alert("Erro ao carregar a lista de canais. Verifique a URL e a conexão de rede.");
+                }
+            };
+            xhr.send();
+        });
+    </script>
 </body>
 </html>
