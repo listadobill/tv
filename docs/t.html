@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LISTA DE CANAIS IPTV - DESATIVE CONEXÃO SEGURA</title>
+    <title>CANAIS DO BRASIL E OUTROS PAÍSES DE LÍNGUA PORTUGUESA ABERTOS - IPTV ORG</title>
     <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
     <style>
         body {
@@ -240,6 +240,11 @@
                             var logoMatch = linhas[i].match(/tvg-logo="([^"]+)"/);
                             if (logoMatch) {
                                 logoURL = logoMatch[1];
+                            }
+
+                            // Converte .ts para .m3u8 se necessário
+                            if (link.endsWith(".ts")) {
+                                link = link.replace(".ts", ".m3u8");
                             }
 
                             canais.push({
