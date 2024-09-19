@@ -1,3 +1,5 @@
+#EXTM3U
+
 #EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBO RBS RS TV FHD" tvg-logo="" group-title="BRASIL",|.BR.| GLOBO RBS RS TV FHD
 http://tv.pro-ott.com:25443/live/Bob2020/1234567890/103608.ts
 #EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBO RIBEIR HD" tvg-logo="" group-title="BRASIL",|.BR.| GLOBO RIBEIR HD
