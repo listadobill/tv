@@ -78,6 +78,38 @@
     </style>
 </head>
 <body>
+</style>
+</head>
+<body>
+    <div class="counter">
+        <h1>Usuários Online: <span id="onlineUsers">0</span></h1>
+    </div>
+
+    <script>
+        function updateOnlineUsers() {
+            const onlineUsers = localStorage.getItem('onlineUsers') || 0;
+            document.getElementById('onlineUsers').innerText = onlineUsers;
+        }
+
+        function incrementOnlineUsers() {
+            let onlineUsers = parseInt(localStorage.getItem('onlineUsers') || 0);
+            onlineUsers++;
+            localStorage.setItem('onlineUsers', onlineUsers);
+            updateOnlineUsers();
+        }
+
+        function decrementOnlineUsers() {
+            let onlineUsers = parseInt(localStorage.getItem('onlineUsers') || 0);
+            if (onlineUsers > 0) {
+                onlineUsers--;
+                localStorage.setItem('onlineUsers', onlineUsers);
+                updateOnlineUsers();
+            }
+        }
+
+        window.addEventListener('load', incrementOnlineUsers);
+        window.addEventListener('beforeunload', decrementOnlineUsers);
+    </script>
     <div class="top-text">
         Lista de canais para o KODI ou Apps de IPTV - Atualização, 18 de Setembro de 2024: 
         <a href="https://bit.ly/tvdobill-iptv" >https://bit.ly/tvdobill-iptv</a>
