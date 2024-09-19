@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor M3U para M3U8</title>
+</head>
+<body>
+    <h2>Conversor de .ts para .m3u8</h2>
+    
+    <textarea id="inputM3U" rows="10" cols="70" placeholder="Cole sua lista M3U aqui..."></textarea><br><br>
+    
+    <button onclick="convertToM3U8()">Converter para .m3u8</button>
+    
+    <h3>Resultado</h3>
+    <textarea id="outputM3U" rows="10" cols="70" readonly></textarea>
+
+    <script>
+        function convertToM3U8() {
+            const input = document.getElementById("inputM3U").value;
+            const lines = input.split("\n");
+            let result = "";
+
+            lines.forEach(line => {
+                if (line.includes(".ts")) {
+                    result += line.replace(".ts", ".m3u8") + "\n";
+                } else {
+                    result += line + "\n";
+                }
+            });
+
+            document.getElementById("outputM3U").value = result;
+        }
+    </script>
+</body>
+</html>
