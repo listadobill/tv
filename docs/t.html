@@ -32,7 +32,7 @@
             align-items: center;
             position: relative;
             z-index: 1;
-            overflow: hidden; /* Garante que o player não sobreponha a lista de canais */
+            overflow: hidden;
         }
 
         .video-js {
@@ -68,21 +68,21 @@
             height: 100%;
             position: relative;
             z-index: 2;
-            scrollbar-width: thin; /* Para navegadores modernos */
-            scrollbar-color: #4CAF50 #333; /* Cor da barra e do fundo */
+            scrollbar-width: thin;
+            scrollbar-color: #4CAF50 #333;
         }
 
         #canais::-webkit-scrollbar {
-            width: 20px; /* Largura da barra de rolagem aumentada */
+            width: 20px;
         }
 
         #canais::-webkit-scrollbar-thumb {
-            background: #4CAF50; /* Cor da barra de rolagem */
-            border-radius: 10px; /* Bordas arredondadas */
+            background: #4CAF50;
+            border-radius: 10px;
         }
 
         #canais::-webkit-scrollbar-track {
-            background: #333; /* Cor de fundo da área de rolagem */
+            background: #333;
         }
 
         #canais ul {
@@ -111,7 +111,6 @@
             margin-right: 10px;
         }
 
-        /* Customização dos controles do Video.js */
         .vjs-control-bar {
             font-size: 1.5em;
             background: rgba(0, 0, 0, 0.5);
@@ -183,7 +182,17 @@
     <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/main/zteste.m3u";
+            var listas = [
+                { url: "https://raw.githubusercontent.com/listadobill/tv/main/iptv.m3u", cor: "#FF6347" }, // Vermelho tomate
+                { url: "https://raw.githubusercontent.com/listadobill/tv/main/iptv_2.m3u", cor: "#4682B4" }, // Azul aço
+                { url: "https://raw.githubusercontent.com/listadobill/tv/main/formigatv.m3u", cor: "#32CD32" }, // Verde limão
+                { url: "https://raw.githubusercontent.com/listadobill/tv/main/cxtvrokusamsungplutotviptv.m3u", cor: "#FFD700" }, // Ouro
+                { url: "https://raw.githubusercontent.com/listadobill/tv/main/plutotvbr.m3u", cor: "#FF4500" }, // Laranja avermelhado
+                { url: "https://iptv-org.github.io/iptv/languages/por.m3u", cor: "#1E90FF" }, // Azul dodger
+                { url: "https://iptv-org.github.io/iptv/subdivisions/br-sc.m3u", cor: "#8A2BE2" }, // Azul violeta
+                // Mais fontes podem ser adicionadas aqui
+            ];
+
             var listaCanaisElemento = document.getElementById("lista-canais");
             var video = videojs('video-player', {
                 controls: true,
@@ -225,66 +234,68 @@
                 });
             }
 
-            var xhr = new XMLHttpRequest();
-            xhr.open("GET", listaURL, true);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    var linhas = xhr.responseText.split('\n');
-                    var canais = [];
+            function carregarLista(url, cor) {
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", url, true);
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        var linhas = xhr.responseText.split('\n');
+                        var canais = [];
 
-                    for (var i = 0; i < linhas.length; i++) {
-                        if (linhas[i].startsWith('#EXTINF')) {
-                            var nome = linhas[i].split(',')[1];
-                            var link = linhas[i + 1];
-                            var logoURL = '';
-                            var logoMatch = linhas[i].match(/tvg-logo="([^"]+)"/);
-                            if (logoMatch) {
-                                logoURL = logoMatch[1];
+                        for (var i = 0; i < linhas.length; i++) {
+                            if (linhas[i].startsWith('#EXTINF')) {
+                                var nome = linhas[i].split(',')[1];
+                                var link = linhas[i + 1];
+                                var logoURL = '';
+                                var logoMatch = linhas[i].match(/tvg-logo="([^"]+)"/);
+                                if (logoMatch) {
+                                    logoURL = logoMatch[1];
+                                }
+
+                                canais.push({
+                                    nome: nome,
+                                    link: link,
+                                    logoURL: logoURL
+                                });
+                            }
+                        }
+
+                        canais.sort(function(a, b) {
+                            return a.nome.localeCompare(b.nome);
+                        });
+
+                        canais.forEach(function(canal) {
+                            var itemLista = document.createElement("li");
+                            itemLista.style.color = cor;
+
+                            if (canal.logoURL) {
+                                var img = document.createElement("img");
+                                img.src = canal.logoURL;
+                                itemLista.appendChild(img);
                             }
 
-                            // Converte .ts para .m3u8 se necessário
-                            if (link.endsWith(".ts")) {
-                                link = link.replace(".ts", ".m3u8");
-                            }
+                            var nomeCanal = document.createTextNode(canal.nome);
+                            itemLista.appendChild(nomeCanal);
 
-                            canais.push({
-                                nome: nome,
-                                link: link,
-                                logoURL: logoURL
-                            });
-                        }
-                    }
-
-                    canais.sort(function(a, b) {
-                        return a.nome.localeCompare(b.nome);
-                    });
-
-                    canais.forEach(function(canal) {
-                        var itemLista = document.createElement("li");
-                        if (canal.logoURL) {
-                            var logoImg = document.createElement("img");
-                            logoImg.src = canal.logoURL;
-                            itemLista.appendChild(logoImg);
-                        }
-                        var nomeTexto = document.createTextNode(canal.nome);
-                        itemLista.appendChild(nomeTexto);
-
-                        itemLista.onclick = (function(url) {
-                            return function() {
-                                video.src({ src: url, type: 'application/x-mpegURL' });
+                            itemLista.addEventListener("click", function() {
+                                video.src({ src: canal.link, type: 'application/x-mpegURL' });
                                 video.play();
-                                toggleFullscreen();
-                                configurarReconexao(video);
-                            };
-                        })(canal.link);
+                            });
 
-                        listaCanaisElemento.appendChild(itemLista);
-                    });
-                } else if (xhr.readyState === 4) {
-                    alert("Erro ao carregar a lista de canais. Verifique a URL e a conexão de rede.");
-                }
-            };
-            xhr.send();
+                            listaCanaisElemento.appendChild(itemLista);
+                        });
+                    }
+                };
+                xhr.send();
+            }
+
+            listas.forEach(function(lista) {
+                carregarLista(lista.url, lista.cor);
+            });
+
+            video.ready(function() {
+                configurarReconexao(video);
+            });
         });
     </script>
 </body>
