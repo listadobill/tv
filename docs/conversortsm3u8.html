@@ -6,28 +6,39 @@
     <title>Conversor M3U para M3U8</title>
 </head>
 <body>
-    <h2>Conversor de .ts para .m3u8</h2>
+    <h2>Conversor de .ts para .m3u8 e Enxugador de Lista</h2>
     
     <textarea id="inputM3U" rows="10" cols="70" placeholder="Cole sua lista M3U aqui..."></textarea><br><br>
     
-    <button onclick="convertToM3U8()">Converter para .m3u8</button>
+    <button onclick="convertAndSimplify()">Converter e Enxugar</button>
     
     <h3>Resultado</h3>
     <textarea id="outputM3U" rows="10" cols="70" readonly></textarea>
 
     <script>
-        function convertToM3U8() {
+        function convertAndSimplify() {
             const input = document.getElementById("inputM3U").value;
             const lines = input.split("\n");
             let result = "";
 
-            lines.forEach(line => {
-                if (line.includes(".ts")) {
+            for (let i = 0; i < lines.length; i++) {
+                let line = lines[i];
+                
+                // Se for uma linha com #EXTINF, simplifica a linha removendo os atributos desnecessários
+                if (line.startsWith("#EXTINF")) {
+                    // Extrai apenas o nome do canal
+                    let nameMatch = line.match(/,([^,]+)$/);
+                    if (nameMatch) {
+                        result += `#EXTINF:-1,${nameMatch[1]}\n`;
+                    }
+                }
+                // Se for uma linha com o link, substitui .ts por .m3u8, se necessário
+                else if (line.includes(".ts")) {
                     result += line.replace(".ts", ".m3u8") + "\n";
                 } else {
                     result += line + "\n";
                 }
-            });
+            }
 
             document.getElementById("outputM3U").value = result;
         }
