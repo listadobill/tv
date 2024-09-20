@@ -617,4 +617,5 @@
     <channel update="i" site="netcombo.com.br" site_id="1167" xmltv_id="PREMIERE HD 5">PREMIERE HD 5</channel>
     <channel update="i" site="netcombo.com.br" site_id="1027" xmltv_id="Combate HD">Combate HD</channel>
     <channel update="i" site="netcombo.com.br" site_id="1193" xmltv_id="Leomax Shop">Leomax Shop</channel>
-  <channels>
+  <channels>		
+</settings>
