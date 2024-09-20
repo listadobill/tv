@@ -78,7 +78,7 @@
         async function loadEPG() {
             try {
                 // Usar a URL correta do GitHub para carregar o arquivo EPG
-                const response = await fetch('https://raw.githubusercontent.com/listadobill/tv/main/docs/epg.xml');
+                const response = await fetch('https://raw.githubusercontent.com/awiouy/webgrabplus/master/config/siteini.pack/Brazil/meuguia.tv.channels.xml');
                 if (!response.ok) throw new Error('Erro na rede: ' + response.statusText);
                 const xmlText = await response.text();
                 const parser = new DOMParser();
