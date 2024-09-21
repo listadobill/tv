@@ -30,11 +30,11 @@
 
     <script>
         const urls = [
-            "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/cxtvrokusamsungplutotviptv.m3u",
-            "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/formigatv.m3u",
-            "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/iptv.m3u",
-            "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/iptv_2.m3u",
-            "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/plutotvbr.m3u",
+            "https://raw.githubusercontent.com/listadobill/tv/main/cxtvrokusamsungplutotviptv.m3u",
+            "https://raw.githubusercontent.com/listadobill/tv/main/formigatv.m3u",
+            "https://raw.githubusercontent.com/listadobill/tv/main/iptv.m3u",
+            "https://raw.githubusercontent.com/listadobill/tv/main/iptv_2.m3u",
+            "https://raw.githubusercontent.com/listadobill/tv/main/plutotvbr.m3u",
             "https://iptv-org.github.io/iptv/languages/por.m3u"
         ];
 
@@ -45,36 +45,55 @@
             let allEntries = [];
 
             for (let i = 0; i < totalUrls; i++) {
-                const response = await fetch(urls[i]);
-                const data = await response.text();
-                
-                // Divide o conteúdo em linhas
-                const entries = data.split('\n');
-                
-                // Armazena pares de #EXTINF e URL
-                for (let j = 0; j < entries.length; j++) {
-                    if (entries[j].startsWith('#EXTINF')) {
-                        const urlLine = entries[j + 1]; // A próxima linha deve ser a URL
-                        if (urlLine) {
-                            allEntries.push({ info: entries[j], url: urlLine }); // Armazena como objeto
+                try {
+                    document.getElementById('status').textContent = `Carregando lista ${i + 1} de ${totalUrls}...`;
+                    const response = await fetch(urls[i]);
+                    
+                    if (!response.ok) throw new Error(`Erro ao carregar: ${urls[i]}`);
+                    
+                    const data = await response.text();
+                    const entries = data.split('\n');
+
+                    for (let j = 0; j < entries.length; j++) {
+                        if (entries[j].startsWith('#EXTINF')) {
+                            const urlLine = entries[j + 1]; // A próxima linha deve ser a URL
+                            if (urlLine) {
+                                allEntries.push({ info: entries[j], url: urlLine }); // Armazena como objeto
+                            }
                         }
                     }
-                }
 
-                // Atualiza a barra de progresso
-                const progress = ((i + 1) / totalUrls) * 100;
-                document.getElementById('progress-bar').style.width = progress + '%';
+                    const progress = ((i + 1) / totalUrls) * 100;
+                    document.getElementById('progress-bar').style.width = progress + '%';
+                } catch (error) {
+                    console.error(error);
+                    document.getElementById('status').textContent = `Erro ao carregar lista: ${error.message}`;
+                }
             }
 
-            // Ordena as entradas em ordem alfabética com base na URL
-            allEntries.sort((a, b) => a.url.localeCompare(b.url));
+            // Unificação e ordenação
+            document.getElementById('status').textContent = 'Unificando listas...';
+            allEntries.sort((a, b) => {
+                const nameA = a.info.split(',').pop().trim();
+                const nameB = b.info.split(',').pop().trim();
 
-            // Adiciona o conteúdo ordenado ao arquivo M3U unificado
+                // Coloca os canais que começam com números no topo
+                const startsWithNumberA = /^[0-9]/.test(nameA);
+                const startsWithNumberB = /^[0-9]/.test(nameB);
+
+                if (startsWithNumberA && !startsWithNumberB) return -1;
+                if (!startsWithNumberA && startsWithNumberB) return 1;
+
+                // Se ambos começam com números ou ambos não começam, ordena alfabeticamente
+                return nameA.localeCompare(nameB);
+            });
+
             allEntries.forEach(entry => {
                 unifiedM3UContent += entry.info + '\n' + entry.url + '\n';
             });
 
-            document.getElementById('status').textContent = 'Listas carregadas com sucesso!';
+            document.getElementById('progress-bar').style.width = '100%';
+            document.getElementById('status').textContent = 'Listas carregadas e unificadas com sucesso!';
             document.getElementById('download-button').style.display = 'block'; // Exibe o botão de download
         }
 
