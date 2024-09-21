@@ -1465,8 +1465,6 @@ http://dns.tplayer.live:80/Q1rDYW/2bWVcA/90142.m3u8
 http://dns.tplayer.live:80/Q1rDYW/2bWVcA/90144.m3u8
 #EXTINF:-1  tvg-logo="http://limestorage.me/lives/VARIEDADES/LIFETIME.png" ,LIFETIME [SD]
 http://dns.tplayer.live:80/Q1rDYW/2bWVcA/90145.m3u8
-#EXTINF:-1  tvg-logo="http://limestorage.me/lives/ADULTO/LIVE_CAMS.png" ,LIVE CAMS [M]
-http://dns.tplayer.live:80/Q1rDYW/2bWVcA/95525.m3u8
 #EXTINF:-1  tvg-logo="http://limestorage.me/lives/CANAIS%20ABERTOS/CANAL%20LOADING.png" ,LOADING [FHD]
 http://dns.tplayer.live:80/Q1rDYW/2bWVcA/90149.m3u8
 #EXTINF:-1  tvg-logo="http://limestorage.me/lives/CANAIS%20ABERTOS/CANAL%20LOADING.png" ,LOADING [FHD] (H265)
@@ -1589,14 +1587,6 @@ http://dns.tplayer.live:80/Q1rDYW/2bWVcA/95462.m3u8
 http://dns.tplayer.live:80/Q1rDYW/2bWVcA/95463.m3u8
 #EXTINF:-1  tvg-logo="http://limestorage.me/lives/VARIEDADES/PLAY_TV.png" ,PLAY TV [SD]
 http://dns.tplayer.live:80/Q1rDYW/2bWVcA/95464.m3u8
-#EXTINF:-1  tvg-logo="http://limestorage.me/lives/ADULTO/PLAYBOY.png" ,PLAYBOY [FHD]
-http://dns.tplayer.live:80/Q1rDYW/2bWVcA/90207.m3u8
-#EXTINF:-1  tvg-logo="http://limestorage.me/lives/ADULTO/PLAYBOY.png" ,PLAYBOY [FHD] (H265)
-http://dns.tplayer.live:80/Q1rDYW/2bWVcA/90206.m3u8
-#EXTINF:-1  tvg-logo="http://limestorage.me/lives/ADULTO/PLAYBOY.png" ,PLAYBOY [HD]
-http://dns.tplayer.live:80/Q1rDYW/2bWVcA/90208.m3u8
-#EXTINF:-1  tvg-logo="http://limestorage.me/lives/ADULTO/PLAYBOY.png" ,PLAYBOY [SD]
-http://dns.tplayer.live:80/Q1rDYW/2bWVcA/90209.m3u8
 #EXTINF:-1  tvg-logo="http://limestorage.me/lives/VARIEDADES/POLISHOP.png" ,POLISHOP [SD]
 http://dns.tplayer.live:80/Q1rDYW/2bWVcA/90210.m3u8
 #EXTINF:-1  tvg-logo="http://limestorage.me/lives/ESPORTES/PREMIERE.png" ,PREMIERE 2 [FHD]
@@ -1811,22 +1801,6 @@ http://dns.tplayer.live:80/Q1rDYW/2bWVcA/90302.m3u8
 http://dns.tplayer.live:80/Q1rDYW/2bWVcA/90305.m3u8
 #EXTINF:-1  tvg-logo="http://limestorage.me/lives/CANAIS%20ABERTOS/SBT.png" ,SBT VTV CAMPINAS [M]
 http://dns.tplayer.live:80/Q1rDYW/2bWVcA/90304.m3u8
-#EXTINF:-1  tvg-logo="http://limestorage.me/lives/ADULTO/SEXPRIVE%CC%81.png" ,SEX PRIVE [FHD] (H265)
-http://dns.tplayer.live:80/Q1rDYW/2bWVcA/95485.m3u8
-#EXTINF:-1  tvg-logo="http://limestorage.me/lives/ADULTO/SEXPRIVE%CC%81.png" ,SEX PRIVE [HD]
-http://dns.tplayer.live:80/Q1rDYW/2bWVcA/95486.m3u8
-#EXTINF:-1  tvg-logo="http://limestorage.me/lives/ADULTO/SEXPRIVE%CC%81.png" ,SEX PRIVE [SD]
-http://dns.tplayer.live:80/Q1rDYW/2bWVcA/95487.m3u8
-#EXTINF:-1  tvg-logo="http://limestorage.me/lives/ADULTO/SEXTREME.png" ,SEXTREME [HD]
-http://dns.tplayer.live:80/Q1rDYW/2bWVcA/90306.m3u8
-#EXTINF:-1  tvg-logo="http://limestorage.me/lives/ADULTO/SEXTREME.png" ,SEXTREME [SD]
-http://dns.tplayer.live:80/Q1rDYW/2bWVcA/90307.m3u8
-#EXTINF:-1  tvg-logo="http://limestorage.me/lives/ADULTO/SEXY%20HOT.png" ,SEXY HOT [FHD] (H265)
-http://dns.tplayer.live:80/Q1rDYW/2bWVcA/95488.m3u8
-#EXTINF:-1  tvg-logo="http://limestorage.me/lives/ADULTO/SEXY%20HOT.png" ,SEXY HOT [HD]
-http://dns.tplayer.live:80/Q1rDYW/2bWVcA/90308.m3u8
-#EXTINF:-1  tvg-logo="http://limestorage.me/lives/ADULTO/SEXY%20HOT.png" ,SEXY HOT [SD]
-http://dns.tplayer.live:80/Q1rDYW/2bWVcA/90309.m3u8
 #EXTINF:-1  tvg-logo="http://limestorage.me/lives/RELIGIOSOS/SIC%20INTERNACIONAL.png" ,SIC INTERNACIONAL [FHD]
 http://dns.tplayer.live:80/Q1rDYW/2bWVcA/100037.m3u8
 #EXTINF:-1  tvg-logo="http://limestorage.me/lives/RELIGIOSOS/SIC%20INTERNACIONAL.png" ,SIC INTERNACIONAL [HD]
@@ -2105,10 +2079,6 @@ http://dns.tplayer.live:80/Q1rDYW/2bWVcA/90433.m3u8
 http://dns.tplayer.live:80/Q1rDYW/2bWVcA/90435.m3u8
 #EXTINF:-1  tvg-logo="http://limestorage.me/lives/FILMES%20E%20SERIES/UNIVERSAL%20CHANNEL.png" ,UNIVERSAL CHANNEL [SD]
 http://dns.tplayer.live:80/Q1rDYW/2bWVcA/90436.m3u8
-#EXTINF:-1  tvg-logo="http://limestorage.me/lives/ADULTO/VENUS.png" ,VENUS [HD]
-http://dns.tplayer.live:80/Q1rDYW/2bWVcA/90437.m3u8
-#EXTINF:-1  tvg-logo="http://limestorage.me/lives/ADULTO/VENUS.png" ,VENUS [SD]
-http://dns.tplayer.live:80/Q1rDYW/2bWVcA/90438.m3u8
 #EXTINF:-1  tvg-logo="http://limestorage.me/lives/VARIEDADES/VH1.png" ,VH1 [HD]
 http://dns.tplayer.live:80/Q1rDYW/2bWVcA/91344.m3u8
 #EXTINF:-1  tvg-logo="http://limestorage.me/lives/VARIEDADES/VIVA.png" ,VIVA [FHD]
