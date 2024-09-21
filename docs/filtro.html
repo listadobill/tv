@@ -51,17 +51,7 @@ function filtrarCanais(listaM3U) {
     const canaisBrasileiros = [];
     
     // Lista de termos abrangentes, incluindo plural e singular
-    const termosBrasileiros = ['canais', 'canal', 'abertos', 'aberto', 'esportes', 'esporte', 
-        'filmes', 'filme', 'séries', 'série', 'infantil', 'notícias', 
-        'notícia', 'variedades', 'variedade', 'brasil', 'brazil', 'br',
-        'br canais', 'br canal', 'br abertos', 'br aberto', 
-        'br esportes', 'br esporte', 'br filmes', 'br filme', 
-        'br séries', 'br série', 'br infantil', 'br notícias', 'br notícia',
-        'BR Filmes e Series', 'BR Filme e Serie', 'BR Musicas', 
-        'BR Musica', 'Musica', 'Musicas', 'BR HBO', 'BR Telecine', 
-        'BR Premiere', 'BR Variedades', 'BR Variedade', 
-        'BR Documentarios', 'Documentario', 'Documentarios',
-        'BR Infantis', 'BR Rede Globo'];
+    const termosBrasileiros = ['canais', 'canal', 'abertos', 'aberto', 'esportes', 'esporte', 'filmes', 'filme', 'séries', 'série', 'infantil', 'notícias', 'notícia', 'variedades', 'variedade', 'brasil', 'brazil', 'br'];
     
     // Quebra a lista em linhas e corrige a má formação
     const linhas = corrigirErros(listaM3U).split('\n');
