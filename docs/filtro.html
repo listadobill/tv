@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FILTRO DE LISTA PARA CANAIS BRASILEIROS</title>
+    <title>Filtrar Canais Brasileiros da Lista M3U</title>
     <style>
         textarea, pre {
             width: 100%;
@@ -92,7 +92,8 @@ function filtrarCanais(listaM3U) {
         }
     }
 
-    return canaisBrasileiros.join('\n');
+    // Adiciona a linha #EXTM3U no topo da lista
+    return '#EXTM3U\n' + canaisBrasileiros.join('\n');
 }
 
 // Função para gerar a lista filtrada e exibi-la na página
