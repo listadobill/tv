@@ -73,7 +73,20 @@
 
             // Unificação e ordenação
             document.getElementById('status').textContent = 'Unificando listas...';
-            allEntries.sort((a, b) => a.info.localeCompare(b.info)); // Ordena pelo nome do canal
+            allEntries.sort((a, b) => {
+                const nameA = a.info.split(',').pop().trim();
+                const nameB = b.info.split(',').pop().trim();
+
+                // Coloca os canais que começam com números no topo
+                const startsWithNumberA = /^[0-9]/.test(nameA);
+                const startsWithNumberB = /^[0-9]/.test(nameB);
+
+                if (startsWithNumberA && !startsWithNumberB) return -1;
+                if (!startsWithNumberA && startsWithNumberB) return 1;
+
+                // Se ambos começam com números ou ambos não começam, ordena alfabeticamente
+                return nameA.localeCompare(nameB);
+            });
 
             allEntries.forEach(entry => {
                 unifiedM3UContent += entry.info + '\n' + entry.url + '\n';
