@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista IPTV Unificada</title>
+    <style>
+        #progress {
+            width: 100%;
+            background-color: #f3f3f3;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        #progress-bar {
+            height: 20px;
+            width: 0;
+            background-color: #4caf50;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista IPTV Unificada</h1>
+    <p id="status">Carregando listas...</p>
+    <div id="progress">
+        <div id="progress-bar"></div>
+    </div>
+    <button id="download-button" style="display: none;">Baixar Lista IPTV Unificada (.m3u)</button>
+
+    <script>
+        const urls = [
+            "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/cxtvrokusamsungplutotviptv.m3u",
+            "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/formigatv.m3u",
+            "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/iptv.m3u",
+            "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/iptv_2.m3u",
+            "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/plutotvbr.m3u",
+            "https://iptv-org.github.io/iptv/languages/por.m3u"
+        ];
+
+        let unifiedM3UContent = "#EXTM3U\n"; // Começo do arquivo M3U
+
+        async function fetchM3U() {
+            const totalUrls = urls.length;
+
+            for (let i = 0; i < totalUrls; i++) {
+                const response = await fetch(urls[i]);
+                const data = await response.text();
+                
+                // Adiciona o conteúdo da lista ao arquivo M3U unificado
+                unifiedM3UContent += data + "\n";
+
+                // Atualiza a barra de progresso
+                const progress = ((i + 1) / totalUrls) * 100;
+                document.getElementById('progress-bar').style.width = progress + '%';
+            }
+
+            document.getElementById('status').textContent = 'Listas carregadas com sucesso!';
+            document.getElementById('download-button').style.display = 'block'; // Exibe o botão de download
+        }
+
+        function downloadM3U() {
+            const blob = new Blob([unifiedM3UContent], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'lista_unificada_iptv.m3u';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+
+        document.getElementById('download-button').addEventListener('click', downloadM3U);
+
+        fetchM3U();
+    </script>
+</body>
+</html>
