@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FILTRO DE LISTA PARA CANAIS BRASILEIROS</title>
+    <style>
+        textarea, pre {
+            width: 100%;
+            height: 300px;
+        }
+        button {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Filtrar Canais Brasileiros da Lista M3U</h1>
+<textarea id="listaM3U" placeholder="Cole aqui sua lista M3U..."></textarea>
+<br>
+<button onclick="gerarListaFiltrada()">Gerar Lista Filtrada</button>
+<button onclick="baixarLista()">Baixar Lista Filtrada (.m3u)</button>
+<pre id="filteredList"></pre>
+
+<script>
+// Função para corrigir erros comuns de má formação na lista M3U
+function corrigirErros(listaM3U) {
+    const linhas = listaM3U.split('\n');
+    const listaCorrigida = [];
+
+    for (let i = 0; i < linhas.length; i++) {
+        const linha = linhas[i].trim();
+        
+        // Verifica se a linha é #EXTINF e se a próxima é uma URL
+        if (linha.startsWith('#EXTINF')) {
+            const proximaLinha = linhas[i + 1] ? linhas[i + 1].trim() : '';
+            if (!proximaLinha.startsWith('http')) {
+                continue;  // Ignora a linha órfã sem URL
+            }
+        }
+
+        listaCorrigida.push(linha);
+    }
+
+    return listaCorrigida.join('\n');
+}
+
+// Função para filtrar a lista M3U e manter apenas canais brasileiros com URLs válidas
+function filtrarCanais(listaM3U) {
+    const canaisBrasileiros = [];
+    
+    // Lista de termos abrangentes, incluindo plural e singular
+    const termosBrasileiros = ['canais', 'canal', 'abertos', 'aberto', 'esportes', 'esporte', 'filmes', 'filme', 'séries', 'série', 'infantil', 'notícias', 'notícia', 'variedades', 'variedade', 'brasil', 'brazil', 'br'];
+    
+    // Quebra a lista em linhas e corrige a má formação
+    const linhas = corrigirErros(listaM3U).split('\n');
+    
+    for (let i = 0; i < linhas.length; i++) {
+        const linha = linhas[i].trim();
+
+        // Verifica se a linha é de metadados de canal
+        if (linha.startsWith('#EXTINF')) {
+            // Verifica se a próxima linha contém uma URL
+            let url = linhas[i + 1] ? linhas[i + 1].trim() : '';
+
+            // Converte a linha para minúsculas para uma comparação sem diferenciação de maiúsculas/minúsculas
+            const linhaMin = linha.toLowerCase();
+
+            // Verifica se algum dos termos está presente no 'group-title'
+            if (termosBrasileiros.some(termo => linhaMin.includes(termo))) {
+
+                // Apenas continua se a próxima linha for uma URL válida
+                if (url.endsWith('.m3u8') || url.endsWith('.m3u') || url.endsWith('.ts')) {
+
+                    // Converte .ts para .m3u8, caso necessário
+                    if (url.endsWith('.ts')) {
+                        url = url.replace('.ts', '.m3u8');
+                    }
+
+                    // Formata a linha #EXTINF para incluir apenas o logo e o nome
+                    const metadadosFormatados = linha.replace(/tvg-id="[^"]*" /, '')
+                                                       .replace(/tvg-name="([^"]*)"/, '')
+                                                       .replace(/group-title="[^"]*"/, '')
+                                                       .replace(',-', ',')
+                                                       .replace(/(?<=\w)"$/, ''); // Remove aspas finais se existir
+
+                    // Adiciona o par (metadado + URL) à lista de canais brasileiros
+                    canaisBrasileiros.push(metadadosFormatados + '\n' + url);
+                }
+            }
+        }
+    }
+
+    return canaisBrasileiros.join('\n');
+}
+
+// Função para gerar a lista filtrada e exibi-la na página
+function gerarListaFiltrada() {
+    // Pega o conteúdo da textarea (lista M3U colada)
+    const listaM3U = document.getElementById('listaM3U').value;
+
+    // Chama a função para filtrar os canais brasileiros
+    const listaFiltrada = filtrarCanais(listaM3U);
+
+    // Exibe a lista filtrada
+    document.getElementById('filteredList').textContent = listaFiltrada;
+}
+
+// Função para baixar a lista filtrada como um arquivo .m3u
+function baixarLista() {
+    // Pega o conteúdo filtrado
+    const listaFiltrada = document.getElementById('filteredList').textContent;
+
+    // Cria um blob com o conteúdo filtrado
+    const blob = new Blob([listaFiltrada], { type: 'text/plain' });
+    
+    // Cria um link temporário para download
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'lista_filtrada.m3u';
+
+    // Simula o clique para iniciar o download
+    link.click();
+
+    // Libera o recurso do objeto URL
+    URL.revokeObjectURL(link.href);
+}
+</script>
+
+</body>
+</html>
