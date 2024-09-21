@@ -3,84 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IPTV Player</title>
+    <title>Download M3U com Progresso</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            padding: 20px;
         }
-        #playlist {
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        pre {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+            max-width: 100%;
+            white-space: pre-wrap;
             margin-top: 20px;
         }
-        video {
-            width: 640px;
-            height: 360px;
+        .progress-bar {
+            width: 100%;
+            background-color: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        .progress-bar-fill {
+            height: 20px;
+            background-color: #4caf50;
+            width: 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:disabled {
+            background-color: #888;
         }
     </style>
 </head>
 <body>
 
-    <div id="player">
-        <h1>IPTV Player</h1>
-        <video id="videoPlayer" controls>
-            Seu navegador não suporta a tag de vídeo.
-        </video>
-        <div id="playlist">
-            <select id="channelList" onchange="playSelectedChannel()">
-                <option value="">Selecione um canal</option>
-            </select>
+    <div class="container">
+        <h1>Download do Arquivo M3U</h1>
+
+        <div class="progress-bar" id="progressBar">
+            <div class="progress-bar-fill" id="progressFill"></div>
         </div>
+
+        <button id="downloadButton" onclick="downloadM3U()" disabled>Baixar M3U</button>
+
+        <pre id="m3uContent">Carregando o arquivo M3U...</pre>
     </div>
 
     <script>
         const m3uUrl = "http://lordofthepings.xyz:8080/get.php?username=play&password=live.php?mac=00:1A:79:B0:3E:12&stream=5160&extension=ts&type=m3u_plus";
-        const videoPlayer = document.getElementById("videoPlayer");
-        const channelList = document.getElementById("channelList");
+        const m3uContent = document.getElementById("m3uContent");
+        const downloadButton = document.getElementById("downloadButton");
+        const progressBar = document.getElementById("progressBar");
+        const progressFill = document.getElementById("progressFill");
 
-        // Função para buscar o arquivo M3U
+        let m3uData = '';
+
+        // Função para buscar o arquivo M3U e exibi-lo com barra de progresso
         async function loadM3U() {
             try {
-                const response = await fetch(m3uUrl);
-                const m3uText = await response.text();
-                parseM3U(m3uText);
-            } catch (error) {
-                console.error("Erro ao carregar o arquivo M3U: ", error);
-            }
-        }
+                const response = await fetch(m3uUrl, {
+                    method: 'GET',
+                    headers: { 'Content-Type': 'application/x-mpegURL' }
+                });
 
-        // Função para processar e listar os canais
-        function parseM3U(m3uText) {
-            const lines = m3uText.split("\n");
-            let currentChannelName = "";
-            
-            lines.forEach(line => {
-                if (line.startsWith("#EXTINF")) {
-                    // Extrai o nome do canal
-                    currentChannelName = line.split(",")[1];
-                } else if (line.startsWith("http")) {
-                    // Adiciona o canal à lista
-                    const option = document.createElement("option");
-                    option.value = line.trim();
-                    option.textContent = currentChannelName;
-                    channelList.appendChild(option);
+                if (!response.ok) {
+                    throw new Error('Erro ao carregar o arquivo M3U.');
                 }
-            });
-        }
 
-        // Função para reproduzir o canal selecionado
-        function playSelectedChannel() {
-            const selectedUrl = channelList.value;
-            if (selectedUrl) {
-                videoPlayer.src = selectedUrl;
-                videoPlayer.play();
+                const reader = response.body.getReader();
+                const contentLength = +response.headers.get('Content-Length');
+
+                let receivedLength = 0;
+                const chunks = [];
+                while(true) {
+                    const { done, value } = await reader.read();
+                    if (done) break;
+                    chunks.push(value);
+                    receivedLength += value.length;
+
+                    // Atualiza a barra de progresso
+                    const percentComplete = (receivedLength / contentLength) * 100;
+                    progressFill.style.width = percentComplete + '%';
+                }
+
+                const blob = new Blob(chunks);
+                m3uData = await blob.text();
+
+                // Exibe o conteúdo no <pre>
+                m3uContent.textContent = m3uData;
+                downloadButton.disabled = false;  // Ativa o botão de download
+
+            } catch (error) {
+                m3uContent.textContent = "Erro ao carregar o arquivo M3U.";
+                console.error(error);
             }
         }
 
-        // Carrega a playlist M3U quando a página é aberta
+        // Função para baixar o arquivo M3U
+        function downloadM3U() {
+            const blob = new Blob([m3uData], { type: 'application/x-mpegURL' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'playlist.m3u';
+            a.click();
+            window.URL.revokeObjectURL(url);  // Libera a URL
+        }
+
+        // Carrega o conteúdo M3U com barra de progresso quando a página é aberta
         window.onload = loadM3U;
     </script>
 
