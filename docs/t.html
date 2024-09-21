@@ -3,284 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CANAIS DO BRASIL E OUTROS PAÍSES DE LÍNGUA PORTUGUESA ABERTOS - IPTV ORG</title>
-    <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
+    <title>IPTV Player</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: url('https://wallpaperaccess.com/full/1489194.jpg') no-repeat center center fixed;
-            background-size: cover;
-            color: #fff;
-            display: flex;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        #container {
-            display: flex;
-            width: 100%;
-            height: 100%;
-        }
-
-        #player {
-            flex: 1;
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: #f0f0f0;
             display: flex;
             justify-content: center;
             align-items: center;
-            position: relative;
-            z-index: 1;
-            overflow: hidden; /* Garante que o player não sobreponha a lista de canais */
+            height: 100vh;
         }
-
-        .video-js {
-            background-color: #000;
-            position: relative;
-            z-index: 1;
-            width: 100%;
-            height: 100%;
+        #playlist {
+            margin-top: 20px;
         }
-
-        .video-js.fullscreen {
-            width: 100% !important;
-            height: 100% !important;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-
-        .video-js.reduced {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-
-        #canais {
-            width: 300px;
-            background-color: rgba(34, 34, 34, 0.8);
-            padding: 10px;
-            overflow-y: auto;
-            border-left: 2px solid #444;
-            height: 100%;
-            position: relative;
-            z-index: 2;
-            scrollbar-width: thin; /* Para navegadores modernos */
-            scrollbar-color: #4CAF50 #333; /* Cor da barra e do fundo */
-        }
-
-        #canais::-webkit-scrollbar {
-            width: 20px; /* Largura da barra de rolagem aumentada */
-        }
-
-        #canais::-webkit-scrollbar-thumb {
-            background: #4CAF50; /* Cor da barra de rolagem */
-            border-radius: 10px; /* Bordas arredondadas */
-        }
-
-        #canais::-webkit-scrollbar-track {
-            background: #333; /* Cor de fundo da área de rolagem */
-        }
-
-        #canais ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        #canais li {
-            padding: 10px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            border-bottom: 1px solid #444;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        #canais li:hover {
-            background-color: #4CAF50;
-            color: #fff;
-        }
-
-        #canais img {
-            width: 40px;
-            height: 40px;
-            margin-right: 10px;
-        }
-
-        /* Customização dos controles do Video.js */
-        .vjs-control-bar {
-            font-size: 1.5em;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 10px 0;
-            height: 80px;
-            bottom: 0;
-            position: absolute;
-            top: 10px;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-        }
-
-        .vjs-control-bar .vjs-play-control,
-        .vjs-control-bar .vjs-volume-control,
-        .vjs-control-bar .vjs-fullscreen-control {
-            width: 80px;
-            height: 80px;
-            line-height: 80px;
-            font-size: 1.5em;
-        }
-
-        .vjs-play-control .vjs-icon-placeholder,
-        .vjs-volume-control .vjs-icon-placeholder,
-        .vjs-fullscreen-control .vjs-icon-placeholder {
-            font-size: 2em;
-        }
-
-        .vjs-play-control {
-            background-color: #333;
-        }
-
-        .vjs-volume-control {
-            background-color: #333;
-        }
-
-        .vjs-fullscreen-control {
-            background-color: #333;
-        }
-
-        .vjs-play-control:hover,
-        .vjs-volume-control:hover,
-        .vjs-fullscreen-control:hover {
-            background-color: #4CAF50;
-        }
-
-        .divider {
-            width: 2px;
-            background-color: #444;
-            height: 100%;
-            position: relative;
-            z-index: 1;
+        video {
+            width: 640px;
+            height: 360px;
         }
     </style>
 </head>
 <body>
-    <div id="container">
-        <div id="canais">
-            <ul id="lista-canais">
-                <!-- Os itens da lista serão adicionados aqui -->
-            </ul>
-        </div>
-        <div class="divider"></div>
-        <div id="player">
-            <video id="video-player" class="video-js vjs-default-skin reduced" controls></video>
+
+    <div id="player">
+        <h1>IPTV Player</h1>
+        <video id="videoPlayer" controls>
+            Seu navegador não suporta a tag de vídeo.
+        </video>
+        <div id="playlist">
+            <select id="channelList" onchange="playSelectedChannel()">
+                <option value="">Selecione um canal</option>
+            </select>
         </div>
     </div>
 
-    <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/main/zteste.m3u";
-            var listaCanaisElemento = document.getElementById("lista-canais");
-            var video = videojs('video-player', {
-                controls: true,
-                autoplay: false,
-                preload: 'auto'
+        const m3uUrl = "http://lordofthepings.xyz:8080/get.php?username=play&password=live.php?mac=00:1A:79:B0:3E:12&stream=5160&extension=ts&type=m3u_plus";
+        const videoPlayer = document.getElementById("videoPlayer");
+        const channelList = document.getElementById("channelList");
+
+        // Função para buscar o arquivo M3U
+        async function loadM3U() {
+            try {
+                const response = await fetch(m3uUrl);
+                const m3uText = await response.text();
+                parseM3U(m3uText);
+            } catch (error) {
+                console.error("Erro ao carregar o arquivo M3U: ", error);
+            }
+        }
+
+        // Função para processar e listar os canais
+        function parseM3U(m3uText) {
+            const lines = m3uText.split("\n");
+            let currentChannelName = "";
+            
+            lines.forEach(line => {
+                if (line.startsWith("#EXTINF")) {
+                    // Extrai o nome do canal
+                    currentChannelName = line.split(",")[1];
+                } else if (line.startsWith("http")) {
+                    // Adiciona o canal à lista
+                    const option = document.createElement("option");
+                    option.value = line.trim();
+                    option.textContent = currentChannelName;
+                    channelList.appendChild(option);
+                }
             });
+        }
 
-            function toggleFullscreen() {
-                if (video.isFullscreen()) {
-                    video.exitFullscreen();
-                    video.el().classList.remove('fullscreen');
-                    video.el().classList.add('reduced');
-                    video.controlBar.hide();
-                } else {
-                    video.requestFullscreen();
-                    video.el().classList.remove('reduced');
-                    video.el().classList.add('fullscreen');
-                    video.controlBar.show();
-                }
+        // Função para reproduzir o canal selecionado
+        function playSelectedChannel() {
+            const selectedUrl = channelList.value;
+            if (selectedUrl) {
+                videoPlayer.src = selectedUrl;
+                videoPlayer.play();
             }
+        }
 
-            function ajustarTamanhoVideo() {
-                if (video.isFullscreen()) {
-                    video.el().classList.add('fullscreen');
-                    video.el().classList.remove('reduced');
-                } else {
-                    video.el().classList.add('reduced');
-                    video.el().classList.remove('fullscreen');
-                }
-            }
-
-            video.on('fullscreenchange', ajustarTamanhoVideo);
-
-            function configurarReconexao(player) {
-                player.on('error', function() {
-                    console.log('Tentando reconectar...');
-                    player.src({ src: video.src(), type: 'application/x-mpegURL' });
-                    player.play();
-                });
-            }
-
-            var xhr = new XMLHttpRequest();
-            xhr.open("GET", listaURL, true);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    var linhas = xhr.responseText.split('\n');
-                    var canais = [];
-
-                    for (var i = 0; i < linhas.length; i++) {
-                        if (linhas[i].startsWith('#EXTINF')) {
-                            var nome = linhas[i].split(',')[1];
-                            var link = linhas[i + 1];
-                            var logoURL = '';
-                            var logoMatch = linhas[i].match(/tvg-logo="([^"]+)"/);
-                            if (logoMatch) {
-                                logoURL = logoMatch[1];
-                            }
-
-                            canais.push({
-                                nome: nome,
-                                link: link,
-                                logoURL: logoURL
-                            });
-                        }
-                    }
-
-                    canais.sort(function(a, b) {
-                        return a.nome.localeCompare(b.nome);
-                    });
-
-                    canais.forEach(function(canal) {
-                        var itemLista = document.createElement("li");
-                        if (canal.logoURL) {
-                            var logoImg = document.createElement("img");
-                            logoImg.src = canal.logoURL;
-                            itemLista.appendChild(logoImg);
-                        }
-                        var nomeTexto = document.createTextNode(canal.nome);
-                        itemLista.appendChild(nomeTexto);
-
-                        itemLista.onclick = (function(url) {
-                            return function() {
-                                video.src({ src: url, type: 'application/x-mpegURL' });
-                                video.play();
-                                toggleFullscreen();
-                                configurarReconexao(video);
-                            };
-                        })(canal.link);
-
-                        listaCanaisElemento.appendChild(itemLista);
-                    });
-                } else if (xhr.readyState === 4) {
-                    alert("Erro ao carregar a lista de canais. Verifique a URL e a conexão de rede.");
-                }
-            };
-            xhr.send();
-        });
+        // Carrega a playlist M3U quando a página é aberta
+        window.onload = loadM3U;
     </script>
+
 </body>
 </html>
