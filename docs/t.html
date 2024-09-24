@@ -105,6 +105,7 @@
             margin-right: 10px;
             border-radius: 50%;
             border: 2px solid #4CAF50;
+            object-fit: cover;
         }
 
         #sidebar p {
@@ -229,7 +230,9 @@
                         filtrados.forEach(function(canal) {
                             var itemLista = document.createElement("li");
                             var logoImg = document.createElement("img");
-                            logoImg.src = canal.logoURL ? canal.logoURL : 'https://via.placeholder.com/50';
+
+                            // Se o logo estiver vazio, usa um ícone genérico
+                            logoImg.src = canal.logoURL ? canal.logoURL : 'https://via.placeholder.com/50?text=TV';
                             itemLista.appendChild(logoImg);
 
                             var nomeTexto = document.createElement("p");
