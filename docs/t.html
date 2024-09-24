@@ -32,6 +32,20 @@
             border-bottom: 1px solid #444;
         }
 
+        #search-bar {
+            padding: 10px;
+            background-color: #333;
+            text-align: center;
+        }
+
+        #search-input {
+            width: 90%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
         #main {
             display: flex;
             flex: 1;
@@ -136,6 +150,9 @@
 <body>
     <div id="container">
         <div id="header">FORMIGA TV - LISTA DE CANAIS</div>
+        <div id="search-bar">
+            <input type="text" id="search-input" placeholder="Buscar canal...">
+        </div>
         <div id="main">
             <div id="sidebar">
                 <ul id="lista-canais">
@@ -207,24 +224,38 @@
                         return a.nome.localeCompare(b.nome);
                     });
 
-                    canais.forEach(function(canal) {
-                        var itemLista = document.createElement("li");
-                        var logoImg = document.createElement("img");
-                        logoImg.src = canal.logoURL ? canal.logoURL : 'https://via.placeholder.com/50';
-                        itemLista.appendChild(logoImg);
+                    function renderCanais(filtrados) {
+                        listaCanaisElemento.innerHTML = '';
+                        filtrados.forEach(function(canal) {
+                            var itemLista = document.createElement("li");
+                            var logoImg = document.createElement("img");
+                            logoImg.src = canal.logoURL ? canal.logoURL : 'https://via.placeholder.com/50';
+                            itemLista.appendChild(logoImg);
 
-                        var nomeTexto = document.createElement("p");
-                        nomeTexto.textContent = canal.nome;
-                        itemLista.appendChild(nomeTexto);
+                            var nomeTexto = document.createElement("p");
+                            nomeTexto.textContent = canal.nome;
+                            itemLista.appendChild(nomeTexto);
 
-                        itemLista.onclick = function() {
-                            video.src({ src: canal.link, type: 'application/x-mpegURL' });
-                            video.play();
-                            video.requestFullscreen();  // Entrar em tela cheia automaticamente
-                            configurarReconexao(video);
-                        };
+                            itemLista.onclick = function() {
+                                video.src({ src: canal.link, type: 'application/x-mpegURL' });
+                                video.play();
+                                toggleFullscreen();
+                                configurarReconexao(video);
+                            };
 
-                        listaCanaisElemento.appendChild(itemLista);
+                            listaCanaisElemento.appendChild(itemLista);
+                        });
+                    }
+
+                    renderCanais(canais);
+
+                    // Filtro de busca
+                    document.getElementById('search-input').addEventListener('input', function() {
+                        var termoBusca = this.value.toLowerCase();
+                        var canaisFiltrados = canais.filter(function(canal) {
+                            return canal.nome.toLowerCase().includes(termoBusca);
+                        });
+                        renderCanais(canaisFiltrados);
                     });
                 } else if (xhr.readyState === 4) {
                     alert("Erro ao carregar a lista de canais. Verifique a URL e a conexão de rede.");
