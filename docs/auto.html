@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AUTOMOVEIS</title>
-    <link href="https://vjs.zencdn.net/8.6.0/video-js.css" rel="stylesheet">
-    <link href="https://your-path-to-cosmos-skin/cosmos.css" rel="stylesheet"> <!-- Substitua pelo caminho real da sua skin -->
+    <title>CARROS</title>
+    <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -31,25 +30,6 @@
             text-align: center;
             font-size: 1.5em;
             border-bottom: 1px solid #444;
-            position: relative; /* Para permitir o posicionamento absoluto do botão */
-        }
-
-        #home-button {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 15px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.3s ease;
-        }
-
-        #home-button:hover {
-            background-color: #45a049;
         }
 
         #search-bar {
@@ -141,34 +121,21 @@
             left: 0;
         }
 
-        /* Estilizando a barra de controle para ficar maior */
-        .video-js .vjs-control-bar {
-            font-size: 1.5em; /* Aumenta o tamanho dos controles */
+        .video-js.vjs-default-skin .vjs-control-bar {
+            background: rgba(0, 0, 0, 0.6);
         }
 
-        /* Estilo dos botões de controle */
         .video-js .vjs-big-play-button {
             background-color: rgba(76, 175, 80, 0.8);
             border: none;
             border-radius: 50%;
-            font-size: 3em; /* Aumenta o tamanho do botão de play */
+            font-size: 2.5em;
             line-height: 1.5;
             transition: background-color 0.3s ease;
         }
 
         .video-js .vjs-big-play-button:hover {
             background-color: rgba(76, 175, 80, 1);
-        }
-
-        /* Estilo dos botões de avançar e retroceder */
-        .video-js .vjs-seek-button {
-            font-size: 1.5em; /* Aumenta o tamanho do botão */
-        }
-
-        /* Estilo dos botões de legendas e qualidade */
-        .vjs-text-track-button,
-        .vjs-quality-button {
-            font-size: 1.2em; /* Aumenta o tamanho dos botões de legendas e qualidade */
         }
 
         ::-webkit-scrollbar {
@@ -183,10 +150,7 @@
 </head>
 <body>
     <div id="container">
-        <div id="header">
-            CANAIS SOBRE CARROS
-            <button id="home-button" onclick="window.location.href='https://listadobill.github.io/tv/'">PÁGINA INICIAL</button>
-        </div>
+        <div id="header">CARROS/div>
         <div id="main">
             <div id="sidebar">
                 <div id="search-bar">
@@ -197,12 +161,12 @@
                 </ul>
             </div>
             <div id="player">
-                <video id="video-player" class="video-js vjs-default-skin" controls preload="auto"></video>
+                <video id="video-player" class="video-js vjs-default-skin" controls></video>
             </div>
         </div>
     </div>
 
-    <script src="https://vjs.zencdn.net/8.6.0/video.min.js"></script>
+    <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var listaURL = "https://iptv-org.github.io/iptv/categories/auto.m3u";
@@ -210,9 +174,7 @@
             var video = videojs('video-player', {
                 controls: true,
                 autoplay: false,
-                preload: 'auto',
-                playbackRates: [0.5, 1, 1.5, 2], // Adiciona opções de velocidade de reprodução
-                fluid: true // Para tornar o vídeo responsivo
+                preload: 'auto'
             });
 
             function toggleFullscreen() {
@@ -280,6 +242,8 @@
                             itemLista.onclick = function() {
                                 video.src({ src: canal.link, type: 'application/x-mpegURL' });
                                 video.play();
+                                toggleFullscreen();
+                                configurarReconexao(video);
                             };
 
                             listaCanaisElemento.appendChild(itemLista);
@@ -289,17 +253,15 @@
                     renderCanais(canais);
 
                     // Filtro de busca
-                    var searchInput = document.getElementById("search-input");
-                    searchInput.addEventListener("input", function() {
-                        var searchTerm = this.value.toLowerCase();
+                    document.getElementById('search-input').addEventListener('input', function() {
+                        var termoBusca = this.value.toLowerCase();
                         var canaisFiltrados = canais.filter(function(canal) {
-                            return canal.nome.toLowerCase().includes(searchTerm);
+                            return canal.nome.toLowerCase().includes(termoBusca);
                         });
                         renderCanais(canaisFiltrados);
                     });
-
-                    // Configura reconexão
-                    configurarReconexao(video);
+                } else if (xhr.readyState === 4) {
+                    alert("Erro ao carregar a lista de canais. Verifique a URL e a conexão de rede.");
                 }
             };
             xhr.send();
