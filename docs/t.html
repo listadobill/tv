@@ -220,7 +220,7 @@
                         itemLista.onclick = function() {
                             video.src({ src: canal.link, type: 'application/x-mpegURL' });
                             video.play();
-                            toggleFullscreen();
+                            video.requestFullscreen();  // Entrar em tela cheia automaticamente
                             configurarReconexao(video);
                         };
 
