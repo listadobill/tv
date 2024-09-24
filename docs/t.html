@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LISTA DE CANAIS IPTV - FORMIGA TV - DESATIVE CONEXÃO SEGURA</title>
+    <title>TV DO BILL - DESATIVE CONEXÃO SEGURA</title>
     <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
     <style>
         body {
@@ -86,7 +86,6 @@
         }
 
         #sidebar li {
-            background-color: rgba(50, 50, 50, 0.8);
             border-radius: 8px;
             padding: 10px;
             display: flex;
@@ -146,6 +145,14 @@
             background-color: #4CAF50;
             border-radius: 10px;
         }
+
+        .lista-1 { background-color: rgba(76, 175, 80, 0.2); } /* Cor para a primeira lista */
+        .lista-2 { background-color: rgba(33, 150, 243, 0.2); } /* Cor para a segunda lista */
+        .lista-3 { background-color: rgba(255, 193, 7, 0.2); } /* Cor para a terceira lista */
+        .lista-4 { background-color: rgba(156, 39, 176, 0.2); } /* Cor para a quarta lista */
+        .lista-5 { background-color: rgba(244, 67, 54, 0.2); } /* Cor para a quinta lista */
+        .lista-6 { background-color: rgba(0, 188, 212, 0.2); } /* Cor para a sexta lista */
+        .lista-7 { background-color: rgba(139, 195, 74, 0.2); } /* Cor para a sétima lista */
     </style>
 </head>
 <body>
@@ -169,7 +176,16 @@
     <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/iptv2.m3u";
+            var listasURLs = [
+                "https://raw.githubusercontent.com/listadobill/tv/main/cxtvrokusamsungplutotviptv.m3u",
+                "https://raw.githubusercontent.com/listadobill/tv/main/formigatv.m3u",
+                "https://raw.githubusercontent.com/listadobill/tv/main/iptv.m3u",
+                "https://raw.githubusercontent.com/listadobill/tv/main/plutotvbr.m3u",
+                "https://iptv-org.github.io/iptv/languages/por.m3u",
+                "https://iptv-org.github.io/iptv/categories/music.m3u",
+                "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/iptv2.m3u"
+            ];
+
             var listaCanaisElemento = document.getElementById("lista-canais");
             var video = videojs('video-player', {
                 controls: true,
@@ -193,78 +209,78 @@
                 });
             }
 
-            var xhr = new XMLHttpRequest();
-            xhr.open("GET", listaURL, true);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    var linhas = xhr.responseText.split('\n');
-                    var canais = [];
+            var canais = [];
+            var cores = ['lista-1', 'lista-2', 'lista-3', 'lista-4', 'lista-5', 'lista-6', 'lista-7'];
 
-                    for (var i = 0; i < linhas.length; i++) {
-                        if (linhas[i].startsWith('#EXTINF')) {
-                            var nome = linhas[i].split(',')[1];
-                            var link = linhas[i + 1] ? linhas[i + 1].trim() : null;
+            function carregarLista(url, cor, index) {
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", url, true);
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4) {
+                        if (xhr.status === 200) {
+                            var linhas = xhr.responseText.split('\n');
+                            for (var i = 0; i < linhas.length; i++) {
+                                if (linhas[i].startsWith('#EXTINF')) {
+                                    var nome = linhas[i].split(',')[1];
+                                    var link = linhas[i + 1] ? linhas[i + 1].trim() : null;
 
-                            if (!nome || !link) continue;
+                                    if (!nome || !link) continue;
 
-                            var logoURL = '';
-                            var logoMatch = linhas[i].match(/tvg-logo="([^"]+)"/);
-                            if (logoMatch) {
-                                logoURL = logoMatch[1];
+                                    var logoURL = '';
+                                    var logoMatch = linhas[i].match(/tvg-logo="([^"]+)"/);
+                                    if (logoMatch) {
+                                        logoURL = logoMatch[1];
+                                    }
+
+                                    canais.push({
+                                        nome: nome,
+                                        link: link,
+                                        logoURL: logoURL,
+                                        cor: cor // Adiciona a cor da lista
+                                    });
+                                }
                             }
-
-                            canais.push({
-                                nome: nome,
-                                link: link,
-                                logoURL: logoURL
-                            });
+                        } else {
+                            console.error('Erro ao carregar a lista de canais da URL:', url);
+                        }
+                        if (index === listasURLs.length - 1) {
+                            renderCanais();
                         }
                     }
+                };
+                xhr.send();
+            }
 
-                    canais.sort(function(a, b) {
-                        return a.nome.localeCompare(b.nome);
-                    });
+            function renderCanais() {
+                // Ordena canais por nome
+                canais.sort(function(a, b) {
+                    return a.nome.localeCompare(b.nome);
+                });
 
-                    function renderCanais(filtrados) {
-                        listaCanaisElemento.innerHTML = '';
-                        filtrados.forEach(function(canal) {
-                            var itemLista = document.createElement("li");
-                            var logoImg = document.createElement("img");
+                listaCanaisElemento.innerHTML = '';
+                canais.forEach(function(canal) {
+                    var itemLista = document.createElement("li");
+                    itemLista.className = canal.cor; // Aplica a cor da lista
+                    itemLista.innerHTML = `
+                        ${canal.logoURL ? `<img src="${canal.logoURL}" alt="${canal.nome} logo">` : ''}
+                        <p>${canal.nome}</p>
+                    `;
 
-                            // Se o logo estiver vazio, usa um ícone genérico
-                            logoImg.src = canal.logoURL ? canal.logoURL : 'https://via.placeholder.com/50?text=TV';
-                            itemLista.appendChild(logoImg);
+                    itemLista.onclick = function() {
+                        video.src(canal.link);
+                        video.play();
+                    };
 
-                            var nomeTexto = document.createElement("p");
-                            nomeTexto.textContent = canal.nome;
-                            itemLista.appendChild(nomeTexto);
+                    listaCanaisElemento.appendChild(itemLista);
+                });
+            }
 
-                            itemLista.onclick = function() {
-                                video.src({ src: canal.link, type: 'application/x-mpegURL' });
-                                video.play();
-                                toggleFullscreen();
-                                configurarReconexao(video);
-                            };
+            // Carrega todas as listas
+            listasURLs.forEach(function(url, index) {
+                carregarLista(url, cores[index], index);
+            });
 
-                            listaCanaisElemento.appendChild(itemLista);
-                        });
-                    }
-
-                    renderCanais(canais);
-
-                    // Filtro de busca
-                    document.getElementById('search-input').addEventListener('input', function() {
-                        var termoBusca = this.value.toLowerCase();
-                        var canaisFiltrados = canais.filter(function(canal) {
-                            return canal.nome.toLowerCase().includes(termoBusca);
-                        });
-                        renderCanais(canaisFiltrados);
-                    });
-                } else if (xhr.readyState === 4) {
-                    alert("Erro ao carregar a lista de canais. Verifique a URL e a conexão de rede.");
-                }
-            };
-            xhr.send();
+            configurarReconexao(video);
         });
     </script>
 </body>
