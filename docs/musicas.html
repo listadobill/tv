@@ -10,8 +10,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: url('https://wallpaperaccess.com/full/1489194.jpg') no-repeat center center fixed;
-            background-size: cover;
+            background-color: #000;
             color: #fff;
             display: flex;
             height: 100vh;
@@ -20,163 +19,169 @@
 
         #container {
             display: flex;
+            flex-direction: column;
             width: 100%;
             height: 100%;
+        }
+
+        #header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            text-align: center;
+            font-size: 1.5em;
+            border-bottom: 1px solid #444;
+        }
+
+        #home-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        #home-button:hover {
+            background-color: #45a049;
+        }
+
+        #search-bar {
+            padding: 10px;
+            background-color: #333;
+            text-align: center;
+        }
+
+        #search-input {
+            width: 95%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        #main {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
         }
 
         #player {
-            flex: 1;
+            flex: 2;
             background-color: rgba(0, 0, 0, 0.8);
+            position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
-            position: relative;
-            z-index: 1;
-            overflow: hidden; /* Garante que o player não sobreponha a lista de canais */
+            overflow: hidden;
         }
 
         .video-js {
+            width: 100%;
+            height: 100%;
             background-color: #000;
-            position: relative;
-            z-index: 1;
-            width: 100%;
-            height: 100%;
         }
 
-        .video-js.fullscreen {
-            width: 100% !important;
-            height: 100% !important;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-
-        .video-js.reduced {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-
-        #canais {
-            width: 300px;
+        #sidebar {
+            flex: 1;
             background-color: rgba(34, 34, 34, 0.8);
-            padding: 10px;
             overflow-y: auto;
+            padding: 10px;
             border-left: 2px solid #444;
-            height: 100%;
-            position: relative;
-            z-index: 2;
-            scrollbar-width: thin; /* Para navegadores modernos */
-            scrollbar-color: #4CAF50 #333; /* Cor da barra e do fundo */
         }
 
-        #canais::-webkit-scrollbar {
-            width: 20px; /* Largura da barra de rolagem aumentada */
-        }
-
-        #canais::-webkit-scrollbar-thumb {
-            background: #4CAF50; /* Cor da barra de rolagem */
-            border-radius: 10px; /* Bordas arredondadas */
-        }
-
-        #canais::-webkit-scrollbar-track {
-            background: #333; /* Cor de fundo da área de rolagem */
-        }
-
-        #canais ul {
+        #sidebar ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
 
-        #canais li {
+        #sidebar li {
+            background-color: rgba(50, 50, 50, 0.8);
+            border-radius: 8px;
             padding: 10px;
-            cursor: pointer;
             display: flex;
             align-items: center;
-            border-bottom: 1px solid #444;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
 
-        #canais li:hover {
+        #sidebar li:hover {
             background-color: #4CAF50;
-            color: #fff;
         }
 
-        #canais img {
-            width: 40px;
-            height: 40px;
+        #sidebar img {
+            width: 50px;
+            height: 50px;
             margin-right: 10px;
+            border-radius: 50%;
+            border: 2px solid #4CAF50;
+            object-fit: cover;
         }
 
-        /* Customização dos controles do Video.js */
-        .vjs-control-bar {
-            font-size: 1.5em;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 10px 0;
-            height: 80px;
-            bottom: 0;
-            position: absolute;
-            top: 10px;
+        #sidebar p {
+            margin: 0;
+            font-size: 1.1em;
+        }
+
+        .video-js.vjs-fullscreen {
+            width: 100% !important;
+            height: 100% !important;
+            position: fixed;
+            top: 0;
             left: 0;
-            right: 0;
-            margin: 0 auto;
         }
 
-        .vjs-control-bar .vjs-play-control,
-        .vjs-control-bar .vjs-volume-control,
-        .vjs-control-bar .vjs-fullscreen-control {
-            width: 80px;
-            height: 80px;
-            line-height: 80px;
-            font-size: 1.5em;
+        .video-js.vjs-default-skin .vjs-control-bar {
+            background: rgba(0, 0, 0, 0.6);
         }
 
-        .vjs-play-control .vjs-icon-placeholder,
-        .vjs-volume-control .vjs-icon-placeholder,
-        .vjs-fullscreen-control .vjs-icon-placeholder {
-            font-size: 2em;
+        .video-js .vjs-big-play-button {
+            background-color: rgba(76, 175, 80, 0.8);
+            border: none;
+            border-radius: 50%;
+            font-size: 2.5em;
+            line-height: 1.5;
+            transition: background-color 0.3s ease;
         }
 
-        .vjs-play-control {
-            background-color: #333;
+        .video-js .vjs-big-play-button:hover {
+            background-color: rgba(76, 175, 80, 1);
         }
 
-        .vjs-volume-control {
-            background-color: #333;
+        ::-webkit-scrollbar {
+            width: 10px;
         }
 
-        .vjs-fullscreen-control {
-            background-color: #333;
-        }
-
-        .vjs-play-control:hover,
-        .vjs-volume-control:hover,
-        .vjs-fullscreen-control:hover {
+        ::-webkit-scrollbar-thumb {
             background-color: #4CAF50;
-        }
-
-        .divider {
-            width: 2px;
-            background-color: #444;
-            height: 100%;
-            position: relative;
-            z-index: 1;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
     <div id="container">
-        <div id="canais">
-            <ul id="lista-canais">
-                <!-- Os itens da lista serão adicionados aqui -->
-            </ul>
+        <div id="header">
+            CANAIS DE MÚSICAS PELO MUNDO
+            <button id="home-button">PÁGINA INICIAL</button>
         </div>
-        <div class="divider"></div>
-        <div id="player">
-            <video id="video-player" class="video-js vjs-default-skin reduced" controls></video>
+        <div id="main">
+            <div id="sidebar">
+                <div id="search-bar">
+                    <input type="text" id="search-input" placeholder="Buscar canal...">
+                </div>
+                <ul id="lista-canais">
+                    <!-- Canais serão carregados dinamicamente -->
+                </ul>
+            </div>
+            <div id="player">
+                <video id="video-player" class="video-js vjs-default-skin" controls></video>
+            </div>
         </div>
     </div>
 
@@ -191,36 +196,22 @@
                 preload: 'auto'
             });
 
+            document.getElementById('home-button').onclick = function() {
+                window.location.href = "https://listadobill.github.io/tv/";
+            };
+
             function toggleFullscreen() {
                 if (video.isFullscreen()) {
                     video.exitFullscreen();
-                    video.el().classList.remove('fullscreen');
-                    video.el().classList.add('reduced');
-                    video.controlBar.hide();
                 } else {
                     video.requestFullscreen();
-                    video.el().classList.remove('reduced');
-                    video.el().classList.add('fullscreen');
-                    video.controlBar.show();
                 }
             }
-
-            function ajustarTamanhoVideo() {
-                if (video.isFullscreen()) {
-                    video.el().classList.add('fullscreen');
-                    video.el().classList.remove('reduced');
-                } else {
-                    video.el().classList.add('reduced');
-                    video.el().classList.remove('fullscreen');
-                }
-            }
-
-            video.on('fullscreenchange', ajustarTamanhoVideo);
 
             function configurarReconexao(player) {
                 player.on('error', function() {
                     console.log('Tentando reconectar...');
-                    player.src({ src: video.src(), type: 'application/x-mpegURL' });
+                    player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
                     player.play();
                 });
             }
@@ -235,7 +226,10 @@
                     for (var i = 0; i < linhas.length; i++) {
                         if (linhas[i].startsWith('#EXTINF')) {
                             var nome = linhas[i].split(',')[1];
-                            var link = linhas[i + 1];
+                            var link = linhas[i + 1] ? linhas[i + 1].trim() : null;
+
+                            if (!nome || !link) continue;
+
                             var logoURL = '';
                             var logoMatch = linhas[i].match(/tvg-logo="([^"]+)"/);
                             if (logoMatch) {
@@ -254,26 +248,40 @@
                         return a.nome.localeCompare(b.nome);
                     });
 
-                    canais.forEach(function(canal) {
-                        var itemLista = document.createElement("li");
-                        if (canal.logoURL) {
+                    function renderCanais(filtrados) {
+                        listaCanaisElemento.innerHTML = '';
+                        filtrados.forEach(function(canal) {
+                            var itemLista = document.createElement("li");
                             var logoImg = document.createElement("img");
-                            logoImg.src = canal.logoURL;
-                            itemLista.appendChild(logoImg);
-                        }
-                        var nomeTexto = document.createTextNode(canal.nome);
-                        itemLista.appendChild(nomeTexto);
 
-                        itemLista.onclick = (function(url) {
-                            return function() {
-                                video.src({ src: url, type: 'application/x-mpegURL' });
+                            // Se o logo estiver vazio, usa um ícone genérico
+                            logoImg.src = canal.logoURL ? canal.logoURL : 'https://via.placeholder.com/50?text=TV';
+                            itemLista.appendChild(logoImg);
+
+                            var nomeTexto = document.createElement("p");
+                            nomeTexto.textContent = canal.nome;
+                            itemLista.appendChild(nomeTexto);
+
+                            itemLista.onclick = function() {
+                                video.src({ src: canal.link, type: 'application/x-mpegURL' });
                                 video.play();
                                 toggleFullscreen();
                                 configurarReconexao(video);
                             };
-                        })(canal.link);
 
-                        listaCanaisElemento.appendChild(itemLista);
+                            listaCanaisElemento.appendChild(itemLista);
+                        });
+                    }
+
+                    renderCanais(canais);
+
+                    // Filtro de busca
+                    document.getElementById('search-input').addEventListener('input', function() {
+                        var termoBusca = this.value.toLowerCase();
+                        var canaisFiltrados = canais.filter(function(canal) {
+                            return canal.nome.toLowerCase().includes(termoBusca);
+                        });
+                        renderCanais(canaisFiltrados);
                     });
                 } else if (xhr.readyState === 4) {
                     alert("Erro ao carregar a lista de canais. Verifique a URL e a conexão de rede.");
