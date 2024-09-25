@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verificador de Xtream Codes</title>
+    <title>  ### 1 ###   </title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -74,7 +74,7 @@
 
         <div id="result"></div>
 
-        <button id="downloadBtn" style="display:none;" onclick="baixarLista()">Baixar Lista</button>
+        <button id="downloadBtn" style="display:none;" onclick="baixarLista()">Baixar Lista M3U</button>
     </div>
 
     <script>
@@ -117,13 +117,19 @@
                             }, i * 50); // Velocidade da barra
                         }
 
-                        // Mostrar a lista de canais no resultado
+                        // Preparar o conteúdo do arquivo M3U
+                        let m3uContent = "#EXTM3U\n";
                         canais.forEach(canal => {
-                            resultDiv.textContent += `${canal.name}\n`;
+                            m3uContent += `#EXTINF:-1,${canal.name}\n${canal.stream_url}\n`;
                         });
 
+                        resultDiv.textContent += 'Canais listados com sucesso.\n';
+                        
                         // Mostrar o botão de download após a verificação
                         downloadBtn.style.display = 'block';
+
+                        // Armazenar o conteúdo da lista M3U no botão de download
+                        downloadBtn.setAttribute('data-m3u', m3uContent);
                     } else {
                         resultDiv.textContent = 'Servidor ONLINE, mas as credenciais são inválidas.';
                     }
@@ -134,14 +140,14 @@
         }
 
         function baixarLista() {
-            const resultDiv = document.getElementById('result').textContent;
+            const m3uContent = document.getElementById('downloadBtn').getAttribute('data-m3u');
 
-            if (resultDiv) {
-                const blob = new Blob([resultDiv], { type: 'text/plain' });
+            if (m3uContent) {
+                const blob = new Blob([m3uContent], { type: 'audio/mpegurl' });
                 const url = window.URL.createObjectURL(blob);
                 const a = document.createElement('a');
                 a.href = url;
-                a.download = 'lista_de_canais.txt';
+                a.download = 'lista_de_canais.m3u';
                 a.click();
                 window.URL.revokeObjectURL(url);
             }
