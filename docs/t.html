@@ -3,170 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verificador de Xtream Codes 3333</title>
+    <title>Player de IPTV</title>
+    <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
         }
-        .container {
-            max-width: 500px;
-            margin: auto;
-        }
-        label {
-            display: block;
-            margin-top: 10px;
-        }
-        input {
+        #videoPlayer {
             width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-            box-sizing: border-box;
+            height: 400px;
         }
-        button {
+        #channelList {
             margin-top: 20px;
-            padding: 10px;
-            width: 100%;
-            background-color: #28a745;
-            color: white;
-            border: none;
+        }
+        .channel {
             cursor: pointer;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin: 5px 0;
         }
-        button:disabled {
-            background-color: #ccc;
-            cursor: not-allowed;
-        }
-        #result {
-            margin-top: 20px;
-            white-space: pre-wrap;
-        }
-        #progress {
-            width: 100%;
-            background-color: #f3f3f3;
-            margin-top: 10px;
-        }
-        #progress-bar {
-            width: 0;
-            height: 20px;
-            background-color: #28a745;
-            text-align: center;
-            color: white;
+        .channel:hover {
+            background-color: #f0f0f0;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h2>Verificador de Xtream Codes</h2>
-        <label for="server">Servidor (URL):</label>
-        <input type="text" id="server" placeholder="Exemplo: http://64.64eges.win:8080">
+    <h2>Player de IPTV</h2>
+    <video id="videoPlayer" class="video-js vjs-default-skin" controls preload="auto">
+        <source id="videoSource" src="" type="application/x-mpegURL">
+        Seu navegador não suporta vídeos HTML5.
+    </video>
+    
+    <div id="channelList"></div>
 
-        <label for="username">Login (Usuário):</label>
-        <input type="text" id="username" placeholder="Exemplo: nop838">
-
-        <label for="password">Senha:</label>
-        <input type="password" id="password" placeholder="Exemplo: 4112019364OMR">
-
-        <button id="checkBtn" onclick="verificarServidor()">Iniciar Verificação</button>
-
-        <div id="progress">
-            <div id="progress-bar">0%</div>
-        </div>
-
-        <div id="result"></div>
-
-        <button id="downloadBtn" style="display:none;" onclick="baixarLista()">Baixar Lista M3U</button>
-    </div>
-
+    <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
     <script>
-        function verificarServidor() {
-            const server = document.getElementById('server').value;
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            const resultDiv = document.getElementById('result');
-            const progressBar = document.getElementById('progress-bar');
-            const downloadBtn = document.getElementById('downloadBtn');
+        const server = "http://tvproeuropa1.com:8008";
+        const username = "Bogdan_fistoc";
+        const password = "78859365";
 
-            // Limpar o resultado e esconder o botão de download
-            resultDiv.textContent = '';
-            downloadBtn.style.display = 'none';
-
-            // Validar os campos
-            if (!server || !username || !password) {
-                alert("Por favor, preencha todos os campos.");
-                return;
-            }
-
+        async function getChannels() {
             const url = `${server}/player_api.php?username=${username}&password=${password}`;
-            progressBar.style.width = '0%';
-            progressBar.textContent = '0%';
-
-            fetch(url)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Erro na resposta do servidor');
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    console.log(data); // Inspecionando a estrutura da resposta JSON
-                    if (data && data.user_info && data.user_info.auth == 1) {
-                        resultDiv.textContent = 'Servidor ONLINE e credenciais válidas. Listando canais...\n\n';
-                        let canais = data.available_channels || [];
-
-                        // Verificação de canais disponíveis
-                        if (!Array.isArray(canais) || canais.length === 0) {
-                            resultDiv.textContent += 'Nenhum canal disponível.';
-                            return;
-                        }
-
-                        // Simular progresso de carregamento
-                        let total = canais.length; 
-                        for (let i = 0; i <= total; i++) {
-                            setTimeout(() => {
-                                let progresso = Math.floor((i / total) * 100);
-                                progressBar.style.width = progresso + '%';
-                                progressBar.textContent = progresso + '%';
-                            }, i * 50); // Velocidade da barra
-                        }
-
-                        // Preparar o conteúdo do arquivo M3U
-                        let m3uContent = "#EXTM3U\n";
-                        canais.forEach(canal => {
-                            if (canal.name && canal.stream_url) { // Certifique-se de que o nome e a URL do canal existem
-                                m3uContent += `#EXTINF:-1,${canal.name}\n${canal.stream_url}\n`;
-                                resultDiv.textContent += `${canal.name}\n`; // Mostrar os canais no resultado
-                            } else {
-                                console.error('Canal inválido:', canal);
-                            }
-                        });
-
-                        // Mostrar o botão de download após a verificação
-                        downloadBtn.style.display = 'block';
-
-                        // Armazenar o conteúdo da lista M3U no botão de download
-                        downloadBtn.setAttribute('data-m3u', m3uContent);
-                    } else {
-                        resultDiv.textContent = 'Servidor ONLINE, mas as credenciais são inválidas.';
-                    }
-                })
-                .catch(error => {
-                    resultDiv.textContent = `Erro ao verificar servidor: ${error.message}`;
-                });
-        }
-
-        function baixarLista() {
-            const m3uContent = document.getElementById('downloadBtn').getAttribute('data-m3u');
-
-            if (m3uContent) {
-                const blob = new Blob([m3uContent], { type: 'audio/mpegurl' });
-                const url = window.URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = 'lista_de_canais.m3u';
-                a.click();
-                window.URL.revokeObjectURL(url);
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error('Erro na resposta do servidor');
+                }
+                const data = await response.json();
+                return data.user_info.auth === 1 ? data.available_channels : [];
+            } catch (error) {
+                console.error('Erro ao obter canais:', error);
+                return [];
             }
         }
+
+        function loadChannels(channels) {
+            const channelListDiv = document.getElementById('channelList');
+            channelListDiv.innerHTML = '';
+
+            channels.forEach(channel => {
+                if (channel.name && channel.stream_url) {
+                    const channelDiv = document.createElement('div');
+                    channelDiv.className = 'channel';
+                    channelDiv.textContent = channel.name;
+                    channelDiv.onclick = () => playChannel(channel.stream_url);
+                    channelListDiv.appendChild(channelDiv);
+                }
+            });
+        }
+
+        function playChannel(streamUrl) {
+            const videoPlayer = document.getElementById('videoPlayer');
+            const videoSource = document.getElementById('videoSource');
+            videoSource.src = streamUrl;
+            videoPlayer.load();
+            videoPlayer.play();
+        }
+
+        async function init() {
+            const channels = await getChannels();
+            loadChannels(channels);
+        }
+
+        init();
     </script>
 </body>
 </html>
