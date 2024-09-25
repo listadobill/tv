@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Player de IPTV</title>
+    <title>2222</title>
     <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
     <style>
         body {
@@ -35,7 +35,7 @@
         Seu navegador não suporta vídeos HTML5.
     </video>
     
-    <div id="channelList"></div>
+    <div id="channelList">Carregando canais...</div>
 
     <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
     <script>
@@ -51,16 +51,28 @@
                     throw new Error('Erro na resposta do servidor');
                 }
                 const data = await response.json();
-                return data.user_info.auth === 1 ? data.available_channels : [];
+                
+                // Verifica se as credenciais são válidas
+                if (data.user_info && data.user_info.auth === 1) {
+                    return data.available_channels || [];
+                } else {
+                    throw new Error('Credenciais inválidas ou sem autorização.');
+                }
             } catch (error) {
                 console.error('Erro ao obter canais:', error);
+                document.getElementById('channelList').textContent = 'Erro ao carregar canais: ' + error.message;
                 return [];
             }
         }
 
         function loadChannels(channels) {
             const channelListDiv = document.getElementById('channelList');
-            channelListDiv.innerHTML = '';
+            channelListDiv.innerHTML = ''; // Limpar lista existente
+
+            if (channels.length === 0) {
+                channelListDiv.textContent = 'Nenhum canal disponível.';
+                return;
+            }
 
             channels.forEach(channel => {
                 if (channel.name && channel.stream_url) {
