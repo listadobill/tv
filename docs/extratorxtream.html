@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXTRATOR XTREAM CODES/title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input {
+            margin: 10px 0;
+            padding: 10px;
+            width: calc(100% - 22px);
+        }
+        button {
+            padding: 10px;
+            width: 100%;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        #progress-container {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 10px;
+            display: none;
+        }
+        #progress-bar {
+            width: 0;
+            height: 20px;
+            background-color: #76c7c0;
+        }
+        #result {
+            margin-top: 20px;
+            display: none;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>EXTRATOR XTREAM CODES</h1>
+    <input type="text" id="server" placeholder="Servidor" required>
+    <input type="text" id="username" placeholder="Login" required>
+    <input type="password" id="password" placeholder="Senha" required>
+    <button id="generate-btn">Gerar URL</button>
+
+    <div id="result">
+        <p><strong>URL gerada:</strong></p>
+        <p id="url-output"></p>
+        <button id="download-btn" style="display:none;">Baixar M3U</button>
+    </div>
+
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+
+    <script>
+        document.getElementById('generate-btn').addEventListener('click', function() {
+            const server = document.getElementById('server').value.trim();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Verificar se o servidor já começa com http:// ou https://
+            const formattedServer = server.startsWith('http://') || server.startsWith('https://') ? server : `http://${server}`;
+
+            // Gerar a URL do M3U
+            const url = `${formattedServer}/get.php?username=${username}&password=${password}&type=m3u`;
+            document.getElementById('url-output').innerText = url;
+
+            // Mostrar a URL e o botão de download
+            document.getElementById('result').style.display = 'block';
+            const downloadButton = document.getElementById('download-btn');
+            downloadButton.style.display = 'inline';
+            
+            // Exibir a barra de progresso ao clicar no botão de download
+            downloadButton.onclick = function() {
+                const progressContainer = document.getElementById('progress-container');
+                const progressBar = document.getElementById('progress-bar');
+                progressContainer.style.display = 'block';
+
+                // Simular o download
+                let progress = 0;
+                const interval = setInterval(() => {
+                    if (progress >= 100) {
+                        clearInterval(interval);
+                        progressBar.style.width = '100%';
+                        // Iniciar o download
+                        window.location.href = url; // Redirecionar para a URL
+                    } else {
+                        progress += 10; // Aumenta a progressão
+                        progressBar.style.width = progress + '%';
+                    }
+                }, 100); // 100ms para cada incremento
+            };
+        });
+    </script>
+
+</body>
+</html>
