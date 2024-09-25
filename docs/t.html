@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>  ### 1 ###   </title>
+    <title> ##### 2s</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -101,14 +101,25 @@
             progressBar.textContent = '0%';
 
             fetch(url)
-                .then(response => response.json())
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Erro na resposta do servidor');
+                    }
+                    return response.json();
+                })
                 .then(data => {
                     if (data && data.user_info && data.user_info.auth == 1) {
                         resultDiv.textContent = 'Servidor ONLINE e credenciais válidas. Listando canais...\n\n';
                         let canais = data.available_channels || [];
 
+                        // Verificação de canais disponíveis
+                        if (canais.length === 0) {
+                            resultDiv.textContent += 'Nenhum canal disponível.';
+                            return;
+                        }
+
                         // Simular progresso de carregamento
-                        let total = canais.length || 100; // Suponha 100 canais para simular a barra de progresso
+                        let total = canais.length; 
                         for (let i = 0; i <= total; i++) {
                             setTimeout(() => {
                                 let progresso = Math.floor((i / total) * 100);
@@ -120,11 +131,14 @@
                         // Preparar o conteúdo do arquivo M3U
                         let m3uContent = "#EXTM3U\n";
                         canais.forEach(canal => {
-                            m3uContent += `#EXTINF:-1,${canal.name}\n${canal.stream_url}\n`;
+                            if (canal.name && canal.stream_url) { // Certifique-se de que o nome e a URL do canal existem
+                                m3uContent += `#EXTINF:-1,${canal.name}\n${canal.stream_url}\n`;
+                                resultDiv.textContent += `${canal.name}\n`; // Mostrar os canais no resultado
+                            } else {
+                                console.error('Canal inválido:', canal);
+                            }
                         });
 
-                        resultDiv.textContent += 'Canais listados com sucesso.\n';
-                        
                         // Mostrar o botão de download após a verificação
                         downloadBtn.style.display = 'block';
 
@@ -135,7 +149,7 @@
                     }
                 })
                 .catch(error => {
-                    resultDiv.textContent = `Erro ao verificar servidor: ${error}`;
+                    resultDiv.textContent = `Erro ao verificar servidor: ${error.message}`;
                 });
         }
 
