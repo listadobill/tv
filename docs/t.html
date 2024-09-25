@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> ##### 2s</title>
+    <title>Verificador de Xtream Codes 3333</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -108,12 +108,13 @@
                     return response.json();
                 })
                 .then(data => {
+                    console.log(data); // Inspecionando a estrutura da resposta JSON
                     if (data && data.user_info && data.user_info.auth == 1) {
                         resultDiv.textContent = 'Servidor ONLINE e credenciais válidas. Listando canais...\n\n';
                         let canais = data.available_channels || [];
 
                         // Verificação de canais disponíveis
-                        if (canais.length === 0) {
+                        if (!Array.isArray(canais) || canais.length === 0) {
                             resultDiv.textContent += 'Nenhum canal disponível.';
                             return;
                         }
