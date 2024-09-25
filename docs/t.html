@@ -3,29 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Player de Vídeo com Video.js</title>
-    <!-- Link para o CSS do Video.js -->
-    <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
-    <style>
-        /* Estilos adicionais para o player */
-        .video-js {
-            width: 100%; /* Largura do player */
-            height: auto; /* Altura automática */
-        }
-    </style>
+    <title>Player HLS</title>
+    <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet">
 </head>
 <body>
+    <video id="video" class="video-js" controls></video>
 
-    <h1>Player de Vídeo IPTV</h1>
-
-    <!-- Player de Vídeo -->
-    <video id="my-video" class="video-js" controls preload="auto" width="640" height="360" data-setup="{}">
-        <source src="http://iptvtree.net:8080/romaniamedia/178cdde57b/201034" type="application/x-mpegURL">
-        <!-- Mensagem se o vídeo não for carregado -->
-        Seu navegador não suporta o elemento de vídeo.
-    </video>
-
-    <!-- Script do Video.js -->
     <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script>
+        var video = document.getElementById('video');
+        var hls = new Hls();
+        
+        // URL do arquivo M3U8
+        var videoSrc = 'http://iptvtree.net:8080/romaniamedia/178cdde57b/201034.m3u8'; // Substitua pela sua URL
+
+        // Carregar o vídeo se HLS for suportado
+        if (Hls.isSupported()) {
+            hls.loadSource(videoSrc);
+            hls.attachMedia(video);
+        }
+    </script>
 </body>
 </html>
