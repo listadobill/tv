@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TV DO BILL - DESATIVE CONEXÃO SEGURA</title>
+    <title>LISTA DE CANAIS IPTV - DESATIVE CONEXÃO SEGURA</title>
     <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
     <style>
         body {
@@ -19,7 +19,7 @@
 
         #container {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             width: 100%;
             height: 100%;
         }
@@ -30,20 +30,23 @@
             text-align: center;
             font-size: 1.5em;
             border-bottom: 1px solid #444;
+            width: 100%;
         }
 
-        #search-bar {
-            padding: 10px;
-            background-color: #333;
-            text-align: center;
-        }
-
-        #search-input {
-            width: 95%;
-            padding: 10px;
+        #home-button {
+            background-color: #4CAF50;
+            color: white;
             border: none;
+            padding: 10px 20px;
             border-radius: 5px;
+            cursor: pointer;
             font-size: 1em;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        #home-button:hover {
+            background-color: #45a049;
         }
 
         #main {
@@ -86,6 +89,7 @@
         }
 
         #sidebar li {
+            background-color: rgba(50, 50, 50, 0.8);
             border-radius: 8px;
             padding: 10px;
             display: flex;
@@ -110,6 +114,33 @@
         #sidebar p {
             margin: 0;
             font-size: 1.1em;
+        }
+
+        #menu {
+            flex: 1;
+            background-color: rgba(44, 44, 44, 0.9);
+            padding: 10px;
+            border-left: 2px solid #444;
+        }
+
+        #menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #menu ul li {
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #555;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        #menu ul li:hover {
+            background-color: #4CAF50;
         }
 
         .video-js.vjs-fullscreen {
@@ -145,24 +176,16 @@
             background-color: #4CAF50;
             border-radius: 10px;
         }
-
-        .lista-1 { background-color: rgba(76, 175, 80, 0.2); } /* Cor para a primeira lista */
-        .lista-2 { background-color: rgba(33, 150, 243, 0.2); } /* Cor para a segunda lista */
-        .lista-3 { background-color: rgba(255, 193, 7, 0.2); } /* Cor para a terceira lista */
-        .lista-4 { background-color: rgba(156, 39, 176, 0.2); } /* Cor para a quarta lista */
-        .lista-5 { background-color: rgba(244, 67, 54, 0.2); } /* Cor para a quinta lista */
-        .lista-6 { background-color: rgba(0, 188, 212, 0.2); } /* Cor para a sexta lista */
-        .lista-7 { background-color: rgba(139, 195, 74, 0.2); } /* Cor para a sétima lista */
     </style>
 </head>
 <body>
     <div id="container">
-        <div id="header">TV DO BILL - DESATIVE CONEXÃO SEGURA USE O NAVEGADOR VIA</div>
+        <div id="header">
+            LISTA DE CANAIS IPTV - DESATIVE CONEXÃO SEGURA
+            <button id="home-button">PÁGINA INICIAL</button>
+        </div>
         <div id="main">
             <div id="sidebar">
-                <div id="search-bar">
-                    <input type="text" id="search-input" placeholder="Buscar canal...">
-                </div>
                 <ul id="lista-canais">
                     <!-- Canais serão carregados dinamicamente -->
                 </ul>
@@ -170,28 +193,31 @@
             <div id="player">
                 <video id="video-player" class="video-js vjs-default-skin" controls></video>
             </div>
+            <div id="menu">
+                <ul>
+                    <li>Opção 1</li>
+                    <li>Opção 2</li>
+                    <li>Opção 3</li>
+                    <li>Opção 4</li>
+                </ul>
+            </div>
         </div>
     </div>
 
     <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var listasURLs = [
-                "https://raw.githubusercontent.com/listadobill/tv/main/cxtvrokusamsungplutotviptv.m3u",
-                "https://raw.githubusercontent.com/listadobill/tv/main/formigatv.m3u",
-                "https://raw.githubusercontent.com/listadobill/tv/main/iptv.m3u",
-                "https://raw.githubusercontent.com/listadobill/tv/main/plutotvbr.m3u",
-                "https://iptv-org.github.io/iptv/languages/por.m3u",
-                "https://iptv-org.github.io/iptv/categories/music.m3u",
-                "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/iptv2.m3u"
-            ];
-
+            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/main/iptv.m3u";
             var listaCanaisElemento = document.getElementById("lista-canais");
             var video = videojs('video-player', {
                 controls: true,
                 autoplay: false,
                 preload: 'auto'
             });
+
+            document.getElementById('home-button').onclick = function() {
+                window.location.href = "https://listadobill.github.io/tv/";
+            };
 
             function toggleFullscreen() {
                 if (video.isFullscreen()) {
@@ -209,78 +235,69 @@
                 });
             }
 
-            var canais = [];
-            var cores = ['lista-1', 'lista-2', 'lista-3', 'lista-4', 'lista-5', 'lista-6', 'lista-7'];
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", listaURL, true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var linhas = xhr.responseText.split('\n');
+                    var canais = [];
 
-            function carregarLista(url, cor, index) {
-                var xhr = new XMLHttpRequest();
-                xhr.open("GET", url, true);
-                xhr.onreadystatechange = function() {
-                    if (xhr.readyState === 4) {
-                        if (xhr.status === 200) {
-                            var linhas = xhr.responseText.split('\n');
-                            for (var i = 0; i < linhas.length; i++) {
-                                if (linhas[i].startsWith('#EXTINF')) {
-                                    var nome = linhas[i].split(',')[1];
-                                    var link = linhas[i + 1] ? linhas[i + 1].trim() : null;
+                    for (var i = 0; i < linhas.length; i++) {
+                        if (linhas[i].startsWith('#EXTINF')) {
+                            var nome = linhas[i].split(',')[1];
+                            var link = linhas[i + 1] ? linhas[i + 1].trim() : null;
 
-                                    if (!nome || !link) continue;
+                            if (!nome || !link) continue;
 
-                                    var logoURL = '';
-                                    var logoMatch = linhas[i].match(/tvg-logo="([^"]+)"/);
-                                    if (logoMatch) {
-                                        logoURL = logoMatch[1];
-                                    }
-
-                                    canais.push({
-                                        nome: nome,
-                                        link: link,
-                                        logoURL: logoURL,
-                                        cor: cor // Adiciona a cor da lista
-                                    });
-                                }
+                            var logoURL = '';
+                            var logoMatch = linhas[i].match(/tvg-logo="([^"]+)"/);
+                            if (logoMatch) {
+                                logoURL = logoMatch[1];
                             }
-                        } else {
-                            console.error('Erro ao carregar a lista de canais da URL:', url);
-                        }
-                        if (index === listasURLs.length - 1) {
-                            renderCanais();
+
+                            canais.push({
+                                nome: nome,
+                                link: link,
+                                logoURL: logoURL
+                            });
                         }
                     }
-                };
-                xhr.send();
-            }
 
-            function renderCanais() {
-                // Ordena canais por nome
-                canais.sort(function(a, b) {
-                    return a.nome.localeCompare(b.nome);
-                });
+                    canais.sort(function(a, b) {
+                        return a.nome.localeCompare(b.nome);
+                    });
 
-                listaCanaisElemento.innerHTML = '';
-                canais.forEach(function(canal) {
-                    var itemLista = document.createElement("li");
-                    itemLista.className = canal.cor; // Aplica a cor da lista
-                    itemLista.innerHTML = `
-                        ${canal.logoURL ? `<img src="${canal.logoURL}" alt="${canal.nome} logo">` : ''}
-                        <p>${canal.nome}</p>
-                    `;
+                    function renderCanais(filtrados) {
+                        listaCanaisElemento.innerHTML = '';
+                        filtrados.forEach(function(canal) {
+                            var itemLista = document.createElement("li");
+                            var logoImg = document.createElement("img");
 
-                    itemLista.onclick = function() {
-                        video.src(canal.link);
-                        video.play();
-                    };
+                            // Se o logo estiver vazio, usa um ícone genérico
+                            logoImg.src = canal.logoURL ? canal.logoURL : 'https://via.placeholder.com/50?text=TV';
+                            itemLista.appendChild(logoImg);
 
-                    listaCanaisElemento.appendChild(itemLista);
-                });
-            }
+                            var nomeTexto = document.createElement("p");
+                            nomeTexto.textContent = canal.nome;
+                            itemLista.appendChild(nomeTexto);
 
-            // Carrega todas as listas
-            listasURLs.forEach(function(url, index) {
-                carregarLista(url, cores[index], index);
-            });
+                            itemLista.onclick = function() {
+                                video.src({ src: canal.link, type: 'application/x-mpegURL' });
+                                video.play();
+                                toggleFullscreen();
+                                configurarReconexao(video);
+                            };
 
-            configurarReconexao(video);
+                            listaCanaisElemento.appendChild(itemLista);
+                        });
+                    }
+
+                    renderCanais(canais);
+                } else if (xhr.readyState === 4) {
+                    alert("Erro ao carregar a lista de canais.");
+                }
+            };
+            xhr.send();
         });
     </script>
 </body>
