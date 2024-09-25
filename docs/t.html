@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Player  2222 HLS</title>
+    <title>Player HLS</title>
     <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet">
 </head>
 <body>
@@ -14,14 +14,23 @@
     <script>
         var video = document.getElementById('video');
         var hls = new Hls();
-        
+
         // URL do arquivo M3U8
-        var videoSrc = 'http://iptvtree.net:8080/romaniamedia/178cdde57b/201034.m3u8'; // Substitua pela sua URL
+        var videoSrc = 'http://iptvtree.net:8080/romaniamedia/178cdde57b/201034'; // Substitua pela sua URL
 
         // Carregar o vídeo se HLS for suportado
         if (Hls.isSupported()) {
-            hls.loadSource(videoSrc);
+            hls.loadSource(videoSrc + '.m3u8'); // Adicionando a extensão .m3u8
             hls.attachMedia(video);
+            video.play();
+        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+            // Para navegadores que suportam HLS nativamente
+            video.src = videoSrc + '.m3u8'; // Adicionando a extensão .m3u8
+            video.addEventListener('loadedmetadata', function() {
+                video.play();
+            });
+        } else {
+            console.error('HLS não é suportado neste navegador.');
         }
     </script>
 </body>
