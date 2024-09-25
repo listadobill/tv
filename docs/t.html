@@ -38,13 +38,6 @@
             height: 20px;
             background-color: #76c7c0;
         }
-        #result {
-            margin-top: 20px;
-            display: none;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
     </style>
 </head>
 <body>
@@ -53,53 +46,38 @@
     <input type="text" id="server" placeholder="Servidor" required>
     <input type="text" id="username" placeholder="Login" required>
     <input type="password" id="password" placeholder="Senha" required>
-    <button id="generate-btn">Gerar URL</button>
-
-    <div id="result">
-        <p><strong>URL gerada:</strong></p>
-        <p id="url-output"></p>
-        <button id="download-btn" style="display:none;">Baixar M3U</button>
-    </div>
+    <button id="download-btn">Baixar M3U</button>
 
     <div id="progress-container">
         <div id="progress-bar"></div>
     </div>
 
     <script>
-        document.getElementById('generate-btn').addEventListener('click', function() {
+        document.getElementById('download-btn').addEventListener('click', function() {
             const server = document.getElementById('server').value;
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
 
-            // Gerar a URL do M3U
             const url = `http://${server}/get.php?username=${username}&password=${password}&type=m3u`;
-            document.getElementById('url-output').innerText = url;
 
-            // Mostrar a URL e o botão de download
-            document.getElementById('result').style.display = 'block';
-            const downloadButton = document.getElementById('download-btn');
-            downloadButton.style.display = 'inline';
-            
-            // Exibir a barra de progresso ao clicar no botão de download
-            downloadButton.onclick = function() {
-                const progressContainer = document.getElementById('progress-container');
-                const progressBar = document.getElementById('progress-bar');
-                progressContainer.style.display = 'block';
+            // Exibir a barra de progresso
+            const progressContainer = document.getElementById('progress-container');
+            const progressBar = document.getElementById('progress-bar');
+            progressContainer.style.display = 'block';
 
-                // Simular o download
-                let progress = 0;
-                const interval = setInterval(() => {
-                    if (progress >= 100) {
-                        clearInterval(interval);
-                        progressBar.style.width = '100%';
-                        // Iniciar o download
-                        window.location.href = url;
-                    } else {
-                        progress += 10; // Aumenta a progressão
-                        progressBar.style.width = progress + '%';
-                    }
-                }, 100); // 100ms para cada incremento
-            };
+            // Simular o download
+            let progress = 0;
+            const interval = setInterval(() => {
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    progressBar.style.width = '100%';
+                    // Iniciar o download
+                    window.location.href = url;
+                } else {
+                    progress += 10; // Aumenta a progressão
+                    progressBar.style.width = progress + '%';
+                }
+            }, 100); // 100ms para cada incremento
         });
     </script>
 
