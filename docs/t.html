@@ -8,30 +8,33 @@
 </head>
 <body>
     <video id="video" class="video-js" controls></video>
+    <button id="playButton">Reproduzir Vídeo</button>
 
     <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script>
         var video = document.getElementById('video');
+        var playButton = document.getElementById('playButton');
         var hls = new Hls();
 
-        // URL do arquivo M3U8
-        var videoSrc = 'http://iptvtree.net:8080/romaniamedia/178cdde57b/201034'; // Substitua pela sua URL
+        // URL do arquivo (sem extensão)
+        var videoSrc = 'http://iptvtree.net:8080/romaniamedia/178cdde57b/201034';
 
         // Carregar o vídeo se HLS for suportado
         if (Hls.isSupported()) {
-            hls.loadSource(videoSrc + '.m3u8'); // Adicionando a extensão .m3u8
+            hls.loadSource(videoSrc); // Tente carregar diretamente
             hls.attachMedia(video);
-            video.play();
         } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-            // Para navegadores que suportam HLS nativamente
-            video.src = videoSrc + '.m3u8'; // Adicionando a extensão .m3u8
-            video.addEventListener('loadedmetadata', function() {
-                video.play();
-            });
-        } else {
-            console.error('HLS não é suportado neste navegador.');
+            video.src = videoSrc; // Caso o navegador suporte nativamente
         }
+
+        // Ação de clicar no botão para reproduzir
+        playButton.addEventListener('click', function() {
+            video.muted = true; // Mute o vídeo para permitir reprodução automática
+            video.play().catch(function(error) {
+                console.error('Erro ao tentar reproduzir o vídeo:', error);
+            });
+        });
     </script>
 </body>
 </html>
