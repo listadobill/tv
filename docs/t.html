@@ -23,14 +23,14 @@
     <ul id="channelList"></ul>
 
     <script>
-        // Usando um proxy público para evitar conteúdo misto
-        const playlistUrl = "https://cors-anywhere.herokuapp.com/http://jmrk.xyz:8880/get.php?username=scott_olson@hotmail.com&password=2p7Ks4SPxP&type=m3u";
+        // Usando um novo proxy CORS
+        const playlistUrl = "https://api.allorigins.win/get?url=" + encodeURIComponent("http://jmrk.xyz:8880/get.php?username=scott_olson@hotmail.com&password=2p7Ks4SPxP&type=m3u");
 
         // Função para carregar os canais
         function loadChannels() {
             fetch(playlistUrl)
-                .then(response => response.text())
-                .then(data => parseM3U(data))
+                .then(response => response.json())
+                .then(data => parseM3U(data.contents))
                 .catch(error => console.error('Erro ao carregar a lista M3U:', error));
         }
 
