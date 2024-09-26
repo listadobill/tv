@@ -1,293 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LISTA DE CANAIS IPTV - DESATIVE CONEXÃO SEGURA</title>
-    <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #000;
-            color: #fff;
-            display: flex;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        #container {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            height: 100%;
-        }
-
-        #header {
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 10px;
-            text-align: center;
-            font-size: 1.5em;
-            border-bottom: 1px solid #444;
-        }
-
-        #home-button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            margin-top: 10px;
-            transition: background-color 0.3s ease;
-        }
-
-        #home-button:hover {
-            background-color: #45a049;
-        }
-
-        #search-bar {
-            padding: 10px;
-            background-color: #333;
-            text-align: center;
-        }
-
-        #search-input {
-            width: 95%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1em;
-        }
-
-        #main {
-            display: flex;
-            flex: 1;
-            overflow: hidden;
-        }
-
-        #player {
-            flex: 2;
-            background-color: rgba(0, 0, 0, 0.8);
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-        }
-
-        .video-js {
-            width: 100%;
-            height: 100%;
-            background-color: #000;
-        }
-
-        #sidebar {
-            flex: 1;
-            background-color: rgba(34, 34, 34, 0.8);
-            overflow-y: auto;
-            padding: 10px;
-            border-left: 2px solid #444;
-        }
-
-        #sidebar ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        #sidebar li {
-            background-color: rgba(50, 50, 50, 0.8);
-            border-radius: 8px;
-            padding: 10px;
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        #sidebar li:hover {
-            background-color: #4CAF50;
-        }
-
-        #sidebar img {
-            width: 50px;
-            height: 50px;
-            margin-right: 10px;
-            border-radius: 50%;
-            border: 2px solid #4CAF50;
-            object-fit: cover;
-        }
-
-        #sidebar p {
-            margin: 0;
-            font-size: 1.1em;
-        }
-
-        .video-js.vjs-fullscreen {
-            width: 100% !important;
-            height: 100% !important;
-            position: fixed;
-            top: 0;
-            left: 0;
-        }
-
-        .video-js.vjs-default-skin .vjs-control-bar {
-            background: rgba(0, 0, 0, 0.6);
-        }
-
-        .video-js .vjs-big-play-button {
-            background-color: rgba(76, 175, 80, 0.8);
-            border: none;
-            border-radius: 50%;
-            font-size: 2.5em;
-            line-height: 1.5;
-            transition: background-color 0.3s ease;
-        }
-
-        .video-js .vjs-big-play-button:hover {
-            background-color: rgba(76, 175, 80, 1);
-        }
-
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background-color: #4CAF50;
-            border-radius: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testando Xtream com Clappr</title>
+  <script src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    #player {
+      width: 100%;
+      height: 500px;
+      margin-bottom: 20px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin: 5px 0;
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      cursor: pointer;
+    }
+    li:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
 </head>
 <body>
-    <div id="container">
-        <div id="header">
-            LISTA DE CANAIS IPTV - DESATIVE CONEXÃO SEGURA
-            <button id="home-button">PÁGINA INICIAL</button>
-        </div>
-        <div id="main">
-            <div id="sidebar">
-                <div id="search-bar">
-                    <input type="text" id="search-input" placeholder="Buscar canal...">
-                </div>
-                <ul id="lista-canais">
-                    <!-- Canais serão carregados dinamicamente -->
-                </ul>
-            </div>
-            <div id="player">
-                <video id="video-player" class="video-js vjs-default-skin" controls></video>
-            </div>
-        </div>
-    </div>
 
-    <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var listaURL = "https://encurtador.com.br/8uEWH";
-            var listaCanaisElemento = document.getElementById("lista-canais");
-            var video = videojs('video-player', {
-                controls: true,
-                autoplay: false,
-                preload: 'auto'
-            });
+<h1>Lista de Canais - Teste de Xtream com Clappr</h1>
 
-            document.getElementById('home-button').onclick = function() {
-                window.location.href = "https://listadobill.github.io/tv/";
-            };
+<div id="player"></div>
 
-            function toggleFullscreen() {
-                if (video.isFullscreen()) {
-                    video.exitFullscreen();
-                } else {
-                    video.requestFullscreen();
-                }
-            }
+<ul id="channelList"></ul>
 
-            function configurarReconexao(player) {
-                player.on('error', function() {
-                    console.log('Tentando reconectar...');
-                    player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
-                    player.play();
-                });
-            }
+<script>
+  const playlistUrl = "http://jmrk.xyz:8880/get.php?username=scott_olson@hotmail.com&password=2p7Ks4SPxP&type=m3u";
 
-            var xhr = new XMLHttpRequest();
-            xhr.open("GET", listaURL, true);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    var linhas = xhr.responseText.split('\n');
-                    var canais = [];
+  // Função para carregar a lista M3U
+  async function loadPlaylist() {
+    const response = await fetch(playlistUrl);
+    const playlist = await response.text();
+    parseM3U(playlist);
+  }
 
-                    for (var i = 0; i < linhas.length; i++) {
-                        if (linhas[i].startsWith('#EXTINF')) {
-                            var nome = linhas[i].split(',')[1];
-                            var link = linhas[i + 1] ? linhas[i + 1].trim() : null;
+  // Função para interpretar o arquivo M3U e listar os canais
+  function parseM3U(playlist) {
+    const lines = playlist.split('\n');
+    const channelList = document.getElementById('channelList');
+    let channelName = '';
+    let streamUrl = '';
 
-                            if (!nome || !link) continue;
+    lines.forEach(line => {
+      if (line.startsWith('#EXTINF:')) {
+        // Extrair o nome do canal do campo #EXTINF
+        const nameMatch = line.match(/,(.*)/);
+        if (nameMatch) {
+          channelName = nameMatch[1];
+        }
+      } else if (line.startsWith('http')) {
+        // Encontrar a URL do stream e criar um item de lista
+        streamUrl = line;
+        const listItem = document.createElement('li');
+        listItem.className = 'nav-item';
+        
+        // Criar o link dentro do <li>
+        const link = document.createElement('a');
+        link.className = 'channel nav-link';
+        link.setAttribute('data-value', streamUrl);
+        link.setAttribute('href', 'javascript:void(0);');
+        link.textContent = channelName;
 
-                            var logoURL = '';
-                            var logoMatch = linhas[i].match(/tvg-logo="([^"]+)"/);
-                            if (logoMatch) {
-                                logoURL = logoMatch[1];
-                            }
+        // Adicionar evento para carregar o canal no Clappr
+        link.addEventListener('click', () => loadChannel(streamUrl));
 
-                            canais.push({
-                                nome: nome,
-                                link: link,
-                                logoURL: logoURL
-                            });
-                        }
-                    }
+        // Anexar o link ao item de lista
+        listItem.appendChild(link);
+        channelList.appendChild(listItem);
+      }
+    });
+  }
 
-                    canais.sort(function(a, b) {
-                        return a.nome.localeCompare(b.nome);
-                    });
+  // Função para carregar o canal no player Clappr
+  function loadChannel(url) {
+    const playerElement = document.getElementById('player');
+    playerElement.innerHTML = ''; // Limpar o player atual
 
-                    function renderCanais(filtrados) {
-                        listaCanaisElemento.innerHTML = '';
-                        filtrados.forEach(function(canal) {
-                            var itemLista = document.createElement("li");
-                            var logoImg = document.createElement("img");
+    const player = new Clappr.Player({
+      source: url,
+      parentId: "#player",
+      autoPlay: true,
+      mute: false,
+      height: '500px',
+      width: '100%',
+      plugins: [Clappr.LogoPlugin],
+      logo: {
+        url: 'https://static.wixstatic.com/media/f21f2b_1237fdb938104273808d6029aa9d3b6c~mv2.jpeg',
+        position: 'top-right',
+        width: 70,
+        height: 70
+      },
+    });
+  }
 
-                            logoImg.src = canal.logoURL ? canal.logoURL : 'https://via.placeholder.com/50?text=TV';
-                            itemLista.appendChild(logoImg);
+  // Carregar a playlist ao carregar a página
+  window.onload = loadPlaylist;
+</script>
 
-                            var nomeTexto = document.createElement("p");
-                            nomeTexto.textContent = canal.nome;
-                            itemLista.appendChild(nomeTexto);
-
-                            itemLista.onclick = function() {
-                                video.src({ src: canal.link, type: 'application/x-mpegURL' });
-                                video.play();
-                                toggleFullscreen();
-                                configurarReconexao(video);
-                            };
-
-                            listaCanaisElemento.appendChild(itemLista);
-                        });
-                    }
-
-                    renderCanais(canais);
-
-                    // Filtro de busca
-                    document.getElementById('search-input').addEventListener('input', function() {
-                        var termoBusca = this.value.toLowerCase();
-                        var canaisFiltrados = canais.filter(function(canal) {
-                            return canal.nome.toLowerCase().includes(termoBusca);
-                        });
-                        renderCanais(canaisFiltrados);
-                    });
-                } else if (xhr.readyState === 4) {
-                    alert("Erro ao carregar a lista de canais. Verifique a URL e a conexão de rede.");
-                }
-            };
-            xhr.send();
-        });
-    </script>
 </body>
 </html>
