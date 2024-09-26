@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IPTV Player</title>
+    <title>IPTV Player 2</title>
     <script src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
     <style>
         body {
@@ -60,7 +60,7 @@
                 var channelList = document.getElementById('channel-list');
                 lines.forEach((line, index) => {
                     if (line.startsWith('#EXTINF:')) {
-                        var channelName = line.split(',')[1];
+                        var channelName = line.split(',')[1].trim();
                         var channelUrl = lines[index + 1].trim();
                         console.log('Channel Name:', channelName); // Log the channel name for debugging
                         console.log('Channel URL:', channelUrl); // Log the channel URL for debugging
@@ -68,7 +68,9 @@
                         listItem.textContent = channelName;
                         listItem.setAttribute('data-url', channelUrl);
                         listItem.addEventListener('click', function() {
-                            player.load(this.getAttribute('data-url'));
+                            const url = this.getAttribute('data-url');
+                            console.log('Loading channel URL:', url); // Log the URL being loaded
+                            player.load(url);
                         });
                         channelList.appendChild(listItem);
                     }
