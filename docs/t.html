@@ -23,40 +23,39 @@
     <ul id="channelList"></ul>
 
     <script>
-        // Usando um novo proxy CORS
-        const playlistUrl = "https://api.allorigins.win/get?url=" + encodeURIComponent("http://jmrk.xyz:8880/get.php?username=scott_olson@hotmail.com&password=2p7Ks4SPxP&type=m3u");
+        // URL do arquivo JSON que contém os canais
+        const channelsUrl = "caminho/para/seu/channels.json"; // Substitua pelo caminho correto
 
         // Função para carregar os canais
         function loadChannels() {
-            fetch(playlistUrl)
-                .then(response => response.json())
-                .then(data => parseM3U(data.contents))
-                .catch(error => console.error('Erro ao carregar a lista M3U:', error));
+            fetch(channelsUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Erro ao carregar canais: ' + response.statusText);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    parseChannels(data);
+                })
+                .catch(error => console.error('Erro ao carregar a lista de canais:', error));
         }
 
-        // Função para analisar a lista M3U e criar links de canais
-        function parseM3U(data) {
-            const channels = data.split('#EXTINF:');
+        // Função para analisar os canais e criar links
+        function parseChannels(channels) {
             const channelList = document.getElementById('channelList');
             channelList.innerHTML = ''; // Limpa a lista anterior
 
-            channels.forEach((channel, index) => {
-                if (index > 0) { // Ignora a primeira parte que não contém canais
-                    const parts = channel.split('\n');
-                    const channelInfo = parts[0].trim();
-                    const channelUrl = parts[1].trim(); // URL do M3U
-
-                    // Cria o elemento do canal
-                    const listItem = document.createElement('li');
-                    listItem.className = 'nav-item';
-                    listItem.innerHTML = `<a class="channel nav-link" data-value="${channelUrl}" href="javascript:void(0);">${channelInfo}</a>`;
-                    channelList.appendChild(listItem);
-                    
-                    // Adiciona evento de clique para carregar o canal no player
-                    listItem.addEventListener('click', () => {
-                        loadPlayer(channelUrl);
-                    });
-                }
+            channels.forEach(channel => {
+                const listItem = document.createElement('li');
+                listItem.className = 'nav-item';
+                listItem.innerHTML = `<a class="channel nav-link" data-value="${channel.url}" href="javascript:void(0);">${channel.name}</a>`;
+                channelList.appendChild(listItem);
+                
+                // Adiciona evento de clique para carregar o canal no player
+                listItem.addEventListener('click', () => {
+                    loadPlayer(channel.url);
+                });
             });
         }
 
