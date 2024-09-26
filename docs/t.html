@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IPTV Player 2   </title>
+    <title>IPTV Player</title>
     <script src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
     <style>
         body {
@@ -52,15 +52,18 @@
             autoPlay: false,
         });
 
-        fetch('https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/zteste.m3u')
+        fetch('http://jmrk.xyz:8880/get.php?username=scott_olson@hotmail.com&password=2p7Ks4SPxP&type=m3u')
             .then(response => response.text())
             .then(data => {
+                console.log('M3U Data:', data); // Log the M3U data for debugging
                 var lines = data.split('\n');
                 var channelList = document.getElementById('channel-list');
                 lines.forEach((line, index) => {
                     if (line.startsWith('#EXTINF:')) {
                         var channelName = line.split(',')[1];
                         var channelUrl = lines[index + 1].trim();
+                        console.log('Channel Name:', channelName); // Log the channel name for debugging
+                        console.log('Channel URL:', channelUrl); // Log the channel URL for debugging
                         var listItem = document.createElement('li');
                         listItem.textContent = channelName;
                         listItem.setAttribute('data-url', channelUrl);
