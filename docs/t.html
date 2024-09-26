@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> TESTE 3 </title>
+    <title> TESTE 4 </title>
     <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
     <style>
         body {
@@ -188,7 +188,8 @@
     <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var listaURL = "https://cors-anywhere.herokuapp.com/http://jmrk.xyz:8880/get.php?username=scott_olson@hotmail.com&password=2p7Ks4SPxP&type=m3u";
+            // Modificado para usar AllOrigins
+            var listaURL = "https://api.allorigins.win/get?url=" + encodeURIComponent("http://jmrk.xyz:8880/get.php?username=scott_olson@hotmail.com&password=2p7Ks4SPxP&type=m3u");
             var listaCanaisElemento = document.getElementById("lista-canais");
             var video = videojs('video-player', {
                 controls: true,
@@ -218,11 +219,10 @@
 
             var xhr = new XMLHttpRequest();
             xhr.open("GET", listaURL, true);
-            xhr.responseType = 'text'; // Tratando a resposta como texto
             xhr.onreadystatechange = function() {
                 if (xhr.readyState === 4 && xhr.status === 200) {
-                    var responseText = xhr.responseText;
-                    var linhas = responseText.split('\n');
+                    var response = JSON.parse(xhr.responseText);
+                    var linhas = response.contents.split('\n');
                     var canais = [];
 
                     for (var i = 0; i < linhas.length; i++) {
