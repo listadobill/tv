@@ -188,7 +188,7 @@
     <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/zteste.m3u";
+            var listaURL = "http://jmrk.xyz:8880/get.php?username=scott_olson@hotmail.com&password=2p7Ks4SPxP&type=m3u";
             var listaCanaisElemento = document.getElementById("lista-canais");
             var video = videojs('video-player', {
                 controls: true,
@@ -254,7 +254,6 @@
                             var itemLista = document.createElement("li");
                             var logoImg = document.createElement("img");
 
-                            // Se o logo estiver vazio, usa um ícone genérico
                             logoImg.src = canal.logoURL ? canal.logoURL : 'https://via.placeholder.com/50?text=TV';
                             itemLista.appendChild(logoImg);
 
