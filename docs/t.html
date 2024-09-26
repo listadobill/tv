@@ -1,118 +1,79 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Testando Xtream com Clappr</title>
-  <script src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 20px;
-    }
-    #player {
-      width: 100%;
-      height: 500px;
-      margin-bottom: 20px;
-    }
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-    li {
-      margin: 5px 0;
-      padding: 10px;
-      background-color: #fff;
-      border: 1px solid #ddd;
-      cursor: pointer;
-    }
-    li:hover {
-      background-color: #f0f0f0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Canais</title>
+    <script src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
+    <style>
+        .channel {
+            cursor: pointer;
+            display: block;
+            margin: 5px 0;
+        }
+        #player {
+            width: 100%;
+            height: 500px;
+        }
+    </style>
 </head>
 <body>
 
-<h1>Lista de Canais - Teste de Xtream com Clappr</h1>
+    <div id="player"></div>
+    <ul id="channelList"></ul>
 
-<div id="player"></div>
+    <script>
+        // Usando um proxy público para evitar conteúdo misto
+        const playlistUrl = "https://cors-anywhere.herokuapp.com/http://jmrk.xyz:8880/get.php?username=scott_olson@hotmail.com&password=2p7Ks4SPxP&type=m3u";
 
-<ul id="channelList"></ul>
-
-<script>
-  const playlistUrl = "http://jmrk.xyz:8880/get.php?username=scott_olson@hotmail.com&password=2p7Ks4SPxP&type=m3u";
-
-  // Função para carregar a lista M3U
-  async function loadPlaylist() {
-    const response = await fetch(playlistUrl);
-    const playlist = await response.text();
-    parseM3U(playlist);
-  }
-
-  // Função para interpretar o arquivo M3U e listar os canais
-  function parseM3U(playlist) {
-    const lines = playlist.split('\n');
-    const channelList = document.getElementById('channelList');
-    let channelName = '';
-    let streamUrl = '';
-
-    lines.forEach(line => {
-      if (line.startsWith('#EXTINF:')) {
-        // Extrair o nome do canal do campo #EXTINF
-        const nameMatch = line.match(/,(.*)/);
-        if (nameMatch) {
-          channelName = nameMatch[1];
+        // Função para carregar os canais
+        function loadChannels() {
+            fetch(playlistUrl)
+                .then(response => response.text())
+                .then(data => parseM3U(data))
+                .catch(error => console.error('Erro ao carregar a lista M3U:', error));
         }
-      } else if (line.startsWith('http')) {
-        // Encontrar a URL do stream e criar um item de lista
-        streamUrl = line;
-        const listItem = document.createElement('li');
-        listItem.className = 'nav-item';
-        
-        // Criar o link dentro do <li>
-        const link = document.createElement('a');
-        link.className = 'channel nav-link';
-        link.setAttribute('data-value', streamUrl);
-        link.setAttribute('href', 'javascript:void(0);');
-        link.textContent = channelName;
 
-        // Adicionar evento para carregar o canal no Clappr
-        link.addEventListener('click', () => loadChannel(streamUrl));
+        // Função para analisar a lista M3U e criar links de canais
+        function parseM3U(data) {
+            const channels = data.split('#EXTINF:');
+            const channelList = document.getElementById('channelList');
+            channelList.innerHTML = ''; // Limpa a lista anterior
 
-        // Anexar o link ao item de lista
-        listItem.appendChild(link);
-        channelList.appendChild(listItem);
-      }
-    });
-  }
+            channels.forEach((channel, index) => {
+                if (index > 0) { // Ignora a primeira parte que não contém canais
+                    const parts = channel.split('\n');
+                    const channelInfo = parts[0].trim();
+                    const channelUrl = parts[1].trim(); // URL do M3U
 
-  // Função para carregar o canal no player Clappr
-  function loadChannel(url) {
-    const playerElement = document.getElementById('player');
-    playerElement.innerHTML = ''; // Limpar o player atual
+                    // Cria o elemento do canal
+                    const listItem = document.createElement('li');
+                    listItem.className = 'nav-item';
+                    listItem.innerHTML = `<a class="channel nav-link" data-value="${channelUrl}" href="javascript:void(0);">${channelInfo}</a>`;
+                    channelList.appendChild(listItem);
+                    
+                    // Adiciona evento de clique para carregar o canal no player
+                    listItem.addEventListener('click', () => {
+                        loadPlayer(channelUrl);
+                    });
+                }
+            });
+        }
 
-    const player = new Clappr.Player({
-      source: url,
-      parentId: "#player",
-      autoPlay: true,
-      mute: false,
-      height: '500px',
-      width: '100%',
-      plugins: [Clappr.LogoPlugin],
-      logo: {
-        url: 'https://static.wixstatic.com/media/f21f2b_1237fdb938104273808d6029aa9d3b6c~mv2.jpeg',
-        position: 'top-right',
-        width: 70,
-        height: 70
-      },
-    });
-  }
+        // Função para carregar o player Clappr com a URL do canal
+        function loadPlayer(url) {
+            const player = new Clappr.Player({
+                source: url,
+                parentId: '#player',
+                width: '100%',
+                height: '100%',
+                autoPlay: true,
+            });
+        }
 
-  // Carregar a playlist ao carregar a página
-  window.onload = loadPlaylist;
-</script>
+        // Carrega os canais na inicialização
+        loadChannels();
+    </script>
 
 </body>
 </html>
