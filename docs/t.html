@@ -279,6 +279,7 @@
                             itemLista.onclick = function() {
                                 video.src({ src: canal.link, type: 'application/x-mpegURL' });
                                 video.play();
+                                video.requestFullscreen(); // Abre o player em tela cheia ao clicar no canal
                             };
 
                             listaCanaisElemento.appendChild(itemLista);
