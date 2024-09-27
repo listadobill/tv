@@ -1,4 +1,1616 @@
+#EXTM3U
+#EXTINF:-1 tvg-logo="https://i.imgur.com/PiNgxsI.jpg" group-title="MENU",Ultima Atualização.: 17/09 - 00:14
+https://s3.us-west-1.wasabisys.com/apkformiga/Novo%20projeto.mp4
+#EXTINF:-1 tvg-logo="https://i.imgur.com/PiNgxsI.jpg" group-title="MENU",COMPRE NOSSAS LISTA ,[COLOR orange][B]COMPATIVEL COM QUALQUER PLAYER APARTIR DE 19,99[/B][/COLOR]
+https://s3.us-west-1.wasabisys.com/apkformiga/Novo%20projeto.mp4
+#EXTINF:-1 tvg-logo="https://i.imgur.com/PiNgxsI.jpg" group-title="MENU",Todas os canais SEM TRAVAS  24hs: [COLOR red][B]37-9.91253261 zapDOFormiga[/B][/COLOR]
+https://s3.us-west-1.wasabisys.com/apkformiga/Novo%20projeto.mp4
+#EXTINF:-1 tvg-logo="https://i.imgur.com/CaeoLuR.jpeg" group-title="ABERTO",[COLOR yellow][B]FORMIGAtv:[/B][/COLOR]Canal Ricos
+https://a.cdni.live/tvcanalricos/tvcanalricos/playlist.m3u8
 
+#EXTINF:-1 tvg-id="" tvg-name="A&E FHD" tvg-logo="https://acstatic.co/logos/canais/a&e.png" group-title="CANAIS | FILMES & SÉRIES",A&E FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911393.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="A&E FHD [H265]" tvg-logo="https://acstatic.co/logos/canais/a&e.png" group-title="CANAIS | FILMES & SÉRIES",A&E FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911394.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="A&E HD" tvg-logo="https://acstatic.co/logos/canais/a&e.png" group-title="CANAIS | FILMES & SÉRIES",A&E HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911395.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="A&E SD" tvg-logo="https://acstatic.co/logos/canais/a&e.png" group-title="CANAIS | FILMES & SÉRIES",A&E SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911396.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ADULT SWIM HD" tvg-logo="https://acstatic.co/logos/canais/adultswim.png" group-title="CANAIS | VARIEDADES",ADULT SWIM HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911397.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ADULT SWIM SD" tvg-logo="https://acstatic.co/logos/canais/adultswim.png" group-title="CANAIS | VARIEDADES",ADULT SWIM SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911398.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="AGRO CANAL FHD" tvg-logo="https://acstatic.co/logos/canais/agrocanal.png" group-title="CANAIS | VARIEDADES",AGRO CANAL FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911399.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="AGRO CANAL HD" tvg-logo="https://acstatic.co/logos/canais/agrocanal.png" group-title="CANAIS | VARIEDADES",AGRO CANAL HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911400.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="AGRO CANAL SD" tvg-logo="https://acstatic.co/logos/canais/agrocanal.png" group-title="CANAIS | VARIEDADES",AGRO CANAL SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911401.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Alexandre Pires e Seu Jorge [Live Irmãos]" tvg-logo="http://itsbx.uk:80/images/e3ff7aa5ab0431bd2baafacd44fcdff9.jpg" group-title="CANAIS | 24H SHOWS",Alexandre Pires e Seu Jorge [Live Irmãos]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911402.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Alexandre Pires [Live do Nego Véio]" tvg-logo="http://itsbx.uk:80/images/e3ff7aa5ab0431bd2baafacd44fcdff9.jpg" group-title="CANAIS | 24H SHOWS",Alexandre Pires [Live do Nego Véio]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911403.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Amazon Prime Video 01" tvg-logo="https://itsbx.uk/logos/canais_documentarios/id.png" group-title="CANAIS | PPV",Amazon Prime Video 01
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911404.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Amazon Prime Video 02" tvg-logo="https://itsbx.uk/logos/canais_documentarios/id.png" group-title="CANAIS | PPV",Amazon Prime Video 02
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911405.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Amazon Prime Video 03" tvg-logo="https://itsbx.uk/logos/canais_documentarios/id.png" group-title="CANAIS | PPV",Amazon Prime Video 03
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911406.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="AMC  4K FHDR" tvg-logo="" group-title="CANAIS | 4K",AMC  4K FHDR
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911407.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="AMC FHD" tvg-logo="https://acstatic.co/logos/canais/amc.png" group-title="CANAIS | FILMES & SÉRIES",AMC FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911408.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="AMC FHD [H265]" tvg-logo="https://acstatic.co/logos/canais/amc.png" group-title="CANAIS | FILMES & SÉRIES",AMC FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911409.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="AMC HD" tvg-logo="https://acstatic.co/logos/canais/amc.png" group-title="CANAIS | FILMES & SÉRIES",AMC HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911410.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="AMC SD" tvg-logo="https://acstatic.co/logos/canais/amc.png" group-title="CANAIS | FILMES & SÉRIES",AMC SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911411.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Anhanguera Anápolis FHD" tvg-logo="" group-title="CANAIS | ABERTOS",Anhanguera Anápolis FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911412.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Anhanguera Anápolis HD" tvg-logo="" group-title="CANAIS | ABERTOS",Anhanguera Anápolis HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911413.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Anhanguera Anápolis SD" tvg-logo="" group-title="CANAIS | ABERTOS",Anhanguera Anápolis SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911414.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Anhanguera Rio Verde FHD" tvg-logo="" group-title="CANAIS | ABERTOS",Anhanguera Rio Verde FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911415.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Anhanguera Rio Verde HD" tvg-logo="" group-title="CANAIS | ABERTOS",Anhanguera Rio Verde HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911416.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Anhanguera Rio Verde SD" tvg-logo="" group-title="CANAIS | ABERTOS",Anhanguera Rio Verde SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911417.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ANIMAL PLANET FHD" tvg-logo="http://itsbx.uk:80/images/5217cc9ccea2ce6190b651e7996c09ba.png" group-title="CANAIS | DOCUMENTÁRIOS",ANIMAL PLANET FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911418.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Animal Planet FHD [H265]" tvg-logo="http://itsbx.uk:80/images/5217cc9ccea2ce6190b651e7996c09ba.png" group-title="CANAIS | DOCUMENTÁRIOS",Animal Planet FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911419.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ANIMAL PLANET HD" tvg-logo="http://itsbx.uk:80/images/5217cc9ccea2ce6190b651e7996c09ba.png" group-title="CANAIS | DOCUMENTÁRIOS",ANIMAL PLANET HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911420.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Animal Planet SD" tvg-logo="http://itsbx.uk:80/images/5217cc9ccea2ce6190b651e7996c09ba.png" group-title="CANAIS | DOCUMENTÁRIOS",Animal Planet SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911421.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ARTE 1 FHD" tvg-logo="https://acstatic.co/logos/canais/arte1.png" group-title="CANAIS | VARIEDADES",ARTE 1 FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911422.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Arte 1 FHD [H265]" tvg-logo="https://acstatic.co/logos/canais/arte1.png" group-title="CANAIS | VARIEDADES",Arte 1 FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911423.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ARTE 1 HD" tvg-logo="https://acstatic.co/logos/canais/arte1.png" group-title="CANAIS | VARIEDADES",ARTE 1 HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911424.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Arte 1 SD" tvg-logo="https://acstatic.co/logos/canais/arte1.png" group-title="CANAIS | VARIEDADES",Arte 1 SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911425.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="AXN 4K" tvg-logo="https://acstatic.co/logos/canais/axn.png" group-title="CANAIS | 4K",AXN 4K
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911426.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="AXN FHD" tvg-logo="https://acstatic.co/logos/canais/axn.png" group-title="CANAIS | FILMES & SÉRIES",AXN FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911427.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="AXN FHD [H265]" tvg-logo="https://acstatic.co/logos/canais/axn.png" group-title="CANAIS | FILMES & SÉRIES",AXN FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911428.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="AXN HD" tvg-logo="https://acstatic.co/logos/canais/axn.png" group-title="CANAIS | FILMES & SÉRIES",AXN HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911429.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="AXN SD" tvg-logo="https://acstatic.co/logos/canais/axn.png" group-title="CANAIS | FILMES & SÉRIES",AXN SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911430.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="B&M + Wesley Safadão [Live 19-09-2020]" tvg-logo="http://itsbx.uk:80/images/d6dc4ca79521f3fc1b7011e641a8602a.jpg" group-title="CANAIS | 24H SHOWS",B&M + Wesley Safadão [Live 19-09-2020]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911431.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BABY TV SD" tvg-logo="" group-title="CANAIS | INFANTIL",BABY TV SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911432.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BAND BAHIA" tvg-logo="https://itsbx.uk/logos/canais_abertos/band.png" group-title="CANAIS | BAND",BAND BAHIA
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911433.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BAND Brasilia FHD" tvg-logo="https://itsbx.uk/logos/canais_abertos/band.png" group-title="CANAIS | BAND",BAND Brasilia FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911434.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BAND Brasilia HD" tvg-logo="https://itsbx.uk/logos/canais_abertos/band.png" group-title="CANAIS | BAND",BAND Brasilia HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911435.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BAND CAMPINAS FHD" tvg-logo="https://itsbx.uk/logos/canais_abertos/band.png" group-title="CANAIS | BAND",BAND CAMPINAS FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911436.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BAND Campinas HD" tvg-logo="https://itsbx.uk/logos/canais_abertos/band.png" group-title="CANAIS | BAND",BAND Campinas HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911437.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BAND Campinas SD" tvg-logo="https://itsbx.uk/logos/canais_abertos/band.png" group-title="CANAIS | BAND",BAND Campinas SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911438.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BAND CASCAVEL TV TAROBA FHD" tvg-logo="https://itsbx.uk/logos/canais_abertos/band.png" group-title="CANAIS | BAND",BAND CASCAVEL TV TAROBA FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911439.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BAND CE HD" tvg-logo="https://itsbx.uk/logos/canais_abertos/band.png" group-title="CANAIS | BAND",BAND CE HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911440.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BAND CEARA FHD" tvg-logo="https://itsbx.uk/logos/canais_abertos/band.png" group-title="CANAIS | BAND",BAND CEARA FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911441.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BAND CURITIBA HD" tvg-logo="https://itsbx.uk/logos/canais_abertos/band.png" group-title="CANAIS | BAND",BAND CURITIBA HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911442.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BAND MG FHD" tvg-logo="https://itsbx.uk/logos/canais_abertos/band.png" group-title="CANAIS | BAND",BAND MG FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911443.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BAND MG HD" tvg-logo="https://itsbx.uk/logos/canais_abertos/band.png" group-title="CANAIS | BAND",BAND MG HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911444.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BAND MG SD" tvg-logo="https://itsbx.uk/logos/canais_abertos/band.png" group-title="CANAIS | BAND",BAND MG SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911445.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BAND NATAL HD" tvg-logo="https://itsbx.uk/logos/canais_abertos/band.png" group-title="CANAIS | BAND",BAND NATAL HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911446.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BAND NEWS FHD" tvg-logo="" group-title="CANAIS | NOTÍCIAS",BAND NEWS FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911447.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BAND NEWS HD" tvg-logo="" group-title="CANAIS | NOTÍCIAS",BAND NEWS HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911448.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BAND News SD" tvg-logo="" group-title="CANAIS | NOTÍCIAS",BAND News SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911449.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BAND PA HD" tvg-logo="https://itsbx.uk/logos/canais_abertos/band.png" group-title="CANAIS | BAND",BAND PA HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911450.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BAND RJ FHD" tvg-logo="https://itsbx.uk/logos/canais_abertos/band.png" group-title="CANAIS | BAND",BAND RJ FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911451.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BAND RJ HD" tvg-logo="https://itsbx.uk/logos/canais_abertos/band.png" group-title="CANAIS | BAND",BAND RJ HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911452.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BAND RJ SD" tvg-logo="https://itsbx.uk/logos/canais_abertos/band.png" group-title="CANAIS | BAND",BAND RJ SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911453.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BAND RS FHD" tvg-logo="https://itsbx.uk/logos/canais_abertos/band.png" group-title="CANAIS | BAND",BAND RS FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911454.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BAND RS HD" tvg-logo="https://itsbx.uk/logos/canais_abertos/band.png" group-title="CANAIS | BAND",BAND RS HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911455.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BAND RS SD" tvg-logo="https://itsbx.uk/logos/canais_abertos/band.png" group-title="CANAIS | BAND",BAND RS SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911456.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BAND SP FHD" tvg-logo="https://itsbx.uk/logos/canais_abertos/band.png" group-title="CANAIS | BAND",BAND SP FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911457.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BAND SP FHD [H265]" tvg-logo="https://itsbx.uk/logos/canais_abertos/band.png" group-title="CANAIS | BAND",BAND SP FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911458.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BAND SP HD" tvg-logo="https://itsbx.uk/logos/canais_abertos/band.png" group-title="CANAIS | BAND",BAND SP HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911459.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BAND SP SD" tvg-logo="https://itsbx.uk/logos/canais_abertos/band.png" group-title="CANAIS | BAND",BAND SP SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911460.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BAND SPORTS FHD" tvg-logo="https://acstatic.co/logos/canais/bandsports.png" group-title="CANAIS | ESPORTES",BAND SPORTS FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911461.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BAND Sports FHD [H265]" tvg-logo="https://acstatic.co/logos/canais/bandsports.png" group-title="CANAIS | ESPORTES",BAND Sports FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911462.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BAND SPORTS HD" tvg-logo="https://acstatic.co/logos/canais/bandsports.png" group-title="CANAIS | ESPORTES",BAND SPORTS HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911463.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BAND Sports SD" tvg-logo="https://acstatic.co/logos/canais/bandsports.png" group-title="CANAIS | ESPORTES",BAND Sports SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911464.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BAND TV TRIBUNA RECIFE HD" tvg-logo="https://itsbx.uk/logos/canais_abertos/band.png" group-title="CANAIS | BAND",BAND TV TRIBUNA RECIFE HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911465.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Band Uberlandia FHD" tvg-logo="https://itsbx.uk/logos/canais_abertos/band.png" group-title="CANAIS | BAND",Band Uberlandia FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911466.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Band Uberlandia HD" tvg-logo="https://itsbx.uk/logos/canais_abertos/band.png" group-title="CANAIS | BAND",Band Uberlandia HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911467.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Band Uberlandia SD" tvg-logo="https://itsbx.uk/logos/canais_abertos/band.png" group-title="CANAIS | BAND",Band Uberlandia SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911468.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Batman - Trilogia" tvg-logo="http://itsbx.uk:80/images/df3b6a362d4a5e6bdab252eb39fd00f7.png" group-title="CANAIS | CINEMA",Batman - Trilogia
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911469.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Bebo e Choro]" tvg-logo="http://itsbx.uk:80/images/e3ff7aa5ab0431bd2baafacd44fcdff9.jpg" group-title="CANAIS | VARIEDADES",Bebo e Choro]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911470.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BIS FHD" tvg-logo="https://acstatic.co/logos/canais/bis.png" group-title="CANAIS | VARIEDADES",BIS FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911471.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BIS FHD [H265]" tvg-logo="https://acstatic.co/logos/canais/bis.png" group-title="CANAIS | VARIEDADES",BIS FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911472.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BIS HD" tvg-logo="https://acstatic.co/logos/canais/bis.png" group-title="CANAIS | VARIEDADES",BIS HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911473.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BIS SD" tvg-logo="https://acstatic.co/logos/canais/bis.png" group-title="CANAIS | VARIEDADES",BIS SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911474.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BOA VONTADE TV FHD" tvg-logo="" group-title="CANAIS | RELIGIOSOS",BOA VONTADE TV FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911475.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BOA VONTADE TV HD" tvg-logo="" group-title="CANAIS | RELIGIOSOS",BOA VONTADE TV HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911476.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BOA VONTADE TV SD" tvg-logo="" group-title="CANAIS | RELIGIOSOS",BOA VONTADE TV SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911477.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BOAS NOVAS FHD" tvg-logo="" group-title="CANAIS | RELIGIOSOS",BOAS NOVAS FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911478.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Bruno e Marrone [Live 16-05-2020]" tvg-logo="http://itsbx.uk:80/images/380c8a29f951b66300547e7eb1bf150b.jpg" group-title="CANAIS | 24H SHOWS",Bruno e Marrone [Live 16-05-2020]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911479.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Bruno e Marrone [Live 3 sem propagandas]" tvg-logo="http://itsbx.uk:80/images/380c8a29f951b66300547e7eb1bf150b.jpg" group-title="CANAIS | 24H SHOWS",Bruno e Marrone [Live 3 sem propagandas]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911480.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Bruno e Marrone [Live 4 sem propagandas]" tvg-logo="http://itsbx.uk:80/images/380c8a29f951b66300547e7eb1bf150b.jpg" group-title="CANAIS | 24H SHOWS",Bruno e Marrone [Live 4 sem propagandas]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911481.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Cachorro. Vai!" tvg-logo="" group-title="CANAIS | CINEMA",Cachorro. Vai!
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911482.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CANAL 21" tvg-logo="https://acstatic.co/logos/canais/canal21.png" group-title="CANAIS | VARIEDADES",CANAL 21
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911483.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CANAL BRASIL FHD" tvg-logo="https://acstatic.co/logos/canais/canalbrasil.png" group-title="CANAIS | FILMES & SÉRIES",CANAL BRASIL FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911484.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Canal Brasil FHD [H265]" tvg-logo="https://acstatic.co/logos/canais/canalbrasil.png" group-title="CANAIS | FILMES & SÉRIES",Canal Brasil FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911485.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CANAL BRASIL HD" tvg-logo="https://acstatic.co/logos/canais/canalbrasil.png" group-title="CANAIS | FILMES & SÉRIES",CANAL BRASIL HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911486.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Canal Brasil SD" tvg-logo="" group-title="CANAIS | ABERTOS",Canal Brasil SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911487.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CANAL DO BOI FHD" tvg-logo="" group-title="CANAIS | ABERTOS",CANAL DO BOI FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911488.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CANAL DO BOI HD" tvg-logo="" group-title="CANAIS | ABERTOS",CANAL DO BOI HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911489.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CANAL DO BOI SD" tvg-logo="" group-title="CANAIS | ABERTOS",CANAL DO BOI SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911490.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Canal Jovem Pan FHD" tvg-logo="" group-title="CANAIS | ABERTOS",Canal Jovem Pan FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911491.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Canal Jovem Pan HD" tvg-logo="" group-title="CANAIS | ABERTOS",Canal Jovem Pan HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911492.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CANAL MALHAÇAO FAST HD" tvg-logo="" group-title="CANAIS | ABERTOS",CANAL MALHAÇAO FAST HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911493.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CANAL RURAL FHD" tvg-logo="" group-title="CANAIS | ABERTOS",CANAL RURAL FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911494.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CANAL RURAL HD" tvg-logo="" group-title="CANAIS | ABERTOS",CANAL RURAL HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911495.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CANAL RURAL SD" tvg-logo="" group-title="CANAIS | ABERTOS",CANAL RURAL SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911496.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CANAL SONY FHD" tvg-logo="https://acstatic.co/logos/canais/sony.png" group-title="CANAIS | VARIEDADES",CANAL SONY FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911497.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Canal Sony FHD [H265]" tvg-logo="https://acstatic.co/logos/canais/sony.png" group-title="CANAIS | FILMES & SÉRIES",Canal Sony FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911498.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CANAL SONY HD" tvg-logo="https://acstatic.co/logos/canais/sony.png" group-title="CANAIS | FILMES & SÉRIES",CANAL SONY HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911499.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Canal Sony SD" tvg-logo="https://acstatic.co/logos/canais/sony.png" group-title="CANAIS | FILMES & SÉRIES",Canal Sony SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911500.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CANCAO NOVA FHD" tvg-logo="" group-title="CANAIS | RELIGIOSOS",CANCAO NOVA FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911501.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CANCAO NOVA HD" tvg-logo="" group-title="CANAIS | RELIGIOSOS",CANCAO NOVA HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911502.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CANCAO NOVA SD" tvg-logo="" group-title="CANAIS | RELIGIOSOS",CANCAO NOVA SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911503.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CARTOON NETWORK FHD" tvg-logo="" group-title="CANAIS | INFANTIL",CARTOON NETWORK FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911504.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Cartoon Network FHD [H265]" tvg-logo="https://itsbx.uk/logos/canais_documentarios/h2.png" group-title="CANAIS | INFANTIL",Cartoon Network FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911505.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CARTOON NETWORK HD" tvg-logo="" group-title="CANAIS | INFANTIL",CARTOON NETWORK HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911506.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Cartoon Network SD" tvg-logo="" group-title="CANAIS | INFANTIL",Cartoon Network SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911507.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Cartoonito FHD" tvg-logo="" group-title="CANAIS | INFANTIL",Cartoonito FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911508.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Cartoonito FHD [H265]" tvg-logo="https://itsbx.uk/logos/canais_documentarios/h2.png" group-title="CANAIS | INFANTIL",Cartoonito FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911509.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Cartoonito HD" tvg-logo="" group-title="CANAIS | INFANTIL",Cartoonito HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911510.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Cartoonito SD" tvg-logo="" group-title="CANAIS | INFANTIL",Cartoonito SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911511.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CAZE TV 1" tvg-logo="https://acstatic.co/logos/canais/cazetv.png" group-title="CANAIS | PPV",CAZE TV 1
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911512.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CAZE TV 2" tvg-logo="https://acstatic.co/logos/canais/cazetv.png" group-title="CANAIS | PPV",CAZE TV 2
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911513.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CAZE TV 3" tvg-logo="https://acstatic.co/logos/canais/cazetv.png" group-title="CANAIS | PPV",CAZE TV 3
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911514.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CAZE TV 4" tvg-logo="https://acstatic.co/logos/canais/cazetv.png" group-title="CANAIS | PPV",CAZE TV 4
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911515.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CENTRALTV BRASIL" tvg-logo="https://acstatic.co/logos/canais/centraltv.png" group-title="CANAIS | VARIEDADES",CENTRALTV BRASIL
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911516.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CGTN SD" tvg-logo="https://acstatic.co/logos/canais/cgtn.png" group-title="CANAIS | VARIEDADES",CGTN SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911517.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CINE BRASIL TV HD" tvg-logo="" group-title="CANAIS | VARIEDADES",CINE BRASIL TV HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911518.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Cine Sky 01 [Gato de Botas 2: O Último Pedido]" tvg-logo="https://itsbx.uk/logos/canais_documentarios/id.png" group-title="CANAIS | CINEMA",Cine Sky 01 [Gato de Botas 2: O Último Pedido]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911519.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Cine Sky 02 [Pantera Negra: Wakanda Para Sempre]" tvg-logo="http://itsbx.uk:80/images/ad3216fcab957ba6d51424cc27245720.png" group-title="CANAIS | CINEMA",Cine Sky 02 [Pantera Negra: Wakanda Para Sempre]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911520.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Cine Sky 03 [Alerta Máximo]" tvg-logo="http://itsbx.uk:80/images/ad3216fcab957ba6d51424cc27245720.png" group-title="CANAIS | CINEMA",Cine Sky 03 [Alerta Máximo]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911521.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Cine Sky 04 [Irmãos de Honra]" tvg-logo="http://itsbx.uk:80/images/ad3216fcab957ba6d51424cc27245720.png" group-title="CANAIS | CINEMA",Cine Sky 04 [Irmãos de Honra]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911522.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Cine Sky 05 [Fantasma e CIA]" tvg-logo="http://itsbx.uk:80/images/ad3216fcab957ba6d51424cc27245720.png" group-title="CANAIS | CINEMA",Cine Sky 05 [Fantasma e CIA]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911523.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Cine Sky 06 [M3GAN]" tvg-logo="http://itsbx.uk:80/images/ad3216fcab957ba6d51424cc27245720.png" group-title="CANAIS | CINEMA",Cine Sky 06 [M3GAN]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911524.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Cine Sky 07 [Nada de Novo no Front]" tvg-logo="http://itsbx.uk:80/images/ad3216fcab957ba6d51424cc27245720.png" group-title="CANAIS | CINEMA",Cine Sky 07 [Nada de Novo no Front]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911525.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Cine Sky 08 [Duro de Atuar]" tvg-logo="http://itsbx.uk:80/images/ad3216fcab957ba6d51424cc27245720.png" group-title="CANAIS | CINEMA",Cine Sky 08 [Duro de Atuar]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911526.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Cine Sky 09 [Emancipation]" tvg-logo="http://itsbx.uk:80/images/ad3216fcab957ba6d51424cc27245720.png" group-title="CANAIS | CINEMA",Cine Sky 09 [Emancipation]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911527.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Cine Sky 10 [O Pálido Olho Azul]" tvg-logo="https://itsbx.uk/logos/canais_documentarios/id.png" group-title="CANAIS | CINEMA",Cine Sky 10 [O Pálido Olho Azul]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911528.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Cine Sky 11 [O Pior Vizinho do Mundo]" tvg-logo="http://itsbx.uk:80/images/ad3216fcab957ba6d51424cc27245720.png" group-title="CANAIS | CINEMA",Cine Sky 11 [O Pior Vizinho do Mundo]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911529.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Cine Sky 12 [Os Fabelmans]" tvg-logo="http://itsbx.uk:80/images/ad3216fcab957ba6d51424cc27245720.png" group-title="CANAIS | CINEMA",Cine Sky 12 [Os Fabelmans]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911530.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Cine Sky 13 [A Baleia] [Legendado]" tvg-logo="http://itsbx.uk:80/images/ad3216fcab957ba6d51424cc27245720.png" group-title="CANAIS | CINEMA",Cine Sky 13 [A Baleia] [Legendado]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911531.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Cine Sky 14 [Babilônia] [Legendado]" tvg-logo="http://itsbx.uk:80/images/ad3216fcab957ba6d51424cc27245720.png" group-title="CANAIS | CINEMA",Cine Sky 14 [Babilônia] [Legendado]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911532.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Cine Sky 15 [Batem à Porta] [Legendado]" tvg-logo="http://itsbx.uk:80/images/ad3216fcab957ba6d51424cc27245720.png" group-title="CANAIS | CINEMA",Cine Sky 15 [Batem à Porta] [Legendado]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911533.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CINECANAL FHD" tvg-logo="https://acstatic.co/logos/canais/cinecanal.png" group-title="CANAIS | FILMES & SÉRIES",CINECANAL FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911534.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CINECANAL FHD [H265]" tvg-logo="https://acstatic.co/logos/canais/cinecanal.png" group-title="CANAIS | FILMES & SÉRIES",CINECANAL FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911535.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CINECANAL HD" tvg-logo="https://acstatic.co/logos/canais/cinecanal.png" group-title="CANAIS | FILMES & SÉRIES",CINECANAL HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911536.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CINECANAL SD" tvg-logo="https://acstatic.co/logos/canais/cinecanal.png" group-title="CANAIS | FILMES & SÉRIES",CINECANAL SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911537.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CINEMAX FHD" tvg-logo="https://acstatic.co/logos/canais/cinemax.png" group-title="CANAIS | FILMES & SÉRIES",CINEMAX FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911538.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CINEMAX FHD H265" tvg-logo="https://acstatic.co/logos/canais/cinemax.png" group-title="CANAIS | FILMES & SÉRIES",CINEMAX FHD H265
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911539.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CINEMAX HD" tvg-logo="https://acstatic.co/logos/canais/cinemax.png" group-title="CANAIS | FILMES & SÉRIES",CINEMAX HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911540.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Cinemax SD" tvg-logo="https://acstatic.co/logos/canais/cinemax.png" group-title="CANAIS | FILMES & SÉRIES",Cinemax SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911541.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CNN BRASIL FHD" tvg-logo="" group-title="CANAIS | NOTÍCIAS",CNN BRASIL FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911542.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CNN Brasil FHD [H265]" tvg-logo="https://itsbx.uk/logos/canais_documentarios/h2.png" group-title="CANAIS | NOTÍCIAS",CNN Brasil FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911543.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CNN BRASIL HD" tvg-logo="" group-title="CANAIS | NOTÍCIAS",CNN BRASIL HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911544.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CNN Brasil SD" tvg-logo="" group-title="CANAIS | NOTÍCIAS",CNN Brasil SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911545.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CNN INTERNACIONAL HD" tvg-logo="" group-title="CANAIS | NOTÍCIAS",CNN INTERNACIONAL HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911546.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CNN INTERNACIONAL SD" tvg-logo="" group-title="CANAIS | NOTÍCIAS",CNN INTERNACIONAL SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911547.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CNT HD" tvg-logo="https://acstatic.co/logos/canais/cnt.png" group-title="CANAIS | VARIEDADES",CNT HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911548.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="COMBATE FHD" tvg-logo="https://acstatic.co/logos/canais/combate.png" group-title="CANAIS | ESPORTES",COMBATE FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911549.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Combate FHD [H265]" tvg-logo="https://acstatic.co/logos/canais/combate.png" group-title="CANAIS | ESPORTES",Combate FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911550.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="COMBATE HD" tvg-logo="https://acstatic.co/logos/canais/combate.png" group-title="CANAIS | ESPORTES",COMBATE HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911551.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Combate SD" tvg-logo="https://acstatic.co/logos/canais/combate.png" group-title="CANAIS | ESPORTES",Combate SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911552.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="COMEDY CENTRAL FHD" tvg-logo="https://acstatic.co/logos/canais/comedycentral.png" group-title="CANAIS | VARIEDADES",COMEDY CENTRAL FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911553.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="COMEDY CENTRAL HD" tvg-logo="https://acstatic.co/logos/canais/comedycentral.png" group-title="CANAIS | VARIEDADES",COMEDY CENTRAL HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911554.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Comedy Central SD" tvg-logo="https://acstatic.co/logos/canais/comedycentral.png" group-title="CANAIS | VARIEDADES",Comedy Central SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911555.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CULTURA FHD" tvg-logo="" group-title="CANAIS | ABERTOS",CULTURA FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911556.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CURTA!  HD" tvg-logo="" group-title="CANAIS | VARIEDADES",CURTA!  HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911557.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CURTA! 4K" tvg-logo="https://acstatic.co/logos/canais/curta.png" group-title="CANAIS | 4K",CURTA! 4K
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911558.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CURTA! FHD" tvg-logo="https://acstatic.co/logos/canais/curta.png" group-title="CANAIS | VARIEDADES",CURTA! FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911559.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Curta! FHD [H265]" tvg-logo="https://acstatic.co/logos/canais/curta.png" group-title="CANAIS | VARIEDADES",Curta! FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911560.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Curta! SD" tvg-logo="https://acstatic.co/logos/canais/curta.png" group-title="CANAIS | VARIEDADES",Curta! SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911561.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Daniel e Leonardo [Live Buteco em Casa 3]" tvg-logo="http://itsbx.uk:80/images/4f5e3147501669e9987a1224daf937f2.png" group-title="CANAIS | 24H SHOWS",Daniel e Leonardo [Live Buteco em Casa 3]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911562.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DAZN 01" tvg-logo="https://acstatic.co/logos/canais/dazn.png" group-title="CANAIS | PPV",DAZN 01
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911563.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DAZN 02" tvg-logo="https://acstatic.co/logos/canais/dazn.png" group-title="CANAIS | PPV",DAZN 02
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911564.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DAZN 03" tvg-logo="https://acstatic.co/logos/canais/dazn.png" group-title="CANAIS | PPV",DAZN 03
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911565.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DAZN 04" tvg-logo="https://acstatic.co/logos/canais/dazn.png" group-title="CANAIS | PPV",DAZN 04
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911566.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DAZN 05" tvg-logo="https://acstatic.co/logos/canais/dazn.png" group-title="CANAIS | PPV",DAZN 05
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911567.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DC Comics 01" tvg-logo="http://itsbx.uk:80/images/af4cbabb9eb1c4c6cf7695730c99706e.png" group-title="CANAIS | CINEMA",DC Comics 01
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911568.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DC Comics 02" tvg-logo="http://itsbx.uk:80/images/af4cbabb9eb1c4c6cf7695730c99706e.png" group-title="CANAIS | CINEMA",DC Comics 02
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911569.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DISCOVERY CHANNEL FHD" tvg-logo="https://itsbx.uk/logos/canais_documentarios/discoverychannel.png" group-title="CANAIS | DOCUMENTÁRIOS",DISCOVERY CHANNEL FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911570.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Discovery Channel FHD [H265]" tvg-logo="http://itsbx.uk:80/images/c07189d799ec02b743ac48fcde604ccf.png" group-title="CANAIS | DOCUMENTÁRIOS",Discovery Channel FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911571.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DISCOVERY CHANNEL HD" tvg-logo="https://itsbx.uk/logos/canais_documentarios/discoverychannel.png" group-title="CANAIS | DOCUMENTÁRIOS",DISCOVERY CHANNEL HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911572.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Discovery Channel SD" tvg-logo="https://itsbx.uk/logos/canais_documentarios/discoverychannel.png" group-title="CANAIS | DOCUMENTÁRIOS",Discovery Channel SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911573.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DISCOVERY H&H 4K" tvg-logo="https://acstatic.co/logos/canais/discoveryhh.png" group-title="CANAIS | 4K",DISCOVERY H&H 4K
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911574.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DISCOVERY H&H FHD" tvg-logo="http://itsbx.uk:80/images/f751418cab3ab693c6108523120e0a48.png" group-title="CANAIS | DOCUMENTÁRIOS",DISCOVERY H&H FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911575.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Discovery H&H FHD [H265]" tvg-logo="http://itsbx.uk:80/images/f751418cab3ab693c6108523120e0a48.png" group-title="CANAIS | DOCUMENTÁRIOS",Discovery H&H FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911576.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DISCOVERY H&H HD" tvg-logo="http://itsbx.uk:80/images/f751418cab3ab693c6108523120e0a48.png" group-title="CANAIS | DOCUMENTÁRIOS",DISCOVERY H&H HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911577.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Discovery H&H SD" tvg-logo="http://itsbx.uk:80/images/f751418cab3ab693c6108523120e0a48.png" group-title="CANAIS | DOCUMENTÁRIOS",Discovery H&H SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911578.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DISCOVERY KIDS FHD" tvg-logo="https://itsbx.uk/logos/canais_documentarios/id.png" group-title="CANAIS | INFANTIL",DISCOVERY KIDS FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911579.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Discovery Kids FHD [H265]" tvg-logo="https://itsbx.uk/logos/canais_documentarios/id.png" group-title="CANAIS | INFANTIL",Discovery Kids FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911580.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DISCOVERY KIDS HD" tvg-logo="https://itsbx.uk/logos/canais_documentarios/id.png" group-title="CANAIS | INFANTIL",DISCOVERY KIDS HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911581.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Discovery Kids SD" tvg-logo="https://itsbx.uk/logos/canais_documentarios/id.png" group-title="CANAIS | INFANTIL",Discovery Kids SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911582.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DISCOVERY SCIENCE FHD" tvg-logo="https://itsbx.uk/logos/canais_documentarios/discoveryscience.png" group-title="CANAIS | DOCUMENTÁRIOS",DISCOVERY SCIENCE FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911583.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Discovery Science FHD [H265]" tvg-logo="https://itsbx.uk/logos/canais_documentarios/h2.png" group-title="CANAIS | DOCUMENTÁRIOS",Discovery Science FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911584.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DISCOVERY SCIENCE HD" tvg-logo="https://itsbx.uk/logos/canais_documentarios/discoveryscience.png" group-title="CANAIS | DOCUMENTÁRIOS",DISCOVERY SCIENCE HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911585.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Discovery Science SD" tvg-logo="https://itsbx.uk/logos/canais_documentarios/discoveryscience.png" group-title="CANAIS | DOCUMENTÁRIOS",Discovery Science SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911586.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DISCOVERY THEATER FHD" tvg-logo="https://itsbx.uk/logos/canais_documentarios/discoverytheater.png" group-title="CANAIS | DOCUMENTÁRIOS",DISCOVERY THEATER FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911587.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Discovery Theater FHD [H265]" tvg-logo="https://itsbx.uk/logos/canais_documentarios/h2.png" group-title="CANAIS | DOCUMENTÁRIOS",Discovery Theater FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911588.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DISCOVERY THEATER HD" tvg-logo="https://itsbx.uk/logos/canais_documentarios/discoverytheater.png" group-title="CANAIS | DOCUMENTÁRIOS",DISCOVERY THEATER HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911589.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Discovery Theater SD" tvg-logo="https://itsbx.uk/logos/canais_documentarios/discoverytheater.png" group-title="CANAIS | DOCUMENTÁRIOS",Discovery Theater SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911590.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DISCOVERY TLC FHD" tvg-logo="http://itsbx.uk:80/images/5dd4d9fe18a3ae88a4b8fb0d3364cb4c.png" group-title="CANAIS | DOCUMENTÁRIOS",DISCOVERY TLC FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911591.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DISCOVERY TLC HD" tvg-logo="http://itsbx.uk:80/images/5dd4d9fe18a3ae88a4b8fb0d3364cb4c.png" group-title="CANAIS | DOCUMENTÁRIOS",DISCOVERY TLC HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911592.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Discovery Turbo 4K" tvg-logo="" group-title="CANAIS | 4K",Discovery Turbo 4K
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911593.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Discovery Turbo FHD" tvg-logo="http://itsbx.uk:80/images/c1a2f84a895c2cdd6121ce2ecf2e188a.png" group-title="CANAIS | DOCUMENTÁRIOS",Discovery Turbo FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911594.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DISCOVERY TURBO HD" tvg-logo="http://itsbx.uk:80/images/c1a2f84a895c2cdd6121ce2ecf2e188a.png" group-title="CANAIS | DOCUMENTÁRIOS",DISCOVERY TURBO HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911595.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DISCOVERY TURBO SD" tvg-logo="http://itsbx.uk:80/images/c1a2f84a895c2cdd6121ce2ecf2e188a.png" group-title="CANAIS | DOCUMENTÁRIOS",DISCOVERY TURBO SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911596.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DISCOVERY WORLD FHD" tvg-logo="https://itsbx.uk/logos/canais_documentarios/discoveryworld.png" group-title="CANAIS | DOCUMENTÁRIOS",DISCOVERY WORLD FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911597.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Discovery World FHD [H265]" tvg-logo="http://itsbx.uk:80/images/a8053043f252b0fd96b316919b91a3b8.png" group-title="CANAIS | DOCUMENTÁRIOS",Discovery World FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911598.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DISCOVERY WORLD HD" tvg-logo="https://itsbx.uk/logos/canais_documentarios/discoveryworld.png" group-title="CANAIS | DOCUMENTÁRIOS",DISCOVERY WORLD HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911599.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Discovery World SD" tvg-logo="https://itsbx.uk/logos/canais_documentarios/discoveryworld.png" group-title="CANAIS | DOCUMENTÁRIOS",Discovery World SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911600.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DISNEY CHANNEL FHD" tvg-logo="" group-title="CANAIS | INFANTIL",DISNEY CHANNEL FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911601.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Disney Channel FHD [H265]" tvg-logo="https://itsbx.uk/logos/canais_documentarios/h2.png" group-title="CANAIS | INFANTIL",Disney Channel FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911602.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DISNEY CHANNEL HD" tvg-logo="" group-title="CANAIS | INFANTIL",DISNEY CHANNEL HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911603.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Disney Channel SD" tvg-logo="" group-title="CANAIS | INFANTIL",Disney Channel SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911604.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Disney Clássico 01" tvg-logo="http://itsbx.uk:80/images/814441a9405f02622c05ae40ef564ccd.jpg" group-title="CANAIS | CINEMA",Disney Clássico 01
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911605.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Disney Clássico 02" tvg-logo="http://itsbx.uk:80/images/814441a9405f02622c05ae40ef564ccd.jpg" group-title="CANAIS | CINEMA",Disney Clássico 02
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911606.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DISNEY+ 01" tvg-logo="https://acstatic.co/logos/canais/disneyplus.png" group-title="CANAIS | PPV",DISNEY+ 01
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911607.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DISNEY+ 02" tvg-logo="https://acstatic.co/logos/canais/disneyplus.png" group-title="CANAIS | PPV",DISNEY+ 02
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911608.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DISNEY+ 03" tvg-logo="https://acstatic.co/logos/canais/disneyplus.png" group-title="CANAIS | PPV",DISNEY+ 03
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911609.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DISNEY+ 04" tvg-logo="https://acstatic.co/logos/canais/disneyplus.png" group-title="CANAIS | PPV",DISNEY+ 04
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911610.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DISNEY+ 05" tvg-logo="https://acstatic.co/logos/canais/disneyplus.png" group-title="CANAIS | PPV",DISNEY+ 05
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911611.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DISNEY+ 06" tvg-logo="https://acstatic.co/logos/canais/disneyplus.png" group-title="CANAIS | PPV",DISNEY+ 06
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911612.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DOG TV FHD" tvg-logo="https://acstatic.co/logos/canais/dogtv.png" group-title="CANAIS | VARIEDADES",DOG TV FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911613.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DOG TV HD" tvg-logo="https://acstatic.co/logos/canais/dogtv.png" group-title="CANAIS | VARIEDADES",DOG TV HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911614.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DOG TV SD" tvg-logo="https://acstatic.co/logos/canais/dogtv.png" group-title="CANAIS | VARIEDADES",DOG TV SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911615.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Dudu e Edu" tvg-logo="http://itsbx.uk:80/images/1f3b67ae3d626ae5490eac1c7d56afbb.png" group-title="CANAIS | CINEMA",Dudu e Edu
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911616.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="E! FHD" tvg-logo="" group-title="CANAIS | VARIEDADES",E! FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911617.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="E! FHD [H265]" tvg-logo="https://itsbx.uk/logos/canais_documentarios/h2.png" group-title="CANAIS | VARIEDADES",E! FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911618.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="E! HD" tvg-logo="" group-title="CANAIS | VARIEDADES",E! HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911619.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="E! SD" tvg-logo="" group-title="CANAIS | VARIEDADES",E! SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911620.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Eduardo Costa [Aqui em Uberlândia]" tvg-logo="http://itsbx.uk:80/images/e3ff7aa5ab0431bd2baafacd44fcdff9.jpg" group-title="CANAIS | 24H SHOWS",Eduardo Costa [Aqui em Uberlândia]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911621.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Eduardo Costa [Especial Dia dos Namorados]" tvg-logo="http://itsbx.uk:80/images/e3ff7aa5ab0431bd2baafacd44fcdff9.jpg" group-title="CANAIS | 24H SHOWS",Eduardo Costa [Especial Dia dos Namorados]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911622.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 1 4K" tvg-logo="https://acstatic.co/logos/canais/espn.png" group-title="CANAIS | 4K",ESPN 1 4K
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911623.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 1 FHD" tvg-logo="https://acstatic.co/logos/canais/espn.png" group-title="CANAIS | ESPORTES",ESPN 1 FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911624.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 1 FHD [H265]" tvg-logo="https://acstatic.co/logos/canais/espn.png" group-title="CANAIS | ESPORTES",ESPN 1 FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911625.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 1 HD" tvg-logo="https://acstatic.co/logos/canais/espn.png" group-title="CANAIS | ESPORTES",ESPN 1 HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911626.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 1 SD" tvg-logo="https://acstatic.co/logos/canais/espn.png" group-title="CANAIS | ESPORTES",ESPN 1 SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911627.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 2 4K" tvg-logo="https://acstatic.co/logos/canais/espn2.png" group-title="CANAIS | 4K",ESPN 2 4K
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911628.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 2 FHD" tvg-logo="https://acstatic.co/logos/canais/espn2.png" group-title="CANAIS | ESPORTES",ESPN 2 FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911629.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 2 FHD [H265]" tvg-logo="https://acstatic.co/logos/canais/espn2.png" group-title="CANAIS | ESPORTES",ESPN 2 FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911630.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 2 HD" tvg-logo="https://acstatic.co/logos/canais/espn2.png" group-title="CANAIS | ESPORTES",ESPN 2 HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911631.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 2 SD" tvg-logo="https://acstatic.co/logos/canais/espn2.png" group-title="CANAIS | ESPORTES",ESPN 2 SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911632.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 3 4K FHDR" tvg-logo="https://acstatic.co/logos/canais/espn3.png" group-title="CANAIS | 4K",ESPN 3 4K FHDR
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911633.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 3 FHD" tvg-logo="https://acstatic.co/logos/canais/espn3.png" group-title="CANAIS | ESPORTES",ESPN 3 FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911634.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 3 FHD [H265]" tvg-logo="https://acstatic.co/logos/canais/espn3.png" group-title="CANAIS | ESPORTES",ESPN 3 FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911635.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 3 HD" tvg-logo="https://acstatic.co/logos/canais/espn3.png" group-title="CANAIS | ESPORTES",ESPN 3 HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911636.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 3 SD" tvg-logo="https://acstatic.co/logos/canais/espn3.png" group-title="CANAIS | ESPORTES",ESPN 3 SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911637.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 4 4K FHDR" tvg-logo="https://acstatic.co/logos/canais/espn4.png" group-title="CANAIS | 4K",ESPN 4 4K FHDR
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911638.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 4 FHD" tvg-logo="https://acstatic.co/logos/canais/espn4.png" group-title="CANAIS | ESPORTES",ESPN 4 FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911639.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 4 FHD [H265]" tvg-logo="https://acstatic.co/logos/canais/espn4.png" group-title="CANAIS | ESPORTES",ESPN 4 FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911640.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 4 HD" tvg-logo="https://acstatic.co/logos/canais/espn4.png" group-title="CANAIS | ESPORTES",ESPN 4 HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911641.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 4 SD" tvg-logo="https://acstatic.co/logos/canais/espn4.png" group-title="CANAIS | ESPORTES",ESPN 4 SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911642.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 5 4K FHDR" tvg-logo="https://acstatic.co/logos/canais/espn5.png" group-title="CANAIS | 4K",ESPN 5 4K FHDR
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911643.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 5 FHD" tvg-logo="https://acstatic.co/logos/canais/espn5.png" group-title="CANAIS | ESPORTES",ESPN 5 FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911644.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 5 FHD [H265]" tvg-logo="https://acstatic.co/logos/canais/espn5.png" group-title="CANAIS | ESPORTES",ESPN 5 FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911645.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 5 HD" tvg-logo="https://acstatic.co/logos/canais/espn5.png" group-title="CANAIS | ESPORTES",ESPN 5 HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911646.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 5 SD" tvg-logo="https://acstatic.co/logos/canais/espn5.png" group-title="CANAIS | ESPORTES",ESPN 5 SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911647.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 6  SD" tvg-logo="" group-title="CANAIS | ESPORTES",ESPN 6  SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911648.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 6 4K FHDR" tvg-logo="https://acstatic.co/logos/canais/espn6.png" group-title="CANAIS | 4K",ESPN 6 4K FHDR
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911649.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 6 FHD" tvg-logo="https://acstatic.co/logos/canais/espn6.png" group-title="CANAIS | ESPORTES",ESPN 6 FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911650.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 6 FHD [H265]" tvg-logo="https://acstatic.co/logos/canais/espn6.png" group-title="CANAIS | ESPORTES",ESPN 6 FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911651.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 6 HD" tvg-logo="https://acstatic.co/logos/canais/espn6.png" group-title="CANAIS | ESPORTES",ESPN 6 HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911652.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESTRELA DA PISCINA" tvg-logo="" group-title="CANAIS | REALITY",ESTRELA DA PISCINA
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911653.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESTRELA DAY  ACOPANHE CASA" tvg-logo="" group-title="CANAIS | REALITY",ESTRELA DAY  ACOPANHE CASA
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911654.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESTRELA DAY  ACOPANHE CASA 2" tvg-logo="" group-title="CANAIS | REALITY",ESTRELA DAY  ACOPANHE CASA 2
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911655.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESTRELA DAY BANHEIRO ELSEVE" tvg-logo="" group-title="CANAIS | REALITY",ESTRELA DAY BANHEIRO ELSEVE
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911656.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESTRELA DAY COPRO E DANCA" tvg-logo="" group-title="CANAIS | REALITY",ESTRELA DAY COPRO E DANCA
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911657.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESTRELA DAY COZINHA HELLMANS" tvg-logo="" group-title="CANAIS | REALITY",ESTRELA DAY COZINHA HELLMANS
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911658.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESTRELA DAY DINAMICA" tvg-logo="" group-title="CANAIS | REALITY",ESTRELA DAY DINAMICA
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911659.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESTRELA DAY LOUNGE" tvg-logo="" group-title="CANAIS | REALITY",ESTRELA DAY LOUNGE
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911660.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESTRELA DAY MOSAICO" tvg-logo="" group-title="CANAIS | REALITY",ESTRELA DAY MOSAICO
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911661.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESTRELA DAY QUARTO AZUL" tvg-logo="" group-title="CANAIS | REALITY",ESTRELA DAY QUARTO AZUL
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911662.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESTRELA DAY QUARTO LARANJA" tvg-logo="" group-title="CANAIS | REALITY",ESTRELA DAY QUARTO LARANJA
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911663.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESTRELA DAY VARANDA" tvg-logo="" group-title="CANAIS | REALITY",ESTRELA DAY VARANDA
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911664.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="EUROCHANNEL FHD" tvg-logo="https://acstatic.co/logos/canais/eurochannel.png" group-title="CANAIS | VARIEDADES",EUROCHANNEL FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911665.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="EUROCHANNEL HD" tvg-logo="https://acstatic.co/logos/canais/eurochannel.png" group-title="CANAIS | VARIEDADES",EUROCHANNEL HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911666.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Fashion TV SD" tvg-logo="" group-title="CANAIS | VARIEDADES",Fashion TV SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911667.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="FASHIONTV BRASIL FHD" tvg-logo="https://acstatic.co/logos/canais/fashiontvbrasil.png" group-title="CANAIS | VARIEDADES",FASHIONTV BRASIL FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911668.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="FASHIONTV BRASIL HD" tvg-logo="https://acstatic.co/logos/canais/fashiontvbrasil.png" group-title="CANAIS | VARIEDADES",FASHIONTV BRASIL HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911669.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="FESTA DE BARRETOS" tvg-logo="" group-title="CANAIS | VARIEDADES",FESTA DE BARRETOS
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911670.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="FILM & ARTS FHD" tvg-logo="" group-title="CANAIS | VARIEDADES",FILM & ARTS FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911671.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="FILM & ARTS HD" tvg-logo="" group-title="CANAIS | VARIEDADES",FILM & ARTS HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911672.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="FILM & ARTS SD" tvg-logo="" group-title="CANAIS | VARIEDADES",FILM & ARTS SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911673.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="FISH TV FHD" tvg-logo="https://acstatic.co/logos/canais/fishtv.png" group-title="CANAIS | VARIEDADES",FISH TV FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911674.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Fish TV FHD [H265]" tvg-logo="https://acstatic.co/logos/canais/fishtv.png" group-title="CANAIS | VARIEDADES",Fish TV FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911675.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="FISH TV HD" tvg-logo="https://acstatic.co/logos/canais/fishtv.png" group-title="CANAIS | VARIEDADES",FISH TV HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911676.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Fish TV SD" tvg-logo="https://acstatic.co/logos/canais/fishtv.png" group-title="CANAIS | VARIEDADES",Fish TV SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911677.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="FOOD NETWORK FHD" tvg-logo="https://acstatic.co/logos/canais/foodnetwork.png" group-title="CANAIS | VARIEDADES",FOOD NETWORK FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911678.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Food Network FHD [H265]" tvg-logo="https://acstatic.co/logos/canais/foodnetwork.png" group-title="CANAIS | VARIEDADES",Food Network FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911679.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="FOOD NETWORK HD" tvg-logo="https://acstatic.co/logos/canais/foodnetwork.png" group-title="CANAIS | VARIEDADES",FOOD NETWORK HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911680.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Food Network SD" tvg-logo="https://acstatic.co/logos/canais/foodnetwork.png" group-title="CANAIS | VARIEDADES",Food Network SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911681.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="FOR MAN HD" tvg-logo="https://acstatic.co/logos/canais/forman.png" group-title="CANAIS | VARIEDADES",FOR MAN HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911682.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="FUTURA FHD" tvg-logo="" group-title="CANAIS | ABERTOS",FUTURA FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911683.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="FUTURA HD" tvg-logo="" group-title="CANAIS | ABERTOS",FUTURA HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911684.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="FUTURA SD" tvg-logo="" group-title="CANAIS | ABERTOS",FUTURA SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911685.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="FX FHD" tvg-logo="https://acstatic.co/logos/canais/fx.png" group-title="CANAIS | FILMES & SÉRIES",FX FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911686.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="FX FHD [H265]" tvg-logo="https://acstatic.co/logos/canais/fx.png" group-title="CANAIS | FILMES & SÉRIES",FX FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911687.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="FX HD" tvg-logo="https://acstatic.co/logos/canais/fx.png" group-title="CANAIS | FILMES & SÉRIES",FX HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911688.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="FX SD" tvg-logo="https://acstatic.co/logos/canais/fx.png" group-title="CANAIS | FILMES & SÉRIES",FX SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911689.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO AMAPA FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO AMAPA FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911690.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO AMAPA HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO AMAPA HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911691.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO AMAPA SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO AMAPA SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911692.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO BAGE FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO BAGE FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911693.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO BAGE HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO BAGE HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911694.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO BAGE SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO BAGE SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911695.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO Bahia Salvador  FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO Bahia Salvador  FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911696.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO Bahia Salvador HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO Bahia Salvador HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911697.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO Bahia Salvador SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO Bahia Salvador SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911698.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO BRASILIA FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO BRASILIA FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911699.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO BRASILIA FHD [H265]" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO BRASILIA FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911700.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO BRASILIA HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO BRASILIA HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911701.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO Brasilia SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO Brasilia SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911702.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO CENTRO AMÉRICA FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO CENTRO AMÉRICA FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911703.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO CENTRO AMÉRICA HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO CENTRO AMÉRICA HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911704.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO CENTRO AMÉRICA SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO CENTRO AMÉRICA SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911705.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO CRUZEIRO DO SUL" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO CRUZEIRO DO SUL
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911706.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO EPTV  Sao Carlos FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO EPTV  Sao Carlos FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911707.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO EPTV  Sao Carlos HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO EPTV  Sao Carlos HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911708.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO EPTV  Sao Carlos SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO EPTV  Sao Carlos SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911709.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO EPTV CAMPINAS FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO EPTV CAMPINAS FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911710.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO EPTV CAMPINAS HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO EPTV CAMPINAS HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911711.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO EPTV Campinas SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO EPTV Campinas SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911712.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO EPTV Ribeirao Preto SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO EPTV Ribeirao Preto SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911713.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO EPTV RIBEIRÃO PRETO FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO EPTV RIBEIRÃO PRETO FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911714.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO EPTV RIBEIRÃO PRETO HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO EPTV RIBEIRÃO PRETO HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911715.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO EPTV SUL DE MINAS FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO EPTV SUL DE MINAS FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911716.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO EPTV SUL DE MINAS HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO EPTV SUL DE MINAS HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911717.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO EPTV SUL DE MINAS SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO EPTV SUL DE MINAS SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911718.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO INTER TV ALTO LITORAL FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO INTER TV ALTO LITORAL FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911719.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO INTER TV ALTO LITORAL HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO INTER TV ALTO LITORAL HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911720.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO INTER TV ALTO LITORAL SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO INTER TV ALTO LITORAL SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911721.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO INTER TV CABUGI FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO INTER TV CABUGI FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911722.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO INTER TV CABUGI HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO INTER TV CABUGI HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911723.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO INTER TV CABUGI SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO INTER TV CABUGI SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911724.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO INTER TV DOS VALES FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO INTER TV DOS VALES FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911725.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO INTER TV DOS VALES HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO INTER TV DOS VALES HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911726.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO INTER TV DOS VALES SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO INTER TV DOS VALES SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911727.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO INTER TV GRANDE MINAS MG FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO INTER TV GRANDE MINAS MG FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911728.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO INTER TV GRANDE MINAS MG HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO INTER TV GRANDE MINAS MG HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911729.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO INTER TV GRANDE MINAS MG SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO INTER TV GRANDE MINAS MG SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911730.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO MG FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO MG FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911731.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO MG FHD [H265]" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO MG FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911732.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO MG HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO MG HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911733.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Globo MG SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",Globo MG SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911734.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Globo News 4K FHDR" tvg-logo="" group-title="CANAIS | 4K",Globo News 4K FHDR
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911735.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO NEWS FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO NEWS FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911736.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Globo News FHD [H265]" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",Globo News FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911737.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO NEWS HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO NEWS HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911738.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Globo News SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",Globo News SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911739.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO NSC BLUMENAU FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO NSC BLUMENAU FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911740.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO NSC BLUMENAU FHD [H265]" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO NSC BLUMENAU FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911741.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO NSC BLUMENAU HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO NSC BLUMENAU HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911742.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO NSC BLUMENAU SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO NSC BLUMENAU SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911743.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO NSC CENTRO OESTE FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO NSC CENTRO OESTE FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911744.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO NSC CENTRO OESTE HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO NSC CENTRO OESTE HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911745.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO NSC CHAPECO FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO NSC CHAPECO FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911746.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO NSC CHAPECO HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO NSC CHAPECO HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911747.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO NSC CHAPECO SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO NSC CHAPECO SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911748.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO NSC CRICIUMA FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO NSC CRICIUMA FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911749.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO NSC CRICIUMA HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO NSC CRICIUMA HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911750.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO NSC CRICIUMA SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO NSC CRICIUMA SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911751.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO NSC JOINVILLE FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO NSC JOINVILLE FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911752.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO NSC JOINVILLE HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO NSC JOINVILLE HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911753.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO NSC JOINVILLE SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO NSC JOINVILLE SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911754.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO NSC TV CENTRO OESTE SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO NSC TV CENTRO OESTE SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911755.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO NSC TV FLORIANÓPOLIS FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO NSC TV FLORIANÓPOLIS FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911756.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO NSC TV FLORIANÓPOLIS HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO NSC TV FLORIANÓPOLIS HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911757.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO NSC TV FLORIANÓPOLIS SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO NSC TV FLORIANÓPOLIS SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911758.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO PERNAMBUCO HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO PERNAMBUCO HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911759.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RBS CRUZ ALTA FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RBS CRUZ ALTA FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911760.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RBS CRUZ ALTA HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RBS CRUZ ALTA HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911761.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RBS PORTO ALEGRE FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RBS PORTO ALEGRE FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911762.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RBS PORTO ALEGRE HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RBS PORTO ALEGRE HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911763.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RBS RS FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RBS RS FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911764.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RBS RS HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RBS RS HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911765.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RBS RS SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RBS RS SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911766.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RBS TV CAXIAS DO SUL FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RBS TV CAXIAS DO SUL FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911767.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RBS TV CAXIAS DO SUL HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RBS TV CAXIAS DO SUL HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911768.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RBS TV CAXIAS DO SUL SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RBS TV CAXIAS DO SUL SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911769.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RBS TV PASSO FUNDO FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RBS TV PASSO FUNDO FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911770.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RBS TV PASSO FUNDO HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RBS TV PASSO FUNDO HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911771.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RBS TV PASSO FUNDO SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RBS TV PASSO FUNDO SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911772.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RBS TV PELOTAS FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RBS TV PELOTAS FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911773.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RBS TV PELOTAS HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RBS TV PELOTAS HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911774.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RBS TV PELOTAS SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RBS TV PELOTAS SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911775.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RBS TV Porto Alegre SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RBS TV Porto Alegre SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911776.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RBS TV URUGUAIANA HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RBS TV URUGUAIANA HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911777.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RBS TV URUGUAIANA SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RBS TV URUGUAIANA SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911778.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO REDE AMAZONICA MANAUS FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO REDE AMAZONICA MANAUS FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911779.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO REDE AMAZONICA MANAUS HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO REDE AMAZONICA MANAUS HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911780.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO REDE AMAZONICA PORTO VELHO FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO REDE AMAZONICA PORTO VELHO FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911781.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO REDE AMAZONICA PORTO VELHO HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO REDE AMAZONICA PORTO VELHO HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911782.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO REDE AMAZONICA PORTO VELHO SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO REDE AMAZONICA PORTO VELHO SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911783.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO REDE AMAZONICA RONDONIA FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO REDE AMAZONICA RONDONIA FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911784.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO REDE AMAZONICA RONDONIA HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO REDE AMAZONICA RONDONIA HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911785.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO REDE AMAZONICA RONDONIA SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO REDE AMAZONICA RONDONIA SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911786.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO REDE BOA VISTA FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO REDE BOA VISTA FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911787.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO REDE BOA VISTA HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO REDE BOA VISTA HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911788.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO REDE BOA VISTA SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO REDE BOA VISTA SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911789.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO REDE MACAPA FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO REDE MACAPA FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911790.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO REDE MACAPA HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO REDE MACAPA HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911791.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RJ FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RJ FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911792.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RJ FHD [H265]" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RJ FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911793.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RJ HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RJ HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911794.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RJ SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RJ SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911795.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RORAIMA FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RORAIMA FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911796.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RORAIMA HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RORAIMA HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911797.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RORAIMA SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RORAIMA SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911798.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RPC CASCAVEL FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RPC CASCAVEL FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911799.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RPC CASCAVEL HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RPC CASCAVEL HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911800.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RPC CASCAVEL SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RPC CASCAVEL SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911801.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RPC CURITIBA FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RPC CURITIBA FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911802.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RPC CURITIBA HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RPC CURITIBA HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911803.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RPC CURITIBA SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RPC CURITIBA SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911804.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RPC FOZ DO IGUAÇU FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RPC FOZ DO IGUAÇU FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911805.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RPC FOZ DO IGUAÇU HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RPC FOZ DO IGUAÇU HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911806.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RPC FOZ DO IGUAÇU SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RPC FOZ DO IGUAÇU SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911807.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Globo RPC Guarapuava FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",Globo RPC Guarapuava FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911808.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Globo RPC Guarapuava HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",Globo RPC Guarapuava HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911809.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Globo RPC Guarapuava SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",Globo RPC Guarapuava SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911810.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RPC MARINGA FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RPC MARINGA FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911811.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RPC MARINGA FHD [H265]" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RPC MARINGA FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911812.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RPC MARINGA HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RPC MARINGA HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911813.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RPC MARINGA SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RPC MARINGA SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911814.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RPC PARANAVAI FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RPC PARANAVAI FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911815.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RPC PARANAVAI HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RPC PARANAVAI HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911816.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RPC TV PONTA GROSSA FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RPC TV PONTA GROSSA FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911817.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RPC TV PONTA GROSSA HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RPC TV PONTA GROSSA HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911818.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RPC TV PONTA GROSSA SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO RPC TV PONTA GROSSA SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911819.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO SANTA MARIA FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO SANTA MARIA FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911820.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO SANTA MARIA HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO SANTA MARIA HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911821.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO SANTA MARIA SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO SANTA MARIA SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911822.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO SP 4K FHDR" tvg-logo="https://acstatic.co/logos/canais/globo.png" group-title="CANAIS | 4K",GLOBO SP 4K FHDR
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911823.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO SP FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO SP FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911824.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO SP HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO SP HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911825.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO SP SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO SP SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911826.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV  PARAIBA SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV  PARAIBA SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911827.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV ANHANGUERA GO FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV ANHANGUERA GO FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911828.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV ANHANGUERA GO HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV ANHANGUERA GO HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911829.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV Anhanguera GO SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV Anhanguera GO SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911830.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV ASA BRANCA FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV ASA BRANCA FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911831.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV ASA BRANCA HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV ASA BRANCA HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911832.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV CABO BRANCO FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV CABO BRANCO FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911833.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV CABO BRANCO FHD [H265]" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV CABO BRANCO FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911834.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV CABO BRANCO HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV CABO BRANCO HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911835.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV CABO BRANCO SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV CABO BRANCO SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911836.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV Clube Teresina FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV Clube Teresina FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911837.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV Clube Teresina HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV Clube Teresina HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911838.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV Clube Teresina SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV Clube Teresina SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911839.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV DIARIO MOGI DAS CRUZES FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV DIARIO MOGI DAS CRUZES FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911840.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV DIARIO MOGI DAS CRUZES HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV DIARIO MOGI DAS CRUZES HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911841.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV DIARIO MOGI DAS CRUZES SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV DIARIO MOGI DAS CRUZES SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911842.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV DIÁRIO FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV DIÁRIO FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911843.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV DIÁRIO HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV DIÁRIO HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911844.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV FRONTEIRA FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV FRONTEIRA FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911845.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV FRONTEIRA HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV FRONTEIRA HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911846.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV FRONTEIRA SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV FRONTEIRA SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911847.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV GAZETA DE ALAGOAS FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV GAZETA DE ALAGOAS FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911848.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV GAZETA DE ALAGOAS HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV GAZETA DE ALAGOAS HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911849.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV GAZETA DE ALAGOAS SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV GAZETA DE ALAGOAS SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911850.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV GAZETA ES VITORIA FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV GAZETA ES VITORIA FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911851.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV GAZETA ES VITORIA HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV GAZETA ES VITORIA HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911852.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV GAZETA ES VITORIA SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV GAZETA ES VITORIA SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911853.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV GAZETA SUL FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV GAZETA SUL FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911854.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV GAZETA SUL HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV GAZETA SUL HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911855.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV GAZETA SUL SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV GAZETA SUL SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911856.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV INTEGRACAO UBERABA FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV INTEGRACAO UBERABA FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911857.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV INTEGRACAO UBERABA HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV INTEGRACAO UBERABA HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911858.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV INTEGRACAO UBERABA SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV INTEGRACAO UBERABA SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911859.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Globo TV Integracao Uberlandia FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",Globo TV Integracao Uberlandia FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911860.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Globo TV Integracao Uberlandia HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",Globo TV Integracao Uberlandia HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911861.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Globo TV Integracao Uberlandia SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",Globo TV Integracao Uberlandia SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911862.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV INTEGRAÇAO ARAXA SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV INTEGRAÇAO ARAXA SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911863.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV INTEGRAÇAO JUIZ DE FORA  MG FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV INTEGRAÇAO JUIZ DE FORA  MG FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911864.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV INTEGRAÇAO JUIZ DE FORA  MG HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV INTEGRAÇAO JUIZ DE FORA  MG HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911865.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV INTEGRAÇAO JUIZ DE FORA MG SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV INTEGRAÇAO JUIZ DE FORA MG SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911866.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV INTEGRAÇÃO ARAXA FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV INTEGRAÇÃO ARAXA FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911867.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV INTEGRAÇÃO ARAXA HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV INTEGRAÇÃO ARAXA HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911868.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV LIBERAL BELEM FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV LIBERAL BELEM FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911869.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV LIBERAL BELEM HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV LIBERAL BELEM HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911870.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV LIBERAL BELEM SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV LIBERAL BELEM SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911871.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV MIRANTE COCAIS  SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV MIRANTE COCAIS  SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911872.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV MIRANTE COCAIS FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV MIRANTE COCAIS FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911873.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV MIRANTE COCAIS HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV MIRANTE COCAIS HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911874.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV MIRANTE SÃO LUIS FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV MIRANTE SÃO LUIS FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911875.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV MIRANTE SÃO LUIS HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV MIRANTE SÃO LUIS HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911876.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV MIRANTE SÃO LUIS SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV MIRANTE SÃO LUIS SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911877.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV MORENA FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV MORENA FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911878.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV MORENA MS HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV MORENA MS HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911879.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV MORENA MS SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV MORENA MS SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911880.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV NORDESTE  FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV NORDESTE  FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911881.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV NORDESTE HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV NORDESTE HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911882.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV NORDESTE SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV NORDESTE SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911883.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV PARAIBA FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV PARAIBA FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911884.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV PARAIBA HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV PARAIBA HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911885.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV PRESIDENTE PRUDENTE FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV PRESIDENTE PRUDENTE FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911886.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV PRESIDENTE PRUDENTE HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV PRESIDENTE PRUDENTE HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911887.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV PRESIDENTE PRUDENTE SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV PRESIDENTE PRUDENTE SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911888.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV RIO SUL FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV RIO SUL FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911889.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV RIO SUL HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV RIO SUL HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911890.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV RIO SUL SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV RIO SUL SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911891.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV SERGIPE FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV SERGIPE FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911892.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV SERGIPE HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV SERGIPE HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911893.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV SERGIPE SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV SERGIPE SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911894.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV SERRA+MAR FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV SERRA+MAR FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911895.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV SERRA+MAR HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV SERRA+MAR HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911896.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV SERRA+MAR SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV SERRA+MAR SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911897.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV SUBAE FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV SUBAE FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911898.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV SUBAE HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV SUBAE HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911899.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV SUBAE SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV SUBAE SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911900.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV SUDOESTE FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV SUDOESTE FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911901.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV SUDOESTE HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV SUDOESTE HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911902.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV SUDOESTE SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV SUDOESTE SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911903.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV TAPAJOS FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV TAPAJOS FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911904.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV TAPAJOS HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV TAPAJOS HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911905.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV TAPAJOS SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV TAPAJOS SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911906.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV TEM BAURU FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV TEM BAURU FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911907.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV TEM BAURU HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV TEM BAURU HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911908.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV Tem Bauru SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV Tem Bauru SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911909.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV TEM ITAPETININGA HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV TEM ITAPETININGA HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911910.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV TEM ITAPETININGA SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV TEM ITAPETININGA SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911911.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV TEM SOROCABA FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV TEM SOROCABA FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911912.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV TEM SOROCABA HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV TEM SOROCABA HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911913.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV Tem Sorocaba SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV Tem Sorocaba SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911914.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV TEM SÃO JOSÉ DO RIO PRETO FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV TEM SÃO JOSÉ DO RIO PRETO FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911915.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV TEM SÃO JOSÉ DO RIO PRETO HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV TEM SÃO JOSÉ DO RIO PRETO HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911916.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV TEM SÃO JOSÉ DO RIO PRETO SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV TEM SÃO JOSÉ DO RIO PRETO SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911917.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV TRIBUNA SANTOS FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV TRIBUNA SANTOS FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911918.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV TRIBUNA SANTOS HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV TRIBUNA SANTOS HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911919.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV Tribuna Santos SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV Tribuna Santos SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911920.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV VANGUARDA S. J. CAMPOS FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV VANGUARDA S. J. CAMPOS FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911921.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV VANGUARDA S. J. DOS CAMPOS HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV VANGUARDA S. J. DOS CAMPOS HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911922.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV VANGUARDA S. J. DOS CAMPOS SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV VANGUARDA S. J. DOS CAMPOS SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911923.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV VANGUARDA S. J. DOS CAMPOS SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV VANGUARDA S. J. DOS CAMPOS SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911924.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV VANGUARDA TAUBATÉ HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV VANGUARDA TAUBATÉ HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911925.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV VANGUARDA TAUBATÉ SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV VANGUARDA TAUBATÉ SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911926.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV VERDES MARES CARIRI FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV VERDES MARES CARIRI FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911927.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV VERDES MARES CARIRI HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV VERDES MARES CARIRI HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911928.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV VERDES MARES CARIRI SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV VERDES MARES CARIRI SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911929.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV Verdes Mares Ceará FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV Verdes Mares Ceará FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911930.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV Verdes Mares Ceará HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV Verdes Mares Ceará HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911931.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV Verdes Mares Ceará SD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO TV Verdes Mares Ceará SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911932.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Globo TV Verdes Mares Fortaleza HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",Globo TV Verdes Mares Fortaleza HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911933.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO VANGUARDA TAUBATÉ FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO VANGUARDA TAUBATÉ FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911934.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO VERDES MARES FHD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO VERDES MARES FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911935.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO VERDES MARES HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO VERDES MARES HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911936.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO_EPTV_ARARAQUARA HD" tvg-logo="https://itsbx.uk/logos/canais_4k_fhdr/globo.png
+" group-title="CANAIS | GLOBO",GLOBO_EPTV_ARARAQUARA HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911937.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOOB FHD" tvg-logo="" group-title="CANAIS | INFANTIL",GLOOB FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911938.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Gloob FHD [H265]" tvg-logo="https://itsbx.uk/logos/canais_documentarios/h2.png" group-title="CANAIS | INFANTIL",Gloob FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911939.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOOB HD" tvg-logo="" group-title="CANAIS | INFANTIL",GLOOB HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911940.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Gloob SD" tvg-logo="" group-title="CANAIS | INFANTIL",Gloob SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911941.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOOBINHO FHD" tvg-logo="" group-title="CANAIS | INFANTIL",GLOOBINHO FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911942.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Gloobinho FHD [H265]" tvg-logo="https://itsbx.uk/logos/canais_documentarios/h2.png" group-title="CANAIS | INFANTIL",Gloobinho FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911943.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOOBINHO HD" tvg-logo="" group-title="CANAIS | INFANTIL",GLOOBINHO HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911944.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Gloobinho SD" tvg-logo="" group-title="CANAIS | INFANTIL",Gloobinho SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911945.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GNT FHD" tvg-logo="http://itsbx.uk:80/images/fda8299100a7b8e568933afe74c9ef19.png" group-title="CANAIS | DOCUMENTÁRIOS",GNT FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911946.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GNT FHD 4K FHDR" tvg-logo="https://acstatic.co/logos/canais/gnt.png" group-title="CANAIS | 4K",GNT FHD 4K FHDR
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911947.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GNT HD" tvg-logo="http://itsbx.uk:80/images/fda8299100a7b8e568933afe74c9ef19.png" group-title="CANAIS | DOCUMENTÁRIOS",GNT HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911948.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GNT SD" tvg-logo="http://itsbx.uk:80/images/fda8299100a7b8e568933afe74c9ef19.png" group-title="CANAIS | DOCUMENTÁRIOS",GNT SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911949.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GOAT 1" tvg-logo="https://acstatic.co/logos/canais/goat.png" group-title="CANAIS | PPV",GOAT 1
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911950.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GOAT 2" tvg-logo="https://acstatic.co/logos/canais/goat.png" group-title="CANAIS | PPV",GOAT 2
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911951.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GOAT 3" tvg-logo="https://acstatic.co/logos/canais/goat.png" group-title="CANAIS | PPV",GOAT 3
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911952.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GOAT 4" tvg-logo="https://acstatic.co/logos/canais/goat.png" group-title="CANAIS | PPV",GOAT 4
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911953.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GOAT 5" tvg-logo="https://acstatic.co/logos/canais/goat.png" group-title="CANAIS | PPV",GOAT 5
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911954.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GOLF CHANNEL HD" tvg-logo="https://acstatic.co/logos/canais/golfchannel.png" group-title="CANAIS | PPV",GOLF CHANNEL HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911955.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GOSPEL MOVIES TELEVISION" tvg-logo="" group-title="CANAIS | ABERTOS",GOSPEL MOVIES TELEVISION
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911956.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Gusttavo Lima [Buteco em BH]" tvg-logo="http://itsbx.uk:80/images/e3ff7aa5ab0431bd2baafacd44fcdff9.jpg" group-title="CANAIS | 24H SHOWS",Gusttavo Lima [Buteco em BH]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911957.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Gusttavo Lima [Buteco Em Casa 1]" tvg-logo="http://itsbx.uk:80/images/e3ff7aa5ab0431bd2baafacd44fcdff9.jpg" group-title="CANAIS | 24H SHOWS",Gusttavo Lima [Buteco Em Casa 1]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911958.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Gusttavo Lima [Embaixador no Agronegócio]" tvg-logo="http://itsbx.uk:80/images/e3ff7aa5ab0431bd2baafacd44fcdff9.jpg" group-title="CANAIS | 24H SHOWS",Gusttavo Lima [Embaixador no Agronegócio]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911959.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Gusttavo Lima [Especial São João]" tvg-logo="http://itsbx.uk:80/images/e3ff7aa5ab0431bd2baafacd44fcdff9.jpg" group-title="CANAIS | 24H SHOWS",Gusttavo Lima [Especial São João]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911960.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Gusttavo Lima [Festa do Peão Barretos]" tvg-logo="http://itsbx.uk:80/images/e3ff7aa5ab0431bd2baafacd44fcdff9.jpg" group-title="CANAIS | 24H SHOWS",Gusttavo Lima [Festa do Peão Barretos]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911961.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Gusttavo Lima [YouTube Music]" tvg-logo="http://itsbx.uk:80/images/e3ff7aa5ab0431bd2baafacd44fcdff9.jpg" group-title="CANAIS | 24H SHOWS",Gusttavo Lima [YouTube Music]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911962.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Harry Potter 01" tvg-logo="http://itsbx.uk:80/images/d834b5ef0f8d968e22fdd3ca8df98835.png" group-title="CANAIS | CINEMA",Harry Potter 01
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911963.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Harry Potter 02" tvg-logo="http://itsbx.uk:80/images/d834b5ef0f8d968e22fdd3ca8df98835.png" group-title="CANAIS | CINEMA",Harry Potter 02
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911964.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HBO 2 FHD" tvg-logo="https://acstatic.co/logos/canais/hbo2.png" group-title="CANAIS | HBO",HBO 2 FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911965.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HBO 2 FHD [H265]" tvg-logo="https://acstatic.co/logos/canais/hbo2.png" group-title="CANAIS | HBO",HBO 2 FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911966.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HBO 2 HD" tvg-logo="https://acstatic.co/logos/canais/hbo2.png" group-title="CANAIS | HBO",HBO 2 HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911967.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HBO 2 SD" tvg-logo="https://acstatic.co/logos/canais/hbo2.png" group-title="CANAIS | HBO",HBO 2 SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911968.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HBO 4K FHDR" tvg-logo="https://acstatic.co/logos/canais/hbo.png" group-title="CANAIS | 4K",HBO 4K FHDR
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911969.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HBO FAMILY FHD" tvg-logo="https://acstatic.co/logos/canais/hbofamily.png" group-title="CANAIS | HBO",HBO FAMILY FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911970.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HBO FAMILY FHD [H265]" tvg-logo="https://acstatic.co/logos/canais/hbofamily.png" group-title="CANAIS | HBO",HBO FAMILY FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911971.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HBO FAMILY HD" tvg-logo="https://acstatic.co/logos/canais/hbofamily.png" group-title="CANAIS | HBO",HBO FAMILY HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911972.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HBO Family SD" tvg-logo="https://acstatic.co/logos/canais/hbofamily.png" group-title="CANAIS | HBO",HBO Family SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911973.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HBO FHD" tvg-logo="" group-title="CANAIS | HBO",HBO FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911974.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HBO FHD [H265]" tvg-logo="https://itsbx.uk/logos/canais_documentarios/h2.png" group-title="CANAIS | HBO",HBO FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911975.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HBO MUNDI FHD" tvg-logo="https://acstatic.co/logos/canais/hbomundi.png" group-title="CANAIS | HBO",HBO MUNDI FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911976.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HBO Mundi FHD [H265]" tvg-logo="https://acstatic.co/logos/canais/hbomundi.png" group-title="CANAIS | HBO",HBO Mundi FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911977.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HBO MUNDI HD" tvg-logo="https://acstatic.co/logos/canais/hbomundi.png" group-title="CANAIS | HBO",HBO MUNDI HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911978.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HBO Mundi SD" tvg-logo="https://acstatic.co/logos/canais/hbomundi.png" group-title="CANAIS | HBO",HBO Mundi SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911979.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HBO PLUS  FHD" tvg-logo="" group-title="CANAIS | HBO",HBO PLUS  FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911980.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HBO POP FHD" tvg-logo="https://acstatic.co/logos/canais/hbopop.png" group-title="CANAIS | HBO",HBO POP FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911981.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HBO POP FHD [H265]" tvg-logo="https://acstatic.co/logos/canais/hbopop.png" group-title="CANAIS | HBO",HBO POP FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911982.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HBO POP HD" tvg-logo="https://acstatic.co/logos/canais/hbopop.png" group-title="CANAIS | HBO",HBO POP HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911983.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HBO Pop SD" tvg-logo="https://acstatic.co/logos/canais/hbopop.png" group-title="CANAIS | HBO",HBO Pop SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911984.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HBO SD" tvg-logo="" group-title="CANAIS | HBO",HBO SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911985.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HBO SIGNATURE FHD" tvg-logo="https://acstatic.co/logos/canais/hbosignature.png" group-title="CANAIS | HBO",HBO SIGNATURE FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911986.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HBO Signature FHD [H265]" tvg-logo="https://acstatic.co/logos/canais/hbosignature.png" group-title="CANAIS | HBO",HBO Signature FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911987.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HBO SIGNATURE HD" tvg-logo="https://acstatic.co/logos/canais/hbosignature.png" group-title="CANAIS | HBO",HBO SIGNATURE HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911988.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HBO Signature SD" tvg-logo="https://acstatic.co/logos/canais/hbosignature.png" group-title="CANAIS | HBO",HBO Signature SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911989.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HBO XTREME FHD" tvg-logo="https://acstatic.co/logos/canais/hboxtreme.png" group-title="CANAIS | HBO",HBO XTREME FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911990.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HBO Xtreme FHD [H265]" tvg-logo="https://acstatic.co/logos/canais/hboxtreme.png" group-title="CANAIS | HBO",HBO Xtreme FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911991.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HBO XTREME HD" tvg-logo="https://acstatic.co/logos/canais/hboxtreme.png" group-title="CANAIS | HBO",HBO XTREME HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911992.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HBO Xtreme SD" tvg-logo="https://acstatic.co/logos/canais/hboxtreme.png" group-title="CANAIS | HBO",HBO Xtreme SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911993.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HBO+ FHD [H265]" tvg-logo="https://acstatic.co/logos/canais/hboplus.png" group-title="CANAIS | HBO",HBO+ FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911994.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HBO+ SD" tvg-logo="https://acstatic.co/logos/canais/hboplus.png" group-title="CANAIS | HBO",HBO+ SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911995.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HBO1  HD" tvg-logo="" group-title="CANAIS | HBO",HBO1  HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911996.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Henrique e Juliano [Live Liberdade Provisória]" tvg-logo="http://itsbx.uk:80/images/40be7efd8a8edcad550acd4f64af483a.png" group-title="CANAIS | 24H SHOWS",Henrique e Juliano [Live Liberdade Provisória]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911997.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HGTV FHD" tvg-logo="http://itsbx.uk:80/images/16e62decff0ca50753ba8e17724d3ed9.png" group-title="CANAIS | DOCUMENTÁRIOS",HGTV FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911998.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HGTV FHD [H265]" tvg-logo="http://itsbx.uk:80/images/16e62decff0ca50753ba8e17724d3ed9.png" group-title="CANAIS | DOCUMENTÁRIOS",HGTV FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4911999.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HGTV HD" tvg-logo="http://itsbx.uk:80/images/16e62decff0ca50753ba8e17724d3ed9.png" group-title="CANAIS | DOCUMENTÁRIOS",HGTV HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912000.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HGTV SD" tvg-logo="http://itsbx.uk:80/images/16e62decff0ca50753ba8e17724d3ed9.png" group-title="CANAIS | DOCUMENTÁRIOS",HGTV SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912001.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HISTORY 2 FHD" tvg-logo="http://itsbx.uk:80/images/a3c3d8d0f08c9a275cae98a7f141d89c.png" group-title="CANAIS | DOCUMENTÁRIOS",HISTORY 2 FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912002.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HISTORY 2 HD" tvg-logo="http://itsbx.uk:80/images/a3c3d8d0f08c9a275cae98a7f141d89c.png" group-title="CANAIS | DOCUMENTÁRIOS",HISTORY 2 HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912003.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="History 2 SD" tvg-logo="http://itsbx.uk:80/images/a3c3d8d0f08c9a275cae98a7f141d89c.png" group-title="CANAIS | DOCUMENTÁRIOS",History 2 SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912004.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HISTORY CHANNEL FHD" tvg-logo="https://itsbx.uk/logos/canais_documentarios/history.png" group-title="CANAIS | DOCUMENTÁRIOS",HISTORY CHANNEL FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912005.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="HISTORY CHANNEL HD" tvg-logo="https://itsbx.uk/logos/canais_documentarios/history.png" group-title="CANAIS | DOCUMENTÁRIOS",HISTORY CHANNEL HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912006.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="History FHD [H265]" tvg-logo="https://itsbx.uk/logos/canais_documentarios/history.png" group-title="CANAIS | DOCUMENTÁRIOS",History FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912007.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="History SD" tvg-logo="https://itsbx.uk/logos/canais_documentarios/history.png" group-title="CANAIS | DOCUMENTÁRIOS",History SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912008.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ID INVESTIGAÇÃO DISCOVERY FHD" tvg-logo="https://itsbx.uk/logos/canais_documentarios/id.png" group-title="CANAIS | DOCUMENTÁRIOS",ID INVESTIGAÇÃO DISCOVERY FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912009.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ID INVESTIGAÇÃO DISCOVERY FHD [H265]" tvg-logo="https://itsbx.uk/logos/canais_documentarios/id.png" group-title="CANAIS | DOCUMENTÁRIOS",ID INVESTIGAÇÃO DISCOVERY FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912010.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ID INVESTIGAÇÃO DISCOVERY HD" tvg-logo="https://itsbx.uk/logos/canais_documentarios/id.png" group-title="CANAIS | DOCUMENTÁRIOS",ID INVESTIGAÇÃO DISCOVERY HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912011.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ID INVESTIGAÇÃO DISCOVERY SD" tvg-logo="https://itsbx.uk/logos/canais_documentarios/id.png" group-title="CANAIS | DOCUMENTÁRIOS",ID INVESTIGAÇÃO DISCOVERY SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912012.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="IDEAL TV HD" tvg-logo="https://itsbx.uk/logos/canais_documentarios/id.png" group-title="CANAIS | ABERTOS",IDEAL TV HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912013.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Jogos Mortais 01" tvg-logo="http://itsbx.uk:80/images/5ce675b50043e1193188c236ba43d0a0.png" group-title="CANAIS | CINEMA",Jogos Mortais 01
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912014.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Jogos Mortais 02" tvg-logo="http://itsbx.uk:80/images/5ce675b50043e1193188c236ba43d0a0.png" group-title="CANAIS | CINEMA",Jogos Mortais 02
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912015.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Jogos Vorazes - Quadrilogia" tvg-logo="http://itsbx.uk:80/images/bbd1003c113b4c8ca25959ca753bce88.png" group-title="CANAIS | CINEMA",Jogos Vorazes - Quadrilogia
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912016.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="John Wick - Trilogia" tvg-logo="http://itsbx.uk:80/images/d1b585405aa3756067185b03b9025718.png" group-title="CANAIS | CINEMA",John Wick - Trilogia
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912017.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Jorge e Mateus [Na Praia Hotel]" tvg-logo="http://itsbx.uk:80/images/e3ff7aa5ab0431bd2baafacd44fcdff9.jpg" group-title="CANAIS | 24H SHOWS",Jorge e Mateus [Na Praia Hotel]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912018.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Jorge e Mateus [Pelo Amor de Deus]" tvg-logo="http://itsbx.uk:80/images/e3ff7aa5ab0431bd2baafacd44fcdff9.jpg" group-title="CANAIS | 24H SHOWS",Jorge e Mateus [Pelo Amor de Deus]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912019.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Jorge e Mateus [Sunset]" tvg-logo="http://itsbx.uk:80/images/e3ff7aa5ab0431bd2baafacd44fcdff9.jpg" group-title="CANAIS | 24H SHOWS",Jorge e Mateus [Sunset]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912020.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Jovem Pan News 4K FHDR" tvg-logo="" group-title="CANAIS | 4K",Jovem Pan News 4K FHDR
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912021.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Jovem Pan News SD" tvg-logo="" group-title="CANAIS | NOTÍCIAS",Jovem Pan News SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912022.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Leonardo e Bruno e Marrone]" tvg-logo="http://itsbx.uk:80/images/e3ff7aa5ab0431bd2baafacd44fcdff9.jpg" group-title="CANAIS | 24H SHOWS",Leonardo e Bruno e Marrone]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912023.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Leonardo e Eduardo Costa [Cabaré]" tvg-logo="http://itsbx.uk:80/images/e3ff7aa5ab0431bd2baafacd44fcdff9.jpg" group-title="CANAIS | 24H SHOWS",Leonardo e Eduardo Costa [Cabaré]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912024.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Leonardo e Luiza e Maurílio [Aqui em Uberlândia]" tvg-logo="http://itsbx.uk:80/images/e3ff7aa5ab0431bd2baafacd44fcdff9.jpg" group-title="CANAIS | 24H SHOWS",Leonardo e Luiza e Maurílio [Aqui em Uberlândia]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912025.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Leonardo e Zé Felipe [Pai e Filho]" tvg-logo="http://itsbx.uk:80/images/e3ff7aa5ab0431bd2baafacd44fcdff9.jpg" group-title="CANAIS | 24H SHOWS",Leonardo e Zé Felipe [Pai e Filho]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912026.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="LIFETIME FHD" tvg-logo="http://itsbx.uk:80/images/73c1fc7a7198a3fc8618adc9a25da361.png" group-title="CANAIS | DOCUMENTÁRIOS",LIFETIME FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912027.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Lifetime FHD [H265]" tvg-logo="http://itsbx.uk:80/images/73c1fc7a7198a3fc8618adc9a25da361.png" group-title="CANAIS | DOCUMENTÁRIOS",Lifetime FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912028.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="LIFETIME HD" tvg-logo="http://itsbx.uk:80/images/73c1fc7a7198a3fc8618adc9a25da361.png" group-title="CANAIS | DOCUMENTÁRIOS",LIFETIME HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912029.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Lifetime SD" tvg-logo="http://itsbx.uk:80/images/73c1fc7a7198a3fc8618adc9a25da361.png" group-title="CANAIS | DOCUMENTÁRIOS",Lifetime SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912030.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Live Junina]" tvg-logo="http://itsbx.uk:80/images/e3ff7aa5ab0431bd2baafacd44fcdff9.jpg" group-title="CANAIS | 24H SHOWS",Live Junina]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912031.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="LOVE NATURE FHD [H265]" tvg-logo="https://acstatic.co/logos/canais/lovenature.png" group-title="CANAIS | VARIEDADES",LOVE NATURE FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912032.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="LOVE NATURE HD" tvg-logo="https://acstatic.co/logos/canais/lovenature.png" group-title="CANAIS | VARIEDADES",LOVE NATURE HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912033.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Maiara e Maraisa [Aqui em Casa 1]" tvg-logo="http://itsbx.uk:80/images/e3ff7aa5ab0431bd2baafacd44fcdff9.jpg" group-title="CANAIS | 24H SHOWS",Maiara e Maraisa [Aqui em Casa 1]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912034.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Maiara e Maraisa [Aqui em Casa 2]" tvg-logo="http://itsbx.uk:80/images/e3ff7aa5ab0431bd2baafacd44fcdff9.jpg" group-title="CANAIS | 24H SHOWS",Maiara e Maraisa [Aqui em Casa 2]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912035.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Maiara e Maraisa [Aqui na Fazenda]" tvg-logo="http://itsbx.uk:80/images/e3ff7aa5ab0431bd2baafacd44fcdff9.jpg" group-title="CANAIS | 24H SHOWS",Maiara e Maraisa [Aqui na Fazenda]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912036.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Maiara e Maraisa [Drive-In Na Terra]" tvg-logo="http://itsbx.uk:80/images/e3ff7aa5ab0431bd2baafacd44fcdff9.jpg" group-title="CANAIS | 24H SHOWS",Maiara e Maraisa [Drive-In Na Terra]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912037.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Maiara e Maraisa [Fun Live]" tvg-logo="http://itsbx.uk:80/images/e3ff7aa5ab0431bd2baafacd44fcdff9.jpg" group-title="CANAIS | 24H SHOWS",Maiara e Maraisa [Fun Live]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912038.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Maiara e Maraisa [Workshow]" tvg-logo="http://itsbx.uk:80/images/e3ff7aa5ab0431bd2baafacd44fcdff9.jpg" group-title="CANAIS | 24H SHOWS",Maiara e Maraisa [Workshow]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912039.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Marilia Mendonça [Lado B]" tvg-logo="http://itsbx.uk:80/images/e3ff7aa5ab0431bd2baafacd44fcdff9.jpg" group-title="CANAIS | 24H SHOWS",Marilia Mendonça [Lado B]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912040.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Marilia Mendonça [Live Local]" tvg-logo="http://itsbx.uk:80/images/e3ff7aa5ab0431bd2baafacd44fcdff9.jpg" group-title="CANAIS | 24H SHOWS",Marilia Mendonça [Live Local]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912041.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Marilia Mendonça [Todos os Cantos]" tvg-logo="http://itsbx.uk:80/images/e3ff7aa5ab0431bd2baafacd44fcdff9.jpg" group-title="CANAIS | 24H SHOWS",Marilia Mendonça [Todos os Cantos]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912042.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Marilia Mendonça [Workshow]" tvg-logo="http://itsbx.uk:80/images/e3ff7aa5ab0431bd2baafacd44fcdff9.jpg" group-title="CANAIS | 24H SHOWS",Marilia Mendonça [Workshow]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912043.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Marvel 01" tvg-logo="http://itsbx.uk:80/images/5f232f963f481197bf4f333d8ee94059.jpg" group-title="CANAIS | CINEMA",Marvel 01
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912044.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Marvel 02" tvg-logo="http://itsbx.uk:80/images/5f232f963f481197bf4f333d8ee94059.jpg" group-title="CANAIS | CINEMA",Marvel 02
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912045.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Marvel 03" tvg-logo="http://itsbx.uk:80/images/5f232f963f481197bf4f333d8ee94059.jpg" group-title="CANAIS | CINEMA",Marvel 03
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912046.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Marvel 04" tvg-logo="http://itsbx.uk:80/images/5f232f963f481197bf4f333d8ee94059.jpg" group-title="CANAIS | CINEMA",Marvel 04
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912047.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="MAX 01" tvg-logo="https://acstatic.co/logos/canais/max.png" group-title="CANAIS | PPV",MAX 01
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912048.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="MAX 02" tvg-logo="https://acstatic.co/logos/canais/max.png" group-title="CANAIS | PPV",MAX 02
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912049.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="MAX 03" tvg-logo="https://acstatic.co/logos/canais/max.png" group-title="CANAIS | PPV",MAX 03
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912050.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="MAX 04" tvg-logo="https://acstatic.co/logos/canais/max.png" group-title="CANAIS | PPV",MAX 04
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912051.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="MAX 05" tvg-logo="https://acstatic.co/logos/canais/max.png" group-title="CANAIS | PPV",MAX 05
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912052.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="MAX 06" tvg-logo="https://acstatic.co/logos/canais/max.png" group-title="CANAIS | PPV",MAX 06
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912053.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Maze Runner - Trilogia" tvg-logo="http://itsbx.uk:80/images/1e147bf567aa98de8fe1f23af4bcc796.png" group-title="CANAIS | 24H SHOWS",Maze Runner - Trilogia
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912054.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="MEGAPIX FHD" tvg-logo="https://acstatic.co/logos/canais/megapix.png" group-title="CANAIS | FILMES & SÉRIES",MEGAPIX FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912055.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="MEGAPIX FHD [H265]" tvg-logo="https://acstatic.co/logos/canais/megapix.png" group-title="CANAIS | FILMES & SÉRIES",MEGAPIX FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912056.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="MEGAPIX HD" tvg-logo="https://acstatic.co/logos/canais/megapix.png" group-title="CANAIS | FILMES & SÉRIES",MEGAPIX HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912057.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="MegaPix SD" tvg-logo="https://acstatic.co/logos/canais/megapix.png" group-title="CANAIS | FILMES & SÉRIES",MegaPix SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912058.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="MODO VIAGEM FHD" tvg-logo="https://acstatic.co/logos/canais/modoviagem.png" group-title="CANAIS | FILMES & SÉRIES",MODO VIAGEM FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912059.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Modo Viagem FHD [H265]" tvg-logo="https://acstatic.co/logos/canais/modoviagem.png" group-title="CANAIS | FILMES & SÉRIES",Modo Viagem FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912060.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="MODO VIAGEM HD" tvg-logo="https://acstatic.co/logos/canais/modoviagem.png" group-title="CANAIS | FILMES & SÉRIES",MODO VIAGEM HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912061.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="MODO VIAGEM SD" tvg-logo="https://acstatic.co/logos/canais/modoviagem.png" group-title="CANAIS | FILMES & SÉRIES",MODO VIAGEM SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912062.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="MTV 00S FHD" tvg-logo="https://acstatic.co/logos/canais/mtv00s.png" group-title="CANAIS | VARIEDADES",MTV 00S FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912063.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="MTV 00S HD" tvg-logo="https://acstatic.co/logos/canais/mtv00s.png" group-title="CANAIS | VARIEDADES",MTV 00S HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912064.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="MTV 00s SD" tvg-logo="https://acstatic.co/logos/canais/mtv00s.png" group-title="CANAIS | VARIEDADES",MTV 00s SD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912065.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="MTV FHD" tvg-logo="https://acstatic.co/logos/canais/mtv.png" group-title="CANAIS | VARIEDADES",MTV FHD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912066.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="MTV FHD [H265]" tvg-logo="https://acstatic.co/logos/canais/mtv.png" group-title="CANAIS | VARIEDADES",MTV FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912067.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="MTV HD" tvg-logo="https://acstatic.co/logos/canais/mtv.png" group-title="CANAIS | VARIEDADES",MTV HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912068.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="MTV Live FHD [H265]" tvg-logo="https://acstatic.co/logos/canais/mtv.png" group-title="CANAIS | VARIEDADES",MTV Live FHD [H265]
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912069.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="MTV LIVE HD" tvg-logo="https://acstatic.co/logos/canais/mtv.png" group-title="CANAIS | VARIEDADES",MTV LIVE HD
+http://itsbx.uk:80/Offilinetv2337/Formigatv/4912070.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="MTV Live SD" tvg-logo="https://acstatic.co/logos/canais/mtv.png" group-title="CANAIS | VARIEDADES",MTV Live SD
 http://itsbx.uk:80/Offilinetv2337/Formigatv/4912071.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="MTV SD" tvg-logo="https://acstatic.co/logos/canais/mtv.png" group-title="CANAIS | VARIEDADES",MTV SD
 http://itsbx.uk:80/Offilinetv2337/Formigatv/4912072.m3u8
