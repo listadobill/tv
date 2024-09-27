@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TV DO BILL - ALGUNS CANAIS PODEM ESTAR FORA, AGUARDE ATUALIZAÇÃO - DESATIVE CONEXÃO SEGURA</title>
+    <title>TV DO BILL 2 - ALGUNS CANAIS PODEM ESTAR FORA, AGUARDE ATUALIZAÇÃO - DESATIVE CONEXÃO SEGURA</title>
     <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
     <style>
         body {
@@ -200,7 +200,8 @@
                 window.location.href = "https://listadobill.github.io/tv/inicial";
             };
 
-            function toggleFullscreen() {
+            // Função para abrir em tela cheia
+            function abrirTelaCheia() {
                 if (video.isFullscreen()) {
                     video.exitFullscreen();
                 } else {
@@ -269,17 +270,13 @@
                             var logoImg = document.createElement("img");
 
                             // Se o logo estiver vazio, usa um ícone genérico
-                            logoImg.src = canal.logoURL ? canal.logoURL : 'https://via.placeholder.com/50?text=TV';
+                            logoImg.src = canal.logoURL || 'https://via.placeholder.com/50';
                             itemLista.appendChild(logoImg);
-
-                            var nomeTexto = document.createElement("p");
-                            nomeTexto.textContent = canal.nome;
-                            itemLista.appendChild(nomeTexto);
-
+                            itemLista.appendChild(document.createTextNode(canal.nome));
                             itemLista.onclick = function() {
                                 video.src({ src: canal.link, type: 'application/x-mpegURL' });
+                                abrirTelaCheia(); // Abre em tela cheia ao clicar no canal
                                 video.play();
-                                video.requestFullscreen(); // Abre o player em tela cheia ao clicar no canal
                             };
 
                             listaCanaisElemento.appendChild(itemLista);
