@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TV DO BILL - ALGUNS CANAIS PODEM ESTAR FORA, AGUARDE ATUALIZAÇÃO - DESATIVE CONEXÃO SEGURA</title>
+    <title>T 2 </title>
     <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
     <style>
         body {
@@ -244,31 +244,23 @@
                         }
                     }
 
-                    canais.sort(function(a, b) {
-                        const regex = /(\d+|[^\d\W]+|[\W_]+)/g;
-                        const aParts = a.nome.toLowerCase().match(regex);
-                        const bParts = b.nome.toLowerCase().match(regex);
+                    // Função de ordenação conforme a necessidade
+                    function customSort(a, b) {
+                        const orderA = getOrder(a.nome);
+                        const orderB = getOrder(b.nome);
+                        return orderA - orderB;
+                    }
 
-                        for (let i = 0; i < Math.max(aParts.length, bParts.length); i++) {
-                            const aPart = aParts[i] || '';
-                            const bPart = bParts[i] || '';
+                    function getOrder(nome) {
+                        const firstChar = nome.charAt(0).toLowerCase();
 
-                            if (aPart.match(/^\d+$/) && bPart.match(/^\d+$/)) {
-                                return aPart - bPart; // Ordena números
-                            } else if (aPart.match(/^\d+$/)) {
-                                return 1; // Números vão depois das letras
-                            } else if (bPart.match(/^\d+$/)) {
-                                return -1; // Números vão depois das letras
-                            } else {
-                                const comparison = aPart.localeCompare(bPart, undefined, { sensitivity: 'base' });
-                                if (comparison !== 0) {
-                                    return comparison;
-                                }
-                            }
-                        }
+                        if (firstChar >= 'a' && firstChar <= 'z') return firstChar.charCodeAt(0);
+                        if (firstChar >= '0' && firstChar <= '9') return firstChar.charCodeAt(0) + 100; // ajusta para aparecer após letras
+                        if (firstChar === ' ') return 200; // espaços após números
+                        return 300; // acentuação e caracteres especiais
+                    }
 
-                        return 0; // Se são iguais
-                    });
+                    canais.sort(customSort);
 
                     function renderCanais(filtrados) {
                         listaCanaisElemento.innerHTML = '';
@@ -280,12 +272,12 @@
                             logoImg.src = canal.logoURL ? canal.logoURL : 'https://via.placeholder.com/50?text=TV';
                             itemLista.appendChild(logoImg);
 
-                            var canalNome = document.createElement("p");
-                            canalNome.textContent = canal.nome;
-                            itemLista.appendChild(canalNome);
+                            var nomeTexto = document.createElement("p");
+                            nomeTexto.textContent = canal.nome;
+                            itemLista.appendChild(nomeTexto);
 
                             itemLista.onclick = function() {
-                                video.src(canal.link);
+                                video.src({ src: canal.link, type: 'application/x-mpegURL' });
                                 video.play();
                             };
 
@@ -295,16 +287,20 @@
 
                     renderCanais(canais);
 
-                    document.getElementById('search-input').addEventListener('input', function() {
-                        var valorBusca = this.value.toLowerCase();
-                        var canaisFiltrados = canais.filter(canal => canal.nome.toLowerCase().includes(valorBusca));
-                        renderCanais(canaisFiltrados);
-                    });
-
+                    // Configurar reconexão
                     configurarReconexao(video);
                 }
             };
             xhr.send();
+
+            // Implementar busca
+            document.getElementById("search-input").addEventListener("input", function() {
+                var termoBusca = this.value.toLowerCase();
+                var canaisFiltrados = canais.filter(function(canal) {
+                    return canal.nome.toLowerCase().includes(termoBusca);
+                });
+                renderCanais(canaisFiltrados);
+            });
         });
     </script>
 </body>
