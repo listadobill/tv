@@ -200,7 +200,8 @@
                 window.location.href = "https://listadobill.github.io/tv/inicial";
             };
 
-            function toggleFullscreen() {
+            // Função para abrir em tela cheia
+            function abrirTelaCheia() {
                 if (video.isFullscreen()) {
                     video.exitFullscreen();
                 } else {
@@ -216,12 +217,13 @@
                 });
             }
 
+            var canais = [];
+
             var xhr = new XMLHttpRequest();
             xhr.open("GET", listaURL, true);
             xhr.onreadystatechange = function() {
                 if (xhr.readyState === 4 && xhr.status === 200) {
                     var linhas = xhr.responseText.split('\n');
-                    var canais = [];
 
                     for (var i = 0; i < linhas.length; i++) {
                         if (linhas[i].startsWith('#EXTINF')) {
@@ -262,6 +264,7 @@
 
                     canais.sort(customSort);
 
+                    // Função para renderizar os canais na lista
                     function renderCanais(filtrados) {
                         listaCanaisElemento.innerHTML = '';
                         filtrados.forEach(function(canal) {
@@ -269,38 +272,36 @@
                             var logoImg = document.createElement("img");
 
                             // Se o logo estiver vazio, usa um ícone genérico
-                            logoImg.src = canal.logoURL ? canal.logoURL : 'https://via.placeholder.com/50?text=TV';
+                            logoImg.src = canal.logoURL || 'https://via.placeholder.com/50';
                             itemLista.appendChild(logoImg);
-
-                            var nomeTexto = document.createElement("p");
-                            nomeTexto.textContent = canal.nome;
-                            itemLista.appendChild(nomeTexto);
-
+                            itemLista.appendChild(document.createTextNode(canal.nome));
                             itemLista.onclick = function() {
                                 video.src({ src: canal.link, type: 'application/x-mpegURL' });
-                                video.play();
+                                abrirTelaCheia(); // Abrir em tela cheia ao clicar
                             };
-
                             listaCanaisElemento.appendChild(itemLista);
                         });
                     }
 
+                    // Renderiza a lista completa inicialmente
                     renderCanais(canais);
 
                     // Configurar reconexão
                     configurarReconexao(video);
+
+                    // Implementar busca
+                    document.getElementById("search-input").addEventListener("input", function() {
+                        var termoBusca = this.value.toLowerCase();
+                        var canaisFiltrados = canais.filter(function(canal) {
+                            return canal.nome.toLowerCase().includes(termoBusca);
+                        });
+
+                        // Chama a função renderCanais com canais filtrados
+                        renderCanais(canaisFiltrados);
+                    });
                 }
             };
             xhr.send();
-
-            // Implementar busca
-            document.getElementById("search-input").addEventListener("input", function() {
-                var termoBusca = this.value.toLowerCase();
-                var canaisFiltrados = canais.filter(function(canal) {
-                    return canal.nome.toLowerCase().includes(termoBusca);
-                });
-                renderCanais(canaisFiltrados);
-            });
         });
     </script>
 </body>
