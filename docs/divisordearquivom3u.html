@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisor de Arquivo M3U</title>
+</head>
+<body>
+    <h1>Divisor de Arquivo M3U</h1>
+    <input type="file" id="fileInput" accept=".m3u">
+    <button id="divideButton">Dividir Arquivo</button>
+    <div id="output"></div>
+
+    <script>
+        document.getElementById('divideButton').addEventListener('click', async () => {
+            const fileInput = document.getElementById('fileInput');
+            if (!fileInput.files.length) {
+                alert('Por favor, selecione um arquivo .m3u!');
+                return;
+            }
+
+            const file = fileInput.files[0];
+            const maxSize = 20 * 1024 * 1024; // 20 MB
+            const text = await file.text();
+            const lines = text.split('\n');
+
+            let currentFileContent = '';
+            let fileCount = 1;
+            const output = document.getElementById('output');
+            output.innerHTML = '';
+
+            for (let line of lines) {
+                if ((currentFileContent.length + line.length + 1) > maxSize) {
+                    // Cria um link para download do arquivo atual
+                    const blob = new Blob([currentFileContent], { type: 'audio/mpegurl' });
+                    const url = URL.createObjectURL(blob);
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = `arquivo_${fileCount}.m3u`;
+                    link.innerText = `Baixar arquivo_${fileCount}.m3u`;
+                    output.appendChild(link);
+                    output.appendChild(document.createElement('br'));
+
+                    // Reseta o conteúdo do arquivo atual e incrementa o contador
+                    currentFileContent = line + '\n';
+                    fileCount++;
+                } else {
+                    currentFileContent += line + '\n';
+                }
+            }
+
+            // Cria o último arquivo, se houver conteúdo
+            if (currentFileContent) {
+                const blob = new Blob([currentFileContent], { type: 'audio/mpegurl' });
+                const url = URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = `arquivo_${fileCount}.m3u`;
+                link.innerText = `Baixar arquivo_${fileCount}.m3u`;
+                output.appendChild(link);
+            }
+        });
+    </script>
+</body>
+</html>
