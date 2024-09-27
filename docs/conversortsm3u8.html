@@ -3,45 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conversor M3U para M3U8</title>
+    <title>Conversor de URLs IPTV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input, textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 100%;
+        }
+        button {
+            padding: 10px 20px;
+            margin-right: 10px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            white-space: pre-wrap;
+        }
+    </style>
 </head>
 <body>
-    <h2>Conversor de .ts para .m3u8 e Enxugador de Lista</h2>
+
+    <h1>Conversor de URLs IPTV</h1>
+
+    <!-- Campo para colar a lista original -->
+    <label for="originalList">Cole a lista de canais original aqui:</label>
+    <textarea id="originalList" rows="10" placeholder="Cole sua lista de canais original aqui..."></textarea>
+
+    <!-- Input para o novo domínio -->
+    <label for="newDomain">Novo Domínio (se vazio, mantém o original):</label>
+    <input type="text" id="newDomain" placeholder="Ex: ftflivetv.xyz" value="">
     
-    <textarea id="inputM3U" rows="10" cols="70" placeholder="Cole sua lista M3U aqui..."></textarea><br><br>
+    <!-- Input para a nova porta -->
+    <label for="newPort">Nova Porta (se vazio, mantém o original):</label>
+    <input type="text" id="newPort" placeholder="Ex: 83" value="">
     
-    <button onclick="convertAndSimplify()">Converter e Enxugar</button>
+    <!-- Input para adicionar caminho extra (já começa com /) -->
+    <label for="newPath">Adicionar Caminho após a Porta (Ex: live, se vazio, não adiciona):</label>
+    <input type="text" id="newPath" placeholder="Ex: live" value="">
+
+    <!-- Input para a extensão da URL -->
+    <label for="newExtension">Extensão (Ex: .m3u8, se vazio, mantém o original):</label>
+    <input type="text" id="newExtension" placeholder="Ex: .m3u8" value="">
     
-    <h3>Resultado</h3>
-    <textarea id="outputM3U" rows="10" cols="70" readonly></textarea>
+    <!-- Botão para converter a lista -->
+    <button onclick="convertUrls()">Converter URLs</button>
+
+    <h2>Lista Convertida:</h2>
+    <pre id="result"></pre>
 
     <script>
-        function convertAndSimplify() {
-            const input = document.getElementById("inputM3U").value;
-            const lines = input.split("\n");
-            let result = "";
+        function convertUrls() {
+            const originalList = document.getElementById('originalList').value.trim();
+            const newDomain = document.getElementById('newDomain').value;
+            const newPort = document.getElementById('newPort').value;
+            const newPath = document.getElementById('newPath').value;
+            const newExtension = document.getElementById('newExtension').value;
+            
+            const lines = originalList.split('\n');
+            let result = '';
+            
+            // Varre a lista original e aplica a conversão
+            lines.forEach((line) => {
+                if (line.startsWith("http")) {
+                    // Extrai a parte final do caminho original
+                    const urlParts = line.split('/');
+                    const protocol = urlParts[0];  // http ou https
+                    const domainAndPort = urlParts[2].split(':');  // Dividir domínio e porta
+                    let domain = domainAndPort[0];
+                    let port = domainAndPort[1] || '';  // Porta pode não existir
+                    let channelId = urlParts.slice(3).join('/');  // Parte final após domínio
 
-            for (let i = 0; i < lines.length; i++) {
-                let line = lines[i];
-                
-                // Se for uma linha com #EXTINF, simplifica a linha removendo os atributos desnecessários
-                if (line.startsWith("#EXTINF")) {
-                    // Extrai apenas o nome do canal
-                    let nameMatch = line.match(/,([^,]+)$/);
-                    if (nameMatch) {
-                        result += `#EXTINF:-1,${nameMatch[1]}\n`;
+                    // Atualiza o domínio se preenchido
+                    if (newDomain) {
+                        domain = newDomain;
                     }
-                }
-                // Se for uma linha com o link, substitui .ts por .m3u8, se necessário
-                else if (line.includes(".ts")) {
-                    result += line.replace(".ts", ".m3u8") + "\n";
-                } else {
-                    result += line + "\n";
-                }
-            }
 
-            document.getElementById("outputM3U").value = result;
+                    // Atualiza a porta se preenchida
+                    if (newPort) {
+                        port = newPort;
+                    }
+
+                    // Monta a nova URL com as partes editáveis
+                    let newUrl = `${protocol}//${domain}`;
+                    if (port) {
+                        newUrl += `:${port}`;
+                    }
+
+                    // Adiciona o caminho extra (começa com /) se preenchido
+                    if (newPath) {
+                        newUrl += `/${newPath}`;
+                    }
+
+                    // Adiciona o ID do canal
+                    newUrl += `/${channelId}`;
+
+                    // Adiciona a extensão, se preenchida
+                    if (newExtension) {
+                        newUrl = newUrl.replace(/(\.\w+)?$/, newExtension);
+                    }
+                    
+                    result += newUrl + '\n';
+                } else {
+                    // Mantém as linhas de metadados (#EXTINF, etc.)
+                    result += line + '\n';
+                }
+            });
+
+            // Exibe o resultado
+            document.getElementById('result').textContent = result;
         }
     </script>
+
 </body>
 </html>
