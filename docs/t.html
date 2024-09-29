@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TV DO BILL2 - FILMES E SÉRIES - CONSTANTEMENTE ATUALIZADA - APROVEITE</title>
+    <title>TV DO BILL - ALGUNS CANAIS PODEM ESTAR FORA, AGUARDE ATUALIZAÇÃO - DESATIVE CONEXÃO SEGURA</title>
     <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
     <style>
         body {
@@ -32,7 +32,15 @@
             border-bottom: 1px solid #444;
         }
 
-        #home-button {
+        #button-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Botões em múltiplas linhas */
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .button-link {
             background-color: #4CAF50;
             color: white;
             border: none;
@@ -40,11 +48,10 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 1em;
-            margin-top: 10px;
             transition: background-color 0.3s ease;
         }
 
-        #home-button:hover {
+        .button-link:hover {
             background-color: #45a049;
         }
 
@@ -167,8 +174,20 @@
 <body>
     <div id="container">
         <div id="header">
-            LISTA DE CANAIS IPTV - DESATIVE CONEXÃO SEGURA
-            <button id="home-button">PÁGINA INICIAL</button>
+            LISTA DE CANAIS IPTV - DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV - Atualização, 27 de Setembro de 2024: https://bit.ly/tvdobill-iptv - EPG https://bit.ly/tvdobill-epg 
+            <div id="button-container">
+                <button id="home-button" class="button-link">CANAIS, SÉRIES E FILMES STREAM</button>
+                <button class="button-link" data-url="https://raw.githubusercontent.com/listadobill/tv/main/iptv.m3u">SERVIDOR 1</button>
+                <button class="button-link" data-url="https://raw.githubusercontent.com/listadobill/tv/main/iptv2.m3u">SERVIDOR 2</button>
+                <button class="button-link" data-url="https://raw.githubusercontent.com/listadobill/tv/main/cxtvrokusamsungplutotviptv.m3u">CXTV - ROKU - SAMSUNG - PLUTO TV</button>
+                <button class="button-link" data-url="https://raw.githubusercontent.com/listadobill/tv/main/formigatv.m3u">FORMIGA</button>
+                <button class="button-link" data-url="https://raw.githubusercontent.com/listadobill/tv/main/plutotvbr.m3u">PLUTO TV</button>
+                <button class="button-link" data-url="https://iptv-org.github.io/iptv/languages/por.m3u">IPTV ORG: CANAIS DE LÍNGUA PORTUGUESA</button>
+                <button class="button-link" data-url="https://iptv-org.github.io/iptv/countries/ag.m3u">IPTV ORG: CANAIS ARGENTINOS</button>
+                <button class="button-link" data-url="https://iptv-org.github.io/iptv/countries/es.m3u">IPTV ORG: CANAIS ESPANHOIS</button>
+                <button class="button-link" data-url="https://iptv-org.github.io/iptv/categories/auto.m3u">CARROS</button>
+                <button class="button-link" data-url="https://iptv-org.github.io/iptv/categories/music.m3u">MÚSICAS</button>
+            </div>
         </div>
         <div id="main">
             <div id="sidebar">
@@ -176,7 +195,7 @@
                     <input type="text" id="search-input" placeholder="Buscar canal...">
                 </div>
                 <ul id="lista-canais">
-                    <!-- Canais serão carregados gradualmente -->
+                    <!-- Canais serão carregados dinamicamente -->
                 </ul>
             </div>
             <div id="player">
@@ -187,103 +206,75 @@
 
     <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/zteste.m3u";
-            var listaCanaisElemento = document.getElementById("lista-canais");
-            var video = videojs('video-player', {
-                controls: true,
-                autoplay: false,
-                preload: 'auto'
-            });
+        document.addEventListener('DOMContentLoaded', function() {
+            var video = videojs('video-player');
+            var listaCanaisElemento = document.getElementById('lista-canais');
 
-            document.getElementById('home-button').onclick = function() {
-                window.location.href = "https://listadobill.github.io/tv/inicial";
-            };
-
-            // Função para abrir em tela cheia
-            function abrirTelaCheia() {
-                if (video.isFullscreen()) {
-                    video.exitFullscreen();
-                } else {
-                    video.requestFullscreen();
-                }
+            function carregarListaDeCanais(listaURL) {
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', listaURL);
+                xhr.onload = function() {
+                    if (xhr.status === 200) {
+                        var m3uData = xhr.responseText;
+                        processarM3U(m3uData);
+                    }
+                };
+                xhr.send();
             }
 
-            function configurarReconexao(player) {
-                player.on('error', function() {
-                    console.log('Tentando reconectar...');
-                    player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
-                    player.play();
+            function processarM3U(m3uData) {
+                listaCanaisElemento.innerHTML = '';
+                var lines = m3uData.split('\n');
+                var canalAtual = {};
+
+                lines.forEach(function(line) {
+                    if (line.startsWith('#EXTINF:')) {
+                        var detalhes = line.split(',');
+                        canalAtual.nome = detalhes[1].trim();
+                    } else if (line.startsWith('http')) {
+                        canalAtual.url = line.trim();
+                        adicionarCanalNaLista(canalAtual);
+                        canalAtual = {};
+                    }
                 });
             }
 
-            var canais = [];
-            var canaisCarregados = 0;
-            var incremento = 20; // Número de canais a serem carregados por vez
+            function adicionarCanalNaLista(canal) {
+                var li = document.createElement('li');
+                li.innerHTML = '<p>' + canal.nome + '</p>';
+                li.addEventListener('click', function() {
+                    video.src({ type: 'application/x-mpegURL', src: canal.url });
+                    video.play();
+                    entrarEmTelaCheia();
+                });
+                listaCanaisElemento.appendChild(li);
+            }
 
-            var xhr = new XMLHttpRequest();
-            xhr.open("GET", listaURL, true);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    var linhas = xhr.responseText.split('\n');
-
-                    for (var i = 0; i < linhas.length; i++) {
-                        if (linhas[i].startsWith('#EXTINF')) {
-                            var nome = linhas[i].split(',')[1];
-                            var link = linhas[i + 1] ? linhas[i + 1].trim() : null;
-
-                            if (!nome || !link) continue;
-
-                            var logoURL = '';
-                            var logoMatch = linhas[i].match(/tvg-logo="([^"]+)"/);
-                            if (logoMatch) {
-                                logoURL = logoMatch[1];
-                            }
-
-                            canais.push({
-                                nome: nome,
-                                link: link,
-                                logoURL: logoURL
-                            });
-                        }
-                    }
-
-                    // Função para renderizar canais gradualmente
-                    function carregarMaisCanais() {
-                        var canaisParaExibir = canais.slice(canaisCarregados, canaisCarregados + incremento);
-                        canaisCarregados += incremento;
-
-                        canaisParaExibir.forEach(function(canal) {
-                            var itemLista = document.createElement("li");
-                            var logoImg = document.createElement("img");
-
-                            // Se o logo estiver vazio, usa um ícone genérico
-                            logoImg.src = canal.logoURL || 'https://via.placeholder.com/50';
-                            itemLista.appendChild(logoImg);
-                            itemLista.appendChild(document.createTextNode(canal.nome));
-                            itemLista.onclick = function() {
-                                video.src({ src: canal.link, type: 'application/x-mpegURL' });
-                                abrirTelaCheia(); // Abrir em tela cheia ao clicar
-                            };
-                            listaCanaisElemento.appendChild(itemLista);
-                        });
-
-                        // Se ainda houver mais canais para carregar, adicionar mais canais ao rolar
-                        if (canaisCarregados < canais.length) {
-                            var observer = new IntersectionObserver(function(entries) {
-                                if (entries[0].isIntersecting) {
-                                    carregarMaisCanais();
-                                    observer.disconnect();
-                                }
-                            });
-                            observer.observe(listaCanaisElemento.lastChild);
-                        }
-                    }
-
-                    carregarMaisCanais(); // Carregar os primeiros canais
+            function entrarEmTelaCheia() {
+                var elem = document.getElementById("player");
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.mozRequestFullScreen) { /* Firefox */
+                    elem.mozRequestFullScreen();
+                } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                    elem.webkitRequestFullscreen();
+                } else if (elem.msRequestFullscreen) { /* IE/Edge */
+                    elem.msRequestFullscreen();
                 }
-            };
-            xhr.send();
+            }
+
+            // Event listener for buttons
+            document.querySelectorAll('.button-link').forEach(function(button) {
+                button.addEventListener('click', function() {
+                    var url = button.getAttribute('data-url');
+                    if (url) {
+                        carregarListaDeCanais(url);
+                    }
+                });
+            });
+
+            // Carregar lista padrão ao abrir a página
+            carregarListaDeCanais('https://raw.githubusercontent.com/listadobill/tv/main/iptv.m3u');
         });
     </script>
 </body>
