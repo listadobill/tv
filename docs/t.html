@@ -167,8 +167,7 @@
 <body>
     <div id="container">
         <div id="header">
-            LISTA DE CANAIS IPTV - DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV - Atualização, 27 de Setembro de 2024: https://bit.ly/tvdobill-iptv
- - EPG https://bit.ly/tvdobill-epg 
+            LISTA DE CANAIS IPTV - DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV - Atualização, 27 de Setembro de 2024: https://bit.ly/tvdobill-iptv - EPG https://bit.ly/tvdobill-epg 
             <button id="home-button">CANAIS, SÉRIES E FILMES STREAM</button>
         </div>
         <div id="main">
@@ -189,7 +188,7 @@
     <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/iptv.m3u";
+            var listaURL = "   "; // Adicione a URL aqui
             var listaCanaisElemento = document.getElementById("lista-canais");
             var video = videojs('video-player', {
                 controls: true,
@@ -278,31 +277,31 @@
                             itemLista.appendChild(document.createTextNode(canal.nome));
                             itemLista.onclick = function() {
                                 video.src({ src: canal.link, type: 'application/x-mpegURL' });
-                                abrirTelaCheia(); // Abrir em tela cheia ao clicar
+                                video.play();
+                                abrirTelaCheia();
                             };
                             listaCanaisElemento.appendChild(itemLista);
                         });
                     }
 
-                    // Renderiza a lista completa inicialmente
                     renderCanais(canais);
-
-                    // Configurar reconexão
-                    configurarReconexao(video);
-
-                    // Implementar busca
-                    document.getElementById("search-input").addEventListener("input", function() {
-                        var termoBusca = this.value.toLowerCase();
-                        var canaisFiltrados = canais.filter(function(canal) {
-                            return canal.nome.toLowerCase().includes(termoBusca);
-                        });
-
-                        // Chama a função renderCanais com canais filtrados
-                        renderCanais(canaisFiltrados);
-                    });
                 }
             };
+
             xhr.send();
+
+            // Implementação do filtro
+            var searchInput = document.getElementById('search-input');
+            searchInput.addEventListener('input', function() {
+                var searchValue = this.value.toLowerCase();
+                var canaisFiltrados = canais.filter(function(canal) {
+                    return canal.nome.toLowerCase().includes(searchValue);
+                });
+                renderCanais(canaisFiltrados);
+            });
+
+            // Configuração da reconexão
+            configurarReconexao(video);
         });
     </script>
 </body>
