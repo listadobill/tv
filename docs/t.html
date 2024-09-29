@@ -32,15 +32,7 @@
             border-bottom: 1px solid #444;
         }
 
-        #button-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap; /* Botões em múltiplas linhas */
-            gap: 10px;
-            margin-top: 10px;
-        }
-
-        .button-link {
+        #home-button {
             background-color: #4CAF50;
             color: white;
             border: none;
@@ -48,10 +40,11 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 1em;
+            margin-top: 10px;
             transition: background-color 0.3s ease;
         }
 
-        .button-link:hover {
+        #home-button:hover {
             background-color: #45a049;
         }
 
@@ -174,20 +167,9 @@
 <body>
     <div id="container">
         <div id="header">
-            LISTA DE CANAIS IPTV - DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV - Atualização, 27 de Setembro de 2024: https://bit.ly/tvdobill-iptv - EPG https://bit.ly/tvdobill-epg 
-            <div id="button-container">
-                <button id="home-button" class="button-link">CANAIS, SÉRIES E FILMES STREAM</button>
-                <button class="button-link" data-url="https://raw.githubusercontent.com/listadobill/tv/main/iptv.m3u">SERVIDOR 1</button>
-                <button class="button-link" data-url="https://raw.githubusercontent.com/listadobill/tv/main/iptv2.m3u">SERVIDOR 2</button>
-                <button class="button-link" data-url="https://raw.githubusercontent.com/listadobill/tv/main/cxtvrokusamsungplutotviptv.m3u">CXTV - ROKU - SAMSUNG - PLUTO TV</button>
-                <button class="button-link" data-url="https://raw.githubusercontent.com/listadobill/tv/main/formigatv.m3u">FORMIGA</button>
-                <button class="button-link" data-url="https://raw.githubusercontent.com/listadobill/tv/main/plutotvbr.m3u">PLUTO TV</button>
-                <button class="button-link" data-url="https://iptv-org.github.io/iptv/languages/por.m3u">IPTV ORG: CANAIS DE LÍNGUA PORTUGUESA</button>
-                <button class="button-link" data-url="https://iptv-org.github.io/iptv/countries/ag.m3u">IPTV ORG: CANAIS ARGENTINOS</button>
-                <button class="button-link" data-url="https://iptv-org.github.io/iptv/countries/es.m3u">IPTV ORG: CANAIS ESPANHOIS</button>
-                <button class="button-link" data-url="https://iptv-org.github.io/iptv/categories/auto.m3u">CARROS</button>
-                <button class="button-link" data-url="https://iptv-org.github.io/iptv/categories/music.m3u">MÚSICAS</button>
-            </div>
+            LISTA DE CANAIS IPTV - DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV - Atualização, 27 de Setembro de 2024: https://bit.ly/tvdobill-iptv
+ - EPG https://bit.ly/tvdobill-epg 
+            <button id="home-button">CANAIS, SÉRIES E FILMES STREAM</button>
         </div>
         <div id="main">
             <div id="sidebar">
@@ -206,75 +188,121 @@
 
     <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var video = videojs('video-player');
-            var listaCanaisElemento = document.getElementById('lista-canais');
+        document.addEventListener("DOMContentLoaded", function() {
+            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/plutotvbr.m3u.m3u";
+            var listaCanaisElemento = document.getElementById("lista-canais");
+            var video = videojs('video-player', {
+                controls: true,
+                autoplay: false,
+                preload: 'auto'
+            });
 
-            function carregarListaDeCanais(listaURL) {
-                var xhr = new XMLHttpRequest();
-                xhr.open('GET', listaURL);
-                xhr.onload = function() {
-                    if (xhr.status === 200) {
-                        var m3uData = xhr.responseText;
-                        processarM3U(m3uData);
-                    }
-                };
-                xhr.send();
-            }
+            document.getElementById('home-button').onclick = function() {
+                window.location.href = "https://listadobill.github.io/tv/inicial";
+            };
 
-            function processarM3U(m3uData) {
-                listaCanaisElemento.innerHTML = '';
-                var lines = m3uData.split('\n');
-                var canalAtual = {};
-
-                lines.forEach(function(line) {
-                    if (line.startsWith('#EXTINF:')) {
-                        var detalhes = line.split(',');
-                        canalAtual.nome = detalhes[1].trim();
-                    } else if (line.startsWith('http')) {
-                        canalAtual.url = line.trim();
-                        adicionarCanalNaLista(canalAtual);
-                        canalAtual = {};
-                    }
-                });
-            }
-
-            function adicionarCanalNaLista(canal) {
-                var li = document.createElement('li');
-                li.innerHTML = '<p>' + canal.nome + '</p>';
-                li.addEventListener('click', function() {
-                    video.src({ type: 'application/x-mpegURL', src: canal.url });
-                    video.play();
-                    entrarEmTelaCheia();
-                });
-                listaCanaisElemento.appendChild(li);
-            }
-
-            function entrarEmTelaCheia() {
-                var elem = document.getElementById("player");
-                if (elem.requestFullscreen) {
-                    elem.requestFullscreen();
-                } else if (elem.mozRequestFullScreen) { /* Firefox */
-                    elem.mozRequestFullScreen();
-                } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-                    elem.webkitRequestFullscreen();
-                } else if (elem.msRequestFullscreen) { /* IE/Edge */
-                    elem.msRequestFullscreen();
+            // Função para abrir em tela cheia
+            function abrirTelaCheia() {
+                if (video.isFullscreen()) {
+                    video.exitFullscreen();
+                } else {
+                    video.requestFullscreen();
                 }
             }
 
-            // Event listener for buttons
-            document.querySelectorAll('.button-link').forEach(function(button) {
-                button.addEventListener('click', function() {
-                    var url = button.getAttribute('data-url');
-                    if (url) {
-                        carregarListaDeCanais(url);
-                    }
+            function configurarReconexao(player) {
+                player.on('error', function() {
+                    console.log('Tentando reconectar...');
+                    player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
+                    player.play();
                 });
-            });
+            }
 
-            // Carregar lista padrão ao abrir a página
-            carregarListaDeCanais('https://raw.githubusercontent.com/listadobill/tv/main/iptv.m3u');
+            var canais = [];
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", listaURL, true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var linhas = xhr.responseText.split('\n');
+
+                    for (var i = 0; i < linhas.length; i++) {
+                        if (linhas[i].startsWith('#EXTINF')) {
+                            var nome = linhas[i].split(',')[1];
+                            var link = linhas[i + 1] ? linhas[i + 1].trim() : null;
+
+                            if (!nome || !link) continue;
+
+                            var logoURL = '';
+                            var logoMatch = linhas[i].match(/tvg-logo="([^"]+)"/);
+                            if (logoMatch) {
+                                logoURL = logoMatch[1];
+                            }
+
+                            canais.push({
+                                nome: nome,
+                                link: link,
+                                logoURL: logoURL
+                            });
+                        }
+                    }
+
+                    // Função de ordenação conforme a necessidade
+                    function customSort(a, b) {
+                        const orderA = getOrder(a.nome);
+                        const orderB = getOrder(b.nome);
+                        return orderA - orderB;
+                    }
+
+                    function getOrder(nome) {
+                        const firstChar = nome.charAt(0).toLowerCase();
+
+                        if (firstChar >= 'a' && firstChar <= 'z') return firstChar.charCodeAt(0);
+                        if (firstChar >= '0' && firstChar <= '9') return firstChar.charCodeAt(0) + 100; // ajusta para aparecer após letras
+                        if (firstChar === ' ') return 200; // espaços após números
+                        return 300; // acentuação e caracteres especiais
+                    }
+
+                    canais.sort(customSort);
+
+                    // Função para renderizar os canais na lista
+                    function renderCanais(filtrados) {
+                        listaCanaisElemento.innerHTML = '';
+                        filtrados.forEach(function(canal) {
+                            var itemLista = document.createElement("li");
+                            var logoImg = document.createElement("img");
+
+                            // Se o logo estiver vazio, usa um ícone genérico
+                            logoImg.src = canal.logoURL || 'https://via.placeholder.com/50';
+                            itemLista.appendChild(logoImg);
+                            itemLista.appendChild(document.createTextNode(canal.nome));
+                            itemLista.onclick = function() {
+                                video.src({ src: canal.link, type: 'application/x-mpegURL' });
+                                abrirTelaCheia(); // Abrir em tela cheia ao clicar
+                            };
+                            listaCanaisElemento.appendChild(itemLista);
+                        });
+                    }
+
+                    // Renderiza a lista completa inicialmente
+                    renderCanais(canais);
+
+                    // Configurar reconexão
+                    configurarReconexao(video);
+
+                    // Implementar busca
+                    document.getElementById("search-input").addEventListener("input", function() {
+                        var termoBusca = this.value.toLowerCase();
+                        var canaisFiltrados = canais.filter(function(canal) {
+                            return canal.nome.toLowerCase().includes(termoBusca);
+                        });
+
+                        // Chama a função renderCanais com canais filtrados
+                        renderCanais(canaisFiltrados);
+                    });
+                }
+            };
+            xhr.send();
         });
     </script>
 </body>
