@@ -16,12 +16,14 @@
             height: 100vh;
             overflow: hidden;
         }
+
         #container {
             display: flex;
             flex-direction: column;
             width: 100%;
             height: 100%;
         }
+
         #header {
             background-color: rgba(0, 0, 0, 0.8);
             padding: 10px;
@@ -29,7 +31,8 @@
             font-size: 1.5em;
             border-bottom: 1px solid #444;
         }
-        #home-button {
+
+        #home-button, .nav-button {
             background-color: #4CAF50;
             color: white;
             border: none;
@@ -37,17 +40,20 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 1em;
-            margin-top: 10px;
+            margin: 5px;
             transition: background-color 0.3s ease;
         }
-        #home-button:hover {
+
+        #home-button:hover, .nav-button:hover {
             background-color: #45a049;
         }
+
         #search-bar {
             padding: 10px;
             background-color: #333;
             text-align: center;
         }
+
         #search-input {
             width: 95%;
             padding: 10px;
@@ -55,11 +61,13 @@
             border-radius: 5px;
             font-size: 1em;
         }
+
         #main {
             display: flex;
             flex: 1;
             overflow: hidden;
         }
+
         #player {
             flex: 2;
             background-color: rgba(0, 0, 0, 0.8);
@@ -69,11 +77,13 @@
             align-items: center;
             overflow: hidden;
         }
+
         .video-js {
             width: 100%;
             height: 100%;
             background-color: #000;
         }
+
         #sidebar {
             flex: 1;
             background-color: rgba(34, 34, 34, 0.8);
@@ -81,6 +91,7 @@
             padding: 10px;
             border-left: 2px solid #444;
         }
+
         #sidebar ul {
             list-style-type: none;
             padding: 0;
@@ -89,6 +100,7 @@
             flex-direction: column;
             gap: 10px;
         }
+
         #sidebar li {
             background-color: rgba(50, 50, 50, 0.8);
             border-radius: 8px;
@@ -98,9 +110,11 @@
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
+
         #sidebar li:hover {
             background-color: #4CAF50;
         }
+
         #sidebar img {
             width: 50px;
             height: 50px;
@@ -109,10 +123,12 @@
             border: 2px solid #4CAF50;
             object-fit: cover;
         }
+
         #sidebar p {
             margin: 0;
             font-size: 1.1em;
         }
+
         .video-js.vjs-fullscreen {
             width: 100% !important;
             height: 100% !important;
@@ -120,9 +136,11 @@
             top: 0;
             left: 0;
         }
+
         .video-js.vjs-default-skin .vjs-control-bar {
             background: rgba(0, 0, 0, 0.6);
         }
+
         .video-js .vjs-big-play-button {
             background-color: rgba(76, 175, 80, 0.8);
             border: none;
@@ -131,12 +149,15 @@
             line-height: 1.5;
             transition: background-color 0.3s ease;
         }
+
         .video-js .vjs-big-play-button:hover {
             background-color: rgba(76, 175, 80, 1);
         }
+
         ::-webkit-scrollbar {
             width: 10px;
         }
+
         ::-webkit-scrollbar-thumb {
             background-color: #4CAF50;
             border-radius: 10px;
@@ -146,8 +167,18 @@
 <body>
     <div id="container">
         <div id="header">
-            LISTA DE CANAIS IPTV - DESATIVE CONEXÃO SEGURA
-            <button id="home-button">CANAIS, SÉRIES E FILMES STREAM</button>
+            LISTA DE CANAIS IPTV - DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV - Atualização, 27 de Setembro de 2024: https://bit.ly/tvdobill-iptv - EPG https://bit.ly/tvdobill-epg 
+            <div>
+                <button id="home-button">CANAIS, SÉRIES E FILMES STREAM</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/'">SERVIDOR 1</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/iptv2'">SERVIDOR 2</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/argentina'">ARGENTINA</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/brasil'">BRASIL</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/carros'">CARROS</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/espanha'">ESPANHA</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/musica'">MÚSICA</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/portugal'">PORTUGAL</button>
+            </div>
         </div>
         <div id="main">
             <div id="sidebar">
@@ -166,101 +197,94 @@
 
     <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
     <script>
-        var urls = [
-            "https://iptv-org.github.io/iptv/countries/ar.m3u",
-            "https://iptv-org.github.io/iptv/categories/auto.m3u",
-            "https://iptv-org.github.io/iptv/countries/br.m3u",
-            "https://iptv-org.github.io/iptv/countries/es.m3u",
-            "https://iptv-org.github.io/iptv/categories/music.m3u",
-            "https://iptv-org.github.io/iptv/countries/pt.m3u"
-        ];
-
-        var canais = [];
-
-        function carregarCanais(url) {
-            return new Promise((resolve) => {
-                var xhr = new XMLHttpRequest();
-                xhr.open("GET", url, true);
-                xhr.onreadystatechange = function () {
-                    if (xhr.readyState === 4 && xhr.status === 200) {
-                        var linhas = xhr.responseText.split('\n');
-
-                        for (var i = 0; i < linhas.length; i++) {
-                            if (linhas[i].startsWith('#EXTINF')) {
-                                var nome = linhas[i].split(',')[1];
-                                var link = linhas[i + 1] ? linhas[i + 1].trim() : null;
-
-                                if (!nome || !link) continue;
-
-                                var logoURL = '';
-                                var logoMatch = linhas[i].match(/tvg-logo="([^"]+)"/);
-                                if (logoMatch) {
-                                    logoURL = logoMatch[1];
-                                }
-
-                                canais.push({
-                                    nome: nome,
-                                    link: link,
-                                    logoURL: logoURL
-                                });
-                            }
-                        }
-                        resolve();
-                    }
-                };
-                xhr.send();
-            });
-        }
-
-        Promise.all(urls.map(carregarCanais)).then(() => {
-            renderCanais(canais);
-        });
-
-        function renderCanais(filtrados) {
+        document.addEventListener("DOMContentLoaded", function() {
+            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/iptv.m3u";
             var listaCanaisElemento = document.getElementById("lista-canais");
-            listaCanaisElemento.innerHTML = '';
-            filtrados.forEach(function(canal) {
-                var itemLista = document.createElement("li");
-                var logoImg = document.createElement("img");
-
-                logoImg.src = canal.logoURL || 'https://via.placeholder.com/50';
-                itemLista.appendChild(logoImg);
-                itemLista.appendChild(document.createTextNode(canal.nome));
-                itemLista.onclick = function() {
-                    video.src({ src: canal.link, type: 'application/x-mpegURL' });
-                    abrirTelaCheia();
-                };
-                listaCanaisElemento.appendChild(itemLista);
+            var video = videojs('video-player', {
+                controls: true,
+                autoplay: false,
+                preload: 'auto'
             });
-        }
 
-        var video = videojs('video-player', {
-            controls: true,
-            autoplay: false,
-            preload: 'auto'
-        });
+            document.getElementById('home-button').onclick = function() {
+                window.location.href = "https://listadobill.github.io/tv/inicial";
+            };
 
-        document.getElementById('home-button').onclick = function() {
-            window.location.href = "https://listadobill.github.io/tv/inicial";
-        };
-
-        function abrirTelaCheia() {
-            if (video.isFullscreen()) {
-                video.exitFullscreen();
-            } else {
-                video.requestFullscreen();
+            // Função para abrir em tela cheia
+            function abrirTelaCheia() {
+                if (video.isFullscreen()) {
+                    video.exitFullscreen();
+                } else {
+                    video.requestFullscreen();
+                }
             }
-        }
 
-        function configurarReconexao(player) {
-            player.on('error', function() {
-                console.log('Tentando reconectar...');
-                player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
-                player.play();
-            });
-        }
+            function configurarReconexao(player) {
+                player.on('error', function() {
+                    console.log('Tentando reconectar...');
+                    player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
+                    player.play();
+                });
+            }
 
-        configurarReconexao(video);
+            var canais = [];
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", listaURL, true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var linhas = xhr.responseText.split('\n');
+
+                    for (var i = 0; i < linhas.length; i++) {
+                        if (linhas[i].startsWith('#EXTINF')) {
+                            var nome = linhas[i].split(',')[1];
+                            var link = linhas[i + 1] ? linhas[i + 1].trim() : null;
+
+                            if (!nome || !link) continue;
+
+                            var logoURL = '';
+                            var logoMatch = linhas[i].match(/tvg-logo="([^"]+)"/);
+                            if (logoMatch) {
+                                logoURL = logoMatch[1];
+                            }
+
+                            canais.push({
+                                nome: nome,
+                                link: link,
+                                logoURL: logoURL
+                            });
+                        }
+                    }
+
+                    // Adicionar canais à lista na página
+                    for (var j = 0; j < canais.length; j++) {
+                        var li = document.createElement('li');
+                        li.onclick = (function(link) {
+                            return function() {
+                                video.src({ src: link, type: 'application/x-mpegURL' });
+                                video.play();
+                                abrirTelaCheia();
+                            };
+                        })(canais[j].link);
+
+                        if (canais[j].logoURL) {
+                            var img = document.createElement('img');
+                            img.src = canais[j].logoURL;
+                            li.appendChild(img);
+                        }
+
+                        var p = document.createElement('p');
+                        p.textContent = canais[j].nome;
+                        li.appendChild(p);
+                        listaCanaisElemento.appendChild(li);
+                    }
+
+                    // Inicializar reconexão
+                    configurarReconexao(video);
+                }
+            };
+            xhr.send();
+        });
     </script>
 </body>
 </html>
