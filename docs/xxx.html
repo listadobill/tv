@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CANAIS ADULTOS PROIBIDO PARA MENORES DE 18 ANOS</title>
+    <title>PROIBIDO PARA MENORES DE 18 ANOS - TV DO BILL - ALGUNS CANAIS PODEM ESTAR FORA, AGUARDE ATUALIZAÇÃO - DESATIVE CONEXÃO SEGURA</title>
     <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
     <style>
         body {
@@ -32,7 +32,7 @@
             border-bottom: 1px solid #444;
         }
 
-        #home-button {
+        #home-button, .nav-button {
             background-color: #4CAF50;
             color: white;
             border: none;
@@ -40,11 +40,11 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 1em;
-            margin-top: 10px;
+            margin: 5px;
             transition: background-color 0.3s ease;
         }
 
-        #home-button:hover {
+        #home-button:hover, .nav-button:hover {
             background-color: #45a049;
         }
 
@@ -167,8 +167,18 @@
 <body>
     <div id="container">
         <div id="header">
-            CANAIS ADULTOS PROIBIDO PARA MENORES DE 18 ANOS
-            <button id="home-button">PÁGINA INICIAL</button>
+            PROIBIDO PARA MENORES DE 18 ANOS - LISTA DE CANAIS IPTV - DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV - Atualização, 29 de Setembro de 2024: https://bit.ly/tvdobill-iptv - EPG https://bit.ly/tvdobill-epg 
+            <div>
+                <button id="home-button">CANAIS, SÉRIES E FILMES STREAM</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/'">SERVIDOR 1</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/iptv2'">SERVIDOR 2</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/argentina'">ARGENTINA</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/brasil'">BRASIL</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/carros'">CARROS</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/espanha'">ESPANHA</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/musica'">MÚSICA</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/portugal'">PORTUGAL</button>
+            </div>
         </div>
         <div id="main">
             <div id="sidebar">
@@ -188,8 +198,9 @@
     <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/main/xxx.m3u";
+            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/xxx.m3u";
             var listaCanaisElemento = document.getElementById("lista-canais");
+            var searchInput = document.getElementById("search-input");
             var video = videojs('video-player', {
                 controls: true,
                 autoplay: false,
@@ -197,10 +208,11 @@
             });
 
             document.getElementById('home-button').onclick = function() {
-                window.location.href = "https://listadobill.github.io/tv/";
+                window.location.href = "https://listadobill.github.io/tv/inicial";
             };
 
-            function toggleFullscreen() {
+            // Função para abrir em tela cheia
+            function abrirTelaCheia() {
                 if (video.isFullscreen()) {
                     video.exitFullscreen();
                 } else {
@@ -216,12 +228,13 @@
                 });
             }
 
+            var canais = [];
+
             var xhr = new XMLHttpRequest();
             xhr.open("GET", listaURL, true);
             xhr.onreadystatechange = function() {
                 if (xhr.readyState === 4 && xhr.status === 200) {
                     var linhas = xhr.responseText.split('\n');
-                    var canais = [];
 
                     for (var i = 0; i < linhas.length; i++) {
                         if (linhas[i].startsWith('#EXTINF')) {
@@ -244,47 +257,46 @@
                         }
                     }
 
-                    canais.sort(function(a, b) {
-                        return a.nome.localeCompare(b.nome);
-                    });
+                    // Adicionar canais à lista na página
+                    function adicionarCanaisALista(canaisFiltrados) {
+                        listaCanaisElemento.innerHTML = ''; // Limpa a lista atual
+                        for (var j = 0; j < canaisFiltrados.length; j++) {
+                            var li = document.createElement('li');
+                            li.onclick = (function(link) {
+                                return function() {
+                                    video.src({ src: link, type: 'application/x-mpegURL' });
+                                    video.play();
+                                    abrirTelaCheia();
+                                };
+                            })(canaisFiltrados[j].link);
 
-                    function renderCanais(filtrados) {
-                        listaCanaisElemento.innerHTML = '';
-                        filtrados.forEach(function(canal) {
-                            var itemLista = document.createElement("li");
-                            var logoImg = document.createElement("img");
+                            if (canaisFiltrados[j].logoURL) {
+                                var img = document.createElement('img');
+                                img.src = canaisFiltrados[j].logoURL;
+                                li.appendChild(img);
+                            }
 
-                            // Se o logo estiver vazio, usa um ícone genérico
-                            logoImg.src = canal.logoURL ? canal.logoURL : 'https://raw.githubusercontent.com/HelmerLuzo/PlutoTV_HL/4c9e648d2c2b070f43648ca5b231156f5858f019/tv/m3u/PlutoTV_tv_BR.m3u';
-                            itemLista.appendChild(logoImg);
-
-                            var nomeTexto = document.createElement("p");
-                            nomeTexto.textContent = canal.nome;
-                            itemLista.appendChild(nomeTexto);
-
-                            itemLista.onclick = function() {
-                                video.src({ src: canal.link, type: 'application/x-mpegURL' });
-                                video.play();
-                                toggleFullscreen();
-                                configurarReconexao(video);
-                            };
-
-                            listaCanaisElemento.appendChild(itemLista);
-                        });
+                            var p = document.createElement('p');
+                            p.textContent = canaisFiltrados[j].nome;
+                            li.appendChild(p);
+                            listaCanaisElemento.appendChild(li);
+                        }
                     }
 
-                    renderCanais(canais);
+                    // Inicializar lista completa de canais
+                    adicionarCanaisALista(canais);
 
-                    // Filtro de busca
-                    document.getElementById('search-input').addEventListener('input', function() {
-                        var termoBusca = this.value.toLowerCase();
+                    // Adicionar funcionalidade de busca
+                    searchInput.addEventListener('input', function() {
+                        var termoBusca = searchInput.value.toLowerCase();
                         var canaisFiltrados = canais.filter(function(canal) {
                             return canal.nome.toLowerCase().includes(termoBusca);
                         });
-                        renderCanais(canaisFiltrados);
+                        adicionarCanaisALista(canaisFiltrados);
                     });
-                } else if (xhr.readyState === 4) {
-                    alert("Erro ao carregar a lista de canais. Verifique a URL e a conexão de rede.");
+
+                    // Inicializar reconexão
+                    configurarReconexao(video);
                 }
             };
             xhr.send();
