@@ -32,7 +32,7 @@
             border-bottom: 1px solid #444;
         }
 
-        #home-button {
+        #home-button, .nav-button {
             background-color: #4CAF50;
             color: white;
             border: none;
@@ -40,11 +40,11 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 1em;
-            margin-top: 10px;
+            margin: 5px;
             transition: background-color 0.3s ease;
         }
 
-        #home-button:hover {
+        #home-button:hover, .nav-button:hover {
             background-color: #45a049;
         }
 
@@ -167,9 +167,18 @@
 <body>
     <div id="container">
         <div id="header">
-            LISTA DE CANAIS IPTV - DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV - Atualização, 27 de Setembro de 2024: https://bit.ly/tvdobill-iptv
- - EPG https://bit.ly/tvdobill-epg 
-            <button id="home-button">CANAIS, SÉRIES E FILMES STREAM</button>
+            LISTA DE CANAIS IPTV - DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV - Atualização, 27 de Setembro de 2024: https://bit.ly/tvdobill-iptv - EPG https://bit.ly/tvdobill-epg 
+            <div>
+                <button id="home-button">CANAIS, SÉRIES E FILMES STREAM</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/'">SERVIDOR 1</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/iptv2'">SERVIDOR 2</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/argentina'">ARGENTINA</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/brasil'">BRASIL</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/carros'">CARROS</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/espanha'">ESPANHA</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/musica'">MÚSICA</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/portugal'">PORTUGAL</button>
+            </div>
         </div>
         <div id="main">
             <div id="sidebar">
@@ -247,59 +256,31 @@
                         }
                     }
 
-                    // Função de ordenação conforme a necessidade
-                    function customSort(a, b) {
-                        const orderA = getOrder(a.nome);
-                        const orderB = getOrder(b.nome);
-                        return orderA - orderB;
-                    }
-
-                    function getOrder(nome) {
-                        const firstChar = nome.charAt(0).toLowerCase();
-
-                        if (firstChar >= 'a' && firstChar <= 'z') return firstChar.charCodeAt(0);
-                        if (firstChar >= '0' && firstChar <= '9') return firstChar.charCodeAt(0) + 100; // ajusta para aparecer após letras
-                        if (firstChar === ' ') return 200; // espaços após números
-                        return 300; // acentuação e caracteres especiais
-                    }
-
-                    canais.sort(customSort);
-
-                    // Função para renderizar os canais na lista
-                    function renderCanais(filtrados) {
-                        listaCanaisElemento.innerHTML = '';
-                        filtrados.forEach(function(canal) {
-                            var itemLista = document.createElement("li");
-                            var logoImg = document.createElement("img");
-
-                            // Se o logo estiver vazio, usa um ícone genérico
-                            logoImg.src = canal.logoURL || 'https://via.placeholder.com/50';
-                            itemLista.appendChild(logoImg);
-                            itemLista.appendChild(document.createTextNode(canal.nome));
-                            itemLista.onclick = function() {
-                                video.src({ src: canal.link, type: 'application/x-mpegURL' });
-                                abrirTelaCheia(); // Abrir em tela cheia ao clicar
+                    // Adicionar canais à lista na página
+                    for (var j = 0; j < canais.length; j++) {
+                        var li = document.createElement('li');
+                        li.onclick = (function(link) {
+                            return function() {
+                                video.src({ src: link, type: 'application/x-mpegURL' });
+                                video.play();
+                                abrirTelaCheia();
                             };
-                            listaCanaisElemento.appendChild(itemLista);
-                        });
+                        })(canais[j].link);
+
+                        if (canais[j].logoURL) {
+                            var img = document.createElement('img');
+                            img.src = canais[j].logoURL;
+                            li.appendChild(img);
+                        }
+
+                        var p = document.createElement('p');
+                        p.textContent = canais[j].nome;
+                        li.appendChild(p);
+                        listaCanaisElemento.appendChild(li);
                     }
 
-                    // Renderiza a lista completa inicialmente
-                    renderCanais(canais);
-
-                    // Configurar reconexão
+                    // Inicializar reconexão
                     configurarReconexao(video);
-
-                    // Implementar busca
-                    document.getElementById("search-input").addEventListener("input", function() {
-                        var termoBusca = this.value.toLowerCase();
-                        var canaisFiltrados = canais.filter(function(canal) {
-                            return canal.nome.toLowerCase().includes(termoBusca);
-                        });
-
-                        // Chama a função renderCanais com canais filtrados
-                        renderCanais(canaisFiltrados);
-                    });
                 }
             };
             xhr.send();
