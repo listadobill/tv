@@ -32,7 +32,7 @@
             border-bottom: 1px solid #444;
         }
 
-        #home-button {
+        #home-button, .nav-button {
             background-color: #4CAF50;
             color: white;
             border: none;
@@ -40,11 +40,11 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 1em;
-            margin-top: 10px;
+            margin: 5px;
             transition: background-color 0.3s ease;
         }
 
-        #home-button:hover {
+        #home-button:hover, .nav-button:hover {
             background-color: #45a049;
         }
 
@@ -167,9 +167,18 @@
 <body>
     <div id="container">
         <div id="header">
-            LISTA DE CANAIS IPTV - DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV - Atualização, 27 de Setembro de 2024: https://bit.ly/tvdobill-iptv
- - EPG https://bit.ly/tvdobill-epg 
-            <button id="home-button">VOLTAR</button>
+            LISTA DE CANAIS IPTV - DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV - Atualização, 27 de Setembro de 2024: https://bit.ly/tvdobill-iptv - EPG https://bit.ly/tvdobill-epg 
+            <div>
+                <button id="home-button">CANAIS, SÉRIES E FILMES STREAM</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/'">SERVIDOR 1</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/iptv2'">SERVIDOR 2</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/argentina'">ARGENTINA</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/brasil'">BRASIL</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/carros'">CARROS</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/espanha'">ESPANHA</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/musica'">MÚSICA</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/portugal'">PORTUGAL</button>
+            </div>
         </div>
         <div id="main">
             <div id="sidebar">
@@ -191,6 +200,7 @@
         document.addEventListener("DOMContentLoaded", function() {
             var listaURL = "https://iptv-org.github.io/iptv/countries/ar.m3u";
             var listaCanaisElemento = document.getElementById("lista-canais");
+            var searchInput = document.getElementById("search-input");
             var video = videojs('video-player', {
                 controls: true,
                 autoplay: false,
@@ -198,7 +208,7 @@
             });
 
             document.getElementById('home-button').onclick = function() {
-                window.location.href = "https://listadobill.github.io/tv/";
+                window.location.href = "https://listadobill.github.io/tv/inicial";
             };
 
             // Função para abrir em tela cheia
@@ -247,59 +257,46 @@
                         }
                     }
 
-                    // Função de ordenação conforme a necessidade
-                    function customSort(a, b) {
-                        const orderA = getOrder(a.nome);
-                        const orderB = getOrder(b.nome);
-                        return orderA - orderB;
+                    // Adicionar canais à lista na página
+                    function adicionarCanaisALista(canaisFiltrados) {
+                        listaCanaisElemento.innerHTML = ''; // Limpa a lista atual
+                        for (var j = 0; j < canaisFiltrados.length; j++) {
+                            var li = document.createElement('li');
+                            li.onclick = (function(link) {
+                                return function() {
+                                    video.src({ src: link, type: 'application/x-mpegURL' });
+                                    video.play();
+                                    abrirTelaCheia();
+                                };
+                            })(canaisFiltrados[j].link);
+
+                            if (canaisFiltrados[j].logoURL) {
+                                var img = document.createElement('img');
+                                img.src = canaisFiltrados[j].logoURL;
+                                li.appendChild(img);
+                            }
+
+                            var p = document.createElement('p');
+                            p.textContent = canaisFiltrados[j].nome;
+                            li.appendChild(p);
+                            listaCanaisElemento.appendChild(li);
+                        }
                     }
 
-                    function getOrder(nome) {
-                        const firstChar = nome.charAt(0).toLowerCase();
+                    // Inicializar lista completa de canais
+                    adicionarCanaisALista(canais);
 
-                        if (firstChar >= 'a' && firstChar <= 'z') return firstChar.charCodeAt(0);
-                        if (firstChar >= '0' && firstChar <= '9') return firstChar.charCodeAt(0) + 100; // ajusta para aparecer após letras
-                        if (firstChar === ' ') return 200; // espaços após números
-                        return 300; // acentuação e caracteres especiais
-                    }
-
-                    canais.sort(customSort);
-
-                    // Função para renderizar os canais na lista
-                    function renderCanais(filtrados) {
-                        listaCanaisElemento.innerHTML = '';
-                        filtrados.forEach(function(canal) {
-                            var itemLista = document.createElement("li");
-                            var logoImg = document.createElement("img");
-
-                            // Se o logo estiver vazio, usa um ícone genérico
-                            logoImg.src = canal.logoURL || 'https://via.placeholder.com/50';
-                            itemLista.appendChild(logoImg);
-                            itemLista.appendChild(document.createTextNode(canal.nome));
-                            itemLista.onclick = function() {
-                                video.src({ src: canal.link, type: 'application/x-mpegURL' });
-                                abrirTelaCheia(); // Abrir em tela cheia ao clicar
-                            };
-                            listaCanaisElemento.appendChild(itemLista);
-                        });
-                    }
-
-                    // Renderiza a lista completa inicialmente
-                    renderCanais(canais);
-
-                    // Configurar reconexão
-                    configurarReconexao(video);
-
-                    // Implementar busca
-                    document.getElementById("search-input").addEventListener("input", function() {
-                        var termoBusca = this.value.toLowerCase();
+                    // Adicionar funcionalidade de busca
+                    searchInput.addEventListener('input', function() {
+                        var termoBusca = searchInput.value.toLowerCase();
                         var canaisFiltrados = canais.filter(function(canal) {
                             return canal.nome.toLowerCase().includes(termoBusca);
                         });
-
-                        // Chama a função renderCanais com canais filtrados
-                        renderCanais(canaisFiltrados);
+                        adicionarCanaisALista(canaisFiltrados);
                     });
+
+                    // Inicializar reconexão
+                    configurarReconexao(video);
                 }
             };
             xhr.send();
