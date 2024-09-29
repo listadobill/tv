@@ -200,6 +200,7 @@
         document.addEventListener("DOMContentLoaded", function() {
             var listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/iptv.m3u";
             var listaCanaisElemento = document.getElementById("lista-canais");
+            var searchInput = document.getElementById("search-input");
             var video = videojs('video-player', {
                 controls: true,
                 autoplay: false,
@@ -257,27 +258,42 @@
                     }
 
                     // Adicionar canais à lista na página
-                    for (var j = 0; j < canais.length; j++) {
-                        var li = document.createElement('li');
-                        li.onclick = (function(link) {
-                            return function() {
-                                video.src({ src: link, type: 'application/x-mpegURL' });
-                                video.play();
-                                abrirTelaCheia();
-                            };
-                        })(canais[j].link);
+                    function adicionarCanaisALista(canaisFiltrados) {
+                        listaCanaisElemento.innerHTML = ''; // Limpa a lista atual
+                        for (var j = 0; j < canaisFiltrados.length; j++) {
+                            var li = document.createElement('li');
+                            li.onclick = (function(link) {
+                                return function() {
+                                    video.src({ src: link, type: 'application/x-mpegURL' });
+                                    video.play();
+                                    abrirTelaCheia();
+                                };
+                            })(canaisFiltrados[j].link);
 
-                        if (canais[j].logoURL) {
-                            var img = document.createElement('img');
-                            img.src = canais[j].logoURL;
-                            li.appendChild(img);
+                            if (canaisFiltrados[j].logoURL) {
+                                var img = document.createElement('img');
+                                img.src = canaisFiltrados[j].logoURL;
+                                li.appendChild(img);
+                            }
+
+                            var p = document.createElement('p');
+                            p.textContent = canaisFiltrados[j].nome;
+                            li.appendChild(p);
+                            listaCanaisElemento.appendChild(li);
                         }
-
-                        var p = document.createElement('p');
-                        p.textContent = canais[j].nome;
-                        li.appendChild(p);
-                        listaCanaisElemento.appendChild(li);
                     }
+
+                    // Inicializar lista completa de canais
+                    adicionarCanaisALista(canais);
+
+                    // Adicionar funcionalidade de busca
+                    searchInput.addEventListener('input', function() {
+                        var termoBusca = searchInput.value.toLowerCase();
+                        var canaisFiltrados = canais.filter(function(canal) {
+                            return canal.nome.toLowerCase().includes(termoBusca);
+                        });
+                        adicionarCanaisALista(canaisFiltrados);
+                    });
 
                     // Inicializar reconexão
                     configurarReconexao(video);
