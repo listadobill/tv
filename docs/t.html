@@ -207,7 +207,6 @@
             var listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/iptv2.m3u";
             var listaCanaisElemento = document.getElementById("lista-canais");
             var searchInput = document.getElementById("search-input");
-            var canais = []; // Variável global para armazenar os canais
             var video = videojs('video-player', {
                 controls: true,
                 autoplay: false,
@@ -218,10 +217,20 @@
                 window.location.href = "https://listadobill.github.io/tv/inicial";
             };
 
+            // Função para abrir em tela cheia
+            function abrirTelaCheia() {
+                if (video.isFullscreen()) {
+                    video.exitFullscreen();
+                } else {
+                    video.requestFullscreen();
+                }
+            }
+
             // Função de reconexão indefinida
             function configurarReconexao(player) {
                 function tentarReconectar() {
                     console.log('Tentando reconectar...');
+
                     setTimeout(function() {
                         player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
                         player.play().catch(function(error) {
@@ -232,57 +241,58 @@
                 }
 
                 player.on('error', function() {
-                    tentarReconectar(); // Inicia a reconexão quando ocorre um erro
-                });
-
-                player.on('ended', function() {
-                    console.log('Transmissão encerrada. Reiniciando...');
-                    player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
-                    player.play().catch(function(error) {
-                        console.log('Erro ao reiniciar a transmissão. Tentando reconectar...', error);
-                        tentarReconectar(); // Se falhar, tenta reconectar
-                    });
+                    console.log('Erro de reprodução detectado.');
+                    tentarReconectar();
                 });
             }
 
-            // Função para carregar canais
-            function carregarCanais() {
-                fetch(listaURL)
-                    .then(response => response.text())
-                    .then(data => {
-                        var linhas = data.split('\n');
-                        linhas.forEach(function(linha) {
-                            if (linha.startsWith('#EXTINF')) {
-                                var canal = linha.split(',')[1].trim();
-                                canais.push(canal);
-                                var li = document.createElement('li');
-                                li.textContent = canal;
-                                li.onclick = function() {
-                                    // Substitua 'URL_DO_STREAM_AQUI' pela URL do stream selecionado
-                                    var urlStream = "URL_DO_STREAM_AQUI"; // Você precisa substituir isso pela URL real do canal
-                                    player.src({ src: urlStream, type: 'application/x-mpegURL' });
-                                    player.play().catch(function(error) {
-                                        console.log('Erro ao iniciar a transmissão:', error);
-                                    });
-                                };
-                                listaCanaisElemento.appendChild(li);
-                            }
-                        });
-                    })
-                    .catch(error => console.error('Erro ao carregar a lista de canais:', error));
+            // Carregar lista de canais e configurá-los
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', listaURL, true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var linhas = xhr.responseText.split("\n");
+                    var canais = [];
+
+                    for (var i = 0; i < linhas.length; i++) {
+                        if (linhas[i].startsWith("#EXTINF")) {
+                            var nomeCanal = linhas[i].split(',')[1].trim();
+                            var urlCanal = linhas[i + 1].trim();
+
+                            canais.push({ nome: nomeCanal, url: urlCanal });
+                        }
+                    }
+
+                    carregarCanais(canais);
+                }
+            };
+            xhr.send();
+
+            function carregarCanais(canais) {
+                listaCanaisElemento.innerHTML = '';
+
+                canais.forEach(function(canal) {
+                    var li = document.createElement('li');
+                    li.innerHTML = '<p>' + canal.nome + '</p>';
+                    li.onclick = function() {
+                        video.src({ src: canal.url, type: 'application/x-mpegURL' });
+                        video.play();
+                        abrirTelaCheia(); // Abre em tela cheia ao clicar no canal
+                    };
+                    listaCanaisElemento.appendChild(li);
+                });
             }
 
-            // Função para filtrar canais
+            // Implementar busca
             searchInput.addEventListener('input', function() {
-                var filtro = searchInput.value.toLowerCase();
-                var itens = listaCanaisElemento.getElementsByTagName('li');
-                Array.from(itens).forEach(function(item) {
-                    var texto = item.textContent.toLowerCase();
-                    item.style.display = texto.includes(filtro) ? '' : 'none';
+                var termoBusca = searchInput.value.toLowerCase();
+                var canaisFiltrados = canais.filter(function(canal) {
+                    return canal.nome.toLowerCase().includes(termoBusca);
                 });
+                carregarCanais(canaisFiltrados);
             });
 
-            carregarCanais();
+            // Configurar reconexão
             configurarReconexao(video);
         });
     </script>
