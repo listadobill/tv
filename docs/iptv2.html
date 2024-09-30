@@ -80,9 +80,14 @@
         }
 
         .video-js {
-            width: 100%;
-            height: 100%;
+            width: 100% !important;
+            height: 100% !important;
             background-color: #000;
+        }
+
+        .vjs-tech {
+            width: 100% !important;
+            height: 100% !important;
         }
 
         #sidebar {
@@ -168,7 +173,7 @@
 <body>
     <div id="container">
         <div id="header">
-            LISTA DE CANAIS IPTV - DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV - Atualização, 29 de Setembro de 2024: https://bit.ly/tvdobill-iptv - EPG https://bit.ly/tvdobill-epg 
+            LISTA DE CANAIS IPTV 2 - DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV - Atualização, 29 de Setembro de 2024: https://bit.ly/tvdobill-iptv - EPG https://bit.ly/tvdobill-epg 
             <div>
                 <button id="home-button">CANAIS, SÉRIES E FILMES STREAM</button>
                 <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/'">SERVIDOR 1</button>
@@ -212,6 +217,9 @@
                 window.location.href = "https://listadobill.github.io/tv/inicial";
             };
 
+            // Variável para armazenar os canais
+            var canais = [];
+
             // Função para abrir em tela cheia
             function abrirTelaCheia() {
                 if (video.isFullscreen()) {
@@ -236,21 +244,27 @@
                 }
 
                 player.on('error', function() {
-                    tentarReconectar(); // Chama a função de reconexão quando ocorre um erro
+                    console.log('Erro de reprodução detectado.');
+                    tentarReconectar();
                 });
 
-                player.on('playing', function() {
-                    console.log('Conexão restabelecida, reprodução retomada.');
+                player.on('ended', function() {
+                    console.log('Transmissão encerrada. Tentando reconectar...');
+                    player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
+                    player.play().catch(function(error) {
+                        console.log('Erro ao reproduzir após término, tentando novamente...', error);
+                        tentarReconectar();
+                    });
                 });
             }
 
-            var canais = [];
-
+            // Carregar lista de canais e configurá-los
             var xhr = new XMLHttpRequest();
-            xhr.open("GET", listaURL, true);
+            xhr.open('GET', listaURL, true);
             xhr.onreadystatechange = function() {
                 if (xhr.readyState === 4 && xhr.status === 200) {
                     var linhas = xhr.responseText.split("\n");
+
                     for (var i = 0; i < linhas.length; i++) {
                         if (linhas[i].startsWith("#EXTINF")) {
                             var nomeCanal = linhas[i].split(',')[1].trim();
@@ -265,10 +279,10 @@
             };
             xhr.send();
 
-            function carregarCanais(canais) {
+            function carregarCanais(canaisFiltrados) {
                 listaCanaisElemento.innerHTML = '';
 
-                canais.forEach(function(canal) {
+                canaisFiltrados.forEach(function(canal) {
                     var li = document.createElement('li');
                     li.innerHTML = '<p>' + canal.nome + '</p>';
                     li.onclick = function() {
