@@ -173,7 +173,7 @@
 <body>
     <div id="container">
         <div id="header">
-            LISTA DE CANAIS IPTV 2- DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV - Atualização, 29 de Setembro de 2024: https://bit.ly/tvdobill-iptv - EPG https://bit.ly/tvdobill-epg 
+            LISTA DE CANAIS IPTV - DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV - Atualização, 29 de Setembro de 2024: https://bit.ly/tvdobill-iptv - EPG https://bit.ly/tvdobill-epg 
             <div>
                 <button id="home-button">CANAIS, SÉRIES E FILMES STREAM</button>
                 <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/'">SERVIDOR 1</button>
@@ -207,6 +207,8 @@
             var listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/iptv2.m3u";
             var listaCanaisElemento = document.getElementById("lista-canais");
             var searchInput = document.getElementById("search-input");
+            var canais = []; // Variável global para armazenar os canais
+
             var video = videojs('video-player', {
                 controls: true,
                 autoplay: false,
@@ -252,7 +254,6 @@
             xhr.onreadystatechange = function() {
                 if (xhr.readyState === 4 && xhr.status === 200) {
                     var linhas = xhr.responseText.split("\n");
-                    var canais = [];
 
                     for (var i = 0; i < linhas.length; i++) {
                         if (linhas[i].startsWith("#EXTINF")) {
@@ -268,6 +269,7 @@
             };
             xhr.send();
 
+            // Carregar canais na lista
             function carregarCanais(canais) {
                 listaCanaisElemento.innerHTML = '';
 
