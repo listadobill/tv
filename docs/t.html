@@ -13,8 +13,9 @@
             background-color: #000;
             color: #fff;
             display: flex;
+            flex-direction: column;
             height: 100vh;
-            overflow: hidden;
+            overflow-y: auto; /* Habilitar rolagem no corpo da página */
         }
 
         #container {
@@ -65,7 +66,7 @@
         #main {
             display: flex;
             flex: 1;
-            overflow: hidden;
+            overflow-y: auto; /* Habilitar rolagem na área principal */
         }
 
         #player {
@@ -154,7 +155,6 @@
             background-color: rgba(76, 175, 80, 1);
         }
 
-        /* Estilos de barra de rolagem */
         ::-webkit-scrollbar {
             width: 10px;
         }
@@ -162,36 +162,6 @@
         ::-webkit-scrollbar-thumb {
             background-color: #4CAF50;
             border-radius: 10px;
-        }
-
-        /* Responsividade para celulares */
-        @media (max-width: 768px) {
-            #main {
-                flex-direction: column;
-                overflow-y: auto;
-            }
-
-            #sidebar {
-                flex: none;
-                height: 40vh;
-                overflow-y: scroll;
-            }
-
-            #player {
-                flex: none;
-                height: 60vh;
-            }
-
-            #container {
-                height: auto;
-                flex-direction: column;
-                overflow-y: auto;
-            }
-
-            /* Barra de rolagem visível para rolar a página */
-            body {
-                overflow-y: auto;
-            }
         }
     </style>
 </head>
@@ -244,68 +214,81 @@
 
             // Função para abrir em tela cheia
             function abrirTelaCheia() {
-                if (video.requestFullscreen) {
+                if (video.isFullscreen()) {
+                    video.exitFullscreen();
+                } else {
                     video.requestFullscreen();
-                } else if (video.webkitRequestFullscreen) {
-                    video.webkitRequestFullscreen();
-                } else if (video.msRequestFullscreen) {
-                    video.msRequestFullscreen();
                 }
             }
 
-            video.on('play', abrirTelaCheia);
+            function configurarReconexao(player) {
+                player.on('error', function() {
+                    console.log('Tentando reconectar...');
+                    player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
+                    player.play();
+                });
+            }
 
-            // Função para carregar a lista de canais e populá-la na sidebar
-            function carregarListaCanais(url) {
-                fetch(url)
-                    .then(response => response.text())
-                    .then(data => {
-                        const linhas = data.split("\n");
-                        let canaisHTML = "";
-                        let canalAtual = { nome: "", logo: "", url: "" };
+            var canais = [];
 
-                        linhas.forEach(linha => {
-                            if (linha.startsWith("#EXTINF:")) {
-                                const infoCanal = linha.split(",");
-                                canalAtual.nome = infoCanal[1];
-                                const logoRegex = /tvg-logo="(.*?)"/;
-                                const logoMatch = logoRegex.exec(linha);
-                                canalAtual.logo = logoMatch ? logoMatch[1] : "";
-                            } else if (linha.startsWith("http")) {
-                                canalAtual.url = linha.trim();
-                                canaisHTML += `
-                                    <li onclick="reproduzirCanal('${canalAtual.url}')">
-                                        <img src="${canalAtual.logo}" alt="Logo do canal">
-                                        <p>${canalAtual.nome}</p>
-                                    </li>`;
-                                canalAtual = { nome: "", logo: "", url: "" };
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", listaURL, true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var linhas = xhr.responseText.split('\n');
+
+                    for (var i = 0; i < linhas.length; i++) {
+                        if (linhas[i].startsWith('#EXTINF')) {
+                            var nome = linhas[i].split(',')[1];
+                            var link = linhas[i + 1] ? linhas[i + 1].trim() : null;
+
+                            if (!nome || !link) continue;
+
+                            var logoURL = '';
+                            var logoMatch = linhas[i].match(/tvg-logo="(.*?)"/);
+                            if (logoMatch) {
+                                logoURL = logoMatch[1];
                             }
-                        });
 
-                        listaCanaisElemento.innerHTML = canaisHTML;
-                    })
-                    .catch(error => console.error("Erro ao carregar lista de canais:", error));
-            }
+                            var li = document.createElement('li');
+                            var img = document.createElement('img');
+                            img.src = logoURL || 'https://via.placeholder.com/50';
+                            var p = document.createElement('p');
+                            p.textContent = nome;
 
-            // Função para reproduzir o canal selecionado
-            function reproduzirCanal(url) {
-                video.src({ type: "application/x-mpegURL", src: url });
-                video.play();
-            }
+                            li.appendChild(img);
+                            li.appendChild(p);
+                            li.onclick = (function(url) {
+                                return function() {
+                                    video.src({
+                                        src: url,
+                                        type: 'application/x-mpegURL'
+                                    });
+                                    video.play();
+                                };
+                            })(link);
 
-            // Carregar lista de canais ao iniciar
-            carregarListaCanais(listaURL);
+                            listaCanaisElemento.appendChild(li);
+                            canais.push({ nome: nome, link: link, li: li });
+                        }
+                    }
+                }
+            };
+            xhr.send();
 
-            // Função de busca
             searchInput.addEventListener("input", function() {
-                const searchTerm = this.value.toLowerCase();
-                const canais = listaCanaisElemento.querySelectorAll("li");
+                var termoBusca = this.value.toLowerCase();
 
-                canais.forEach(canal => {
-                    const nomeCanal = canal.querySelector("p").textContent.toLowerCase();
-                    canal.style.display = nomeCanal.includes(searchTerm) ? "" : "none";
+                canais.forEach(function(canal) {
+                    if (canal.nome.toLowerCase().includes(termoBusca)) {
+                        canal.li.style.display = "";
+                    } else {
+                        canal.li.style.display = "none";
+                    }
                 });
             });
+
+            configurarReconexao(video);
         });
     </script>
 </body>
