@@ -13,7 +13,6 @@
             background-color: #000;
             color: #fff;
             display: flex;
-            flex-direction: column;
             height: 100vh;
             overflow: hidden;
         }
@@ -33,14 +32,6 @@
             border-bottom: 1px solid #444;
         }
 
-        #buttons {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 5px;
-            margin-top: 10px;
-        }
-
         #home-button, .nav-button {
             background-color: #4CAF50;
             color: white;
@@ -57,6 +48,20 @@
             background-color: #45a049;
         }
 
+        #search-bar {
+            padding: 10px;
+            background-color: #333;
+            text-align: center;
+        }
+
+        #search-input {
+            width: 95%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
         #main {
             display: flex;
             flex: 1;
@@ -66,9 +71,11 @@
         #player {
             flex: 2;
             background-color: rgba(0, 0, 0, 0.8);
+            position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
+            overflow: hidden;
         }
 
         .video-js {
@@ -83,20 +90,6 @@
             overflow-y: auto;
             padding: 10px;
             border-left: 2px solid #444;
-        }
-
-        #search-bar {
-            padding: 10px;
-            background-color: #333;
-            text-align: center;
-        }
-
-        #search-input {
-            width: 95%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1em;
         }
 
         #sidebar ul {
@@ -161,6 +154,7 @@
             background-color: rgba(76, 175, 80, 1);
         }
 
+        /* Estilos de barra de rolagem */
         ::-webkit-scrollbar {
             width: 10px;
         }
@@ -170,43 +164,33 @@
             border-radius: 10px;
         }
 
-        /* Responsividade */
+        /* Responsividade para celulares */
         @media (max-width: 768px) {
             #main {
                 flex-direction: column;
-                overflow: auto;
+                overflow-y: auto;
             }
 
             #sidebar {
+                flex: none;
                 height: 40vh;
+                overflow-y: scroll;
             }
 
             #player {
+                flex: none;
                 height: 60vh;
             }
 
-            #sidebar li {
-                font-size: 0.9em;
+            #container {
+                height: auto;
+                flex-direction: column;
+                overflow-y: auto;
             }
 
-            #sidebar img {
-                width: 40px;
-                height: 40px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            #sidebar img {
-                width: 35px;
-                height: 35px;
-            }
-
-            #sidebar p {
-                font-size: 0.85em;
-            }
-
-            #sidebar li {
-                padding: 8px;
+            /* Barra de rolagem visível para rolar a página */
+            body {
+                overflow-y: auto;
             }
         }
     </style>
@@ -215,17 +199,17 @@
     <div id="container">
         <div id="header">
             LISTA DE CANAIS IPTV - DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV - Atualização, 29 de Setembro de 2024: https://bit.ly/tvdobill-iptv - EPG https://bit.ly/tvdobill-epg 
-        </div>
-        <div id="buttons">
-            <button id="home-button">CANAIS, SÉRIES E FILMES STREAM</button>
-            <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/'">SERVIDOR 1</button>
-            <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/iptv2'">SERVIDOR 2</button>
-            <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/argentina'">ARGENTINA</button>
-            <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/brasil'">BRASIL</button>
-            <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/carros'">CARROS</button>
-            <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/espanha'">ESPANHA</button>
-            <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/musica'">MÚSICA</button>
-            <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/portugal'">PORTUGAL</button>
+            <div>
+                <button id="home-button">CANAIS, SÉRIES E FILMES STREAM</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/'">SERVIDOR 1</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/iptv2'">SERVIDOR 2</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/argentina'">ARGENTINA</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/brasil'">BRASIL</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/carros'">CARROS</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/espanha'">ESPANHA</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/musica'">MÚSICA</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/portugal'">PORTUGAL</button>
+            </div>
         </div>
         <div id="main">
             <div id="sidebar">
@@ -237,14 +221,92 @@
                 </ul>
             </div>
             <div id="player">
-                <video id="video-player" class="video-js vjs-default-skin" controls preload="auto" width="640" height="268" data-setup='{}'>
-                    <source src="https://path_to_your_stream.m3u8" type="application/x-mpegURL">
-                    Seu navegador não suporta vídeo HTML5.
-                </video>
+                <video id="video-player" class="video-js vjs-default-skin" controls></video>
             </div>
         </div>
     </div>
 
     <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/iptv.m3u";
+            var listaCanaisElemento = document.getElementById("lista-canais");
+            var searchInput = document.getElementById("search-input");
+            var video = videojs('video-player', {
+                controls: true,
+                autoplay: false,
+                preload: 'auto'
+            });
+
+            document.getElementById('home-button').onclick = function() {
+                window.location.href = "https://listadobill.github.io/tv/inicial";
+            };
+
+            // Função para abrir em tela cheia
+            function abrirTelaCheia() {
+                if (video.requestFullscreen) {
+                    video.requestFullscreen();
+                } else if (video.webkitRequestFullscreen) {
+                    video.webkitRequestFullscreen();
+                } else if (video.msRequestFullscreen) {
+                    video.msRequestFullscreen();
+                }
+            }
+
+            video.on('play', abrirTelaCheia);
+
+            // Função para carregar a lista de canais e populá-la na sidebar
+            function carregarListaCanais(url) {
+                fetch(url)
+                    .then(response => response.text())
+                    .then(data => {
+                        const linhas = data.split("\n");
+                        let canaisHTML = "";
+                        let canalAtual = { nome: "", logo: "", url: "" };
+
+                        linhas.forEach(linha => {
+                            if (linha.startsWith("#EXTINF:")) {
+                                const infoCanal = linha.split(",");
+                                canalAtual.nome = infoCanal[1];
+                                const logoRegex = /tvg-logo="(.*?)"/;
+                                const logoMatch = logoRegex.exec(linha);
+                                canalAtual.logo = logoMatch ? logoMatch[1] : "";
+                            } else if (linha.startsWith("http")) {
+                                canalAtual.url = linha.trim();
+                                canaisHTML += `
+                                    <li onclick="reproduzirCanal('${canalAtual.url}')">
+                                        <img src="${canalAtual.logo}" alt="Logo do canal">
+                                        <p>${canalAtual.nome}</p>
+                                    </li>`;
+                                canalAtual = { nome: "", logo: "", url: "" };
+                            }
+                        });
+
+                        listaCanaisElemento.innerHTML = canaisHTML;
+                    })
+                    .catch(error => console.error("Erro ao carregar lista de canais:", error));
+            }
+
+            // Função para reproduzir o canal selecionado
+            function reproduzirCanal(url) {
+                video.src({ type: "application/x-mpegURL", src: url });
+                video.play();
+            }
+
+            // Carregar lista de canais ao iniciar
+            carregarListaCanais(listaURL);
+
+            // Função de busca
+            searchInput.addEventListener("input", function() {
+                const searchTerm = this.value.toLowerCase();
+                const canais = listaCanaisElemento.querySelectorAll("li");
+
+                canais.forEach(canal => {
+                    const nomeCanal = canal.querySelector("p").textContent.toLowerCase();
+                    canal.style.display = nomeCanal.includes(searchTerm) ? "" : "none";
+                });
+            });
+        });
+    </script>
 </body>
 </html>
