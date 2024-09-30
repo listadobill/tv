@@ -1,311 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TV DO BILL - ALGUNS CANAIS PODEM ESTAR FORA, AGUARDE ATUALIZAÇÃO - DESATIVE CONEXÃO SEGURA</title>
-    <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
+    <title>Filtrar Canais Brasileiros da Lista M3U</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #000;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            overflow-y: auto;
-        }
-
-        #container {
-            display: flex;
-            flex-direction: column;
+        textarea, pre {
             width: 100%;
-            height: 100%;
+            height: 300px;
         }
-
-        #header {
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 10px;
-            text-align: center;
-            font-size: 1.2em;
-            border-bottom: 1px solid #444;
-        }
-
-        #home-button, .nav-button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 6px 12px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 0.9em;
-            margin: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        #home-button:hover, .nav-button:hover {
-            background-color: #45a049;
-        }
-
-        #search-bar {
-            padding: 10px;
-            background-color: #333;
-            text-align: center;
-        }
-
-        #search-input {
-            width: 95%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1em;
-        }
-
-        #main {
-            display: flex;
-            flex: 1;
-            overflow-y: auto;
-        }
-
-        #player {
-            flex: 2;
-            background-color: rgba(0, 0, 0, 0.8);
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-        }
-
-        .video-js {
-            width: 100% !important;
-            height: 100% !important;
-            background-color: #000;
-        }
-
-        .vjs-tech {
-            width: 100% !important;
-            height: 100% !important;
-        }
-
-        #sidebar {
-            flex: 1;
-            background-color: rgba(34, 34, 34, 0.8);
-            overflow-y: auto;
-            padding: 10px;
-            border-left: 2px solid #444;
-        }
-
-        #sidebar ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        #sidebar li {
-            background-color: rgba(50, 50, 50, 0.8);
-            border-radius: 8px;
-            padding: 10px;
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        #sidebar li:hover {
-            background-color: #4CAF50;
-        }
-
-        #sidebar img {
-            width: 50px;
-            height: 50px;
-            margin-right: 10px;
-            border-radius: 50%;
-            border: 2px solid #4CAF50;
-            object-fit: cover;
-        }
-
-        #sidebar p {
-            margin: 0;
-            font-size: 1.1em;
-        }
-
-        .video-js.vjs-fullscreen {
-            width: 100% !important;
-            height: 100% !important;
-            position: fixed;
-            top: 0;
-            left: 0;
-        }
-
-        .video-js.vjs-default-skin .vjs-control-bar {
-            background: rgba(0, 0, 0, 0.6);
-        }
-
-        .video-js .vjs-big-play-button {
-            background-color: rgba(76, 175, 80, 0.8);
-            border: none;
-            border-radius: 50%;
-            font-size: 2.5em;
-            line-height: 1.5;
-            transition: background-color 0.3s ease;
-        }
-
-        .video-js .vjs-big-play-button:hover {
-            background-color: rgba(76, 175, 80, 1);
-        }
-
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background-color: #4CAF50;
-            border-radius: 10px;
+        button {
+            margin: 10px 0;
         }
     </style>
 </head>
 <body>
-    <div id="container">
-        <div id="header">
-            LISTA DE CANAIS IPTV 2 - DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV - Atualização, 29 de Setembro de 2024: https://bit.ly/tvdobill-iptv - EPG https://bit.ly/tvdobill-epg 
-            <div>
-                <button id="home-button">CANAIS, SÉRIES E FILMES STREAM</button>
-                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/'">SERVIDOR 1</button>
-                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/iptv2'">SERVIDOR 2</button>
-                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/argentina'">ARGENTINA</button>
-                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/brasil'">BRASIL</button>
-                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/carros'">CARROS</button>
-                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/espanha'">ESPANHA</button>
-                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/musica'">MÚSICA</button>
-                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/portugal'">PORTUGAL</button>
-            </div>
-        </div>
-        <div id="main">
-            <div id="sidebar">
-                <div id="search-bar">
-                    <input type="text" id="search-input" placeholder="Buscar canal...">
-                </div>
-                <ul id="lista-canais">
-                    <!-- Canais serão carregados dinamicamente -->
-                </ul>
-            </div>
-            <div id="player">
-                <video id="video-player" class="video-js vjs-default-skin" controls></video>
-            </div>
-        </div>
-    </div>
 
-    <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/iptv2.m3u";
-            var listaCanaisElemento = document.getElementById("lista-canais");
-            var searchInput = document.getElementById("search-input");
-            var video = videojs('video-player', {
-                controls: true,
-                autoplay: false,
-                preload: 'auto'
-            });
+<h1>Filtrar Canais Brasileiros e Latinos da Lista M3U</h1>
+<textarea id="listaM3U" placeholder="Cole aqui sua lista M3U..."></textarea>
+<br>
+<button onclick="gerarListaFiltrada()">Gerar Lista Filtrada</button>
+<button onclick="baixarLista()">Baixar Lista Filtrada (.m3u)</button>
+<pre id="filteredList"></pre>
 
-            document.getElementById('home-button').onclick = function() {
-                window.location.href = "https://listadobill.github.io/tv/inicial";
-            };
+<script>
+// Função para corrigir erros comuns de má formação na lista M3U
+function corrigirErros(listaM3U) {
+    const linhas = listaM3U.split('\n');
+    const listaCorrigida = [];
 
-            // Variável para armazenar os canais
-            var canais = [];
-
-            // Função para abrir em tela cheia
-            function abrirTelaCheia() {
-                if (video.isFullscreen()) {
-                    video.exitFullscreen();
-                } else {
-                    video.requestFullscreen();
-                }
+    for (let i = 0; i < linhas.length; i++) {
+        const linha = linhas[i].trim();
+        
+        // Verifica se a linha é #EXTINF e se a próxima é uma URL
+        if (linha.startsWith('#EXTINF')) {
+            const proximaLinha = linhas[i + 1] ? linhas[i + 1].trim() : '';
+            if (!proximaLinha.startsWith('http')) {
+                continue;  // Ignora a linha órfã sem URL
             }
+        }
 
-            // Função de reconexão indefinida
-            function configurarReconexao(player) {
-                function tentarReconectar() {
-                    console.log('Tentando reconectar...');
+        listaCorrigida.push(linha);
+    }
 
-                    setTimeout(function() {
-                        player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
-                        player.play().catch(function(error) {
-                            console.log('Erro ao reproduzir, tentando novamente...', error);
-                            tentarReconectar(); // Se falhar, tenta novamente
-                        });
-                    }, 3000); // Tentar reconectar após 3 segundos
-                }
+    return listaCorrigida.join('\n');
+}
 
-                player.on('error', function() {
-                    console.log('Erro de reprodução detectado.');
-                    tentarReconectar();
-                });
+// Função para filtrar a lista M3U e manter apenas canais brasileiros e latinos com URLs válidas
+function filtrarCanais(listaM3U) {
+    const canaisBrasileirosLatinos = [];
+    
+    // Lista de termos abrangentes, incluindo plural e singular
+    const termosBrasileirosLatinos = ['canais', 'canal', 'abertos', 'aberto', 'esportes', 'esporte', 'filmes', 'filme', 'séries', 'série', 'infantil', 'notícias', 'notícia', 'variedades', 'variedade', 'brasil', 'brazil', 'br', 'latino', 'latinos', 'LATINO', 'LATINOS'];
+    
+    // Quebra a lista em linhas e corrige a má formação
+    const linhas = corrigirErros(listaM3U).split('\n');
+    
+    for (let i = 0; i < linhas.length; i++) {
+        const linha = linhas[i].trim();
 
-                player.on('ended', function() {
-                    console.log('Transmissão encerrada. Tentando reconectar...');
-                    player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
-                    player.play().catch(function(error) {
-                        console.log('Erro ao reproduzir após término, tentando novamente...', error);
-                        tentarReconectar();
-                    });
-                });
-            }
+        // Verifica se a linha é de metadados de canal
+        if (linha.startsWith('#EXTINF')) {
+            // Verifica se a próxima linha contém uma URL
+            let url = linhas[i + 1] ? linhas[i + 1].trim() : '';
 
-            // Carregar lista de canais e configurá-los
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', listaURL, true);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    var linhas = xhr.responseText.split("\n");
+            // Converte a linha para minúsculas para uma comparação sem diferenciação de maiúsculas/minúsculas
+            const linhaMin = linha.toLowerCase();
 
-                    for (var i = 0; i < linhas.length; i++) {
-                        if (linhas[i].startsWith("#EXTINF")) {
-                            var nomeCanal = linhas[i].split(',')[1].trim();
-                            var urlCanal = linhas[i + 1].trim();
+            // Verifica se algum dos termos está presente no 'group-title'
+            if (termosBrasileirosLatinos.some(termo => linhaMin.includes(termo))) {
 
-                            canais.push({ nome: nomeCanal, url: urlCanal });
-                        }
+                // Apenas continua se a próxima linha for uma URL válida
+                if (url.endsWith('.m3u8') || url.endsWith('.m3u') || url.endsWith('.ts')) {
+
+                    // Converte .ts para .m3u8, caso necessário
+                    if (url.endsWith('.ts')) {
+                        url = url.replace('.ts', '.m3u8');
                     }
 
-                    carregarCanais(canais);
+                    // Formata a linha #EXTINF para incluir apenas o logo e o nome
+                    const metadadosFormatados = linha.replace(/tvg-id="[^"]*" /, '')
+                                                       .replace(/tvg-name="([^"]*)"/, '')
+                                                       .replace(/group-title="[^"]*"/, '')
+                                                       .replace(',-', ',')
+                                                       .replace(/(?<=\w)"$/, ''); // Remove aspas finais se existir
+
+                    // Adiciona o par (metadado + URL) à lista de canais brasileiros e latinos
+                    canaisBrasileirosLatinos.push(metadadosFormatados + '\n' + url);
                 }
-            };
-            xhr.send();
-
-            function carregarCanais(canaisFiltrados) {
-                listaCanaisElemento.innerHTML = '';
-
-                canaisFiltrados.forEach(function(canal) {
-                    var li = document.createElement('li');
-                    li.innerHTML = '<p>' + canal.nome + '</p>';
-                    li.onclick = function() {
-                        video.src({ src: canal.url, type: 'application/x-mpegURL' });
-                        video.play();
-                        abrirTelaCheia(); // Abre em tela cheia ao clicar no canal
-                    };
-                    listaCanaisElemento.appendChild(li);
-                });
             }
+        }
+    }
 
-            // Implementar busca
-            searchInput.addEventListener('input', function() {
-                var termoBusca = searchInput.value.toLowerCase();
-                var canaisFiltrados = canais.filter(function(canal) {
-                    return canal.nome.toLowerCase().includes(termoBusca);
-                });
-                carregarCanais(canaisFiltrados);
-            });
+    // Adiciona a linha #EXTM3U no topo da lista
+    return '#EXTM3U\n' + canaisBrasileirosLatinos.join('\n');
+}
 
-            // Configurar reconexão
-            configurarReconexao(video);
-        });
-    </script>
+// Função para gerar a lista filtrada e exibi-la na página
+function gerarListaFiltrada() {
+    // Pega o conteúdo da textarea (lista M3U colada)
+    const listaM3U = document.getElementById('listaM3U').value;
+
+    // Chama a função para filtrar os canais brasileiros e latinos
+    const listaFiltrada = filtrarCanais(listaM3U);
+
+    // Exibe a lista filtrada
+    document.getElementById('filteredList').textContent = listaFiltrada;
+}
+
+// Função para baixar a lista filtrada como um arquivo .m3u
+function baixarLista() {
+    // Pega o conteúdo filtrado
+    const listaFiltrada = document.getElementById('filteredList').textContent;
+
+    // Cria um blob com o conteúdo filtrado
+    const blob = new Blob([listaFiltrada], { type: 'text/plain' });
+    
+    // Cria um link temporário para download
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'lista_filtrada.m3u';
+
+    // Simula o clique para iniciar o download
+    link.click();
+
+    // Libera o recurso do objeto URL
+    URL.revokeObjectURL(link.href);
+}
+</script>
+
 </body>
 </html>
