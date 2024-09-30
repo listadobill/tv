@@ -29,7 +29,7 @@
             background-color: rgba(0, 0, 0, 0.8);
             padding: 10px;
             text-align: center;
-            font-size: 1.2em; /* Diminuído o tamanho da fonte */
+            font-size: 1.2em; /* Diminuído o tamanho da fonte do cabeçalho */
             border-bottom: 1px solid #444;
         }
 
@@ -37,10 +37,10 @@
             background-color: #4CAF50;
             color: white;
             border: none;
-            padding: 6px 12px; /* Diminuído o padding */
+            padding: 6px 12px; /* Diminuído o padding dos botões */
             border-radius: 5px;
             cursor: pointer;
-            font-size: 0.8em; /* Diminuído o tamanho da fonte */
+            font-size: 0.9em; /* Diminuído o tamanho da fonte dos botões */
             margin: 5px;
             transition: background-color 0.3s ease;
         }
@@ -244,49 +244,44 @@
 
                             if (!nome || !link) continue;
 
-                            var logoURL = '';
-                            var logoMatch = linhas[i].match(/tvg-logo="(.*?)"/);
-                            if (logoMatch) {
-                                logoURL = logoMatch[1];
-                            }
-
-                            var li = document.createElement('li');
-                            var img = document.createElement('img');
-                            img.src = logoURL || 'https://via.placeholder.com/50';
-                            var p = document.createElement('p');
-                            p.textContent = nome;
-
-                            li.appendChild(img);
-                            li.appendChild(p);
-                            li.onclick = (function(url) {
-                                return function() {
-                                    video.src({
-                                        src: url,
-                                        type: 'application/x-mpegURL'
-                                    });
-                                    video.play();
-                                };
-                            })(link);
-
-                            listaCanaisElemento.appendChild(li);
-                            canais.push({ nome: nome, link: link, li: li });
+                            var logoURL = ""; // Aqui você pode adicionar a lógica para obter logotipos se houver.
+                            canais.push({ nome: nome, link: link, logo: logoURL });
                         }
                     }
+
+                    // Adiciona os canais na lista
+                    canais.forEach(function(canal) {
+                        var li = document.createElement("li");
+                        li.onclick = function() {
+                            video.src({ src: canal.link, type: 'application/x-mpegURL' });
+                            video.play();
+                            abrirTelaCheia(); // Abre em tela cheia ao selecionar o canal
+                        };
+
+                        var img = document.createElement("img");
+                        img.src = canal.logo || "https://via.placeholder.com/50"; // Placeholder se não houver logo
+                        var p = document.createElement("p");
+                        p.innerText = canal.nome;
+
+                        li.appendChild(img);
+                        li.appendChild(p);
+                        listaCanaisElemento.appendChild(li);
+                    });
+
+                    // Função de pesquisa
+                    searchInput.addEventListener("input", function() {
+                        var filter = searchInput.value.toLowerCase();
+                        var items = listaCanaisElemento.getElementsByTagName('li');
+
+                        for (var i = 0; i < items.length; i++) {
+                            var item = items[i];
+                            var textValue = item.textContent || item.innerText;
+                            item.style.display = textValue.toLowerCase().includes(filter) ? "" : "none";
+                        }
+                    });
                 }
             };
             xhr.send();
-
-            searchInput.addEventListener("input", function() {
-                var termoBusca = this.value.toLowerCase();
-
-                canais.forEach(function(canal) {
-                    if (canal.nome.toLowerCase().includes(termoBusca)) {
-                        canal.li.style.display = "";
-                    } else {
-                        canal.li.style.display = "none";
-                    }
-                });
-            });
 
             configurarReconexao(video);
         });
