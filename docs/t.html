@@ -244,6 +244,15 @@
                     console.log('Erro de reprodução detectado.');
                     tentarReconectar();
                 });
+
+                player.on('ended', function() {
+                    console.log('Transmissão encerrada. Tentando reconectar...');
+                    player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
+                    player.play().catch(function(error) {
+                        console.log('Erro ao reproduzir após término, tentando novamente...', error);
+                        tentarReconectar();
+                    });
+                });
             }
 
             // Carregar lista de canais e configurá-los
