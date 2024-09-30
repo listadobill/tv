@@ -52,6 +52,9 @@
     <!-- Botão para converter a lista -->
     <button onclick="convertUrls()">Converter URLs</button>
 
+    <!-- Botão para download da lista convertida -->
+    <button id="downloadBtn" style="display:none;" onclick="downloadList()">Baixar Lista Convertida</button>
+
     <h2>Lista Convertida:</h2>
     <pre id="result"></pre>
 
@@ -64,7 +67,7 @@
             const newExtension = document.getElementById('newExtension').value;
             
             const lines = originalList.split('\n');
-            let result = '';
+            let result = '#EXTM3U\n';  // Adiciona a linha de cabeçalho M3U
             
             // Varre a lista original e aplica a conversão
             lines.forEach((line) => {
@@ -115,6 +118,24 @@
 
             // Exibe o resultado
             document.getElementById('result').textContent = result;
+
+            // Mostra o botão de download
+            document.getElementById('downloadBtn').style.display = 'inline-block';
+        }
+
+        function downloadList() {
+            const convertedList = document.getElementById('result').textContent;
+            const blob = new Blob([convertedList], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+
+            // Cria um link para download e clica automaticamente
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'lista_convertida.m3u';  // Define o nome com extensão .m3u
+            a.click();
+
+            // Libera a memória
+            URL.revokeObjectURL(url);
         }
     </script>
 
