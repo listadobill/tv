@@ -80,9 +80,14 @@
         }
 
         .video-js {
-            width: 100%;
-            height: 100%;
+            width: 100% !important;
+            height: 100% !important;
             background-color: #000;
+        }
+
+        .vjs-tech {
+            width: 100% !important;
+            height: 100% !important;
         }
 
         #sidebar {
@@ -168,7 +173,7 @@
 <body>
     <div id="container">
         <div id="header">
-            LISTA DE CANAIS IPTV - DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV - Atualização, 29 de Setembro de 2024: https://bit.ly/tvdobill-iptv - EPG https://bit.ly/tvdobill-epg 
+            LISTA DE CANAIS IPTV 2- DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV - Atualização, 29 de Setembro de 2024: https://bit.ly/tvdobill-iptv - EPG https://bit.ly/tvdobill-epg 
             <div>
                 <button id="home-button">CANAIS, SÉRIES E FILMES STREAM</button>
                 <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/'">SERVIDOR 1</button>
@@ -236,21 +241,19 @@
                 }
 
                 player.on('error', function() {
-                    tentarReconectar(); // Chama a função de reconexão quando ocorre um erro
-                });
-
-                player.on('playing', function() {
-                    console.log('Conexão restabelecida, reprodução retomada.');
+                    console.log('Erro de reprodução detectado.');
+                    tentarReconectar();
                 });
             }
 
-            var canais = [];
-
+            // Carregar lista de canais e configurá-los
             var xhr = new XMLHttpRequest();
-            xhr.open("GET", listaURL, true);
+            xhr.open('GET', listaURL, true);
             xhr.onreadystatechange = function() {
                 if (xhr.readyState === 4 && xhr.status === 200) {
                     var linhas = xhr.responseText.split("\n");
+                    var canais = [];
+
                     for (var i = 0; i < linhas.length; i++) {
                         if (linhas[i].startsWith("#EXTINF")) {
                             var nomeCanal = linhas[i].split(',')[1].trim();
