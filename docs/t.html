@@ -217,6 +217,9 @@
                 window.location.href = "https://listadobill.github.io/tv/inicial";
             };
 
+            // Variável para armazenar os canais
+            var canais = [];
+
             // Função para abrir em tela cheia
             function abrirTelaCheia() {
                 if (video.isFullscreen()) {
@@ -261,7 +264,6 @@
             xhr.onreadystatechange = function() {
                 if (xhr.readyState === 4 && xhr.status === 200) {
                     var linhas = xhr.responseText.split("\n");
-                    var canais = [];
 
                     for (var i = 0; i < linhas.length; i++) {
                         if (linhas[i].startsWith("#EXTINF")) {
@@ -277,10 +279,10 @@
             };
             xhr.send();
 
-            function carregarCanais(canais) {
+            function carregarCanais(canaisFiltrados) {
                 listaCanaisElemento.innerHTML = '';
 
-                canais.forEach(function(canal) {
+                canaisFiltrados.forEach(function(canal) {
                     var li = document.createElement('li');
                     li.innerHTML = '<p>' + canal.nome + '</p>';
                     li.onclick = function() {
