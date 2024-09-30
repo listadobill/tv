@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TV DO BILL 2 - ALGUNS CANAIS PODEM ESTAR FORA, AGUARDE ATUALIZAÇÃO - DESATIVE CONEXÃO SEGURA</title>
+    <title>TV DO BILL - ALGUNS CANAIS PODEM ESTAR FORA, AGUARDE ATUALIZAÇÃO - DESATIVE CONEXÃO SEGURA</title>
     <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
     <style>
         body {
@@ -173,7 +173,7 @@
 <body>
     <div id="container">
         <div id="header">
-            LISTA DE CANAIS IPTV 2 - DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV - Atualização, 29 de Setembro de 2024: https://bit.ly/tvdobill-iptv - EPG https://bit.ly/tvdobill-epg 
+            LISTA DE CANAIS IPTV - DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV - Atualização, 29 de Setembro de 2024: https://bit.ly/tvdobill-iptv - EPG https://bit.ly/tvdobill-epg 
             <div>
                 <button id="home-button">CANAIS, SÉRIES E FILMES STREAM</button>
                 <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/'">SERVIDOR 1</button>
@@ -208,7 +208,6 @@
             var listaCanaisElemento = document.getElementById("lista-canais");
             var searchInput = document.getElementById("search-input");
             var canais = []; // Variável global para armazenar os canais
-
             var video = videojs('video-player', {
                 controls: true,
                 autoplay: false,
@@ -219,20 +218,10 @@
                 window.location.href = "https://listadobill.github.io/tv/inicial";
             };
 
-            // Função para abrir em tela cheia
-            function abrirTelaCheia() {
-                if (video.isFullscreen()) {
-                    video.exitFullscreen();
-                } else {
-                    video.requestFullscreen();
-                }
-            }
-
             // Função de reconexão indefinida
             function configurarReconexao(player) {
                 function tentarReconectar() {
                     console.log('Tentando reconectar...');
-                    
                     setTimeout(function() {
                         player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
                         player.play().catch(function(error) {
@@ -269,8 +258,12 @@
                                 var li = document.createElement('li');
                                 li.textContent = canal;
                                 li.onclick = function() {
-                                    player.src({ src: 'URL_DO_STREAM_AQUI', type: 'application/x-mpegURL' }); // Substituir pela URL do stream selecionado
-                                    player.play();
+                                    // Substitua 'URL_DO_STREAM_AQUI' pela URL do stream selecionado
+                                    var urlStream = "URL_DO_STREAM_AQUI"; // Você precisa substituir isso pela URL real do canal
+                                    player.src({ src: urlStream, type: 'application/x-mpegURL' });
+                                    player.play().catch(function(error) {
+                                        console.log('Erro ao iniciar a transmissão:', error);
+                                    });
                                 };
                                 listaCanaisElemento.appendChild(li);
                             }
