@@ -1,40 +1,62 @@
-<!DOCTYPE html><html lang="en"><head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>TV DO BILL - Desative Conexão Segura</title>    <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">    <style>        body {            font-family: Arial, sans-serif;            margin: 0;            padding: 0;            background-color: #000;            color: #fff;            height: 100vh;            display: flex;            flex-direction: column;        }        #container {            position: relative;            width: 100%;            height: 100%;            overflow: hidden;        }        #header {            background-color: rgba(0, 0, 0, 0.8);            padding: 10px;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV DO BILL - Desative Conexão Segura</title>
+    <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
             text-align: center;
             font-size: 1em;
             border-bottom: 1px solid #444;
         }
 
-        #nav-buttons {
-            text-align: center;
-            margin-bottom: 10px;
+        #top-buttons {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            background-color: #222;
+            border-bottom: 1px solid #444;
         }
 
-        #home-button, .nav-button {
+        .top-button {
+            padding: 10px;
             background-color: #4CAF50;
-            color: white;
             border: none;
-            padding: 6px 12px;
             border-radius: 5px;
+            color: #fff;
             cursor: pointer;
+            text-transform: uppercase;
             font-size: 0.9em;
-            margin: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        #home-button:hover, .nav-button:hover {
-            background-color: #45a049;
         }
 
         #search-bar {
-            padding: 10px;
-            background-color: #333;
-            text-align: center;
-        }
-
-        #search-input {
-            width: 95%;
-            padding: 10px;
-            border: none;
+            display: block;
+            width: 90%;
+            margin: 10px auto;
+            padding: 8px;
+            border: 1px solid #444;
             border-radius: 5px;
             font-size: 1em;
         }
@@ -52,7 +74,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1; /* Coloca o player por trás dos ícones */
+            z-index: -1;
         }
 
         .video-js {
@@ -70,61 +92,74 @@
         }
 
         .icon-item {
-            width: 100px;
-            height: 100px;
-            background-color: #333;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            border-radius: 8px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: transform 0.3s ease;
         }
 
         .icon-item:hover {
-            background-color: #4CAF50;
+            transform: scale(1.1);
         }
 
-        ::-webkit-scrollbar {
-            width: 10px;
+        .icon-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid #4CAF50;
         }
 
-        ::-webkit-scrollbar-thumb {
-            background-color: #4CAF50;
-            border-radius: 10px;
+        .icon-item p {
+            margin-top: 10px;
+            font-size: 0.9em;
+            text-align: center;
+        }
+
+        .video-js.vjs-fullscreen {
+            width: 100% !important;
+            height: 100% !important;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .video-js.vjs-default-skin .vjs-control-bar {
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .video-js .vjs-big-play-button {
+            background-color: rgba(76, 175, 80, 0.8);
+            border: none;
+            border-radius: 50%;
+            font-size: 2.5em;
+            line-height: 1.5;
+            transition: background-color 0.3s ease;
+        }
+
+        .video-js .vjs-big-play-button:hover {
+            background-color: rgba(76, 175, 80, 1);
         }
     </style>
 </head>
 <body>
     <div id="container">
         <div id="header">
-            LISTA DE CANAIS IPTV - DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV
+            LISTA DE CANAIS IPTV - Desative Conexão Segura - 30 de Setembro de 2024
         </div>
 
-        <div id="nav-buttons">
-            <button id="home-button">CANAIS, SÉRIES E FILMES STREAM</button>
-            <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/'">SERVIDOR 1</button>
-            <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/iptv2'">SERVIDOR 2</button>
-            <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/ott'">SERVIDOR 3</button>
-            <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/argentina'">ARGENTINA</button>
-            <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/brasil'">BRASIL</button>
-            <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/carros'">CARROS</button>
-            <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/espanha'">ESPANHA</button>
-            <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/musica'">MÚSICA</button>
-            <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/portugal'">PORTUGAL</button>
+        <div id="top-buttons">
+            <button class="top-button" onclick="location.href='pagina1.html'">Página 1</button>
+            <button class="top-button" onclick="location.href='pagina2.html'">Página 2</button>
+            <button class="top-button" onclick="location.href='pagina3.html'">Página 3</button>
         </div>
 
-        <div id="search-bar">
-            <input type="text" id="search-input" placeholder="Buscar canal...">
-        </div>
+        <input type="text" id="search-bar" placeholder="Buscar canal...">
 
         <div id="main">
             <div id="icon-grid">
-                <!-- Aqui você pode adicionar ícones de canais dinamicamente -->
-                <!-- Exemplo de item de ícone -->
-                <div class="icon-item">Ícone 1</div>
-                <div class="icon-item">Ícone 2</div>
-                <!-- Continuar adicionando ícones -->
+                <!-- Ícones de canais serão carregados dinamicamente aqui -->
             </div>
         </div>
 
@@ -136,16 +171,16 @@
     <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/iptv.m3u";
+            var iconGrid = document.getElementById("icon-grid");
+            var searchBar = document.getElementById("search-bar");
             var video = videojs('video-player', {
                 controls: true,
                 autoplay: false,
                 preload: 'auto'
             });
 
-            document.getElementById('home-button').onclick = function() {
-                window.location.href = "https://listadobill.github.io/tv/inicial";
-            };
-
+            // Função para abrir em tela cheia
             function abrirTelaCheia() {
                 if (video.isFullscreen()) {
                     video.exitFullscreen();
@@ -162,19 +197,65 @@
                 });
             }
 
+            var canais = [];
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", listaURL, true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var linhas = xhr.responseText.split('\n');
+
+                    for (var i = 0; i < linhas.length; i++) {
+                        if (linhas[i].startsWith('#EXTINF')) {
+                            var nome = linhas[i].split(',')[1];
+                            var link = linhas[i + 1] ? linhas[i + 1].trim() : null;
+
+                            if (!nome || !link) continue;
+
+                            var logoURL = ""; // Adicione lógica para obter logotipos se necessário
+                            canais.push({ nome: nome, link: link, logo: logoURL });
+                        }
+                    }
+
+                    // Adiciona os ícones de canais
+                    canais.forEach(function(canal) {
+                        var div = document.createElement("div");
+                        div.classList.add("icon-item");
+                        div.onclick = function() {
+                            video.src({ src: canal.link, type: 'application/x-mpegURL' });
+                            video.play();
+                            abrirTelaCheia(); // Abre em tela cheia ao selecionar o canal
+                        };
+
+                        var img = document.createElement("img");
+                        img.src = canal.logo || "https://via.placeholder.com/80"; // Placeholder se não houver logo
+                        var p = document.createElement("p");
+                        p.innerText = canal.nome;
+
+                        div.appendChild(img);
+                        div.appendChild(p);
+                        iconGrid.appendChild(div);
+                    });
+
+                    // Filtro de busca
+                    searchBar.addEventListener("input", function() {
+                        var termoBusca = searchBar.value.toLowerCase();
+                        var itens = document.querySelectorAll(".icon-item");
+
+                        itens.forEach(function(item) {
+                            var nomeCanal = item.querySelector("p").innerText.toLowerCase();
+                            if (nomeCanal.includes(termoBusca)) {
+                                item.style.display = "flex";
+                            } else {
+                                item.style.display = "none";
+                            }
+                        });
+                    });
+                }
+            };
+            xhr.send();
+
             configurarReconexao(video);
-
-            // Função de busca
-            var searchInput = document.getElementById("search-input");
-            searchInput.addEventListener("input", function() {
-                var filter = searchInput.value.toLowerCase();
-                var items = document.querySelectorAll('.icon-item');
-
-                items.forEach(function(item) {
-                    var textValue = item.textContent || item.innerText;
-                    item.style.display = textValue.toLowerCase().includes(filter) ? "" : "none";
-                });
-            });
         });
     </script>
 </body>
