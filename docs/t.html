@@ -32,6 +32,37 @@
             border-bottom: 1px solid #444;
         }
 
+        #top-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10px;
+            background-color: #222;
+            border-bottom: 1px solid #444;
+        }
+
+        .top-button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            margin: 10px;
+        }
+
+        #search-bar {
+            display: block;
+            width: 90%;
+            margin: 10px auto;
+            padding: 8px;
+            border: 1px solid #444;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
         #main {
             display: flex;
             flex-direction: column;
@@ -45,7 +76,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1; /* Coloca o player por trás dos ícones */
+            z-index: -1;
         }
 
         .video-js {
@@ -59,7 +90,7 @@
             justify-content: center;
             gap: 15px;
             padding: 15px;
-            z-index: 1; /* Garante que os ícones fiquem à frente do player */
+            z-index: 1;
         }
 
         .icon-item {
@@ -119,11 +150,27 @@
         <div id="header">
             LISTA DE CANAIS IPTV - Desative Conexão Segura - 30 de Setembro de 2024
         </div>
+
+        <div id="top-buttons">
+            <button class="top-button" onclick="window.location.href='https://listadobill.github.io/tv/'">CANAIS, SÉRIES E FILMES STREAM</button>
+            <button class="top-button" onclick="window.location.href='https://listadobill.github.io/tv/iptv2'">SERVIDOR 2</button>
+            <button class="top-button" onclick="window.location.href='https://listadobill.github.io/tv/ott'">SERVIDOR 3</button>
+            <button class="top-button" onclick="window.location.href='https://listadobill.github.io/tv/argentina'">ARGENTINA</button>
+            <button class="top-button" onclick="window.location.href='https://listadobill.github.io/tv/brasil'">BRASIL</button>
+            <button class="top-button" onclick="window.location.href='https://listadobill.github.io/tv/carros'">CARROS</button>
+            <button class="top-button" onclick="window.location.href='https://listadobill.github.io/tv/espanha'">ESPANHA</button>
+            <button class="top-button" onclick="window.location.href='https://listadobill.github.io/tv/musica'">MÚSICA</button>
+            <button class="top-button" onclick="window.location.href='https://listadobill.github.io/tv/portugal'">PORTUGAL</button>
+        </div>
+
+        <input type="text" id="search-bar" placeholder="Buscar canal...">
+
         <div id="main">
             <div id="icon-grid">
                 <!-- Ícones de canais serão carregados dinamicamente aqui -->
             </div>
         </div>
+
         <div id="player-container">
             <video id="video-player" class="video-js vjs-default-skin" controls></video>
         </div>
@@ -134,28 +181,12 @@
         document.addEventListener("DOMContentLoaded", function() {
             var listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/iptv.m3u";
             var iconGrid = document.getElementById("icon-grid");
+            var searchBar = document.getElementById("search-bar");
             var video = videojs('video-player', {
                 controls: true,
                 autoplay: false,
                 preload: 'auto'
             });
-
-            // Função para abrir em tela cheia
-            function abrirTelaCheia() {
-                if (video.isFullscreen()) {
-                    video.exitFullscreen();
-                } else {
-                    video.requestFullscreen();
-                }
-            }
-
-            function configurarReconexao(player) {
-                player.on('error', function() {
-                    console.log('Tentando reconectar...');
-                    player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
-                    player.play();
-                });
-            }
 
             var canais = [];
 
@@ -178,29 +209,49 @@
                     }
 
                     // Adiciona os ícones de canais
-                    canais.forEach(function(canal) {
-                        var div = document.createElement("div");
-                        div.classList.add("icon-item");
-                        div.onclick = function() {
-                            video.src({ src: canal.link, type: 'application/x-mpegURL' });
-                            video.play();
-                            abrirTelaCheia(); // Abre em tela cheia ao selecionar o canal
-                        };
+                    renderCanais(canais);
 
-                        var img = document.createElement("img");
-                        img.src = canal.logo || "https://via.placeholder.com/80"; // Placeholder se não houver logo
-                        var p = document.createElement("p");
-                        p.innerText = canal.nome;
-
-                        div.appendChild(img);
-                        div.appendChild(p);
-                        iconGrid.appendChild(div);
+                    // Filtro de busca
+                    searchBar.addEventListener("input", function() {
+                        var termoBusca = searchBar.value.toLowerCase();
+                        var canaisFiltrados = canais.filter(function(canal) {
+                            return canal.nome.toLowerCase().includes(termoBusca);
+                        });
+                        renderCanais(canaisFiltrados);
                     });
                 }
             };
             xhr.send();
 
-            configurarReconexao(video);
+            function renderCanais(canaisParaMostrar) {
+                iconGrid.innerHTML = ""; // Limpa a grid de ícones
+                canaisParaMostrar.forEach(function(canal) {
+                    var div = document.createElement("div");
+                    div.classList.add("icon-item");
+                    div.onclick = function() {
+                        video.src({ src: canal.link, type: 'application/x-mpegURL' });
+                        video.play();
+                        if (video.requestFullscreen) {
+                            video.requestFullscreen();
+                        } else if (video.webkitRequestFullscreen) {
+                            video.webkitRequestFullscreen();
+                        } else if (video.mozRequestFullScreen) {
+                            video.mozRequestFullScreen();
+                        } else if (video.msRequestFullscreen) {
+                            video.msRequestFullscreen();
+                        }
+                    };
+
+                    var img = document.createElement("img");
+                    img.src = canal.logo || "https://via.placeholder.com/80"; // Placeholder se não houver logo
+                    var p = document.createElement("p");
+                    p.innerText = canal.nome;
+
+                    div.appendChild(img);
+                    div.appendChild(p);
+                    iconGrid.appendChild(div);
+                });
+            }
         });
     </script>
 </body>
