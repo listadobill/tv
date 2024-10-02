@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV DO BILL - ALGUNS CANAIS PODEM ESTAR FORA, AGUARDE ATUALIZAÇÃO - DESATIVE CONEXÃO SEGURA</title>
+    <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow-y: auto; /* Habilitar rolagem no corpo da página */
+        }
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+        }
+
+        #header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            text-align: center;
+            font-size: 1.2em; /* Diminuído o tamanho da fonte do cabeçalho */
+            border-bottom: 1px solid #444;
+        }
+
+        #home-button, .nav-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 6px 12px; /* Diminuído o padding dos botões */
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em; /* Diminuído o tamanho da fonte dos botões */
+            margin: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        #home-button:hover, .nav-button:hover {
+            background-color: #45a049;
+        }
+
+        #search-bar {
+            padding: 10px;
+            background-color: #333;
+            text-align: center;
+        }
+
+        #search-input {
+            width: 95%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        #main {
+            display: flex;
+            flex: 1;
+            overflow-y: auto; /* Habilitar rolagem na área principal */
+        }
+
+        #player {
+            flex: 2;
+            background-color: rgba(0, 0, 0, 0.8);
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .video-js {
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+        }
+
+        #sidebar {
+            flex: 1;
+            background-color: rgba(34, 34, 34, 0.8);
+            overflow-y: auto;
+            padding: 10px;
+            border-left: 2px solid #444;
+        }
+
+        #sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        #sidebar li {
+            background-color: rgba(50, 50, 50, 0.8);
+            border-radius: 8px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #sidebar li:hover {
+            background-color: #4CAF50;
+        }
+
+        #sidebar img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 50%;
+            border: 2px solid #4CAF50;
+            object-fit: cover;
+        }
+
+        #sidebar p {
+            margin: 0;
+            font-size: 1.1em;
+        }
+
+        .video-js.vjs-fullscreen {
+            width: 100% !important;
+            height: 100% !important;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .video-js.vjs-default-skin .vjs-control-bar {
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .video-js .vjs-big-play-button {
+            background-color: rgba(76, 175, 80, 0.8);
+            border: none;
+            border-radius: 50%;
+            font-size: 2.5em;
+            line-height: 1.5;
+            transition: background-color 0.3s ease;
+        }
+
+        .video-js .vjs-big-play-button:hover {
+            background-color: rgba(76, 175, 80, 1);
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #4CAF50;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            LISTA DE CANAIS IPTV - DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV - Atualização, 30 de Setembro de 2024: https://bit.ly/tvdobill-iptv - EPG https://bit.ly/tvdobill-epg 
+            <div>
+                <button id="home-button">CANAIS, SÉRIES E FILMES STREAM</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/'">SERVIDOR 1</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/iptv2'">SERVIDOR 2</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/ott'">SERVIDOR 3</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/argentina'">ARGENTINA</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/brasil'">BRASIL</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/carros'">CARROS</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/espanha'">ESPANHA</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/musica'">MÚSICA</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/portugal'">PORTUGAL</button>
+            </div>
+        </div>
+        <div id="main">
+            <div id="sidebar">
+                <div id="search-bar">
+                    <input type="text" id="search-input" placeholder="Buscar canal...">
+                </div>
+                <ul id="lista-canais">
+                    <!-- Canais serão carregados dinamicamente -->
+                </ul>
+            </div>
+            <div id="player">
+                <video id="video-player" class="video-js vjs-default-skin" controls></video>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/ott.m3u";
+            var listaCanaisElemento = document.getElementById("lista-canais");
+            var searchInput = document.getElementById("search-input");
+            var video = videojs('video-player', {
+                controls: true,
+                autoplay: false,
+                preload: 'auto'
+            });
+
+            document.getElementById('home-button').onclick = function() {
+                window.location.href = "https://listadobill.github.io/tv/inicial";
+            };
+
+            // Função para abrir em tela cheia
+            function abrirTelaCheia() {
+                if (video.isFullscreen()) {
+                    video.exitFullscreen();
+                } else {
+                    video.requestFullscreen();
+                }
+            }
+
+            function configurarReconexao(player) {
+                player.on('error', function() {
+                    console.log('Tentando reconectar...');
+                    player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
+                    player.play();
+                });
+            }
+
+            var canais = [];
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", listaURL, true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var linhas = xhr.responseText.split('\n');
+
+                    for (var i = 0; i < linhas.length; i++) {
+                        if (linhas[i].startsWith('#EXTINF')) {
+                            var nome = linhas[i].split(',')[1];
+                            var link = linhas[i + 1] ? linhas[i + 1].trim() : null;
+
+                            if (!nome || !link) continue;
+
+                            var logoURL = ""; // Aqui você pode adicionar a lógica para obter logotipos se houver.
+                            canais.push({ nome: nome, link: link, logo: logoURL });
+                        }
+                    }
+
+                    // Adiciona os canais na lista
+                    canais.forEach(function(canal) {
+                        var li = document.createElement("li");
+                        li.onclick = function() {
+                            video.src({ src: canal.link, type: 'application/x-mpegURL' });
+                            video.play();
+                            abrirTelaCheia(); // Abre em tela cheia ao selecionar o canal
+                        };
+
+                        var img = document.createElement("img");
+                        img.src = canal.logo || "https://via.placeholder.com/50"; // Placeholder se não houver logo
+                        var p = document.createElement("p");
+                        p.innerText = canal.nome;
+
+                        li.appendChild(img);
+                        li.appendChild(p);
+                        listaCanaisElemento.appendChild(li);
+                    });
+
+                    // Função de pesquisa
+                    searchInput.addEventListener("input", function() {
+                        var filter = searchInput.value.toLowerCase();
+                        var items = listaCanaisElemento.getElementsByTagName('li');
+
+                        for (var i = 0; i < items.length; i++) {
+                            var item = items[i];
+                            var textValue = item.textContent || item.innerText;
+                            item.style.display = textValue.toLowerCase().includes(filter) ? "" : "none";
+                        }
+                    });
+                }
+            };
+            xhr.send();
+
+            configurarReconexao(video);
+        });
+    </script>
+</body>
+</html>
