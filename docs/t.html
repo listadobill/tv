@@ -1,133 +1,207 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filtrar Canais Brasileiros da Lista M3U</title>
+    <title>TV DO BILL - Desative Conexão Segura</title>
+    <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
     <style>
-        textarea, pre {
-            width: 100%;
-            height: 300px;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
-        button {
-            margin: 10px 0;
+
+        #container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            text-align: center;
+            font-size: 1em;
+            border-bottom: 1px solid #444;
+        }
+
+        #main {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        #player-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Coloca o player por trás dos ícones */
+        }
+
+        .video-js {
+            width: 100%;
+            height: 100%;
+        }
+
+        #icon-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 15px;
+            z-index: 1; /* Garante que os ícones fiquem à frente do player */
+        }
+
+        .icon-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .icon-item:hover {
+            transform: scale(1.1);
+        }
+
+        .icon-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid #4CAF50;
+        }
+
+        .icon-item p {
+            margin-top: 10px;
+            font-size: 0.9em;
+            text-align: center;
+        }
+
+        .video-js.vjs-fullscreen {
+            width: 100% !important;
+            height: 100% !important;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .video-js.vjs-default-skin .vjs-control-bar {
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .video-js .vjs-big-play-button {
+            background-color: rgba(76, 175, 80, 0.8);
+            border: none;
+            border-radius: 50%;
+            font-size: 2.5em;
+            line-height: 1.5;
+            transition: background-color 0.3s ease;
+        }
+
+        .video-js .vjs-big-play-button:hover {
+            background-color: rgba(76, 175, 80, 1);
         }
     </style>
 </head>
 <body>
+    <div id="container">
+        <div id="header">
+            LISTA DE CANAIS IPTV - Desative Conexão Segura - 30 de Setembro de 2024
+        </div>
+        <div id="main">
+            <div id="icon-grid">
+                <!-- Ícones de canais serão carregados dinamicamente aqui -->
+            </div>
+        </div>
+        <div id="player-container">
+            <video id="video-player" class="video-js vjs-default-skin" controls></video>
+        </div>
+    </div>
 
-<h1>Filtrar Canais Brasileiros e Latinos da Lista M3U</h1>
-<textarea id="listaM3U" placeholder="Cole aqui sua lista M3U..."></textarea>
-<br>
-<button onclick="gerarListaFiltrada()">Gerar Lista Filtrada</button>
-<button onclick="baixarLista()">Baixar Lista Filtrada (.m3u)</button>
-<pre id="filteredList"></pre>
+    <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/iptv.m3u";
+            var iconGrid = document.getElementById("icon-grid");
+            var video = videojs('video-player', {
+                controls: true,
+                autoplay: false,
+                preload: 'auto'
+            });
 
-<script>
-// Função para corrigir erros comuns de má formação na lista M3U
-function corrigirErros(listaM3U) {
-    const linhas = listaM3U.split('\n');
-    const listaCorrigida = [];
-
-    for (let i = 0; i < linhas.length; i++) {
-        const linha = linhas[i].trim();
-        
-        // Verifica se a linha é #EXTINF e se a próxima é uma URL
-        if (linha.startsWith('#EXTINF')) {
-            const proximaLinha = linhas[i + 1] ? linhas[i + 1].trim() : '';
-            if (!proximaLinha.startsWith('http')) {
-                continue;  // Ignora a linha órfã sem URL
-            }
-        }
-
-        listaCorrigida.push(linha);
-    }
-
-    return listaCorrigida.join('\n');
-}
-
-// Função para filtrar a lista M3U e manter apenas canais brasileiros e latinos com URLs válidas
-function filtrarCanais(listaM3U) {
-    const canaisBrasileirosLatinos = [];
-    
-    // Lista de termos abrangentes, incluindo plural e singular
-    const termosBrasileirosLatinos = ['canais', 'canal', 'abertos', 'aberto', 'esportes', 'esporte', 'filmes', 'filme', 'séries', 'série', 'infantil', 'notícias', 'notícia', 'variedades', 'variedade', 'brasil', 'brazil', 'br', 'latino', 'latinos', 'LATINO', 'LATINOS'];
-    
-    // Quebra a lista em linhas e corrige a má formação
-    const linhas = corrigirErros(listaM3U).split('\n');
-    
-    for (let i = 0; i < linhas.length; i++) {
-        const linha = linhas[i].trim();
-
-        // Verifica se a linha é de metadados de canal
-        if (linha.startsWith('#EXTINF')) {
-            // Verifica se a próxima linha contém uma URL
-            let url = linhas[i + 1] ? linhas[i + 1].trim() : '';
-
-            // Converte a linha para minúsculas para uma comparação sem diferenciação de maiúsculas/minúsculas
-            const linhaMin = linha.toLowerCase();
-
-            // Verifica se algum dos termos está presente no 'group-title'
-            if (termosBrasileirosLatinos.some(termo => linhaMin.includes(termo))) {
-
-                // Apenas continua se a próxima linha for uma URL válida
-                if (url.endsWith('.m3u8') || url.endsWith('.m3u') || url.endsWith('.ts')) {
-
-                    // Converte .ts para .m3u8, caso necessário
-                    if (url.endsWith('.ts')) {
-                        url = url.replace('.ts', '.m3u8');
-                    }
-
-                    // Formata a linha #EXTINF para incluir apenas o logo e o nome
-                    const metadadosFormatados = linha.replace(/tvg-id="[^"]*" /, '')
-                                                       .replace(/tvg-name="([^"]*)"/, '')
-                                                       .replace(/group-title="[^"]*"/, '')
-                                                       .replace(',-', ',')
-                                                       .replace(/(?<=\w)"$/, ''); // Remove aspas finais se existir
-
-                    // Adiciona o par (metadado + URL) à lista de canais brasileiros e latinos
-                    canaisBrasileirosLatinos.push(metadadosFormatados + '\n' + url);
+            // Função para abrir em tela cheia
+            function abrirTelaCheia() {
+                if (video.isFullscreen()) {
+                    video.exitFullscreen();
+                } else {
+                    video.requestFullscreen();
                 }
             }
-        }
-    }
 
-    // Adiciona a linha #EXTM3U no topo da lista
-    return '#EXTM3U\n' + canaisBrasileirosLatinos.join('\n');
-}
+            function configurarReconexao(player) {
+                player.on('error', function() {
+                    console.log('Tentando reconectar...');
+                    player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
+                    player.play();
+                });
+            }
 
-// Função para gerar a lista filtrada e exibi-la na página
-function gerarListaFiltrada() {
-    // Pega o conteúdo da textarea (lista M3U colada)
-    const listaM3U = document.getElementById('listaM3U').value;
+            var canais = [];
 
-    // Chama a função para filtrar os canais brasileiros e latinos
-    const listaFiltrada = filtrarCanais(listaM3U);
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", listaURL, true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var linhas = xhr.responseText.split('\n');
 
-    // Exibe a lista filtrada
-    document.getElementById('filteredList').textContent = listaFiltrada;
-}
+                    for (var i = 0; i < linhas.length; i++) {
+                        if (linhas[i].startsWith('#EXTINF')) {
+                            var nome = linhas[i].split(',')[1];
+                            var link = linhas[i + 1] ? linhas[i + 1].trim() : null;
 
-// Função para baixar a lista filtrada como um arquivo .m3u
-function baixarLista() {
-    // Pega o conteúdo filtrado
-    const listaFiltrada = document.getElementById('filteredList').textContent;
+                            if (!nome || !link) continue;
 
-    // Cria um blob com o conteúdo filtrado
-    const blob = new Blob([listaFiltrada], { type: 'text/plain' });
-    
-    // Cria um link temporário para download
-    const link = document.createElement('a');
-    link.href = URL.createObjectURL(blob);
-    link.download = 'lista_filtrada.m3u';
+                            var logoURL = ""; // Adicione lógica para obter logotipos se necessário
+                            canais.push({ nome: nome, link: link, logo: logoURL });
+                        }
+                    }
 
-    // Simula o clique para iniciar o download
-    link.click();
+                    // Adiciona os ícones de canais
+                    canais.forEach(function(canal) {
+                        var div = document.createElement("div");
+                        div.classList.add("icon-item");
+                        div.onclick = function() {
+                            video.src({ src: canal.link, type: 'application/x-mpegURL' });
+                            video.play();
+                            abrirTelaCheia(); // Abre em tela cheia ao selecionar o canal
+                        };
 
-    // Libera o recurso do objeto URL
-    URL.revokeObjectURL(link.href);
-}
-</script>
+                        var img = document.createElement("img");
+                        img.src = canal.logo || "https://via.placeholder.com/80"; // Placeholder se não houver logo
+                        var p = document.createElement("p");
+                        p.innerText = canal.nome;
 
+                        div.appendChild(img);
+                        div.appendChild(p);
+                        iconGrid.appendChild(div);
+                    });
+                }
+            };
+            xhr.send();
+
+            configurarReconexao(video);
+        });
+    </script>
 </body>
 </html>
