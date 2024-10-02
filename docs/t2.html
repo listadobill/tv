@@ -99,10 +99,32 @@
             align-items: center;
             cursor: pointer;
             transition: transform 0.3s ease;
+            width: 100px; /* Largura fixa para os ícones */
+            position: relative; /* Para posicionar a sombra */
+            overflow: hidden; /* Para garantir que a sombra não exceda o item */
         }
 
         .icon-item:hover {
             transform: scale(1.1);
+        }
+
+        .icon-item::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(76, 175, 80, 0.5); /* Cor da sombra */
+            opacity: 0; /* Inicialmente invisível */
+            transition: opacity 0.3s ease, background-color 0.3s ease; /* Animação de transição */
+            border-radius: 10px; /* Bordas arredondadas */
+            z-index: -1; /* Para ficar atrás do logo e do nome */
+        }
+
+        .icon-item:hover::before {
+            opacity: 1; /* Torna a sombra visível ao passar o mouse */
+            background-color: rgba(76, 175, 80, 0.8); /* Cor muda ao passar o mouse */
         }
 
         .icon-item img {
@@ -115,8 +137,9 @@
 
         .icon-item p {
             margin-top: 10px;
-            font-size: 0.9em;
+            font-size: 1em; /* Aumente a fonte para maior legibilidade */
             text-align: center;
+            font-weight: bold; /* Nomes dos canais em negrito */
         }
 
         .video-js.vjs-fullscreen {
@@ -213,39 +236,32 @@
 
                     // Filtro de busca
                     searchBar.addEventListener("input", function() {
-                        var termoBusca = searchBar.value.toLowerCase();
-                        var canaisFiltrados = canais.filter(function(canal) {
-                            return canal.nome.toLowerCase().includes(termoBusca);
-                        });
+                        var filtro = searchBar.value.toLowerCase();
+                        var canaisFiltrados = canais.filter(canal => canal.nome.toLowerCase().includes(filtro));
                         renderCanais(canaisFiltrados);
                     });
                 }
             };
             xhr.send();
 
-            function renderCanais(canaisParaMostrar) {
-                iconGrid.innerHTML = ""; // Limpa a grid de ícones
-                canaisParaMostrar.forEach(function(canal) {
+            function renderCanais(canais) {
+                iconGrid.innerHTML = ""; // Limpa a grid
+
+                canais.forEach(canal => {
                     var div = document.createElement("div");
-                    div.classList.add("icon-item");
+                    div.className = "icon-item";
+
                     div.onclick = function() {
-                        video.src({ src: canal.link, type: 'application/x-mpegURL' });
-                        video.play();
-                        if (video.requestFullscreen) {
-                            video.requestFullscreen();
-                        } else if (video.webkitRequestFullscreen) {
-                            video.webkitRequestFullscreen();
-                        } else if (video.mozRequestFullScreen) {
-                            video.mozRequestFullScreen();
-                        } else if (video.msRequestFullscreen) {
-                            video.msRequestFullscreen();
+                        if (canal.link) {
+                            video.src({ src: canal.link, type: "application/x-mpegURL" });
+                            video.play();
                         }
                     };
 
                     var img = document.createElement("img");
-                    img.src = canal.logo || "https://via.placeholder.com/80"; // Placeholder se não houver logo
+                    img.src = canal.logo || "https://via.placeholder.com/80"; // Logotipo padrão se não houver logo
                     var p = document.createElement("p");
-                    p.innerText = canal.nome;
+                    p.innerText = canal.nome; // Nomes dos canais
 
                     div.appendChild(img);
                     div.appendChild(p);
