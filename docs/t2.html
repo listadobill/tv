@@ -85,10 +85,9 @@
         }
 
         #icon-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Define colunas automáticas */
+            gap: 15px; /* Espaçamento entre os ícones */
             padding: 15px;
             z-index: 1;
         }
@@ -99,7 +98,7 @@
             align-items: center;
             cursor: pointer;
             transition: transform 0.3s ease;
-            width: 100px;
+            text-align: center; /* Centraliza o texto */
         }
 
         .icon-item:hover {
@@ -116,9 +115,8 @@
 
         .icon-item p {
             margin-top: 10px;
-            font-size: 1em;
+            font-size: 0.9em;
             text-align: center;
-            font-weight: bold;
         }
 
         .video-js.vjs-fullscreen {
@@ -181,14 +179,13 @@
     <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/main/iptv.m3u"; // Verifique se essa URL está correta
+            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/iptv.m3u";
             var iconGrid = document.getElementById("icon-grid");
             var searchBar = document.getElementById("search-bar");
             var video = videojs('video-player', {
                 controls: true,
                 autoplay: false,
-                preload: 'auto',
-                techOrder: ["html5", "flash"]
+                preload: 'auto'
             });
 
             var canais = [];
@@ -196,36 +193,32 @@
             var xhr = new XMLHttpRequest();
             xhr.open("GET", listaURL, true);
             xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4) {
-                    if (xhr.status === 200) {
-                        var linhas = xhr.responseText.split('\n');
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var linhas = xhr.responseText.split('\n');
 
-                        for (var i = 0; i < linhas.length; i++) {
-                            if (linhas[i].startsWith('#EXTINF')) {
-                                var nome = linhas[i].split(',')[1];
-                                var link = linhas[i + 1] ? linhas[i + 1].trim() : null;
+                    for (var i = 0; i < linhas.length; i++) {
+                        if (linhas[i].startsWith('#EXTINF')) {
+                            var nome = linhas[i].split(',')[1];
+                            var link = linhas[i + 1] ? linhas[i + 1].trim() : null;
 
-                                if (!nome || !link) continue;
+                            if (!nome || !link) continue;
 
-                                var logoURL = ""; // Adicione lógica para obter logotipos se necessário
-                                canais.push({ nome: nome, link: link, logo: logoURL });
-                            }
+                            var logoURL = ""; // Adicione lógica para obter logotipos se necessário
+                            canais.push({ nome: nome, link: link, logo: logoURL });
                         }
-
-                        // Adiciona os ícones de canais
-                        renderCanais(canais);
-
-                        // Filtro de busca
-                        searchBar.addEventListener("input", function() {
-                            var termoBusca = searchBar.value.toLowerCase();
-                            var canaisFiltrados = canais.filter(function(canal) {
-                                return canal.nome.toLowerCase().includes(termoBusca);
-                            });
-                            renderCanais(canaisFiltrados);
-                        });
-                    } else {
-                        console.error("Erro ao carregar a lista de canais: " + xhr.status);
                     }
+
+                    // Adiciona os ícones de canais
+                    renderCanais(canais);
+
+                    // Filtro de busca
+                    searchBar.addEventListener("input", function() {
+                        var termoBusca = searchBar.value.toLowerCase();
+                        var canaisFiltrados = canais.filter(function(canal) {
+                            return canal.nome.toLowerCase().includes(termoBusca);
+                        });
+                        renderCanais(canaisFiltrados);
+                    });
                 }
             };
             xhr.send();
@@ -242,12 +235,20 @@
                             video.requestFullscreen();
                         } else if (video.webkitRequestFullscreen) {
                             video.webkitRequestFullscreen();
+                        } else if (video.mozRequestFullScreen) {
+                            video.mozRequestFullScreen();
+                        } else if (video.msRequestFullscreen) {
+                            video.msRequestFullscreen();
                         }
                     };
-                    div.innerHTML = `
-                        <img src="${canal.logo || 'default-logo.png'}" alt="${canal.nome}">
-                        <p>${canal.nome}</p>
-                    `;
+
+                    var img = document.createElement("img");
+                    img.src = canal.logo || "https://via.placeholder.com/80"; // Placeholder se não houver logo
+                    var p = document.createElement("p");
+                    p.innerText = canal.nome;
+
+                    div.appendChild(img);
+                    div.appendChild(p);
                     iconGrid.appendChild(div);
                 });
             }
