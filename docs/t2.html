@@ -231,6 +231,15 @@
                     div.onclick = function() {
                         video.src({ src: canal.link, type: 'application/x-mpegURL' });
                         video.play();
+                        if (video.requestFullscreen) {
+                            video.requestFullscreen();
+                        } else if (video.webkitRequestFullscreen) {
+                            video.webkitRequestFullscreen();
+                        } else if (video.mozRequestFullScreen) {
+                            video.mozRequestFullScreen();
+                        } else if (video.msRequestFullscreen) {
+                            video.msRequestFullscreen();
+                        }
                     };
 
                     var img = document.createElement("img");
