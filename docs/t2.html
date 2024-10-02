@@ -34,15 +34,15 @@
 
         #top-buttons {
             display: flex;
-            flex-wrap: wrap; /* Permite que os botões se movam para uma nova linha */
-            justify-content: center; /* Centraliza os botões */
+            flex-wrap: wrap;
+            justify-content: center;
             padding: 10px;
             background-color: #222;
             border-bottom: 1px solid #444;
         }
 
         .top-button {
-            padding: 10px 15px; /* Aumenta o espaçamento interno dos botões */
+            padding: 10px 15px;
             background-color: #4CAF50;
             border: none;
             border-radius: 5px;
@@ -50,7 +50,7 @@
             cursor: pointer;
             text-transform: uppercase;
             font-size: 0.9em;
-            margin: 10px; /* Adiciona margem entre os botões */
+            margin: 10px;
         }
 
         #search-bar {
@@ -188,23 +188,6 @@
                 preload: 'auto'
             });
 
-            // Função para abrir em tela cheia
-            function abrirTelaCheia() {
-                if (video.isFullscreen()) {
-                    video.exitFullscreen();
-                } else {
-                    video.requestFullscreen();
-                }
-            }
-
-            function configurarReconexao(player) {
-                player.on('error', function() {
-                    console.log('Tentando reconectar...');
-                    player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
-                    player.play();
-                });
-            }
-
             var canais = [];
 
             var xhr = new XMLHttpRequest();
@@ -226,30 +209,40 @@
                     }
 
                     // Adiciona os ícones de canais
-                    canais.forEach(function(canal) {
-                        var div = document.createElement("div");
-                        div.classList.add("icon-item");
-                        div.onclick = function() {
-                            video.src({ src: canal.link, type: 'application/x-mpegURL' });
-                            video.play();
-                            abrirTelaCheia(); // Abre em tela cheia ao selecionar o canal
-                        };
+                    renderCanais(canais);
 
-                        var img = document.createElement("img");
-                        img.src = canal.logo || "https://via.placeholder.com/80"; // Placeholder se não houver logo
-                        var p = document.createElement("p");
-                        p.innerText = canal.nome;
-
-                        div.appendChild(img);
-                        div.appendChild(p);
-                        iconGrid.appendChild(div);
+                    // Filtro de busca
+                    searchBar.addEventListener("input", function() {
+                        var termoBusca = searchBar.value.toLowerCase();
+                        var canaisFiltrados = canais.filter(function(canal) {
+                            return canal.nome.toLowerCase().includes(termoBusca);
+                        });
+                        renderCanais(canaisFiltrados);
                     });
-
-                    // Configura a reconexão
-                    configurarReconexao(video);
                 }
             };
             xhr.send();
+
+            function renderCanais(canaisParaMostrar) {
+                iconGrid.innerHTML = ""; // Limpa a grid de ícones
+                canaisParaMostrar.forEach(function(canal) {
+                    var div = document.createElement("div");
+                    div.classList.add("icon-item");
+                    div.onclick = function() {
+                        video.src({ src: canal.link, type: 'application/x-mpegURL' });
+                        video.play();
+                    };
+
+                    var img = document.createElement("img");
+                    img.src = canal.logo || "https://via.placeholder.com/80"; // Placeholder se não houver logo
+                    var p = document.createElement("p");
+                    p.innerText = canal.nome;
+
+                    div.appendChild(img);
+                    div.appendChild(p);
+                    iconGrid.appendChild(div);
+                });
+            }
         });
     </script>
 </body>
