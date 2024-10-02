@@ -34,14 +34,15 @@
 
         #top-buttons {
             display: flex;
-            justify-content: space-around;
+            flex-wrap: wrap; /* Permite que os botões se movam para uma nova linha */
+            justify-content: center; /* Centraliza os botões */
             padding: 10px;
             background-color: #222;
             border-bottom: 1px solid #444;
         }
 
         .top-button {
-            padding: 10px;
+            padding: 10px 15px; /* Aumenta o espaçamento interno dos botões */
             background-color: #4CAF50;
             border: none;
             border-radius: 5px;
@@ -49,6 +50,7 @@
             cursor: pointer;
             text-transform: uppercase;
             font-size: 0.9em;
+            margin: 10px; /* Adiciona margem entre os botões */
         }
 
         #search-bar {
@@ -243,26 +245,12 @@
                         iconGrid.appendChild(div);
                     });
 
-                    // Filtro de busca
-                    searchBar.addEventListener("input", function() {
-                        var termoBusca = searchBar.value.toLowerCase();
-                        var itens = document.querySelectorAll(".icon-item");
-
-                        itens.forEach(function(item) {
-                            var nomeCanal = item.querySelector("p").innerText.toLowerCase();
-                            if (nomeCanal.includes(termoBusca)) {
-                                item.style.display = "flex";
-                            } else {
-                                item.style.display = "none";
-                            }
-                        });
-                    });
+                    // Configura a reconexão
+                    configurarReconexao(video);
                 }
             };
             xhr.send();
-
-            configurarReconexao(video);
         });
     </script>
 </body>
-</html
+</html>
