@@ -85,11 +85,11 @@
         }
 
         #icon-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 15px;
             padding: 15px;
-            z-index: 1;
         }
 
         .icon-item {
@@ -99,26 +99,13 @@
             cursor: pointer;
             transition: transform 0.3s ease;
             text-align: center;
+            width: 120px; /* Largura fixa */
+            margin: 10px; /* Adicionando margem */
         }
 
         .icon-item:hover {
             transform: scale(1.1);
-        }
-
-        .icon-frame {
-            background-color: rgba(0, 0, 0, 0.7); /* Fundo translúcido preto */
-            padding: 10px; /* Espaçamento interno para a moldura */
-            border-radius: 10px; /* Bordas arredondadas */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transition: background-color 0.3s ease; /* Animação suave na troca de cor */
-        }
-
-        /* Animação de troca de cor ao passar o mouse ou clicar */
-        .icon-frame:hover,
-        .icon-frame.selected {
-            background-color: rgba(76, 175, 80, 0.5); /* Verde translúcido */
+            background-color: rgba(76, 175, 80, 0.5); /* Fundo em hover */
         }
 
         .icon-item img {
@@ -127,13 +114,17 @@
             object-fit: cover;
             border-radius: 50%;
             border: 2px solid #4CAF50;
+            background-color: rgba(0, 0, 0, 0.7); /* Fundo translúcido para o logo */
+            padding: 5px; /* Espaçamento interno para o logo */
         }
 
         .icon-item p {
             margin-top: 10px;
             font-size: 0.9em;
             text-align: center;
-            color: #fff; /* Cor do texto */
+            background-color: rgba(0, 0, 0, 0.7); /* Fundo translúcido preto */
+            padding: 5px; /* Espaçamento interno para o texto */
+            border-radius: 5px; /* Bordas arredondadas */
         }
 
         .video-js.vjs-fullscreen {
@@ -159,6 +150,13 @@
 
         .video-js .vjs-big-play-button:hover {
             background-color: rgba(76, 175, 80, 1);
+        }
+
+        @media (max-width: 600px) {
+            #icon-grid {
+                flex-direction: column; /* Muda para coluna em telas pequenas */
+                align-items: center; /* Centraliza os ícones */
+            }
         }
     </style>
 </head>
@@ -243,32 +241,22 @@
             function renderCanais(canaisParaMostrar) {
                 iconGrid.innerHTML = ""; // Limpa a grid de ícones
                 canaisParaMostrar.forEach(function(canal) {
-                    var div = document.createElement("div");
-                    div.classList.add("icon-item");
-
-                    var frameDiv = document.createElement("div");
-                    frameDiv.classList.add("icon-frame");
-
-                    frameDiv.onclick = function() {
-                        video.src({ src: canal.link, type: 'application/x-mpegURL' });
+                    var iconItem = document.createElement("div");
+                    iconItem.className = "icon-item";
+                    iconItem.innerHTML = `
+                        <img src="${canal.logo || 'https://via.placeholder.com/80'}" alt="${canal.nome}">
+                        <p>${canal.nome}</p>
+                    `;
+                    iconItem.onclick = function() {
+                        video.src({ type: 'application/x-mpegURL', src: canal.link });
                         video.play();
-                        if (video.requestFullscreen) {
-                            video.requestFullscreen();
-                        } else if (video.msRequestFullscreen) {
-                            video.msRequestFullscreen();
+                        if (video.isFullscreen()) {
+                            video.exitFullscreen();
+                        } else {
+                            video.requestFullscreen(); // Solicita tela cheia
                         }
                     };
-
-                    // Exibe o logo se disponível, ou uma imagem padrão se não houver logo
-                    var img = document.createElement("img");
-                    img.src = canal.logo || 'https://via.placeholder.com/80'; // Imagem padrão caso o logo não exista
-                    frameDiv.appendChild(img);
-                    
-                    var p = document.createElement("p");
-                    p.innerText = canal.nome;
-                    frameDiv.appendChild(p);
-                    div.appendChild(frameDiv);
-                    iconGrid.appendChild(div);
+                    iconGrid.appendChild(iconItem);
                 });
             }
         });
