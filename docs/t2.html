@@ -99,32 +99,11 @@
             align-items: center;
             cursor: pointer;
             transition: transform 0.3s ease;
-            width: 100px; /* Largura fixa para os ícones */
-            position: relative; /* Para posicionar a sombra */
-            overflow: hidden; /* Para garantir que a sombra não exceda o item */
+            width: 100px;
         }
 
         .icon-item:hover {
             transform: scale(1.1);
-        }
-
-        .icon-item::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(76, 175, 80, 0.5); /* Cor da sombra */
-            opacity: 0; /* Inicialmente invisível */
-            transition: opacity 0.3s ease, background-color 0.3s ease; /* Animação de transição */
-            border-radius: 10px; /* Bordas arredondadas */
-            z-index: -1; /* Para ficar atrás do logo e do nome */
-        }
-
-        .icon-item:hover::before {
-            opacity: 1; /* Torna a sombra visível ao passar o mouse */
-            background-color: rgba(76, 175, 80, 0.8); /* Cor muda ao passar o mouse */
         }
 
         .icon-item img {
@@ -137,9 +116,9 @@
 
         .icon-item p {
             margin-top: 10px;
-            font-size: 1em; /* Aumente a fonte para maior legibilidade */
+            font-size: 1em;
             text-align: center;
-            font-weight: bold; /* Nomes dos canais em negrito */
+            font-weight: bold;
         }
 
         .video-js.vjs-fullscreen {
@@ -202,13 +181,14 @@
     <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/iptv.m3u";
+            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/main/iptv.m3u"; // Verifique se essa URL está correta
             var iconGrid = document.getElementById("icon-grid");
             var searchBar = document.getElementById("search-bar");
             var video = videojs('video-player', {
                 controls: true,
                 autoplay: false,
-                preload: 'auto'
+                preload: 'auto',
+                techOrder: ["html5", "flash"]
             });
 
             var canais = [];
@@ -216,55 +196,58 @@
             var xhr = new XMLHttpRequest();
             xhr.open("GET", listaURL, true);
             xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    var linhas = xhr.responseText.split('\n');
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        var linhas = xhr.responseText.split('\n');
 
-                    for (var i = 0; i < linhas.length; i++) {
-                        if (linhas[i].startsWith('#EXTINF')) {
-                            var nome = linhas[i].split(',')[1];
-                            var link = linhas[i + 1] ? linhas[i + 1].trim() : null;
+                        for (var i = 0; i < linhas.length; i++) {
+                            if (linhas[i].startsWith('#EXTINF')) {
+                                var nome = linhas[i].split(',')[1];
+                                var link = linhas[i + 1] ? linhas[i + 1].trim() : null;
 
-                            if (!nome || !link) continue;
+                                if (!nome || !link) continue;
 
-                            var logoURL = ""; // Adicione lógica para obter logotipos se necessário
-                            canais.push({ nome: nome, link: link, logo: logoURL });
+                                var logoURL = ""; // Adicione lógica para obter logotipos se necessário
+                                canais.push({ nome: nome, link: link, logo: logoURL });
+                            }
                         }
+
+                        // Adiciona os ícones de canais
+                        renderCanais(canais);
+
+                        // Filtro de busca
+                        searchBar.addEventListener("input", function() {
+                            var termoBusca = searchBar.value.toLowerCase();
+                            var canaisFiltrados = canais.filter(function(canal) {
+                                return canal.nome.toLowerCase().includes(termoBusca);
+                            });
+                            renderCanais(canaisFiltrados);
+                        });
+                    } else {
+                        console.error("Erro ao carregar a lista de canais: " + xhr.status);
                     }
-
-                    // Adiciona os ícones de canais
-                    renderCanais(canais);
-
-                    // Filtro de busca
-                    searchBar.addEventListener("input", function() {
-                        var filtro = searchBar.value.toLowerCase();
-                        var canaisFiltrados = canais.filter(canal => canal.nome.toLowerCase().includes(filtro));
-                        renderCanais(canaisFiltrados);
-                    });
                 }
             };
             xhr.send();
 
-            function renderCanais(canais) {
-                iconGrid.innerHTML = ""; // Limpa a grid
-
-                canais.forEach(canal => {
+            function renderCanais(canaisParaMostrar) {
+                iconGrid.innerHTML = ""; // Limpa a grid de ícones
+                canaisParaMostrar.forEach(function(canal) {
                     var div = document.createElement("div");
-                    div.className = "icon-item";
-
+                    div.classList.add("icon-item");
                     div.onclick = function() {
-                        if (canal.link) {
-                            video.src({ src: canal.link, type: "application/x-mpegURL" });
-                            video.play();
+                        video.src({ src: canal.link, type: 'application/x-mpegURL' });
+                        video.play();
+                        if (video.requestFullscreen) {
+                            video.requestFullscreen();
+                        } else if (video.webkitRequestFullscreen) {
+                            video.webkitRequestFullscreen();
                         }
                     };
-
-                    var img = document.createElement("img");
-                    img.src = canal.logo || "https://via.placeholder.com/80"; // Logotipo padrão se não houver logo
-                    var p = document.createElement("p");
-                    p.innerText = canal.nome; // Nomes dos canais
-
-                    div.appendChild(img);
-                    div.appendChild(p);
+                    div.innerHTML = `
+                        <img src="${canal.logo || 'default-logo.png'}" alt="${canal.nome}">
+                        <p>${canal.nome}</p>
+                    `;
                     iconGrid.appendChild(div);
                 });
             }
