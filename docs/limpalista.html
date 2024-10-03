@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtragem de Canais M3U</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        textarea {
+            width: 100%;
+            height: 300px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: none;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        li {
+            background: #fff;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .channel {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Filtragem de Canais M3U</h1>
+<textarea id="m3uInput" placeholder="Cole sua lista M3U aqui..."></textarea>
+<button id="filterButton">Filtrar Canais</button>
+<button id="downloadButton" style="display:none;">Baixar Lista Filtrada</button>
+
+<h2>Canais Filtrados:</h2>
+<ul id="channelList"></ul>
+
+<script>
+    const desiredChannels = [
+        "A&E", "Adult Swim", "Al Jazeera", "AMC", "Animal Planet", "Arte 1", "Baby TV",
+        "BandNews TV", "BandSports", "BBB Pay-Per-View", "Bis", "Bloomberg Television",
+        "Boomerang", "Canal 21", "Canal Brasil", "Canal do Boi", "Canal do Criador",
+        "Canal Empreender", "Canal K", "Canal Rural", "Canal Seven", "Canal Universitário",
+        "Canal Agroplus", "Cartoon Network", "Cartoonito", "Cine Brasil TV", "Cinecanal",
+        "Cinemax", "Climatempo", "COM Brasil TV", "Comedy Central", "Curta!", "Dog TV",
+        "Discovery Channel", "Discovery Civilization", "Discovery Home & Health", 
+        "Discovery Kids", "Discovery Science", "Discovery Theater", "Discovery Turbo", 
+        "Discovery World", "Disney Channel", "DW", "E!", "ESPN", "ESPN 2", "ESPN 3",
+        "ESPN 4", "ESPN 5", "ESPN 6", "ESPN Extra", "Futura", "FashionBox", "FashionTV",
+        "Film&Arts", "FishTV", "Fuel TV", "GNT", "GloboNews", "Golf Channel", "Gloob",
+        "Gloobinho", "HBO", "HBO 2", "HBO Family", "HBO Mundi", "HBO+", "HBO Pop",
+        "HBO Signature", "HBO Xtreme", "HGTV", "History", "History 2", "Ideal TV",
+        "Investigação Discovery", "Lifetime", "Megapix", "Modo Viagem", "Multishow",
+        "Music Box Brazil", "MTV", "MTV 00s", "MTV Live", "National Geographic",
+        "Nick Jr.", "Nickelodeon", "Nosso Futebol", "Off", "Paramount Network", "PlayTV",
+        "Polishop TV", "Premiere", "Record News", "RecordTV", "Rede Bandeirantes",
+        "Rede Brasil", "Rede Gênesis", "RedeTV!", "Rede Vida", "RCI", "RIT",
+        "RCN Nuestra Tele Internacional", "SBT", "SIC Internacional", "Sony Channel",
+        "Sony Movies", "Space", "SporTV", "SporTV 2", "SporTV 3", "TCM",
+        "Telecine Action", "Telecine Cult", "Telecine Fun", "Telecine Pipoca",
+        "Telecine Premium", "Telecine Touch", "TLC", "TNT", "TNT Novelas", "TNT Séries",
+        "Travel Box Brazil", "TruTV", "TV Aparecida", "TV Brasil", "TV Câmara",
+        "TV Caravelas", "TV Cultura", "TV Escola", "TV Gazeta", "TV Globo", 
+        "TV Jovem Pan News", "TV Justiça", "TV Novo Tempo", "TV Rá-Tim-Bum", 
+        "TV Senado", "TV5Monde", "USA Network", "Universal TV", "Venus", "Viva",
+        "Warner Channel", "Woohoo", "ZooMoo Kids", "NSC TV", "RIC TV", "SBT SC",
+        "SCC", "Band SC", "TV Catarina"
+    ];
+
+    const variations = ["", " BR", " BRA"]; // Variações de canal
+
+    const filterChannels = () => {
+        const inputText = document.getElementById('m3uInput').value;
+        const lines = inputText.split('\n');
+        const filteredChannels = [];
+
+        let currentChannel = null;
+
+        lines.forEach(line => {
+            const channelMatch = line.match(/#EXTINF:-1,\s*(.*)/);
+            if (channelMatch) {
+                if (currentChannel) {
+                    // Verifica se existe URL para o canal anterior
+                    filteredChannels.push(currentChannel);
+                }
+                const channelName = channelMatch[1].trim();
+
+                // Verifica se o canal está na lista desejada com variações
+                const isDesiredChannel = desiredChannels.some(desired => 
+                    variations.some(variation => 
+                        channelName.toLowerCase().includes(desired.toLowerCase() + variation)
+                    )
+                );
+
+                // Atualiza o canal atual apenas se for desejado
+                if (isDesiredChannel) {
+                    currentChannel = {
+                        name: channelName,
+                        url: null // Inicializa a URL como nula
+                    };
+                } else {
+                    currentChannel = null; // Reseta se não for desejado
+                }
+            } else if (currentChannel && line.trim()) {
+                // Se a linha não for um #EXTINF e houver um canal atual, é uma URL
+                currentChannel.url = line.trim(); // Atribui a URL ao canal
+            }
+        });
+
+        // Adiciona o último canal se houver
+        if (currentChannel && currentChannel.url) {
+            filteredChannels.push(currentChannel);
+        }
+
+        // Filtra canais que não têm URL
+        const channelsWithUrls = filteredChannels.filter(channel => channel.url);
+
+        // Ordena os canais em ordem alfabética: A-Z, 0-9 e outros caracteres
+        channelsWithUrls.sort((a, b) => {
+            const normalize = str => str.replace(/[^A-Za-z0-9]/g, '').toLowerCase(); // Normaliza a string
+            const aName = normalize(a.name);
+            const bName = normalize(b.name);
+            return aName.localeCompare(bName, 'pt-BR');
+        });
+
+        displayChannels(channelsWithUrls);
+        createDownloadLink(channelsWithUrls);
+    };
+
+    const displayChannels = (filteredChannels) => {
+        const channelList = document.getElementById('channelList');
+        channelList.innerHTML = '';
+
+        filteredChannels.forEach(channel => {
+            const li = document.createElement('li');
+            li.classList.add('channel');
+            li.innerHTML = `<strong>${channel.name}</strong> <a href="${channel.url}" target="_blank">Link</a>`;
+            channelList.appendChild(li);
+        });
+    };
+
+    const createDownloadLink = (filteredChannels) => {
+        const downloadButton = document.getElementById('downloadButton');
+        const m3uHeader = "#EXTM3U\n";
+        const m3uContent = filteredChannels.map(channel => `#EXTINF:-1, ${channel.name}\n${channel.url}`).join("\n");
+        const fileContent = m3uHeader + m3uContent;
+
+        const blob = new Blob([fileContent], { type: 'text/plain' });
+        const url = URL.createObjectURL(blob);
+
+        downloadButton.style.display = 'inline-block';
+        downloadButton.onclick = () => {
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'canais_filtrados.m3u';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        };
+    };
+
+    document.getElementById('filterButton').onclick = filterChannels;
+</script>
+
+</body>
+</html>
