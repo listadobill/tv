@@ -169,24 +169,30 @@
             var xhr = new XMLHttpRequest();
             xhr.open("GET", listaURL, true);
             xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    var linhas = xhr.responseText.split('\n');
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        var linhas = xhr.responseText.split('\n');
+                        console.log("Linhas recebidas:", linhas); // Log para depuração
 
-                    for (var i = 0; i < linhas.length; i++) {
-                        if (linhas[i].startsWith('#EXTINF')) {
-                            var nome = linhas[i].split(',')[1].trim();
-                            var link = linhas[i + 1] ? linhas[i + 1].trim() : null;
+                        for (var i = 0; i < linhas.length; i++) {
+                            if (linhas[i].startsWith('#EXTINF')) {
+                                var nome = linhas[i].split(',')[1].trim();
+                                var link = linhas[i + 1] ? linhas[i + 1].trim() : null;
 
-                            var tvgLogo = linhas[i].match(/tvg-logo="(.*?)"/);
-                            var logoURL = tvgLogo ? tvgLogo[1] : "";
+                                var tvgLogo = linhas[i].match(/tvg-logo="(.*?)"/);
+                                var logoURL = tvgLogo ? tvgLogo[1] : "";
 
-                            if (!nome || !link) continue;
+                                if (!nome || !link) continue;
 
-                            canais.push({ nome: nome, link: link, logo: logoURL });
+                                canais.push({ nome: nome, link: link, logo: logoURL });
+                            }
                         }
-                    }
 
-                    renderCanais(canais);
+                        console.log("Canais carregados:", canais); // Log para depuração
+                        renderCanais(canais);
+                    } else {
+                        console.error("Erro ao carregar a lista de canais:", xhr.status); // Log de erro
+                    }
                 }
             };
             xhr.send();
@@ -200,7 +206,7 @@
                         playCanal(canal.link);
                     };
 
-                    var logo = canal.logo ? `<img src="${canal.logo}" alt="${canal.nome}">` : `<img src="https://via.placeholder.com/80" alt="${canal.nome}">`;
+                    var logo = canal.logo ? `<img src="${canal.logo}" alt="${canal.nome}">` : `<img src="default-logo.png" alt="${canal.nome}">`;
                     item.innerHTML = logo + `<p>${canal.nome}</p>`;
                     iconGrid.appendChild(item);
                 });
@@ -220,27 +226,24 @@
                     width: "100%"
                 });
 
-                // Espera 100ms para abrir em tela cheia
-                setTimeout(() => {
+                // Entra em tela cheia após um atraso de 3 segundos
+                setTimeout(function() {
                     if (document.fullscreenEnabled) {
-                        player.core.mediaControl.container.requestFullscreen().catch(function(error) {
-                            console.log("Erro ao entrar em tela cheia:", error);
-                        });
+                        playerContainer.requestFullscreen();
+                    } else if (playerContainer.webkitRequestFullscreen) { // Safari
+                        playerContainer.webkitRequestFullscreen();
+                    } else if (playerContainer.mozRequestFullScreen) { // Firefox
+                        playerContainer.mozRequestFullScreen();
+                    } else if (playerContainer.msRequestFullscreen) { // IE/Edge
+                        playerContainer.msRequestFullscreen();
                     }
-                }, 100);
-
-                // Reconexão automática
-                player.on(Clappr.Events.PLAYER_ERROR, function() {
-                    setTimeout(() => {
-                        player.load(link);
-                    }, 5000); // Recarrega o canal após 5 segundos em caso de erro
-                });
+                }, 3000); // 3 segundos de atraso
             }
 
             searchBar.addEventListener('input', function() {
-                var filtro = searchBar.value.toLowerCase();
-                var canaisFiltrados = canais.filter(canal => canal.nome.toLowerCase().includes(filtro));
-                renderCanais(canaisFiltrados);
+                var searchTerm = this.value.toLowerCase();
+                var filteredCanais = canais.filter(canal => canal.nome.toLowerCase().includes(searchTerm));
+                renderCanais(filteredCanais);
             });
         });
     </script>
