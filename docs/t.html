@@ -1,3 +1,5 @@
+Aqui está o código corrigido e completo:
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -176,7 +178,7 @@
                 parentId: '#player',
                 width: '100%',
                 height: '100%',
-                autoPlay: false, // Desativar reprodução automática
+                autoPlay: false, // Reprodução automática desativada inicialmente
                 mute: false
             });
 
@@ -226,7 +228,7 @@
             function playCanal(link) {
                 player.load(link);
                 player.play();
-                player.coreFullscreen(); // Abre o vídeo em tela cheia
+                player.setFullscreen(true); // Abre o vídeo em tela cheia
                 player.on(Clappr.Events.PLAYER_ERROR, function() {
                     // Tenta reconectar automaticamente
                     setTimeout(function() {
@@ -244,3 +246,11 @@
         });
     </script>
 </body>
+</html>
+
+Principais alterações:
+
+1. **Correção
+
+
+
