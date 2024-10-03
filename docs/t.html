@@ -10,7 +10,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #000;
+            background-color: #0b3d0b; /* Cor de fundo verde */
             color: #fff;
             height: 100vh;
             display: flex;
@@ -105,7 +105,7 @@
 
         .icon-item:hover {
             transform: scale(1.1);
-            background-color: rgba(76, 175, 80, 0.5);
+            background-color: rgba(255, 0, 0, 0.5); /* Cor de seleção vermelha */
         }
 
         .icon-item img {
@@ -122,9 +122,10 @@
             margin-top: 10px;
             font-size: 0.9em;
             text-align: center;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(76, 175, 80, 0.8); /* Cor de fundo verde translúcido */
             padding: 5px;
             border-radius: 5px;
+            font-weight: bold; /* Adiciona negrito ao texto */
         }
 
         .video-js.vjs-fullscreen {
@@ -233,57 +234,34 @@
 
                     // Filtro de busca
                     searchBar.addEventListener("input", function() {
-                        var termoBusca = searchBar.value.toLowerCase();
-                        var canaisFiltrados = canais.filter(function(canal) {
-                            return canal.nome.toLowerCase().includes(termoBusca);
-                        });
-                        renderCanais(canaisFiltrados);
+                        var query = this.value.toLowerCase();
+                        renderCanais(canais.filter(canal => canal.nome.toLowerCase().includes(query)));
                     });
                 }
             };
             xhr.send();
 
-            function renderCanais(canaisParaMostrar) {
-                iconGrid.innerHTML = ""; // Limpa os ícones existentes
-                canaisParaMostrar.forEach(function(canal) {
-                    var iconItem = document.createElement("div");
-                    iconItem.className = "icon-item";
-                    iconItem.innerHTML = `
-                        <img src="${canal.logo || 'default-logo.png'}" alt="${canal.nome}">
-                        <p>${canal.nome}</p>
-                    `;
-                    iconItem.onclick = function() {
-                        video.src({ type: 'application/x-mpegURL', src: canal.link });
+            function renderCanais(canaisFiltrados) {
+                iconGrid.innerHTML = ''; // Limpa o grid
+
+                canaisFiltrados.forEach(function(canal) {
+                    var item = document.createElement('div');
+                    item.className = 'icon-item';
+                    item.onclick = function() {
+                        video.src({ src: canal.link, type: 'application/x-mpegURL' });
                         video.play();
                     };
-                    iconGrid.appendChild(iconItem);
+
+                    var img = document.createElement('img');
+                    img.src = canal.logo || 'default-logo.png'; // Imagem padrão se logo não estiver disponível
+                    var nome = document.createElement('p');
+                    nome.textContent = canal.nome;
+
+                    item.appendChild(img);
+                    item.appendChild(nome);
+                    iconGrid.appendChild(item);
                 });
             }
-
-            // Função para alternar para tela cheia
-            function toggleFullScreen() {
-                var videoPlayer = document.getElementById("video-player");
-                if (videoPlayer.requestFullscreen) {
-                    videoPlayer.requestFullscreen();
-                } else if (videoPlayer.mozRequestFullScreen) {
-                    videoPlayer.mozRequestFullScreen();
-                } else if (videoPlayer.webkitRequestFullscreen) {
-                    videoPlayer.webkitRequestFullscreen();
-                } else if (videoPlayer.msRequestFullscreen) {
-                    videoPlayer.msRequestFullscreen();
-                }
-            }
-
-            // Adiciona evento para permitir tela cheia
-            video.on('play', toggleFullScreen);
-
-            // Oculte mensagens de erro
-            video.on('error', function() {
-                var errorDisplay = document.querySelector('.vjs-error-display');
-                if (errorDisplay) {
-                    errorDisplay.style.display = 'none';
-                }
-            });
         });
     </script>
 </body>
