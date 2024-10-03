@@ -175,25 +175,19 @@
         <div id="top-buttons">
             <button class="top-button" onclick="window.location.href='https://listadobill.github.io/tv/'">CANAIS, SÉRIES E FILMES STREAM</button>
             <button class="top-button" onclick="window.location.href='https://listadobill.github.io/tv/iptv2'">SERVIDOR 2</button>
-            <button class="top-button" onclick="window.location.href='https://listadobill.github.io/tv/ott'">SERVIDOR 3</button>
-            <button class="top-button" onclick="window.location.href='https://listadobill.github.io/tv/argentina'">ARGENTINA</button>
-            <button class="top-button" onclick="window.location.href='https://listadobill.github.io/tv/brasil'">BRASIL</button>
-            <button class="top-button" onclick="window.location.href='https://listadobill.github.io/tv/carros'">CARROS</button>
-            <button class="top-button" onclick="window.location.href='https://listadobill.github.io/tv/espanha'">ESPANHA</button>
-            <button class="top-button" onclick="window.location.href='https://listadobill.github.io/tv/musica'">MÚSICA</button>
-            <button class="top-button" onclick="window.location.href='https://listadobill.github.io/tv/portugal'">PORTUGAL</button>
+            <button class="top-button" onclick="window.location.href='https://listadobill.github.io/tv/iptv3'">SERVIDOR 3</button>
         </div>
 
-        <input type="text" id="search-bar" placeholder="Buscar canal...">
+        <input type="text" id="search-bar" placeholder="Buscar canais...">
 
         <div id="main">
-            <div id="icon-grid">
-                <!-- Ícones de canais serão carregados dinamicamente aqui -->
+            <div id="player-container">
+                <video id="video-player" class="video-js" controls preload="auto" data-setup='{}'>
+                    <source src="" type="application/x-mpegURL">
+                    Seu navegador não suporta o formato de vídeo.
+                </video>
             </div>
-        </div>
-
-        <div id="player-container">
-            <video id="video-player" class="video-js vjs-default-skin" controls></video>
+            <div id="icon-grid"></div>
         </div>
     </div>
 
@@ -205,7 +199,7 @@
             var searchBar = document.getElementById("search-bar");
             var video = videojs('video-player', {
                 controls: true,
-                autoplay: false,
+                autoplay: false, // Mantenha em false inicialmente
                 preload: 'auto'
             });
 
@@ -249,7 +243,8 @@
                     item.className = 'icon-item';
                     item.onclick = function() {
                         video.src({ src: canal.link, type: 'application/x-mpegURL' });
-                        video.play();
+                        video.play(); // Reproduz automaticamente ao iniciar
+                        enterFullscreen(); // Chama a função para entrar em tela cheia
                     };
 
                     var img = document.createElement('img');
@@ -261,6 +256,19 @@
                     item.appendChild(nome);
                     iconGrid.appendChild(item);
                 });
+            }
+
+            function enterFullscreen() {
+                var videoElement = document.getElementById('video-player');
+                if (videoElement.requestFullscreen) {
+                    videoElement.requestFullscreen();
+                } else if (videoElement.mozRequestFullScreen) { // Firefox
+                    videoElement.mozRequestFullScreen();
+                } else if (videoElement.webkitRequestFullscreen) { // Chrome, Safari, and Opera
+                    videoElement.webkitRequestFullscreen();
+                } else if (videoElement.msRequestFullscreen) { // IE/Edge
+                    videoElement.msRequestFullscreen();
+                }
             }
         });
     </script>
