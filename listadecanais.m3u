@@ -14,7 +14,7 @@ https://limited38.todostreaming.es/live/101tv-web101tv.m3u8
 #EXTINF:-1 tvg-id="101tvRonda.es" tvg-logo="https://i.imgur.com/GzI3RC4.png" group-title="General",101tv Ronda (1080p)
 https://streaming101tv.es/hls/webronda.m3u8
 #EXTINF:-1 tvg-id="101tvSevilla.es" tvg-logo="https://i.imgur.com/GzI3RC4.png" group-title="General",101tv Sevilla (1080p)
-https://streaming101tv.es/hls/websevilla.m3u8
+https://streaming101tv.es/hls/websevil.m3u8
 #EXTINF:-1 tvg-id="12tv.es" tvg-logo="https://i.imgur.com/VSTgXsh.png" group-title="General",12tv
 #EXTVLCOPT:http-referrer=https://www.12tv.es/
 #EXTINF:-1 tvg-id="13Festival.cl" tvg-logo="https://i.imgur.com/hTUe0Pw.png" group-title="Music",13 Festival (1080p)
