@@ -109,8 +109,8 @@
         }
 
         .icon-item img {
-            width: 80px;
-            height: 80px;
+            max-width: 80px; /* Limita a largura máxima do logotipo */
+            max-height: 80px; /* Limita a altura máxima do logotipo */
             object-fit: cover;
             border-radius: 50%;
             border: 2px solid #4CAF50;
@@ -220,24 +220,20 @@
 
                     for (var i = 0; i < linhas.length; i++) {
                         if (linhas[i].startsWith('#EXTINF')) {
-                            var nome = linhas[i].split(',')[1];
+                            var nome = linhas[i].split(',')[1].trim();
                             var link = linhas[i + 1] ? linhas[i + 1].trim() : null;
+
+                            // Extrai a URL do logotipo do campo tvg-logo
+                            var tvgLogo = linhas[i].match(/tvg-logo="(.*?)"/);
+                            var logoURL = tvgLogo ? tvgLogo[1] : ""; // Se existir, usa a URL, senão, usa vazio
 
                             if (!nome || !link) continue;
 
-                            var logoURL = ""; // Adicione lógica para obter logotipos se necessário
                             canais.push({ nome: nome, link: link, logo: logoURL });
                         }
                     }
 
-                    // Adiciona os ícones de canais
                     renderCanais(canais);
-
-                    // Filtro de busca
-                    searchBar.addEventListener("input", function() {
-                        var query = this.value.toLowerCase();
-                        renderCanais(canais.filter(canal => canal.nome.toLowerCase().includes(query)));
-                    });
                 }
             };
             xhr.send();
@@ -269,6 +265,12 @@
                     }, 5000); // 5 segundos para reconectar
                 });
             }
+
+            searchBar.addEventListener("input", function() {
+                var query = searchBar.value.toLowerCase();
+                var filteredCanais = canais.filter(canal => canal.nome.toLowerCase().includes(query));
+                renderCanais(filteredCanais);
+            });
         });
     </script>
 </body>
