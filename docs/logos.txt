@@ -1,0 +1,286 @@
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/The_Pirate_Bay_logo.svg/220px-The_Pirate_Bay_logo.svg.png" group-title="Canais  Abertos Brasileiros", CANAIS ABERTOS BRASILEIROS
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/The_Pirate_Bay_logo.svg/220px-The_Pirate_Bay_logo.svg.png" group-title="Agronegocio", CANAIS DE AGRONEGÓCIO
+#EXTINF:-1 tvg-id="CANAL RURAL tvg-name="CANAL RURAL" tvg-language="Portuguese" tvg-logo="https://digitaldicas.com.br/wp-content/uploads/2020/06/img_3842.jpg" group-title="Agronegocio", CANAL RURAL
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://www.cxtv.com.br/img/Tvs/Logo/webp-m/1334cc9d017c352142a824679947cb40.webp" group-title="Agronegocio", AGRO MAIS
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://www.cxtv.com.br/img/Tvs/Logo/webp-m/f57a9beaaa83cbdce4d9512730333d21.webp" group-title="AGRONEGÓCIO", CANAL DO CRIADOR
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://pa-str.srvsite.com/arquivos/4381/cabecalho-4381-20200630123328.jpg" group-title="AGRONEGÓCIO", CANAL DA PECUÁRIA
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://www.cxtv.com.br/img/Tvs/Logo/webp-m/f82ee45edb65723754fe32dff6417c30.webp" group-title="AGRONEGÓCIO", Nova Tv Agrotour
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/The_Pirate_Bay_logo.svg/220px-The_Pirate_Bay_logo.svg.png" group-title="CULINÁRIA", CANAIS DE CULINÁRIA
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://www.cxtv.com.br/img/Tvs/Logo/webp-m/70e828fbda2a612c958bbeba041ce960.webp" group-title="CULINÁRIA", Tv Destaque Nacional
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/The_Pirate_Bay_logo.svg/220px-The_Pirate_Bay_logo.svg.png" group-title="CULTURA E EDUCAÇÃO", CANAIS DE CULTURA E EDUCAÇÃO
+#EXTINF:0 tvg-country="BR" tvg-logo="" group-title="CANAIS DE CULTURA E EDUCAÇÃO",Futura
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/thumb/3/39/Logotipo_da_Rede_Brasil_de_Televis%C3%A3o.png/200px-Logotipo_da_Rede_Brasil_de_Televis%C3%A3o.png" group-title="CULTURA", Rede Brasil de Televisão - RBTV
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://i.imgur.com/765Cn9I.png" group-title="CANAIS DE CULTURA E EDUCAÇÃO", TV Cultura
+#EXTINF:0 tvg-country="BR" tvg-logo="https://www.cxtv.com.br/img/Tvs/Logo/webp-m/c367dd0923ebf8b79a9b3dd3f4c3f443.webp" group-title="CANAIS DE CULTURA E EDUCAÇÃO",TV Escola
+#EXTINF:0 tvg-country="BR" tvg-logo="https://www.cxtv.com.br/img/Tvs/Logo/webp-m/12da3aa22277f0d63f827d0fce4de59d.webp" group-title="CANAIS DE CULTURA E EDUCAÇÃO", TV Litoral Panorama - Cultura SC
+#EXTINF:0 tvg-country="BR" tvg-logo="https://www.cxtv.com.br/img/Tvs/Logo/webp-m/3164f442867991978299da9684b6b44b.webp" group-title="CANAIS DE CULTURA E EDUCAÇÃO",TV Camara
+#EXTINF:0 tvg-country="BR" tvg-logo="https://tv.ufsc.br/wp-content/themes/tvufsc/images/cabecalho.jpg" group-title="CANAIS DE CULTURA E EDUCAÇÃO",TV UFSC
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/The_Pirate_Bay_logo.svg/220px-The_Pirate_Bay_logo.svg.png" group-title="INFANTIL", CANAIS INFANTIS
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://www.cxtv.com.br/img/Tvs/Logo/webp-m/8e2460502f204b225c89d644e88153a8.webp" group-title="INFANTIL", Anime Tv
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://www.cxtv.com.br/img/Tvs/Logo/webp-m/8e2460502f204b225c89d644e88153a8.webp" group-title="INFANTIL", Anime Tv 2
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="http://animestation.fun/assets/img/logo-animestation.png" group-title="INFANTIL", Animestation
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://ipgo.xyz/tv/retrocartoontv/imagens/logo_retrocartoon_site.png" group-title="INFANTIL", RETRÔ CARTOON CHANNEL
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://ipgo.xyz/tv/retrocartoontv/imagens/logo_retrocartoon_site.png" group-title="INFANTIL", RETRÔ CARTOON CHANNEL 2
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://pt.wikipedia.org/wiki/Ficheiro:Jetsons.jpg" group-title="INFANTIL", Jetsons Tv
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://www.cxtv.com.br/img/Tvs/Logo/webp-m/8d4bdb68a85b31fdb5ab58d73fe88d22.webp" group-title="INFANTIL",TV TOKYO
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://www.cxtv.com.br/img/Tvs/Logo/webp-m/f99a0e941ba522c9a84d61be4d8bd2bd.webp" group-title="INFANTIL", Web Tv Xtreme
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/The_Pirate_Bay_logo.svg/220px-The_Pirate_Bay_logo.svg.png" group-title="DOCUMENTÁRIO", CANAIS DE DOCUMENTÁRIOS
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://www.cxtv.com.br/img/Tvs/Logo/webp-m/99c3b9e26fccf483d6432e70777816ca.webp" group-title="DOCUMENTÁRIO", Life Channel Brasil
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="http://animestation.fun/assets/img/logo-cghost.png" group-title="DOCUMENTÁRIO", GHOST TV
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://www.cxtv.com.br/img/Tvs/Logo/webp-m/454924e01d06c3bc20131e8514187305.webp" group-title="DOCUMENTÁRIO", Conectv
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/f/f2/Large.Logo_GarageTV2019.png.c7694a48fbe8a1685d4eee68cbafe44e.png/revision/latest/scale-to-width-down/450?cb=20200913212105" group-title="DOCUMENTÁRIO", GARAGE TV
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/The_Pirate_Bay_logo.svg/220px-The_Pirate_Bay_logo.svg.png" group-title="NOTÍCIAS, CANAIS DE NOTÍCIAS
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://www.tvideonews.com.br/gallery_gen/14d7c4df234b97082360fffc2b54a7fe_500x375.png" group-title="NOTÍCIAS", TVídeoNews
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/The_Pirate_Bay_logo.svg/220px-The_Pirate_Bay_logo.svg.png" group-title="ESPORTES", CANAIS DE ESPORTES
+#EXTINF:-1 tvg-id="tvg-name="" tvg-language="Portuguese" tvg-logo="https://www.cxtv.com.br/img/Tvs/Logo/webp-m/e7091994dd0a7abb969c3a058a21f710.webp" group-title="ESPORTES", All Sports TV
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://radioetvshowdebola.com/wp-content/uploads/2021/06/banner_1ano.fw_.png" group-title="ESPORTES", TV Show de Bola
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/The_Pirate_Bay_logo.svg/220px-The_Pirate_Bay_logo.svg.png" group-https://video.wixstatic.com/video/f21f2b_7ba2c8ab7bae42b98a2e7635400d9448/360p/mp4/file.mp4
+#EXTINF:-1 tvg-id="Bons Tempos tvg-name="Bons Tempos" tvg-language="Portuguese" tvg-logo="https://1.bp.blogspot.com/-d-mnTNCYp_I/X77N431tLcI/AAAAAAAAD28/BGqvxaVveZQtW-eArJwOuarVS2YEQ5kZACLcBGAsYHQ/s0/BONS%2BTEMPOS%2BTV.png" group-title="Aberta", Bons Tempos
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://www.tvcine.net/admin/assets/img/logo.png" group-title="FILMES E SÉRIES", TV CINE 
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="http://whamtvclassic.adcast.com.br/admin/assets/img/logo.png" group-title="FILMES E SÉRIES", Wham TV Classic 
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://www.cxtv.com.br/img/Tvs/Logo/webp-m/8fc99fbda2095d214c7d11397aa2415d.webp" group-title="FILMES E SÉRIES", SUMMER TV
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://www.cxtv.com.br/img/Tvs/Logo/webp-m/330749dcc61ffa6816423d9d3452808e.webp" group-title="FILMES E SÉRIES", Tv Nova Play
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://ipgo.xyz/tv/classique/imagens/logo_classiquew_site.png" group-title="FILMES E SÉRIES", Classique 1 Western TV - FAROESTE
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://ipgo.xyz/tv/classique/imagens/logo_classiqueTV_site.png" group-title="FILMES E SÉRIES", Classique 2 CULT TV
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://ipgo.xyz/tv/classique/imagens/logo_classiqueTV_site.png" group-title="FILMES E SÉRIES", Classique 3 CULT TV
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://pa-str.srvsite.com/arquivos/4172/cabecalho-4172-20190419152834.png" group-title="FILMES E SÉRIES", Rede TV Sul
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/The_Pirate_Bay_logo.svg/220px-The_Pirate_Bay_logo.svg.png" group-title="MÚSICA", CANAIS DE MÚSICA
+#EXTINF:0 tvg-country="BR" tvg-logo="http://retromusic.cz/wp-content/uploads/2017/08/retro-logo.png" group-title="MÚSICA", RETRO MUSIC
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/The_Pirate_Bay_logo.svg/220px-The_Pirate_Bay_logo.svg.png" group-title="PÚBLICO", CANAIS PÚBLICOS
+#EXTINF:0 tvg-country="BR" tvg-logo="https://s2.glbimg.com/TbVa1pA7OU-E0Jh6q2qwb9bKPpU=/640x424/top/i.glbimg.com/og/ig/infoglobo/f/original/2019/04/10/tvbrasil_SbFca9n.jpg" group-title="PÚBLICO",TV BRASIL
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/The_Pirate_Bay_logo.svg/220px-The_Pirate_Bay_logo.svg.png" group-title="ENTRETENIMENTO", CANAIS DE ENTRETENIMENTO
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://1.bp.blogspot.com/-yTu_7AN5aAo/X9TouEgdJhI/AAAAAAAAD9c/2A1p65GQS6QytmpjaE8_rWrTO8nuYi8EwCLcBGAsYHQ/s0/CANAL%2B29.png" group-title="ENTRETENIMENTO", Canal 29 SP 
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://pbr-str.srvsite.com/arquivos/8376/cabecalho-8376-20201029110500.png" group-title="ENTRETENIMENTO", Nova Manchete
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/thumb/3/39/Logotipo_da_Rede_Brasil_de_Televis%C3%A3o.png/200px-Logotipo_da_Rede_Brasil_de_Televis%C3%A3o.png" group-title="ENTRETENIMENTO", Rede Brasil de Televisão - RBTV
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/The_Pirate_Bay_logo.svg/220px-The_Pirate_Bay_logo.svg.png" group-title="SANTA CATARINA", CANAIS DE SANTA CATARINA
+#EXTINF:0 tvg-country="BR" tvg-logo="https://www.cxtv.com.br/img/Tvs/Logo/webp-m/85e5f6b6aa459a384730e3b520e1e728.webp" group-title="SANTA CATARINA", TV UNISUL
+#EXTINF:0 tvg-country="BR" tvg-logo="http://2.bp.blogspot.com/-lUdgYLdzj6k/W1d0tQ8vK9I/AAAAAAAAAsA/xBWA_vJ1mgQCOO4hq8hoYPbm3MRWhTFSACK4BGAYYCw/s850/banner%2Bnovo.jpg" group-title="SANTA CATARINA", TV UNISUL
+#EXTINF:0 tvg-country="BR" tvg-logo="https://www.cxtv.com.br/img/Tvs/Logo/webp-m/a4c933dfab023e2eea432cfd61479b1e.webp" group-title="SANTA CATARINA", TV UFSC
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/The_Pirate_Bay_logo.svg/220px-The_Pirate_Bay_logo.svg.png" group-title="RÁDIOS", RÁDIOS
+#EXTINF:0 tvg-logo="https://www.cxtv.com.br/img/Tvs/Logo/webp-m/bc3e30ce03fc1d8dc50e6f1aee453c51.webp" group-title="RÁDIOS", Rádio Globo 1100 AM SP
+#EXTINF:0 tvg-logo="https://www.cxtv.com.br/img/Tvs/Logo/webp-m/f4fd257218da2a7653b87313c7bae6ae.webp" group-title="RÁDIOS", CBN RJ 92,5 FM - Estúdio Ao Vivo
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/The_Pirate_Bay_logo.svg/220px-The_Pirate_Bay_logo.svg.png" group-title="1", History
+#EXTINF:-1 tvg-id="AgroBrasil TV (720p) [Not 24/7]" tvg-logo="https://www.costadosol.tv.br/site/wp-content/uploads/2017/12/agro-brasil.png" group-title=" Ao ar livre",AgroBrasil TV (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="Terra Viva (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/hBaG4Ce.png" group-title=" Ao ar livre",Terra Viva (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="Anime TV (360p) [Not 24/7]" tvg-logo="https://i.imgur.com/rmAm6UE.png" group-title="AnimaÃ§Ã£o",Anime TV (360p) [Not 24/7]
+#EXTINF:-1 tvg-id="Naruto (720p)" tvg-logo="https://images.pluto.tv/channels/5f6df5a173d7340007c559f7/colorLogoPNG.png" group-title="AnimaÃ§Ã£o",Naruto (720p)
+#EXTINF:-1 tvg-id="Pluto TV Anime (720p)" tvg-logo="https://images.pluto.tv/channels/5f12136385bccc00070142ed/colorLogoPNG.png" group-title="AnimaÃ§Ã£o",Pluto TV Anime (720p)
+#EXTINF:-1 tvg-id="Pluto TV Anime AÃ§Ã£o (720p)" tvg-logo="https://images.pluto.tv/channels/604b79c558393100078faeef/colorLogoPNG.png" group-title="AnimaÃ§Ã£o",Pluto TV Anime AÃ§Ã£o (720p)
+#EXTINF:-1 tvg-id="Tokusato (720p)" tvg-logo="https://images.pluto.tv/channels/5ff609de50ab210008025c1b/colorLogoPNG.png" group-title="AnimaÃ§Ã£o",Tokusato (720p)
+#EXTINF:-1 tvg-id="TV Tokyo (360p) [Not 24/7]" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/TV_Tokyo_logo_20110629.svg/320px-TV_Tokyo_logo_20110629.svg.png" group-title="AnimaÃ§Ã£o",TV Tokyo (360p) [Not 24/7]
+#EXTINF:-1 tvg-id="BBB 2022 CAM 1 (720p)" tvg-logo="http://printv.esy.es/server/BBB.png" group-title="BBB 2022",BBB 2022 CAM 1 (720p)
+#EXTINF:-1 tvg-id="BBB 2022 CAM 2 (720p)" tvg-logo="http://printv.esy.es/server/BBB.png" group-title="BBB 2022",BBB 2022 CAM 2 (720p)
+#EXTINF:-1 tvg-id="RetrÃ´ Cartoon (480p) [Not 24/7]" tvg-logo="https://i.imgur.com/cyfu3qP.png" group-title="ClÃ¡ssico",RetrÃ´ Cartoon (480p) [Not 24/7]
+#EXTINF:-1 tvg-id="Comedy Central Pluto TV (720p)" tvg-logo="https://images.pluto.tv/channels/5f357e91b18f0b00073583d2/colorLogoPNG.png" group-title="Comedia",Comedy Central Pluto TV (720p)
+#EXTINF:-1 tvg-id="Comedy Central South Park (720p) [Not 24/7]" tvg-logo="https://images.pluto.tv/channels/609ae66b359b270007869ff1/colorLogoPNG.png" group-title="Comedia",Comedy Central South Park (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="FailArmy (720p)" tvg-logo="https://images.pluto.tv/channels/5f5141c1605ddf000748eb1b/colorLogoPNG.png" group-title="Comedia",FailArmy (720p)
+#EXTINF:-1 tvg-id="Pluto TV ComÃ©dia (720p)" tvg-logo="https://images.pluto.tv/channels/6001f3018502100007f528ac/colorLogoPNG.png" group-title="Comedia",Pluto TV ComÃ©dia (720p)
+#EXTINF:-1 tvg-id="Porta dos Fundos (720p) [Not 24/7]" tvg-logo="https://images.pluto.tv/channels/5f36f2346ede750007332d11/colorLogoPNG.png" group-title="Comedia",Porta dos Fundos (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="The Pet Collective (720p)" tvg-logo="https://images.pluto.tv/channels/5f515ebac01c0f00080e8439/colorLogoPNG.png" group-title="Comedia",The Pet Collective (720p)
+#EXTINF:-1 tvg-id="1001 Noites (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/xbkYDeg.png" group-title="Compras",1001 Noites (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="Tastemade Brasil (1080p)" tvg-logo="https://i.imgur.com/8s6aRwv.png" group-title="CulinÃ¡ria",Tastemade Brasil (1080p)
+#EXTINF:-1 tvg-id="Pluto TV MistÃ©rios (720p)" tvg-logo="https://images.pluto.tv/channels/5fac52f142044f00078e2a51/colorLogoPNG.png" group-title="Documentario",Pluto TV MistÃ©rios (720p)
+#EXTINF:-1 tvg-id="Pluto TV Natureza (720p)" tvg-logo="https://images.pluto.tv/channels/5f1213ba0ecebc00070e170f/colorLogoPNG.png" group-title="Documentario",Pluto TV Natureza (720p)
+#EXTINF:-1 tvg-id="Pluto TV Vida Real (720p)" tvg-logo="https://images.pluto.tv/channels/5f32d4d9ec194100070c7449/colorLogoPNG.png" group-title="Documentario",Pluto TV Vida Real (720p)
+#EXTINF:-1 tvg-id="RT Documentary (1080p)" tvg-logo="https://i.imgur.com/XJGki3v.png" group-title="Documentario",RT Documentary (1080p)
+#EXTINF:-1 tvg-id="TV Mackenzie (480p) [Not 24/7]" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/TV_Mackenzie_logo.svg/320px-TV_Mackenzie_logo.svg.png" group-title="EducaÃ§Ã£o",TV Mackenzie (480p) [Not 24/7]
+#EXTINF:-1 tvg-id="TV UFG (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/Yp3dbJo.png" group-title="EducaÃ§Ã£o",TV UFG (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="TVE RS (1080p) [Not 24/7]" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/c/c2/Logotipo_da_TVE_RS.png" group-title="EducaÃ§Ã£o",TVE RS (1080p) [Not 24/7]
+#EXTINF:-1 tvg-id="Futura (540p) [Not 24/7]" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Canal_Futura.png/300px-Canal_Futura.png" group-title="EducaÃ§Ã£o",Futura (540p) [Not 24/7]
+#EXTINF:-1 tvg-id="Rede Minas (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/Tgov03S.jpg" group-title="EducaÃ§Ã£o",Rede Minas (1080p) [Not 24/7]
+#EXTINF:-1 tvg-id="Santa Cecilia TV (288p) [Not 24/7]" tvg-logo="https://i.imgur.com/KxYsq1d.png" group-title="EducaÃ§Ã£o",Santa Cecilia TV (288p) [Not 24/7]
+#EXTINF:-1 tvg-id="BET Being Mary Jane (720p)" tvg-logo="https://images.pluto.tv/channels/60a8126a0ac3970007f850fe/colorLogoPNG.png" group-title="Entreterimento",BET Being Mary Jane (720p)
+#EXTINF:-1 tvg-id="BET Pluto TV (720p)" tvg-logo="https://images.pluto.tv/channels/5ff768b6a4c8b80008498610/colorLogoPNG.png" group-title="Entreterimento",BET Pluto TV (720p)
+#EXTINF:-1 tvg-id="Jovem Pan Pluto TV (720p)" tvg-logo="https://images.pluto.tv/channels/602e80c762306a0007179876/colorLogoPNG.png" group-title="Entreterimento",Jovem Pan Pluto TV (720p)
+#EXTINF:-1 tvg-id="MasterChef (720p)" tvg-logo="https://images.pluto.tv/channels/6077045b6031bd00078de127/colorLogoPNG.png" group-title="Entreterimento",MasterChef (720p)
+#EXTINF:-1 tvg-id="MTV Are you the One? (720p)" tvg-logo="https://images.pluto.tv/channels/5f6108d8cc331900075e98e4/colorLogoPNG.png" group-title="Entreterimento",MTV Are you the One? (720p)
+#EXTINF:-1 tvg-id="MTV Pluto TV (720p)" tvg-logo="https://images.pluto.tv/channels/5f1212fb81e85c00077ae9ef/colorLogoPNG.png" group-title="Entreterimento",MTV Pluto TV (720p)
+#EXTINF:-1 tvg-id="Nosey EscÃ¢ndalos (720p)" tvg-logo="https://images.pluto.tv/channels/5f9b05a99547eb0007676b02/colorLogoPNG.png" group-title="Entreterimento",Nosey EscÃ¢ndalos (720p)
+#EXTINF:-1 tvg-id="O Encantador de CÃ£es (720p)" tvg-logo="https://images.pluto.tv/channels/61099df8cee03b00074b2ecf/colorLogoPNG.png" group-title="Entreterimento",O Encantador de CÃ£es (720p)
+#EXTINF:-1 tvg-id="People are Awesome (720p)" tvg-logo="https://images.pluto.tv/channels/5f515d080e738d000739e19c/colorLogoPNG.png" group-title="Entreterimento",People are Awesome (720p)
+#EXTINF:-1 tvg-id="SporTV 2 (720p)" tvg-logo="https://imgur.com/ZpjPkqS.png" group-title="Esportes",SporTV 2 (720p)
+#EXTINF:-1 tvg-id="SporTV (720p)" tvg-logo="https://imgur.com/bwqLqyg.png" group-title="Esportes",SporTV (720p)
+#EXTINF:-1 tvg-id="FUEL TV (720p)" tvg-logo="https://images.pluto.tv/channels/6144d088516ea8000739076a/colorLogoPNG.png" group-title="Esportes",FUEL TV (720p)
+#EXTINF:-1 tvg-id="Red Bull TV (1080p)" tvg-logo="https://i.imgur.com/7NeBmWX.jpg" group-title="Esportes",Red Bull TV (1080p)
+#EXTINF:-1 tvg-id="TNT Sports 2 Brasil (480p) [Not 24/7]" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/d/dc/Logotipo_TNT_Sports.png" group-title="Esportes",TNT Sports 2 Brasil (480p) [Not 24/7]
+#EXTINF:-1 tvg-id="TNT Sports 3 Brasil (360p)" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/d/dc/Logotipo_TNT_Sports.png" group-title="Esportes",TNT Sports 3 Brasil (360p)
+#EXTINF:-1 tvg-id="TNT Sports 4 Brasil (720p) [Not 24/7]" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/d/dc/Logotipo_TNT_Sports.png" group-title="Esportes",TNT Sports 4 Brasil (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="TNT Sports 5 Brasil (720p) [Not 24/7]" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/d/dc/Logotipo_TNT_Sports.png" group-title="Esportes",TNT Sports 5 Brasil (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="FOX Sports (480p)" tvg-logo="http://printv.esy.es/server/Fox%20Sports%20HD.png" group-title="Esportes",FOX Sports (480p)
+#EXTINF:-1 tvg-id="Premiere Clubes (1080p)" tvg-logo="http://printv.esy.es/server/Premiere%20Clubes%20HD.png" group-title="Esportes",Premiere Clubes (1080p)
+#EXTINF:-1 tvg-id="OFF (1080p)" tvg-logo="https://imgur.com/QPqeAcj.png" group-title="Esportes",OFF (1080p)
+#EXTINF:-1 tvg-id="Band Sports (720p)" tvg-logo="https://imgur.com/QaZ2nxB.png" group-title="Esportes",Band Sports (720p)
+#EXTINF:-1 tvg-id="ESPN EXTRA (720p)" tvg-logo="https://imgur.com/exEDct8.png" group-title="Esportes",ESPN EXTRA (720p)
+#EXTINF:-1 tvg-id="ESPN 4 (720p)" tvg-logo="https://imgur.com/ErWFVO3.png" group-title="Esportes",ESPN 4 (720p)
+#EXTINF:-1 tvg-id="ESPN 3 (720p)" tvg-logo="https://imgur.com/VCPTlBD.png" group-title="Esportes",ESPN 3 (720p)
+#EXTINF:-1 tvg-id="ESPN 2 (720p)" tvg-logo="https://imgur.com/fggtC7Y.png" group-title="Esportes",ESPN 2 (720p)
+#EXTINF:-1 tvg-id="ESPN 2 (480p)" tvg-logo="https://imgur.com/fggtC7Y.png" group-title="Esportes",ESPN 2 (480p)
+#EXTINF:-1 tvg-id="ESPN BRASIL (720p)" tvg-logo="https://imgur.com/1QaofaO.png" group-title="Esportes",ESPN BRASIL (720p)
+#EXTINF:-1 tvg-id="ESPN Brasil (480p)" tvg-logo="https://imgur.com/1QaofaO.png" group-title="Esportes",ESPN Brasil (480p)
+#EXTINF:-1 tvg-id="COMBATE (720p)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f9/Combate_Flat_Sem_Slogan_png.png" group-title="Esportes",COMBATE (720p)
+#EXTINF:-1 tvg-id="SporTV 3 (720p)" tvg-logo="https://imgur.com/ttHpdGp.png" group-title="Esportes",SporTV 3 (720p)
+#EXTINF:-1 tvg-id="Nick Teen (720p)" tvg-logo="https://images.pluto.tv/channels/60f5fabf0721880007cd50e3/colorLogoPNG.png" group-title="Familia",Nick Teen (720p)
+#EXTINF:-1 tvg-id="MyTime movie network Brazil (720p)" tvg-logo="https://od.lk/s/MF8yMjU5ODE1MzJf/MyTime_260x260.png" group-title="Filmes",MyTime movie network Brazil (720p)
+#EXTINF:-1 tvg-id="Pluto TV Cine ClÃ¡ssicos (720p)" tvg-logo="https://images.pluto.tv/channels/5fa1612a669ba0000702017b/colorLogoPNG.png" group-title="Filmes",Pluto TV Cine ClÃ¡ssicos (720p)
+#EXTINF:-1 tvg-id="Pluto TV Cine ComÃ©dia (720p)" tvg-logo="https://images.pluto.tv/channels/5f12101f0b12f00007844c7c/colorLogoPNG.png" group-title="Filmes",Pluto TV Cine ComÃ©dia (720p)
+#EXTINF:-1 tvg-id="Pluto TV Cine Drama (720p)" tvg-logo="https://images.pluto.tv/channels/5f1210d14ae1f80007bafb1d/colorLogoPNG.png" group-title="Filmes",Pluto TV Cine Drama (720p)
+#EXTINF:-1 tvg-id="Pluto TV Cine FamÃ­lia (720p)" tvg-logo="https://images.pluto.tv/channels/5f171f032cd22e0007f17f3d/colorLogoPNG.png" group-title="Filmes",Pluto TV Cine FamÃ­lia (720p)
+#EXTINF:-1 tvg-id="Pluto TV Cine Romance (720p)" tvg-logo="https://images.pluto.tv/channels/5f171f988ab9780007fa95ea/colorLogoPNG.png" group-title="Filmes",Pluto TV Cine Romance (720p)
+#EXTINF:-1 tvg-id="Pluto TV Cine Sucessos (720p)" tvg-logo="https://images.pluto.tv/channels/5f120e94a5714d00074576a1/colorLogoPNG.png" group-title="Filmes",Pluto TV Cine Sucessos (720p)
+#EXTINF:-1 tvg-id="Pluto TV Cine Terror (720p)" tvg-logo="https://images.pluto.tv/channels/5f12111c9e6c2c00078ef3bb/colorLogoPNG.png" group-title="Filmes",Pluto TV Cine Terror (720p)
+#EXTINF:-1 tvg-id="Pluto TV Filmes AÃ§Ã£o (720p)" tvg-logo="https://images.pluto.tv/channels/5f120f41b7d403000783a6d6/colorLogoPNG.png" group-title="Filmes",Pluto TV Filmes AÃ§Ã£o (720p)
+#EXTINF:-1 tvg-id="Pluto TV Filmes Nacionais (720p)" tvg-logo="https://images.pluto.tv/channels/5f5a545d0dbf7f0007c09408/colorLogoPNG.png" group-title="Filmes",Pluto TV Filmes Nacionais (720p)
+#EXTINF:-1 tvg-id="Runtime (Brazil) (1080p) [Geo-blocked]" tvg-logo="https://github.com/geonsey/Free2ViewTV/blob/master/images/logos/Runtime_120x120.png?raw=true" group-title="Filmes",Runtime (Brazil) (1080p) [Geo-blocked]
+#EXTINF:-1 tvg-id="TELE CINE ACTION (720p)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Telecine_Action_2.png/320px-Telecine_Action_2.png" group-title="Filmes",TELE CINE ACTION (720p)
+#EXTINF:-1 tvg-id="Filmes Suspense (720p)" tvg-logo="https://images.pluto.tv/channels/5f171d3442a0500007362f22/colorLogoPNG.png" group-title="Filmes",Filmes Suspense (720p)
+#EXTINF:-1 tvg-id="Ghost TV (712p) [Not 24/7]" tvg-logo="https://i.imgur.com/ZVO8GVI.png" group-title="Filmes",Ghost TV (712p) [Not 24/7]
+#EXTINF:-1 tvg-id="TV Aberta (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/1pZUGb4.png" group-title="Geral",TV Aberta (1080p) [Not 24/7]
+#EXTINF:-1 tvg-id="TV Alternativa (614p) [Not 24/7]" tvg-logo="https://i.imgur.com/VnlWeo3.png" group-title="Geral",TV Alternativa (614p) [Not 24/7]
+#EXTINF:-1 tvg-id="TV Birigui (640p)" tvg-logo="https://i.imgur.com/VqIzaFz.png" group-title="Geral",TV Birigui (640p)
+#EXTINF:-1 tvg-id="TV BRICS Portuguese (1080p)" tvg-logo="https://i.imgur.com/vLpm8tN.png" group-title="Geral",TV BRICS Portuguese (1080p)
+#EXTINF:-1 tvg-id="TV Carioca (720p)" tvg-logo="https://pbr-str.srvsite.com/arquivos/7051/cabecalho-7051-20200320104612.png" group-title="Geral",TV Carioca (720p)
+#EXTINF:-1 tvg-id="TV Destak (360p)" tvg-logo="https://i.imgur.com/W1LutVP.png" group-title="Geral",TV Destak (360p)
+#EXTINF:-1 tvg-id="TV DiÃ¡rio do SertÃ£o (720p)" tvg-logo="https://i.imgur.com/uBntXf1.png" group-title="Geral",TV DiÃ¡rio do SertÃ£o (720p)
+#EXTINF:-1 tvg-id="TV Futuro (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/BFekw0L.png" group-title="Geral",TV Futuro (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="Band (1080p) [Geo-blocked]" tvg-logo="https://imgur.com/HnL2uBA.png" user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/93.0" group-title="Geral",Band (1080p) [Geo-blocked]
+#EXTINF:-1 tvg-id="TV Metropole (1080p) [Not 24/7]" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/thumb/9/92/Logotipo_da_TV_Metr%C3%B3pole.png/300px-Logotipo_da_TV_Metr%C3%B3pole.png" group-title="Geral",TV Metropole (1080p) [Not 24/7]
+#EXTINF:-1 tvg-id="TV Thathi (720p) [Not 24/7]" tvg-logo="https://tv.thathi.com.br/wp-content/uploads/2021/02/tv-thathi-150x150.png" group-title="Geral",TV Thathi (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="Catve FM (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/w89yw36.png" group-title="Geral",Catve FM (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="TV Tropical (480p) [Not 24/7]" tvg-logo="https://i.imgur.com/TD6ZJoa.png" group-title="Geral",TV Tropical (480p) [Not 24/7]
+#EXTINF:-1 tvg-id="COM Brasil (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/c8ztQnF.png" group-title="Geral",COM Brasil (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="TV Verdes Campos (360p) [Not 24/7]" tvg-logo="https://i.imgur.com/1mK39TC.png" group-title="Geral",TV Verdes Campos (360p) [Not 24/7]
+#EXTINF:-1 tvg-id="Cultura ParÃ¡ (480p) [Not 24/7]" tvg-logo="https://i.imgur.com/5jPEI5c.png" group-title="Geral",Cultura ParÃ¡ (480p) [Not 24/7]
+#EXTINF:-1 tvg-id="Yeeaah! (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/TxdOyKS.png" group-title="Geral",Yeeaah! (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="ISTV (1080p) [Not 24/7]" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/6/63/Logo-istv.png" group-title="Geral",ISTV (1080p) [Not 24/7]
+#EXTINF:-1 tvg-id="Globo SP (720p)" tvg-logo="https://images2.imgbox.com/56/1a/L3kVJJZn_o.png" group-title="Geral",Globo SP (720p)
+#EXTINF:-1 tvg-id="MKK Web TV (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/TDEDNLK.png" group-title="Geral",MKK Web TV (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="Globo MG (720p)" tvg-logo="http://printv.esy.es/server/Globo%20Minas.png" group-title="Geral",Globo MG (720p)
+#EXTINF:-1 tvg-id="Paramount+ Apresenta (720p)" tvg-logo="https://images.pluto.tv/channels/60072798dcf437000755b4f3/colorLogoPNG.png" group-title="Geral",Paramount+ Apresenta (720p)
+#EXTINF:-1 tvg-id="Globo RPC (720p)" tvg-logo="http://printv.esy.es/server/RPC%20TV%20Curitiba.png" group-title="Geral",Globo RPC (720p)
+#EXTINF:-1 tvg-id="PerÃº Channel (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/01KEiEp.png" group-title="Geral",PerÃº Channel (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="Globo SP (1080p)" tvg-logo="https://imgur.com/Sgpzemb.png" group-title="Geral",Globo SP (1080p)
+#EXTINF:-1 tvg-id="Record TV Belem (720p) [Geo-blocked]" tvg-logo="https://i.imgur.com/TD6ZJoa.png" group-title="Geral",Record TV Belem (720p) [Geo-blocked]
+#EXTINF:-1 tvg-id="Globo RJ (720p)" tvg-logo="https://imgur.com/Sgpzemb.png" group-title="Geral",Globo RJ (720p)
+#EXTINF:-1 tvg-id="Record TV Brasilia (720p) [Geo-blocked]" tvg-logo="https://i.imgur.com/TD6ZJoa.png" group-title="Geral",Record TV Brasilia (720p) [Geo-blocked]
+#EXTINF:-1 tvg-id="BBB 2022 (720p)" tvg-logo="http://printv.esy.es/server/BBB.png" group-title="Geral",BBB 2022 (720p)
+#EXTINF:-1 tvg-id="Record TV Goias (720p) [Geo-blocked]" tvg-logo="https://i.imgur.com/TD6ZJoa.png" group-title="Geral",Record TV Goias (720p) [Geo-blocked]
+#EXTINF:-1 tvg-id="BBB 2022 - 2 (720p)" tvg-logo="http://printv.esy.es/server/BBB.png" group-title="Geral",BBB 2022 - 2 (720p)
+#EXTINF:-1 tvg-id="SBT HD (1080p)" tvg-logo="https://www.bastidoresdatv.com.br/wp-content/uploads/2015/12/Logotipo_do_SBT_SC.png" group-title="Geral",SBT HD (1080p)
+#EXTINF:-1 tvg-id="Record TV Itapoan (720p) [Geo-blocked]" tvg-logo="https://i.imgur.com/TD6ZJoa.png" group-title="Geral",Record TV Itapoan (720p) [Geo-blocked]
+#EXTINF:-1 tvg-id="Record TV Minas (720p) [Geo-blocked]" tvg-logo="https://i.imgur.com/TD6ZJoa.png" group-title="Geral",Record TV Minas (720p) [Geo-blocked]
+#EXTINF:-1 tvg-id="Record TV Rio (720p) [Geo-blocked]" tvg-logo="https://i.imgur.com/TD6ZJoa.png" group-title="Geral",Record TV Rio (720p) [Geo-blocked]
+#EXTINF:-1 tvg-id="Record TV RS (720p) [Geo-blocked]" tvg-logo="https://i.imgur.com/TD6ZJoa.png" group-title="Geral",Record TV RS (720p) [Geo-blocked]
+#EXTINF:-1 tvg-id="Record TV SP (720p) [Geo-blocked]" tvg-logo="https://i.imgur.com/TD6ZJoa.png" group-title="Geral",Record TV SP (720p) [Geo-blocked]
+#EXTINF:-1 tvg-id="Rede Brasil (720p) [Not 24/7]" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/thumb/3/39/Logotipo_da_Rede_Brasil_de_Televis%C3%A3o.png/300px-Logotipo_da_Rede_Brasil_de_Televis%C3%A3o.png" group-title="Geral",Rede Brasil (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="Rede TV! Pampa (720p) [Not 24/7]" tvg-logo="https://www.livetvnews.com.br/wp-content/uploads/2019/03/Logo-RedeTV.png" group-title="Geral",Rede TV! Pampa (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="Rede TV! SP (720p) [Not 24/7]" tvg-logo="https://www.livetvnews.com.br/wp-content/uploads/2019/03/Logo-RedeTV.png" group-title="Geral",Rede TV! SP (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="RedeTV! Tocantins (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/8fGmJWA.png" group-title="Geral",RedeTV! Tocantins (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="SBT Rede Massa (720p) [Not 24/7]" tvg-logo="https://cdn.mitvstatic.com/channels/br_rede-massa_m.png" group-title="Geral",SBT Rede Massa (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="SBT TV Cidade Verde (1080p) [Not 24/7]" tvg-logo="https://cdn.mitvstatic.com/channels/br_tv-cidade-verde-hd_m.png" group-title="Geral",SBT TV Cidade Verde (1080p) [Not 24/7]
+#EXTINF:-1 tvg-id="SBT TV Serra Dourada (360p) [Not 24/7]" tvg-logo="https://cdn.mitvstatic.com/channels/br_tv-serra-dourada-hd_m.png" group-title="Geral",SBT TV Serra Dourada (360p) [Not 24/7]
+#EXTINF:-1 tvg-id="Globo SP HD (720p)" tvg-logo="https://images2.imgbox.com/56/1a/L3kVJJZn_o.png" group-title="Globo",Globo SP HD (720p)
+#EXTINF:-1 tvg-id="Globo MG HD (720p)" tvg-logo="http://printv.esy.es/server/Globo%20Minas.png" group-title="Globo",Globo MG HD (720p)
+#EXTINF:-1 tvg-id="Globo RPC HD (720p)" tvg-logo="http://printv.esy.es/server/RPC%20TV%20Curitiba.png" group-title="Globo",Globo RPC HD (720p)
+#EXTINF:-1 tvg-id="Globo SP FHD (1080p)" tvg-logo="https://imgur.com/Sgpzemb.png" group-title="Globo",Globo SP FHD (1080p)
+#EXTINF:-1 tvg-id="Globo RJ HD (720p)" tvg-logo="https://imgur.com/Sgpzemb.png" group-title="Globo",Globo RJ HD (720p)
+#EXTINF:-1 tvg-id="A vida moderna de Rocko (720p)" tvg-logo="https://images.pluto.tv/channels/5f6df6293a12e10007017396/colorLogoPNG.png" group-title="Infantil",A vida moderna de Rocko (720p)
+#EXTINF:-1 tvg-id="Nick ClÃ¡ssico (720p)" tvg-logo="https://images.pluto.tv/channels/5f12151794c1800007a8ae63/colorLogoPNG.png" group-title="Infantil",Nick ClÃ¡ssico (720p)
+#EXTINF:-1 tvg-id="Nick Jr. Club (720p)" tvg-logo="https://images.pluto.tv/channels/5f121460b73ac6000719fbaf/colorLogoPNG.png" group-title="Infantil",Nick Jr. Club (720p)
+#EXTINF:-1 tvg-id="O Reino Infantil (720p)" tvg-logo="https://images.pluto.tv/channels/5f5c216df68f920007888315/colorLogoPNG.png" group-title="Infantil",O Reino Infantil (720p)
+#EXTINF:-1 tvg-id="Pluto TV Junior (720p)" tvg-logo="https://images.pluto.tv/channels/5f12141b146d760007934ea7/colorLogoPNG.png" group-title="Infantil",Pluto TV Junior (720p)
+#EXTINF:-1 tvg-id="Pluto TV Kids (720p)" tvg-logo="https://images.pluto.tv/channels/5f1214a637c6fd00079c652f/colorLogoPNG.png" group-title="Infantil",Pluto TV Kids (720p)
+#EXTINF:-1 tvg-id="Turma da MÃ´nica (720p)" tvg-logo="https://images.pluto.tv/channels/5f997e44949bc70007a6941e/colorLogoPNG.png" group-title="Infantil",Turma da MÃ´nica (720p)
+#EXTINF:-1 tvg-id="Chaves 24h (480p)" tvg-logo="https://imgur.com/5ftKxTQ.png" group-title="Infantil",Chaves 24h (480p)
+#EXTINF:-1 tvg-id="Todo Mundo Odeia o Cris 24h (480p)" tvg-logo="https://imgur.com/eSo7S9b.png" group-title="Infantil",Todo Mundo Odeia o Cris 24h (480p)
+#EXTINF:-1 tvg-id="Bob Esponja 24h (480p)" tvg-logo="https://imgur.com/pSchbaL.png" group-title="Infantil",Bob Esponja 24h (480p)
+#EXTINF:-1 tvg-id="ZOOMOO (720p)" tvg-logo="https://imgur.com/8dkdoej.png" group-title="Infantil",ZOOMOO (720p)
+#EXTINF:-1 tvg-id="Nick JR. (1080p)" tvg-logo="https://imgur.com/P1l0cnx.png" group-title="Infantil",Nick JR. (1080p)
+#EXTINF:-1 tvg-id="Nickelodeon (1080p)" tvg-logo="https://imgur.com/vYFZ98f.png" group-title="Infantil",Nickelodeon (1080p)
+#EXTINF:-1 tvg-id="Rakuten FamÃ­lia (360p)" tvg-logo="https://imgur.com/3bvMvx2.png" group-title="Infantil",Rakuten FamÃ­lia (360p)
+#EXTINF:-1 tvg-id="Cartoon Network (480p)" tvg-logo="https://imgur.com/dlTmblr.png" group-title="Infantil",Cartoon Network (480p)
+#EXTINF:-1 tvg-id="Disney Channel (1080p)" tvg-logo="https://imgur.com/FDKVMyp.png.png" group-title="Infantil",Disney Channel (1080p)
+#EXTINF:-1 tvg-id="TV CÃ¢mara (1080p)" tvg-logo="https://i.imgur.com/UpV2PRk.png" group-title="Legislativo",TV CÃ¢mara (1080p)
+#EXTINF:-1 tvg-id="TV CÃ¢mara 2 (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/UpV2PRk.png" group-title="Legislativo",TV CÃ¢mara 2 (1080p) [Not 24/7]
+#EXTINF:-1 tvg-id="TV Camara de Sao Paulo (720p) [Not 24/7]" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Logo_tvcamara_.png/320px-Logo_tvcamara_.png" group-title="Legislativo",TV Camara de Sao Paulo (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="Loupe (720p)" tvg-logo="https://images.pluto.tv/channels/600b248969c6580007e91a2d/colorLogoPNG.png" group-title="Lifestyle",Loupe (720p)
+#EXTINF:-1 tvg-id="Pluto TV Estilo de Vida (720p)" tvg-logo="https://images.pluto.tv/channels/60f8841a4865da0007421177/colorLogoPNG.png" group-title="Lifestyle",Pluto TV Estilo de Vida (720p)
+#EXTINF:-1 tvg-id="Pluto TV Fashionbox (720p)" tvg-logo="https://images.pluto.tv/channels/5f516730b78b7600079294f5/colorLogoPNG.png" group-title="Lifestyle",Pluto TV Fashionbox (720p)
+#EXTINF:-1 tvg-id="Tastemade (720p)" tvg-logo="https://images.pluto.tv/channels/5fd1419a3b4f4b000773ba85/colorLogoPNG.png" group-title="Lifestyle",Tastemade (720p)
+#EXTINF:-1 tvg-id="World Fashion Channel (1080p)" tvg-logo="https://i.imgur.com/JyslMHb.jpg" group-title="Lifestyle",World Fashion Channel (1080p)
+#EXTINF:-1 tvg-id="Rede CNT (SÃ£o Paulo) (180p) [Not 24/7]" tvg-logo="http://www.cnt.com.br/public/dist/assets/myDev/image/global/logo.png" group-title="Local",Rede CNT (SÃ£o Paulo) (180p) [Not 24/7]
+#EXTINF:-1 tvg-id="Rede RC (360p) [Not 24/7]" tvg-logo="https://i.imgur.com/nc95BPy.png" group-title="Local",Rede RC (360p) [Not 24/7]
+#EXTINF:-1 tvg-id="TV Cidade Canal 9 (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/mbw27tW.png" group-title="Local",TV Cidade Canal 9 (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="TV Cidade de PetrÃ³polis (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/jaaGxnd.png" group-title="Local",TV Cidade de PetrÃ³polis (1080p) [Not 24/7]
+#EXTINF:-1 tvg-id="TV Cidade de Sao Paulo [Not 24/7]" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/thumb/8/88/Logotipo_da_TV_Cidade_de_S%C3%A3o_Paulo.png/200px-Logotipo_da_TV_Cidade_de_S%C3%A3o_Paulo.png" group-title="Local",TV Cidade de Sao Paulo [Not 24/7]
+#EXTINF:-1 tvg-id="TV Galega Blumenau (720p) [Not 24/7]" tvg-logo="https://ps.srvsite.com/arquivos/5757/cabecalho-5757-20190807171022.png" group-title="Local",TV Galega Blumenau (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="TV Interlagos (480p) [Not 24/7]" tvg-logo="http://www.tvinterlagos.com.br/images/logo_tv2.jpg" group-title="Local",TV Interlagos (480p) [Not 24/7]
+#EXTINF:-1 tvg-id="TV Jornal do Nordeste (720p) [Not 24/7]" tvg-logo="https://pa-str.srvsite.com/arquivos/5459/cabecalho-5459-20200226161907.png" group-title="Local",TV Jornal do Nordeste (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="TV Mon (720p)" tvg-logo="https://i.imgur.com/j7EJvHr.png" group-title="Local",TV Mon (720p)
+#EXTINF:-1 tvg-id="TV Nova Onda (720p)" tvg-logo="https://i.imgur.com/1dCdBM5.png" group-title="Local",TV Nova Onda (720p)
+#EXTINF:-1 tvg-id="TV Pantanal MS (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/0FOmktl.png" group-title="Local",TV Pantanal MS (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="TV PoÃ§os (192p) [Not 24/7]" tvg-logo="https://tvpocos.com.br/wp-content/uploads/2017/04/logo_branca_125.png" group-title="Local",TV PoÃ§os (192p) [Not 24/7]
+#EXTINF:-1 tvg-id="TV Santa Cruz (720p) [Not 24/7]" tvg-logo="https://www.tvsantacruzcr.net/img/logotvsc.png" group-title="Local",TV Santa Cruz (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="TV Sol Comunidade (480p) [Not 24/7]" tvg-logo="https://tvsolcomunidade.com.br/wp-content/uploads/2019/01/logo-tv-sol.png" group-title="Local",TV Sol Comunidade (480p) [Not 24/7]
+#EXTINF:-1 tvg-id="TV Uniao (1080p) [Not 24/7]" tvg-logo="https://cdn.mitvstatic.com/channels/br_tv-uni-o_m.png" group-title="Local",TV Uniao (1080p) [Not 24/7]
+#EXTINF:-1 tvg-id="TV UniSantos (216p) [Not 24/7]" tvg-logo="http://www.tvunisantos.com.br/images/resource/logo.png" group-title="Local",TV UniSantos (216p) [Not 24/7]
+#EXTINF:-1 tvg-id="TVCI (360p) [Not 24/7]" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/dc/Logo_RCI.png" group-title="Local",TVCI (360p) [Not 24/7]
+#EXTINF:-1 tvg-id="TVE Bahia (720p) [Not 24/7]" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/TVE_Bahia_logo.svg/800px-TVE_Bahia_logo.svg.png" group-title="Local",TVE Bahia (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="TVN Brasil (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/Cywnp02.png" group-title="Local",TVN Brasil (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="TVunisat (360p) [Not 24/7]" tvg-logo="https://i.imgur.com/x6rVrTt.png" group-title="Local",TVunisat (360p) [Not 24/7]
+#EXTINF:-1 tvg-id="Canal 25 JundiaÃ­ (404p) [Not 24/7]" tvg-logo="https://i.imgur.com/9SjoGWj.png" group-title="Local",Canal 25 JundiaÃ­ (404p) [Not 24/7]
+#EXTINF:-1 tvg-id="ITV (480p) [Not 24/7]" tvg-logo="https://i1.wp.com/itu.tv.br/wp-content/uploads/2020/03/cropped-favicon.png" group-title="Local",ITV (480p) [Not 24/7]
+#EXTINF:-1 tvg-id="Nova Era TV (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/IK3F9Uq.png" group-title="Local",Nova Era TV (1080p) [Not 24/7]
+#EXTINF:-1 tvg-id="Rede CNT (Curitiba) (360p) [Not 24/7]" tvg-logo="http://www.cnt.com.br/public/dist/assets/myDev/image/global/logo.png" group-title="Local",Rede CNT (Curitiba) (360p) [Not 24/7]
+#EXTINF:-1 tvg-id="KpopTV Play (720p) [Not 24/7]" tvg-logo="https://kpoptv.live/wp-content/uploads/2021/10/logokpoptvplay.png" group-title="Musica",KpopTV Play (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="Metal TV (720p) [Not 24/7]" tvg-logo="" group-title="Musica",Metal TV (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="MTV Biggest Pop (720p)" tvg-logo="https://images.pluto.tv/channels/6047fbdbbb776a0007e7f2ff/colorLogoPNG.png" group-title="Musica",MTV Biggest Pop (720p)
+#EXTINF:-1 tvg-id="MTV Spankin" New (720p)" tvg-logo="https://images.pluto.tv/channels/6047ff2e5e61cf000784e4da/colorLogoPNG.png" group-title="Musica",MTV Spankin" New (720p)
+#EXTINF:-1 tvg-id="Pluto TV KaraokÃª por Stingray (720p)" tvg-logo="https://images.pluto.tv/channels/604b99d633a72b00078e05ad/colorLogoPNG.png" group-title="Musica",Pluto TV KaraokÃª por Stingray (720p)
+#EXTINF:-1 tvg-id="Pluto TV Shows por Stingray (720p)" tvg-logo="https://images.pluto.tv/channels/604b91e0692f770007d9f33f/colorLogoPNG.png" group-title="Musica",Pluto TV Shows por Stingray (720p)
+#EXTINF:-1 tvg-id="Sesc TV (1080p) [Not 24/7]" tvg-logo="https://sesctv.org.br/wp-content/uploads/2018/06/SESCTV-ICON.png" group-title="Musica",Sesc TV (1080p) [Not 24/7]
+#EXTINF:-1 tvg-id="TV BNO (270p) [Not 24/7]" tvg-logo="https://www.tvbno.com.br/images/LOGOTIPO-BNO-1.png" group-title="Musica",TV BNO (270p) [Not 24/7]
+#EXTINF:-1 tvg-id="France 24 English (1080p)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/8/8a/France24.png" group-title="NotÃ­cias",France 24 English (1080p)
+#EXTINF:-1 tvg-id="Jovem Pan News (1080p)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Jovem_Pan_logo_2018.svg/320px-Jovem_Pan_logo_2018.svg.png" group-title="NotÃ­cias",Jovem Pan News (1080p)
+#EXTINF:-1 tvg-id="Pluto TV Record News (480p)" tvg-logo="https://images.pluto.tv/channels/6102e04e9ab1db0007a980a1/colorLogoPNG.png" group-title="NotÃ­cias",Pluto TV Record News (480p)
+#EXTINF:-1 tvg-id="Record News (720p)" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/c/c7/Logotipo_da_Record_News_%282016%29.png" group-title="NotÃ­cias",Record News (720p)
+#EXTINF:-1 tvg-id="RT News (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/tyXIHlj.png" group-title="NotÃ­cias",RT News (1080p) [Not 24/7]
+#EXTINF:-1 tvg-id="TRT World (720p) [Not 24/7]" tvg-logo="https://i.ibb.co/phw4pjP/mjTjJ1N.png" group-title="NotÃ­cias",TRT World (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="TVÃ­deoNews (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/vstHOYx.png" group-title="NotÃ­cias",TVÃ­deoNews (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="CNN Brasil (720p)" tvg-logo="https://imgur.com/4dfmnBs.png" group-title="NotÃ­cias",CNN Brasil (720p)
+#EXTINF:-1 tvg-id="JP News (480p)" tvg-logo="https://imgur.com/dAv0hm6.png" group-title="NotÃ­cias",JP News (480p)
+#EXTINF:-1 tvg-id="JP News (720p)" tvg-logo="https://imgur.com/dAv0hm6.png" group-title="NotÃ­cias",JP News (720p)
+#EXTINF:-1 tvg-id="Record News (480p)" tvg-logo="https://imgur.com/nBKI2Ik.png" group-title="NotÃ­cias",Record News (480p)
+#EXTINF:-1 tvg-id="Globo News (1080p)" tvg-logo="https://imgur.com/25bJmvW.png" group-title="NotÃ­cias",Globo News (1080p)
+#EXTINF:-1 tvg-id="Band News (1080p)" tvg-logo="https://imgur.com/JcWqFcR.png" group-title="NotÃ­cias",Band News (1080p)
+#EXTINF:-1 tvg-id="Agromais (1080p) [Geo-blocked]" tvg-logo="https://cdn.mitvstatic.com/channels/br_agromais-hd_m.png" user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/93.0" group-title="NotÃ­cias",Agromais (1080p) [Geo-blocked]
+#EXTINF:-1 tvg-id="Al Jazeera English (1080p)" tvg-logo="https://i.imgur.com/BB93NQP.png" group-title="NotÃ­cias",Al Jazeera English (1080p)
+#EXTINF:-1 tvg-id="Bandnews (720p) [Geo-blocked]" tvg-logo="https://www.band.uol.com.br/assets/bandnewstv/logo.png" user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/93.0" group-title="NotÃ­cias",Bandnews (720p) [Geo-blocked]
+#EXTINF:-1 tvg-id="BBC News (480p)" tvg-logo="https://raw.githubusercontent.com/Tapiosinn/tv-logos/master/countries/united-kingdom/bbc-news-uk.png" group-title="NotÃ­cias",BBC News (480p)
+#EXTINF:-1 tvg-id="BBC World News (576p)" tvg-logo="https://i.imgur.com/Nx0BRdV.png" group-title="NotÃ­cias",BBC World News (576p)
+#EXTINF:-1 tvg-id="Canal Metropolitano de Noticias (720p) [Not 24/7]" tvg-logo="http://www.cmn.tv.br/images/logo_cmn.fw.png" group-title="NotÃ­cias",Canal Metropolitano de Noticias (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="CNN Brasil (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/JXb5l9K.png" group-title="NotÃ­cias",CNN Brasil (1080p) [Not 24/7]
+#EXTINF:-1 tvg-id="DW English (1080p)" tvg-logo="https://i.imgur.com/xnv0Pgm.jpg" group-title="NotÃ­cias",DW English (1080p)
+#EXTINF:-1 tvg-id="Euronews English (720p)" tvg-logo="https://i.postimg.cc/X7YYFZR2/euronews.png" group-title="NotÃ­cias",Euronews English (720p)
+#EXTINF:-1 tvg-id="Euronews PortuguÃªs (720p)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Euronews_2016_logo.svg/1000px-Euronews_2016_logo.svg.png" group-title="NotÃ­cias",Euronews PortuguÃªs (720p)
+#EXTINF:-1 tvg-id="Fonte TV (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/4lnSlOZ.png" group-title="Religioso",Fonte TV (1080p) [Not 24/7]
+#EXTINF:-1 tvg-id="Gospel Movie TV (360p)" tvg-logo="https://ipgo.xyz/tv/gmovies/imagens/logo_gospelf_site.png" group-title="Religioso",Gospel Movie TV (360p)
+#EXTINF:-1 tvg-id="IMPD TV (720p)" tvg-logo="https://i.imgur.com/D15qpCm.png" group-title="Religioso",IMPD TV (720p)
+#EXTINF:-1 tvg-id="Novo Tempo (720p)" tvg-logo="https://i.imgur.com/exdDHml.png" group-title="Religioso",Novo Tempo (720p)
+#EXTINF:-1 tvg-id="Peace TV English (1080p)" tvg-logo="https://github.com/fawazahmed0/tiger/raw/master/peace/english.jpg" group-title="Religioso",Peace TV English (1080p)
+#EXTINF:-1 tvg-id="PUC TV GoiÃ¡s (326p) [Not 24/7]" tvg-logo="http://www.puctvgoias.com.br/img/logo.png" group-title="Religioso",PUC TV GoiÃ¡s (326p) [Not 24/7]
+#EXTINF:-1 tvg-id="Rede Brasil de ComunicaÃ§Ã£o (720p) [Not 24/7]" tvg-logo="http://portal.rbc1.com.br/public/portal/img/layout/logorbc.png" group-title="Religioso",Rede Brasil de ComunicaÃ§Ã£o (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="Rede Gospel (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/yvxG9m5.png" group-title="Religioso",Rede Gospel (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="Rede MÃ£o Amiga (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/cqD6DNY.png" group-title="Religioso",Rede MÃ£o Amiga (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="Rede SÃ©culo 21 (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/vvrCWVo.jpg" group-title="Religioso",Rede SÃ©culo 21 (1080p) [Not 24/7]
+#EXTINF:-1 tvg-id="Rede Super (432p) [Not 24/7]" tvg-logo="https://i.imgur.com/3ODbxcM.png" group-title="Religioso",Rede Super (432p) [Not 24/7]
+#EXTINF:-1 tvg-id="Rede Vida (720p) [Not 24/7]" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Rede_Vida_logo.png/267px-Rede_Vida_logo.png" group-title="Religioso",Rede Vida (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="TV Aparecida (1080p) [Not 24/7]" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/1/1e/Logotipo_da_TV_Aparecida.png" group-title="Religioso",TV Aparecida (1080p) [Not 24/7]
+#EXTINF:-1 tvg-id="TV Evangelizar (480p)" tvg-logo="https://i.imgur.com/4LG6sA0.png" group-title="Religioso",TV Evangelizar (480p)
+#EXTINF:-1 tvg-id="TV Gideoes (720p) [Not 24/7]" tvg-logo="https://www.gideoes.com.br/wp-content/uploads/2018/12/logotipo-tvgideoes.png" group-title="Religioso",TV Gideoes (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="TV Pai Eterno (480p) [Not 24/7]" tvg-logo="https://www.paieterno.com.br/wp-content/uploads/2019/05/cropped-logo-portal-01-192x192.png" group-title="Religioso",TV Pai Eterno (480p) [Not 24/7]
+#EXTINF:-1 tvg-id="TV Terceiro Anjo (360p) [Not 24/7]" tvg-logo="https://www.terceiroanjo.com/static/img/logo-2019-gif.gif" group-title="Religioso",TV Terceiro Anjo (360p) [Not 24/7]
+#EXTINF:-1 tvg-id="Dark Matter TV Brazil (720p)" tvg-logo="https://github.com/geonsey/Free2ViewTV/blob/master/images/logos/DarkMatterTV_218x218.png?raw=true" group-title="SÃ©ries",Dark Matter TV Brazil (720p)
+#EXTINF:-1 tvg-id="Jeannie Ã© um GÃªnio (720p)" tvg-logo="https://images.pluto.tv/channels/6079c058aa05ac0007d10054/colorLogoPNG.png" group-title="SÃ©ries",Jeannie Ã© um GÃªnio (720p)
+#EXTINF:-1 tvg-id="Pluto TV InvestigaÃ§Ã£o (720p)" tvg-logo="https://images.pluto.tv/channels/5f32cf37c9ff2b00082adbc8/colorLogoPNG.png" group-title="SÃ©ries",Pluto TV InvestigaÃ§Ã£o (720p)
+#EXTINF:-1 tvg-id="Pluto TV SÃ©ries (720p)" tvg-logo="https://images.pluto.tv/channels/5f121262a189a800076b9386/colorLogoPNG.png" group-title="SÃ©ries",Pluto TV SÃ©ries (720p)
+#EXTINF:-1 tvg-id="TV ParanÃ¡ Turismo (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/3lxkJxb.png" group-title="Viagens",TV Parana¡ Turismo (720p) [Not 24/7]
