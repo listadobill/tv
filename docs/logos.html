@@ -23,9 +23,17 @@
             let newList = '';
 
             lines.forEach(line => {
-                // Se a linha começa com #EXTINF, adicione-a à nova lista
+                // Se a linha começa com #EXTINF
                 if (line.startsWith('#EXTINF')) {
-                    newList += line + '\n';
+                    // Extrai o logo e o nome do canal
+                    const regex = /#EXTINF:-1 tvg-id="[^"]*" tvg-name="[^"]*" tvg-logo="([^"]*)".*?,(.*)/;
+                    const match = line.match(regex);
+                    if (match) {
+                        // Formata a nova linha
+                        const tvgLogo = match[1]; // logo
+                        const canalNome = match[2].trim(); // nome do canal após a vírgula
+                        newList += `#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="${tvgLogo}" group-title="", ${canalNome}\n`;
+                    }
                 }
             });
 
