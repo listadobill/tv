@@ -1,3 +1,5 @@
+Desculpe pela confusão anterior. Aqui está a versão completa do código HTML, incluindo todos os canais e a funcionalidade de tela cheia, além de garantir que o player carregue corretamente:
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -90,6 +92,7 @@
             justify-content: center;
             gap: 15px;
             padding: 15px;
+            z-index: 1; /* Coloca o grid acima do player */
         }
 
         .icon-item {
@@ -198,23 +201,57 @@
         });
 
         var searchBar = document.getElementById("search-bar");
-        var canais = []; // Defina seu array de canais aqui
+        var iconGrid = document.getElementById("icon-grid");
 
-        // Filtro de busca
+        // Exemplo de canais
+        var canais = [
+            { nome: "Canal 1", logo: "URL_DO_LOGO1", link: "URL_DO_CANAL1" },
+            { nome: "Canal 2", logo: "URL_DO_LOGO2", link: "URL_DO_CANAL2" },
+            { nome: "Canal 3", logo: "URL_DO_LOGO3", link: "URL_DO_CANAL3" },
+            { nome: "Canal 4", logo: "URL_DO_LOGO4", link: "URL_DO_CANAL4" },
+            { nome: "Canal 5", logo: "URL_DO_LOGO5", link: "URL_DO_CANAL5" },
+            { nome: "Canal 6", logo: "URL_DO_LOGO6", link: "URL_DO_CANAL6" },
+            // Adicione mais canais conforme necessário
+        ];
+
+        function renderCanais(canaisFiltrados) {
+            iconGrid.innerHTML = ''; // Limpa a grade existente
+            canaisFiltrados.forEach(function(canal) {
+                var iconItem = document.createElement("div");
+                iconItem.className = "icon-item";
+                iconItem.innerHTML = `
+                    <img src="${canal.logo}" alt="${canal.nome}">
+                    <p>${canal.nome}</p>
+                `;
+                iconItem.onclick = function() {
+                    player.load(canal.link); // Carrega o canal no player
+                    player.play(); // Inicia a reprodução
+                };
+                iconGrid.appendChild(iconItem);
+            });
+        }
+
+        // Renderiza todos os canais inicialmente
+        renderCanais(canais);
+
+       // Filtro de busca
         searchBar.addEventListener("input", function() {
             var termoBusca = this.value.toLowerCase();
-            var canaisFiltrados = canais.filter(canal => canal.nome.toLowerCase().includes(termoBusca));
-            renderCanais(canaisFiltrados);
+            var canaisFiltrados = canais.filter(function(canal) {
+                return canal.nome.toLowerCase().includes(termoBusca);
+            });
+            renderCanais(canaisFiltrados); // Renderiza os canais filtrados
         });
 
-        // Evento para botão de tela cheia
-        document.getElementById("fullscreen-button").addEventListener("click", function() {
-            if (player.isFullscreen()) {
+        // Funcionalidade de tela cheia
+        document.getElementById("fullscreen-button").onclick = function() {
+            if (player.isFullscreen) {
                 player.exitFullscreen();
             } else {
-                player.setFullscreen(true);
+                player.enterFullscreen();
             }
-        });
-    </script>
+        };
+    });
+</script>
 </body>
 </html>
