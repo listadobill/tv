@@ -3,131 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TV DO BILL - ALGUNS CANAIS PODEM ESTAR FORA, AGUARDE ATUALIZAÇÃO - DESATIVE CONEXÃO SEGURA</title>
+    <title>TV DO BILL - Desative Conexão Segura</title>
     <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #000;
+            background-color: #0b3d0b; /* Cor de fundo verde */
             color: #fff;
+            height: 100vh;
             display: flex;
             flex-direction: column;
-            height: 100vh;
-            overflow-y: auto; /* Habilitar rolagem no corpo da página */
         }
 
         #container {
-            display: flex;
-            flex-direction: column;
+            position: relative;
             width: 100%;
             height: 100%;
+            overflow: hidden;
         }
 
         #header {
             background-color: rgba(0, 0, 0, 0.8);
             padding: 10px;
             text-align: center;
-            font-size: 1.2em; /* Diminuído o tamanho da fonte do cabeçalho */
+            font-size: 1em;
             border-bottom: 1px solid #444;
         }
 
-        #home-button, .nav-button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 6px 12px; /* Diminuído o padding dos botões */
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 0.9em; /* Diminuído o tamanho da fonte dos botões */
-            margin: 5px;
-            transition: background-color 0.3s ease;
+        #top-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10px;
+            background-color: #222;
+            border-bottom: 1px solid #444;
         }
 
-        #home-button:hover, .nav-button:hover {
-            background-color: #45a049;
+        .top-button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            margin: 10px;
         }
 
         #search-bar {
-            padding: 10px;
-            background-color: #333;
-            text-align: center;
-        }
-
-        #search-input {
-            width: 95%;
-            padding: 10px;
-            border: none;
+            display: block;
+            width: 90%;
+            margin: 10px auto;
+            padding: 8px;
+            border: 1px solid #444;
             border-radius: 5px;
             font-size: 1em;
         }
 
         #main {
             display: flex;
-            flex: 1;
-            overflow-y: auto; /* Habilitar rolagem na área principal */
+            flex-direction: column;
+            height: 100%;
+            overflow-y: auto;
         }
 
-        #player {
-            flex: 2;
-            background-color: rgba(0, 0, 0, 0.8);
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
+        #player-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
         }
 
         .video-js {
             width: 100%;
             height: 100%;
-            background-color: #000;
         }
 
-        #sidebar {
-            flex: 1;
-            background-color: rgba(34, 34, 34, 0.8);
-            overflow-y: auto;
-            padding: 10px;
-            border-left: 2px solid #444;
+        #icon-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 15px;
         }
 
-        #sidebar ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
+        .icon-item {
             display: flex;
             flex-direction: column;
-            gap: 10px;
-        }
-
-        #sidebar li {
-            background-color: rgba(50, 50, 50, 0.8);
-            border-radius: 8px;
-            padding: 10px;
-            display: flex;
             align-items: center;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: transform 0.3s ease;
+            text-align: center;
+            width: 120px;
+            margin: 10px;
         }
 
-        #sidebar li:hover {
-            background-color: #4CAF50;
+        .icon-item:hover {
+            transform: scale(1.1);
+            background-color: rgba(255, 0, 0, 0.5); /* Cor de seleção vermelha */
         }
 
-        #sidebar img {
-            width: 50px;
-            height: 50px;
-            margin-right: 10px;
+        .icon-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
             border-radius: 50%;
             border: 2px solid #4CAF50;
-            object-fit: cover;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 5px;
         }
 
-        #sidebar p {
-            margin: 0;
-            font-size: 1.1em;
+        .icon-item p {
+            margin-top: 10px;
+            font-size: 0.9em;
+            text-align: center;
+            background-color: rgba(76, 175, 80, 0.8); /* Cor de fundo verde translúcido */
+            padding: 5px;
+            border-radius: 5px;
+            font-weight: bold; /* Adiciona negrito ao texto */
         }
 
         .video-js.vjs-fullscreen {
@@ -155,22 +153,28 @@
             background-color: rgba(76, 175, 80, 1);
         }
 
-        ::-webkit-scrollbar {
-            width: 10px;
+        /* Oculta a mensagem de erro */
+        .vjs-error-display {
+            display: none !important;
         }
 
-        ::-webkit-scrollbar-thumb {
-            background-color: #4CAF50;
-            border-radius: 10px;
+        @media (max-width: 600px) {
+            #icon-grid {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
 <body>
     <div id="container">
         <div id="header">
-            LISTA DE CANAIS IPTV - DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV - Atualização, 30 de Setembro de 2024: https://bit.ly/tvdobill-iptv - EPG https://bit.ly/tvdobill-epg 
-            <div>
-                <button id="home-button">CANAIS, SÉRIES E FILMES STREAM</button>
+            LISTA DE CANAIS IPTV - Desative Conexão Segura - 30 de Setembro de 2024
+        </div>
+
+        <div id="top-buttons">
+        
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/'">TV ONLINE DE TERCEIROS, FILMES E SÉRIES</button>
                 <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/'">SERVIDOR 1</button>
                 <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/iptv2'">SERVIDOR 2</button>
                 <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/ott'">SERVIDOR 3</button>
@@ -180,20 +184,18 @@
                 <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/espanha'">ESPANHA</button>
                 <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/musica'">MÚSICA</button>
                 <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/portugal'">PORTUGAL</button>
-            </div>
         </div>
+
+        <input type="text" id="search-bar" placeholder="Buscar canais...">
+
         <div id="main">
-            <div id="sidebar">
-                <div id="search-bar">
-                    <input type="text" id="search-input" placeholder="Buscar canal...">
-                </div>
-                <ul id="lista-canais">
-                    <!-- Canais serão carregados dinamicamente -->
-                </ul>
+            <div id="player-container">
+                <video id="video-player" class="video-js" controls preload="auto" data-setup='{}'>
+                    <source src="" type="application/x-mpegURL">
+                    Seu navegador não suporta o formato de vídeo.
+                </video>
             </div>
-            <div id="player">
-                <video id="video-player" class="video-js vjs-default-skin" controls></video>
-            </div>
+            <div id="icon-grid"></div>
         </div>
     </div>
 
@@ -201,34 +203,13 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/iptv.m3u";
-            var listaCanaisElemento = document.getElementById("lista-canais");
-            var searchInput = document.getElementById("search-input");
+            var iconGrid = document.getElementById("icon-grid");
+            var searchBar = document.getElementById("search-bar");
             var video = videojs('video-player', {
                 controls: true,
-                autoplay: false,
+                autoplay: false, // Mantenha em false inicialmente
                 preload: 'auto'
             });
-
-            document.getElementById('home-button').onclick = function() {
-                window.location.href = "https://listadobill.github.io/tv/inicial";
-            };
-
-            // Função para abrir em tela cheia
-            function abrirTelaCheia() {
-                if (video.isFullscreen()) {
-                    video.exitFullscreen();
-                } else {
-                    video.requestFullscreen();
-                }
-            }
-
-            function configurarReconexao(player) {
-                player.on('error', function() {
-                    console.log('Tentando reconectar...');
-                    player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
-                    player.play();
-                });
-            }
 
             var canais = [];
 
@@ -245,46 +226,58 @@
 
                             if (!nome || !link) continue;
 
-                            var logoURL = ""; // Aqui você pode adicionar a lógica para obter logotipos se houver.
+                            var logoURL = ""; // Adicione lógica para obter logotipos se necessário
                             canais.push({ nome: nome, link: link, logo: logoURL });
                         }
                     }
 
-                    // Adiciona os canais na lista
-                    canais.forEach(function(canal) {
-                        var li = document.createElement("li");
-                        li.onclick = function() {
-                            video.src({ src: canal.link, type: 'application/x-mpegURL' });
-                            video.play();
-                            abrirTelaCheia(); // Abre em tela cheia ao selecionar o canal
-                        };
+                    // Adiciona os ícones de canais
+                    renderCanais(canais);
 
-                        var img = document.createElement("img");
-                        img.src = canal.logo || "https://via.placeholder.com/50"; // Placeholder se não houver logo
-                        var p = document.createElement("p");
-                        p.innerText = canal.nome;
-
-                        li.appendChild(img);
-                        li.appendChild(p);
-                        listaCanaisElemento.appendChild(li);
-                    });
-
-                    // Função de pesquisa
-                    searchInput.addEventListener("input", function() {
-                        var filter = searchInput.value.toLowerCase();
-                        var items = listaCanaisElemento.getElementsByTagName('li');
-
-                        for (var i = 0; i < items.length; i++) {
-                            var item = items[i];
-                            var textValue = item.textContent || item.innerText;
-                            item.style.display = textValue.toLowerCase().includes(filter) ? "" : "none";
-                        }
+                    // Filtro de busca
+                    searchBar.addEventListener("input", function() {
+                        var query = this.value.toLowerCase();
+                        renderCanais(canais.filter(canal => canal.nome.toLowerCase().includes(query)));
                     });
                 }
             };
             xhr.send();
 
-            configurarReconexao(video);
+            function renderCanais(canaisFiltrados) {
+                iconGrid.innerHTML = ''; // Limpa o grid
+
+                canaisFiltrados.forEach(function(canal) {
+                    var item = document.createElement('div');
+                    item.className = 'icon-item';
+                    item.onclick = function() {
+                        video.src({ src: canal.link, type: 'application/x-mpegURL' });
+                        video.play(); // Reproduz automaticamente ao iniciar
+                        enterFullscreen(); // Chama a função para entrar em tela cheia
+                    };
+
+                    var img = document.createElement('img');
+                    img.src = canal.logo || 'default-logo.png'; // Imagem padrão se logo não estiver disponível
+                    var nome = document.createElement('p');
+                    nome.textContent = canal.nome;
+
+                    item.appendChild(img);
+                    item.appendChild(nome);
+                    iconGrid.appendChild(item);
+                });
+            }
+
+            function enterFullscreen() {
+                var videoElement = document.getElementById('video-player');
+                if (videoElement.requestFullscreen) {
+                    videoElement.requestFullscreen();
+                } else if (videoElement.mozRequestFullScreen) { // Firefox
+                    videoElement.mozRequestFullScreen();
+                } else if (videoElement.webkitRequestFullscreen) { // Chrome, Safari, and Opera
+                    videoElement.webkitRequestFullscreen();
+                } else if (videoElement.msRequestFullscreen) { // IE/Edge
+                    videoElement.msRequestFullscreen();
+                }
+            }
         });
     </script>
 </body>
