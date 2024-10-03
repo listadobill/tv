@@ -177,15 +177,28 @@
 
         <button id="fullscreen-button">Tela Cheia</button>
     </div>
-    // Tenta reconectar automaticamente
-            player.on(Clappr.Events.PLAYER_ERROR, function() {
-                // Tenta reconectar automaticamente
-                setTimeout(function() {
-                    player.load(link);
-                    player.play();
-                }, 5000); // Tenta reconectar após 5 segundos
-            });
-        }
+
+    <script src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
+    <script>
+        var player = new Clappr.Player({
+            source: 'URL_DO_SEU_VIDEO', // Substitua pela URL do seu vídeo
+            parentId: '#player',
+            autoPlay: false,
+            width: '100%',
+            height: '100%',
+            fullscreen: true,
+        });
+
+        // Tenta reconectar automaticamente
+        player.on(Clappr.Events.PLAYER_ERROR, function() {
+            setTimeout(function() {
+                player.load(link);
+                player.play();
+            }, 5000); // Tenta reconectar após 5 segundos
+        });
+
+        var searchBar = document.getElementById("search-bar");
+        var canais = []; // Defina seu array de canais aqui
 
         // Filtro de busca
         searchBar.addEventListener("input", function() {
@@ -202,9 +215,6 @@
                 player.setFullscreen(true);
             }
         });
-    });
-</script>
+    </script>
 </body>
 </html>
-    
-    
