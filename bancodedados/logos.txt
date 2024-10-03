@@ -11687,3 +11687,61 @@
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",龙口新闻综合 (576p)
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",龙口生活 (576p)
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",龙岩综合 (540p)
+#EXTINF:-1 tvg-id="Globo Rio" tvg-name="Globo RJ HD" tvg-logo="http://i.imgur.com/NSHvLCe.png" group-title="Canais Abertos",Globo RJ HD
+#EXTINF:-1 tvg-id="Globo - São Paulo [Brazil]" tvg-name="Globo SP" tvg-logo="http://i.imgur.com/NSHvLCe.png" group-title="Canais Abertos",Globo SP
+#EXTINF:-1 tvg-id="RBS TV Porto Alegre" tvg-name="RBS TV Porto Alegre" tvg-logo="http://i.imgur.com/qnNMqsD.png" group-title="Canais Abertos",RBS TV Porto Alegre
+#EXTINF:-1 tvg-id="TVGloboPortugal.pt" tvg-name="Globo Portugal" tvg-logo="http://i.imgur.com/NSHvLCe.png" group-title="Canais Abertos",Globo Portugal
+#EXTINF:-1 tvg-id="GloboPremium.pt" tvg-name="Globo Premium" tvg-logo="https://s15.postimg.org/55nkqx48b/globo_premium.png" group-title="Canais Abertos",Globo Premium
+#EXTINF:-1 tvg-id="Canal TV Globo Internacional" tvg-name="Globo USA" tvg-logo="http://i.imgur.com/NSHvLCe.png" group-title="Canais Abertos",Globo USA
+#EXTINF:-1 tvg-id="Band Rede [Brazil]" tvg-name="Band HD" tvg-logo="http://i.imgur.com/1yYrkhc.png" group-title="Canais Abertos",Band HD
+#EXTINF:-1 tvg-id="Band Rede [Brazil]" tvg-name="Band" tvg-logo="http://i.imgur.com/9bw0Q4n.png" group-title="Canais Abertos",Band
+#EXTINF:-1 tvg-id="SBT" tvg-name="SBT HD" tvg-logo="http://i.imgur.com/7SlZF9B.png" group-title="Canais Abertos",SBT HD
+#EXTINF:-1 tvg-id="SBT" tvg-name="SBT" tvg-logo="http://i.imgur.com/7SlZF9B.png" group-title="Canais Abertos",SBT
+#EXTINF:-1 tvg-id="Record" tvg-name="RecordTV HD" tvg-logo="http://i.imgur.com/5UeQAk9.png" group-title="Canais Abertos",RecordTV HD
+#EXTINF:-1 tvg-id="Record" tvg-name="RecordTV" tvg-logo="http://i.imgur.com/5UeQAk9.png" group-title="Canais Abertos",RecordTV
+#EXTINF:-1 tvg-id="tvrecord.pt" tvg-name="RecordTV HD Portugal" tvg-logo="http://i.imgur.com/5UeQAk9.png" group-title="Canais Abertos",RecordTV HD Portugal
+#EXTINF:-1 tvg-id="RedeTV!" tvg-name="RedeTV! HD" tvg-logo="http://i.imgur.com/yxGs0mZ.png" group-title="Canais Abertos",RedeTV! HD
+#EXTINF:-1 tvg-id="RedeTV!" tvg-name="RedeTV!" tvg-logo="http://i.imgur.com/k4haEx6.png" group-title="Canais Abertos",RedeTV!
+#EXTINF:-1 tvg-id="Rede Brasil" tvg-name="Rede Brasil" tvg-logo="http://i.imgur.com/uwzYiHs.png" group-title="Canais Abertos",Rede Brasil
+#EXTINF:-1 tvg-id="Cultura" tvg-name="TV Cultura HD" tvg-logo="http://i.imgur.com/kd7IOy7.png" group-title="Canais Abertos",TV Cultura HD
+#EXTINF:-1 tvg-id="Cultura" tvg-name="TV Cultura" tvg-logo="http://i.imgur.com/kai6F2R.png" group-title="Canais Abertos",TV Cultura
+#EXTINF:-1 tvg-id="Gazeta" tvg-name="TV Gazeta HD" tvg-logo="http://i.imgur.com/Or3Q4WA.png" group-title="Canais Abertos",TV Gazeta HD
+#EXTINF:-1 tvg-id="Futura" tvg-name="Futura" tvg-logo="http://i.imgur.com/J0vLlTS.png" group-title="Canais Abertos",Futura
+#EXTINF:-1 tvg-id="TV Escola" tvg-name="TV Escola HD" tvg-logo="http://i.imgur.com/Yj9UKv2.png" group-title="Canais Abertos",TV Escola HD
+#EXTINF:-1 tvg-id="TV Brasil" tvg-name="TV Brasil" tvg-logo="http://i.imgur.com/0uUPOMx.png" group-title="Canais Abertos",TV Brasil
+#EXTINF:-1 tvg-id="Rede Família" tvg-name="Rede Família HD" tvg-logo="http://i.imgur.com/sQwm6Cl.png" group-title="Canais Abertos",Rede Família HD
+#EXTINF:-1 tvg-id="Terra Viva" tvg-name="Terra Viva" tvg-logo="http://i.imgur.com/6vBfgpS.png" group-title="Canais Abertos",Terra Viva
+#EXTINF:-1 tvg-id="Canal Rural" tvg-name="Canal Rural" tvg-logo="http://i.imgur.com/jtiMetX.png" group-title="Canais Abertos",Canal Rural
+#EXTINF:-1 tvg-id="Canal do Boi" tvg-name="Canal do Boi" tvg-logo="http://i.imgur.com/NKRWvKq.png" group-title="Canais Abertos",Canal do Boi
+#EXTINF:-1 tvg-id="" tvg-name="Agro Canal" tvg-logo="http://i.imgur.com/Gk7EWc9.png" group-title="Canais Abertos",Agro Canal
+#EXTINF:-1 tvg-id="" tvg-name="Brasil Rural TV" tvg-logo="http://brasilruraltv.com.br/wp-content/uploads/2016/03/ms-icon-310x310.png" group-title="Canais Abertos",Brasil Rural TV
+#EXTINF:-1 tvg-id="NBR" tvg-name="NBR" tvg-logo="http://i.imgur.com/if82162.png" group-title="Canais Abertos",NBR
+#EXTINF:-1 tvg-id="TV Câmara" tvg-name="TV Câmara" tvg-logo="http://i.imgur.com/no1Al0A.png" group-title="Canais Abertos",TV Câmara
+#EXTINF:-1 tvg-id="Telecine Premium" tvg-name="Telecine Premium HD" tvg-logo="http://s17.postimg.org/lig6fpj4r/telecinepremium.png" group-title="Filmes e Séries",Telecine Premium HD
+#EXTINF:-1 tvg-id="Telecine Premium" tvg-name="Telecine Premium" tvg-logo="http://i.imgur.com/aMWCWA0.png" group-title="Filmes e Séries",Telecine Premium
+#EXTINF:-1 tvg-id="Telecine Action" tvg-name="Telecine Action HD" tvg-logo="http://s9.postimg.org/vd00n5o4b/telecineaction.png" group-title="Filmes e Séries",Telecine Action HD
+#EXTINF:-1 tvg-id="Telecine Action" tvg-name="Telecine Action" tvg-logo="http://i.imgur.com/Lx3R36Y.png" group-title="Filmes e Séries",Telecine Action
+#EXTINF:-1 tvg-id="Telecine Touch" tvg-name="Telecine Touch HD" tvg-logo="http://s17.postimg.org/gva4dxvrv/telecinetouch.png" group-title="Filmes e Séries",Telecine Touch HD
+#EXTINF:-1 tvg-id="Telecine Touch" tvg-name="Telecine Touch" tvg-logo="http://i.imgur.com/849pB2j.png" group-title="Filmes e Séries",Telecine Touch
+#EXTINF:-1 tvg-id="Telecine Pipoca" tvg-name="Telecine Pipoca HD" tvg-logo="http://s17.postimg.org/ty5qx7lzv/telecinepipoca.png" group-title="Filmes e Séries",Telecine Pipoca HD
+#EXTINF:-1 tvg-id="Telecine Pipoca" tvg-name="Telecine Pipoca" tvg-logo="http://i.imgur.com/lfOS7gF.png" group-title="Filmes e Séries",Telecine Pipoca
+#EXTINF:-1 tvg-id="Telecine Fun" tvg-name="Telecine Fun HD" tvg-logo="http://s17.postimg.org/hv0f9naxn/telecinefun.png" group-title="Filmes e Séries",Telecine Fun HD
+#EXTINF:-1 tvg-id="Telecine Fun" tvg-name="Telecine Fun" tvg-logo="http://i.imgur.com/ltpUjbD.png" group-title="Filmes e Séries",Telecine Fun
+#EXTINF:-1 tvg-id="Telecine Cult" tvg-name="Telecine Cult" tvg-logo="http://i.imgur.com/CHaWCed.png" group-title="Filmes e Séries",Telecine Cult
+#EXTINF:-1 tvg-id="HBO" tvg-name="HBO HD" tvg-logo="http://s18.postimg.org/ytb0mpqf9/hbo.png" group-title="Filmes e Séries",HBO HD
+#EXTINF:-1 tvg-id="HBO" tvg-name="HBO" tvg-logo="http://i.imgur.com/KOIo5EH.png" group-title="Filmes e Séries",HBO
+#EXTINF:-1 tvg-id="HBO 2" tvg-name="HBO 2 HD" tvg-logo="http://s32.postimg.org/ro8fqkzoh/HBO_2.png" group-title="Filmes e Séries",HBO 2 HD
+#EXTINF:-1 tvg-id="HBO 2" tvg-name="HBO2" tvg-logo="http://i.imgur.com/okiePBA.png" group-title="Filmes e Séries",HBO2
+#EXTINF:-1 tvg-id="HBO Plus Brasil" tvg-name="HBO Plus HD" tvg-logo="http://s33.postimg.org/r72rs54xr/HBO_Plus.png" group-title="Filmes e Séries",HBO Plus HD
+#EXTINF:-1 tvg-id="HBO Plus Brasil" tvg-name="HBO Plus" tvg-logo="http://i.imgur.com/rjzeynR.png" group-title="Filmes e Séries",HBO Plus
+#EXTINF:-1 tvg-id="HBO Plus Panregional" tvg-name="HBO Plus *e" tvg-logo="http://i.imgur.com/rjzeynR.png" group-title="Filmes e Séries",HBO Plus *e
+#EXTINF:-1 tvg-id="HBO Family" tvg-name="HBO Family HD" tvg-logo="https://s31.postimg.org/lw2etrpff/HBO_Family.png" group-title="Filmes e Séries",HBO Family HD
+#EXTINF:-1 tvg-id="HBO Family" tvg-name="HBO Family" tvg-logo="http://i.imgur.com/x2Enlmt.png" group-title="Filmes e Séries",HBO Family
+#EXTINF:-1 tvg-id="HBO Signature" tvg-name="HBO Signature HD" tvg-logo="http://s32.postimg.org/yptuwknkx/HBO_Signature.png" group-title="Filmes e Séries",HBO Signature HD
+#EXTINF:-1 tvg-id="HBO Signature" tvg-name="HBO Signature" tvg-logo="http://i.imgur.com/i89AzSA.png" group-title="Filmes e Séries",HBO Signature
+#EXTINF:-1 tvg-id="Max [Brazil]" tvg-name="Max" tvg-logo="http://i.imgur.com/49eEDXa.png" group-title="Filmes e Séries",Max
+#EXTINF:-1 tvg-id="Max Up HD [Brazil]" tvg-name="Max UP" tvg-logo="http://i.imgur.com/3Ci9AWu.png" group-title="Filmes e Séries",Max UP
+#EXTINF:-1 tvg-id="Max Prime [Brazil]" tvg-name="Max Prime" tvg-logo="http://i.imgur.com/z0DmH95.png" group-title="Filmes e Séries",Max Prime
+#EXTINF:-1 tvg-id="Max Prime *e [Brazil]" tvg-name="Max Prime *e" tvg-logo="http://i.imgur.com/z0DmH95.png" group-title="Filmes e Séries",Max Prime *e
+#EXTINF:-1 tvg-id="Cinemax [Brazil]" tvg-name="Cinemax" tvg-logo="http://i.imgur.com/nlGx2t1.png" group-title="Filmes e Séries",Cinemax
+#EXTINF:-1 tvg-id="Fox [Brazil]" tvg-name="FOX HD" tvg-logo="https://s32.postimg.org/7y1thriph/Fox.png" group-title="Filmes e Séries",FOX HD
