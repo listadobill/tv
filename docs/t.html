@@ -99,13 +99,13 @@
             cursor: pointer;
             transition: transform 0.3s ease;
             text-align: center;
-            width: 120px; /* Largura fixa */
-            margin: 10px; /* Adicionando margem */
+            width: 120px;
+            margin: 10px;
         }
 
         .icon-item:hover {
             transform: scale(1.1);
-            background-color: rgba(76, 175, 80, 0.5); /* Fundo em hover */
+            background-color: rgba(76, 175, 80, 0.5);
         }
 
         .icon-item img {
@@ -114,17 +114,17 @@
             object-fit: cover;
             border-radius: 50%;
             border: 2px solid #4CAF50;
-            background-color: rgba(0, 0, 0, 0.7); /* Fundo translúcido para o logo */
-            padding: 5px; /* Espaçamento interno para o logo */
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 5px;
         }
 
         .icon-item p {
             margin-top: 10px;
             font-size: 0.9em;
             text-align: center;
-            background-color: rgba(0, 0, 0, 0.7); /* Fundo translúcido preto */
-            padding: 5px; /* Espaçamento interno para o texto */
-            border-radius: 5px; /* Bordas arredondadas */
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 5px;
+            border-radius: 5px;
         }
 
         .video-js.vjs-fullscreen {
@@ -152,10 +152,15 @@
             background-color: rgba(76, 175, 80, 1);
         }
 
+        /* Oculta a mensagem de erro */
+        .vjs-error-display {
+            display: none !important;
+        }
+
         @media (max-width: 600px) {
             #icon-grid {
-                flex-direction: column; /* Muda para coluna em telas pequenas */
-                align-items: center; /* Centraliza os ícones */
+                flex-direction: column;
+                align-items: center;
             }
         }
     </style>
@@ -239,26 +244,46 @@
             xhr.send();
 
             function renderCanais(canaisParaMostrar) {
-                iconGrid.innerHTML = ""; // Limpa a grid de ícones
+                iconGrid.innerHTML = ""; // Limpa os ícones existentes
                 canaisParaMostrar.forEach(function(canal) {
                     var iconItem = document.createElement("div");
                     iconItem.className = "icon-item";
                     iconItem.innerHTML = `
-                        <img src="${canal.logo || 'https://via.placeholder.com/80'}" alt="${canal.nome}">
+                        <img src="${canal.logo || 'default-logo.png'}" alt="${canal.nome}">
                         <p>${canal.nome}</p>
                     `;
                     iconItem.onclick = function() {
                         video.src({ type: 'application/x-mpegURL', src: canal.link });
                         video.play();
-                        if (video.isFullscreen()) {
-                            video.exitFullscreen();
-                        } else {
-                            video.requestFullscreen(); // Solicita tela cheia
-                        }
                     };
                     iconGrid.appendChild(iconItem);
                 });
             }
+
+            // Função para alternar para tela cheia
+            function toggleFullScreen() {
+                var videoPlayer = document.getElementById("video-player");
+                if (videoPlayer.requestFullscreen) {
+                    videoPlayer.requestFullscreen();
+                } else if (videoPlayer.mozRequestFullScreen) {
+                    videoPlayer.mozRequestFullScreen();
+                } else if (videoPlayer.webkitRequestFullscreen) {
+                    videoPlayer.webkitRequestFullscreen();
+                } else if (videoPlayer.msRequestFullscreen) {
+                    videoPlayer.msRequestFullscreen();
+                }
+            }
+
+            // Adiciona evento para permitir tela cheia
+            video.on('play', toggleFullScreen);
+
+            // Oculte mensagens de erro
+            video.on('error', function() {
+                var errorDisplay = document.querySelector('.vjs-error-display');
+                if (errorDisplay) {
+                    errorDisplay.style.display = 'none';
+                }
+            });
         });
     </script>
 </body>
