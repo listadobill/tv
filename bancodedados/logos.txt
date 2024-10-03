@@ -1,178 +1,178 @@
-#EXTINF:-1 tvg-id="SBT [Brazil]" tvg-name="SBT" tvg-logo="http://i.imgur.com/Jotugf0.png" group-title="Canais Abertos",SBT
-#EXTINF:-1 tvg-id="SBT [Brazil]" tvg-name="SBT HD" tvg-logo="http://i.imgur.com/Jotugf0.png" group-title="Canais Abertos",SBT HD
-#EXTINF:-1 tvg-id="" tvg-name="Globo SP" tvg-logo="http://i.imgur.com/ozxkJhG.png" group-title="Canais Abertos",Globo SP
-#EXTINF:-1 tvg-id="Globo - Rio de Janeiro [Brazil]" tvg-name="Globo RIO" tvg-logo="http://i.imgur.com/ozxkJhG.png" group-title="Canais Abertos",Globo RIO
-#EXTINF:-1 tvg-id="TV Globo [Brazil]" tvg-name="Globo HD" tvg-logo="http://i.imgur.com/ozxkJhG.png" group-title="Canais Abertos",Globo HD
-#EXTINF:-1 tvg-id="" tvg-name="Record" tvg-logo="http://i.imgur.com/1Zb1lr8.png" group-title="Canais Abertos",Record
-#EXTINF:-1 tvg-id="Record [Brazil]" tvg-name="Record HD" tvg-logo="http://i.imgur.com/1Zb1lr8.png" group-title="Canais Abertos",Record HD
-#EXTINF:-1 tvg-id="Rede TV [Brazil]" tvg-name="Rede TV" tvg-logo="http://i.imgur.com/mFIHvKN.png" group-title="Canais Abertos",Rede TV
-#EXTINF:-1 tvg-id="Rede TV [Brazil]" tvg-name="Rede TV HD" tvg-logo="http://i.imgur.com/mFIHvKN.png" group-title="Canais Abertos",Rede TV HD
-#EXTINF:-1 tvg-id="Band Rede [Brazil]" tvg-name="Band" tvg-logo="http://i.imgur.com/6xouXln.png" group-title="Canais Abertos",Band
-#EXTINF:-1 tvg-id="Band Rede [Brazil]" tvg-name="Band Alternativo" tvg-logo="http://i.imgur.com/6xouXln.png" group-title="Canais Abertos",Band Alternativo
-#EXTINF:-1 tvg-id="Band Rede [Brazil]" tvg-name="Band HD" tvg-logo="http://i.imgur.com/6xouXln.png" group-title="Canais Abertos",Band HD
-#EXTINF:-1 tvg-id="TruTV [Brazil]" tvg-name="TruTV" tvg-logo="http://i.imgur.com/U4VgGuN.png" group-title="Variedade",TruTV
-#EXTINF:-1 tvg-id="" tvg-name="Food Network" tvg-logo="http://i.imgur.com/j6NjcTh.png" group-title="Variedade",Food Network
-#EXTINF:-1 tvg-id="" tvg-name="Comedy Central" tvg-logo="http://i.imgur.com/0956PZG.png" group-title="Variedade",Comedy Central
-#EXTINF:-1 tvg-id="Telecine Premium [Brazil]" tvg-name="Telecine Premium" tvg-logo="http://i.imgur.com/aMWCWA0.png" group-title="Filmes e Series",Telecine Premium
-#EXTINF:-1 tvg-id="Telecine Premuim HD [Brazil]" tvg-name="Telecine Premium HD" tvg-logo="http://i.imgur.com/aMWCWA0.png" group-title="Filmes e Series",Telecine Premium HD
-#EXTINF:-1 tvg-id="Telecine Action [Brazil]" tvg-name="Telecine Action" tvg-logo="http://i.imgur.com/Lx3R36Y.png" group-title="Filmes e Series",Telecine Action
-#EXTINF:-1 tvg-id="Telecine Action HD [Brazil]" tvg-name="Telecine Action HD" tvg-logo="http://i.imgur.com/Lx3R36Y.png" group-title="Filmes e Series",Telecine Action HD
-#EXTINF:-1 tvg-id="Telecine Touch [Brazil]" tvg-name="Telecine Touch" tvg-logo="http://i.imgur.com/849pB2j.png" group-title="Filmes e Series",Telecine Touch
-#EXTINF:-1 tvg-id="Telecine Touch [Brazil]" tvg-name="Telecine Touch HD" tvg-logo="http://i.imgur.com/849pB2j.png" group-title="Filmes e Series",Telecine Touch HD
-#EXTINF:-1 tvg-id="Telecine Fun [Brazil]" tvg-name="Telecine Fun" tvg-logo="http://i.imgur.com/ltpUjbD.png" group-title="Filmes e Series",Telecine Fun
-#EXTINF:-1 tvg-id="Telecine Fun [Brazil]" tvg-name="Telecine Fun HD" tvg-logo="http://i.imgur.com/ltpUjbD.png" group-title="Filmes e Series",Telecine Fun HD
-#EXTINF:-1 tvg-id="Telecine Pipoca [Brazil]" tvg-name="Telecine Pipoca" tvg-logo="http://i.imgur.com/lfOS7gF.png" group-title="Filmes e Series",Telecine Pipoca
-#EXTINF:-1 tvg-id="Telecine Pipoca HD [Brazil]" tvg-name="Telecine Pipoca HD" tvg-logo="http://i.imgur.com/lfOS7gF.png" group-title="Filmes e Series",Telecine Pipoca HD
-#EXTINF:-1 tvg-id="Telecine Cult [Brazil]" tvg-name="Telecine Cult" tvg-logo="http://i.imgur.com/CHaWCed.png" group-title="Filmes e Series",Telecine Cult
-#EXTINF:-1 tvg-id="" tvg-name="HBO" tvg-logo="http://i.imgur.com/KOIo5EH.png" group-title="Filmes e Series",HBO
-#EXTINF:-1 tvg-id="HBO [Brazil]" tvg-name="HBO HD" tvg-logo="http://i.imgur.com/KOIo5EH.png" group-title="Filmes e Series",HBO HD
-#EXTINF:-1 tvg-id="" tvg-name="HBO 2" tvg-logo="http://i.imgur.com/okiePBA.png" group-title="Filmes e Series",HBO 2
-#EXTINF:-1 tvg-id="HBO 2 [Brazil]" tvg-name="HBO 2 HD" tvg-logo="http://i.imgur.com/okiePBA.png" group-title="Filmes e Series",HBO 2 HD
-#EXTINF:-1 tvg-id="" tvg-name="HBO Plus" tvg-logo="http://i.imgur.com/rjzeynR.png" group-title="Filmes e Series",HBO Plus
-#EXTINF:-1 tvg-id="HBO Plus [Brazil]" tvg-name="HBO Plus HD" tvg-logo="http://i.imgur.com/rjzeynR.png" group-title="Filmes e Series",HBO Plus HD
-#EXTINF:-1 tvg-id="" tvg-name="HBO Plus *e" tvg-logo="http://i.imgur.com/rjzeynR.png" group-title="Filmes e Series",HBO Plus *e
-#EXTINF:-1 tvg-id="" tvg-name="HBO Signature" tvg-logo="http://i.imgur.com/i89AzSA.png" group-title="Filmes e Series",HBO Signature
-#EXTINF:-1 tvg-id="HBO Signature [Brazil]" tvg-name="HBO Signature HD" tvg-logo="http://i.imgur.com/i89AzSA.png" group-title="Filmes e Series",HBO Signature HD
-#EXTINF:-1 tvg-id="" tvg-name="HBO Family" tvg-logo="http://i.imgur.com/x2Enlmt.png" group-title="Filmes e Series",HBO Family
-#EXTINF:-1 tvg-id="HBO Family [Brazil]" tvg-name="HBO Family HD" tvg-logo="http://i.imgur.com/x2Enlmt.png" group-title="Filmes e Series",HBO Family HD
-#EXTINF:-1 tvg-id="" tvg-name="MAX" tvg-logo="http://i.imgur.com/49eEDXa.png" group-title="Filmes e Series",MAX
-#EXTINF:-1 tvg-id="" tvg-name="MAX Prime" tvg-logo="http://i.imgur.com/z0DmH95.png" group-title="Filmes e Series",MAX Prime
-#EXTINF:-1 tvg-id="" tvg-name="Max Prime *e" tvg-logo="http://i.imgur.com/z0DmH95.png" group-title="Filmes e Series",Max Prime *e
-#EXTINF:-1 tvg-id="" tvg-name="MAX UP" tvg-logo="http://i.imgur.com/tcr0CGl.png" group-title="Filmes e Series",MAX UP
-#EXTINF:-1 tvg-id="Warner Channel [Brazil]" tvg-name="Warner Channel" tvg-logo="http://i.imgur.com/xvZ66AU.png" group-title="Filmes e Series",Warner Channel
-#EXTINF:-1 tvg-id="Warner Channel HD [Brazil]" tvg-name="Warner Channel HD" tvg-logo="http://i.imgur.com/xvZ66AU.png" group-title="Filmes e Series",Warner Channel HD
-#EXTINF:-1 tvg-id="Universal [Brazil]" tvg-name="Universal Channel" tvg-logo="http://i.imgur.com/Aag8ICV.png" group-title="Filmes e Series",Universal Channel
-#EXTINF:-1 tvg-id="Universal [Brazil]" tvg-name="Universal Channels HD" tvg-logo="http://i.imgur.com/Aag8ICV.png" group-title="Filmes e Series",Universal Channels HD
-#EXTINF:-1 tvg-id="TNT [Brazil]" tvg-name="TNT" tvg-logo="http://i.imgur.com/VhQUWnY.png" group-title="Filmes e Series",TNT
-#EXTINF:-1 tvg-id="TNT HD [Brazil]" tvg-name="TNT HD" tvg-logo="http://i.imgur.com/VhQUWnY.png" group-title="Filmes e Series",TNT HD
-#EXTINF:-1 tvg-id="TNT Séries [Brazil]" tvg-name="TNT Series" tvg-logo="http://i.imgur.com/HE2yMfG.png" group-title="Filmes e Series",TNT Series
-#EXTINF:-1 tvg-id="TNT Séries [Brazil]" tvg-name="TNT Séries HD" tvg-logo="http://i.imgur.com/HE2yMfG.png" group-title="Filmes e Series",TNT Séries HD
-#EXTINF:-1 tvg-id="" tvg-name="TNT Series FULLHD h265" tvg-logo="http://i.imgur.com/HE2yMfG.png" group-title="Filmes e Series",TNT Series FULLHD h265
-#EXTINF:-1 tvg-id="" tvg-name="FOX" tvg-logo="http://i.imgur.com/Od0wkz3.png" group-title="Filmes e Series",FOX
-#EXTINF:-1 tvg-id="Fox [Brazil]" tvg-name="FOX HD" tvg-logo="http://i.imgur.com/Od0wkz3.png" group-title="Filmes e Series",FOX HD
-#EXTINF:-1 tvg-id="" tvg-name="Fox Life" tvg-logo="http://i.imgur.com/5s5gHix.png" group-title="Filmes e Series",Fox Life
-#EXTINF:-1 tvg-id="Fox Life [Brazil]" tvg-name="FOX Life HD" tvg-logo="http://i.imgur.com/5s5gHix.png" group-title="Filmes e Series",FOX Life HD
-#EXTINF:-1 tvg-id="" tvg-name="Fox 1 HD" tvg-logo="http://i.imgur.com/31mcLjv.jpg" group-title="Filmes e Series",Fox 1 HD
-#EXTINF:-1 tvg-id="" tvg-name="Fox Action HD" tvg-logo="http://i.imgur.com/sZrXsCH.jpg" group-title="Filmes e Series",Fox Action HD
-#EXTINF:-1 tvg-id="AMC" tvg-name="AMC" tvg-logo="http://i.imgur.com/JYislkb.png" group-title="Filmes e Series",AMC
-#EXTINF:-1 tvg-id="" tvg-name="MegaPix" tvg-logo="http://i.imgur.com/HvbMaEP.png" group-title="Filmes e Series",MegaPix
-#EXTINF:-1 tvg-id="Megapix HD [Brazil]" tvg-name="Megapix HD" tvg-logo="http://i.imgur.com/HvbMaEP.png" group-title="Filmes e Series",Megapix HD
-#EXTINF:-1 tvg-id="" tvg-name="Cinemax" tvg-logo="http://i.imgur.com/nlGx2t1.png" group-title="Filmes e Series",Cinemax
-#EXTINF:-1 tvg-id="Sony Entertainment TV [Brazil]" tvg-name="Canal Sony" tvg-logo="http://i.imgur.com/eHN8OeK.png" group-title="Filmes e Series",Canal Sony
-#EXTINF:-1 tvg-id="Sony HD [Brazil]" tvg-name="Sony HD" tvg-logo="http://i.imgur.com/eHN8OeK.png" group-title="Filmes e Series",Sony HD
-#EXTINF:-1 tvg-id="SPACE [Brazil]" tvg-name="Space" tvg-logo="http://i.imgur.com/wP2GD1G.png" group-title="Filmes e Series",Space
-#EXTINF:-1 tvg-id="Space HD [Brazil]" tvg-name="Space HD" tvg-logo="http://i.imgur.com/wP2GD1G.png" group-title="Filmes e Series",Space HD
-#EXTINF:-1 tvg-id="AXN [Brazil]" tvg-name="AXN" tvg-logo="http://i.imgur.com/cAGSnn7.png" group-title="Filmes e Series",AXN
-#EXTINF:-1 tvg-id="AXN [Brazil]" tvg-name="AXN HD" tvg-logo="http://i.imgur.com/cAGSnn7.png" group-title="Filmes e Series",AXN HD
-#EXTINF:-1 tvg-id="A&E [Brazil]" tvg-name="AE" tvg-logo="http://i.imgur.com/7NKeRuh.png" group-title="Filmes e Series",AE
-#EXTINF:-1 tvg-id="" tvg-name="FX" tvg-logo="http://i.imgur.com/GaQZSu6.png" group-title="Filmes e Series",FX
-#EXTINF:-1 tvg-id="FX [Brazil]" tvg-name="FX HD" tvg-logo="http://i.imgur.com/GaQZSu6.png" group-title="Filmes e Series",FX HD
-#EXTINF:-1 tvg-id="SyFy [Brazil]" tvg-name="Syfy" tvg-logo="http://i.imgur.com/2lKk7Jw.png" group-title="Filmes e Series",Syfy
-#EXTINF:-1 tvg-id="TCM - Turner Classic Movies [Brazil]" tvg-name="TCM" tvg-logo="http://i.imgur.com/4fLVLhF.png" group-title="Filmes e Series",TCM
-#EXTINF:-1 tvg-id="Studio Universal [Brazil]" tvg-name="Studio Universal" tvg-logo="http://i.imgur.com/WnUlcx6.png" group-title="Filmes e Series",Studio Universal
-#EXTINF:-1 tvg-id="" tvg-name="Paramount" tvg-logo="http://i.imgur.com/yScrn6s.png" group-title="Filmes e Series",Paramount
-#EXTINF:-1 tvg-id="Paramount Channel [Brazil]" tvg-name="Paramount HD" tvg-logo="http://i.imgur.com/yScrn6s.png" group-title="Filmes e Series",Paramount HD
-#EXTINF:-1 tvg-id="TBS [Brazil]" tvg-name="TBS" tvg-logo="http://i.imgur.com/XHUoj3n.png" group-title="Filmes e Series",TBS
-#EXTINF:-1 tvg-id="TBS [Brazil]" tvg-name="TBS HD" tvg-logo="http://i.imgur.com/XHUoj3n.png" group-title="Filmes e Series",TBS HD
-#EXTINF:-1 tvg-id="" tvg-name="E!" tvg-logo="http://i.imgur.com/VVMxDJG.png" group-title="Filmes e Series",E!
-#EXTINF:-1 tvg-id="" tvg-name="Lifetime" tvg-logo="http://i.imgur.com/tsFolbI.png" group-title="Filmes e Series",Lifetime
-#EXTINF:-1 tvg-id="WooHoo [Brazil]" tvg-name="Woohoo" tvg-logo="http://i.imgur.com/7FamS9P.png" group-title="Esportes",Woohoo
-#EXTINF:-1 tvg-id="SporTV [Brazil]" tvg-name="SporTV" tvg-logo="http://i.imgur.com/gDHSHwM.png" group-title="Esportes",SporTV
-#EXTINF:-1 tvg-id="SporTV [Brazil]" tvg-name="Sport TV HD" tvg-logo="http://i.imgur.com/gDHSHwM.png" group-title="Esportes",Sport TV HD
-#EXTINF:-1 tvg-id="SporTV [Brazil]" tvg-name="SporTV Alternativo" tvg-logo="http://i.imgur.com/gDHSHwM.png" group-title="Esportes",SporTV Alternativo
-#EXTINF:-1 tvg-id="SporTV 2 [Brazil]" tvg-name="SporTV 2" tvg-logo="http://i.imgur.com/v4TmPpc.png" group-title="Esportes",SporTV 2
-#EXTINF:-1 tvg-id="SporTV 2 [Brazil]" tvg-name="Sport TV 2 HD" tvg-logo="http://i.imgur.com/v4TmPpc.png" group-title="Esportes",Sport TV 2 HD
-#EXTINF:-1 tvg-id="SporTV 2 [Brazil]" tvg-name="SporTV 2 Alternativo" tvg-logo="http://i.imgur.com/v4TmPpc.png" group-title="Esportes",SporTV 2 Alternativo
-#EXTINF:-1 tvg-id="SporTV 3 [Brazil]" tvg-name="SporTV 3" tvg-logo="http://s29.postimg.org/6gznfk6tv/Spor_TV3.png" group-title="Esportes",SporTV 3
-#EXTINF:-1 tvg-id="SporTV 3 [Brazil]" tvg-name="Sport TV 3 HD" tvg-logo="http://s29.postimg.org/6gznfk6tv/Spor_TV3.png" group-title="Esportes",Sport TV 3 HD
-#EXTINF:-1 tvg-id="" tvg-name="Fox Sports" tvg-logo="http://i.imgur.com/bYUGfOo.png" group-title="Esportes",Fox Sports
-#EXTINF:-1 tvg-id="Fox Sports [Brazil]" tvg-name="Fox Sport HD" tvg-logo="http://i.imgur.com/bYUGfOo.png" group-title="Esportes",Fox Sport HD
-#EXTINF:-1 tvg-id="" tvg-name="Fox Sports 2" tvg-logo="http://i.imgur.com/imNhdzS.png" group-title="Esportes",Fox Sports 2
-#EXTINF:-1 tvg-id="Fox Sports 2 [Brazil]" tvg-name="FOX Sports 2 HD" tvg-logo="http://i.imgur.com/imNhdzS.png" group-title="Esportes",FOX Sports 2 HD
-#EXTINF:-1 tvg-id="" tvg-name="ESPN" tvg-logo="https://s31.postimg.org/jnhiwkp97/ESPN.png" group-title="Esportes",ESPN
-#EXTINF:-1 tvg-id="ESPN International [Brazil]" tvg-name="ESPN HD" tvg-logo="https://s31.postimg.org/jnhiwkp97/ESPN.png" group-title="Esportes",ESPN HD
-#EXTINF:-1 tvg-id="ESPN International [Brazil]" tvg-name="ESPN  HD" tvg-logo="https://s31.postimg.org/jnhiwkp97/ESPN.png" group-title="Esportes",ESPN  HD
-#EXTINF:-1 tvg-id="" tvg-name="ESPN Brasil" tvg-logo="http://i.imgur.com/rTXcueh.png" group-title="Esportes",ESPN Brasil
-#EXTINF:-1 tvg-id="ESPN Brasil [Brazil]" tvg-name="ESPN Brasil HD" tvg-logo="http://i.imgur.com/rTXcueh.png" group-title="Esportes",ESPN Brasil HD
-#EXTINF:-1 tvg-id="Band Esportes [Brazil]" tvg-name="Band Sports" tvg-logo="http://i.imgur.com/zR3osZs.png" group-title="Esportes",Band Sports
-#EXTINF:-1 tvg-id="Band Esportes [Brazil]" tvg-name="Band Sports HD" tvg-logo="http://i.imgur.com/zR3osZs.png" group-title="Esportes",Band Sports HD
-#EXTINF:-1 tvg-id="Esporte Interativo [Brazil]" tvg-name="Esporte Interativo" tvg-logo="http://i.imgur.com/OpkyrD1.png" group-title="Esportes",Esporte Interativo
-#EXTINF:-1 tvg-id="Esporte Interativo [Brazil]" tvg-name="Esporte Interativo HD" tvg-logo="http://i.imgur.com/OpkyrD1.png" group-title="Esportes",Esporte Interativo HD
-#EXTINF:-1 tvg-id="" tvg-name="EI Maxx" tvg-logo="http://i.imgur.com/OpkyrD1.png" group-title="Esportes",EI Maxx
-#EXTINF:-1 tvg-id="EI Maxx HD [Brazil]" tvg-name="Ei Maxx HD" tvg-logo="http://i.imgur.com/OpkyrD1.png" group-title="Esportes",Ei Maxx HD
-#EXTINF:-1 tvg-id="" tvg-name="EI Maxx 2" tvg-logo="http://i.imgur.com/OpkyrD1.png" group-title="Esportes",EI Maxx 2
-#EXTINF:-1 tvg-id="EI Maxx 2 [Brazil]" tvg-name="Ei Maxx 2 HD" tvg-logo="http://i.imgur.com/OpkyrD1.png" group-title="Esportes",Ei Maxx 2 HD
-#EXTINF:-1 tvg-id="" tvg-name="Combate" tvg-logo="http://i.imgur.com/5qo1Dyc.png" group-title="Esportes",Combate
-#EXTINF:-1 tvg-id="Combate [Brazil]" tvg-name="Combate HD" tvg-logo="http://i.imgur.com/5qo1Dyc.png" group-title="Esportes",Combate HD
-#EXTINF:-1 tvg-id="" tvg-name="Premiere Clubes" tvg-logo="http://i.imgur.com/8d0cM31.png" group-title="Esportes",Premiere Clubes
-#EXTINF:-1 tvg-id="" tvg-name="Premiere 1 HD" tvg-logo="http://i.imgur.com/8d0cM31.png" group-title="Esportes",Premiere 1 HD
-#EXTINF:-1 tvg-id="" tvg-name="Premiere 2" tvg-logo="http://i.imgur.com/8d0cM31.png" group-title="Esportes",Premiere 2
-#EXTINF:-1 tvg-id="" tvg-name="Premiere 2 HD" tvg-logo="http://i.imgur.com/8d0cM31.png" group-title="Esportes",Premiere 2 HD
-#EXTINF:-1 tvg-id="" tvg-name="Premiere 3" tvg-logo="http://i.imgur.com/8d0cM31.png" group-title="Esportes",Premiere 3
-#EXTINF:-1 tvg-id="" tvg-name="Premiere 3 HD" tvg-logo="http://i.imgur.com/8d0cM31.png" group-title="Esportes",Premiere 3 HD
-#EXTINF:-1 tvg-id="" tvg-name="Premiere 4" tvg-logo="http://i.imgur.com/8d0cM31.png" group-title="Esportes",Premiere 4
-#EXTINF:-1 tvg-id="" tvg-name="Premiere 4 HD" tvg-logo="http://i.imgur.com/8d0cM31.png" group-title="Esportes",Premiere 4 HD
-#EXTINF:-1 tvg-id="" tvg-name="Premiere 5" tvg-logo="http://i.imgur.com/8d0cM31.png" group-title="Esportes",Premiere 5
-#EXTINF:-1 tvg-id="" tvg-name="Premiere 5 HD" tvg-logo="http://i.imgur.com/8d0cM31.png" group-title="Esportes",Premiere 5 HD
-#EXTINF:-1 tvg-id="" tvg-name="Premiere 6" tvg-logo="http://i.imgur.com/8d0cM31.png" group-title="Esportes",Premiere 6
-#EXTINF:-1 tvg-id="" tvg-name="Premiere 7" tvg-logo="http://i.imgur.com/8d0cM31.png" group-title="Esportes",Premiere 7
-#EXTINF:-1 tvg-id="" tvg-name="Premiere 8" tvg-logo="http://i.imgur.com/8d0cM31.png" group-title="Esportes",Premiere 8
-#EXTINF:-1 tvg-id="" tvg-name="Premiere 9" tvg-logo="http://i.imgur.com/8d0cM31.png" group-title="Esportes",Premiere 9
-#EXTINF:-1 tvg-id="" tvg-name="OFF" tvg-logo="http://i.imgur.com/WGoV3TD.png" group-title="Musicas",OFF
-#EXTINF:-1 tvg-id="Canal Off [Brazil]" tvg-name="OFF HD" tvg-logo="http://i.imgur.com/WGoV3TD.png" group-title="Musicas",OFF HD
-#EXTINF:-1 tvg-id="Bis HD [Brazil]" tvg-name="BIS" tvg-logo="http://i.imgur.com/JNP327k.png" group-title="Musicas",BIS
-#EXTINF:-1 tvg-id="Bis HD [Brazil]" tvg-name="BIS HD" tvg-logo="http://i.imgur.com/JNP327k.png" group-title="Musicas",BIS HD
-#EXTINF:-1 tvg-id="" tvg-name="BIS FULLHD h265" tvg-logo="http://i.imgur.com/JNP327k.png" group-title="Musicas",BIS FULLHD h265
-#EXTINF:-1 tvg-id="" tvg-name="Multishow" tvg-logo="http://i.imgur.com/yYmGNnQ.png" group-title="Musicas",Multishow
-#EXTINF:-1 tvg-id="Multishow [Brazil]" tvg-name="Multishow HD" tvg-logo="http://i.imgur.com/yYmGNnQ.png" group-title="Musicas",Multishow HD
-#EXTINF:-1 tvg-id="" tvg-name="MTV" tvg-logo="http://i.imgur.com/U6Rgjqs.png" group-title="Musicas",MTV
-#EXTINF:-1 tvg-id="VH1 Mega Hits [Brazil]" tvg-name="VH1 Megahits" tvg-logo="http://i.imgur.com/ST4gtJb.png" group-title="Musicas",VH1 Megahits
-#EXTINF:-1 tvg-id="" tvg-name="Music Box Brazil" tvg-logo="http://i.imgur.com/ubp029X.png" group-title="Musicas",Music Box Brazil
-#EXTINF:-1 tvg-id="" tvg-name="Virgin TV" tvg-logo="http://i.imgur.com/vxy7x7E.png" group-title="Musicas",Virgin TV
-#EXTINF:-1 tvg-id="" tvg-name="DJinG" tvg-logo="http://s20.postimg.org/4i8o6fouh/DHING.jpg" group-title="Musicas",DJinG
-#EXTINF:-1 tvg-id="Rede Internacional de TV [Brazil]" tvg-name="RIT" tvg-logo="http://i.imgur.com/6cNzaQA.png" group-title="Religiosos",RIT
-#EXTINF:-1 tvg-id="" tvg-name="Ideal TV" tvg-logo="http://i.imgur.com/8KpJXf4.png" group-title="Religiosos",Ideal TV
-#EXTINF:-1 tvg-id="" tvg-name="Novo Tempo" tvg-logo="http://i.imgur.com/SHSp3jK.png" group-title="Religiosos",Novo Tempo
-#EXTINF:-1 tvg-id="" tvg-name="Aparecida" tvg-logo="http://i.imgur.com/UOMWJH6.png" group-title="Religiosos",Aparecida
-#EXTINF:-1 tvg-id="" tvg-name="Cancao Nova" tvg-logo="http://i.imgur.com/wVxLluR.png" group-title="Religiosos",Cancao Nova
-#EXTINF:-1 tvg-id="" tvg-name="TV Filadelfia" tvg-logo="http://i.imgur.com/70YWjm7.png" group-title="Religiosos",TV Filadelfia
-#EXTINF:-1 tvg-id="Rede Vida [Brazil]" tvg-name="Rede Vida" tvg-logo="http://i.imgur.com/3DDTajO.png" group-title="Religiosos",Rede Vida
-#EXTINF:-1 tvg-id="" tvg-name="RBI" tvg-logo="http://i.imgur.com/BtATkqN.png" group-title="Religiosos",RBI
-#EXTINF:-1 tvg-id="Tooncast [Brazil]" tvg-name="Tooncast" tvg-logo="http://i.imgur.com/USRKuyc.png" group-title="Infantil",Tooncast
-#EXTINF:-1 tvg-id="" tvg-name="Disney Channel" tvg-logo="http://i.imgur.com/4KeieN7.png" group-title="Infantil",Disney Channel
-#EXTINF:-1 tvg-id="" tvg-name="Disney XD" tvg-logo="http://i.imgur.com/zNNIALN.png" group-title="Infantil",Disney XD
-#EXTINF:-1 tvg-id="" tvg-name="Disney Jr" tvg-logo="http://i.imgur.com/60JkJAz.png" group-title="Infantil",Disney Jr
-#EXTINF:-1 tvg-id="" tvg-name="Nick Jr." tvg-logo="http://i.imgur.com/6vVmJJf.png" group-title="Infantil",Nick Jr.
-#EXTINF:-1 tvg-id="" tvg-name="Nickelodeon" tvg-logo="http://i.imgur.com/ZjLSLiY.png" group-title="Infantil",Nickelodeon
-#EXTINF:-1 tvg-id="" tvg-name="Discovery Kids" tvg-logo="http://i.imgur.com/32njYPj.png" group-title="Infantil",Discovery Kids
-#EXTINF:-1 tvg-id="" tvg-name="Cartoon Network" tvg-logo="http://i.imgur.com/S5PsDDR.png" group-title="Infantil",Cartoon Network
-#EXTINF:-1 tvg-id="TV Rá-tim-bum [Brazil]" tvg-name="TV Ra tim bum" tvg-logo="http://i.imgur.com/pqb2u5X.png" group-title="Infantil",TV Ra tim bum
-#EXTINF:-1 tvg-id="" tvg-name="Gloob" tvg-logo="http://i.imgur.com/mFDFUjt.png" group-title="Infantil",Gloob
-#EXTINF:-1 tvg-id="Boomerang [Brazil]" tvg-name="Boomerang" tvg-logo="http://i.imgur.com/dfRrag8.png" group-title="Infantil",Boomerang
-#EXTINF:-1 tvg-id="" tvg-name="Nat Geo" tvg-logo="http://i.imgur.com/UgmPkZ0.png" group-title="Documentarios",Nat Geo
-#EXTINF:-1 tvg-id="Nat Geo [Brazil]" tvg-name="Nat Geo HD" tvg-logo="http://i.imgur.com/UgmPkZ0.png" group-title="Documentarios",Nat Geo HD
-#EXTINF:-1 tvg-id="" tvg-name="NatGeo Wild" tvg-logo="http://i.imgur.com/QouD1hh.png" group-title="Documentarios",NatGeo Wild
-#EXTINF:-1 tvg-id="Nat Geo Wild HD [Brazil]" tvg-name="NatGeoWild HD" tvg-logo="http://i.imgur.com/QouD1hh.png" group-title="Documentarios",NatGeoWild HD
-#EXTINF:-1 tvg-id="Animal Planet [Brazil]" tvg-name="Animal Planet" tvg-logo="http://i.imgur.com/J1oK0xW.png" group-title="Documentarios",Animal Planet
-#EXTINF:-1 tvg-id="Animal Planet [Brazil]" tvg-name="Animal Planet HD" tvg-logo="http://i.imgur.com/J1oK0xW.png" group-title="Documentarios",Animal Planet HD
-#EXTINF:-1 tvg-id="" tvg-name="Fish TV" tvg-logo="http://i.imgur.com/IroXP7H.png" group-title="Documentarios",Fish TV
-#EXTINF:-1 tvg-id="History Channel [Brazil]" tvg-name="History Channel" tvg-logo="http://i.imgur.com/0oZXoaE.png" group-title="Documentarios",History Channel
-#EXTINF:-1 tvg-id="History Channel HD [Brazil]" tvg-name="History Channel HD" tvg-logo="http://i.imgur.com/0oZXoaE.png" group-title="Documentarios",History Channel HD
-#EXTINF:-1 tvg-id="" tvg-name="H2" tvg-logo="http://i.imgur.com/jhiD9Wc.png" group-title="Documentarios",H2
-#EXTINF:-1 tvg-id="H2 HD [Brazil]" tvg-name="H2 HD" tvg-logo="http://i.imgur.com/jhiD9Wc.png" group-title="Documentarios",H2 HD
-#EXTINF:-1 tvg-id="" tvg-name="Discovery Channel" tvg-logo="https://s13.postimg.io/msb5b9u7r/discchannel.png" group-title="Documentarios",Discovery Channel
-#EXTINF:-1 tvg-id="Discovery Channel [Brazil]" tvg-name="Discovery Channel HD" tvg-logo="https://s13.postimg.io/msb5b9u7r/discchannel.png" group-title="Documentarios",Discovery Channel HD
-#EXTINF:-1 tvg-id="" tvg-name="Discovery Civilization" tvg-logo="http://i.imgur.com/dN249KE.png" group-title="Documentarios",Discovery Civilization
-#EXTINF:-1 tvg-id="Discovery HD Theater [Brazil]" tvg-name="Discovery Theater HD" tvg-logo="http://i.imgur.com/VZH1x36.png" group-title="Documentarios",Discovery Theater HD
-#EXTINF:-1 tvg-id="" tvg-name="Discovery World HD" tvg-logo="http://i.imgur.com/4JC0BcV.png" group-title="Documentarios",Discovery World HD
-#EXTINF:-1 tvg-id="" tvg-name="Discovery Science" tvg-logo="http://i.imgur.com/Dx49y4f.png" group-title="Documentarios",Discovery Science
-#EXTINF:-1 tvg-id="" tvg-name="Discovery Turbo" tvg-logo="http://i.imgur.com/2vuY35C.png" group-title="Documentarios",Discovery Turbo
-#EXTINF:-1 tvg-id="Discovery Turbo [Brazil]" tvg-name="Discovery Turbo HD" tvg-logo="http://i.imgur.com/2vuY35C.png" group-title="Documentarios",Discovery Turbo HD
-#EXTINF:-1 tvg-id="" tvg-name="Discovery Home Health" tvg-logo="http://i.imgur.com/FJgwtT5.png" group-title="Documentarios",Discovery Home Health
-#EXTINF:-1 tvg-id="Discovery Home & Health [Brazil]" tvg-name="Discovery Home Health HD" tvg-logo="http://i.imgur.com/FJgwtT5.png" group-title="Documentarios",Discovery Home Health HD
-#EXTINF:-1 tvg-id="" tvg-name="Investigação Discovery" tvg-logo="http://i.imgur.com/1nFjk1t.png" group-title="Documentarios",Investigação Discovery
-#EXTINF:-1 tvg-id="Investigação Discovery [Brazil]" tvg-name="ID - Investigação Discovery HD" tvg-logo="http://i.imgur.com/1nFjk1t.png" group-title="Documentarios",ID - Investigação Discovery HD
-#EXTINF:-1 tvg-id="TLC [Brazil]" tvg-name="TLC" tvg-logo="http://i.imgur.com/zQM47Cf.png" group-title="Documentarios",TLC
-#EXTINF:-1 tvg-id="" tvg-name="Record News" tvg-logo="http://i.imgur.com/I99RZ9n.png" group-title="Notícias",Record News
-#EXTINF:-1 tvg-id="Band News [Brazil]" tvg-name="Band News" tvg-logo="http://i.imgur.com/ibNTVbR.png" group-title="Notícias",Band News
-#EXTINF:-1 tvg-id="" tvg-name="Globo News" tvg-logo="http://i.imgur.com/GIbRutN.png" group-title="Notícias",Globo News
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/Jotugf0.png" group-title="", SBT
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/Jotugf0.png" group-title="", SBT HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/ozxkJhG.png" group-title="", Globo SP
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/ozxkJhG.png" group-title="", Globo RIO
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/ozxkJhG.png" group-title="", Globo HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/1Zb1lr8.png" group-title="", Record
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/1Zb1lr8.png" group-title="", Record HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/mFIHvKN.png" group-title="", Rede TV
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/mFIHvKN.png" group-title="", Rede TV HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/6xouXln.png" group-title="", Band
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/6xouXln.png" group-title="", Band Alternativo
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/6xouXln.png" group-title="", Band HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/U4VgGuN.png" group-title="", TruTV
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/j6NjcTh.png" group-title="", Food Network
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/0956PZG.png" group-title="", Comedy Central
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/aMWCWA0.png" group-title="", Telecine Premium
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/aMWCWA0.png" group-title="", Telecine Premium HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/Lx3R36Y.png" group-title="", Telecine Action
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/Lx3R36Y.png" group-title="", Telecine Action HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/849pB2j.png" group-title="", Telecine Touch
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/849pB2j.png" group-title="", Telecine Touch HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/ltpUjbD.png" group-title="", Telecine Fun
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/ltpUjbD.png" group-title="", Telecine Fun HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/lfOS7gF.png" group-title="", Telecine Pipoca
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/lfOS7gF.png" group-title="", Telecine Pipoca HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/CHaWCed.png" group-title="", Telecine Cult
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/KOIo5EH.png" group-title="", HBO
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/KOIo5EH.png" group-title="", HBO HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/okiePBA.png" group-title="", HBO 2
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/okiePBA.png" group-title="", HBO 2 HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/rjzeynR.png" group-title="", HBO Plus
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/rjzeynR.png" group-title="", HBO Plus HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/rjzeynR.png" group-title="", HBO Plus *e
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/i89AzSA.png" group-title="", HBO Signature
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/i89AzSA.png" group-title="", HBO Signature HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/x2Enlmt.png" group-title="", HBO Family
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/x2Enlmt.png" group-title="", HBO Family HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/49eEDXa.png" group-title="", MAX
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/z0DmH95.png" group-title="", MAX Prime
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/z0DmH95.png" group-title="", Max Prime *e
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/tcr0CGl.png" group-title="", MAX UP
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/xvZ66AU.png" group-title="", Warner Channel
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/xvZ66AU.png" group-title="", Warner Channel HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/Aag8ICV.png" group-title="", Universal Channel
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/Aag8ICV.png" group-title="", Universal Channels HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/VhQUWnY.png" group-title="", TNT
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/VhQUWnY.png" group-title="", TNT HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/HE2yMfG.png" group-title="", TNT Series
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/HE2yMfG.png" group-title="", TNT Séries HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/HE2yMfG.png" group-title="", TNT Series FULLHD h265
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/Od0wkz3.png" group-title="", FOX
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/Od0wkz3.png" group-title="", FOX HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/5s5gHix.png" group-title="", Fox Life
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/5s5gHix.png" group-title="", FOX Life HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/31mcLjv.jpg" group-title="", Fox 1 HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/sZrXsCH.jpg" group-title="", Fox Action HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/JYislkb.png" group-title="", AMC
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/HvbMaEP.png" group-title="", MegaPix
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/HvbMaEP.png" group-title="", Megapix HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/nlGx2t1.png" group-title="", Cinemax
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/eHN8OeK.png" group-title="", Canal Sony
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/eHN8OeK.png" group-title="", Sony HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/wP2GD1G.png" group-title="", Space
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/wP2GD1G.png" group-title="", Space HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/cAGSnn7.png" group-title="", AXN
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/cAGSnn7.png" group-title="", AXN HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/7NKeRuh.png" group-title="", AE
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/GaQZSu6.png" group-title="", FX
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/GaQZSu6.png" group-title="", FX HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/2lKk7Jw.png" group-title="", Syfy
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/4fLVLhF.png" group-title="", TCM
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/WnUlcx6.png" group-title="", Studio Universal
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/yScrn6s.png" group-title="", Paramount
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/yScrn6s.png" group-title="", Paramount HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/XHUoj3n.png" group-title="", TBS
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/XHUoj3n.png" group-title="", TBS HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/VVMxDJG.png" group-title="", E!
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/tsFolbI.png" group-title="", Lifetime
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/7FamS9P.png" group-title="", Woohoo
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/gDHSHwM.png" group-title="", SporTV
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/gDHSHwM.png" group-title="", Sport TV HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/gDHSHwM.png" group-title="", SporTV Alternativo
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/v4TmPpc.png" group-title="", SporTV 2
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/v4TmPpc.png" group-title="", Sport TV 2 HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/v4TmPpc.png" group-title="", SporTV 2 Alternativo
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://s29.postimg.org/6gznfk6tv/Spor_TV3.png" group-title="", SporTV 3
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://s29.postimg.org/6gznfk6tv/Spor_TV3.png" group-title="", Sport TV 3 HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/bYUGfOo.png" group-title="", Fox Sports
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/bYUGfOo.png" group-title="", Fox Sport HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/imNhdzS.png" group-title="", Fox Sports 2
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/imNhdzS.png" group-title="", FOX Sports 2 HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://s31.postimg.org/jnhiwkp97/ESPN.png" group-title="", ESPN
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://s31.postimg.org/jnhiwkp97/ESPN.png" group-title="", ESPN HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://s31.postimg.org/jnhiwkp97/ESPN.png" group-title="", ESPN  HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/rTXcueh.png" group-title="", ESPN Brasil
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/rTXcueh.png" group-title="", ESPN Brasil HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/zR3osZs.png" group-title="", Band Sports
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/zR3osZs.png" group-title="", Band Sports HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/OpkyrD1.png" group-title="", Esporte Interativo
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/OpkyrD1.png" group-title="", Esporte Interativo HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/OpkyrD1.png" group-title="", EI Maxx
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/OpkyrD1.png" group-title="", Ei Maxx HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/OpkyrD1.png" group-title="", EI Maxx 2
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/OpkyrD1.png" group-title="", Ei Maxx 2 HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/5qo1Dyc.png" group-title="", Combate
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/5qo1Dyc.png" group-title="", Combate HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/8d0cM31.png" group-title="", Premiere Clubes
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/8d0cM31.png" group-title="", Premiere 1 HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/8d0cM31.png" group-title="", Premiere 2
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/8d0cM31.png" group-title="", Premiere 2 HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/8d0cM31.png" group-title="", Premiere 3
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/8d0cM31.png" group-title="", Premiere 3 HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/8d0cM31.png" group-title="", Premiere 4
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/8d0cM31.png" group-title="", Premiere 4 HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/8d0cM31.png" group-title="", Premiere 5
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/8d0cM31.png" group-title="", Premiere 5 HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/8d0cM31.png" group-title="", Premiere 6
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/8d0cM31.png" group-title="", Premiere 7
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/8d0cM31.png" group-title="", Premiere 8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/8d0cM31.png" group-title="", Premiere 9
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/WGoV3TD.png" group-title="", OFF
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/WGoV3TD.png" group-title="", OFF HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/JNP327k.png" group-title="", BIS
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/JNP327k.png" group-title="", BIS HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/JNP327k.png" group-title="", BIS FULLHD h265
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/yYmGNnQ.png" group-title="", Multishow
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/yYmGNnQ.png" group-title="", Multishow HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/U6Rgjqs.png" group-title="", MTV
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/ST4gtJb.png" group-title="", VH1 Megahits
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/ubp029X.png" group-title="", Music Box Brazil
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/vxy7x7E.png" group-title="", Virgin TV
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://s20.postimg.org/4i8o6fouh/DHING.jpg" group-title="", DJinG
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/6cNzaQA.png" group-title="", RIT
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/8KpJXf4.png" group-title="", Ideal TV
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/SHSp3jK.png" group-title="", Novo Tempo
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/UOMWJH6.png" group-title="", Aparecida
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/wVxLluR.png" group-title="", Cancao Nova
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/70YWjm7.png" group-title="", TV Filadelfia
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/3DDTajO.png" group-title="", Rede Vida
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/BtATkqN.png" group-title="", RBI
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/USRKuyc.png" group-title="", Tooncast
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/4KeieN7.png" group-title="", Disney Channel
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/zNNIALN.png" group-title="", Disney XD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/60JkJAz.png" group-title="", Disney Jr
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/6vVmJJf.png" group-title="", Nick Jr.
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/ZjLSLiY.png" group-title="", Nickelodeon
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/32njYPj.png" group-title="", Discovery Kids
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/S5PsDDR.png" group-title="", Cartoon Network
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/pqb2u5X.png" group-title="", TV Ra tim bum
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/mFDFUjt.png" group-title="", Gloob
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/dfRrag8.png" group-title="", Boomerang
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/UgmPkZ0.png" group-title="", Nat Geo
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/UgmPkZ0.png" group-title="", Nat Geo HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/QouD1hh.png" group-title="", NatGeo Wild
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/QouD1hh.png" group-title="", NatGeoWild HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/J1oK0xW.png" group-title="", Animal Planet
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/J1oK0xW.png" group-title="", Animal Planet HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/IroXP7H.png" group-title="", Fish TV
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/0oZXoaE.png" group-title="", History Channel
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/0oZXoaE.png" group-title="", History Channel HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/jhiD9Wc.png" group-title="", H2
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/jhiD9Wc.png" group-title="", H2 HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://s13.postimg.io/msb5b9u7r/discchannel.png" group-title="", Discovery Channel
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://s13.postimg.io/msb5b9u7r/discchannel.png" group-title="", Discovery Channel HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/dN249KE.png" group-title="", Discovery Civilization
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/VZH1x36.png" group-title="", Discovery Theater HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/4JC0BcV.png" group-title="", Discovery World HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/Dx49y4f.png" group-title="", Discovery Science
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/2vuY35C.png" group-title="", Discovery Turbo
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/2vuY35C.png" group-title="", Discovery Turbo HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/FJgwtT5.png" group-title="", Discovery Home Health
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/FJgwtT5.png" group-title="", Discovery Home Health HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/1nFjk1t.png" group-title="", Investigação Discovery
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/1nFjk1t.png" group-title="", ID - Investigação Discovery HD
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/zQM47Cf.png" group-title="", TLC
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/I99RZ9n.png" group-title="", Record News
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/ibNTVbR.png" group-title="", Band News
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://i.imgur.com/GIbRutN.png" group-title="", Globo News
