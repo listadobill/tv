@@ -1,5 +1,16 @@
 <!DOCTYPE html>
-<html lang="en"><head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>TV DO BILL - Desative Conexão Segura</title>    <link href="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.css" rel="stylesheet">    <style>        body {            font-family: Arial, sans-serif;            margin: 0;            padding: 0;            background-color: #0b3d0b; /* Cor de fundo verde */            color: #fff;
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV DO BILL - Desative Conexão Segura</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0b3d0b; /* Cor de fundo verde */
+            color: #fff;
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -67,18 +78,12 @@
             z-index: -1;
         }
 
-        #player {
-            width: 100%;
-            height: 100%;
-        }
-
         #icon-grid {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 15px;
             padding: 15px;
-            z-index: 1; /* Coloca o grid acima do player */
         }
 
         .icon-item {
@@ -123,17 +128,6 @@
                 align-items: center;
             }
         }
-
-        #fullscreen-button {
-            margin: 10px auto;
-            padding: 10px 15px;
-            background-color: #ff5722;
-            border: none;
-            border-radius: 5px;
-            color: #fff;
-            cursor: pointer;
-            font-size: 1em;
-        }
     </style>
 </head>
 <body>
@@ -158,86 +152,97 @@
         <input type="text" id="search-bar" placeholder="Buscar canais...">
 
         <div id="main">
-            <div id="player-container">
-                <div id="player"></div>
-            </div>
+            <div id="player-container"></div>
             <div id="icon-grid"></div>
         </div>
-
-        <button id="fullscreen-button">Tela Cheia</button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
     <script>
-        var player = new Clappr.Player({
-            source: 'URL_DO_SEU_VIDEO', // Substitua pela URL do seu vídeo
-            parentId: '#player',
-            autoPlay: false,
-            width: '100%',
-            height: '100%',
-            fullscreen: true,
-        });
+        document.addEventListener("DOMContentLoaded", function() {
+            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/listadecanais.m3u";
+            var iconGrid = document.getElementById("icon-grid");
+            var searchBar = document.getElementById("search-bar");
+            var playerContainer = document.getElementById('player-container');
+            var canais = [];
 
-        // Tenta reconectar automaticamente
-        player.on(Clappr.Events.PLAYER_ERROR, function() {
-            setTimeout(function() {
-                player.load(link);
-                player.play();
-            }, 5000); // Tenta reconectar após 5 segundos
-        });
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", listaURL, true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var linhas = xhr.responseText.split('\n');
 
-        var searchBar = document.getElementById("search-bar");
-        var iconGrid = document.getElementById("icon-grid");
+                    for (var i = 0; i < linhas.length; i++) {
+                        if (linhas[i].startsWith('#EXTINF')) {
+                            var nome = linhas[i].split(',')[1].trim();
+                            var link = linhas[i + 1] ? linhas[i + 1].trim() : null;
 
-        // Exemplo de canais
-        var canais = [
-            { nome: "Canal 1", logo: "URL_DO_LOGO1", link: "URL_DO_CANAL1" },
-            { nome: "Canal 2", logo: "URL_DO_LOGO2", link: "URL_DO_CANAL2" },
-            { nome: "Canal 3", logo: "URL_DO_LOGO3", link: "URL_DO_CANAL3" },
-            { nome: "Canal 4", logo: "URL_DO_LOGO4", link: "URL_DO_CANAL4" },
-            { nome: "Canal 5", logo: "URL_DO_LOGO5", link: "URL_DO_CANAL5" },
-            { nome: "Canal 6", logo: "URL_DO_LOGO6", link: "URL_DO_CANAL6" },
-            // Adicione mais canais conforme necessário
-        ];
+                            var tvgLogo = linhas[i].match(/tvg-logo="(.*?)"/);
+                            var logoURL = tvgLogo ? tvgLogo[1] : "";
 
-        function renderCanais(canaisFiltrados) {
-            iconGrid.innerHTML = ''; // Limpa a grade existente
-            canaisFiltrados.forEach(function(canal) {
-                var iconItem = document.createElement("div");
-                iconItem.className = "icon-item";
-                iconItem.innerHTML = `
-                    <img src="${canal.logo}" alt="${canal.nome}">
-                    <p>${canal.nome}</p>
-                `;
-                iconItem.onclick = function() {
-                    player.load(canal.link); // Carrega o canal no player
-                    player.play(); // Inicia a reprodução
-                };
-                iconGrid.appendChild(iconItem);
-            });
-        }
+                            if (!nome || !link) continue;
 
-        // Renderiza todos os canais inicialmente
-        renderCanais(canais);
+                            canais.push({ nome: nome, link: link, logo: logoURL });
+                        }
+                    }
 
-       // Filtro de busca
-        searchBar.addEventListener("input", function() {
-            var termoBusca = this.value.toLowerCase();
-            var canaisFiltrados = canais.filter(function(canal) {
-                return canal.nome.toLowerCase().includes(termoBusca);
-            });
-            renderCanais(canaisFiltrados); // Renderiza os canais filtrados
-        });
+                    renderCanais(canais);
+                }
+            };
+            xhr.send();
 
-        // Funcionalidade de tela cheia
-        document.getElementById("fullscreen-button").onclick = function() {
-            if (player.isFullscreen) {
-                player.exitFullscreen();
-            } else {
-                player.enterFullscreen();
+            function renderCanais(canais) {
+                iconGrid.innerHTML = '';
+                canais.forEach(canal => {
+                    var item = document.createElement("div");
+                    item.className = "icon-item";
+                    item.onclick = function() {
+                        playCanal(canal.link);
+                    };
+
+                    var logo = canal.logo ? `<img src="${canal.logo}" alt="${canal.nome}">` : `<img src="https://via.placeholder.com/80" alt="${canal.nome}">`;
+                    item.innerHTML = logo + `<p>${canal.nome}</p>`;
+                    iconGrid.appendChild(item);
+                });
             }
-        };
-    });
-</script>
+
+            function playCanal(link) {
+                // Remove qualquer player anterior
+                playerContainer.innerHTML = '';
+
+                // Cria o player Clappr
+                var player = new Clappr.Player({
+                    source: link,
+                    parentId: "#player-container",
+                    autoPlay: true,
+                    mute: false,
+                    height: "100%",
+                    width: "100%"
+                });
+
+                // Espera 100ms para abrir em tela cheia
+                setTimeout(() => {
+                    if (document.fullscreenEnabled) {
+                        player.core.mediaControl.container.requestFullscreen().catch(function(error) {
+                            console.log("Erro ao entrar em tela cheia:", error);
+                        });
+                    }
+                }, 100);
+
+                // Reconexão automática
+                player.on(Clappr.Events.PLAYER_ERROR, function() {
+                    setTimeout(() => {
+                        player.load(link);
+                    }, 5000); // Recarrega o canal após 5 segundos em caso de erro
+                });
+            }
+
+            searchBar.addEventListener('input', function() {
+                var filtro = searchBar.value.toLowerCase();
+                var canaisFiltrados = canais.filter(canal => canal.nome.toLowerCase().includes(filtro));
+                renderCanais(canaisFiltrados);
+            });
+        });
+    </script>
 </body>
 </html>
