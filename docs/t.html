@@ -206,7 +206,7 @@
             var searchBar = document.getElementById("search-bar");
             var video = videojs('video-player', {
                 controls: true,
-                autoplay: true, // Habilitar reprodução automática
+                autoplay: false, // Desativar reprodução automática
                 preload: 'auto'
             });
 
@@ -242,26 +242,31 @@
             };
             xhr.send();
 
-            function renderCanais(canaisFiltrados) {
-                iconGrid.innerHTML = ''; // Limpa o grid
-
-                canaisFiltrados.forEach(canal => {
+            function renderCanais(canais) {
+                iconGrid.innerHTML = '';
+                canais.forEach(canal => {
                     var item = document.createElement("div");
                     item.className = "icon-item";
-                    item.innerHTML = `
-                        <img src="${canal.logo || 'https://via.placeholder.com/80'}" alt="${canal.nome}">
-                        <p>${canal.nome}</p>
-                    `;
-                    item.addEventListener("click", function() {
-                        video.src({ type: "application/x-mpegURL", src: canal.link });
-                        video.play();
-                        if (video.isFullscreen()) {
-                            video.exitFullscreen();
-                        } else {
-                            video.requestFullscreen(); // Solicita abrir em tela cheia
-                        }
-                    });
+                    item.onclick = function() {
+                        playCanal(canal.link);
+                    };
+
+                    var logo = canal.logo ? `<img src="${canal.logo}" alt="${canal.nome}">` : `<img src="default-logo.png" alt="${canal.nome}">`;
+                    item.innerHTML = logo + `<p>${canal.nome}</p>`;
                     iconGrid.appendChild(item);
+                });
+            }
+
+            function playCanal(link) {
+                video.src({ type: 'application/x-mpegURL', src: link });
+                video.play();
+                video.requestFullscreen(); // Abre o vídeo em tela cheia
+                video.on('error', function() {
+                    // Tenta reconectar automaticamente
+                    setTimeout(function() {
+                        video.src({ type: 'application/x-mpegURL', src: link });
+                        video.play();
+                    }, 5000); // 5 segundos para reconectar
                 });
             }
         });
