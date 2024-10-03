@@ -1,6 +1,4 @@
 #EXTM3U
-#EXTINF:-1 tvg-logo="https://i.imgur.com/CaeoLuR.jpeg" group-title="RICO",[COLOR yellow][B]FORMIGAtv:[/B][/COLOR]Canal Ricos
-https://a.cdni.live/tvcanalricos/tvcanalricos/playlist.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="PREMIERE CLUBES HD⁺" tvg-logo="https://i.imgur.com/VlFYLLm.jpg" group-title="⚽️ PREMIERE",PREMIERE CLUBES HD⁺
 http://130.51.20.56:80/freeFormigatv/offilinetv2211/948335.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="PREMIERE CLUBES SD⁺" tvg-logo="https://i.imgur.com/VlFYLLm.jpg" group-title="⚽️ PREMIERE",PREMIERE CLUBES SD⁺
