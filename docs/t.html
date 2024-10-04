@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TV DO BILL - ALGUNS CANAIS PODEM ESTAR FORA, AGUARDE ATUALIZAÇÃO - DESATIVE CONEXÃO SEGURA</title>
-    <link href="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.css" rel="stylesheet">
+    <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -73,14 +73,21 @@
             flex: 2;
             background-color: rgba(0, 0, 0, 0.8);
             position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             overflow: hidden;
-            width: 100%;
-            height: 100%; /* Garantir que a altura do player seja 100% */
         }
 
-        #clappr-player {
-            width: 100%;
-            height: 100%; /* Garantir que a altura do player seja 100% */
+        .video-js {
+            width: 100% !important;
+            height: 100% !important;
+            background-color: #000;
+        }
+
+        .vjs-tech {
+            width: 100% !important;
+            height: 100% !important;
         }
 
         #sidebar {
@@ -114,16 +121,59 @@
             background-color: #4CAF50;
         }
 
+        #sidebar img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 50%;
+            border: 2px solid #4CAF50;
+            object-fit: cover;
+        }
+
         #sidebar p {
             margin: 0;
             font-size: 1.1em;
+        }
+
+        .video-js.vjs-fullscreen {
+            width: 100% !important;
+            height: 100% !important;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .video-js.vjs-default-skin .vjs-control-bar {
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .video-js .vjs-big-play-button {
+            background-color: rgba(76, 175, 80, 0.8);
+            border: none;
+            border-radius: 50%;
+            font-size: 2.5em;
+            line-height: 1.5;
+            transition: background-color 0.3s ease;
+        }
+
+        .video-js .vjs-big-play-button:hover {
+            background-color: rgba(76, 175, 80, 1);
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #4CAF50;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
     <div id="container">
         <div id="header">
-            DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV - Atualização, 29 de Setembro de 2024: https://bit.ly/tvdobill-iptv - EPG https://bit.ly/tvdobill-epg 
+            SERVIDOR 1 - DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV - Atualização, 29 de Setembro de 2024: https://bit.ly/tvdobill-iptv - EPG https://bit.ly/tvdobill-epg 
             <div>
                 <button id="home-button">CANAIS, SÉRIES E FILMES STREAM</button>
                 <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/'">SERVIDOR 1</button>
@@ -148,31 +198,21 @@
                 </ul>
             </div>
             <div id="player">
-                <div id="clappr-player"></div>
+                <video id="video-player" class="video-js vjs-default-skin" controls></video>
             </div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
+    <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/listas/iptv.m3u";
-            const listaCanaisElemento = document.getElementById("lista-canais");
-            const searchInput = document.getElementById("search-input");
-
-            // Inicialização do Clappr
-            const player = new Clappr.Player({
-                parentId: "#clappr-player",
-                width: "100%",
-                height: "100%",
-                autoPlay: false,
-                mute: false,
-                playback: {
-                    hlsjsConfig: {
-                        reconnectionDelay: 3000,
-                        reconnectAttempts: Infinity
-                    }
-                }
+            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/listas/iptv.m3u";
+            var listaCanaisElemento = document.getElementById("lista-canais");
+            var searchInput = document.getElementById("search-input");
+            var video = videojs('video-player', {
+                controls: true,
+                autoplay: false,
+                preload: 'auto'
             });
 
             document.getElementById('home-button').onclick = function() {
@@ -180,35 +220,77 @@
             };
 
             // Variável para armazenar os canais
-            let canais = [];
+            var canais = [];
 
-            // Carregar lista de canais
-            fetch(listaURL)
-                .then(response => response.text())
-                .then(data => {
-                    const linhas = data.split("\n");
-                    for (let i = 0; i < linhas.length; i++) {
+            // Função para abrir em tela cheia
+            function abrirTelaCheia() {
+                if (video.isFullscreen()) {
+                    video.exitFullscreen();
+                } else {
+                    video.requestFullscreen();
+                }
+            }
+
+            // Função de reconexão indefinida
+            function configurarReconexao(player) {
+                function tentarReconectar() {
+                    console.log('Tentando reconectar...');
+
+                    setTimeout(function() {
+                        player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
+                        player.play().catch(function(error) {
+                            console.log('Erro ao reproduzir, tentando novamente...', error);
+                            tentarReconectar(); // Se falhar, tenta novamente
+                        });
+                    }, 3000); // Tentar reconectar após 3 segundos
+                }
+
+                player.on('error', function() {
+                    console.log('Erro de reprodução detectado.');
+                    tentarReconectar();
+                });
+
+                player.on('ended', function() {
+                    console.log('Transmissão encerrada. Tentando reconectar...');
+                    player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
+                    player.play().catch(function(error) {
+                        console.log('Erro ao reproduzir após término, tentando novamente...', error);
+                        tentarReconectar();
+                    });
+                });
+            }
+
+            // Carregar lista de canais e configurá-los
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', listaURL, true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var linhas = xhr.responseText.split("\n");
+
+                    for (var i = 0; i < linhas.length; i++) {
                         if (linhas[i].startsWith("#EXTINF")) {
-                            const nomeCanal = linhas[i].split(',')[1].trim();
-                            const urlCanal = linhas[i + 1].trim();
+                            var nomeCanal = linhas[i].split(',')[1].trim();
+                            var urlCanal = linhas[i + 1].trim();
+
                             canais.push({ nome: nomeCanal, url: urlCanal });
                         }
                     }
+
                     carregarCanais(canais);
-                })
-                .catch(err => console.error("Erro ao carregar a lista de canais:", err));
+                }
+            };
+            xhr.send();
 
             function carregarCanais(canaisFiltrados) {
                 listaCanaisElemento.innerHTML = '';
-                canaisFiltrados.forEach(canal => {
-                    const li = document.createElement('li');
+
+                canaisFiltrados.forEach(function(canal) {
+                    var li = document.createElement('li');
                     li.innerHTML = '<p>' + canal.nome + '</p>';
                     li.onclick = function() {
-                        player.load(canal.url); // Carregar canal no player
-                        player.play(); // Iniciar o player
-                        setTimeout(() => {
-                            player.fullscreen.enter(); // Entrar em tela cheia após o atraso
-                        }, 5000); // Atraso de 5 segundos antes de entrar em tela cheia
+                        video.src({ src: canal.url, type: 'application/x-mpegURL' });
+                        video.play();
+                        abrirTelaCheia(); // Abre em tela cheia ao clicar no canal
                     };
                     listaCanaisElemento.appendChild(li);
                 });
@@ -216,10 +298,15 @@
 
             // Implementar busca
             searchInput.addEventListener('input', function() {
-                const termoBusca = searchInput.value.toLowerCase();
-                const canaisFiltrados = canais.filter(canal => canal.nome.toLowerCase().includes(termoBusca));
+                var termoBusca = searchInput.value.toLowerCase();
+                var canaisFiltrados = canais.filter(function(canal) {
+                    return canal.nome.toLowerCase().includes(termoBusca);
+                });
                 carregarCanais(canaisFiltrados);
             });
+
+            // Configurar reconexão
+            configurarReconexao(video);
         });
     </script>
 </body>
