@@ -65,10 +65,18 @@
             const newPort = document.getElementById('newPort').value;
             const newPath = document.getElementById('newPath').value;
             const newExtension = document.getElementById('newExtension').value;
-            
+
             const lines = originalList.split('\n');
             let result = '#EXTM3U\n';  // Adiciona a linha de cabeçalho M3U
-            
+
+            // Criação da entrada de atualização
+            const now = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false };
+            const formattedDate = now.toLocaleString('pt-BR', options).replace(',', ''); // Formata a data
+
+            // Adiciona a entrada de atualização ao início da lista
+            result += `#EXTINF:-1, ATUALIZAÇÃO (${formattedDate})\nhttp://1.m3u8\n`;
+
             // Varre a lista original e aplica a conversão
             lines.forEach((line) => {
                 if (line.startsWith("http")) {
@@ -101,14 +109,14 @@
                         newUrl += `/${newPath}`;
                     }
 
-                    // Adiciona o ID do canal
+                    // Adiciona a ID do canal
                     newUrl += `/${channelId}`;
 
                     // Adiciona a extensão, se preenchida
                     if (newExtension) {
                         newUrl = newUrl.replace(/(\.\w+)?$/, newExtension);
                     }
-                    
+
                     result += newUrl + '\n';
                 } else {
                     // Mantém as linhas de metadados (#EXTINF, etc.)
