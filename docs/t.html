@@ -137,7 +137,7 @@
 <body>
     <div id="container">
         <div id="header">
-            DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV - Atualização, 29 de Setembro de 2024: https://bit.ly/tvdobill-iptv - EPG https://bit.ly/tvdobill-epg 
+            LISTA DE CANAIS IPTV 2 - DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV - Atualização, 29 de Setembro de 2024: https://bit.ly/tvdobill-iptv - EPG https://bit.ly/tvdobill-epg 
             <div>
                 <button id="home-button">CANAIS, SÉRIES E FILMES STREAM</button>
                 <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/'">SERVIDOR 1</button>
@@ -224,9 +224,11 @@
                     var li = document.createElement('li');
                     li.innerHTML = '<p>' + canal.nome + '</p>';
                     li.onclick = function() {
-                        player.load({source: canal.url, mimeType: 'application/x-mpegURL'});
+                        player.configure({
+                            source: canal.url, // Fonte do canal
+                            mimeType: 'application/x-mpegURL'
+                        });
                         player.play();
-                        player.setFullscreen(true); // Abre em tela cheia ao clicar no canal
                     };
                     listaCanaisElemento.appendChild(li);
                 });
