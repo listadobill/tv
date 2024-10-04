@@ -1,700 +1,853 @@
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| 100 AUTO MOTO TV" tvg-logo="" group-title="BRASIL",|.BR.| 100 AUTO MOTO TV
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103507.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| 24 KITCHEN" tvg-logo="http://one-iptv.com/imageslogo/24Kitchen.tr.png" group-title="BRASIL",|.BR.| 24 KITCHEN
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103508.m3u8
-#EXTINF:-1 tvg-id="AandE.br" tvg-name="|.BR.| A&E FHD" tvg-logo="" group-title="BRASIL",|.BR.| A&E FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103509.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| AGRO BRAZIL" tvg-logo="" group-title="BRASIL",|.BR.| AGRO BRAZIL
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103510.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| ALFA TV" tvg-logo="" group-title="BRASIL",|.BR.| ALFA TV
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103511.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| ALL SPORTS HD" tvg-logo="" group-title="BRASIL",|.BR.| ALL SPORTS HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103512.m3u8
-#EXTINF:-1 tvg-id="Amc.br" tvg-name="|.BR.| AMC HD" tvg-logo="http://one-iptv.com/imageslogo/pu_320px-AMC_logo_2016.png" group-title="BRASIL",|.BR.| AMC HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103513.m3u8
-#EXTINF:-1 tvg-id="AnimalPlanet.br" tvg-name="|.BR.| ANIMAL PLANET FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_Animal_Planet.png" group-title="BRASIL",|.BR.| ANIMAL PLANET FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103514.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| AO VIVO HD" tvg-logo="" group-title="BRASIL",|.BR.| AO VIVO HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103515.m3u8
-#EXTINF:-1 tvg-id="Arte1.br" tvg-name="|.BR.| ARTE 1 FHD" tvg-logo="" group-title="BRASIL",|.BR.| ARTE 1 FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103516.m3u8
-#EXTINF:-1 tvg-id="AXN.br" tvg-name="|.BR.| AXN FHD" tvg-logo=" http://one-iptv.com/imageslogo/pu_axnhd.png" group-title="BRASIL",|.BR.| AXN FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103517.m3u8
-#EXTINF:-1 tvg-id="BabyTV.br" tvg-name="|.BR.| BABY TV HD" tvg-logo="http://one-iptv.com/imageslogo/pu_babytv.png" group-title="BRASIL",|.BR.| BABY TV HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103518.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| BAND 4K" tvg-logo="" group-title="BRASIL",|.BR.| BAND 4K
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103519.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| BAND CAMPINAS HD" tvg-logo="" group-title="BRASIL",|.BR.| BAND CAMPINAS HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103520.m3u8
-#EXTINF:-1 tvg-id="BandNews.br" tvg-name="|.BR.| BAND NEWS HD" tvg-logo="http://one-iptv.com/imageslogo/pu_bandnews-logomarca.png" group-title="BRASIL",|.BR.| BAND NEWS HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103521.m3u8
-#EXTINF:-1 tvg-id="BandSports.br" tvg-name="|.BR.| BAND SPORTS HD" tvg-logo="http://one-iptv.com/imageslogo/pu_logo-band-sports.png" group-title="BRASIL",|.BR.| BAND SPORTS HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103522.m3u8
-#EXTINF:-1 tvg-id="Bis.br" tvg-name="|.BR.| BIS FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_Eckl0Y2H.jpg" group-title="BRASIL",|.BR.| BIS FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103523.m3u8
-#EXTINF:-1 tvg-id="Boomerang.br" tvg-name="|.BR.| BOOMERANG HD" tvg-logo="http://one-iptv.com/imageslogo/pu_boomerang.png" group-title="BRASIL",|.BR.| BOOMERANG HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103524.m3u8
-#EXTINF:-1 tvg-id="CanalBrasil.br" tvg-name="|.BR.| CANAL BRASIL HD" tvg-logo="" group-title="BRASIL",|.BR.| CANAL BRASIL HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103525.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| CANAL Nova HD" tvg-logo="" group-title="BRASIL",|.BR.| CANAL Nova HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103526.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| CANAL RICOS HD" tvg-logo="" group-title="BRASIL",|.BR.| CANAL RICOS HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103527.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| CANAL SONY FHD" tvg-logo="" group-title="BRASIL",|.BR.| CANAL SONY FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103528.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| CANAL TV RIO" tvg-logo="" group-title="BRASIL",|.BR.| CANAL TV RIO
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103529.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| CANAL YEEAAH HD" tvg-logo="" group-title="BRASIL",|.BR.| CANAL YEEAAH HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103530.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| CARIRI TV" tvg-logo="" group-title="BRASIL",|.BR.| CARIRI TV
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103531.m3u8
-#EXTINF:-1 tvg-id="CartoonNetwork.br" tvg-name="|.BR.| CARTOON NETWORK FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_cartoonnetwork.png" group-title="BRASIL",|.BR.| CARTOON NETWORK FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103532.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| CEAK TV ESRITA SP" tvg-logo="" group-title="BRASIL",|.BR.| CEAK TV ESRITA SP
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103533.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| CINE+" tvg-logo="" group-title="BRASIL",|.BR.| CINE+
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103534.m3u8
-#EXTINF:-1 tvg-id="Cinemax.br" tvg-name="|.BR.| CINEMAX FHD" tvg-logo="http://one-iptv.com/imageslogo/Cinemax.ro.png" group-title="BRASIL",|.BR.| CINEMAX FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103535.m3u8
-#EXTINF:-1 tvg-id="CNNBrasil.br" tvg-name="|.BR.| CNN BRASIL HD" tvg-logo="http://one-iptv.com/imageslogo/pu_cnn-brasil-logo-8.png" group-title="BRASIL",|.BR.| CNN BRASIL HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103536.m3u8
-#EXTINF:-1 tvg-id="Combate.br" tvg-name="|.BR.| COMBATE FHD" tvg-logo="" group-title="BRASIL",|.BR.| COMBATE FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103537.m3u8
-#EXTINF:-1 tvg-id="ComedyCentral.br" tvg-name="|.BR.| COMEDY CENTRAL HD" tvg-logo="" group-title="BRASIL",|.BR.| COMEDY CENTRAL HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103538.m3u8
-#EXTINF:-1 tvg-id="Cultura.br" tvg-name="|.BR.| CULTURA HD" tvg-logo="" group-title="BRASIL",|.BR.| CULTURA HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103539.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| DESTINATIONS" tvg-logo="" group-title="BRASIL",|.BR.| DESTINATIONS
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103540.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| DIEAMA TV" tvg-logo="" group-title="BRASIL",|.BR.| DIEAMA TV
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103541.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| DIEMA FAMILY" tvg-logo="" group-title="BRASIL",|.BR.| DIEMA FAMILY
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103542.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| DIEMA SPORT 2 HD" tvg-logo="" group-title="BRASIL",|.BR.| DIEMA SPORT 2 HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103543.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| DIEMA SPORT HD" tvg-logo="" group-title="BRASIL",|.BR.| DIEMA SPORT HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103544.m3u8
-#EXTINF:-1 tvg-id="DiscoveryChannel.br" tvg-name="|.BR.| DISCOVERY CHANNEL FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_1_0_1_D1_66_53_CE40000_0_0_0.png" group-title="BRASIL",|.BR.| DISCOVERY CHANNEL FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103545.m3u8
-#EXTINF:-1 tvg-id="DiscoveryCivilization.br" tvg-name="|.BR.| DISCOVERY CIVILIZATION HD" tvg-logo="" group-title="BRASIL",|.BR.| DISCOVERY CIVILIZATION HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103546.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| DISCOVERY H&H FHD" tvg-logo="" group-title="BRASIL",|.BR.| DISCOVERY H&H FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103547.m3u8
-#EXTINF:-1 tvg-id="DiscoveryKids.br" tvg-name="|.BR.| DISCOVERY KIDS FHD" tvg-logo="" group-title="BRASIL",|.BR.| DISCOVERY KIDS FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103548.m3u8
-#EXTINF:-1 tvg-id="DiscoveryScience.br" tvg-name="|.BR.| DISCOVERY SCIENCE HD" tvg-logo="http://one-iptv.com/imageslogo/pu_discoveryscience.png" group-title="BRASIL",|.BR.| DISCOVERY SCIENCE HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103549.m3u8
-#EXTINF:-1 tvg-id="DiscoveryTheater.br" tvg-name="|.BR.| DISCOVERY THEATER FHD" tvg-logo="" group-title="BRASIL",|.BR.| DISCOVERY THEATER FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103550.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| DISCOVERY TLC HD" tvg-logo="" group-title="BRASIL",|.BR.| DISCOVERY TLC HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103551.m3u8
-#EXTINF:-1 tvg-id="DiscoveryTurbo.br" tvg-name="|.BR.| DISCOVERY TURBO FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_Turbo-logo-Black-top.jpg" group-title="BRASIL",|.BR.| DISCOVERY TURBO FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103552.m3u8
-#EXTINF:-1 tvg-id="DiscoveryWorld.br" tvg-name="|.BR.| DISCOVERY WORLD FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_WORLD_RGB_rev.png" group-title="BRASIL",|.BR.| DISCOVERY WORLD FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103553.m3u8
-#EXTINF:-1 tvg-id="DisneyChannel.br" tvg-name="|.BR.| DISNEY CHANNEL FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_disneychannel.png" group-title="BRASIL",|.BR.| DISNEY CHANNEL FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103554.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| DISNEY JR FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_1_0_1_746B_3F0_1_C00000_0_0_0.png" group-title="BRASIL",|.BR.| DISNEY JR FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103555.m3u8
-#EXTINF:-1 tvg-id="DisneyXD.br" tvg-name="|.BR.| DISNEY XD FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_1_0_1_238D_7DB_2_11A0000_0_0_0.png" group-title="BRASIL",|.BR.| DISNEY XD FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103556.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| DW LATIN" tvg-logo="" group-title="BRASIL",|.BR.| DW LATIN
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103557.m3u8
-#EXTINF:-1 tvg-id="EEntertainment.br" tvg-name="|.BR.| E! HD" tvg-logo="http://one-iptv.com/imageslogo/pu_vinyl-decal-sticker-1857.jpg" group-title="BRASIL",|.BR.| E! HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103558.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| ELEVEN SPORTS 5 FHD" tvg-logo="http://one-iptv.com/imageslogo/ElevenSports5.pt.png" group-title="BRASIL",|.BR.| ELEVEN SPORTS 5 FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103559.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| EPTV RIBEIRAO PRETO HD" tvg-logo="" group-title="BRASIL",|.BR.| EPTV RIBEIRAO PRETO HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103560.m3u8
-#EXTINF:-1 tvg-id="ESPN2.br" tvg-name="|.BR.| ESPN 2 HD" tvg-logo="http://one-iptv.com/imageslogo/pu_Redesigned-ESPN-app-is-coming-next-Spring-to-stream-live-games-real-time-scores-and-more.jpg" group-title="BRASIL",|.BR.| ESPN 2 HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103561.m3u8
-#EXTINF:-1 tvg-id="ESPNBrasil.br" tvg-name="|.BR.| ESPN BRASIL HD" tvg-logo="" group-title="BRASIL",|.BR.| ESPN BRASIL HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103562.m3u8
-#EXTINF:-1 tvg-id="ESPNExtra.br" tvg-name="|.BR.| ESPN EXTRA FHD" tvg-logo="" group-title="BRASIL",|.BR.| ESPN EXTRA FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103563.m3u8
-#EXTINF:-1 tvg-id="ESPN.br" tvg-name="|.BR.| ESPN FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_Redesigned-ESPN-app-is-coming-next-Spring-to-stream-live-games-real-time-scores-and-more.jpg" group-title="BRASIL",|.BR.| ESPN FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103564.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| EUROSPORT 2" tvg-logo="http://one-iptv.com/imageslogo/Eurosport2.de.png" group-title="BRASIL",|.BR.| EUROSPORT 2
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103565.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| EVROKOM" tvg-logo="" group-title="BRASIL",|.BR.| EVROKOM
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103566.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| FEN FOLK" tvg-logo="" group-title="BRASIL",|.BR.| FEN FOLK
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103567.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| FEN TV HD" tvg-logo="" group-title="BRASIL",|.BR.| FEN TV HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103568.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| FILMBOX EXTRA HD" tvg-logo="http://one-iptv.com/imageslogo/FilmBoxExtra.ro.png" group-title="BRASIL",|.BR.| FILMBOX EXTRA HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103569.m3u8
-#EXTINF:-1 tvg-id="FishTV.br" tvg-name="|.BR.| FISH TV FHD" tvg-logo="" group-title="BRASIL",|.BR.| FISH TV FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103570.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| FOLKOR" tvg-logo="" group-title="BRASIL",|.BR.| FOLKOR
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103571.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| FONTE TV GO" tvg-logo="" group-title="BRASIL",|.BR.| FONTE TV GO
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103572.m3u8
-#EXTINF:-1 tvg-id="FoodNetwork.br" tvg-name="|.BR.| FOOD NETWORK FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_492px-Food_Network_New_Logo.png" group-title="BRASIL",|.BR.| FOOD NETWORK FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103573.m3u8
-#EXTINF:-1 tvg-id="Megapix.br" tvg-name="|.BR.| FOX CRIME" tvg-logo="http://one-iptv.com/imageslogo/FoxCrime.it.png" group-title="BRASIL",|.BR.| FOX CRIME
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103574.m3u8
-#EXTINF:-1 tvg-id="Fox.br" tvg-name="|.BR.| FOX FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_fox.png" group-title="BRASIL",|.BR.| FOX FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103575.m3u8
-#EXTINF:-1 tvg-id="Foxlife.br" tvg-name="|.BR.| FOX LIFE FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_1_0_1_13AB_27_36_CE40000_0_0_0.png" group-title="BRASIL",|.BR.| FOX LIFE FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103576.m3u8
-#EXTINF:-1 tvg-id="FOXPremium1.br" tvg-name="|.BR.| FOX PREMIUM 1 HD" tvg-logo="http://one-iptv.com/imageslogo/pu_assistir-fox-premium-1-online.png" group-title="BRASIL",|.BR.| FOX PREMIUM 1 HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103577.m3u8
-#EXTINF:-1 tvg-id="FOXPremium2.br" tvg-name="|.BR.| FOX PREMIUM 2 FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_assistir-fox-premium-2-online.png" group-title="BRASIL",|.BR.| FOX PREMIUM 2 FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103578.m3u8
-#EXTINF:-1 tvg-id="FoxSports2.br" tvg-name="|.BR.| FOX SPORTS 2 FHD" tvg-logo="http://one-iptv.com/imageslogo/ZiggoLiveEventsFoxSports2.nl.png" group-title="BRASIL",|.BR.| FOX SPORTS 2 FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103579.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| FOX SPORTS 1 HD" tvg-logo="http://one-iptv.com/imageslogo/ZiggoLiveEventsFoxSports1.nl.png" group-title="BRASIL",|.BR.| FOX SPORTS 1 HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103580.m3u8
-#EXTINF:-1 tvg-id="FoxSports2.br" tvg-name="|.BR.| FOX SPORTS 2 HD" tvg-logo="http://one-iptv.com/imageslogo/ZiggoLiveEventsFoxSports2.nl.png" group-title="BRASIL",|.BR.| FOX SPORTS 2 HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103581.m3u8
-#EXTINF:-1 tvg-id="FoxSports.br" tvg-name="|.BR.| FOX SPORTS FHD" tvg-logo="" group-title="BRASIL",|.BR.| FOX SPORTS FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103582.m3u8
-#EXTINF:-1 tvg-id="FoxSports.br" tvg-name="|.BR.| FOX SPORTS HD" tvg-logo="" group-title="BRASIL",|.BR.| FOX SPORTS HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103583.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| FURG TV RS" tvg-logo="" group-title="BRASIL",|.BR.| FURG TV RS
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103584.m3u8
-#EXTINF:-1 tvg-id="Futura.br" tvg-name="|.BR.| FUTURA HD" tvg-logo="" group-title="BRASIL",|.BR.| FUTURA HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103585.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| FX FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_D1U2pQXs_400x400.jpg" group-title="BRASIL",|.BR.| FX FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103586.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GAZETA" tvg-logo="" group-title="BRASIL",|.BR.| GAZETA
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103587.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBO AMAZONAS" tvg-logo="" group-title="BRASIL",|.BR.| GLOBO AMAZONAS
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103588.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBO AMAZUNICA HD" tvg-logo="" group-title="BRASIL",|.BR.| GLOBO AMAZUNICA HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103589.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBO ANHANGUERA GOIANIA" tvg-logo="" group-title="BRASIL",|.BR.| GLOBO ANHANGUERA GOIANIA
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103590.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBO BAHIA HD" tvg-logo="" group-title="BRASIL",|.BR.| GLOBO BAHIA HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103591.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBO BRASILIA" tvg-logo="" group-title="BRASIL",|.BR.| GLOBO BRASILIA
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103592.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBO CUAIB" tvg-logo="" group-title="BRASIL",|.BR.| GLOBO CUAIB
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103593.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBO CUIABA HD" tvg-logo="" group-title="BRASIL",|.BR.| GLOBO CUIABA HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103594.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBO EPTV CAMPINAS HD" tvg-logo="" group-title="BRASIL",|.BR.| GLOBO EPTV CAMPINAS HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103595.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBO EPTV RIBEIR HD" tvg-logo="" group-title="BRASIL",|.BR.| GLOBO EPTV RIBEIR HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103596.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBO EPTV RIBEIRVEO PRETO HD" tvg-logo="" group-title="BRASIL",|.BR.| GLOBO EPTV RIBEIRVEO PRETO HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103597.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBO EPTV SAO CARLOS" tvg-logo="" group-title="BRASIL",|.BR.| GLOBO EPTV SAO CARLOS
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103598.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBO FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_1_0_1_130_26_36_CE40000_0_0_0.png" group-title="BRASIL",|.BR.| GLOBO FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103599.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBO FORTALEZA HD" tvg-logo="" group-title="BRASIL",|.BR.| GLOBO FORTALEZA HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103600.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBO GOI NIA TV" tvg-logo="" group-title="BRASIL",|.BR.| GLOBO GOI NIA TV
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103601.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBO INTERNACIONAL HD" tvg-logo="" group-title="BRASIL",|.BR.| GLOBO INTERNACIONAL HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103602.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBO MANAUS HD" tvg-logo="" group-title="BRASIL",|.BR.| GLOBO MANAUS HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103603.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBO MINAS HD" tvg-logo="" group-title="BRASIL",|.BR.| GLOBO MINAS HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103604.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBO NEWS HD" tvg-logo="http://one-iptv.com/imageslogo/pu_canal.png" group-title="BRASIL",|.BR.| GLOBO NEWS HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103605.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBO NORDESTE HD" tvg-logo="" group-title="BRASIL",|.BR.| GLOBO NORDESTE HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103606.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBO RBS PORTO ALEGRE HD" tvg-logo="" group-title="BRASIL",|.BR.| GLOBO RBS PORTO ALEGRE HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103607.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBO RBS RS TV FHD" tvg-logo="" group-title="BRASIL",|.BR.| GLOBO RBS RS TV FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103608.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBO RIBEIR HD" tvg-logo="" group-title="BRASIL",|.BR.| GLOBO RIBEIR HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103609.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBO RIO" tvg-logo="" group-title="BRASIL",|.BR.| GLOBO RIO
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103610.m3u8
-#EXTINF:-1 tvg-id="GloboRJ.br" tvg-name="|.BR.| GLOBO RJ HD" tvg-logo="" group-title="BRASIL",|.BR.| GLOBO RJ HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103611.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBO RPC PARAN HD" tvg-logo="" group-title="BRASIL",|.BR.| GLOBO RPC PARAN HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103612.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBO RPC TV HD" tvg-logo="" group-title="BRASIL",|.BR.| GLOBO RPC TV HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103613.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBO SP FHD" tvg-logo="" group-title="BRASIL",|.BR.| GLOBO SP FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103614.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBO TV BELEM" tvg-logo="" group-title="BRASIL",|.BR.| GLOBO TV BELEM
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103615.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBO TV SERGIPE HD" tvg-logo="" group-title="BRASIL",|.BR.| GLOBO TV SERGIPE HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103616.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBO TV SERGIPE HD" tvg-logo="" group-title="BRASIL",|.BR.| GLOBO TV SERGIPE HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103617.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBO TV TEM SJRP" tvg-logo="" group-title="BRASIL",|.BR.| GLOBO TV TEM SJRP
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103618.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBO TV TEM SOROCABA HD" tvg-logo="" group-title="BRASIL",|.BR.| GLOBO TV TEM SOROCABA HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103619.m3u8
-#EXTINF:-1 tvg-id="GloboTVTribuna.br" tvg-name="|.BR.| CLOBO TV TRIBUNA HD" tvg-logo="" group-title="BRASIL",|.BR.| CLOBO TV TRIBUNA HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103620.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| CLOBO TV TRIBUNA SANTOS HD" tvg-logo="" group-title="BRASIL",|.BR.| CLOBO TV TRIBUNA SANTOS HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103621.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBO TV VERDES MARES FORTALEZA HD" tvg-logo="" group-title="BRASIL",|.BR.| GLOBO TV VERDES MARES FORTALEZA HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103622.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBOSAT HD" tvg-logo="" group-title="BRASIL",|.BR.| GLOBOSAT HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103623.m3u8
-#EXTINF:-1 tvg-id="Gloob.br" tvg-name="|.BR.| GLOOB HD" tvg-logo="" group-title="BRASIL",|.BR.| GLOOB HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103624.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GLOBINHO HD" tvg-logo="" group-title="BRASIL",|.BR.| GLOBINHO HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103625.m3u8
-#EXTINF:-1 tvg-id="Gnt.br" tvg-name="|.BR.| GNT FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_GNT-logo-6A6AAA17B9-seeklogo.com.png" group-title="BRASIL",|.BR.| GNT FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103626.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GOSPEL MOVIES TELEVISION" tvg-logo="" group-title="BRASIL",|.BR.| GOSPEL MOVIES TELEVISION
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103627.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| GOSTEI GOSPEL TV" tvg-logo="" group-title="BRASIL",|.BR.| GOSTEI GOSPEL TV
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103628.m3u8
-#EXTINF:-1 tvg-id="History2.br" tvg-name="|.BR.| H2 HD" tvg-logo=" http://one-iptv.com/imageslogo/pu_osnH2.jpeg" group-title="BRASIL",|.BR.| H2 HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103629.m3u8
-#EXTINF:-1 tvg-id="HBO2.br" tvg-name="|.BR.| HBO 2 FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_HBO_2_Logo.png" group-title="BRASIL",|.BR.| HBO 2 FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103630.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| HBO 3 HD" tvg-logo="http://one-iptv.com/imageslogo/HBO3.ro.png" group-title="BRASIL",|.BR.| HBO 3 HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103631.m3u8
-#EXTINF:-1 tvg-id="HBOFamily.br" tvg-name="|.BR.| HBO FAMILY FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_logo_hbo_family_small.gif" group-title="BRASIL",|.BR.| HBO FAMILY FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103632.m3u8
-#EXTINF:-1 tvg-id="HBO.br" tvg-name="|.BR.| HBO FHD" tvg-logo="" group-title="BRASIL",|.BR.| HBO FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103633.m3u8
-#EXTINF:-1 tvg-id="HBOPlusBrasil.br" tvg-name="|.BR.| HBO PLUS FHD" tvg-logo="" group-title="BRASIL",|.BR.| HBO PLUS FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103634.m3u8
-#EXTINF:-1 tvg-id="HBOSignature.br" tvg-name="|.BR.| HBO SIGNATURE FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_HBO_Signature.png" group-title="BRASIL",|.BR.| HBO SIGNATURE FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103635.m3u8
-#EXTINF:-1 tvg-id="HGTV.br" tvg-name="|.BR.| HGTV HD" tvg-logo="http://one-iptv.com/imageslogo/pu_HGTV.png" group-title="BRASIL",|.BR.| HGTV HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103636.m3u8
-#EXTINF:-1 tvg-id="HistoryChannel.br" tvg-name="|.BR.| HISTORY CHANNEL HD" tvg-logo="http://one-iptv.com/imageslogo/pu_history-1.png" group-title="BRASIL",|.BR.| HISTORY CHANNEL HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103637.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| HOBBY TV" tvg-logo="" group-title="BRASIL",|.BR.| HOBBY TV
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103638.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| INVESTIGATION DISCOVERY HD" tvg-logo="" group-title="BRASIL",|.BR.| INVESTIGATION DISCOVERY HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103639.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| JIM JAM" tvg-logo="" group-title="BRASIL",|.BR.| JIM JAM
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103640.m3u8
-#EXTINF:-1 tvg-id="Lifetime.br" tvg-name="|.BR.| LIFE TIME FHD" tvg-logo="" group-title="BRASIL",|.BR.| LIFE TIME FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103641.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| MAGIC TV" tvg-logo="http://one-iptv.com/imageslogo/Magic.uk.png" group-title="BRASIL",|.BR.| MAGIC TV
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103642.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| MAX FHD" tvg-logo="" group-title="BRASIL",|.BR.| MAX FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103643.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| MAX PRIME FHD" tvg-logo="" group-title="BRASIL",|.BR.| MAX PRIME FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103644.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| MAX SPORT 1 HD" tvg-logo="" group-title="BRASIL",|.BR.| MAX SPORT 1 HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103645.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| MAX SPORT 2 HD" tvg-logo="" group-title="BRASIL",|.BR.| MAX SPORT 2 HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103646.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| MAX SPORT 3 HD" tvg-logo="" group-title="BRASIL",|.BR.| MAX SPORT 3 HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103647.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| MAX SPORT 4 HD" tvg-logo="" group-title="BRASIL",|.BR.| MAX SPORT 4 HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103648.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| MAX UP FHD" tvg-logo="" group-title="BRASIL",|.BR.| MAX UP FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103649.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| ME TV" tvg-logo="" group-title="BRASIL",|.BR.| ME TV
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103650.m3u8
-#EXTINF:-1 tvg-id="Megapix.br" tvg-name="|.BR.| MEGA PIX FHD" tvg-logo="" group-title="BRASIL",|.BR.| MEGA PIX FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103651.m3u8
-#EXTINF:-1 tvg-id="MTV.br" tvg-name="|.BR.| MTV HD" tvg-logo="http://one-iptv.com/imageslogo/pu_200px-MTV_Logo_2010.svg.png" group-title="BRASIL",|.BR.| MTV HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103652.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| MULTISHOW FHD" tvg-logo="" group-title="BRASIL",|.BR.| MULTISHOW FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103653.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| NAT GEO FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_1_0_1_8_32_64_DCA0000_0_0_0.png" group-title="BRASIL",|.BR.| NAT GEO FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103654.m3u8
-#EXTINF:-1 tvg-id="NatGeoKids.br" tvg-name="|.BR.| NAT GEO KIDS FHD" tvg-logo="" group-title="BRASIL",|.BR.| NAT GEO KIDS FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103655.m3u8
-#EXTINF:-1 tvg-id="NatGeoWild.br" tvg-name="|.BR.| NAT GEO WILD FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_1_0_1_515_67_53_CE40000_0_0_0.png" group-title="BRASIL",|.BR.| NAT GEO WILD FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103656.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| NICK JUNIOR FHD" tvg-logo="http://one-iptv.com/imageslogo/NickJunior.it.png" group-title="BRASIL",|.BR.| NICK JUNIOR FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103657.m3u8
-#EXTINF:-1 tvg-id="Nickelodeon.br" tvg-name="|.BR.| NICKELODEON FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_1_0_1_2C38_251C_FBFF_820000_0_0_0.png" group-title="BRASIL",|.BR.| NICKELODEON FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103658.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| NOVA SPORT HD" tvg-logo="" group-title="BRASIL",|.BR.| NOVA SPORT HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103659.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| OFF FHD" tvg-logo="" group-title="BRASIL",|.BR.| OFF FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103660.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| PARAMOUNT CHANNEL HD" tvg-logo="http://one-iptv.com/imageslogo/pu_paramountchannel.png" group-title="BRASIL",|.BR.| PARAMOUNT CHANNEL HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103661.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| PLANETA HD" tvg-logo="" group-title="BRASIL",|.BR.| PLANETA HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103662.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| PREMIERE 1 HD" tvg-logo="" group-title="BRASIL",|.BR.| PREMIERE 1 HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103663.m3u8
-#EXTINF:-1 tvg-id="Premiere2.br" tvg-name="|.BR.| PREMIERE 2 FHD" tvg-logo="" group-title="BRASIL",|.BR.| PREMIERE 2 FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103664.m3u8
-#EXTINF:-1 tvg-id="Premiere3.br" tvg-name="|.BR.| PREMIERE 3 FHD" tvg-logo="" group-title="BRASIL",|.BR.| PREMIERE 3 FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103665.m3u8
-#EXTINF:-1 tvg-id="Premiere4.br" tvg-name="|.BR.| PREMIERE 4 HD" tvg-logo="" group-title="BRASIL",|.BR.| PREMIERE 4 HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103666.m3u8
-#EXTINF:-1 tvg-id="Premiere5.br" tvg-name="|.BR.| PREMIERE 5 FHD" tvg-logo="" group-title="BRASIL",|.BR.| PREMIERE 5 FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103667.m3u8
-#EXTINF:-1 tvg-id="Premiere6.br" tvg-name="|.BR.| PREMIERE 6 FHD" tvg-logo="" group-title="BRASIL",|.BR.| PREMIERE 6 FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103668.m3u8
-#EXTINF:-1 tvg-id="Premiere7.br" tvg-name="|.BR.| PREMIERE 7" tvg-logo="" group-title="BRASIL",|.BR.| PREMIERE 7
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103669.m3u8
-#EXTINF:-1 tvg-id="Premiere8.br" tvg-name="|.BR.| PREMIERE 8" tvg-logo="" group-title="BRASIL",|.BR.| PREMIERE 8
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103670.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| PREMIERE CLUBES FHD" tvg-logo="" group-title="BRASIL",|.BR.| PREMIERE CLUBES FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103671.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| RECORD AMAZONAS" tvg-logo="" group-title="BRASIL",|.BR.| RECORD AMAZONAS
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103672.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| RECORD BA HD" tvg-logo="" group-title="BRASIL",|.BR.| RECORD BA HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103673.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| RECORD CAMPINAS HD" tvg-logo="" group-title="BRASIL",|.BR.| RECORD CAMPINAS HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103674.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| RECORD DF HD" tvg-logo="" group-title="BRASIL",|.BR.| RECORD DF HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103675.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| RECORD FHD" tvg-logo="" group-title="BRASIL",|.BR.| RECORD FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103676.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| RECORD MG HD" tvg-logo="" group-title="BRASIL",|.BR.| RECORD MG HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103677.m3u8
-#EXTINF:-1 tvg-id="RecordNews.br" tvg-name="|.BR.| RECORD NEWS HD" tvg-logo="" group-title="BRASIL",|.BR.| RECORD NEWS HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103678.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| RECORD NORDESTE HD" tvg-logo="" group-title="BRASIL",|.BR.| RECORD NORDESTE HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103679.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| RECORD RJ HD" tvg-logo="" group-title="BRASIL",|.BR.| RECORD RJ HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103680.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| RECORD RS" tvg-logo="" group-title="BRASIL",|.BR.| RECORD RS
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103681.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| RECORD SP HD" tvg-logo="" group-title="BRASIL",|.BR.| RECORD SP HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103682.m3u8
-#EXTINF:-1 tvg-id="RedeBrasil.br" tvg-name="|.BR.| REDE BRASIL" tvg-logo="" group-title="BRASIL",|.BR.| REDE BRASIL
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103683.m3u8
-#EXTINF:-1 tvg-id="RedeBrasil.br" tvg-name="|.BR.| REDE BRAZIL" tvg-logo="" group-title="BRASIL",|.BR.| REDE BRAZIL
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103684.m3u8
-#EXTINF:-1 tvg-id="Redetv.br" tvg-name="|.BR.| REDE TV HD" tvg-logo="" group-title="BRASIL",|.BR.| REDE TV HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103685.m3u8
-#EXTINF:-1 tvg-id="RedeVida.br" tvg-name="|.BR.| REDE VIDA HD" tvg-logo="" group-title="BRASIL",|.BR.| REDE VIDA HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103686.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| SBT CIDADE VERDE HD" tvg-logo="" group-title="BRASIL",|.BR.| SBT CIDADE VERDE HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103687.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| SBT GOIAS HD" tvg-logo="" group-title="BRASIL",|.BR.| SBT GOIAS HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103688.m3u8
-#EXTINF:-1 tvg-id="SBT.br" tvg-name="|.BR.| SBT HD" tvg-logo="" group-title="BRASIL",|.BR.| SBT HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103689.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| SBT NORDESTE HD" tvg-logo="" group-title="BRASIL",|.BR.| SBT NORDESTE HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103690.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| SBT SP" tvg-logo="" group-title="BRASIL",|.BR.| SBT SP
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103691.m3u8
-#EXTINF:-1 tvg-id="Sony.br" tvg-name="|.BR.| SONY HD" tvg-logo="http://one-iptv.com/imageslogo/pu_nota_spt-renueva-su-marca-a-sony-channel.jpg" group-title="BRASIL",|.BR.| SONY HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103692.m3u8
-#EXTINF:-1 tvg-id="Space.br" tvg-name="|.BR.| SPACE HD" tvg-logo="http://one-iptv.com/imageslogo/pu_canalspace.jpg" group-title="BRASIL",|.BR.| SPACE HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103693.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| SPORT PLUS" tvg-logo="" group-title="BRASIL",|.BR.| SPORT PLUS
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103694.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| SPORTV 1" tvg-logo="http://one-iptv.com/imageslogo/pu_assistir-ao-vivo-online-sportv-news-gratis.jpg" group-title="BRASIL",|.BR.| SPORTV 1
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103695.m3u8
-#EXTINF:-1 tvg-id="Sportv2.br" tvg-name="|.BR.| SPORTV 2 FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_assistir-ao-vivo-online-sportv-news-gratis.jpg" group-title="BRASIL",|.BR.| SPORTV 2 FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103696.m3u8
-#EXTINF:-1 tvg-id="SporTV3.br" tvg-name="|.BR.| SPORTV 3 FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_assistir-ao-vivo-online-sportv-news-gratis.jpg" group-title="BRASIL",|.BR.| SPORTV 3 FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103697.m3u8
-#EXTINF:-1 tvg-id="Sportv.br" tvg-name="|.BR.| SPORTV FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_assistir-ao-vivo-online-sportv-news-gratis.jpg" group-title="BRASIL",|.BR.| SPORTV FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103698.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| STUDIO UNIVERSAL FHD" tvg-logo="" group-title="BRASIL",|.BR.| STUDIO UNIVERSAL FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103699.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| SUMMER TV SP" tvg-logo="" group-title="BRASIL",|.BR.| SUMMER TV SP
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103700.m3u8
-#EXTINF:-1 tvg-id="Syfy.br" tvg-name="|.BR.| SYFY FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_UlweJi-h_400x400.jpg" group-title="BRASIL",|.BR.| SYFY FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103701.m3u8
-#EXTINF:-1 tvg-id="TBS.br" tvg-name="|.BR.| TBS FHD" tvg-logo="http://one-iptv.com/imageslogo/TBS.us.png" group-title="BRASIL",|.BR.| TBS FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103702.m3u8
-#EXTINF:-1 tvg-id="TCM.br" tvg-name="|.BR.| TCM HD" tvg-logo="http://one-iptv.com/imageslogo/pu_200px-TCM_logo.svg.png" group-title="BRASIL",|.BR.| TCM HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103703.m3u8
-#EXTINF:-1 tvg-id="TelecineAction.br" tvg-name="|.BR.| TELECINE ACTION FHD" tvg-logo="" group-title="BRASIL",|.BR.| TELECINE ACTION FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103704.m3u8
-#EXTINF:-1 tvg-id="TelecineCult.br" tvg-name="|.BR.| TELECINE CULT FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_tc_cult.png" group-title="BRASIL",|.BR.| TELECINE CULT FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103705.m3u8
-#EXTINF:-1 tvg-id="TelecineFun.br" tvg-name="|.BR.| TELECINE FUN FHD" tvg-logo="" group-title="BRASIL",|.BR.| TELECINE FUN FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103706.m3u8
-#EXTINF:-1 tvg-id="TelecinePipoca.br" tvg-name="|.BR.| TELECINE PIPOCA FHD" tvg-logo="" group-title="BRASIL",|.BR.| TELECINE PIPOCA FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103707.m3u8
-#EXTINF:-1 tvg-id="TelecinePremium.br" tvg-name="|.BR.| TELECINE PREMIUM FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_telecine-premium-hd-2aadc341.jpg" group-title="BRASIL",|.BR.| TELECINE PREMIUM FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103708.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| TELECINE TOUCH FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_tc_touch.png" group-title="BRASIL",|.BR.| TELECINE TOUCH FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103709.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| THE VOICE" tvg-logo="" group-title="BRASIL",|.BR.| THE VOICE
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103710.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| TIANKOV FOLK" tvg-logo="" group-title="BRASIL",|.BR.| TIANKOV FOLK
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103711.m3u8
-#EXTINF:-1 tvg-id="TLC.br" tvg-name="|.BR.| TLC FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_1_0_16_51D5_C96_3_EB0000_0_0_0.png" group-title="BRASIL",|.BR.| TLC FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103712.m3u8
-#EXTINF:-1 tvg-id="TNT.br" tvg-name="|.BR.| TNT FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_1_0_1_77C9_40A_1_C00000_0_0_0.png" group-title="BRASIL",|.BR.| TNT FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103713.m3u8
-#EXTINF:-1 tvg-id="TNTSeries.br" tvg-name="|.BR.| TNT SERIES FHD" tvg-logo="" group-title="BRASIL",|.BR.| TNT SERIES FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103714.m3u8
-#EXTINF:-1 tvg-id="Tooncast.br" tvg-name="|.BR.| TOONCAST HD" tvg-logo="" group-title="BRASIL",|.BR.| TOONCAST HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103715.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| TOP TV HD" tvg-logo="" group-title="BRASIL",|.BR.| TOP TV HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103716.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| TRAVEL TV" tvg-logo="" group-title="BRASIL",|.BR.| TRAVEL TV
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103717.m3u8
-#EXTINF:-1 tvg-id="TVAparecida.br" tvg-name="|.BR.| TV APARECIDA" tvg-logo="" group-title="BRASIL",|.BR.| TV APARECIDA
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103718.m3u8
-#EXTINF:-1 tvg-id="TvBrasil.br" tvg-name="|.BR.| TV BRASIL" tvg-logo="" group-title="BRASIL",|.BR.| TV BRASIL
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103719.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| TV BRASIL DF" tvg-logo="" group-title="BRASIL",|.BR.| TV BRASIL DF
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103720.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| TV CAN" tvg-logo="" group-title="BRASIL",|.BR.| TV CAN
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103721.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| TV CARUARU PE" tvg-logo="" group-title="BRASIL",|.BR.| TV CARUARU PE
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103722.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| TV CIDADE VERDE (SBT PI)" tvg-logo="" group-title="BRASIL",|.BR.| TV CIDADE VERDE (SBT PI)
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103723.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| TV C MARA JACAREI" tvg-logo="" group-title="BRASIL",|.BR.| TV C MARA JACAREI
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103724.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| TV DIARIO HD" tvg-logo="" group-title="BRASIL",|.BR.| TV DIARIO HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103725.m3u8
-#EXTINF:-1 tvg-id="TvEscola.br" tvg-name="|.BR.|D TV ESCOLA" tvg-logo="" group-title="BRASIL",|.BR.|D TV ESCOLA
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103726.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.|D TV EUROPE" tvg-logo="" group-title="BRASIL",|.BR.|D TV EUROPE
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103727.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.|D TV FAAP" tvg-logo="" group-title="BRASIL",|.BR.|D TV FAAP
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103728.m3u8
-#EXTINF:-1 tvg-id="TVGazeta.br" tvg-name="|.BR.|D TV GAZETA FHD" tvg-logo="" group-title="BRASIL",|.BR.|D TV GAZETA FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103729.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.|D TV GAZETA RN" tvg-logo="" group-title="BRASIL",|.BR.|D TV GAZETA RN
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103730.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.|D TV GLOBO" tvg-logo="http://one-iptv.com/imageslogo/pu_1_0_1_130_26_36_CE40000_0_0_0.png" group-title="BRASIL",|.BR.|D TV GLOBO
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103731.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.|D TV GLOBO PREMIUM HD" tvg-logo="" group-title="BRASIL",|.BR.|D TV GLOBO PREMIUM HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103732.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.|D TV GUARULHOS" tvg-logo="" group-title="BRASIL",|.BR.|D TV GUARULHOS
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103733.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.|D TV IGREJA MUNDIAL" tvg-logo="" group-title="BRASIL",|.BR.|D TV IGREJA MUNDIAL
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103734.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.|D TV J.SID" tvg-logo="" group-title="BRASIL",|.BR.|D TV J.SID
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103735.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.|D TV J.SID BA" tvg-logo="" group-title="BRASIL",|.BR.|D TV J.SID BA
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103736.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.|D TV MINAS" tvg-logo="" group-title="BRASIL",|.BR.|D TV MINAS
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103737.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.|D TV MUNDIAL" tvg-logo="" group-title="BRASIL",|.BR.|D TV MUNDIAL
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103738.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.|D TV NATAL RN" tvg-logo="" group-title="BRASIL",|.BR.|D TV NATAL RN
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103739.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| TV NOVO TEMPO FHD" tvg-logo="" group-title="BRASIL",|.BR.| TV NOVO TEMPO FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103740.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.|D TV PLUS" tvg-logo="" group-title="BRASIL",|.BR.|D TV PLUS
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103741.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.|D TV PO" tvg-logo="" group-title="BRASIL",|.BR.|D TV PO
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103742.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| TV RA TIM BUM HD" tvg-logo="" group-title="BRASIL",|.BR.| TV RA TIM BUM HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103743.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.|D TV RECORD" tvg-logo="http://one-iptv.com/imageslogo/pu_1_0_1_67_65_53_CE40000_0_0_0.png" group-title="BRASIL",|.BR.|D TV RECORD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103744.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| TV UP HD (FUTURA) PR" tvg-logo="" group-title="BRASIL",|.BR.| TV UP HD (FUTURA) PR
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103745.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.|D TVC BAURU" tvg-logo="" group-title="BRASIL",|.BR.|D TVC BAURU
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103746.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.|D TVCI PR" tvg-logo="" group-title="BRASIL",|.BR.|D TVCI PR
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103747.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.|D TVE BAHIA" tvg-logo="" group-title="BRASIL",|.BR.|D TVE BAHIA
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103748.m3u8
-#EXTINF:-1 tvg-id="UniversalChannel.br" tvg-name="|.BR.| UNIVERSAL CHANNEL FHD" tvg-logo="http://one-iptv.com/imageslogo/Universal.de.png" group-title="BRASIL",|.BR.| UNIVERSAL CHANNEL FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103749.m3u8
-#EXTINF:-1 tvg-id="VH1.br" tvg-name="|.BR.| VH1 FHD" tvg-logo="" group-title="BRASIL",|.BR.| VH1 FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103750.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| VIASAT EXPLORE" tvg-logo="http://one-iptv.com/imageslogo/ViasatExplore.ro.png" group-title="BRASIL",|.BR.| VIASAT EXPLORE
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103751.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.|D VIASAT NATURE & HISTORY HD" tvg-logo="" group-title="BRASIL",|.BR.|D VIASAT NATURE & HISTORY HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103752.m3u8
-#EXTINF:-1 tvg-id="Viva.br" tvg-name="|.BR.| VIVA FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_Pzn-xzQA_400x400.jpg" group-title="BRASIL",|.BR.| VIVA FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103753.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BR.| WARNER BROS FHD" tvg-logo="" group-title="BRASIL",|.BR.| WARNER BROS FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103754.m3u8
-#EXTINF:-1 tvg-id="WooHoo.br" tvg-name="|.BR.| WOHOO FHD" tvg-logo="" group-title="BRASIL",|.BR.| WOHOO FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103755.m3u8
-#EXTINF:-1 tvg-id="WooHoo.br" tvg-name="|.BR.| WOOHOO HD" tvg-logo="" group-title="BRASIL",|.BR.| WOOHOO HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103756.m3u8
-#EXTINF:-1 tvg-id="Zoomoo.br" tvg-name="|.BR.| ZOOMO FHD" tvg-logo="" group-title="BRASIL",|.BR.| ZOOMO FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103757.m3u8
-#EXTINF:-1 tvg-id="Zoomoo.br" tvg-name="|.BR.| ZOOMOO HD" tvg-logo="" group-title="BRASIL",|.BR.| ZOOMOO HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/103758.m3u8
-#EXTINF:-1 tvg-id="AandE.br" tvg-name="|.BRE.| A&E" tvg-logo="http://one-iptv.com/imageslogo/pu_1_0_1_772D_416_1_C00000_0_0_0.png" group-title="BRASIL",|.BRE.| A&E
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66919.m3u8
-#EXTINF:-1 tvg-id="Amc.br" tvg-name="|.BRE.| AMC HD" tvg-logo="http://one-iptv.com/imageslogo/pu_320px-AMC_logo_2016.png" group-title="BRASIL",|.BRE.| AMC HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66920.m3u8
-#EXTINF:-1 tvg-id="AnimalPlanet.br" tvg-name="|.BRE.| ANIMAL PLANET" tvg-logo="http://one-iptv.com/imageslogo/AnimalPlanet.nl.png" group-title="BRASIL",|.BRE.| ANIMAL PLANET
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66921.m3u8
-#EXTINF:-1 tvg-id="Arte1.br" tvg-name="|.BRE.| ARTE 1" tvg-logo="http://one-iptv.com/imageslogo/pu_arte.png" group-title="BRASIL",|.BRE.| ARTE 1
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66922.m3u8
-#EXTINF:-1 tvg-id="AXN.br" tvg-name="|.BRE.| AXN" tvg-logo="http://one-iptv.com/imageslogo/AXN.de.png" group-title="BRASIL",|.BRE.| AXN
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66923.m3u8
-#EXTINF:-1 tvg-id="BabyTV.br" tvg-name="|.BRE.| BABY HD" tvg-logo="http://one-iptv.com/imageslogo/pu_babytv.png" group-title="BRASIL",|.BRE.| BABY HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66924.m3u8
-#EXTINF:-1 tvg-id="Band.br" tvg-name="|.BRE.| BAND FHD" tvg-logo="" group-title="BRASIL",|.BRE.| BAND FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66925.m3u8
-#EXTINF:-1 tvg-id="BandNews.br" tvg-name="|.BRE.| BAND NEWS" tvg-logo="http://one-iptv.com/imageslogo/pu_bandnews-logomarca.png" group-title="BRASIL",|.BRE.| BAND NEWS
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66926.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BRE.| BAND SP HD" tvg-logo="" group-title="BRASIL",|.BRE.| BAND SP HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66927.m3u8
-#EXTINF:-1 tvg-id="BandSports.br" tvg-name="|.BRE.| BAND SPORTS" tvg-logo="http://one-iptv.com/imageslogo/pu_logo-band-sports.png" group-title="BRASIL",|.BRE.| BAND SPORTS
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66928.m3u8
-#EXTINF:-1 tvg-id="Bis.br" tvg-name="|.BRE.| BIS" tvg-logo="http://one-iptv.com/imageslogo/pu_Eckl0Y2H.jpg" group-title="BRASIL",|.BRE.| BIS
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66929.m3u8
-#EXTINF:-1 tvg-id="Boomerang.br" tvg-name="|.BRE.| BOOMERANG" tvg-logo="http://one-iptv.com/imageslogo/pu_1_0_16_1793_C82_3_EB0000_0_0_0.png" group-title="BRASIL",|.BRE.| BOOMERANG
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66930.m3u8
-#EXTINF:-1 tvg-id="CanalBrasil.br" tvg-name="|.BRE.| CANAL BRASIL" tvg-logo="" group-title="BRASIL",|.BRE.| CANAL BRASIL
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66931.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BRE.| CANAL SONY" tvg-logo="" group-title="BRASIL",|.BRE.| CANAL SONY
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66932.m3u8
-#EXTINF:-1 tvg-id="CartoonNetwork.br" tvg-name="|.BRE.| CARTOON NETWORK" tvg-logo="http://one-iptv.com/imageslogo/pu_1_0_1_162_67_53_CE40000_0_0_0.png" group-title="BRASIL",|.BRE.| CARTOON NETWORK
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66933.m3u8
-#EXTINF:-1 tvg-id="Cinemax.br" tvg-name="|.BRE.| CINEMAX" tvg-logo="http://one-iptv.com/imageslogo/Cinemax.ro.png" group-title="BRASIL",|.BRE.| CINEMAX
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66934.m3u8
-#EXTINF:-1 tvg-id="Combate.br" tvg-name="|.BRE.| COMBATE" tvg-logo="" group-title="BRASIL",|.BRE.| COMBATE
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66935.m3u8
-#EXTINF:-1 tvg-id="ComedyCentral.br" tvg-name="|.BRE.| COMEDY CENTRAL HD" tvg-logo="" group-title="BRASIL",|.BRE.| COMEDY CENTRAL HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66936.m3u8
-#EXTINF:-1 tvg-id="Curta.br" tvg-name="|.BRE.|  CURTA!" tvg-logo="" group-title="BRASIL",|.BRE.|  CURTA!
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66937.m3u8
-#EXTINF:-1 tvg-id="DiscoveryChannel.br" tvg-name="|.BRE.| DISCOVERY CHANNEL" tvg-logo="http://one-iptv.com/imageslogo/pu_1_0_1_D1_66_53_CE40000_0_0_0.png" group-title="BRASIL",|.BRE.| DISCOVERY CHANNEL
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66938.m3u8
-#EXTINF:-1 tvg-id="DiscoveryCivilization.br" tvg-name="|.BRE.| DISCOVERY CIVILIZATION" tvg-logo="" group-title="BRASIL",|.BRE.| DISCOVERY CIVILIZATION
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66939.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BRE.| DISCOVERY H&H" tvg-logo="" group-title="BRASIL",|.BRE.| DISCOVERY H&H
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66940.m3u8
-#EXTINF:-1 tvg-id="DiscoveryKids.br" tvg-name="|.BRE.| DISCOVERY KIDS" tvg-logo="" group-title="BRASIL",|.BRE.| DISCOVERY KIDS
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66941.m3u8
-#EXTINF:-1 tvg-id="DiscoveryScience.br" tvg-name="|.BRE.| DISCOVERY SCIENCE" tvg-logo="http://one-iptv.com/imageslogo/pu_discoveryscience.png" group-title="BRASIL",|.BRE.| DISCOVERY SCIENCE
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66942.m3u8
-#EXTINF:-1 tvg-id="DiscoveryTheater.br" tvg-name="|.BRE.| DISCOVERY THEATER HD" tvg-logo="" group-title="BRASIL",|.BRE.| DISCOVERY THEATER HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66943.m3u8
-#EXTINF:-1 tvg-id="DiscoveryTurbo.br" tvg-name="|.BRE.| DISCOVERY TURBO" tvg-logo="" group-title="BRASIL",|.BRE.| DISCOVERY TURBO
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66944.m3u8
-#EXTINF:-1 tvg-id="DiscoveryWorld.br" tvg-name="|.BRE.| DISCOVERY WORLD" tvg-logo="http://one-iptv.com/imageslogo/pu_discoveryworld.png" group-title="BRASIL",|.BRE.| DISCOVERY WORLD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66945.m3u8
-#EXTINF:-1 tvg-id="DisneyChannel.br" tvg-name="|.BRE.| DISNEY CHANNEL" tvg-logo="http://one-iptv.com/imageslogo/pu_1_0_1_E1_66_53_CE40000_0_0_0.png" group-title="BRASIL",|.BRE.| DISNEY CHANNEL
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66946.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BRE.| DISNEY JR" tvg-logo="http://one-iptv.com/imageslogo/DisneyJunior.pt.png" group-title="BRASIL",|.BRE.| DISNEY JR
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66947.m3u8
-#EXTINF:-1 tvg-id="DisneyXD.br" tvg-name="|.BRE.| DISNEY XD" tvg-logo="http://one-iptv.com/imageslogo/pu_200px-Disney_XD_-_2015.svg.png" group-title="BRASIL",|.BRE.| DISNEY XD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66948.m3u8
-#EXTINF:-1 tvg-id="EEntertainment.br" tvg-name="|.BRE.| E!" tvg-logo="http://one-iptv.com/imageslogo/pu_1_0_1_CC01_8FF_2_11A0000_0_0_0.png" group-title="BRASIL",|.BRE.| E!
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66949.m3u8
-#EXTINF:-1 tvg-id="ESPN2.br" tvg-name="|.BRE.| ESPN 2" tvg-logo="http://one-iptv.com/imageslogo/pu_Redesigned-ESPN-app-is-coming-next-Spring-to-stream-live-games-real-time-scores-and-more.jpg" group-title="BRASIL",|.BRE.| ESPN 2
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66950.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BRE.| ESPN BRASIL SPORT" tvg-logo="" group-title="BRASIL",|.BRE.| ESPN BRASIL SPORT
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66951.m3u8
-#EXTINF:-1 tvg-id="ESPNExtra.br" tvg-name="|.BRE.| ESPN EXTRA HD" tvg-logo="" group-title="BRASIL",|.BRE.| ESPN EXTRA HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66952.m3u8
-#EXTINF:-1 tvg-id="FishTV.br" tvg-name="|.BRE.| FISH TV" tvg-logo="" group-title="BRASIL",|.BRE.| FISH TV
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66953.m3u8
-#EXTINF:-1 tvg-id="FoodNetwork.br" tvg-name="|.BRE.| FOOD NETWORK FHD" tvg-logo="" group-title="BRASIL",|.BRE.| FOOD NETWORK FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66954.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BRE.| FOX" tvg-logo="http://one-iptv.com/imageslogo/FOX.qa.png" group-title="BRASIL",|.BRE.| FOX
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66955.m3u8
-#EXTINF:-1 tvg-id="Foxlife.br" tvg-name="|.BRE.| FOX LIFE" tvg-logo="http://one-iptv.com/imageslogo/FOXLife.us.png" group-title="BRASIL",|.BRE.| FOX LIFE
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66956.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BRE.| FOX SPORTS 1" tvg-logo="http://one-iptv.com/imageslogo/ZiggoLiveEventsFoxSports1.nl.png" group-title="BRASIL",|.BRE.| FOX SPORTS 1
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66957.m3u8
-#EXTINF:-1 tvg-id="FoxSports2.br" tvg-name="|.BRE.| FOX SPORTS 2" tvg-logo="http://one-iptv.com/imageslogo/ZiggoLiveEventsFoxSports2.nl.png" group-title="BRASIL",|.BRE.| FOX SPORTS 2
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66958.m3u8
-#EXTINF:-1 tvg-id="01TV.fr" tvg-name="|.BRE.| FUTURA" tvg-logo="" group-title="BRASIL",|.BRE.| FUTURA
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66959.m3u8
-#EXTINF:-1 tvg-id="FX.br" tvg-name="|.BRE.| FX" tvg-logo="http://one-iptv.com/imageslogo/pu_200px-FX_International_logo.svg.png" group-title="BRASIL",|.BRE.| FX
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66960.m3u8
-#EXTINF:-1 tvg-id="GloboNews.br" tvg-name="|.BRE.| GLOBO NEWS" tvg-logo="http://one-iptv.com/imageslogo/pu_canal.png" group-title="BRASIL",|.BRE.| GLOBO NEWS
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66961.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BRE.| GLOBO SP" tvg-logo="" group-title="BRASIL",|.BRE.| GLOBO SP
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66962.m3u8
-#EXTINF:-1 tvg-id="Gloob.br" tvg-name="|.BRE.| GLOOB" tvg-logo="" group-title="BRASIL",|.BRE.| GLOOB
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66963.m3u8
-#EXTINF:-1 tvg-id="Gnt.br" tvg-name="|.BRE.| GNT HD" tvg-logo="http://one-iptv.com/imageslogo/pu_GNT-logo-6A6AAA17B9-seeklogo.com.png" group-title="BRASIL",|.BRE.| GNT HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66964.m3u8
-#EXTINF:-1 tvg-id="History2.br" tvg-name="|.BRE.| H2" tvg-logo="" group-title="BRASIL",|.BRE.| H2
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66965.m3u8
-#EXTINF:-1 tvg-id="HBO.br" tvg-name="|.BRE.| HBO" tvg-logo="http://one-iptv.com/imageslogo/HBO.ro.png" group-title="BRASIL",|.BRE.| HBO
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66966.m3u8
-#EXTINF:-1 tvg-id="HBO2.br" tvg-name="|.BRE.| HBO 2" tvg-logo="http://one-iptv.com/imageslogo/HBO2.ro.png" group-title="BRASIL",|.BRE.| HBO 2
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66967.m3u8
-#EXTINF:-1 tvg-id="HBOFamily.br" tvg-name="|.BRE.| HBO FAMILY" tvg-logo="http://one-iptv.com/imageslogo/HBOFamily.us.png" group-title="BRASIL",|.BRE.| HBO FAMILY
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66968.m3u8
-#EXTINF:-1 tvg-id="HBOPlusBrasil.br" tvg-name="|.BRE.| HBO PLUS" tvg-logo="" group-title="BRASIL",|.BRE.| HBO PLUS
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66969.m3u8
-#EXTINF:-1 tvg-id="HBOSignature.br" tvg-name="|.BRE.| HBO SIGNATURE" tvg-logo="http://one-iptv.com/imageslogo/HBOSignature.us.png" group-title="BRASIL",|.BRE.| HBO SIGNATURE
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66970.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BRE.| ID DISCOVERY FHD" tvg-logo="" group-title="BRASIL",|.BRE.| ID DISCOVERY FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66971.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BRE.| INVESTIGATION DISCOVERY" tvg-logo="http://one-iptv.com/imageslogo/pu_Investigation_Discovery.png" group-title="BRASIL",|.BRE.| INVESTIGATION DISCOVERY
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66972.m3u8
-#EXTINF:-1 tvg-id="Lifetime.br" tvg-name="|.BRE.| LIFETIME HD" tvg-logo="http://one-iptv.com/imageslogo/Lifetime.uk.png" group-title="BRASIL",|.BRE.| LIFETIME HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66973.m3u8
-#EXTINF:-1 tvg-id="MaisGlobosat.br" tvg-name="|.BRE.| MAIS GLOBO SAT" tvg-logo="" group-title="BRASIL",|.BRE.| MAIS GLOBO SAT
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66974.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BRE.| MAX" tvg-logo="" group-title="BRASIL",|.BRE.| MAX
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66975.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BRE.| MAX PRIME" tvg-logo="" group-title="BRASIL",|.BRE.| MAX PRIME
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66976.m3u8
-#EXTINF:-1 tvg-id="maxUP.br" tvg-name="|.BRE.| MAX UP" tvg-logo="" group-title="BRASIL",|.BRE.| MAX UP
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66977.m3u8
-#EXTINF:-1 tvg-id="Megapix.br" tvg-name="|.BRE.| MEGAPIX" tvg-logo="" group-title="BRASIL",|.BRE.| MEGAPIX
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66978.m3u8
-#EXTINF:-1 tvg-id="Multishow.br" tvg-name="|.BRE.| MULTISHOW FHD" tvg-logo="" group-title="BRASIL",|.BRE.| MULTISHOW FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66979.m3u8
-#EXTINF:-1 tvg-id="MusicBoxBrasil.br" tvg-name="|.BRE.| MUSIC BOX BRAZIL" tvg-logo="" group-title="BRASIL",|.BRE.| MUSIC BOX BRAZIL
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66980.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BRE.| NATGEO KIDS FHD" tvg-logo="" group-title="BRASIL",|.BRE.| NATGEO KIDS FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66981.m3u8
-#EXTINF:-1 tvg-id="NatGeoWild.br" tvg-name="|.BRE.| NATGEO WILD FHD" tvg-logo="" group-title="BRASIL",|.BRE.| NATGEO WILD FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66982.m3u8
-#EXTINF:-1 tvg-id="NationalGeographic.br" tvg-name="|.BRE.| NATIONAL GEOGRAPHIC FHD" tvg-logo="" group-title="BRASIL",|.BRE.| NATIONAL GEOGRAPHIC FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66983.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BRE.| NICK JR" tvg-logo="http://one-iptv.com/imageslogo/pu_nickjr-logo-200x200.png" group-title="BRASIL",|.BRE.| NICK JR
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66984.m3u8
-#EXTINF:-1 tvg-id="Nickelodeon.br" tvg-name="|.BRE.| NICKELODEON" tvg-logo="http://one-iptv.com/imageslogo/pu_200px-Nickelodeon_2009_logo.svg.png" group-title="BRASIL",|.BRE.| NICKELODEON
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66985.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BRE.| OFF" tvg-logo="" group-title="BRASIL",|.BRE.| OFF
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66986.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BRE.| PFC" tvg-logo="http://one-iptv.com/imageslogo/PFC.pt.png" group-title="BRASIL",|.BRE.| PFC
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66987.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BRE.| PREMIERE 1 HD" tvg-logo="" group-title="BRASIL",|.BRE.| PREMIERE 1 HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66988.m3u8
-#EXTINF:-1 tvg-id="PremiereClubes.br" tvg-name="|.BRE.| PREMIERE CLUBES HD" tvg-logo="" group-title="BRASIL",|.BRE.| PREMIERE CLUBES HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66989.m3u8
-#EXTINF:-1 tvg-id="RecordNews.br" tvg-name="|.BRE.| RECORD NEWS" tvg-logo="" group-title="BRASIL",|.BRE.| RECORD NEWS
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66990.m3u8
-#EXTINF:-1 tvg-id="RedeVida.br" tvg-name="|.BRE.| REDE VIDA HD" tvg-logo="" group-title="BRASIL",|.BRE.| REDE VIDA HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66991.m3u8
-#EXTINF:-1 tvg-id="SBT.br" tvg-name="|.BRE.| SBT FHD" tvg-logo="" group-title="BRASIL",|.BRE.| SBT FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66992.m3u8
-#EXTINF:-1 tvg-id="Space.br" tvg-name="|.BRE.| SPACE FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_canalspace.jpg" group-title="BRASIL",|.BRE.| SPACE FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66993.m3u8
-#EXTINF:-1 tvg-id="Sportv2.br" tvg-name="|.BRE.| SPORTV 2" tvg-logo="http://one-iptv.com/imageslogo/pu_assistir-ao-vivo-online-sportv-news-gratis.jpg" group-title="BRASIL",|.BRE.| SPORTV 2
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66994.m3u8
-#EXTINF:-1 tvg-id="SporTV3.br" tvg-name="|.BRE.| SPORTV 3" tvg-logo="" group-title="BRASIL",|.BRE.| SPORTV 3
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66995.m3u8
-#EXTINF:-1 tvg-id="Sportv.br" tvg-name="|.BRE.| SPORTV FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_assistir-ao-vivo-online-sportv-news-gratis.jpg" group-title="BRASIL",|.BRE.| SPORTV FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66996.m3u8
-#EXTINF:-1 tvg-id="Studiouniversal.br" tvg-name="|.BRE.| STUDIO UNIVERSAL FHD" tvg-logo="" group-title="BRASIL",|.BRE.| STUDIO UNIVERSAL FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66997.m3u8
-#EXTINF:-1 tvg-id="Syfy.br" tvg-name="|.BRE.| SYFY" tvg-logo="http://one-iptv.com/imageslogo/pu_UlweJi-h_400x400.jpg" group-title="BRASIL",|.BRE.| SYFY
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66998.m3u8
-#EXTINF:-1 tvg-id="TCM.br" tvg-name="|.BRE.| TCM" tvg-logo="http://one-iptv.com/imageslogo/pu_200px-TCM_logo.svg.png" group-title="BRASIL",|.BRE.| TCM
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/66999.m3u8
-#EXTINF:-1 tvg-id="TelecineAction.br" tvg-name="|.BRE.| TELECINE ACTION" tvg-logo="" group-title="BRASIL",|.BRE.| TELECINE ACTION
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/67000.m3u8
-#EXTINF:-1 tvg-id="TelecineCult.br" tvg-name="|.BRE.| TELECINE CULT" tvg-logo="http://one-iptv.com/imageslogo/pu_tc_cult.png" group-title="BRASIL",|.BRE.| TELECINE CULT
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/67001.m3u8
-#EXTINF:-1 tvg-id="TelecineFun.br" tvg-name="|.BRE.| TELECINE FUN" tvg-logo="" group-title="BRASIL",|.BRE.| TELECINE FUN
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/67002.m3u8
-#EXTINF:-1 tvg-id="TelecinePipoca.br" tvg-name="|.BRE.| TELECINE PIPOCA" tvg-logo="" group-title="BRASIL",|.BRE.| TELECINE PIPOCA
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/67003.m3u8
-#EXTINF:-1 tvg-id="TelecinePremium.br" tvg-name="|.BRE.| TELECINE PREMIUM" tvg-logo="http://one-iptv.com/imageslogo/pu_telecine-premium-hd-2aadc341.jpg" group-title="BRASIL",|.BRE.| TELECINE PREMIUM
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/67004.m3u8
-#EXTINF:-1 tvg-id="TelecineTouch.br" tvg-name="|.BRE.| TELECINE TOUCH" tvg-logo="" group-title="BRASIL",|.BRE.| TELECINE TOUCH
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/67005.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BRE.| THE HISTORY CHANNEL" tvg-logo="" group-title="BRASIL",|.BRE.| THE HISTORY CHANNEL
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/67006.m3u8
-#EXTINF:-1 tvg-id="TNT.br" tvg-name="|.BRE.| TNT FHD" tvg-logo="http://one-iptv.com/imageslogo/pu_1_0_1_77C9_40A_1_C00000_0_0_0.png" group-title="BRASIL",|.BRE.| TNT FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/67007.m3u8
-#EXTINF:-1 tvg-id="TNTSeries.br" tvg-name="|.BRE.| TNT SERIES FHD" tvg-logo="" group-title="BRASIL",|.BRE.| TNT SERIES FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/67008.m3u8
-#EXTINF:-1 tvg-id="Tooncast.br" tvg-name="|.BRE.| TOONCAST" tvg-logo="" group-title="BRASIL",|.BRE.| TOONCAST
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/67009.m3u8
-#EXTINF:-1 tvg-id="TvBrasil.br" tvg-name="|.BRE.| TV BRASIL" tvg-logo="" group-title="BRASIL",|.BRE.| TV BRASIL
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/67010.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BRE.| TV5 MONDE BRESIL" tvg-logo="" group-title="BRASIL",|.BRE.| TV5 MONDE BRESIL
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/67011.m3u8
-#EXTINF:-1 tvg-id="Viva.br" tvg-name="|.BRE.| VIVA" tvg-logo="http://one-iptv.com/imageslogo/pu_Pzn-xzQA_400x400.jpg" group-title="BRASIL",|.BRE.| VIVA
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/67012.m3u8
-#EXTINF:-1 tvg-id="WarnerChannel.br" tvg-name="|.BRE.| WARNER CHANNEL FHD" tvg-logo="" group-title="BRASIL",|.BRE.| WARNER CHANNEL FHD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/67013.m3u8
-#EXTINF:-1 tvg-id="WooHoo.br" tvg-name="|.BRE.| WOOHOO BRASIL" tvg-logo="" group-title="BRASIL",|.BRE.| WOOHOO BRASIL
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/67014.m3u8
-#EXTINF:-1 tvg-id="Zoomoo.br" tvg-name="|.BRE.| ZOOMOO HD" tvg-logo="" group-title="BRASIL",|.BRE.| ZOOMOO HD
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/67015.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="|.BRE.| WARNER BROSS TV HD ++" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvJzrNjKMA57hwF5x610R4vDwhKZab6_J2csGw1YuX3iOwhqWb03e9_w" group-title="BRASIL",|.BRE.| WARNER BROSS TV HD ++
-http://x.v-iptv.com:25443/live/BarryHDD/A12345678D/30710.m3u8
+#EXTM3U
+#EXTINF:-1 tvg-id="" tvg-name="[BR] A&E FHD" tvg-logo="" group-title="BRAZIL",[BR] A&E FHD
+http://supersonictv.live:8080/live/945213/876115/84935.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Animal Planet FHD" tvg-logo="" group-title="BRAZIL",[BR] Animal Planet FHD
+http://supersonictv.live:8080/live/945213/876115/84936.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Arte 1 FHD" tvg-logo="" group-title="BRAZIL",[BR] Arte 1 FHD
+http://supersonictv.live:8080/live/945213/876115/84937.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] AXN FHD" tvg-logo="" group-title="BRAZIL",[BR] AXN FHD
+http://supersonictv.live:8080/live/945213/876115/84938.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Baby FHD" tvg-logo="" group-title="BRAZIL",[BR] Baby FHD
+http://supersonictv.live:8080/live/945213/876115/84939.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Band FHD" tvg-logo="" group-title="BRAZIL",[BR] Band FHD
+http://supersonictv.live:8080/live/945213/876115/84940.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Band News FHD" tvg-logo="" group-title="BRAZIL",[BR] Band News FHD
+http://supersonictv.live:8080/live/945213/876115/84941.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Band Sports FHD" tvg-logo="" group-title="BRAZIL",[BR] Band Sports FHD
+http://supersonictv.live:8080/live/945213/876115/84942.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] BIS FHD" tvg-logo="" group-title="BRAZIL",[BR] BIS FHD
+http://supersonictv.live:8080/live/945213/876115/84943.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Boomerang FHD" tvg-logo="" group-title="BRAZIL",[BR] Boomerang FHD
+http://supersonictv.live:8080/live/945213/876115/84944.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Canal Brasil FHD" tvg-logo="" group-title="BRAZIL",[BR] Canal Brasil FHD
+http://supersonictv.live:8080/live/945213/876115/84945.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Cartoon Network FHD" tvg-logo="" group-title="BRAZIL",[BR] Cartoon Network FHD
+http://supersonictv.live:8080/live/945213/876115/84946.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Chef TV FHD" tvg-logo="" group-title="BRAZIL",[BR] Chef TV FHD
+http://supersonictv.live:8080/live/945213/876115/84947.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Cinemax FHD" tvg-logo="" group-title="BRAZIL",[BR] Cinemax FHD
+http://supersonictv.live:8080/live/945213/876115/84948.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Cinemax HD" tvg-logo="" group-title="BRAZIL",[BR] Cinemax HD
+http://supersonictv.live:8080/live/945213/876115/84949.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] CNN Brasil FHD" tvg-logo="" group-title="BRAZIL",[BR] CNN Brasil FHD
+http://supersonictv.live:8080/live/945213/876115/84950.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] CNN Espanhol HD" tvg-logo="" group-title="BRAZIL",[BR] CNN Espanhol HD
+http://supersonictv.live:8080/live/945213/876115/84951.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] CNN Internacional FHD" tvg-logo="" group-title="BRAZIL",[BR] CNN Internacional FHD
+http://supersonictv.live:8080/live/945213/876115/84952.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Combate FHD" tvg-logo="" group-title="BRAZIL",[BR] Combate FHD
+http://supersonictv.live:8080/live/945213/876115/84953.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Comedy Central FHD" tvg-logo="" group-title="BRAZIL",[BR] Comedy Central FHD
+http://supersonictv.live:8080/live/945213/876115/84954.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] COPA CATARINENSE *" tvg-logo="" group-title="BRAZIL",[BR] COPA CATARINENSE *
+http://supersonictv.live:8080/live/945213/876115/84955.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] COPA CATARINENSE 2 *" tvg-logo="" group-title="BRAZIL",[BR] COPA CATARINENSE 2 *
+http://supersonictv.live:8080/live/945213/876115/84956.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] COPA CATARINENSE 2 HD *" tvg-logo="" group-title="BRAZIL",[BR] COPA CATARINENSE 2 HD *
+http://supersonictv.live:8080/live/945213/876115/84957.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] COPA CATARINENSE HD *" tvg-logo="" group-title="BRAZIL",[BR] COPA CATARINENSE HD *
+http://supersonictv.live:8080/live/945213/876115/84958.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] COPA DO NORDESTE *" tvg-logo="" group-title="BRAZIL",[BR] COPA DO NORDESTE *
+http://supersonictv.live:8080/live/945213/876115/84959.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] COPA DO NORDESTE 2 *" tvg-logo="" group-title="BRAZIL",[BR] COPA DO NORDESTE 2 *
+http://supersonictv.live:8080/live/945213/876115/84960.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] COPA DO NORDESTE 2 HD *" tvg-logo="" group-title="BRAZIL",[BR] COPA DO NORDESTE 2 HD *
+http://supersonictv.live:8080/live/945213/876115/84961.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] COPA DO NORDESTE HD *" tvg-logo="" group-title="BRAZIL",[BR] COPA DO NORDESTE HD *
+http://supersonictv.live:8080/live/945213/876115/84962.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Curta! FHD" tvg-logo="" group-title="BRAZIL",[BR] Curta! FHD
+http://supersonictv.live:8080/live/945213/876115/84963.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Discovery Channel FHD" tvg-logo="" group-title="BRAZIL",[BR] Discovery Channel FHD
+http://supersonictv.live:8080/live/945213/876115/84966.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Discovery Home & Health FHD" tvg-logo="" group-title="BRAZIL",[BR] Discovery Home & Health FHD
+http://supersonictv.live:8080/live/945213/876115/84967.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Discovery ID FHD" tvg-logo="" group-title="BRAZIL",[BR] Discovery ID FHD
+http://supersonictv.live:8080/live/945213/876115/84968.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Discovery Kids FHD" tvg-logo="" group-title="BRAZIL",[BR] Discovery Kids FHD
+http://supersonictv.live:8080/live/945213/876115/84969.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Discovery Science FHD" tvg-logo="" group-title="BRAZIL",[BR] Discovery Science FHD
+http://supersonictv.live:8080/live/945213/876115/84970.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Discovery Theather FHD" tvg-logo="" group-title="BRAZIL",[BR] Discovery Theather FHD
+http://supersonictv.live:8080/live/945213/876115/84971.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Discovery Turbo FHD" tvg-logo="" group-title="BRAZIL",[BR] Discovery Turbo FHD
+http://supersonictv.live:8080/live/945213/876115/84972.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Discovery World FHD" tvg-logo="" group-title="BRAZIL",[BR] Discovery World FHD
+http://supersonictv.live:8080/live/945213/876115/84973.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Disney Channel FHD" tvg-logo="" group-title="BRAZIL",[BR] Disney Channel FHD
+http://supersonictv.live:8080/live/945213/876115/84974.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Disney JR FHD" tvg-logo="" group-title="BRAZIL",[BR] Disney JR FHD
+http://supersonictv.live:8080/live/945213/876115/84975.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Disney XD FHD" tvg-logo="" group-title="BRAZIL",[BR] Disney XD FHD
+http://supersonictv.live:8080/live/945213/876115/84976.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] E! FHD" tvg-logo="" group-title="BRAZIL",[BR] E! FHD
+http://supersonictv.live:8080/live/945213/876115/84977.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] ESPN 2 FHD" tvg-logo="" group-title="BRAZIL",[BR] ESPN 2 FHD
+http://supersonictv.live:8080/live/945213/876115/84978.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] ESPN Brasil FHD" tvg-logo="" group-title="BRAZIL",[BR] ESPN Brasil FHD
+http://supersonictv.live:8080/live/945213/876115/84979.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] ESPN Extra FHD" tvg-logo="" group-title="BRAZIL",[BR] ESPN Extra FHD
+http://supersonictv.live:8080/live/945213/876115/84980.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] ESPN FHD" tvg-logo="" group-title="BRAZIL",[BR] ESPN FHD
+http://supersonictv.live:8080/live/945213/876115/84981.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] ESPORTE INTERATIVO *" tvg-logo="" group-title="BRAZIL",[BR] ESPORTE INTERATIVO *
+http://supersonictv.live:8080/live/945213/876115/84982.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Fish TV FHD" tvg-logo="" group-title="BRAZIL",[BR] Fish TV FHD
+http://supersonictv.live:8080/live/945213/876115/84983.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] FlaTV TESTE" tvg-logo="" group-title="BRAZIL",[BR] FlaTV TESTE
+http://supersonictv.live:8080/live/945213/876115/84984.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Food Network FHD" tvg-logo="" group-title="BRAZIL",[BR] Food Network FHD
+http://supersonictv.live:8080/live/945213/876115/84985.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] FOX FHD" tvg-logo="" group-title="BRAZIL",[BR] FOX FHD
+http://supersonictv.live:8080/live/945213/876115/84986.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Fox Life FHD" tvg-logo="" group-title="BRAZIL",[BR] Fox Life FHD
+http://supersonictv.live:8080/live/945213/876115/84987.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Fox News FHD" tvg-logo="" group-title="BRAZIL",[BR] Fox News FHD
+http://supersonictv.live:8080/live/945213/876115/84988.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Fox Premium 1 FHD" tvg-logo="" group-title="BRAZIL",[BR] Fox Premium 1 FHD
+http://supersonictv.live:8080/live/945213/876115/84989.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Fox Premium 2 FHD" tvg-logo="" group-title="BRAZIL",[BR] Fox Premium 2 FHD
+http://supersonictv.live:8080/live/945213/876115/84990.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Fox Sport HD" tvg-logo="" group-title="BRAZIL",[BR] Fox Sport HD
+http://supersonictv.live:8080/live/945213/876115/84991.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Fox Sports 2 FHD" tvg-logo="" group-title="BRAZIL",[BR] Fox Sports 2 FHD
+http://supersonictv.live:8080/live/945213/876115/84992.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Fox Sports FHD" tvg-logo="" group-title="BRAZIL",[BR] Fox Sports FHD
+http://supersonictv.live:8080/live/945213/876115/84993.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Fox Sports SD" tvg-logo="" group-title="BRAZIL",[BR] Fox Sports SD
+http://supersonictv.live:8080/live/945213/876115/84994.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] FX FHD" tvg-logo="" group-title="BRAZIL",[BR] FX FHD
+http://supersonictv.live:8080/live/945213/876115/84995.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo TV Brasilia HD" tvg-logo="" group-title="BRAZIL",[BR] Globo TV Brasilia HD
+http://supersonictv.live:8080/live/945213/876115/84996.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo Centro America FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo Centro America FHD
+http://supersonictv.live:8080/live/945213/876115/84997.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo EPTV Campinas FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo EPTV Campinas FHD
+http://supersonictv.live:8080/live/945213/876115/84998.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] GLOBO EPTV CAMPINAS SD#" tvg-logo="" group-title="BRAZIL",[BR] GLOBO EPTV CAMPINAS SD#
+http://supersonictv.live:8080/live/945213/876115/84999.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] GLOBO EPTV RIBEIRÃƒO PRETO SD#" tvg-logo="" group-title="BRAZIL",[BR] GLOBO EPTV RIBEIRÃƒO PRETO SD#
+http://supersonictv.live:8080/live/945213/876115/85000.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo EPTV Sul de Minas FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo EPTV Sul de Minas FHD
+http://supersonictv.live:8080/live/945213/876115/85001.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] GLOBO INTER TV CABUGI SD#" tvg-logo="" group-title="BRAZIL",[BR] GLOBO INTER TV CABUGI SD#
+http://supersonictv.live:8080/live/945213/876115/85002.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo Inter TV Grande Minas FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo Inter TV Grande Minas FHD
+http://supersonictv.live:8080/live/945213/876115/85003.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo Minas FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo Minas FHD
+http://supersonictv.live:8080/live/945213/876115/85004.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo News FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo News FHD
+http://supersonictv.live:8080/live/945213/876115/85005.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo Nordeste FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo Nordeste FHD
+http://supersonictv.live:8080/live/945213/876115/85006.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo NSC Florianopolis FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo NSC Florianopolis FHD
+http://supersonictv.live:8080/live/945213/876115/85007.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] GLOBO RBS PORTO ALEGRE SD#" tvg-logo="" group-title="BRAZIL",[BR] GLOBO RBS PORTO ALEGRE SD#
+http://supersonictv.live:8080/live/945213/876115/85008.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] GLOBO RBS TV POA FHD" tvg-logo="" group-title="BRAZIL",[BR] GLOBO RBS TV POA FHD
+http://supersonictv.live:8080/live/945213/876115/85009.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] GLOBO REDE AMAZÃ”NICA MANAUS SD#" tvg-logo="" group-title="BRAZIL",[BR] GLOBO REDE AMAZÃ”NICA MANAUS SD#
+http://supersonictv.live:8080/live/945213/876115/85010.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] GLOBO RIO HD#" tvg-logo="" group-title="BRAZIL",[BR] GLOBO RIO HD#
+http://supersonictv.live:8080/live/945213/876115/85011.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo RJ FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo RJ FHD
+http://supersonictv.live:8080/live/945213/876115/85012.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo RPC Curitiba FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo RPC Curitiba FHD
+http://supersonictv.live:8080/live/945213/876115/85013.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo RPC Foz do Iguaçu FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo RPC Foz do Iguaçu FHD
+http://supersonictv.live:8080/live/945213/876115/85014.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] GLOBO SP FHD" tvg-logo="" group-title="BRAZIL",[BR] GLOBO SP FHD
+http://supersonictv.live:8080/live/945213/876115/85015.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo TV Anhanguera  SD" tvg-logo="" group-title="BRAZIL",[BR] Globo TV Anhanguera  SD
+http://supersonictv.live:8080/live/945213/876115/85016.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] GLOBO TV ANHANGUERA GOIÃ‚NIA SD#" tvg-logo="" group-title="BRAZIL",[BR] GLOBO TV ANHANGUERA GOIÃ‚NIA SD#
+http://supersonictv.live:8080/live/945213/876115/85017.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo TV Bahia FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo TV Bahia FHD
+http://supersonictv.live:8080/live/945213/876115/85018.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo TV Belem FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo TV Belem FHD
+http://supersonictv.live:8080/live/945213/876115/85019.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo TV Brasilia FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo TV Brasilia FHD
+http://supersonictv.live:8080/live/945213/876115/85020.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] GLOBO TV LIBERAL BELEM SD#" tvg-logo="" group-title="BRAZIL",[BR] GLOBO TV LIBERAL BELEM SD#
+http://supersonictv.live:8080/live/945213/876115/85021.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo TV Mirante FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo TV Mirante FHD
+http://supersonictv.live:8080/live/945213/876115/85022.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo TV Morena FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo TV Morena FHD
+http://supersonictv.live:8080/live/945213/876115/85023.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] GLOBO TV TEM BAURU SD#" tvg-logo="" group-title="BRAZIL",[BR] GLOBO TV TEM BAURU SD#
+http://supersonictv.live:8080/live/945213/876115/85024.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] GLOBO TV TEM SOROCABA SD#" tvg-logo="" group-title="BRAZIL",[BR] GLOBO TV TEM SOROCABA SD#
+http://supersonictv.live:8080/live/945213/876115/85025.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] GLOBO TV TRIBUNA SANTOS SD#" tvg-logo="" group-title="BRAZIL",[BR] GLOBO TV TRIBUNA SANTOS SD#
+http://supersonictv.live:8080/live/945213/876115/85026.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] GLOBO TV VANGUARDA SÃƒO JOSÃ‰ DOS CAMPOS SD#" tvg-logo="" group-title="BRAZIL",[BR] GLOBO TV VANGUARDA SÃƒO JOSÃ‰ DOS CAMPOS SD#
+http://supersonictv.live:8080/live/945213/876115/85027.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo TV Verdes Mares FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo TV Verdes Mares FHD
+http://supersonictv.live:8080/live/945213/876115/85028.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] GloboTV Anhanguera FHD" tvg-logo="" group-title="BRAZIL",[BR] GloboTV Anhanguera FHD
+http://supersonictv.live:8080/live/945213/876115/85029.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Gloob FHD" tvg-logo="" group-title="BRAZIL",[BR] Gloob FHD
+http://supersonictv.live:8080/live/945213/876115/85030.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Gloobinho FHD" tvg-logo="" group-title="BRAZIL",[BR] Gloobinho FHD
+http://supersonictv.live:8080/live/945213/876115/85031.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] GNT FHD" tvg-logo="" group-title="BRAZIL",[BR] GNT FHD
+http://supersonictv.live:8080/live/945213/876115/85032.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] H2 FHD" tvg-logo="" group-title="BRAZIL",[BR] H2 FHD
+http://supersonictv.live:8080/live/945213/876115/85033.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] HBO 2 FHD" tvg-logo="" group-title="BRAZIL",[BR] HBO 2 FHD
+http://supersonictv.live:8080/live/945213/876115/85034.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] HBO Family FHD" tvg-logo="" group-title="BRAZIL",[BR] HBO Family FHD
+http://supersonictv.live:8080/live/945213/876115/85035.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] HBO FHD" tvg-logo="" group-title="BRAZIL",[BR] HBO FHD
+http://supersonictv.live:8080/live/945213/876115/85036.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] HBO Mundi FHD" tvg-logo="" group-title="BRAZIL",[BR] HBO Mundi FHD
+http://supersonictv.live:8080/live/945213/876115/85037.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] HBO Plus FHD" tvg-logo="" group-title="BRAZIL",[BR] HBO Plus FHD
+http://supersonictv.live:8080/live/945213/876115/85038.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] HBO Pop FHD" tvg-logo="" group-title="BRAZIL",[BR] HBO Pop FHD
+http://supersonictv.live:8080/live/945213/876115/85039.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] HBO Signature FHD" tvg-logo="" group-title="BRAZIL",[BR] HBO Signature FHD
+http://supersonictv.live:8080/live/945213/876115/85040.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] HBO Xtreme FHD" tvg-logo="" group-title="BRAZIL",[BR] HBO Xtreme FHD
+http://supersonictv.live:8080/live/945213/876115/85041.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] HGTV FHD" tvg-logo="" group-title="BRAZIL",[BR] HGTV FHD
+http://supersonictv.live:8080/live/945213/876115/85042.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] i SAT FHD" tvg-logo="" group-title="BRAZIL",[BR] i SAT FHD
+http://supersonictv.live:8080/live/945213/876115/85043.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Inter TV dos Vales FHD" tvg-logo="" group-title="BRAZIL",[BR] Inter TV dos Vales FHD
+http://supersonictv.live:8080/live/945213/876115/85044.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Lifetime FHD" tvg-logo="" group-title="BRAZIL",[BR] Lifetime FHD
+http://supersonictv.live:8080/live/945213/876115/85045.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Mais Globosat FHD" tvg-logo="" group-title="BRAZIL",[BR] Mais Globosat FHD
+http://supersonictv.live:8080/live/945213/876115/85046.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Megapix FHD" tvg-logo="" group-title="BRAZIL",[BR] Megapix FHD
+http://supersonictv.live:8080/live/945213/876115/85047.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] MTV FHD" tvg-logo="" group-title="BRAZIL",[BR] MTV FHD
+http://supersonictv.live:8080/live/945213/876115/85048.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] MTV HD" tvg-logo="" group-title="BRAZIL",[BR] MTV HD
+http://supersonictv.live:8080/live/945213/876115/85049.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Multishow FHD" tvg-logo="" group-title="BRAZIL",[BR] Multishow FHD
+http://supersonictv.live:8080/live/945213/876115/85050.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Music Box Brasil FHD" tvg-logo="" group-title="BRAZIL",[BR] Music Box Brasil FHD
+http://supersonictv.live:8080/live/945213/876115/85051.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Natgeo FHD" tvg-logo="" group-title="BRAZIL",[BR] Natgeo FHD
+http://supersonictv.live:8080/live/945213/876115/85052.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Natgeo Kids FHD" tvg-logo="" group-title="BRAZIL",[BR] Natgeo Kids FHD
+http://supersonictv.live:8080/live/945213/876115/85053.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Natgeo Wild FHD" tvg-logo="" group-title="BRAZIL",[BR] Natgeo Wild FHD
+http://supersonictv.live:8080/live/945213/876115/85054.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Nick FHD" tvg-logo="" group-title="BRAZIL",[BR] Nick FHD
+http://supersonictv.live:8080/live/945213/876115/85055.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Nick JR FHD" tvg-logo="" group-title="BRAZIL",[BR] Nick JR FHD
+http://supersonictv.live:8080/live/945213/876115/85056.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] NSC TV Blumenau FHD" tvg-logo="" group-title="BRAZIL",[BR] NSC TV Blumenau FHD
+http://supersonictv.live:8080/live/945213/876115/85057.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] OFF FHD" tvg-logo="" group-title="BRAZIL",[BR] OFF FHD
+http://supersonictv.live:8080/live/945213/876115/85058.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Paramount Channel FHD" tvg-logo="" group-title="BRAZIL",[BR] Paramount Channel FHD
+http://supersonictv.live:8080/live/945213/876115/85059.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Play Kids HD" tvg-logo="" group-title="BRAZIL",[BR] Play Kids HD
+http://supersonictv.live:8080/live/945213/876115/85060.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Play TV FHD" tvg-logo="" group-title="BRAZIL",[BR] Play TV FHD
+http://supersonictv.live:8080/live/945213/876115/85061.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Premiere 2 FHD" tvg-logo="" group-title="BRAZIL",[BR] Premiere 2 FHD
+http://supersonictv.live:8080/live/945213/876115/85062.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Premiere 3 FHD" tvg-logo="" group-title="BRAZIL",[BR] Premiere 3 FHD
+http://supersonictv.live:8080/live/945213/876115/85063.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Premiere 4 FHD" tvg-logo="" group-title="BRAZIL",[BR] Premiere 4 FHD
+http://supersonictv.live:8080/live/945213/876115/85064.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Premiere 5 FHD" tvg-logo="" group-title="BRAZIL",[BR] Premiere 5 FHD
+http://supersonictv.live:8080/live/945213/876115/85065.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Premiere 6 FHD" tvg-logo="" group-title="BRAZIL",[BR] Premiere 6 FHD
+http://supersonictv.live:8080/live/945213/876115/85066.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Premiere 7 FHD" tvg-logo="" group-title="BRAZIL",[BR] Premiere 7 FHD
+http://supersonictv.live:8080/live/945213/876115/85067.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Premiere Clubes FHD" tvg-logo="" group-title="BRAZIL",[BR] Premiere Clubes FHD
+http://supersonictv.live:8080/live/945213/876115/85068.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Prime Box Brasil FHD" tvg-logo="" group-title="BRAZIL",[BR] Prime Box Brasil FHD
+http://supersonictv.live:8080/live/945213/876115/85069.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Record BA HD" tvg-logo="" group-title="BRAZIL",[BR] Record BA HD
+http://supersonictv.live:8080/live/945213/876115/85070.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] RECORD BELEM*" tvg-logo="" group-title="BRAZIL",[BR] RECORD BELEM*
+http://supersonictv.live:8080/live/945213/876115/85071.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Record BH HD" tvg-logo="" group-title="BRAZIL",[BR] Record BH HD
+http://supersonictv.live:8080/live/945213/876115/85072.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Record DF HD" tvg-logo="" group-title="BRAZIL",[BR] Record DF HD
+http://supersonictv.live:8080/live/945213/876115/85073.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Record ES HD" tvg-logo="" group-title="BRAZIL",[BR] Record ES HD
+http://supersonictv.live:8080/live/945213/876115/85074.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Record FHD" tvg-logo="" group-title="BRAZIL",[BR] Record FHD
+http://supersonictv.live:8080/live/945213/876115/85075.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Record GO HD" tvg-logo="" group-title="BRAZIL",[BR] Record GO HD
+http://supersonictv.live:8080/live/945213/876115/85076.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Record HD" tvg-logo="" group-title="BRAZIL",[BR] Record HD
+http://supersonictv.live:8080/live/945213/876115/85077.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] RECORD MINAS HD*" tvg-logo="" group-title="BRAZIL",[BR] RECORD MINAS HD*
+http://supersonictv.live:8080/live/945213/876115/85078.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Record News FHD" tvg-logo="" group-title="BRAZIL",[BR] Record News FHD
+http://supersonictv.live:8080/live/945213/876115/85079.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Record PA HD" tvg-logo="" group-title="BRAZIL",[BR] Record PA HD
+http://supersonictv.live:8080/live/945213/876115/85080.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Record RJ HD" tvg-logo="" group-title="BRAZIL",[BR] Record RJ HD
+http://supersonictv.live:8080/live/945213/876115/85081.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Record RS HD" tvg-logo="" group-title="BRAZIL",[BR] Record RS HD
+http://supersonictv.live:8080/live/945213/876115/85082.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] RECORD RS*" tvg-logo="" group-title="BRAZIL",[BR] RECORD RS*
+http://supersonictv.live:8080/live/945213/876115/85083.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Record SP HD" tvg-logo="" group-title="BRAZIL",[BR] Record SP HD
+http://supersonictv.live:8080/live/945213/876115/85084.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] RECORD*" tvg-logo="" group-title="BRAZIL",[BR] RECORD*
+http://supersonictv.live:8080/live/945213/876115/85085.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Rede Genisis FHD" tvg-logo="" group-title="BRAZIL",[BR] Rede Genisis FHD
+http://supersonictv.live:8080/live/945213/876115/85086.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Rede Super FHD" tvg-logo="" group-title="BRAZIL",[BR] Rede Super FHD
+http://supersonictv.live:8080/live/945213/876115/85087.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Rede TV FHD" tvg-logo="" group-title="BRAZIL",[BR] Rede TV FHD
+http://supersonictv.live:8080/live/945213/876115/85088.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] SBT FHD" tvg-logo="" group-title="BRAZIL",[BR] SBT FHD
+http://supersonictv.live:8080/live/945213/876115/85089.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Shoptime FHD" tvg-logo="" group-title="BRAZIL",[BR] Shoptime FHD
+http://supersonictv.live:8080/live/945213/876115/85090.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Sony FHD" tvg-logo="" group-title="BRAZIL",[BR] Sony FHD
+http://supersonictv.live:8080/live/945213/876115/85091.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Space FHD" tvg-logo="" group-title="BRAZIL",[BR] Space FHD
+http://supersonictv.live:8080/live/945213/876115/85092.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] SporTV 2 FHD" tvg-logo="" group-title="BRAZIL",[BR] SporTV 2 FHD
+http://supersonictv.live:8080/live/945213/876115/85093.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] SporTV 3 FHD" tvg-logo="" group-title="BRAZIL",[BR] SporTV 3 FHD
+http://supersonictv.live:8080/live/945213/876115/85094.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] SporTV FHD" tvg-logo="" group-title="BRAZIL",[BR] SporTV FHD
+http://supersonictv.live:8080/live/945213/876115/85095.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Studio Universal FHD" tvg-logo="" group-title="BRAZIL",[BR] Studio Universal FHD
+http://supersonictv.live:8080/live/945213/876115/85096.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] SYFY FHD" tvg-logo="" group-title="BRAZIL",[BR] SYFY FHD
+http://supersonictv.live:8080/live/945213/876115/85097.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TBS FHD" tvg-logo="" group-title="BRAZIL",[BR] TBS FHD
+http://supersonictv.live:8080/live/945213/876115/85098.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TC ACTION FHD" tvg-logo="" group-title="BRAZIL",[BR] TC ACTION FHD
+http://supersonictv.live:8080/live/945213/876115/85099.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TC Cult FHD" tvg-logo="" group-title="BRAZIL",[BR] TC Cult FHD
+http://supersonictv.live:8080/live/945213/876115/85100.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TC Fun FHD" tvg-logo="" group-title="BRAZIL",[BR] TC Fun FHD
+http://supersonictv.live:8080/live/945213/876115/85101.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TC Pipoca FHD" tvg-logo="" group-title="BRAZIL",[BR] TC Pipoca FHD
+http://supersonictv.live:8080/live/945213/876115/85102.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TC Premium FHD" tvg-logo="" group-title="BRAZIL",[BR] TC Premium FHD
+http://supersonictv.live:8080/live/945213/876115/85103.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TC Touch FHD" tvg-logo="" group-title="BRAZIL",[BR] TC Touch FHD
+http://supersonictv.live:8080/live/945213/876115/85104.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TCM FHD" tvg-logo="" group-title="BRAZIL",[BR] TCM FHD
+http://supersonictv.live:8080/live/945213/876115/85105.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] The History FHD" tvg-logo="" group-title="BRAZIL",[BR] The History FHD
+http://supersonictv.live:8080/live/945213/876115/85106.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TLC FHD" tvg-logo="" group-title="BRAZIL",[BR] TLC FHD
+http://supersonictv.live:8080/live/945213/876115/85107.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TNT FHD" tvg-logo="" group-title="BRAZIL",[BR] TNT FHD
+http://supersonictv.live:8080/live/945213/876115/85108.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TNT Series FHD" tvg-logo="" group-title="BRAZIL",[BR] TNT Series FHD
+http://supersonictv.live:8080/live/945213/876115/85109.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Tooncast FHD" tvg-logo="" group-title="BRAZIL",[BR] Tooncast FHD
+http://supersonictv.live:8080/live/945213/876115/85110.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Tru TV FHD" tvg-logo="" group-title="BRAZIL",[BR] Tru TV FHD
+http://supersonictv.live:8080/live/945213/876115/85111.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Tv Diario FHD" tvg-logo="" group-title="BRAZIL",[BR] Tv Diario FHD
+http://supersonictv.live:8080/live/945213/876115/85112.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV Gazeta Alagoas FHD" tvg-logo="" group-title="BRAZIL",[BR] TV Gazeta Alagoas FHD
+http://supersonictv.live:8080/live/945213/876115/85113.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV Gazeta FHD" tvg-logo="" group-title="BRAZIL",[BR] TV Gazeta FHD
+http://supersonictv.live:8080/live/945213/876115/85114.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV Ra Tim Bum FHD" tvg-logo="" group-title="BRAZIL",[BR] TV Ra Tim Bum FHD
+http://supersonictv.live:8080/live/945213/876115/85115.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV Santa Cruz FHD" tvg-logo="" group-title="BRAZIL",[BR] TV Santa Cruz FHD
+http://supersonictv.live:8080/live/945213/876115/85116.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV Sergipe FHD" tvg-logo="" group-title="BRAZIL",[BR] TV Sergipe FHD
+http://supersonictv.live:8080/live/945213/876115/85117.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV5****" tvg-logo="" group-title="BRAZIL",[BR] TV5****
+http://supersonictv.live:8080/live/945213/876115/85118.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Universal Channel FHD" tvg-logo="" group-title="BRAZIL",[BR] Universal Channel FHD
+http://supersonictv.live:8080/live/945213/876115/85119.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] VH1 Mega Hits FHD" tvg-logo="" group-title="BRAZIL",[BR] VH1 Mega Hits FHD
+http://supersonictv.live:8080/live/945213/876115/85120.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Viva FHD" tvg-logo="" group-title="BRAZIL",[BR] Viva FHD
+http://supersonictv.live:8080/live/945213/876115/85121.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Warner Channel FHD" tvg-logo="" group-title="BRAZIL",[BR] Warner Channel FHD
+http://supersonictv.live:8080/live/945213/876115/85122.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Wohoo FHD" tvg-logo="" group-title="BRAZIL",[BR] Wohoo FHD
+http://supersonictv.live:8080/live/945213/876115/85123.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV Tem Bauru FHD" tvg-logo="" group-title="BRAZIL",[BR] TV Tem Bauru FHD
+http://supersonictv.live:8080/live/945213/876115/85124.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] AMC FHD" tvg-logo="" group-title="BRAZIL",[BR] AMC FHD
+http://supersonictv.live:8080/live/945213/876115/85125.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Conmebol 1 FHD" tvg-logo="" group-title="BRAZIL",[BR] Conmebol 1 FHD
+http://supersonictv.live:8080/live/945213/876115/85126.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Conmebol 2 FHD" tvg-logo="" group-title="BRAZIL",[BR] Conmebol 2 FHD
+http://supersonictv.live:8080/live/945213/876115/85127.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Conmebol 3 FHD" tvg-logo="" group-title="BRAZIL",[BR] Conmebol 3 FHD
+http://supersonictv.live:8080/live/945213/876115/85128.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Conmebol 4 FHD" tvg-logo="" group-title="BRAZIL",[BR] Conmebol 4 FHD
+http://supersonictv.live:8080/live/945213/876115/85129.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Boa Vontade FHD ²" tvg-logo="" group-title="BRAZIL",[BR] Boa Vontade FHD ²
+http://supersonictv.live:8080/live/945213/876115/85130.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Boa Vontade TV FHD" tvg-logo="" group-title="BRAZIL",[BR] Boa Vontade TV FHD
+http://supersonictv.live:8080/live/945213/876115/85131.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] COPA DO NORDESTE 3 HD" tvg-logo="" group-title="BRAZIL",[BR] COPA DO NORDESTE 3 HD
+http://supersonictv.live:8080/live/945213/876115/85142.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] COPA DO NORDESTE 4 HD" tvg-logo="" group-title="BRAZIL",[BR] COPA DO NORDESTE 4 HD
+http://supersonictv.live:8080/live/945213/876115/85143.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] COPA DO NORDESTE 5 HD" tvg-logo="" group-title="BRAZIL",[BR] COPA DO NORDESTE 5 HD
+http://supersonictv.live:8080/live/945213/876115/85144.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] COPA DO NORDESTE 6 HD" tvg-logo="" group-title="BRAZIL",[BR] COPA DO NORDESTE 6 HD
+http://supersonictv.live:8080/live/945213/876115/85145.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] COPA DO NORDESTE HD" tvg-logo="" group-title="BRAZIL",[BR] COPA DO NORDESTE HD
+http://supersonictv.live:8080/live/945213/876115/85146.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Agro+ FHD" tvg-logo="" group-title="BRAZIL",[BR] Agro+ FHD
+http://supersonictv.live:8080/live/945213/876115/85147.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] AgroBrasil TV" tvg-logo="" group-title="BRAZIL",[BR] AgroBrasil TV
+http://supersonictv.live:8080/live/945213/876115/85148.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] All Sports HD" tvg-logo="" group-title="BRAZIL",[BR] All Sports HD
+http://supersonictv.live:8080/live/945213/876115/85149.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] AllTV HD" tvg-logo="" group-title="BRAZIL",[BR] AllTV HD
+http://supersonictv.live:8080/live/945213/876115/85150.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Canal 26 Argentina" tvg-logo="" group-title="BRAZIL",[BR] Canal 26 Argentina
+http://supersonictv.live:8080/live/945213/876115/85152.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Canal Rural FHD" tvg-logo="" group-title="BRAZIL",[BR] Canal Rural FHD
+http://supersonictv.live:8080/live/945213/876115/85153.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Canale 7 Itália" tvg-logo="" group-title="BRAZIL",[BR] Canale 7 Itália
+http://supersonictv.live:8080/live/945213/876115/85154.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Carioca 2 HD" tvg-logo="" group-title="BRAZIL",[BR] Carioca 2 HD
+http://supersonictv.live:8080/live/945213/876115/85157.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Carioca HD" tvg-logo="" group-title="BRAZIL",[BR] Carioca HD
+http://supersonictv.live:8080/live/945213/876115/85158.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] CBN Rio" tvg-logo="" group-title="BRAZIL",[BR] CBN Rio
+http://supersonictv.live:8080/live/945213/876115/85159.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] CBN São Paulo" tvg-logo="" group-title="BRAZIL",[BR] CBN São Paulo
+http://supersonictv.live:8080/live/945213/876115/85160.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Central|Top TV HD" tvg-logo="" group-title="BRAZIL",[BR] Central|Top TV HD
+http://supersonictv.live:8080/live/945213/876115/85161.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] CGTN" tvg-logo="" group-title="BRAZIL",[BR] CGTN
+http://supersonictv.live:8080/live/945213/876115/85162.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] CNT FHD" tvg-logo="" group-title="BRAZIL",[BR] CNT FHD
+http://supersonictv.live:8080/live/945213/876115/85163.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] COM Brasil TV FHD" tvg-logo="" group-title="BRAZIL",[BR] COM Brasil TV FHD
+http://supersonictv.live:8080/live/945213/876115/85164.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] COMBATE 4K" tvg-logo="" group-title="BRAZIL",[BR] COMBATE 4K
+http://supersonictv.live:8080/live/945213/876115/85165.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Conmebol 1 HD" tvg-logo="" group-title="BRAZIL",[BR] Conmebol 1 HD
+http://supersonictv.live:8080/live/945213/876115/85166.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Conmebol 2 HD" tvg-logo="" group-title="BRAZIL",[BR] Conmebol 2 HD
+http://supersonictv.live:8080/live/945213/876115/85167.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Conmebol 4K" tvg-logo="" group-title="BRAZIL",[BR] Conmebol 4K
+http://supersonictv.live:8080/live/945213/876115/85168.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Conmebol 5 HD" tvg-logo="" group-title="BRAZIL",[BR] Conmebol 5 HD
+http://supersonictv.live:8080/live/945213/876115/85169.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Conmebol 6 HD" tvg-logo="" group-title="BRAZIL",[BR] Conmebol 6 HD
+http://supersonictv.live:8080/live/945213/876115/85170.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Dog TV FHD" tvg-logo="" group-title="BRAZIL",[BR] Dog TV FHD
+http://supersonictv.live:8080/live/945213/876115/85171.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] ESPORTE INTERATIVO 5 HD" tvg-logo="" group-title="BRAZIL",[BR] ESPORTE INTERATIVO 5 HD
+http://supersonictv.live:8080/live/945213/876115/85172.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] ESPORTE INTERATIVO 6 HD" tvg-logo="" group-title="BRAZIL",[BR] ESPORTE INTERATIVO 6 HD
+http://supersonictv.live:8080/live/945213/876115/85173.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] ESPORTE INTERATIVO 7 HD" tvg-logo="" group-title="BRAZIL",[BR] ESPORTE INTERATIVO 7 HD
+http://supersonictv.live:8080/live/945213/876115/85174.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] ESPORTE INTERATIVO 8 HD" tvg-logo="" group-title="BRAZIL",[BR] ESPORTE INTERATIVO 8 HD
+http://supersonictv.live:8080/live/945213/876115/85175.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] ESPORTE INTERATIVO 9 HD" tvg-logo="" group-title="BRAZIL",[BR] ESPORTE INTERATIVO 9 HD
+http://supersonictv.live:8080/live/945213/876115/85176.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] ESPORTE INTERATIVO 10 HD" tvg-logo="" group-title="BRAZIL",[BR] ESPORTE INTERATIVO 10 HD
+http://supersonictv.live:8080/live/945213/876115/85177.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] ESPN Brasil 4K" tvg-logo="" group-title="BRAZIL",[BR] ESPN Brasil 4K
+http://supersonictv.live:8080/live/945213/876115/85178.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] FLA TV+ FHD" tvg-logo="" group-title="BRAZIL",[BR] FLA TV+ FHD
+http://supersonictv.live:8080/live/945213/876115/85179.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] FLA TV+ HD" tvg-logo="" group-title="BRAZIL",[BR] FLA TV+ HD
+http://supersonictv.live:8080/live/945213/876115/85180.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] FOX SPORTS 2 4K" tvg-logo="" group-title="BRAZIL",[BR] FOX SPORTS 2 4K
+http://supersonictv.live:8080/live/945213/876115/85181.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Fox Sports 4K" tvg-logo="" group-title="BRAZIL",[BR] Fox Sports 4K
+http://supersonictv.live:8080/live/945213/876115/85182.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] GLOBO 4K" tvg-logo="" group-title="BRAZIL",[BR] GLOBO 4K
+http://supersonictv.live:8080/live/945213/876115/85183.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo EPTV Ribeirão Preto" tvg-logo="" group-title="BRAZIL",[BR] Globo EPTV Ribeirão Preto
+http://supersonictv.live:8080/live/945213/876115/85184.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo Inter Cabugi HD" tvg-logo="" group-title="BRAZIL",[BR] Globo Inter Cabugi HD
+http://supersonictv.live:8080/live/945213/876115/85185.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo Inter PT FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo Inter PT FHD
+http://supersonictv.live:8080/live/945213/876115/85186.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo Inter PT HD" tvg-logo="" group-title="BRAZIL",[BR] Globo Inter PT HD
+http://supersonictv.live:8080/live/945213/876115/85187.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo Inter TV Alto Litoral FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo Inter TV Alto Litoral FHD
+http://supersonictv.live:8080/live/945213/876115/85188.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo Inter TV Cabugi FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo Inter TV Cabugi FHD
+http://supersonictv.live:8080/live/945213/876115/85189.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo NSC Centro Oeste FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo NSC Centro Oeste FHD
+http://supersonictv.live:8080/live/945213/876115/85190.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo NSC TV Chapeco FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo NSC TV Chapeco FHD
+http://supersonictv.live:8080/live/945213/876115/85191.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo NSC TV Criciuma FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo NSC TV Criciuma FHD
+http://supersonictv.live:8080/live/945213/876115/85192.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo NSC TV Joinville FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo NSC TV Joinville FHD
+http://supersonictv.live:8080/live/945213/876115/85193.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo RBS TV 4K" tvg-logo="" group-title="BRAZIL",[BR] Globo RBS TV 4K
+http://supersonictv.live:8080/live/945213/876115/85194.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo RBS TV Caxias do Sul FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo RBS TV Caxias do Sul FHD
+http://supersonictv.live:8080/live/945213/876115/85195.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo RBS TV Pelotas FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo RBS TV Pelotas FHD
+http://supersonictv.live:8080/live/945213/876115/85196.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo RBS TV Santa Maria FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo RBS TV Santa Maria FHD
+http://supersonictv.live:8080/live/945213/876115/85197.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo Rede Amazonica FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo Rede Amazonica FHD
+http://supersonictv.live:8080/live/945213/876115/85198.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo RPC Maringa FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo RPC Maringa FHD
+http://supersonictv.live:8080/live/945213/876115/85199.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo RPC Ponta Grossa FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo RPC Ponta Grossa FHD
+http://supersonictv.live:8080/live/945213/876115/85200.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo TV Asa Branca FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo TV Asa Branca FHD
+http://supersonictv.live:8080/live/945213/876115/85201.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo TV Cabo Branco FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo TV Cabo Branco FHD
+http://supersonictv.live:8080/live/945213/876115/85202.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo TV Clube FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo TV Clube FHD
+http://supersonictv.live:8080/live/945213/876115/85203.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo TV Integração JF FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo TV Integração JF FHD
+http://supersonictv.live:8080/live/945213/876115/85204.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo TV Recife FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo TV Recife FHD
+http://supersonictv.live:8080/live/945213/876115/85205.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo TV Rio Sul FHD" tvg-logo="" group-title="BRAZIL",[BR] Globo TV Rio Sul FHD
+http://supersonictv.live:8080/live/945213/876115/85206.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo TV TEM SJRP" tvg-logo="" group-title="BRAZIL",[BR] Globo TV TEM SJRP
+http://supersonictv.live:8080/live/945213/876115/85207.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo TV TEM Sorocaba HD" tvg-logo="" group-title="BRAZIL",[BR] Globo TV TEM Sorocaba HD
+http://supersonictv.live:8080/live/945213/876115/85208.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo TV Tribuna HD" tvg-logo="" group-title="BRAZIL",[BR] Globo TV Tribuna HD
+http://supersonictv.live:8080/live/945213/876115/85209.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Globo TV Vanguarda SJC" tvg-logo="" group-title="BRAZIL",[BR] Globo TV Vanguarda SJC
+http://supersonictv.live:8080/live/945213/876115/85210.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] HBO 2 DUAL FHD" tvg-logo="" group-title="BRAZIL",[BR] HBO 2 DUAL FHD
+http://supersonictv.live:8080/live/945213/876115/85211.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] HBO 2 DUAL HD" tvg-logo="" group-title="BRAZIL",[BR] HBO 2 DUAL HD
+http://supersonictv.live:8080/live/945213/876115/85212.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] HBO 4K" tvg-logo="" group-title="BRAZIL",[BR] HBO 4K
+http://supersonictv.live:8080/live/945213/876115/85213.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] HBO DUAL FHD" tvg-logo="" group-title="BRAZIL",[BR] HBO DUAL FHD
+http://supersonictv.live:8080/live/945213/876115/85214.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] HBO DUAL HD" tvg-logo="" group-title="BRAZIL",[BR] HBO DUAL HD
+http://supersonictv.live:8080/live/945213/876115/85215.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] HBO Family DUAL FHD" tvg-logo="" group-title="BRAZIL",[BR] HBO Family DUAL FHD
+http://supersonictv.live:8080/live/945213/876115/85216.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] HBO Family DUAL HD" tvg-logo="" group-title="BRAZIL",[BR] HBO Family DUAL HD
+http://supersonictv.live:8080/live/945213/876115/85217.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] HBO Mundi DUAL FHD" tvg-logo="" group-title="BRAZIL",[BR] HBO Mundi DUAL FHD
+http://supersonictv.live:8080/live/945213/876115/85218.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] HBO Mundi DUAL HD" tvg-logo="" group-title="BRAZIL",[BR] HBO Mundi DUAL HD
+http://supersonictv.live:8080/live/945213/876115/85219.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] HBO Pop DUAL HD" tvg-logo="" group-title="BRAZIL",[BR] HBO Pop DUAL HD
+http://supersonictv.live:8080/live/945213/876115/85220.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] HBO XTREME 4K" tvg-logo="" group-title="BRAZIL",[BR] HBO XTREME 4K
+http://supersonictv.live:8080/live/945213/876115/85221.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] HBO Xtreme DUAL FHD" tvg-logo="" group-title="BRAZIL",[BR] HBO Xtreme DUAL FHD
+http://supersonictv.live:8080/live/945213/876115/85222.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] HBO Xtreme DUAL HD" tvg-logo="" group-title="BRAZIL",[BR] HBO Xtreme DUAL HD
+http://supersonictv.live:8080/live/945213/876115/85223.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Heavy Metal TV" tvg-logo="" group-title="BRAZIL",[BR] Heavy Metal TV
+http://supersonictv.live:8080/live/945213/876115/85224.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Igreja Mundial FHD" tvg-logo="" group-title="BRAZIL",[BR] Igreja Mundial FHD
+http://supersonictv.live:8080/live/945213/876115/85225.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Igreja Universal HD" tvg-logo="" group-title="BRAZIL",[BR] Igreja Universal HD
+http://supersonictv.live:8080/live/945213/876115/85226.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] ITV HD" tvg-logo="" group-title="BRAZIL",[BR] ITV HD
+http://supersonictv.live:8080/live/945213/876115/85227.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Jovem Pan News FHD" tvg-logo="" group-title="BRAZIL",[BR] Jovem Pan News FHD
+http://supersonictv.live:8080/live/945213/876115/85228.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] KPOP TV SY HD" tvg-logo="" group-title="BRAZIL",[BR] KPOP TV SY HD
+http://supersonictv.live:8080/live/945213/876115/85229.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Loading TV FHD" tvg-logo="" group-title="BRAZIL",[BR] Loading TV FHD
+http://supersonictv.live:8080/live/945213/876115/85230.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Master TV HD" tvg-logo="" group-title="BRAZIL",[BR] Master TV HD
+http://supersonictv.live:8080/live/945213/876115/85231.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] MEGAPIX 4K" tvg-logo="" group-title="BRAZIL",[BR] MEGAPIX 4K
+http://supersonictv.live:8080/live/945213/876115/85232.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] MULTISHOW 4K" tvg-logo="" group-title="BRAZIL",[BR] MULTISHOW 4K
+http://supersonictv.live:8080/live/945213/876115/85233.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Music Top HD" tvg-logo="" group-title="BRAZIL",[BR] Music Top HD
+http://supersonictv.live:8080/live/945213/876115/85234.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] NATGEO 4K" tvg-logo="" group-title="BRAZIL",[BR] NATGEO 4K
+http://supersonictv.live:8080/live/945213/876115/85235.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] NHK Japan" tvg-logo="" group-title="BRAZIL",[BR] NHK Japan
+http://supersonictv.live:8080/live/945213/876115/85236.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Polishop FHD" tvg-logo="" group-title="BRAZIL",[BR] Polishop FHD
+http://supersonictv.live:8080/live/945213/876115/85239.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] PREMIERE CLUBES 4K" tvg-logo="" group-title="BRAZIL",[BR] PREMIERE CLUBES 4K
+http://supersonictv.live:8080/live/945213/876115/85240.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] RBC FHD" tvg-logo="" group-title="BRAZIL",[BR] RBC FHD
+http://supersonictv.live:8080/live/945213/876115/85241.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] RBI TV FHD" tvg-logo="" group-title="BRAZIL",[BR] RBI TV FHD
+http://supersonictv.live:8080/live/945213/876115/85242.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] RBT Rede Brasil TV FHD" tvg-logo="" group-title="BRAZIL",[BR] RBT Rede Brasil TV FHD
+http://supersonictv.live:8080/live/945213/876115/85243.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] RBT Rede Brasil TV HD" tvg-logo="" group-title="BRAZIL",[BR] RBT Rede Brasil TV HD
+http://supersonictv.live:8080/live/945213/876115/85244.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] RECORD 4K" tvg-logo="" group-title="BRAZIL",[BR] RECORD 4K
+http://supersonictv.live:8080/live/945213/876115/85245.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Record Belém HD" tvg-logo="" group-title="BRAZIL",[BR] Record Belém HD
+http://supersonictv.live:8080/live/945213/876115/85246.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Record Brasília HD" tvg-logo="" group-title="BRAZIL",[BR] Record Brasília HD
+http://supersonictv.live:8080/live/945213/876115/85247.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Record Goiás HD" tvg-logo="" group-title="BRAZIL",[BR] Record Goiás HD
+http://supersonictv.live:8080/live/945213/876115/85248.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Record Itapoan HD" tvg-logo="" group-title="BRAZIL",[BR] Record Itapoan HD
+http://supersonictv.live:8080/live/945213/876115/85249.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Record Manaus HD" tvg-logo="" group-title="BRAZIL",[BR] Record Manaus HD
+http://supersonictv.live:8080/live/945213/876115/85250.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Record Minas HD" tvg-logo="" group-title="BRAZIL",[BR] Record Minas HD
+http://supersonictv.live:8080/live/945213/876115/85251.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Record Rio RJ HD" tvg-logo="" group-title="BRAZIL",[BR] Record Rio RJ HD
+http://supersonictv.live:8080/live/945213/876115/85252.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Record RS HD" tvg-logo="" group-title="BRAZIL",[BR] Record RS HD
+http://supersonictv.live:8080/live/945213/876115/85253.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Record SC HD" tvg-logo="" group-title="BRAZIL",[BR] Record SC HD
+http://supersonictv.live:8080/live/945213/876115/85254.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Record SD" tvg-logo="" group-title="BRAZIL",[BR] Record SD
+http://supersonictv.live:8080/live/945213/876115/85255.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Record SP HD" tvg-logo="" group-title="BRAZIL",[BR] Record SP HD
+http://supersonictv.live:8080/live/945213/876115/85256.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Redbull TV HD" tvg-logo="" group-title="BRAZIL",[BR] Redbull TV HD
+http://supersonictv.live:8080/live/945213/876115/85257.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Rede Atividade HD" tvg-logo="" group-title="BRAZIL",[BR] Rede Atividade HD
+http://supersonictv.live:8080/live/945213/876115/85258.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Rede Familia FHD" tvg-logo="" group-title="BRAZIL",[BR] Rede Familia FHD
+http://supersonictv.live:8080/live/945213/876115/85259.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Rede Minas FHD" tvg-logo="" group-title="BRAZIL",[BR] Rede Minas FHD
+http://supersonictv.live:8080/live/945213/876115/85260.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Rede Século 21" tvg-logo="" group-title="BRAZIL",[BR] Rede Século 21
+http://supersonictv.live:8080/live/945213/876115/85261.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Rede TV 4K" tvg-logo="" group-title="BRAZIL",[BR] Rede TV 4K
+http://supersonictv.live:8080/live/945213/876115/85262.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Retro Music" tvg-logo="" group-title="BRAZIL",[BR] Retro Music
+http://supersonictv.live:8080/live/945213/876115/85263.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] RIT TV FHD" tvg-logo="" group-title="BRAZIL",[BR] RIT TV FHD
+http://supersonictv.live:8080/live/945213/876115/85264.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] RIT TV HD" tvg-logo="" group-title="BRAZIL",[BR] RIT TV HD
+http://supersonictv.live:8080/live/945213/876115/85265.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Rock TV" tvg-logo="" group-title="BRAZIL",[BR] Rock TV
+http://supersonictv.live:8080/live/945213/876115/85266.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Santuário de Fátima FHD" tvg-logo="" group-title="BRAZIL",[BR] Santuário de Fátima FHD
+http://supersonictv.live:8080/live/945213/876115/85267.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] SBT 4K" tvg-logo="" group-title="BRAZIL",[BR] SBT 4K
+http://supersonictv.live:8080/live/945213/876115/85268.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] SBT AM HD" tvg-logo="" group-title="BRAZIL",[BR] SBT AM HD
+http://supersonictv.live:8080/live/945213/876115/85269.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] SBT BA HD" tvg-logo="" group-title="BRAZIL",[BR] SBT BA HD
+http://supersonictv.live:8080/live/945213/876115/85270.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] SBT GO HD" tvg-logo="" group-title="BRAZIL",[BR] SBT GO HD
+http://supersonictv.live:8080/live/945213/876115/85271.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] SBT HD²" tvg-logo="" group-title="BRAZIL",[BR] SBT HD²
+http://supersonictv.live:8080/live/945213/876115/85272.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] SBT Int SP FHD" tvg-logo="" group-title="BRAZIL",[BR] SBT Int SP FHD
+http://supersonictv.live:8080/live/945213/876115/85273.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] SBT MA" tvg-logo="" group-title="BRAZIL",[BR] SBT MA
+http://supersonictv.live:8080/live/945213/876115/85274.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] SBT MT HD" tvg-logo="" group-title="BRAZIL",[BR] SBT MT HD
+http://supersonictv.live:8080/live/945213/876115/85275.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] SBT PI FHD" tvg-logo="" group-title="BRAZIL",[BR] SBT PI FHD
+http://supersonictv.live:8080/live/945213/876115/85276.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] SBT PR HD" tvg-logo="" group-title="BRAZIL",[BR] SBT PR HD
+http://supersonictv.live:8080/live/945213/876115/85277.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] SBT RJ FHD" tvg-logo="" group-title="BRAZIL",[BR] SBT RJ FHD
+http://supersonictv.live:8080/live/945213/876115/85278.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] SBT RS HD" tvg-logo="" group-title="BRAZIL",[BR] SBT RS HD
+http://supersonictv.live:8080/live/945213/876115/85279.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] SBT SD²" tvg-logo="" group-title="BRAZIL",[BR] SBT SD²
+http://supersonictv.live:8080/live/945213/876115/85280.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] SescTV FHD" tvg-logo="" group-title="BRAZIL",[BR] SescTV FHD
+http://supersonictv.live:8080/live/945213/876115/85281.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Space 4K" tvg-logo="" group-title="BRAZIL",[BR] Space 4K
+http://supersonictv.live:8080/live/945213/876115/85282.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] SPORTV 4K" tvg-logo="" group-title="BRAZIL",[BR] SPORTV 4K
+http://supersonictv.live:8080/live/945213/876115/85283.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] STAR CHANNEL 4K" tvg-logo="" group-title="BRAZIL",[BR] STAR CHANNEL 4K
+http://supersonictv.live:8080/live/945213/876115/85284.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Star DUAL HD" tvg-logo="" group-title="BRAZIL",[BR] Star DUAL HD
+http://supersonictv.live:8080/live/945213/876115/85285.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Studio Universal DUAL HD" tvg-logo="" group-title="BRAZIL",[BR] Studio Universal DUAL HD
+http://supersonictv.live:8080/live/945213/876115/85286.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Summer TV HD" tvg-logo="" group-title="BRAZIL",[BR] Summer TV HD
+http://supersonictv.live:8080/live/945213/876115/85287.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Taormina TV HD" tvg-logo="" group-title="BRAZIL",[BR] Taormina TV HD
+http://supersonictv.live:8080/live/945213/876115/85288.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TC Action DUAL FHD" tvg-logo="" group-title="BRAZIL",[BR] TC Action DUAL FHD
+http://supersonictv.live:8080/live/945213/876115/85289.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TC Action DUAL HD" tvg-logo="" group-title="BRAZIL",[BR] TC Action DUAL HD
+http://supersonictv.live:8080/live/945213/876115/85290.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TC Cult DUAL FHD" tvg-logo="" group-title="BRAZIL",[BR] TC Cult DUAL FHD
+http://supersonictv.live:8080/live/945213/876115/85291.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TC Cult DUAL HD" tvg-logo="" group-title="BRAZIL",[BR] TC Cult DUAL HD
+http://supersonictv.live:8080/live/945213/876115/85292.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TC Fun DUAL FHD" tvg-logo="" group-title="BRAZIL",[BR] TC Fun DUAL FHD
+http://supersonictv.live:8080/live/945213/876115/85293.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TC Fun DUAL HD" tvg-logo="" group-title="BRAZIL",[BR] TC Fun DUAL HD
+http://supersonictv.live:8080/live/945213/876115/85294.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TC Pipoca DUAL FHD" tvg-logo="" group-title="BRAZIL",[BR] TC Pipoca DUAL FHD
+http://supersonictv.live:8080/live/945213/876115/85295.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TC Pipoca DUAL HD" tvg-logo="" group-title="BRAZIL",[BR] TC Pipoca DUAL HD
+http://supersonictv.live:8080/live/945213/876115/85296.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TC Premium DUAL FHD" tvg-logo="" group-title="BRAZIL",[BR] TC Premium DUAL FHD
+http://supersonictv.live:8080/live/945213/876115/85297.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TC Premium DUAL HD" tvg-logo="" group-title="BRAZIL",[BR] TC Premium DUAL HD
+http://supersonictv.live:8080/live/945213/876115/85298.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TC Touch DUAL FHD" tvg-logo="" group-title="BRAZIL",[BR] TC Touch DUAL FHD
+http://supersonictv.live:8080/live/945213/876115/85299.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TC Touch DUAL HD" tvg-logo="" group-title="BRAZIL",[BR] TC Touch DUAL HD
+http://supersonictv.live:8080/live/945213/876115/85300.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TELECINE PREMIUM 4K" tvg-logo="" group-title="BRAZIL",[BR] TELECINE PREMIUM 4K
+http://supersonictv.live:8080/live/945213/876115/85301.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Terra Viva FHD" tvg-logo="" group-title="BRAZIL",[BR] Terra Viva FHD
+http://supersonictv.live:8080/live/945213/876115/85302.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Terra Viva HD" tvg-logo="" group-title="BRAZIL",[BR] Terra Viva HD
+http://supersonictv.live:8080/live/945213/876115/85303.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] The KPOP FHD" tvg-logo="" group-title="BRAZIL",[BR] The KPOP FHD
+http://supersonictv.live:8080/live/945213/876115/85304.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TNT 4K" tvg-logo="" group-title="BRAZIL",[BR] TNT 4K
+http://supersonictv.live:8080/live/945213/876115/85305.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TNT DUAL FHD" tvg-logo="" group-title="BRAZIL",[BR] TNT DUAL FHD
+http://supersonictv.live:8080/live/945213/876115/85306.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TNT DUAL HD" tvg-logo="" group-title="BRAZIL",[BR] TNT DUAL HD
+http://supersonictv.live:8080/live/945213/876115/85307.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TNT SÉRIES 4K" tvg-logo="" group-title="BRAZIL",[BR] TNT SÉRIES 4K
+http://supersonictv.live:8080/live/945213/876115/85308.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TNT Series DUAL HD" tvg-logo="" group-title="BRAZIL",[BR] TNT Series DUAL HD
+http://supersonictv.live:8080/live/945213/876115/85309.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TNT SPORTS 1 HD" tvg-logo="" group-title="BRAZIL",[BR] TNT SPORTS 1 HD
+http://supersonictv.live:8080/live/945213/876115/85310.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TNT SPORTS 1 SD" tvg-logo="" group-title="BRAZIL",[BR] TNT SPORTS 1 SD
+http://supersonictv.live:8080/live/945213/876115/85311.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TNT SPORTS 2 HD" tvg-logo="" group-title="BRAZIL",[BR] TNT SPORTS 2 HD
+http://supersonictv.live:8080/live/945213/876115/85312.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TNT SPORTS 2 SD" tvg-logo="" group-title="BRAZIL",[BR] TNT SPORTS 2 SD
+http://supersonictv.live:8080/live/945213/876115/85313.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TNT SPORTS 3 HD" tvg-logo="" group-title="BRAZIL",[BR] TNT SPORTS 3 HD
+http://supersonictv.live:8080/live/945213/876115/85314.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TNT SPORTS 3 SD" tvg-logo="" group-title="BRAZIL",[BR] TNT SPORTS 3 SD
+http://supersonictv.live:8080/live/945213/876115/85315.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TNT SPORTS 4 HD" tvg-logo="" group-title="BRAZIL",[BR] TNT SPORTS 4 HD
+http://supersonictv.live:8080/live/945213/876115/85316.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TNT SPORTS 4 SD" tvg-logo="" group-title="BRAZIL",[BR] TNT SPORTS 4 SD
+http://supersonictv.live:8080/live/945213/876115/85317.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TNT SPORTS 5 HD" tvg-logo="" group-title="BRAZIL",[BR] TNT SPORTS 5 HD
+http://supersonictv.live:8080/live/945213/876115/85318.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TNT SPORTS 5 SD" tvg-logo="" group-title="BRAZIL",[BR] TNT SPORTS 5 SD
+http://supersonictv.live:8080/live/945213/876115/85319.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TNT SPORTS 6 HD" tvg-logo="" group-title="BRAZIL",[BR] TNT SPORTS 6 HD
+http://supersonictv.live:8080/live/945213/876115/85320.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TNT SPORTS 6 SD" tvg-logo="" group-title="BRAZIL",[BR] TNT SPORTS 6 SD
+http://supersonictv.live:8080/live/945213/876115/85321.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TNT SPORTS 7 HD" tvg-logo="" group-title="BRAZIL",[BR] TNT SPORTS 7 HD
+http://supersonictv.live:8080/live/945213/876115/85322.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TNT SPORTS 7 SD" tvg-logo="" group-title="BRAZIL",[BR] TNT SPORTS 7 SD
+http://supersonictv.live:8080/live/945213/876115/85323.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TNT SPORTS 8 HD" tvg-logo="" group-title="BRAZIL",[BR] TNT SPORTS 8 HD
+http://supersonictv.live:8080/live/945213/876115/85324.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TNT SPORTS 8 SD" tvg-logo="" group-title="BRAZIL",[BR] TNT SPORTS 8 SD
+http://supersonictv.live:8080/live/945213/876115/85325.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Travel Box FHD" tvg-logo="" group-title="BRAZIL",[BR] Travel Box FHD
+http://supersonictv.live:8080/live/945213/876115/85326.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV Ambiental" tvg-logo="" group-title="BRAZIL",[BR] TV Ambiental
+http://supersonictv.live:8080/live/945213/876115/85327.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV Aparecida FHD" tvg-logo="" group-title="BRAZIL",[BR] TV Aparecida FHD
+http://supersonictv.live:8080/live/945213/876115/85328.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV Brasil 2 FHD" tvg-logo="" group-title="BRAZIL",[BR] TV Brasil 2 FHD
+http://supersonictv.live:8080/live/945213/876115/85329.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV Brasil FHD" tvg-logo="" group-title="BRAZIL",[BR] TV Brasil FHD
+http://supersonictv.live:8080/live/945213/876115/85330.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV Camara FHD" tvg-logo="" group-title="BRAZIL",[BR] TV Camara FHD
+http://supersonictv.live:8080/live/945213/876115/85331.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV Câmara FHD" tvg-logo="" group-title="BRAZIL",[BR] TV Câmara FHD
+http://supersonictv.live:8080/live/945213/876115/85332.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV Cultura FHD" tvg-logo="" group-title="BRAZIL",[BR] TV Cultura FHD
+http://supersonictv.live:8080/live/945213/876115/85333.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV Cultura HD" tvg-logo="" group-title="BRAZIL",[BR] TV Cultura HD
+http://supersonictv.live:8080/live/945213/876115/85334.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV das Artes" tvg-logo="" group-title="BRAZIL",[BR] TV das Artes
+http://supersonictv.live:8080/live/945213/876115/85335.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV Envangelizar" tvg-logo="" group-title="BRAZIL",[BR] TV Envangelizar
+http://supersonictv.live:8080/live/945213/876115/85336.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV Escola FHD" tvg-logo="" group-title="BRAZIL",[BR] TV Escola FHD
+http://supersonictv.live:8080/live/945213/876115/85337.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV Escola HD" tvg-logo="" group-title="BRAZIL",[BR] TV Escola HD
+http://supersonictv.live:8080/live/945213/876115/85338.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV Gazeta 4K" tvg-logo="" group-title="BRAZIL",[BR] TV Gazeta 4K
+http://supersonictv.live:8080/live/945213/876115/85339.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV Gideoes HD" tvg-logo="" group-title="BRAZIL",[BR] TV Gideoes HD
+http://supersonictv.live:8080/live/945213/876115/85340.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV Imaculada HD" tvg-logo="" group-title="BRAZIL",[BR] TV Imaculada HD
+http://supersonictv.live:8080/live/945213/876115/85341.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV Justiça" tvg-logo="" group-title="BRAZIL",[BR] TV Justiça
+http://supersonictv.live:8080/live/945213/876115/85342.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV Justiça FHD" tvg-logo="" group-title="BRAZIL",[BR] TV Justiça FHD
+http://supersonictv.live:8080/live/945213/876115/85343.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV Novo Tempo FHD" tvg-logo="" group-title="BRAZIL",[BR] TV Novo Tempo FHD
+http://supersonictv.live:8080/live/945213/876115/85344.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV Novo Tempo HD" tvg-logo="" group-title="BRAZIL",[BR] TV Novo Tempo HD
+http://supersonictv.live:8080/live/945213/876115/85345.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV Pai Eterno FHD" tvg-logo="" group-title="BRAZIL",[BR] TV Pai Eterno FHD
+http://supersonictv.live:8080/live/945213/876115/85346.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV Pai Eterno HD" tvg-logo="" group-title="BRAZIL",[BR] TV Pai Eterno HD
+http://supersonictv.live:8080/live/945213/876115/85347.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV Pampa HD" tvg-logo="" group-title="BRAZIL",[BR] TV Pampa HD
+http://supersonictv.live:8080/live/945213/876115/85348.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV Senado HD" tvg-logo="" group-title="BRAZIL",[BR] TV Senado HD
+http://supersonictv.live:8080/live/945213/876115/85349.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV UAI HD" tvg-logo="" group-title="BRAZIL",[BR] TV UAI HD
+http://supersonictv.live:8080/live/945213/876115/85350.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV5 Monde HD" tvg-logo="" group-title="BRAZIL",[BR] TV5 Monde HD
+http://supersonictv.live:8080/live/945213/876115/85351.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TVE FHD" tvg-logo="" group-title="BRAZIL",[BR] TVE FHD
+http://supersonictv.live:8080/live/945213/876115/85352.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TVE RS FHD" tvg-logo="" group-title="BRAZIL",[BR] TVE RS FHD
+http://supersonictv.live:8080/live/945213/876115/85353.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Universal TV DUAL HD" tvg-logo="" group-title="BRAZIL",[BR] Universal TV DUAL HD
+http://supersonictv.live:8080/live/945213/876115/85354.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] VH1 HD" tvg-logo="" group-title="BRAZIL",[BR] VH1 HD
+http://supersonictv.live:8080/live/945213/876115/85355.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Warner Channel DUAL HD" tvg-logo="" group-title="BRAZIL",[BR] Warner Channel DUAL HD
+http://supersonictv.live:8080/live/945213/876115/85356.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Yeeaah HD" tvg-logo="" group-title="BRAZIL",[BR] Yeeaah HD
+http://supersonictv.live:8080/live/945213/876115/85357.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Zoom TV HD" tvg-logo="" group-title="BRAZIL",[BR] Zoom TV HD
+http://supersonictv.live:8080/live/945213/876115/85358.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] ZooMoo HD" tvg-logo="" group-title="BRAZIL",[BR] ZooMoo HD
+http://supersonictv.live:8080/live/945213/876115/85359.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] ZooMoo SD" tvg-logo="" group-title="BRAZIL",[BR] ZooMoo SD
+http://supersonictv.live:8080/live/945213/876115/85360.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] 24h Power Couple" tvg-logo="" group-title="BRAZIL",[BR] 24h Power Couple
+http://supersonictv.live:8080/live/945213/876115/85361.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] DJTV HD" tvg-logo="" group-title="BRAZIL",[BR] DJTV HD
+http://supersonictv.live:8080/live/945213/876115/85362.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV MaisNews|Cultura FHD" tvg-logo="" group-title="BRAZIL",[BR] TV MaisNews|Cultura FHD
+http://supersonictv.live:8080/live/945213/876115/85363.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Life Channel BR FHD" tvg-logo="" group-title="BRAZIL",[BR] Life Channel BR FHD
+http://supersonictv.live:8080/live/945213/876115/85364.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV Carioca HD" tvg-logo="" group-title="BRAZIL",[BR] TV Carioca HD
+http://supersonictv.live:8080/live/945213/876115/85365.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV Pampa HD" tvg-logo="" group-title="BRAZIL",[BR] TV Pampa HD
+http://supersonictv.live:8080/live/945213/876115/85366.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Primer TV HD" tvg-logo="" group-title="BRAZIL",[BR] Primer TV HD
+http://supersonictv.live:8080/live/945213/876115/85367.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] ChromaTV" tvg-logo="" group-title="BRAZIL",[BR] ChromaTV
+http://supersonictv.live:8080/live/945213/876115/85368.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV Mon HD" tvg-logo="" group-title="BRAZIL",[BR] TV Mon HD
+http://supersonictv.live:8080/live/945213/876115/85369.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Demais TV" tvg-logo="" group-title="BRAZIL",[BR] Demais TV
+http://supersonictv.live:8080/live/945213/876115/85370.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TV A Plateia HD" tvg-logo="" group-title="BRAZIL",[BR] TV A Plateia HD
+http://supersonictv.live:8080/live/945213/876115/85371.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Vale TV-Play" tvg-logo="" group-title="BRAZIL",[BR] Vale TV-Play
+http://supersonictv.live:8080/live/945213/876115/85372.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Vale EU TV" tvg-logo="" group-title="BRAZIL",[BR] Vale EU TV
+http://supersonictv.live:8080/live/945213/876115/85373.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] Urban TV HD" tvg-logo="" group-title="BRAZIL",[BR] Urban TV HD
+http://supersonictv.live:8080/live/945213/876115/85374.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] TVideosNews HD" tvg-logo="" group-title="BRAZIL",[BR] TVideosNews HD
+http://supersonictv.live:8080/live/945213/876115/85375.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] VRT Channel HD" tvg-logo="" group-title="BRAZIL",[BR] VRT Channel HD
+http://supersonictv.live:8080/live/945213/876115/85376.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="[BR] SporTV 4 HD Olimpíadas" tvg-logo="" group-title="BRAZIL",[BR] SporTV 4 HD Olimpíadas
+http://supersonictv.live:8080/live/945213/876115/85387.m3u8
