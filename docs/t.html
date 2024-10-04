@@ -73,10 +73,14 @@
             flex: 2;
             background-color: rgba(0, 0, 0, 0.8);
             position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             overflow: hidden;
+            width: 100%;
+            height: 100%; /* Garantir que a altura do player seja 100% */
+        }
+
+        #clappr-player {
+            width: 100%;
+            height: 100%; /* Garantir que a altura do player seja 100% */
         }
 
         #sidebar {
@@ -110,27 +114,9 @@
             background-color: #4CAF50;
         }
 
-        #sidebar img {
-            width: 50px;
-            height: 50px;
-            margin-right: 10px;
-            border-radius: 50%;
-            border: 2px solid #4CAF50;
-            object-fit: cover;
-        }
-
         #sidebar p {
             margin: 0;
             font-size: 1.1em;
-        }
-
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background-color: #4CAF50;
-            border-radius: 10px;
         }
     </style>
 </head>
@@ -170,21 +156,21 @@
     <script src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/listas/iptv.m3u";
-            var listaCanaisElemento = document.getElementById("lista-canais");
-            var searchInput = document.getElementById("search-input");
-            var player = new Clappr.Player({
+            const listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/listas/iptv.m3u";
+            const listaCanaisElemento = document.getElementById("lista-canais");
+            const searchInput = document.getElementById("search-input");
+
+            // Inicialização do Clappr
+            const player = new Clappr.Player({
                 parentId: "#clappr-player",
                 width: "100%",
                 height: "100%",
                 autoPlay: false,
                 mute: false,
-                fullscreenEnabled: true,
-                mediacontrol: {seekbar: "#4CAF50", buttons: "#4CAF50"},
                 playback: {
                     hlsjsConfig: {
-                        reconnectionDelay: 3000, // Delay para reconexão
-                        reconnectAttempts: Infinity // Tentativas de reconexão indefinidas
+                        reconnectionDelay: 3000,
+                        reconnectAttempts: Infinity
                     }
                 }
             });
@@ -194,41 +180,35 @@
             };
 
             // Variável para armazenar os canais
-            var canais = [];
+            let canais = [];
 
-            // Carregar lista de canais e configurá-los
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', listaURL, true);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    var linhas = xhr.responseText.split("\n");
-
-                    for (var i = 0; i < linhas.length; i++) {
+            // Carregar lista de canais
+            fetch(listaURL)
+                .then(response => response.text())
+                .then(data => {
+                    const linhas = data.split("\n");
+                    for (let i = 0; i < linhas.length; i++) {
                         if (linhas[i].startsWith("#EXTINF")) {
-                            var nomeCanal = linhas[i].split(',')[1].trim();
-                            var urlCanal = linhas[i + 1].trim();
-
+                            const nomeCanal = linhas[i].split(',')[1].trim();
+                            const urlCanal = linhas[i + 1].trim();
                             canais.push({ nome: nomeCanal, url: urlCanal });
                         }
                     }
-
                     carregarCanais(canais);
-                }
-            };
-            xhr.send();
+                })
+                .catch(err => console.error("Erro ao carregar a lista de canais:", err));
 
             function carregarCanais(canaisFiltrados) {
                 listaCanaisElemento.innerHTML = '';
-
-                canaisFiltrados.forEach(function(canal) {
-                    var li = document.createElement('li');
+                canaisFiltrados.forEach(canal => {
+                    const li = document.createElement('li');
                     li.innerHTML = '<p>' + canal.nome + '</p>';
                     li.onclick = function() {
-                        player.configure({
-                            source: canal.url, // Fonte do canal
-                            mimeType: 'application/x-mpegURL'
-                        });
-                        player.play();
+                        player.load(canal.url); // Carregar canal no player
+                        player.play(); // Iniciar o player
+                        setTimeout(() => {
+                            player.fullscreen.enter(); // Entrar em tela cheia após o atraso
+                        }, 5000); // Atraso de 5 segundos antes de entrar em tela cheia
                     };
                     listaCanaisElemento.appendChild(li);
                 });
@@ -236,10 +216,8 @@
 
             // Implementar busca
             searchInput.addEventListener('input', function() {
-                var termoBusca = searchInput.value.toLowerCase();
-                var canaisFiltrados = canais.filter(function(canal) {
-                    return canal.nome.toLowerCase().includes(termoBusca);
-                });
+                const termoBusca = searchInput.value.toLowerCase();
+                const canaisFiltrados = canais.filter(canal => canal.nome.toLowerCase().includes(termoBusca));
                 carregarCanais(canaisFiltrados);
             });
         });
