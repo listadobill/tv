@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limpar Nomes de Canais e Adicionar Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .output {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Limpar Nomes de Canais e Adicionar Data</h1>
+    <label for="lista">Cole sua lista de canais:</label>
+    <textarea id="lista" placeholder="Cole a lista aqui..."></textarea>
+
+    <label for="remover">Digite o que deseja remover do nome dos canais:</label>
+    <input type="text" id="remover" placeholder="Exemplo: [BR], CANAL, etc.">
+
+    <button onclick="limparNomes()">Limpar Nomes</button>
+
+    <div class="output">
+        <h3>Lista Limpa:</h3>
+        <textarea id="resultado" readonly></textarea>
+        <br>
+        <button onclick="baixarLista()">Baixar Lista Limpa</button>
+    </div>
+
+    <script>
+        function limparNomes() {
+            let lista = document.getElementById("lista").value;
+            let remover = document.getElementById("remover").value;
+
+            // Cria uma expressão regular que escape qualquer caractere especial no texto que será removido
+            let removerRegex = new RegExp(remover.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
+
+            // Divide a lista em linhas
+            let linhas = lista.split('\n');
+
+            // Itera sobre cada linha e remove o texto desejado
+            let listaLimpa = linhas.map(function(linha) {
+                if (linha.startsWith("#EXTINF")) {
+                    return linha.replace(removerRegex, "").trim(); // Remove o texto e limpa os espaços em branco
+                }
+                return linha; // Mantém a URL sem alterações
+            });
+
+            // Adiciona a linha de atualização com a data e hora atuais como o primeiro canal
+            let dataAtual = new Date();
+            let dia = dataAtual.getDate();
+            let mes = dataAtual.toLocaleString('pt-BR', { month: 'long' });
+            let ano = dataAtual.getFullYear();
+            let hora = dataAtual.getHours();
+            let minutos = dataAtual.getMinutes();
+            let dataFormatada = `${dia} de ${mes} de ${ano} às ${hora}:${minutos.toString().padStart(2, '0')}`;
+
+            let linhaAtualizacao = `#EXTINF:-1, ATUALIZAÇÃO (${dataFormatada})\nhttp://1.m3u8`;
+
+            // Insere o "#EXTM3U" e a linha de atualização no início da lista
+            listaLimpa.unshift(linhaAtualizacao);
+            listaLimpa.unshift("#EXTM3U");
+
+            // Junta as linhas novamente
+            document.getElementById("resultado").value = listaLimpa.join('\n');
+        }
+
+        function baixarLista() {
+            let textoLimpo = document.getElementById("resultado").value;
+            let blob = new Blob([textoLimpo], { type: "text/plain;charset=utf-8" });
+            let link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = "lista_limpa.m3u"; // Nome do arquivo a ser baixado
+            link.click();
+        }
+    </script>
+
+</body>
+</html>
