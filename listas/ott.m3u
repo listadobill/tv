@@ -1,4 +1,7 @@
 #EXTM3U
+#EXTINF:-1, ATUALIZAÇÃO (4 de outubro de 2024 às 14:09)
+http://1.m3u8
+#EXTM3U
 #EXTINF:-1 tvg-id="" tvg-name="[BR] A&E FHD" tvg-logo="" group-title="BRAZIL",[BR] A&E FHD
 http://supersonictv.live:8080/live/945213/876115/84935.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="[BR] Animal Planet FHD" tvg-logo="" group-title="BRAZIL",[BR] Animal Planet FHD
