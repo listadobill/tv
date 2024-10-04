@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TV DO BILL - ALGUNS CANAIS PODEM ESTAR FORA, AGUARDE ATUALIZAÇÃO - DESATIVE CONEXÃO SEGURA</title>
-    <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -79,17 +79,6 @@
             overflow: hidden;
         }
 
-        .video-js {
-            width: 100% !important;
-            height: 100% !important;
-            background-color: #000;
-        }
-
-        .vjs-tech {
-            width: 100% !important;
-            height: 100% !important;
-        }
-
         #sidebar {
             flex: 1;
             background-color: rgba(34, 34, 34, 0.8);
@@ -135,31 +124,6 @@
             font-size: 1.1em;
         }
 
-        .video-js.vjs-fullscreen {
-            width: 100% !important;
-            height: 100% !important;
-            position: fixed;
-            top: 0;
-            left: 0;
-        }
-
-        .video-js.vjs-default-skin .vjs-control-bar {
-            background: rgba(0, 0, 0, 0.6);
-        }
-
-        .video-js .vjs-big-play-button {
-            background-color: rgba(76, 175, 80, 0.8);
-            border: none;
-            border-radius: 50%;
-            font-size: 2.5em;
-            line-height: 1.5;
-            transition: background-color 0.3s ease;
-        }
-
-        .video-js .vjs-big-play-button:hover {
-            background-color: rgba(76, 175, 80, 1);
-        }
-
         ::-webkit-scrollbar {
             width: 10px;
         }
@@ -198,21 +162,31 @@
                 </ul>
             </div>
             <div id="player">
-                <video id="video-player" class="video-js vjs-default-skin" controls></video>
+                <div id="clappr-player"></div>
             </div>
         </div>
     </div>
 
-    <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var listaURL = "http://supersonictv.live:8080/get.php?username=945213&password=876115&type=m3u_plus";
+            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/listas/iptv.m3u";
             var listaCanaisElemento = document.getElementById("lista-canais");
             var searchInput = document.getElementById("search-input");
-            var video = videojs('video-player', {
-                controls: true,
-                autoplay: false,
-                preload: 'auto'
+            var player = new Clappr.Player({
+                parentId: "#clappr-player",
+                width: "100%",
+                height: "100%",
+                autoPlay: false,
+                mute: false,
+                fullscreenEnabled: true,
+                mediacontrol: {seekbar: "#4CAF50", buttons: "#4CAF50"},
+                playback: {
+                    hlsjsConfig: {
+                        reconnectionDelay: 3000, // Delay para reconexão
+                        reconnectAttempts: Infinity // Tentativas de reconexão indefinidas
+                    }
+                }
             });
 
             document.getElementById('home-button').onclick = function() {
@@ -221,44 +195,6 @@
 
             // Variável para armazenar os canais
             var canais = [];
-
-            // Função para abrir em tela cheia
-            function abrirTelaCheia() {
-                if (video.isFullscreen()) {
-                    video.exitFullscreen();
-                } else {
-                    video.requestFullscreen();
-                }
-            }
-
-            // Função de reconexão indefinida
-            function configurarReconexao(player) {
-                function tentarReconectar() {
-                    console.log('Tentando reconectar...');
-
-                    setTimeout(function() {
-                        player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
-                        player.play().catch(function(error) {
-                            console.log('Erro ao reproduzir, tentando novamente...', error);
-                            tentarReconectar(); // Se falhar, tenta novamente
-                        });
-                    }, 3000); // Tentar reconectar após 3 segundos
-                }
-
-                player.on('error', function() {
-                    console.log('Erro de reprodução detectado.');
-                    tentarReconectar();
-                });
-
-                player.on('ended', function() {
-                    console.log('Transmissão encerrada. Tentando reconectar...');
-                    player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
-                    player.play().catch(function(error) {
-                        console.log('Erro ao reproduzir após término, tentando novamente...', error);
-                        tentarReconectar();
-                    });
-                });
-            }
 
             // Carregar lista de canais e configurá-los
             var xhr = new XMLHttpRequest();
@@ -288,9 +224,9 @@
                     var li = document.createElement('li');
                     li.innerHTML = '<p>' + canal.nome + '</p>';
                     li.onclick = function() {
-                        video.src({ src: canal.url, type: 'application/x-mpegURL' });
-                        video.play();
-                        abrirTelaCheia(); // Abre em tela cheia ao clicar no canal
+                        player.load({source: canal.url, mimeType: 'application/x-mpegURL'});
+                        player.play();
+                        player.setFullscreen(true); // Abre em tela cheia ao clicar no canal
                     };
                     listaCanaisElemento.appendChild(li);
                 });
@@ -304,9 +240,6 @@
                 });
                 carregarCanais(canaisFiltrados);
             });
-
-            // Configurar reconexão
-            configurarReconexao(video);
         });
     </script>
 </body>
