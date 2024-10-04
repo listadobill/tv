@@ -73,6 +73,14 @@
                 }
             }
 
+            // Adiciona a data e hora de geração do arquivo
+            const now = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false };
+            const formattedDate = now.toLocaleString('pt-BR', options).replace(',', ''); // Remove a vírgula
+
+            // Criação da entrada de atualização
+            const updateEntry = `#EXTINF:-1, LISTA DO BILL ATUALIZADADA EM (${formattedDate})\nhttp://1.m3u8\n`;
+
             // Unificação e ordenação
             document.getElementById('status').textContent = 'Unificando listas...';
             allEntries.sort((a, b) => {
@@ -89,6 +97,9 @@
                 // Se ambos começam com números ou ambos não começam, ordena alfabeticamente
                 return nameA.localeCompare(nameB);
             });
+
+            // Adiciona a entrada de atualização ao conteúdo unificado
+            unifiedM3UContent += updateEntry;
 
             allEntries.forEach(entry => {
                 unifiedM3UContent += entry.info + '\n' + entry.url + '\n';
