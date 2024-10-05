@@ -15,7 +15,7 @@
             display: flex;
             flex-direction: column;
             height: 100vh;
-            overflow-y: auto;
+            overflow: hidden; /* Impede a rolagem do body */
         }
 
         #container {
@@ -66,7 +66,7 @@
         #main {
             display: flex;
             flex: 1;
-            overflow-y: auto;
+            overflow: hidden; /* Impede a rolagem do main */
         }
 
         #player {
@@ -93,21 +93,23 @@
         #sidebar {
             flex: 1;
             background-color: rgba(34, 34, 34, 0.8);
-            overflow-y: auto;
             padding: 10px;
             border-left: 2px solid #444;
+            position: relative; /* Para posicionar a barra de rolagem */
         }
 
-        #sidebar ul {
+        #lista-canais {
             list-style-type: none;
             padding: 0;
             margin: 0;
             display: flex;
             flex-direction: column;
             gap: 10px;
+            max-height: 70vh; /* Limita a altura da lista de canais */
+            overflow-y: auto; /* Permite a rolagem da lista de canais */
         }
 
-        #sidebar li {
+        #lista-canais li {
             background-color: rgba(50, 50, 50, 0.8);
             border-radius: 8px;
             padding: 10px;
@@ -117,11 +119,11 @@
             transition: background-color 0.3s ease;
         }
 
-        #sidebar li:hover {
+        #lista-canais li:hover {
             background-color: #4CAF50;
         }
 
-        #sidebar img {
+        #lista-canais img {
             width: 50px;
             height: 50px;
             margin-right: 10px;
@@ -130,9 +132,39 @@
             object-fit: cover;
         }
 
-        #sidebar p {
+        #lista-canais p {
             margin: 0;
             font-size: 1.1em;
+        }
+
+        /* Estilo da barra de rolagem */
+        #scroll-container {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 10; /* Para garantir que as setas fiquem em cima da lista */
+        }
+
+        #scroll-up, #scroll-down {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 40px; /* Largura das setas */
+            margin: 5px 0; /* Espaço entre as setas */
+        }
+
+        #scroll-up:hover, #scroll-down:hover {
+            background-color: #45a049;
         }
 
         .video-js.vjs-fullscreen {
@@ -185,6 +217,10 @@
                 <div id="search-bar">
                     <input type="text" id="search-input" placeholder="Buscar canal...">
                 </div>
+                <div id="scroll-container">
+                    <button id="scroll-up" onclick="scrollLista(-50)">↑</button> <!-- Seta para cima -->
+                    <button id="scroll-down" onclick="scrollLista(50)">↓</button> <!-- Seta para baixo -->
+                </div>
                 <ul id="lista-canais">
                     <!-- Canais serão carregados dinamicamente -->
                 </ul>
@@ -223,83 +259,68 @@
                 }
             }
 
-            // Função de reconexão indefinida
-            function configurarReconexao(player) {
-                function tentarReconectar() {
-                    console.log('Tentando reconectar...');
-
-                    setTimeout(function() {
-                        player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
-                        player.play().catch(function(error) {
-                            console.log('Erro ao reproduzir, tentando novamente...', error);
-                            tentarReconectar(); // Se falhar, tenta novamente
-                        });
-                    }, 3000); // Tentar reconectar após 3 segundos
-                }
-
-                player.on('error', function() {
-                    console.log('Erro de reprodução detectado.');
-                    tentarReconectar();
-                });
-
-                player.on('ended', function() {
-                    console.log('Transmissão encerrada. Tentando reconectar...');
-                    player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
-                    player.play().catch(function(error) {
-                        console.log('Erro ao reproduzir após término, tentando novamente...', error);
-                        tentarReconectar();
-                    });
-                });
+            // Função para tentar reconectar ao stream
+            function tentarReconectar() {
+                setTimeout(function() {
+                    video.src({ src: video.src(), type: 'application/x-mpegURL' });
+                    video.load();
+                    video.play();
+                }, 3000); // Reconectar após 3 segundos
             }
 
-            // Carregar lista de canais e configurá-los
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', listaURL, true);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    var linhas = xhr.responseText.split("\n");
-
-                    for (var i = 0; i < linhas.length; i++) {
-                        if (linhas[i].startsWith("#EXTINF")) {
-                            var nomeCanal = linhas[i].split(',')[1].trim();
-                            var urlCanal = linhas[i + 1].trim();
+            // Função para carregar a lista de canais
+            fetch(listaURL)
+                .then(response => response.text())
+                .then(data => {
+                    var linhas = data.split('\n');
+                    linhas.forEach(function(linha) {
+                        if (linha.startsWith('#EXTINF:')) {
+                            var partes = linha.split(',');
+                            var nomeCanal = partes[1].trim();
+                            var urlCanal = linhas[linhas.indexOf(linha) + 1].trim();
 
                             canais.push({ nome: nomeCanal, url: urlCanal });
+
+                            var li = document.createElement("li");
+                            li.textContent = nomeCanal;
+                            li.onclick = function() {
+                                video.src({ src: urlCanal, type: 'application/x-mpegURL' });
+                                video.load();
+                                video.play();
+                                abrirTelaCheia();
+                                video.on('error', tentarReconectar); // Tenta reconectar ao ocorrer um erro
+                            };
+                            listaCanaisElemento.appendChild(li);
                         }
-                    }
-
-                    carregarCanais(canais);
-                }
-            };
-            xhr.send();
-
-            function carregarCanais(canaisFiltrados) {
-                listaCanaisElemento.innerHTML = '';
-
-                canaisFiltrados.forEach(function(canal) {
-                    var li = document.createElement('li');
-                    li.innerHTML = '<p>' + canal.nome + '</p>';
-                    li.onclick = function() {
-                        video.src({ src: canal.url, type: 'application/x-mpegURL' });
-                        video.play();
-                        abrirTelaCheia(); // Abre em tela cheia ao clicar no canal
-                    };
-                    listaCanaisElemento.appendChild(li);
+                    });
                 });
-            }
 
-            // Implementar busca
+            // Função para filtrar canais com base na busca
             searchInput.addEventListener('input', function() {
-                var termoBusca = searchInput.value.toLowerCase();
-                var canaisFiltrados = canais.filter(function(canal) {
-                    return canal.nome.toLowerCase().includes(termoBusca);
+                var filtro = searchInput.value.toLowerCase();
+                listaCanaisElemento.innerHTML = '';
+                canais.forEach(function(canal) {
+                    if (canal.nome.toLowerCase().includes(filtro)) {
+                        var li = document.createElement("li");
+                        li.textContent = canal.nome;
+                        li.onclick = function() {
+                            video.src({ src: canal.url, type: 'application/x-mpegURL' });
+                            video.load();
+                            video.play();
+                            abrirTelaCheia();
+                            video.on('error', tentarReconectar); // Tenta reconectar ao ocorrer um erro
+                        };
+                        listaCanaisElemento.appendChild(li);
+                    }
                 });
-                carregarCanais(canaisFiltrados);
             });
-
-            // Configurar reconexão
-            configurarReconexao(video);
         });
+
+        // Função para rolar a lista de canais
+        function scrollLista(valor) {
+            var listaCanais = document.getElementById("lista-canais");
+            listaCanais.scrollTop += valor;
+        }
     </script>
 </body>
 </html>
