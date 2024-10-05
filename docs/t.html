@@ -52,9 +52,9 @@
         #search-bar {
             padding: 10px;
             background-color: #333;
-            position: sticky; /* Mantém a barra de busca fixada */
-            top: 0; /* Fixa no topo do contêiner pai */
-            z-index: 10; /* Garante que fique acima do conteúdo da lista */
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
 
         #search-input {
@@ -117,6 +117,10 @@
             align-items: center;
             cursor: pointer;
             transition: background-color 0.3s ease;
+        }
+
+        #sidebar li.offline {
+            background-color: rgba(255, 0, 0, 0.6);
         }
 
         #sidebar li:hover {
@@ -222,75 +226,90 @@
             // Variável para armazenar os canais
             var canais = [];
 
-            // Função para abrir em tela cheia
+            // Função para abrir em tela cheia automaticamente
             function abrirTelaCheia() {
-                if (video.isFullscreen()) {
-                    video.exitFullscreen();
-                } else {
-                    video.requestFullscreen();
-                }
+                video.requestFullscreen();
             }
 
             // Função de reconexão indefinida
             function configurarReconexao(player) {
-                function tentarReconectar() {
-                    console.log('Tentando reconectar...');
-
-                    setTimeout(function() {
-                        player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
-                        player.play().catch(function(error) {
-                            console.log('Erro ao reproduzir, tentando novamente...');
-                            tentarReconectar();
-                        });
-                    }, 5000); // tenta reconectar a cada 5 segundos
-                }
-
                 player.on('error', function() {
-                    console.error('Erro encontrado:', player.error());
-                    tentarReconectar();
+                    setTimeout(function() {
+                        player.src(player.currentSrc());
+                        player.play();
+                    }, 3000); // 3 segundos para tentar reconectar
                 });
             }
 
-            // Função para carregar canais
-            fetch(listaURL)
-                .then(response => response.text())
-                .then(data => {
-                    var linhas = data.split('\n');
-                    for (var i = 0; i < linhas.length; i++) {
-                        if (linhas[i].startsWith('#EXTINF')) {
-                            var canal = {};
-                            canal.titulo = linhas[i].substring(linhas[i].indexOf(',') + 1).trim();
-                            canal.url = linhas[i + 1].trim();
-                            canais.push(canal);
-                        }
-                    }
-                    renderizarCanais(canais);
-                });
+            function carregarListaCanais() {
+                fetch(listaURL)
+                    .then(response => response.text())
+                    .then(data => {
+                        canais = data.split("#EXTINF").slice(1).map(canal => {
+                            var linha = canal.split("\n");
+                            var info = linha[0].trim().split(",");
+                            return {
+                                nome: info[1] ? info[1].trim() : "Canal Desconhecido",
+                                url: linha[1].trim()
+                            };
+                        });
+                        renderizarCanais();
+                        verificarStatusCanais();
+                    });
+            }
 
-            // Função para renderizar canais
-            function renderizarCanais(canais) {
-                listaCanaisElemento.innerHTML = "";
+            function renderizarCanais() {
+                listaCanaisElemento.innerHTML = '';
                 canais.forEach(canal => {
                     var li = document.createElement('li');
-                    li.innerHTML = canal.titulo;
-                    li.onclick = function() {
-                        video.src({ src: canal.url, type: 'application/x-mpegURL' });
-                        video.play();
-                        abrirTelaCheia(); // Abre o vídeo em tela cheia
-                    };
+                    li.textContent = canal.nome;
+                    li.onclick = () => carregarVideo(canal.url);
                     listaCanaisElemento.appendChild(li);
                 });
             }
 
-            // Função de busca de canais
+            function carregarVideo(url) {
+                video.src({ type: 'application/x-mpegURL', src: url });
+                video.play();
+                abrirTelaCheia(); // Abrir tela cheia ao iniciar vídeo
+            }
+
+            function verificarStatusCanais() {
+                canais.forEach((canal, index) => {
+                    fetch(canal.url, { method: 'HEAD' })
+                        .then(response => {
+                            if (!response.ok) throw new Error('Canal offline');
+                            marcarCanalOnline(index);
+                        })
+                        .catch(() => marcarCanalOffline(index));
+                });
+                setTimeout(verificarStatusCanais, 60000); // Verifica a cada 60 segundos
+            }
+
+            function marcarCanalOnline(index) {
+                var li = listaCanaisElemento.children[index];
+                li.style.backgroundColor = '';
+                li.textContent = canais[index].nome; // Remove o aviso de offline
+            }
+
+            function marcarCanalOffline(index) {
+                var li = listaCanaisElemento.children[index];
+                li.style.backgroundColor = 'rgba(255, 0, 0, 0.6)';
+                li.textContent = canais[index].nome + " (Offline)";
+            }
+
+            // Filtro de busca
             searchInput.addEventListener('input', function() {
-                var termoBusca = this.value.toLowerCase();
-                var canaisFiltrados = canais.filter(canal => canal.titulo.toLowerCase().includes(termoBusca));
-                renderizarCanais(canaisFiltrados);
+                var filtro = searchInput.value.toLowerCase();
+                var itens = listaCanaisElemento.getElementsByTagName('li');
+                Array.from(itens).forEach(function(item) {
+                    var texto = item.textContent || item.innerText;
+                    item.style.display = texto.toLowerCase().includes(filtro) ? '' : 'none';
+                });
             });
 
-            // Configura reconexão
-            configurarReconexao(video);
+            carregarListaCanais();
+            configurarReconexao(video); // Configura reconexão automática
         });
     </script>
 </body>
