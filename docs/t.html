@@ -52,9 +52,9 @@
         #search-bar {
             padding: 10px;
             background-color: #333;
-            position: sticky;
-            top: 0;
-            z-index: 10;
+            position: sticky; /* Mantém a barra de busca fixada */
+            top: 0; /* Fixa no topo do contêiner pai */
+            z-index: 10; /* Garante que fique acima do conteúdo da lista */
         }
 
         #search-input {
@@ -119,10 +119,6 @@
             transition: background-color 0.3s ease;
         }
 
-        #sidebar li.offline {
-            background-color: rgba(255, 0, 0, 0.6);
-        }
-
         #sidebar li:hover {
             background-color: #4CAF50;
         }
@@ -149,21 +145,41 @@
             left: 0;
         }
 
-        .video-js.vjs-default-skin .vjs-control-bar {
-            background: rgba(0, 0, 0, 0.6);
+        /* Aumentar tamanho dos controles */
+        .video-js .vjs-control {
+            font-size: 2em; /* Aumenta o tamanho dos ícones */
         }
 
+        .video-js .vjs-button {
+            width: 60px; /* Largura dos botões */
+            height: 60px; /* Altura dos botões */
+        }
+
+        .video-js .vjs-fullscreen-control {
+            font-size: 2em; /* Aumenta o tamanho do ícone de fullscreen */
+        }
+
+        .video-js .vjs-play-control {
+            font-size: 2em; /* Aumenta o tamanho do ícone de play/pause */
+        }
+
+        /* Personalizar o botão de tela cheia */
+        .video-js .vjs-fullscreen-control {
+            color: red; /* Cor do ícone de fullscreen */
+        }
+
+        .video-js .vjs-control-bar {
+            height: 70px; /* Altura da barra de controle */
+        }
+
+        /* Centralizar os botões */
         .video-js .vjs-big-play-button {
-            background-color: rgba(76, 175, 80, 0.8);
-            border: none;
-            border-radius: 50%;
-            font-size: 2.5em;
-            line-height: 1.5;
-            transition: background-color 0.3s ease;
-        }
-
-        .video-js .vjs-big-play-button:hover {
-            background-color: rgba(76, 175, 80, 1);
+            font-size: 3em;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%; /* Mantém o formato redondo */
+            line-height: 100px; /* Centraliza o texto */
+            background-color: rgba(76, 175, 80, 0.8); /* Cor de fundo */
         }
 
         ::-webkit-scrollbar {
@@ -226,90 +242,49 @@
             // Variável para armazenar os canais
             var canais = [];
 
-            // Função para abrir em tela cheia automaticamente
+            // Função para abrir em tela cheia
             function abrirTelaCheia() {
-                video.requestFullscreen();
+                if (video.isFullscreen()) {
+                    video.exitFullscreen();
+                } else {
+                    video.requestFullscreen();
+                }
             }
 
-            // Função de reconexão indefinida
-            function configurarReconexao(player) {
-                player.on('error', function() {
-                    setTimeout(function() {
-                        player.src(player.currentSrc());
-                        player.play();
-                    }, 3000); // 3 segundos para tentar reconectar
+            // Carregar e exibir canais
+            fetch(listaURL)
+                .then(response => response.text())
+                .then(data => {
+                    canais = data.split("#EXTINF").slice(1); // Extrair canais da lista M3U
+                    carregarCanais(canais);
                 });
-            }
 
-            function carregarListaCanais() {
-                fetch(listaURL)
-                    .then(response => response.text())
-                    .then(data => {
-                        canais = data.split("#EXTINF").slice(1).map(canal => {
-                            var linha = canal.split("\n");
-                            var info = linha[0].trim().split(",");
-                            return {
-                                nome: info[1] ? info[1].trim() : "Canal Desconhecido",
-                                url: linha[1].trim()
-                            };
-                        });
-                        renderizarCanais();
-                        verificarStatusCanais();
-                    });
-            }
-
-            function renderizarCanais() {
+            // Função para carregar e exibir a lista de canais
+            function carregarCanais(canais) {
                 listaCanaisElemento.innerHTML = '';
-                canais.forEach(canal => {
-                    var li = document.createElement('li');
-                    li.textContent = canal.nome;
-                    li.onclick = () => carregarVideo(canal.url);
+                canais.forEach(function(canal, index) {
+                    var nome = canal.split(",")[1].split("\n")[0].trim(); // Extrair o nome do canal
+                    var url = canal.split("\n")[1].trim(); // Extrair a URL do canal
+
+                    var li = document.createElement("li");
+                    li.innerHTML = "<p>" + nome + "</p>";
+                    li.onclick = function() {
+                        video.src({ type: 'application/x-mpegURL', src: url });
+                        video.play();
+                    };
+
                     listaCanaisElemento.appendChild(li);
                 });
             }
 
-            function carregarVideo(url) {
-                video.src({ type: 'application/x-mpegURL', src: url });
-                video.play();
-                abrirTelaCheia(); // Abrir tela cheia ao iniciar vídeo
-            }
-
-            function verificarStatusCanais() {
-                canais.forEach((canal, index) => {
-                    fetch(canal.url, { method: 'HEAD' })
-                        .then(response => {
-                            if (!response.ok) throw new Error('Canal offline');
-                            marcarCanalOnline(index);
-                        })
-                        .catch(() => marcarCanalOffline(index));
+            // Função para filtrar canais
+            searchInput.addEventListener("input", function() {
+                var query = searchInput.value.toLowerCase();
+                var canaisFiltrados = canais.filter(function(canal) {
+                    return canal.toLowerCase().includes(query);
                 });
-                setTimeout(verificarStatusCanais, 60000); // Verifica a cada 60 segundos
-            }
-
-            function marcarCanalOnline(index) {
-                var li = listaCanaisElemento.children[index];
-                li.style.backgroundColor = '';
-                li.textContent = canais[index].nome; // Remove o aviso de offline
-            }
-
-            function marcarCanalOffline(index) {
-                var li = listaCanaisElemento.children[index];
-                li.style.backgroundColor = 'rgba(255, 0, 0, 0.6)';
-                li.textContent = canais[index].nome + " (Offline)";
-            }
-
-            // Filtro de busca
-            searchInput.addEventListener('input', function() {
-                var filtro = searchInput.value.toLowerCase();
-                var itens = listaCanaisElemento.getElementsByTagName('li');
-                Array.from(itens).forEach(function(item) {
-                    var texto = item.textContent || item.innerText;
-                    item.style.display = texto.toLowerCase().includes(filtro) ? '' : 'none';
-                });
+                carregarCanais(canaisFiltrados);
             });
-
-            carregarListaCanais();
-            configurarReconexao(video); // Configura reconexão automática
         });
     </script>
 </body>
