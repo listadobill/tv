@@ -69,27 +69,35 @@
             display: flex;
             flex: 1;
             overflow-y: auto;
+            position: relative; /* Para o posicionamento do player */
+            margin-top: 10px; /* Espaço entre o header e a lista */
         }
 
         #player {
-            flex: 2;
+            position: relative; /* Muda de absolute para relative */
+            top: 0; /* Fica no topo */
+            left: 0;
+            width: 400px; /* Largura do player */
+            height: 400px; /* Altura do player */
             background-color: rgba(0, 0, 0, 0.8);
-            position: relative;
+            z-index: 20; /* Garante que fique acima de outros elementos */
             display: flex;
             justify-content: center;
             align-items: center;
             overflow: hidden;
+            margin-top: 10px; /* Espaço abaixo da lista */
         }
 
         .video-js {
             width: 100% !important;
-            height: 100% !important;
+            height: 100% !important; /* Define a altura do vídeo */
+            max-height: 400px; /* Limita a altura máxima do vídeo */
             background-color: #000;
         }
 
         .vjs-tech {
             width: 100% !important;
-            height: 100% !important;
+            height: 100% !important; /* Mantém a altura automática */
         }
 
         #sidebar {
@@ -175,7 +183,7 @@
 <body>
     <div id="container">
         <div id="header">
-           DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV - Atualização, 29 de Setembro de 2024: https://bit.ly/tvdobill-iptv - EPG https://bit.ly/tvdobill-epg 
+            DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV - Atualização, 29 de Setembro de 2024: https://bit.ly/tvdobill-iptv - EPG https://bit.ly/tvdobill-epg 
             <div>
                 <button id="home-button">CANAIS, SÉRIES E FILMES STREAM</button>
                 <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/'">TV DO BILL</button>
@@ -206,7 +214,7 @@
     <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/listadecanais.m3u";
+            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/listadecanais.m3u"; // Verifique se essa URL está correta
             var listaCanaisElemento = document.getElementById("lista-canais");
             var searchInput = document.getElementById("search-input");
             var video = videojs('video-player', {
@@ -216,90 +224,91 @@
             });
 
             document.getElementById('home-button').onclick = function() {
-                window.location.href = "https://listadobill.github.io/tv/inicial";
+                window.location.href = "https://listadobill.github.io/tv/";
             };
 
-            // Variável para armazenar os canais
-            var canais = [];
+            // Carregando a lista de canais
+            fetch(listaURL)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Rede não disponível: ' + response.status);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    var canais = data.split('\n');
+                    let canalAtual = ''; // Variável para armazenar o nome do canal atual
+                    canais.forEach((linha, index) => {
+                        if (linha.startsWith('#EXTINF')) {
+                            // Extraindo o nome do canal a partir da linha EXTINF
+                            const regex = /tvg-id="([^"]+)" tvg-logo="([^"]+)" group-title="([^"]+)",(.+)/;
+                            const match = linha.match(regex);
+                            if (match) {
+                                canalAtual = match[4].trim(); // Nome do canal
+                                const logo = match[2]; // Logo do canal
+                                const li = document.createElement('li');
+                                li.innerHTML = `<img src="${logo}" alt="${canalAtual} logo"> <p>${canalAtual}</p>`; // Adiciona imagem e nome do canal
+                                li.onclick = function() {
+                                    const canalURL = canais[index + 1]; // A URL do canal está na linha seguinte
+                                    video.src({ type: 'application/x-mpegURL', src: canalURL }); // Adiciona a URL do canal
+                                    video.load();
+                                    video.play();
+                                    abrirTelaCheia(); // Chama a função para abrir em tela cheia
+                                };
+                                listaCanaisElemento.appendChild(li);
+                            }
+                        }
+                    });
+                })
+                .catch(error => {
+                    console.error('Erro ao carregar canais:', error);
+                    alert('Erro ao carregar canais: ' + error.message); // Exibe uma mensagem de erro ao usuário
+                });
 
-            // Função para abrir em tela cheia
-            function abrirTelaCheia() {
-                if (!video.isFullscreen()) {
-                    video.requestFullscreen();
-                }
-            }
+            // Implementando a busca
+            searchInput.addEventListener("keyup", function() {
+                var filter = searchInput.value.toLowerCase();
+                var items = listaCanaisElemento.getElementsByTagName('li');
+                Array.from(items).forEach(item => {
+                    if (item.textContent.toLowerCase().indexOf(filter) > -1) {
+                        item.style.display = "";
+                    } else {
+                        item.style.display = "none";
+                    }
+                });
+            });
 
-            // Função de reconexão indefinida
+            // Configurando reconexão
             function configurarReconexao(player) {
                 function tentarReconectar() {
-                    console.log('Tentando reconectar...');
-
-                    setTimeout(function() {
-                        player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
-                        player.play().catch(function(error) {
-                            console.log('Erro ao reproduzir, tentando novamente...');
-                            tentarReconectar();
-                        });
-                    }, 5000); // tenta reconectar a cada 5 segundos
+                    player.src({ type: 'application/x-mpegURL', src: listaURL }); // Adicione a URL da sua fonte
+                    player.play().catch(error => {
+                        console.error('Erro ao reproduzir:', error);
+                        setTimeout(tentarReconectar, 5000); // Tenta novamente após 5 segundos
+                    });
                 }
 
                 player.on('error', function() {
-                    console.error('Erro encontrado:', player.error());
+                    console.log('Erro detectado, tentando reconectar...');
                     tentarReconectar();
                 });
             }
 
-            // Função para carregar canais
-            fetch(listaURL)
-                .then(response => response.text())
-                .then(data => {
-                    var linhas = data.split('\n');
-                    for (var i = 0; i < linhas.length; i++) {
-                        if (linhas[i].startsWith('#EXTINF')) {
-                            var canal = {};
-                            canal.titulo = linhas[i].split(',')[1].trim();
-                            canal.url = linhas[i + 1].trim();
-                            canais.push(canal);
-                        }
-                    }
-
-                    // Filtrando canais ao digitar no campo de busca
-                    searchInput.addEventListener("input", function() {
-                        var filtro = searchInput.value.toLowerCase();
-                        var canaisFiltrados = canais.filter(function(canal) {
-                            return canal.titulo.toLowerCase().includes(filtro);
-                        });
-                        mostrarCanais(canaisFiltrados);
-                    });
-
-                    // Exibir todos os canais inicialmente
-                    mostrarCanais(canais);
-                });
-
-            // Função para mostrar os canais na lista
-            function mostrarCanais(canais) {
-                listaCanaisElemento.innerHTML = "";
-
-                canais.forEach(function(canal) {
-                    var li = document.createElement("li");
-                    var p = document.createElement("p");
-                    p.textContent = canal.titulo;
-                    li.appendChild(p);
-
-                    li.onclick = function() {
-                        video.src({ src: canal.url, type: 'application/x-mpegURL' });
-                        video.play().then(function() {
-                            abrirTelaCheia();
-                        }).catch(function(error) {
-                            console.error("Erro ao tentar reproduzir o canal:", error);
-                        });
-                    };
-
-                    listaCanaisElemento.appendChild(li);
-                });
+            // Função para abrir o player em tela cheia
+            function abrirTelaCheia() {
+                const videoElement = document.getElementById('video-player');
+                if (videoElement.requestFullscreen) {
+                    videoElement.requestFullscreen();
+                } else if (videoElement.mozRequestFullScreen) { // Firefox
+                    videoElement.mozRequestFullScreen();
+                } else if (videoElement.webkitRequestFullscreen) { // Chrome, Safari e Opera
+                    videoElement.webkitRequestFullscreen();
+                } else if (videoElement.msRequestFullscreen) { // IE/Edge
+                    videoElement.msRequestFullscreen();
+                }
             }
 
-            // Configura reconexão automática em caso de falha na transmissão
+            // Iniciar configuração de reconexão
             configurarReconexao(video);
         });
     </script>
