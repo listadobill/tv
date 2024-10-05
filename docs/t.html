@@ -131,15 +131,6 @@
             background-color: #4CAF50;
         }
 
-        #sidebar img {
-            width: 50px;
-            height: 50px;
-            margin-right: 10px;
-            border-radius: 50%;
-            border: 2px solid #4CAF50;
-            object-fit: cover;
-        }
-
         #sidebar p {
             margin: 0;
             font-size: 1.1em;
@@ -241,75 +232,38 @@
                     canais.forEach((linha, index) => {
                         if (linha.startsWith('#EXTINF')) {
                             // Extraindo o nome do canal a partir da linha EXTINF
-                            const regex = /tvg-id="([^"]+)" tvg-logo="([^"]+)" group-title="([^"]+)",(.+)/;
+                            const regex = /tvg-id="([^"]+)" tvg-logo="([^"]+)" group-title="([^"]+)",(.*)/;
                             const match = linha.match(regex);
                             if (match) {
-                                canalAtual = match[4].trim(); // Nome do canal
-                                const logo = match[2]; // Logo do canal
-                                const li = document.createElement('li');
-                                li.innerHTML = `<img src="${logo}" alt="${canalAtual} logo"> <p>${canalAtual}</p>`; // Adiciona imagem e nome do canal
-                                li.onclick = function() {
-                                    const canalURL = canais[index + 1]; // A URL do canal está na linha seguinte
-                                    video.src({ type: 'application/x-mpegURL', src: canalURL }); // Adiciona a URL do canal
-                                    video.load();
-                                    video.play();
-                                    abrirTelaCheia(); // Chama a função para abrir em tela cheia
+                                canalAtual = match[4]; // O nome do canal
+                                let item = document.createElement('li');
+                                item.textContent = canalAtual; // Adiciona apenas o nome do canal
+                                item.onclick = function() {
+                                    const url = canais[index + 1]; // URL do próximo item na lista
+                                    if (url) {
+                                        video.src({ src: url, type: 'application/x-mpegURL' });
+                                        video.play();
+                                    }
                                 };
-                                listaCanaisElemento.appendChild(li);
+                                listaCanaisElemento.appendChild(item);
                             }
+                        }
+                    });
+
+                    // Implementando a busca
+                    searchInput.addEventListener('input', function() {
+                        const query = this.value.toLowerCase();
+                        const itens = listaCanaisElemento.getElementsByTagName('li');
+                        for (let i = 0; i < itens.length; i++) {
+                            const canalNome = itens[i].textContent.toLowerCase();
+                            itens[i].style.display = canalNome.includes(query) ? 'block' : 'none';
                         }
                     });
                 })
                 .catch(error => {
-                    console.error('Erro ao carregar canais:', error);
-                    alert('Erro ao carregar canais: ' + error.message); // Exibe uma mensagem de erro ao usuário
+                    console.error('Erro ao carregar a lista de canais:', error);
+                    alert('Erro ao carregar a lista de canais. Verifique a URL e tente novamente.');
                 });
-
-            // Implementando a busca
-            searchInput.addEventListener("keyup", function() {
-                var filter = searchInput.value.toLowerCase();
-                var items = listaCanaisElemento.getElementsByTagName('li');
-                Array.from(items).forEach(item => {
-                    if (item.textContent.toLowerCase().indexOf(filter) > -1) {
-                        item.style.display = "";
-                    } else {
-                        item.style.display = "none";
-                    }
-                });
-            });
-
-            // Configurando reconexão
-            function configurarReconexao(player) {
-                function tentarReconectar() {
-                    player.src({ type: 'application/x-mpegURL', src: listaURL }); // Adicione a URL da sua fonte
-                    player.play().catch(error => {
-                        console.error('Erro ao reproduzir:', error);
-                        setTimeout(tentarReconectar, 5000); // Tenta novamente após 5 segundos
-                    });
-                }
-
-                player.on('error', function() {
-                    console.log('Erro detectado, tentando reconectar...');
-                    tentarReconectar();
-                });
-            }
-
-            // Função para abrir o player em tela cheia
-            function abrirTelaCheia() {
-                const videoElement = document.getElementById('video-player');
-                if (videoElement.requestFullscreen) {
-                    videoElement.requestFullscreen();
-                } else if (videoElement.mozRequestFullScreen) { // Firefox
-                    videoElement.mozRequestFullScreen();
-                } else if (videoElement.webkitRequestFullscreen) { // Chrome, Safari e Opera
-                    videoElement.webkitRequestFullscreen();
-                } else if (videoElement.msRequestFullscreen) { // IE/Edge
-                    videoElement.msRequestFullscreen();
-                }
-            }
-
-            // Iniciar configuração de reconexão
-            configurarReconexao(video);
         });
     </script>
 </body>
