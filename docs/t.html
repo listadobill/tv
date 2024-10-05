@@ -52,9 +52,9 @@
         #search-bar {
             padding: 10px;
             background-color: #333;
-            position: sticky; /* Mantém a barra de busca fixada */
-            top: 0; /* Fixa no topo do contêiner pai */
-            z-index: 10; /* Garante que fique acima do conteúdo da lista */
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
 
         #search-input {
@@ -145,41 +145,21 @@
             left: 0;
         }
 
-        /* Aumentar tamanho dos controles */
-        .video-js .vjs-control {
-            font-size: 2em; /* Aumenta o tamanho dos ícones */
+        .video-js.vjs-default-skin .vjs-control-bar {
+            background: rgba(0, 0, 0, 0.6);
         }
 
-        .video-js .vjs-button {
-            width: 60px; /* Largura dos botões */
-            height: 60px; /* Altura dos botões */
-        }
-
-        .video-js .vjs-fullscreen-control {
-            font-size: 2em; /* Aumenta o tamanho do ícone de fullscreen */
-        }
-
-        .video-js .vjs-play-control {
-            font-size: 2em; /* Aumenta o tamanho do ícone de play/pause */
-        }
-
-        /* Personalizar o botão de tela cheia */
-        .video-js .vjs-fullscreen-control {
-            color: red; /* Cor do ícone de fullscreen */
-        }
-
-        .video-js .vjs-control-bar {
-            height: 70px; /* Altura da barra de controle */
-        }
-
-        /* Centralizar os botões */
         .video-js .vjs-big-play-button {
-            font-size: 3em;
-            width: 100px;
-            height: 100px;
-            border-radius: 50%; /* Mantém o formato redondo */
-            line-height: 100px; /* Centraliza o texto */
-            background-color: rgba(76, 175, 80, 0.8); /* Cor de fundo */
+            background-color: rgba(76, 175, 80, 0.8);
+            border: none;
+            border-radius: 50%;
+            font-size: 2.5em;
+            line-height: 1.5;
+            transition: background-color 0.3s ease;
+        }
+
+        .video-js .vjs-big-play-button:hover {
+            background-color: rgba(76, 175, 80, 1);
         }
 
         ::-webkit-scrollbar {
@@ -195,7 +175,7 @@
 <body>
     <div id="container">
         <div id="header">
-            SERVIDOR 1 - DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV - Atualização, 29 de Setembro de 2024: https://bit.ly/tvdobill-iptv - EPG https://bit.ly/tvdobill-epg 
+           DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV - Atualização, 29 de Setembro de 2024: https://bit.ly/tvdobill-iptv - EPG https://bit.ly/tvdobill-epg 
             <div>
                 <button id="home-button">CANAIS, SÉRIES E FILMES STREAM</button>
                 <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/'">TV DO BILL</button>
@@ -244,47 +224,83 @@
 
             // Função para abrir em tela cheia
             function abrirTelaCheia() {
-                if (video.isFullscreen()) {
-                    video.exitFullscreen();
-                } else {
+                if (!video.isFullscreen()) {
                     video.requestFullscreen();
                 }
             }
 
-            // Carregar e exibir canais
+            // Função de reconexão indefinida
+            function configurarReconexao(player) {
+                function tentarReconectar() {
+                    console.log('Tentando reconectar...');
+
+                    setTimeout(function() {
+                        player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
+                        player.play().catch(function(error) {
+                            console.log('Erro ao reproduzir, tentando novamente...');
+                            tentarReconectar();
+                        });
+                    }, 5000); // tenta reconectar a cada 5 segundos
+                }
+
+                player.on('error', function() {
+                    console.error('Erro encontrado:', player.error());
+                    tentarReconectar();
+                });
+            }
+
+            // Função para carregar canais
             fetch(listaURL)
                 .then(response => response.text())
                 .then(data => {
-                    canais = data.split("#EXTINF").slice(1); // Extrair canais da lista M3U
-                    carregarCanais(canais);
+                    var linhas = data.split('\n');
+                    for (var i = 0; i < linhas.length; i++) {
+                        if (linhas[i].startsWith('#EXTINF')) {
+                            var canal = {};
+                            canal.titulo = linhas[i].split(',')[1].trim();
+                            canal.url = linhas[i + 1].trim();
+                            canais.push(canal);
+                        }
+                    }
+
+                    // Filtrando canais ao digitar no campo de busca
+                    searchInput.addEventListener("input", function() {
+                        var filtro = searchInput.value.toLowerCase();
+                        var canaisFiltrados = canais.filter(function(canal) {
+                            return canal.titulo.toLowerCase().includes(filtro);
+                        });
+                        mostrarCanais(canaisFiltrados);
+                    });
+
+                    // Exibir todos os canais inicialmente
+                    mostrarCanais(canais);
                 });
 
-            // Função para carregar e exibir a lista de canais
-            function carregarCanais(canais) {
-                listaCanaisElemento.innerHTML = '';
-                canais.forEach(function(canal, index) {
-                    var nome = canal.split(",")[1].split("\n")[0].trim(); // Extrair o nome do canal
-                    var url = canal.split("\n")[1].trim(); // Extrair a URL do canal
+            // Função para mostrar os canais na lista
+            function mostrarCanais(canais) {
+                listaCanaisElemento.innerHTML = "";
 
+                canais.forEach(function(canal) {
                     var li = document.createElement("li");
-                    li.innerHTML = "<p>" + nome + "</p>";
+                    var p = document.createElement("p");
+                    p.textContent = canal.titulo;
+                    li.appendChild(p);
+
                     li.onclick = function() {
-                        video.src({ type: 'application/x-mpegURL', src: url });
-                        video.play();
+                        video.src({ src: canal.url, type: 'application/x-mpegURL' });
+                        video.play().then(function() {
+                            abrirTelaCheia();
+                        }).catch(function(error) {
+                            console.error("Erro ao tentar reproduzir o canal:", error);
+                        });
                     };
 
                     listaCanaisElemento.appendChild(li);
                 });
             }
 
-            // Função para filtrar canais
-            searchInput.addEventListener("input", function() {
-                var query = searchInput.value.toLowerCase();
-                var canaisFiltrados = canais.filter(function(canal) {
-                    return canal.toLowerCase().includes(query);
-                });
-                carregarCanais(canaisFiltrados);
-            });
+            // Configura reconexão automática em caso de falha na transmissão
+            configurarReconexao(video);
         });
     </script>
 </body>
