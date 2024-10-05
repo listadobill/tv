@@ -1,5 +1,5 @@
 #EXTM3U
-#EXTINF:-1, ATUALIZAÇÃO (4 de outubro de 2024 às 20:27)
+#EXTINF:-1, ATUALIZAÇÃO (4 de outubro de 2024 às 21:08)
 http://1.m3u8
 #EXTINF:-1 tvg-id="100AutoMotoTV.bg" tvg-logo="https://i.imgur.com/SZtJfOG.png" group-title="Auto",100% Auto Moto TV (406p) [Not 24/7]
 http://100automoto.tv:1935/bgtv1/autotv/playlist.m3u8
@@ -1491,10 +1491,20 @@ http://supersonictv.live:8080/live/945213/876115/85002.m3u8
 http://supersonictv.live:8080/live/945213/876115/85003.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Globo Minas FHD" tvg-logo="" group-title="BRAZIL",Globo Minas FHD
 http://supersonictv.live:8080/live/945213/876115/85004.m3u8
+#EXTINF:-1, Globo News
+http://play.1list.vip/live/tradicao/obhqakxwo7/37093.m3u8
 #EXTINF:-1,Globo News
 http://vip.sibfungold.net:8080/live/terminatortv/NPVSNvvYna@QNb0IorEwJ/47517.m3u8
+#EXTINF:-1, Globo News [4K]
+http://play.1list.vip/live/tradicao/obhqakxwo7/74789.m3u8
+#EXTINF:-1, Globo News FHD
+http://play.1list.vip/live/tradicao/obhqakxwo7/38397.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Globo News FHD" tvg-logo="" group-title="BRAZIL",Globo News FHD
 http://supersonictv.live:8080/live/945213/876115/85005.m3u8
+#EXTINF:-1, Globo News H265
+http://play.1list.vip/live/tradicao/obhqakxwo7/62840.m3u8
+#EXTINF:-1, Globo News HD
+http://play.1list.vip/live/tradicao/obhqakxwo7/36917.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Globo Nordeste FHD" tvg-logo="" group-title="BRAZIL",Globo Nordeste FHD
 http://supersonictv.live:8080/live/945213/876115/85006.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Globo NSC Centro Oeste FHD" tvg-logo="" group-title="BRAZIL",Globo NSC Centro Oeste FHD
@@ -1609,16 +1619,6 @@ http://supersonictv.live:8080/live/945213/876115/85027.m3u8
 http://supersonictv.live:8080/live/945213/876115/85210.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Globo TV Verdes Mares FHD" tvg-logo="" group-title="BRAZIL",Globo TV Verdes Mares FHD
 http://supersonictv.live:8080/live/945213/876115/85028.m3u8
-#EXTINF:-1, GloboNews
-http://play.1list.vip/live/tradicao/obhqakxwo7/37093.m3u8
-#EXTINF:-1, GloboNews [4K]
-http://play.1list.vip/live/tradicao/obhqakxwo7/74789.m3u8
-#EXTINF:-1, GloboNews FHD
-http://play.1list.vip/live/tradicao/obhqakxwo7/38397.m3u8
-#EXTINF:-1, GloboNews H265
-http://play.1list.vip/live/tradicao/obhqakxwo7/62840.m3u8
-#EXTINF:-1, GloboNews HD
-http://play.1list.vip/live/tradicao/obhqakxwo7/36917.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="GloboTV Anhanguera FHD" tvg-logo="" group-title="BRAZIL",GloboTV Anhanguera FHD
 http://supersonictv.live:8080/live/945213/876115/85029.m3u8
 #EXTINF:-1, Gloob
