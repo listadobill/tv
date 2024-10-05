@@ -15,7 +15,7 @@
             display: flex;
             flex-direction: column;
             height: 100vh;
-            overflow-y: hidden; /* Alterado para evitar rolagem do body */
+            overflow: hidden; /* Evita rolagem do body */
         }
 
         #container {
@@ -52,7 +52,7 @@
         #main {
             display: flex;
             flex: 1;
-            overflow-y: hidden; /* Evita rolagem no main */
+            overflow: hidden; /* Evita rolagem no main */
         }
 
         #player {
@@ -80,10 +80,10 @@
         }
 
         #search-bar {
+            position: sticky; /* Fixa na parte superior do sidebar */
+            top: 0; /* Fica no topo */
             padding: 10px;
-            background-color: #333;
-            position: sticky; /* Permite que o campo de busca fique fixo */
-            top: 0; /* Fixa no topo do sidebar */
+            background-color: rgba(51, 51, 51, 0.8); /* Fundo para destaque */
             z-index: 10; /* Garante que fique acima da lista */
         }
 
