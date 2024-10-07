@@ -15,7 +15,7 @@
             display: flex;
             flex-direction: column;
             height: 100vh;
-            overflow: hidden; /* Impede a rolagem do body */
+            overflow-y: hidden; /* Remover rolagem do body */
         }
 
         #container {
@@ -66,7 +66,7 @@
         #main {
             display: flex;
             flex: 1;
-            overflow: hidden; /* Impede a rolagem do main */
+            overflow-y: hidden; /* Remover rolagem do main */
         }
 
         #player {
@@ -93,23 +93,22 @@
         #sidebar {
             flex: 1;
             background-color: rgba(34, 34, 34, 0.8);
+            overflow-y: auto;
             padding: 10px;
             border-left: 2px solid #444;
-            position: relative; /* Para posicionar a barra de rolagem */
+            position: relative;
         }
 
-        #lista-canais {
+        #sidebar ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
             display: flex;
             flex-direction: column;
             gap: 10px;
-            max-height: 70vh; /* Limita a altura da lista de canais */
-            overflow-y: auto; /* Permite a rolagem da lista de canais */
         }
 
-        #lista-canais li {
+        #sidebar li {
             background-color: rgba(50, 50, 50, 0.8);
             border-radius: 8px;
             padding: 10px;
@@ -119,11 +118,11 @@
             transition: background-color 0.3s ease;
         }
 
-        #lista-canais li:hover {
+        #sidebar li:hover {
             background-color: #4CAF50;
         }
 
-        #lista-canais img {
+        #sidebar img {
             width: 50px;
             height: 50px;
             margin-right: 10px;
@@ -132,39 +131,9 @@
             object-fit: cover;
         }
 
-        #lista-canais p {
+        #sidebar p {
             margin: 0;
             font-size: 1.1em;
-        }
-
-        /* Estilo da barra de rolagem */
-        #scroll-container {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 50px;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index: 10; /* Para garantir que as setas fiquem em cima da lista */
-        }
-
-        #scroll-up, #scroll-down {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            width: 40px; /* Largura das setas */
-            margin: 5px 0; /* Espaço entre as setas */
-        }
-
-        #scroll-up:hover, #scroll-down:hover {
-            background-color: #45a049;
         }
 
         .video-js.vjs-fullscreen {
@@ -192,6 +161,23 @@
             background-color: rgba(76, 175, 80, 1);
         }
 
+        .scroll-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .scroll-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            margin: 5px 0; /* Margem vertical para espaçamento */
+            transition: background-color 0.3s ease;
+        }
+
         ::-webkit-scrollbar {
             width: 10px;
         }
@@ -207,8 +193,8 @@
         <div id="header">
             SERVIDOR 1 - DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV - Atualização, 29 de Setembro de 2024: https://bit.ly/tvdobill-iptv - EPG https://bit.ly/tvdobill-epg 
             <div>
-                <button id="home-button">CANAIS, SÉRIES E FILMES STREAM</button>
-                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/'">LISTA DO BILL</button>
+                <button id="home-button">CANAIS, SÉRIES E FILMES STREAM DE PAGINAS EXTERNAS</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/'">SMART TVS</button>
                 <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/moble'">PARA CELULARES E TABLETS</button>
             </div>
         </div>
@@ -217,13 +203,13 @@
                 <div id="search-bar">
                     <input type="text" id="search-input" placeholder="Buscar canal...">
                 </div>
-                <div id="scroll-container">
-                    <button id="scroll-up" onclick="scrollLista(-50)">↑</button> <!-- Seta para cima -->
-                    <button id="scroll-down" onclick="scrollLista(50)">↓</button> <!-- Seta para baixo -->
-                </div>
                 <ul id="lista-canais">
                     <!-- Canais serão carregados dinamicamente -->
                 </ul>
+            </div>
+            <div class="scroll-container">
+                <button class="scroll-button" id="scroll-up">↑</button>
+                <button class="scroll-button" id="scroll-down">↓</button>
             </div>
             <div id="player">
                 <video id="video-player" class="video-js vjs-default-skin" controls></video>
@@ -259,68 +245,80 @@
                 }
             }
 
-            // Função para tentar reconectar ao stream
-            function tentarReconectar() {
-                setTimeout(function() {
-                    video.src({ src: video.src(), type: 'application/x-mpegURL' });
-                    video.load();
-                    video.play();
-                }, 3000); // Reconectar após 3 segundos
+            // Função de reconexão indefinida
+            function configurarReconexao(player) {
+                function tentarReconectar() {
+                    console.log('Tentando reconectar...');
+
+                    setTimeout(function() {
+                        player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
+                        player.play().catch(function(error) {
+                            console.log('Erro ao reproduzir, tentando novamente...', error);
+                            tentarReconectar(); // Se falhar, tenta novamente
+                        });
+                    }, 3000); // Tentar reconectar após 3 segundos
+                }
+
+                player.on('error', function() {
+                    console.log('Erro de reprodução detectado, tentando reconectar...');
+                    tentarReconectar();
+                });
             }
 
-            // Função para carregar a lista de canais
+            // Carregar os canais
             fetch(listaURL)
                 .then(response => response.text())
                 .then(data => {
                     var linhas = data.split('\n');
                     linhas.forEach(function(linha) {
-                        if (linha.startsWith('#EXTINF:')) {
-                            var partes = linha.split(',');
-                            var nomeCanal = partes[1].trim();
-                            var urlCanal = linhas[linhas.indexOf(linha) + 1].trim();
-
-                            canais.push({ nome: nomeCanal, url: urlCanal });
-
-                            var li = document.createElement("li");
-                            li.textContent = nomeCanal;
-                            li.onclick = function() {
-                                video.src({ src: urlCanal, type: 'application/x-mpegURL' });
-                                video.load();
-                                video.play();
-                                abrirTelaCheia();
-                                video.on('error', tentarReconectar); // Tenta reconectar ao ocorrer um erro
+                        if (linha.startsWith('#EXTINF')) {
+                            var canal = {
+                                info: linha,
+                                url: linhas[linhas.indexOf(linha) + 1]
                             };
-                            listaCanaisElemento.appendChild(li);
+                            canais.push(canal);
                         }
                     });
-                });
 
-            // Função para filtrar canais com base na busca
-            searchInput.addEventListener('input', function() {
-                var filtro = searchInput.value.toLowerCase();
-                listaCanaisElemento.innerHTML = '';
-                canais.forEach(function(canal) {
-                    if (canal.nome.toLowerCase().includes(filtro)) {
+                    canais.forEach(function(canal) {
                         var li = document.createElement("li");
-                        li.textContent = canal.nome;
+                        li.innerHTML = `<img src="https://via.placeholder.com/50" alt="Canal"> <p>${canal.info.split(',')[1]}</p>`;
                         li.onclick = function() {
                             video.src({ src: canal.url, type: 'application/x-mpegURL' });
-                            video.load();
                             video.play();
-                            abrirTelaCheia();
-                            video.on('error', tentarReconectar); // Tenta reconectar ao ocorrer um erro
+                            abrirTelaCheia(); // Chama a função para abrir em tela cheia
+                            configurarReconexao(video); // Chama a função de reconexão
                         };
                         listaCanaisElemento.appendChild(li);
-                    }
-                });
+                    });
+                })
+                .catch(error => console.error('Erro ao carregar lista de canais:', error));
+
+            // Implementar a rolagem da lista
+            const scrollDownButton = document.getElementById("scroll-down");
+            const scrollUpButton = document.getElementById("scroll-up");
+            const sidebar = document.getElementById("sidebar");
+
+            scrollDownButton.addEventListener("click", function() {
+                sidebar.scrollBy(0, 100); // Rola 100 pixels para baixo
+            });
+
+            scrollUpButton.addEventListener("click", function() {
+                sidebar.scrollBy(0, -100); // Rola 100 pixels para cima
+            });
+
+            // Funcionalidade de busca
+            searchInput.addEventListener("input", function() {
+                var filtro = searchInput.value.toLowerCase();
+                var itens = listaCanaisElemento.getElementsByTagName("li");
+
+                for (var i = 0; i < itens.length; i++) {
+                    var item = itens[i];
+                    var texto = item.textContent || item.innerText;
+                    item.style.display = texto.toLowerCase().indexOf(filtro) > -1 ? "" : "none";
+                }
             });
         });
-
-        // Função para rolar a lista de canais
-        function scrollLista(valor) {
-            var listaCanais = document.getElementById("lista-canais");
-            listaCanais.scrollTop += valor;
-        }
     </script>
 </body>
 </html>
