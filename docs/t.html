@@ -280,55 +280,47 @@
                 .then(data => {
                     var linhas = data.split("\n");
                     for (var i = 0; i < linhas.length; i++) {
-                        if (linhas[i].startsWith("#EXTINF")) {
-                            var nome = linhas[i].split(",")[1];
-                            var url = linhas[i + 1];
-                            var itemLista = document.createElement("li");
-                            itemLista.innerHTML = `<p>${nome}</p>`;
-                            itemLista.addEventListener("click", function() {
-                                video.src({ src: url, type: 'application/x-mpegURL' });
-                                video.play();
-                                abrirTelaCheia();
-                            });
-                            listaCanaisElemento.appendChild(itemLista);
-                            canais.push({ nome: nome, url: url });
+                        if (linhas[i].startsWith("#EXTINF:")) {
+                            var canal = {
+                                nome: linhas[i].split(",")[1],
+                                url: linhas[i + 1]
+                            };
+                            canais.push(canal);
+                            var li = document.createElement("li");
+                            li.textContent = canal.nome;
+                            li.onclick = (function(canal) {
+                                return function() {
+                                    video.src({ src: canal.url, type: 'application/x-mpegURL' });
+                                    abrirTelaCheia();
+                                    video.play();
+                                    configurarReconexao(video); // Configura reconexão ao iniciar
+                                };
+                            })(canal);
+                            listaCanaisElemento.appendChild(li);
                         }
                     }
-                });
+                })
+                .catch(error => console.error('Erro ao carregar a lista de canais:', error));
 
-            // Função para filtrar os canais na busca
+            // Filtrar canais
             searchInput.addEventListener("input", function() {
-                var filtro = searchInput.value.toLowerCase();
-                listaCanaisElemento.innerHTML = ""; // Limpa a lista
-
-                canais.forEach(function(canal) {
-                    if (canal.nome.toLowerCase().includes(filtro)) {
-                        var itemLista = document.createElement("li");
-                        itemLista.innerHTML = `<p>${canal.nome}</p>`;
-                        itemLista.addEventListener("click", function() {
-                            video.src({ src: canal.url, type: 'application/x-mpegURL' });
-                            video.play();
-                            abrirTelaCheia();
-                        });
-                        listaCanaisElemento.appendChild(itemLista);
-                    }
-                });
+                var termo = searchInput.value.toLowerCase();
+                var itens = listaCanaisElemento.getElementsByTagName("li");
+                for (var i = 0; i < itens.length; i++) {
+                    var item = itens[i];
+                    var texto = item.textContent.toLowerCase();
+                    item.style.display = texto.includes(termo) ? "" : "none";
+                }
             });
 
-            // Implementação da rolagem por botões
-            var scrollUp = document.getElementById("scroll-up");
-            var scrollDown = document.getElementById("scroll-down");
+            // Configurar botões de rolagem
+            document.getElementById('scroll-up').onclick = function() {
+                listaCanaisElemento.scrollTop -= 50; // Rolar para cima
+            };
 
-            scrollUp.addEventListener("click", function() {
-                document.getElementById("sidebar").scrollBy({ top: -100, behavior: 'smooth' }); // Rola para cima suavemente
-            });
-
-            scrollDown.addEventListener("click", function() {
-                document.getElementById("sidebar").scrollBy({ top: 100, behavior: 'smooth' }); // Rola para baixo suavemente
-            });
-
-            // Configura a reconexão
-            configurarReconexao(video);
+            document.getElementById('scroll-down').onclick = function() {
+                listaCanaisElemento.scrollTop += 50; // Rolar para baixo
+            };
         });
     </script>
 </body>
