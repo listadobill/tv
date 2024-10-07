@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TV DO BILL - ALGUNS CANAIS PODEM ESTAR FORA, AGUARDE ATUALIZAÇÃO - DESATIVE CONEXÃO SEGURA</title>
+    <title>TV DO BILL - Alguns Canais Podem Estar Fora - Desative Conexão Segura</title>
     <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
     <style>
         body {
@@ -15,7 +15,7 @@
             display: flex;
             flex-direction: column;
             height: 100vh;
-            overflow-y: hidden; /* Remover rolagem do body */
+            overflow: hidden;
         }
 
         #container {
@@ -49,24 +49,10 @@
             background-color: #45a049;
         }
 
-        #search-bar {
-            padding: 10px;
-            background-color: #333;
-            text-align: center;
-        }
-
-        #search-input {
-            width: 95%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1em;
-        }
-
         #main {
             display: flex;
             flex: 1;
-            overflow-y: hidden; /* Remover rolagem do main */
+            overflow: hidden;
         }
 
         #player {
@@ -97,6 +83,23 @@
             padding: 10px;
             border-left: 2px solid #444;
             position: relative;
+        }
+
+        #search-bar {
+            padding: 10px;
+            background-color: #333;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        #search-input {
+            width: 95%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
         }
 
         #sidebar ul {
@@ -172,12 +175,12 @@
             background-color: #4CAF50;
             color: white;
             border: none;
-            padding: 15px; /* Aumentando o padding para botões maiores */
-            font-size: 2em; /* Aumentando o tamanho da fonte para botões maiores */
+            padding: 15px;
+            font-size: 2em;
             cursor: pointer;
-            margin: 5px 0; /* Margem vertical para espaçamento */
+            margin: 5px 0;
             transition: background-color 0.3s ease;
-            border-radius: 5px; /* Bordas arredondadas */
+            border-radius: 5px;
         }
 
         .scroll-button:hover {
@@ -275,55 +278,57 @@
             fetch(listaURL)
                 .then(response => response.text())
                 .then(data => {
-                    var linhas = data.split('\n');
-                    linhas.forEach(function(linha) {
-                        if (linha.startsWith('#EXTINF')) {
-                            var canal = {
-                                info: linha,
-                                url: linhas[linhas.indexOf(linha) + 1]
-                            };
-                            canais.push(canal);
+                    var linhas = data.split("\n");
+                    for (var i = 0; i < linhas.length; i++) {
+                        if (linhas[i].startsWith("#EXTINF")) {
+                            var nome = linhas[i].split(",")[1];
+                            var url = linhas[i + 1];
+                            var itemLista = document.createElement("li");
+                            itemLista.innerHTML = `<p>${nome}</p>`;
+                            itemLista.addEventListener("click", function() {
+                                video.src({ src: url, type: 'application/x-mpegURL' });
+                                video.play();
+                                abrirTelaCheia();
+                            });
+                            listaCanaisElemento.appendChild(itemLista);
+                            canais.push({ nome: nome, url: url });
                         }
-                    });
+                    }
+                });
 
-                    canais.forEach(function(canal) {
-                        var li = document.createElement("li");
-                        li.innerHTML = `<img src="https://via.placeholder.com/50" alt="Canal"> <p>${canal.info.split(',')[1]}</p>`;
-                        li.onclick = function() {
-                            video.src({ src: canal.url, type: 'application/x-mpegURL' });
-                            video.play();
-                            abrirTelaCheia(); // Chama a função para abrir em tela cheia
-                            configurarReconexao(video); // Chama a função de reconexão
-                        };
-                        listaCanaisElemento.appendChild(li);
-                    });
-                })
-                .catch(error => console.error('Erro ao carregar lista de canais:', error));
-
-            // Implementar a rolagem da lista
-            const scrollDownButton = document.getElementById("scroll-down");
-            const scrollUpButton = document.getElementById("scroll-up");
-            const sidebar = document.getElementById("sidebar");
-
-            scrollDownButton.addEventListener("click", function() {
-                sidebar.scrollBy(0, 100); // Rola 100 pixels para baixo
-            });
-
-            scrollUpButton.addEventListener("click", function() {
-                sidebar.scrollBy(0, -100); // Rola 100 pixels para cima
-            });
-
-            // Funcionalidade de busca
+            // Função para filtrar os canais na busca
             searchInput.addEventListener("input", function() {
                 var filtro = searchInput.value.toLowerCase();
-                var itens = listaCanaisElemento.getElementsByTagName("li");
+                listaCanaisElemento.innerHTML = ""; // Limpa a lista
 
-                for (var i = 0; i < itens.length; i++) {
-                    var item = itens[i];
-                    var texto = item.textContent || item.innerText;
-                    item.style.display = texto.toLowerCase().indexOf(filtro) > -1 ? "" : "none";
-                }
+                canais.forEach(function(canal) {
+                    if (canal.nome.toLowerCase().includes(filtro)) {
+                        var itemLista = document.createElement("li");
+                        itemLista.innerHTML = `<p>${canal.nome}</p>`;
+                        itemLista.addEventListener("click", function() {
+                            video.src({ src: canal.url, type: 'application/x-mpegURL' });
+                            video.play();
+                            abrirTelaCheia();
+                        });
+                        listaCanaisElemento.appendChild(itemLista);
+                    }
+                });
             });
+
+            // Implementação da rolagem por botões
+            var scrollUp = document.getElementById("scroll-up");
+            var scrollDown = document.getElementById("scroll-down");
+
+            scrollUp.addEventListener("click", function() {
+                document.getElementById("sidebar").scrollBy({ top: -100, behavior: 'smooth' }); // Rola para cima suavemente
+            });
+
+            scrollDown.addEventListener("click", function() {
+                document.getElementById("sidebar").scrollBy({ top: 100, behavior: 'smooth' }); // Rola para baixo suavemente
+            });
+
+            // Configura a reconexão
+            configurarReconexao(video);
         });
     </script>
 </body>
