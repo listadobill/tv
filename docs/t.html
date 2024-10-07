@@ -15,7 +15,7 @@
             display: flex;
             flex-direction: column;
             height: 100vh;
-            overflow-y: hidden;
+            overflow: hidden;
         }
 
         #container {
@@ -66,7 +66,7 @@
         #main {
             display: flex;
             flex: 1;
-            overflow-y: hidden;
+            overflow: hidden;
         }
 
         #player {
@@ -317,11 +317,11 @@
             var scrollDown = document.getElementById("scroll-down");
 
             scrollUp.addEventListener("click", function() {
-                listaCanaisElemento.scrollTop -= 50; // Rola para cima
+                document.getElementById("sidebar").scrollBy({ top: -100, behavior: 'smooth' }); // Rola para cima suavemente
             });
 
             scrollDown.addEventListener("click", function() {
-                listaCanaisElemento.scrollTop += 50; // Rola para baixo
+                document.getElementById("sidebar").scrollBy({ top: 100, behavior: 'smooth' }); // Rola para baixo suavemente
             });
 
             // Configura a reconexão
