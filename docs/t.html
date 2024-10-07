@@ -49,20 +49,6 @@
             background-color: #45a049;
         }
 
-        #search-bar {
-            padding: 10px;
-            background-color: #333;
-            text-align: center;
-        }
-
-        #search-input {
-            width: 95%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1em;
-        }
-
         #main {
             display: flex;
             flex: 1;
@@ -97,6 +83,23 @@
             padding: 10px;
             border-left: 2px solid #444;
             position: relative;
+        }
+
+        #search-bar {
+            padding: 10px;
+            background-color: #333;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        #search-input {
+            width: 95%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
         }
 
         #sidebar ul {
