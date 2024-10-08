@@ -1,130 +1,304 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="IPTV Player">
-    <meta name="author" content="NodeTent">
-    <title>IPTV Player</title>
-    <!-- Video.js CSS -->
-    <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet">
-    <!-- Bootstrap core CSS-->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>TV DO BILL - ALGUNS CANAIS PODEM ESTAR FORA, AGUARDE ATUALIZAÇÃO - DESATIVE CONEXÃO SEGURA</title>
+    <link href="https://vjs.zencdn.net/8.18.1/video-js.css" rel="stylesheet">
     <style>
         body {
-            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
         }
-        #player {
-            margin-top: 10px;
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
         }
-        #channel-list {
-            max-height: 600px;
-            overflow-y: auto;
+
+        #header {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 10px;
+            text-align: center;
+            font-size: 1em;
+            border-bottom: 1px solid #444;
         }
-        .channel {
+
+        #home-button, .nav-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px;
+            border-radius: 5px;
             cursor: pointer;
+            font-size: 0.9em;
+            margin: 5px;
+            transition: background-color 0.3s ease;
         }
-        .channel:hover {
-            background-color: #e2e6ea;
+
+        #home-button:hover, .nav-button:hover {
+            background-color: #45a049;
+        }
+
+        #main {
+            display: flex;
+            flex-direction: row;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        #sidebar {
+            flex: 1;
+            background-color: rgba(34, 34, 34, 0.9);
+            overflow-y: auto;
+            padding: 10px;
+            border-right: 1px solid #444;
+            max-width: 250px;
+        }
+
+        #sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #sidebar li {
+            background-color: rgba(50, 50, 50, 0.9);
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        #sidebar li:hover {
+            background-color: #4CAF50;
+        }
+
+        #sidebar p {
+            margin: 0;
+            font-size: 0.95em;
+        }
+
+        #player-container {
+            flex: 3;
+            background-color: rgba(0, 0, 0, 0.9);
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            padding: 0;
+        }
+
+        .video-js {
+            width: 100%;
+            height: 100%;
+        }
+
+        .vjs-big-play-button {
+            top: 50%;
+            left: 50%;
+            width: 80px;
+            height: 80px;
+            margin-top: -40px;
+            margin-left: -40px;
+            font-size: 48px;
+            border-radius: 50%;
+            background-color: #ff0000;
+            color: #fff;
+        }
+
+        .vjs-control-bar {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .vjs-button {
+            font-size: 18px;
+            color: #fff;
+        }
+
+        /* Scrollbar customization */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #4CAF50;
+            border-radius: 10px;
+        }
+
+        /* For smaller screens (smartphones and tablets) */
+        @media only screen and (max-width: 768px) {
+            #main {
+                flex-direction: column;
+            }
+
+            #sidebar {
+                max-width: none;
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #444;
+            }
+
+            #player-container {
+                flex: 1;
+                height: calc(100vh - 100px);
+            }
+        }
+
+        /* Fullscreen styles */
+        .video-js.vjs-fullscreen {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand navbar-light bg-white static-top sticky-top">
-        <span class="navbar-brand">IPTV Player</span>
-    </nav>
-    <div class="container mt-3">
-        <div class="row">
-            <div class="col-lg-4">
-                <h5>Canais</h5>
-                <ul id="channel-list" class="navbar-nav list-group">
-                    <!-- A lista será populada dinamicamente -->
+    <div id="container">
+        <div id="header">
+            DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV: https://bit.ly/tvdobill-iptv - EPG? https://bit.ly/tvdobill-epg 
+            <div>
+                <button id="home-button">CANAIS, SÉRIES E FILMES STREAM</button>               
+            </div>
+        </div>
+        <div id="main">
+            <div id="sidebar">
+                <div id="search-bar">
+                    <input type="text" id="search-input" placeholder="Buscar canal..." style="width: 100%; padding: 8px; border-radius: 5px;">
+                </div>
+                <ul id="lista-canais">
+                    <!-- Canais serão carregados dinamicamente -->
                 </ul>
             </div>
-            <div class="col-lg-8">
-                <video
-                    id="video-player"
-                    class="video-js vjs-default-skin"
-                    controls
-                    preload="auto"
-                    width="100%"
-                    height="500px">
-                    <source id="video-source" src="" type="application/x-mpegURL">
-                    <p class="vjs-no-js">
-                        Para ver este vídeo, ative o JavaScript e considere a atualização para um navegador da web que
-                        <a href="https://www.google.com/chrome/">suporte JavaScript</a>
-                    </p>
+            <div id="player-container">
+                <video id="video-player" class="video-js vjs-default-skin" controls preload="auto" width="640" height="360" data-setup="{}">
+                    <source src="caminho/do/seu/video.mp4" type="video/mp4">
+                    <p class="vjs-no-js">Para assistir a este vídeo, ative o JavaScript e considere atualizar para um navegador que suporta HTML5.</p>
                 </video>
             </div>
         </div>
     </div>
 
-    <!-- Video.js JavaScript -->
-    <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+    <script src="https://vjs.zencdn.net/8.18.1/video.min.js"></script>
     <script>
-        // URL da lista M3U
-        const playlistUrl = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/listadecanais.m3u";
+        document.addEventListener("DOMContentLoaded", function() {
+            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/listas/iptv.m3u";
+            var listaCanaisElemento = document.getElementById("lista-canais");
+            var searchInput = document.getElementById("search-input");
+            var video = videojs('video-player', {
+                controls: true,
+                autoplay: false,
+                preload: 'auto'
+            });
 
-        // Função para carregar e parsear a lista M3U
-        async function loadM3U() {
-            try {
-                const response = await fetch(playlistUrl);
-                const text = await response.text();
-                const channels = parseM3U(text);
-                displayChannels(channels);
-            } catch (error) {
-                console.error('Erro ao carregar a lista M3U:', error);
-            }
-        }
+            document.getElementById('home-button').onclick = function() {
+                window.location.href = "https://listadobill.github.io/tv/inicial";
+            };
 
-        // Função para parsear a lista M3U e extrair URLs
-        function parseM3U(m3uText) {
-            const lines = m3uText.split('\n');
-            const channels = [];
-            let currentChannel = {};
+            // Variável para armazenar os canais
+            var canais = [];
 
-            lines.forEach(line => {
-                line = line.trim();
-                if (line.startsWith("#EXTINF")) {
-                    const name = line.split(',')[1].trim();
-                    currentChannel = { name };
-                } else if (line && !line.startsWith('#')) {
-                    currentChannel.url = line;
-                    channels.push(currentChannel);
-                    currentChannel = {};
+            // Função para abrir em tela cheia
+            function abrirTelaCheia() {
+                if (video.isFullscreen()) {
+                    video.exitFullscreen();
+                } else {
+                    video.requestFullscreen();
                 }
+            }
+
+            // Função de reconexão indefinida
+            function configurarReconexao(player) {
+                function tentarReconectar() {
+                    console.log('Tentando reconectar...');
+
+                    setTimeout(function() {
+                        player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
+                        player.play().catch(function(error) {
+                            console.log('Erro ao reproduzir, tentando novamente...', error);
+                            tentarReconectar(); // Se falhar, tenta novamente
+                        });
+                    }, 3000);
+                }
+
+                player.on('error', function() {
+                    console.log('Erro de reprodução detectado.');
+                    tentarReconectar();
+                });
+
+                player.on('ended', function() {
+                    console.log('Transmissão encerrada. Tentando reconectar...');
+                    player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
+                    player.play().catch(function(error) {
+                        console.log('Erro ao reproduzir após término, tentando novamente...', error);
+                        tentarReconectar();
+                    });
+                });
+            }
+
+            // Carregar lista de canais e configurá-los
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', listaURL, true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var linhas = xhr.responseText.split("\n");
+
+                    for (var i = 0; i < linhas.length; i++) {
+                        if (linhas[i].startsWith("#EXTINF")) {
+                            var nomeCanal = linhas[i].split(',')[1].trim();
+                            var urlCanal = linhas[i + 1].trim();
+
+                            canais.push({ nome: nomeCanal, url: urlCanal });
+                        }
+                    }
+
+                    carregarCanais(canais);
+                }
+            };
+            xhr.send();
+
+            function carregarCanais(canaisFiltrados) {
+                listaCanaisElemento.innerHTML = '';
+
+                canaisFiltrados.forEach(function(canal) {
+                    var li = document.createElement('li');
+                    li.innerHTML = '<p>' + canal.nome + '</p>';
+                    li.onclick = function() {
+                        video.src({ src: canal.url, type: 'application/x-mpegURL' });
+                        video.play();
+                    };
+                    listaCanaisElemento.appendChild(li);
+                });
+            }
+
+            searchInput.addEventListener('input', function() {
+                var filtro = searchInput.value.toLowerCase();
+                var canaisFiltrados = canais.filter(function(canal) {
+                    return canal.nome.toLowerCase().includes(filtro);
+                });
+                carregarCanais(canaisFiltrados);
             });
-            return channels;
-        }
 
-        // Função para exibir a lista de canais
-        function displayChannels(channels) {
-            const channelList = document.getElementById('channel-list');
-            channels.forEach(channel => {
-                const li = document.createElement('li');
-                li.classList.add('nav-item');
-                li.innerHTML = `
-                    <a class="channel nav-link" data-value="${channel.url}" href="javascript:void(0);" onclick="playChannel('${channel.url}')">
-                        ${channel.name}
-                    </a>
-                `;
-                channelList.appendChild(li);
+            configurarReconexao(video);
+            video.on('fullscreenchange', function() {
+                abrirTelaCheia();
             });
-        }
-
-        // Função para iniciar a reprodução de um canal
-        function playChannel(url) {
-            console.log("Reproduzindo canal:", url); // Mensagem de depuração
-            const videoSource = document.getElementById('video-source');
-            videoSource.src = url; // Define a URL do canal
-            const player = videojs('video-player'); // Inicializa o player
-            player.load(); // Carrega a nova fonte
-            player.play(); // Inicia a reprodução
-        }
-
-        // Carrega a lista de canais quando a página é carregada
-        loadM3U();
+        });
     </script>
 </body>
 </html>
