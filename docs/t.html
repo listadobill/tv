@@ -91,7 +91,7 @@
             font-size: 0.95em;
         }
 
-        #player {
+        #player-container {
             flex: 3;
             background-color: rgba(0, 0, 0, 0.9);
             position: relative;
@@ -99,16 +99,17 @@
             justify-content: center;
             align-items: center;
             overflow: hidden;
+            padding: 0;
         }
 
         .video-js {
-            width: 100% !important;
-            height: 100% !important;
+            width: 100%;
+            height: 100%;
         }
 
         .vjs-tech {
-            width: 100% !important;
-            height: 100% !important;
+            width: 100%;
+            height: 100%;
         }
 
         /* Scrollbar customization */
@@ -134,16 +135,16 @@
                 border-bottom: 1px solid #444;
             }
 
-            #player {
+            #player-container {
                 flex: 1;
-                height: 50vh;
+                height: calc(100vh - 100px);
             }
         }
 
         /* Fullscreen styles */
         .video-js.vjs-fullscreen {
-            width: 100% !important;
-            height: 100% !important;
+            width: 100%;
+            height: 100%;
             position: fixed;
             top: 0;
             left: 0;
@@ -179,7 +180,7 @@
                     <!-- Canais serão carregados dinamicamente -->
                 </ul>
             </div>
-            <div id="player">
+            <div id="player-container">
                 <video id="video-player" class="video-js vjs-default-skin" controls></video>
             </div>
         </div>
@@ -272,7 +273,7 @@
                     li.onclick = function() {
                         video.src({ src: canal.url, type: 'application/x-mpegURL' });
                         video.play();
-                        abrirTelaCheia(); // Abre em tela cheia ao clicar no canal
+                        abrirTelaCheia(); // Abre em tela cheia ao clicar
                     };
                     listaCanaisElemento.appendChild(li);
                 });
