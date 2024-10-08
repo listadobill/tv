@@ -158,7 +158,7 @@
 <body>
     <div id="container">
         <div id="header">
-            USE O NAVEGADOR VIA BROWSER PARA ANDROID OU C LITE PARA WINDOWS - Lista de canais para o KODI ou Apps de IPTV: <a href="https://bit.ly/tvdobill-iptv" style="color: #4CAF50;">https://bit.ly/tvdobill-iptv</a> - EPG <a href="https://bit.ly/tvdobill-epg" style="color: #4CAF50;">https://bit.ly/tvdobill-epg</a>
+            DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV: <a href="https://bit.ly/tvdobill-iptv" style="color: #4CAF50;">https://bit.ly/tvdobill-iptv</a> - EPG? <a href="https://bit.ly/tvdobill-epg" style="color: #4CAF50;">https://bit.ly/tvdobill-epg</a>
             <div>
                 <button id="home-button">CANAIS, SÉRIES E FILMES STREAM</button>               
             </div>
@@ -173,7 +173,7 @@
                 </ul>
             </div>
             <div id="player-container">
-                <video id="video-player" class="video-js vjs-default-skin" controls></video>
+                <video id="video-player" class="video-js vjs-default-skin" controls preload="auto" data-setup='{"controlBar": {"playToggle": true, "volumePanel": true, "fullscreenToggle": true, "currentTimeDisplay": true, "durationDisplay": true, "textTrackButton": true, "playbackRateMenuButton": true, "pictureInPictureToggle": true}}'></video>
             </div>
         </div>
     </div>
@@ -264,16 +264,17 @@
                     li.onclick = function() {
                         video.src({ src: canal.url, type: 'application/x-mpegURL' });
                         video.play();
-                        abrirTelaCheia(); // Abre em tela cheia ao clicar
+                        abrirTelaCheia(); // Abre em tela cheia
                     };
                     listaCanaisElemento.appendChild(li);
                 });
             }
 
+            // Filtro de busca
             searchInput.addEventListener("input", function() {
-                var valorBusca = searchInput.value.toLowerCase();
+                var termoBusca = this.value.toLowerCase();
                 var canaisFiltrados = canais.filter(function(canal) {
-                    return canal.nome.toLowerCase().includes(valorBusca);
+                    return canal.nome.toLowerCase().includes(termoBusca);
                 });
                 carregarCanais(canaisFiltrados);
             });
