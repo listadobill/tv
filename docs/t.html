@@ -258,32 +258,46 @@
                         }
                     }
 
-                    carregarCanais(canais);
+                    ordenarECarregarCanais(canais);
                 }
             };
             xhr.send();
 
-            function carregarCanais(canaisFiltrados) {
+            // Função para ordenar e carregar os canais
+            function ordenarECarregarCanais(canais) {
+                // Separar os canais por letras, números e caracteres especiais
+                var canaisLetras = canais.filter(canal => /^[A-Za-z]/.test(canal.nome));
+                var canaisNumeros = canais.filter(canal => /^[0-9]/.test(canal.nome));
+                var canaisEspeciais = canais.filter(canal => !/^[A-Za-z0-9]/.test(canal.nome));
+
+                // Ordenar alfabeticamente
+                canaisLetras.sort((a, b) => a.nome.localeCompare(b.nome, 'pt-BR', { sensitivity: 'base' }));
+                canaisNumeros.sort((a, b) => a.nome.localeCompare(b.nome, 'pt-BR', { sensitivity: 'base' }));
+
+                // Concatenar as listas
+                canais = [...canaisLetras, ...canaisNumeros, ...canaisEspeciais];
+
+                // Limpar a lista existente
                 listaCanaisElemento.innerHTML = '';
 
-                canaisFiltrados.forEach(function(canal) {
-                    var li = document.createElement('li');
-                    li.innerHTML = '<p>' + canal.nome + '</p>';
-                    li.onclick = function() {
+                // Adicionar os canais à lista
+                canais.forEach(function(canal) {
+                    var li = document.createElement("li");
+                    li.innerHTML = "<p>" + canal.nome + "</p>";
+                    li.addEventListener("click", function() {
                         video.src({ src: canal.url, type: 'application/x-mpegURL' });
                         video.play();
-                        abrirTelaCheia(); // Abre em tela cheia ao clicar
-                    };
+                        abrirTelaCheia();
+                    });
                     listaCanaisElemento.appendChild(li);
                 });
             }
 
+            // Filtrar canais com base na pesquisa
             searchInput.addEventListener("input", function() {
                 var searchTerm = searchInput.value.toLowerCase();
-                var canaisFiltrados = canais.filter(function(canal) {
-                    return canal.nome.toLowerCase().includes(searchTerm);
-                });
-                carregarCanais(canaisFiltrados);
+                var canaisFiltrados = canais.filter(canal => canal.nome.toLowerCase().includes(searchTerm));
+                ordenarECarregarCanais(canaisFiltrados);
             });
 
             configurarReconexao(video);
