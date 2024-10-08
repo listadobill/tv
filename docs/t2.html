@@ -1,48 +1,141 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Meu Video Player</title>
-  <link href="https://path-to-nuevodevel-party-skin.css" rel="stylesheet">
-  <link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet">
-  <style>
-    .vjs-control-bar {
-      font-size: 20px; /* Aumentando o tamanho da fonte dos controles */
-      background-color: #333; /* Cor de fundo para a barra de controle */
-      color: #fff; /* Cor do texto dos controles */
-    }
-    .vjs-button {
-      width: 50px; /* Aumentando o tamanho dos botões */
-      height: 50px;
-      background-color: #FFD700; /* Cor dos botões para destaque */
-    }
-    .vjs-play-control {
-      background-color: #FF0000; /* Cor vermelha para destaque do botão de play */
-    }
-    .vjs-volume-control .vjs-volume-bar {
-      background-color: #1E90FF; /* Cor para a barra de volume */
-    }
-    .vjs-progress-holder .vjs-play-progress {
-      background-color: #32CD32; /* Cor para o progresso do vídeo */
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="IPTV Player">
+    <meta name="author" content="NodeTent">
+    <title>IPTV Player</title>
+    <!-- Bootstrap core CSS-->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome icons-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        #player {
+            background-color: black;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            margin-top: 10px;
+        }
+        #channel-list {
+            max-height: 600px;
+            overflow-y: auto;
+        }
+        .channel {
+            cursor: pointer;
+        }
+        .channel:hover {
+            background-color: #e2e6ea;
+        }
+    </style>
+    <!-- Clappr player -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/clappr/clappr-chromecast-plugin/latest/dist/clappr-chromecast-plugin.min.js"></script>
 </head>
 <body>
-  <video
-    id="my-video"
-    class="video-js vjs-big-play-centered"
-    controls
-    preload="auto"
-    width="640"
-    height="264"
-    poster="https://path-to-your-poster.jpg"
-    data-setup="{}"
-  >
-    <source src="https://edisciplinas.usp.br/pluginfile.php/5196097/mod_resource/content/1/Teste.mp4" type="application/x-mpegURL">
-    <source src="https://edisciplinas.usp.br/pluginfile.php/5196097/mod_resource/content/1/Teste.mp4" type="video/webm">
-    Seu navegador não suporta HTML5.
-  </video>
+    <nav class="navbar navbar-expand navbar-light bg-white static-top sticky-top">
+        <span class="navbar-brand">IPTV Player</span>
+    </nav>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-lg-4">
+                <h5>Canais</h5>
+                <ul id="channel-list" class="navbar-nav list-group">
+                    <!-- A lista será populada dinamicamente -->
+                </ul>
+            </div>
+            <div class="col-lg-8">
+                <div id="player" style="width: 100%; height: 500px;"></div>
+            </div>
+        </div>
+    </div>
 
-  <script src="https://vjs.zencdn.net/7.14.3/video.min.js"></script>
+    <script>
+        // URL da lista M3U
+        const playlistUrl = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/listadecanais.m3u";
+
+        // Função para carregar e parsear a lista M3U
+        async function loadM3U() {
+            try {
+                const response = await fetch(playlistUrl);
+                const text = await response.text();
+                const channels = parseM3U(text);
+                displayChannels(channels);
+            } catch (error) {
+                console.error('Erro ao carregar a lista M3U:', error);
+            }
+        }
+
+        // Função para parsear a lista M3U e extrair URLs
+        function parseM3U(m3uText) {
+            const lines = m3uText.split('\n');
+            const channels = [];
+            let currentChannel = {};
+
+            lines.forEach(line => {
+                line = line.trim();
+                if (line.startsWith("#EXTINF")) {
+                    const name = line.split(',')[1].trim();
+                    currentChannel = { name };
+                } else if (line && !line.startsWith('#')) {
+                    currentChannel.url = line;
+                    channels.push(currentChannel);
+                    currentChannel = {};
+                }
+            });
+            return channels;
+        }
+
+        // Função para exibir a lista de canais
+        function displayChannels(channels) {
+            const channelList = document.getElementById('channel-list');
+            channels.forEach(channel => {
+                const li = document.createElement('li');
+                li.classList.add('nav-item');
+                li.innerHTML = `
+                    <a class="channel nav-link" data-value="${channel.url}" href="javascript:void(0);" onclick="playChannel('${channel.url}')">
+                        ${channel.name}
+                    </a>
+                `;
+                channelList.appendChild(li);
+            });
+        }
+
+        // Instanciar o player globalmente
+        let player = null;
+
+        // Função para iniciar a reprodução de um canal
+        function playChannel(url) {
+            console.log("Reproduzindo canal:", url); // Mensagem de depuração
+            // Se o player já estiver instanciado, destruir
+            if (player) {
+                player.destroy();
+            }
+            // Criar um novo player
+            player = new Clappr.Player({
+                source: url,
+                parentId: "#player",
+                width: '100%',
+                height: '100%',
+                autoPlay: true,
+                playback: {
+                    autoPlay: true,
+                    // Defina as configurações de playback, se necessário
+                },
+                plugins: [Clappr.ChromecastPlugin],
+                chromecast: {
+                    appId: "9DFB77C0",
+                    contentType: "video/m3u8"
+                }
+            });
+        }
+
+        // Carrega a lista de canais quando a página é carregada
+        loadM3U();
+    </script>
 </body>
 </html>
