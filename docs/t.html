@@ -167,8 +167,7 @@
         <div id="header">
             DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV: https://bit.ly/tvdobill-iptv - EPG? https://bit.ly/tvdobill-epg 
             <div>
-                <button id="home-button">CANAIS, SÉRIES E FILMES STREAM</button>
-                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/moble'">PARA CELULARES E TABLETS</button>
+                <button id="home-button">CANAIS, SÉRIES E FILMES STREAM</button>               
             </div>
         </div>
         <div id="main">
@@ -189,7 +188,7 @@
     <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var listaURL = "https://tinyurl.com/NovaFORMIGAtv";
+            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/listas/formiga.m3u";
             var listaCanaisElemento = document.getElementById("lista-canais");
             var searchInput = document.getElementById("search-input");
             var video = videojs('video-player', {
