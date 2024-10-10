@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>TV DO BILL - ALGUNS CANAIS PODEM ESTAR FORA, AGUARDE ATUALIZAÇÃO - DESATIVE CONEXÃO SEGURA</title>
-    <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -95,22 +94,8 @@
             background-color: rgba(0, 0, 0, 0.9);
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* Mudar para flex-start */
+            justify-content: flex-start; 
             overflow: hidden;
-        }
-
-        .video-js {
-            width: 100%;
-            height: 100%;
-        }
-
-        /* Estilo dos controles na parte superior */
-        .vjs-controls-enabled .vjs-control-bar {
-            position: absolute;
-            top: 0; /* Coloca os controles na parte superior */
-            left: 0;
-            right: 0;
-            z-index: 10; /* Para garantir que os controles estejam acima do player */
         }
 
         /* Scrollbar customization */
@@ -143,53 +128,11 @@
         }
 
         /* Fullscreen styles */
-        .video-js.vjs-fullscreen {
+        #video-player {
             width: 100%;
             height: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
         }
 
-        .video-js .vjs-big-play-button {
-            background-color: rgba(76, 175, 80, 0.8);
-            border: none;
-            border-radius: 50%;
-            font-size: 3em; /* Aumentado para maior visibilidade */
-        }
-
-        .video-js .vjs-big-play-button:hover {
-            background-color: rgba(76, 175, 80, 1);
-        }
-
-        /* Aumentar o tamanho dos controles */
-        .video-js .vjs-control {
-            height: 50px; /* Aumentar a altura dos controles */
-        }
-
-        .video-js .vjs-control .vjs-icon-placeholder {
-            font-size: 2.5em; /* Aumentar o tamanho dos ícones */
-        }
-
-        .video-js .vjs-volume-panel,
-        .video-js .vjs-play-progress,
-        .video-js .vjs-volume-slider {
-            height: 50px; /* Aumentar a altura do controle de volume */
-        }
-
-        .video-js .vjs-play-control,
-        .video-js .vjs-volume-control {
-            font-size: 2.5em; /* Aumentar o tamanho do texto dos controles */
-        }
-
-        .video-js .vjs-time-control {
-            font-size: 1.5em; /* Aumentar o tamanho do texto de tempo atual e duração */
-        }
-
-        .video-js .vjs-text-track-button,
-        .video-js .vjs-playback-rate {
-            font-size: 1.5em; /* Aumentar o tamanho do texto do controle de legendas e velocidade */
-        }
     </style>
 </head>
 <body>
@@ -210,56 +153,37 @@
                 </ul>
             </div>
             <div id="player-container">
-                <video id="video-player" class="video-js vjs-default-skin" controls preload="auto" data-setup='{"controlBar": {"playToggle": true, "volumePanel": true, "fullscreenToggle": true, "currentTimeDisplay": true, "durationDisplay": true, "textTrackButton": true, "playbackRateMenuButton": true, "pictureInPictureToggle": true}}'></video>
+                <!-- Video Player -->
+                <video id="video-player" controls></video>
             </div>
         </div>
     </div>
 
-    <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/listas/iptv.m3u";
+            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/listas/zteste.m3u";
             var listaCanaisElemento = document.getElementById("lista-canais");
             var searchInput = document.getElementById("search-input");
-            var video = videojs('video-player', {
-                controls: true,
-                autoplay: false,
-                preload: 'auto'
-            });
+            var videoPlayer = document.getElementById("video-player");
 
             document.getElementById('home-button').onclick = function() {
                 window.location.href = "https://listadobill.github.io/tv/inicial";
             };
 
-            // Variável para armazenar os canais
             var canais = [];
 
             // Função para abrir em tela cheia
             function abrirTelaCheia() {
-                if (video.isFullscreen()) {
-                    video.exitFullscreen();
-                } else {
-                    video.requestFullscreen();
+                if (videoPlayer.requestFullscreen) {
+                    videoPlayer.requestFullscreen();
+                } else if (videoPlayer.mozRequestFullScreen) { /* Firefox */
+                    videoPlayer.mozRequestFullScreen();
+                } else if (videoPlayer.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+                    videoPlayer.webkitRequestFullscreen();
+                } else if (videoPlayer.msRequestFullscreen) { /* IE/Edge */
+                    videoPlayer.msRequestFullscreen();
                 }
-            }
-
-            // Função de reconexão indefinida
-            function configurarReconexao(player) {
-                function tentarReconectar() {
-                    console.log('Tentando reconectar...');
-                    setTimeout(function() {
-                        player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
-                        player.play().catch(function(error) {
-                            console.log('Erro ao reproduzir, tentando novamente...', error);
-                            tentarReconectar(); // Se falhar, tenta novamente
-                        });
-                    }, 3000);
-                }
-
-                player.on('error', function() {
-                    console.log('Erro de reprodução detectado.');
-                    tentarReconectar(); // Tenta reconectar ao detectar erro
-                });
             }
 
             // Carregar canais da URL
@@ -283,14 +207,13 @@
 
             // Função para carregar canais na lista
             function carregarCanais(canais) {
-                listaCanaisElemento.innerHTML = ''; // Limpar lista
+                listaCanaisElemento.innerHTML = ''; 
                 canais.forEach(function(canal) {
                     var li = document.createElement('li');
                     li.textContent = canal.nome;
                     li.onclick = function() {
-                        video.src({ src: canal.url, type: 'application/x-mpegURL' });
-                        video.play();
-                        abrirTelaCheia(); // Abre em tela cheia
+                        reproduzirStream(canal.url);
+                        abrirTelaCheia();
                     };
                     listaCanaisElemento.appendChild(li);
                 });
@@ -305,8 +228,22 @@
                 carregarCanais(canaisFiltrados);
             });
 
-            // Configurar reconexão
-            configurarReconexao(video);
+            // Função para reproduzir o stream HLS
+            function reproduzirStream(url) {
+                if (Hls.isSupported()) {
+                    var hls = new Hls();
+                    hls.loadSource(url);
+                    hls.attachMedia(videoPlayer);
+                    hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                        videoPlayer.play();
+                    });
+                } else if (videoPlayer.canPlayType('application/vnd.apple.mpegurl')) {
+                    videoPlayer.src = url;
+                    videoPlayer.addEventListener('loadedmetadata', function() {
+                        videoPlayer.play();
+                    });
+                }
+            }
         });
     </script>
 </body>
