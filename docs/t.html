@@ -117,7 +117,7 @@
                     var li = document.createElement('li');
                     li.textContent = canal.nome;
                     li.onclick = function() {
-                        video.src({ src: 'https://cors-anywhere.herokuapp.com/' + canal.url, type: 'application/x-mpegURL' });
+                        video.src({ src: 'https://cors-anywhere.herokuapp.com/' + canal.url, type: 'application/vnd.apple.mpegurl' });
                         video.play();
                     };
                     listaCanaisElemento.appendChild(li);
