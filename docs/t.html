@@ -1,246 +1,85 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>TV DO BILL - ALGUNS CANAIS PODEM ESTAR FORA, AGUARDE ATUALIZAÇÃO - DESATIVE CONEXÃO SEGURA</title>
-    <link href="https://cdn.jsdelivr.net/npm/@clappr/core@latest/dist/clappr.css" rel="stylesheet">
+    <title>IPTV Player</title>
+    <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet">
+    <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #000;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            overflow: hidden;
         }
-
-        #container {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            height: 100%;
-        }
-
-        #header {
-            background-color: rgba(0, 0, 0, 0.9);
-            padding: 10px;
-            text-align: center;
-            font-size: 1em;
-            border-bottom: 1px solid #444;
-        }
-
-        #home-button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 8px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 0.9em;
-            transition: background-color 0.3s ease;
-        }
-
-        #home-button:hover {
-            background-color: #45a049;
-        }
-
-        #main {
-            display: flex;
-            flex-direction: row;
-            flex: 1;
-            overflow: hidden;
-        }
-
-        #sidebar {
-            flex: 1;
-            background-color: rgba(34, 34, 34, 0.9);
-            overflow-y: auto;
-            padding: 10px;
-            border-right: 1px solid #444;
-            max-width: 250px;
-        }
-
-        #sidebar ul {
+        #channelList {
             list-style-type: none;
             padding: 0;
-            margin: 0;
         }
-
-        #sidebar li {
-            background-color: rgba(50, 50, 50, 0.9);
-            border-radius: 8px;
-            padding: 10px;
-            margin-bottom: 10px;
+        #channelList li {
+            margin: 5px 0;
             cursor: pointer;
-            display: flex;
-            align-items: center;
-            transition: background-color 0.3s ease;
+            color: blue;
         }
-
-        #sidebar li:hover {
-            background-color: #4CAF50;
-        }
-
-        #sidebar p {
-            margin: 0;
-            font-size: 0.95em;
-        }
-
-        #player-container {
-            flex: 3;
-            background-color: rgba(0, 0, 0, 0.9);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start; /* Mudar para flex-start */
-            overflow: hidden;
-        }
-
-        .clappr-player {
+        #player {
             width: 100%;
-            height: 100%;
-        }
-
-        /* Scrollbar customization */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background-color: #4CAF50;
-            border-radius: 10px;
-        }
-
-        /* Responsive design */
-        @media only screen and (max-width: 768px) {
-            #main {
-                flex-direction: column;
-            }
-
-            #sidebar {
-                max-width: none;
-                width: 100%;
-                border-right: none;
-                border-bottom: 1px solid #444;
-            }
-
-            #player-container {
-                flex: 1;
-                height: calc(100vh - 100px);
-            }
+            max-width: 800px;
+            margin: auto;
         }
     </style>
 </head>
 <body>
-    <div id="container">
-        <div id="header">
-            DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV: <a href="https://bit.ly/tvdobill-iptv" style="color: #4CAF50;">https://bit.ly/tvdobill-iptv</a> - EPG? <a href="https://bit.ly/tvdobill-epg" style="color: #4CAF50;">https://bit.ly/tvdobill-epg</a>
-            <div>
-                <button id="home-button">CANAIS, SÉRIES E FILMES STREAM</button>               
-            </div>
-        </div>
-        <div id="main">
-            <div id="sidebar">
-                <div id="search-bar">
-                    <input type="text" id="search-input" placeholder="Buscar canal..." style="width: 100%; padding: 8px; border-radius: 5px;">
-                </div>
-                <ul id="lista-canais">
-                    <!-- Canais serão carregados dinamicamente -->
-                </ul>
-            </div>
-            <div id="player-container">
-                <div id="clappr-player" class="clappr-player"></div>
-            </div>
-        </div>
+    <h1>IPTV Player</h1>
+    <div id="player">
+        <video id="videoPlayer" class="video-js vjs-default-skin" controls preload="auto" width="600" height="300" data-setup="{}">
+            <source src="" type="application/x-mpegURL">
+        </video>
     </div>
+    <h2>Lista de Canais</h2>
+    <ul id="channelList"></ul>
 
-    <script src="https://cdn.jsdelivr.net/npm/@clappr/core@latest/dist/clappr.min.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/listadecanais.m3u";
-            var listaCanaisElemento = document.getElementById("lista-canais");
-            var player = new Clappr.Player({
-                container: document.getElementById('clappr-player'),
-                width: '100%',
-                height: '100%',
-                autoPlay: false,
-                sources: [],
-                playback: {
-                    preload: 'auto'
-                }
-            });
+        document.addEventListener('DOMContentLoaded', function() {
+            var videoPlayer = videojs('videoPlayer');
+            var channelList = document.getElementById('channelList');
 
-            document.getElementById('home-button').onclick = function() {
-                window.location.href = "https://listadobill.github.io/tv/inicial";
-            };
+            // Função para carregar a lista M3U com CORS proxy
+            function loadM3U(url) {
+                fetch('https://cors-anywhere.herokuapp.com/' + url)
+                    .then(response => response.text())
+                    .then(data => {
+                        console.log("Lista M3U carregada");
+                        var lines = data.split('\n');
+                        var channels = [];
 
-            // Variável para armazenar os canais
-            var canais = [];
+                        lines.forEach((line, index) => {
+                            if (line.startsWith('#EXTINF')) {
+                                var name = line.split(',')[1];
+                                var url = lines[index + 1];
+                                channels.push({ name, url });
+                            }
+                        });
 
-            // Função de reconexão indefinida
-            function configurarReconexao(player) {
-                function tentarReconectar() {
-                    console.log('Tentando reconectar...');
-                    setTimeout(function() {
-                        if (player.isPlaying()) {
-                            player.load(player.getCurrentSource().src);
-                        }
-                    }, 3000);
-                }
-
-                player.on(Clappr.Events.PLAYER_ERROR, function() {
-                    console.log('Erro de reprodução detectado.');
-                    tentarReconectar(); // Tenta reconectar ao detectar erro
-                });
-            }
-
-            // Carregar canais da URL
-            fetch(listaURL)
-                .then(response => response.text())
-                .then(data => {
-                    var linhas = data.split('\n');
-                    var canalAtual = {};
-                    linhas.forEach(function(linha) {
-                        if (linha.startsWith('#EXTINF:')) {
-                            canalAtual = {};
-                            var partes = linha.split(',');
-                            canalAtual.nome = partes[1].trim();
-                        } else if (linha.startsWith('http')) {
-                            canalAtual.url = linha.trim();
-                            canais.push(canalAtual);
-                        }
+                        channels.forEach(channel => {
+                            var li = document.createElement('li');
+                            li.textContent = channel.name;
+                            li.setAttribute('data-src', channel.url);
+                            channelList.appendChild(li);
+                        });
+                    })
+                    .catch(error => {
+                        console.error("Erro ao carregar a lista M3U:", error);
                     });
-                    carregarCanais(canais);
-                });
-
-            // Função para carregar canais na lista
-            function carregarCanais(canais) {
-                listaCanaisElemento.innerHTML = ''; // Limpar lista
-                canais.forEach(function(canal) {
-                    var li = document.createElement('li');
-                    li.textContent = canal.nome;
-                    li.onclick = function() {
-                        player.load(canal.url); // Carrega o canal selecionado
-                        player.play(); // Inicia a reprodução
-                    };
-                    listaCanaisElemento.appendChild(li);
-                });
             }
 
-            // Filtro de busca
-            searchInput.addEventListener("input", function() {
-                var termoBusca = this.value.toLowerCase();
-                var canaisFiltrados = canais.filter(function(canal) {
-                    return canal.nome.toLowerCase().includes(termoBusca);
-                });
-                carregarCanais(canaisFiltrados);
+            // Adiciona evento de clique nos canais
+            channelList.addEventListener('click', function(e) {
+                if (e.target.tagName === 'LI') {
+                    var src = e.target.getAttribute('data-src');
+                    videoPlayer.src({ type: 'application/x-mpegURL', src: src });
+                    videoPlayer.play();
+                }
             });
 
-            // Configurar reconexão
-            configurarReconexao(player);
+            // Carrega a lista de canais do arquivo M3U
+            loadM3U('https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/listadecanais.m3u');
         });
     </script>
 </body>
