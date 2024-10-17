@@ -117,7 +117,11 @@
                     var li = document.createElement('li');
                     li.textContent = canal.nome;
                     li.onclick = function() {
-                        video.src({ src: 'https://cors-anywhere.herokuapp.com/' + canal.url, type: 'application/vnd.apple.mpegurl' });
+                        // Aplique o proxy e o tipo correto ao clicar no canal
+                        video.src({ 
+                            src: 'https://cors-anywhere.herokuapp.com/' + canal.url, 
+                            type: 'application/vnd.apple.mpegurl' 
+                        });
                         video.play();
                     };
                     listaCanaisElemento.appendChild(li);
