@@ -70,7 +70,8 @@
     <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/listadecanais.m3u";
+            // URL da lista M3U usando proxy para evitar problemas de CORS
+            var listaURL = "https://cors-anywhere.herokuapp.com/https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/listadecanais.m3u";
             var listaCanaisElemento = document.getElementById("lista-canais");
             var video = videojs('video-player', {
                 controls: true,
@@ -116,7 +117,7 @@
                     var li = document.createElement('li');
                     li.textContent = canal.nome;
                     li.onclick = function() {
-                        video.src({ src: canal.url, type: 'application/x-mpegURL' });
+                        video.src({ src: 'https://cors-anywhere.herokuapp.com/' + canal.url, type: 'application/x-mpegURL' });
                         video.play();
                     };
                     listaCanaisElemento.appendChild(li);
