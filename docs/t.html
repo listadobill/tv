@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>IPTV Player 2</title>
+    <title>IPTV Player</title>
     <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet">
     <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
     <style>
@@ -29,7 +29,7 @@
     <h1>IPTV Player</h1>
     <div id="player">
         <video id="videoPlayer" class="video-js vjs-default-skin" controls preload="auto" width="600" height="300" data-setup="{}">
-            <source src="" type="application/x-mpegURL">
+            <source src="" type="application/vnd.apple.mpegurl">
         </video>
     </div>
     <h2>Lista de Canais</h2>
@@ -42,7 +42,7 @@
 
             // Função para carregar a lista M3U com um proxy CORS alternativo
             function loadM3U(url) {
-                fetch('https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(url))
+                fetch('https://cors-anywhere.herokuapp.com/' + encodeURIComponent(url))
                     .then(response => response.text())
                     .then(data => {
                         console.log("Lista M3U carregada");
@@ -62,7 +62,7 @@
                             li.textContent = channel.name;
                             li.setAttribute('data-src', channel.url);
                             li.addEventListener('click', function() {
-                                videoPlayer.src({ type: 'application/x-mpegURL', src: channel.url });
+                                videoPlayer.src({ type: 'application/vnd.apple.mpegurl', src: 'https://cors-anywhere.herokuapp.com/' + encodeURIComponent(channel.url) });
                                 videoPlayer.play();
                             });
                             channelList.appendChild(li);
@@ -74,7 +74,7 @@
             }
 
             // Carrega a lista de canais do arquivo M3U
-            loadM3U('https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/listadecanais.m3u');
+            loadM3U('https://cors-anywhere.herokuapp.com/https://raw.githubusercontent.com/SEU_USUARIO/seu-repo/main/lista.m3u');
         });
     </script>
 </body>
