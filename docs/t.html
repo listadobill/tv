@@ -85,17 +85,12 @@
             background-color: #4CAF50;
         }
 
-        #sidebar p {
-            margin: 0;
-            font-size: 0.95em;
-        }
-
         #player-container {
             flex: 3;
             background-color: rgba(0, 0, 0, 0.9);
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* Mudar para flex-start */
+            justify-content: flex-start;
             overflow: hidden;
         }
 
@@ -107,10 +102,10 @@
         /* Estilo dos controles na parte superior */
         .vjs-controls-enabled .vjs-control-bar {
             position: absolute;
-            top: 0; /* Coloca os controles na parte superior */
+            top: 0;
             left: 0;
             right: 0;
-            z-index: 10; /* Para garantir que os controles estejam acima do player */
+            z-index: 10;
         }
 
         /* Scrollbar customization */
@@ -150,46 +145,6 @@
             top: 0;
             left: 0;
         }
-
-        .video-js .vjs-big-play-button {
-            background-color: rgba(76, 175, 80, 0.8);
-            border: none;
-            border-radius: 50%;
-            font-size: 3em; /* Aumentado para maior visibilidade */
-        }
-
-        .video-js .vjs-big-play-button:hover {
-            background-color: rgba(76, 175, 80, 1);
-        }
-
-        /* Aumentar o tamanho dos controles */
-        .video-js .vjs-control {
-            height: 50px; /* Aumentar a altura dos controles */
-        }
-
-        .video-js .vjs-control .vjs-icon-placeholder {
-            font-size: 2.5em; /* Aumentar o tamanho dos ícones */
-        }
-
-        .video-js .vjs-volume-panel,
-        .video-js .vjs-play-progress,
-        .video-js .vjs-volume-slider {
-            height: 50px; /* Aumentar a altura do controle de volume */
-        }
-
-        .video-js .vjs-play-control,
-        .video-js .vjs-volume-control {
-            font-size: 2.5em; /* Aumentar o tamanho do texto dos controles */
-        }
-
-        .video-js .vjs-time-control {
-            font-size: 1.5em; /* Aumentar o tamanho do texto de tempo atual e duração */
-        }
-
-        .video-js .vjs-text-track-button,
-        .video-js .vjs-playback-rate {
-            font-size: 1.5em; /* Aumentar o tamanho do texto do controle de legendas e velocidade */
-        }
     </style>
 </head>
 <body>
@@ -210,7 +165,7 @@
                 </ul>
             </div>
             <div id="player-container">
-                <video id="video-player" class="video-js vjs-default-skin" controls preload="auto" data-setup='{"controlBar": {"playToggle": true, "volumePanel": true, "fullscreenToggle": true, "currentTimeDisplay": true, "durationDisplay": true, "textTrackButton": true, "playbackRateMenuButton": true, "pictureInPictureToggle": true}}'></video>
+                <video id="video-player" class="video-js vjs-default-skin" controls preload="auto"></video>
             </div>
         </div>
     </div>
@@ -218,7 +173,7 @@
     <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/zteste.m3u";
+            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/main/zteste.m3u"; // Corrigido para um caminho válido
             var listaCanaisElemento = document.getElementById("lista-canais");
             var searchInput = document.getElementById("search-input");
             var video = videojs('video-player', {
