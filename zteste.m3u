@@ -1,5 +1,5 @@
 #EXTM3U
-#EXTINF:-1, ATUALIZAÇÃO (5 de outubro de 2024 às 15:20)
+#EXTINF:-1, ATUALIZAÇÃO (18 de outubro de 2024 às 13:57)
 https://1.m3u8
 #EXTINF:-1 tvg-id="100AutoMotoTV.bg" tvg-logo="https://i.imgur.com/SZtJfOG.png" group-title="Auto",100% Auto Moto TV (406p) [Not 24/7]
 https://100automoto.tv:1935/bgtv1/autotv/playlist.m3u8
@@ -21,7 +21,7 @@ https://streaming101tv.es/hls/websevilla.m3u8
 #EXTVLCOPT:http-referrer=https://www.12tv.es/
 #EXTINF:-1 tvg-id="13Festival.cl" tvg-logo="https://i.imgur.com/hTUe0Pw.png" group-title="Music",13 Festival (1080p)
 https://origin.dpsgo.com/ssai/event/Nftd0fM2SXasfDlRphvUsg/master.m3u8
-#EXTINF:-1 tvg-id="MusicChannel.hu" tvg-logo="https://i.imgur.com/pzU6FrQ.png" group-title="Music",1Music Channel HungaryBR (576p)
+#EXTINF:-1 tvg-id="MusicChannel.hu" tvg-logo="https://i.imgur.com/pzU6FrQ.png" group-title="Music",1Music Channel Hungary (576p)
 https://1music.hu/1music.m3u8
 #EXTINF:-1 tvg-id="24HorasInternacional.es" tvg-logo="https://i.imgur.com/IUVRm5L.png" group-title="News",24 Horas Internacional [Geo-blocked]
 https://rtvelivestream.akamaized.net/rtvesec/24h/24h_main_dvr.m3u8
@@ -181,7 +181,7 @@ https://play.1list.vip/live/tradicao/obhqakxwo7/62888.m3u8
 https://play.1list.vip/live/tradicao/obhqakxwo7/36928.m3u8
 #EXTINF:-1, AMC HD  [ALT]
 https://play.1list.vip/live/tradicao/obhqakxwo7/50639.m3u8
-#EXTINF:-1 tvg-id="Amordiscos.co" tvg-logo="https://i.imgur.com/hO0cTDf.png" group-title="Music",Amordiscos (540p)
+#EXTINF:-1 tvg-id="Amordiscos.co" tvg-logo="https://i.imgur.com/hO0cTDf.png" group-title="Music",Amordiscos (540p) [Geo-blocked]
 https://canal.mediaserver.com.co/live/canalamordiscos.m3u8
 #EXTINF:-1 tvg-id="AMusicChannel.ng" tvg-logo="https://i.imgur.com/06zuf64.png" group-title="Music",AMusic Channel (720p)
 https://mn-nl.mncdn.com/amusictv/amusicsrt.stream/playlist.m3u8
@@ -244,7 +244,7 @@ https://1.m3u8
 #EXTINF:-1 tvg-id="AvangTV.us" tvg-logo="https://i.imgur.com/3I1n7fO.png" group-title="Music",Avang TV (720p)
 https://hls.avang.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="AXNCentralAmerica.us" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/512px-AXN_logo_%282015%29.svg.png" group-title="Movies",AXN
-https://170.254.18.106/AXN/index.m3u8
+https://streamer1.nexgen.bz/AXN/index.m3u8
 #EXTINF:-1 tvg-id="AzaharesRadiovisualMultimedia.ar" tvg-logo="https://i.imgur.com/g1BFoSs.png" group-title="Music",Azahares Radio Multimedia (720p)
 https://streamyes.alsolnet.com/azaharesfm/live/playlist.m3u8
 #EXTINF:-1 tvg-id="B4UMusicIndia.in" tvg-logo="https://i.imgur.com/KSxPLJA.png" group-title="Music",B4U Music India (576p)
@@ -291,9 +291,9 @@ https://rtmp.streams.ovh:1936/barazarelax/barazarelax/playlist.m3u8
 https://raw.githubusercontent.com/taodicakhia/IPTV_Exception/master/channels/af/tolomusic.m3u8
 #EXTINF:-1 tvg-id="BBCDrama.es" tvg-logo="https://i.imgur.com/HctHhLL.png" group-title="Series",BBC Drama (720p)
 https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/60dafb9a0df1ba000758d37b/master.m3u8?advertisingId=channel&appName=rokuchannel&appVersion=1.0&bmodel=bm1&channel_id=channel&content=channel&content_rating=ROKU_ADS_CONTENT_RATING&content_type=livefeed&coppa=false&deviceDNT=1&deviceId=channel&deviceMake=rokuChannel&deviceModel=web&deviceType=rokuChannel&deviceVersion=1.0&embedPartner=rokuChannel&genre=ROKU_ADS_CONTENT_GENRE&is_lat=1&platform=web&rdid=channel&serverSideAds=false&studio_id=viacom&tags=ROKU_CONTENT_TAGS
-#EXTINF:-1 tvg-id="BBCNewsNorthAmerica.uk" tvg-logo="https://i.imgur.com/REuN9RR.png" group-title="News",BBC News (North America) (1080p)
+#EXTINF:-1 tvg-id="BBCNewsNorthAmerica.uk" tvg-logo="https://i.imgur.com/vSz2WEp.png" group-title="News",BBC News (North America) (1080p)
 https://d2vnbkvjbims7j.cloudfront.net/containerA/LTN/playlist.m3u8
-#EXTINF:-1 tvg-id="BBCNewsEurope.uk" tvg-logo="https://i.imgur.com/REuN9RR.png" group-title="News" user-agent="Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,like Gecko) Mobile/15E148",BBC World News (480p) [Not 24/7]
+#EXTINF:-1 tvg-id="BBCNewsEurope.uk" tvg-logo="https://i.imgur.com/vSz2WEp.png" group-title="News" user-agent="Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,like Gecko) Mobile/15E148",BBC World News (480p) [Not 24/7]
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,like Gecko) Mobile/15E148
 #EXTINF:-1 tvg-id="BblackAfrica.fr" tvg-logo="https://i.imgur.com/s1kLdBG.png" group-title="Music",Bblack! Africa (1080p)
 https://livevideo.vedge.infomaniak.com/livecast/ik:bblackafrica/manifest.m3u8
@@ -1544,9 +1544,15 @@ https://streamtv.intervenhosting.net:3718/live/kandelamedioslive.m3u8
 #EXTINF:-1 tvg-id="KayhanTV.af" tvg-logo="https://i.imgur.com/2MDjU7x.png" group-title="Music",Kayhan TV (720p)
 https://playout395.livestreamingcdn.com/live/Stream1/playlist.m3u8
 #EXTINF:-1 tvg-id="KayoPops.jp" tvg-logo="https://i.imgur.com/7VcFGkx.png" group-title="Music",Kayo Pops (544p)
-https://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=cs13
-#EXTINF:-1 tvg-id="Kidz.es" tvg-logo="https://i.imgur.com/iBgsCOV.png" group-title="Kids",Kidz Atresmedia (720p) [Geo-blocked]
+https://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=cs13&isp=7
+#EXTINF:-1 tvg-id="Kfm945.za" tvg-logo="https://i.imgur.com/TqWYhIR.png" group-title="Music",Kfm 94.5 (720p) [Not 24/7]
+https://ythls.armelin.one/channel/UCVklphu0DdSFQaoRu1e0fsw.m3u8
+#EXTINF:-1 tvg-id="Kidz.es" tvg-logo="https://i.imgur.com/iBgsCOV.png" group-title="Entertainment",Kidz Atresmedia (720p) [Geo-blocked]
 https://fast-channels.atresmedia.com/648c271d2bfab0e4177a0d61/648c271d2bfab0e4177a0d61.m3u8
+#EXTINF:-1 tvg-id="KissKissNapoliTV.it" tvg-logo="https://i.imgur.com/RsGiBwE.png" group-title="Music",Kiss Kiss Napoli TV (720p)
+https://58f12ffd2447a.streamlock.net/KKTVNapoli/livestream/playlist.m3u8
+#EXTINF:-1 tvg-id="KissKissTV.it" tvg-logo="https://i.imgur.com/ja6c2YZ.png" group-title="Music",Kiss Kiss TV (1080p)
+https://58f12ffd2447a.streamlock.net/KKMulti/livestream/playlist.m3u8
 #EXTINF:-1 tvg-id="KissTV.ro" tvg-logo="https://i.imgur.com/NKfVymH.png" group-title="Music",Kiss TV (1080p)
 https://tv.broadcasting.ro/kisstv/a629c031-2170-4ee9-a36d-87a891aa3131.m3u8
 #EXTINF:-1 tvg-id="KKTV.ao" tvg-logo="https://i.imgur.com/jWOB0oU.png" group-title="Religious",KK TV Angola (1080p)
@@ -1773,10 +1779,6 @@ https://play.1list.vip/live/tradicao/obhqakxwo7/81804.m3u8
 https://canal.mediaserver.com.co/live/MelodyChannel.m3u8
 #EXTINF:-1 tvg-id="MelodyFM.jo" tvg-logo="https://i.imgur.com/J8omcNz.png" group-title="Music",Melody FM Jordan (720p) [Not 24/7]
 https://cdn3.wowza.com/1/OVRrOWxXUEswS2Yv/eGVxSWZy/hls/live/playlist.m3u8
-#EXTINF:-1 tvg-id="MemoriasTV.co" tvg-logo="https://i.imgur.com/RWC55w7.png" group-title="Music",Memorias TV (480p)
-https://stmv6.voxtvhd.com.br/memoriastv/memoriastv/playlist.m3u8
-#EXTINF:-1 tvg-id="MemoriasTVClassic.co" tvg-logo="https://i.imgur.com/tLTQLnv.png" group-title="Music",Memorias TV Classic (480p)
-https://rpn3.bozztv.com/ssh101/ssh101/memoriasc2/playlist.m3u8
 #EXTINF:-1 tvg-id="MetropoliMediosTV.ec" tvg-logo="https://i.imgur.com/yID5T2S.jpg" group-title="Music",Metropoli Medios TV (720p)
 https://eu1.servers10.com:8081/8214/index.m3u8
 #EXTINF:-1 tvg-id="MetropolitanaFM.ar" tvg-logo="https://i.imgur.com/hWIGeHw.png" group-title="Music",Metropolitana FM (720p)
@@ -1888,7 +1890,7 @@ https://play.1list.vip/live/tradicao/obhqakxwo7/63651.m3u8
 #EXTINF:-1 tvg-id="MusicIndia.in" tvg-logo="https://i.imgur.com/kXTCYqg.png" group-title="Music",Music India (576p) [Not 24/7]
 https://103.199.160.85/Content/musicindia/Live/Channel(MusicIndia)/index.m3u8
 #EXTINF:-1 tvg-id="MusicJapanTV.jp" tvg-logo="https://i.imgur.com/HmCI5mk.png" group-title="Music",Music Japan TV (544p)
-https://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=cs06
+https://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=cs06&isp=7
 #EXTINF:-1 tvg-id="MusicTop.ar" tvg-logo="https://cdn.mitvstatic.com/channels/ar_musictop_m.png" group-title="Music",MusicTop (720p)
 https://live-edge01.telecentro.net.ar/live/smil:musictop.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="MuzangalaTV.ao" tvg-logo="https://i.imgur.com/fBeaJoS.png" group-title="Music",Muzangala TV (1080p)
@@ -2223,6 +2225,8 @@ https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/60016a60a
 https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/60b4c06717da110007ee1af6/master.m3u8?advertisingId=channel&appName=rokuchannel&appVersion=1.0&bmodel=bm1&channel_id=channel&content=channel&content_rating=ROKU_ADS_CONTENT_RATING&content_type=livefeed&coppa=false&deviceDNT=1&deviceId=channel&deviceMake=rokuChannel&deviceModel=web&deviceType=rokuChannel&deviceVersion=1.0&embedPartner=rokuChannel&genre=ROKU_ADS_CONTENT_GENRE&is_lat=1&platform=web&rdid=channel&serverSideAds=false&studio_id=viacom&tags=ROKU_CONTENT_TAGS
 #EXTINF:-1 tvg-id="PlutoTVToonsClasico.es" tvg-logo="https://i.imgur.com/gQcuJSE.png" group-title="Kids",Pluto TV Toons Clásico (720p)
 https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/609e7e423e9173000706a681/master.m3u8?advertisingId=channel&appName=rokuchannel&appVersion=1.0&bmodel=bm1&channel_id=channel&content=channel&content_rating=ROKU_ADS_CONTENT_RATING&content_type=livefeed&coppa=false&deviceDNT=1&deviceId=channel&deviceMake=rokuChannel&deviceModel=web&deviceType=rokuChannel&deviceVersion=1.0&embedPartner=rokuChannel&genre=ROKU_ADS_CONTENT_GENRE&is_lat=1&platform=web&rdid=channel&studio_id=viacom&tags=ROKU_CONTENT_TAGS
+#EXTINF:-1 tvg-id="PlutoTVTopGear.it" tvg-logo="https://images.pluto.tv/channels/64c109a4798def0008a6e03e/thumbnail.jpg" group-title="Auto;Comedy;Entertainment",Pluto TV Top Gear
+#EXTVLCOPT:http-referrer=https://pluto.tv/it/live-tv/64c109a4798def0008a6e03e
 #EXTINF:-1 tvg-id="PlutoTVVidaReal.br" tvg-logo="https://i.imgur.com/dRbBbxP.png" group-title="Education",Pluto TV Vida Real (720p)
 https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/5f32d4d9ec194100070c7449/master.m3u8?advertisingId=channel&appName=rokuchannel&appVersion=1.0&bmodel=bm1&channel_id=channel&content=channel&content_rating=ROKU_ADS_CONTENT_RATING&content_type=livefeed&coppa=false&deviceDNT=1&deviceId=channel&deviceMake=rokuChannel&deviceModel=web&deviceType=rokuChannel&deviceVersion=1.0&embedPartner=rokuChannel&genre=ROKU_ADS_CONTENT_GENRE&is_lat=1&platform=web&rdid=channel&studio_id=viacom&tags=ROKU_CONTENT_TAGS
 #EXTINF:-1 tvg-id="PMC.ae" tvg-logo="https://i.imgur.com/AbrHI7K.png" group-title="Music",PMC (1080p)
@@ -3042,7 +3046,7 @@ https://play.1list.vip/live/tradicao/obhqakxwo7/62910.m3u8
 #EXTINF:-1, Space HD
 https://play.1list.vip/live/tradicao/obhqakxwo7/36944.m3u8
 #EXTINF:-1 tvg-id="SpaceShowerTV.jp" tvg-logo="https://i.imgur.com/PjjkT9P.png" group-title="Music",Space Shower TV (544p)
-https://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=bs26
+https://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=bs26&isp=7
 #EXTINF:-1 tvg-id="SpektraTV.es" tvg-logo="https://i.imgur.com/0zCt8e4.png" group-title="Music",SpektraTV (720p)
 https://cloudvideo.servers10.com:8081/8136/index.m3u8
 #EXTINF:-1 tvg-id="SpektraTV.es" tvg-logo="https://i.imgur.com/0zCt8e4.png" group-title="Music",SpektraTV (720p)
@@ -3204,7 +3208,7 @@ https://live.tele7music.ro/hls/stream/index.m3u8
 #EXTINF:-1 tvg-id="TeleBilbao.es" tvg-logo="https://i.ibb.co/Nj1sZY0/unnamed-1.jpg" group-title="General" user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36 CrKey/1.44.191160",TeleBilbao (384p)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36 CrKey/1.44.191160
 #EXTINF:-1 tvg-id="TeleCaribe.do" tvg-logo="https://i.imgur.com/zDL8mGu.png" group-title="Entertainment;Music",TeleCaribe TV
-https://cloudflare.streamgato.us:3413/live/telecaribehdlive.m3u8?DVR
+https://cloudflare.streamgato.us:3413/live/telecaribehdlive.m3u8?DVR=
 #EXTINF:-1, Telecine Action
 https://play.1list.vip/live/tradicao/obhqakxwo7/37040.m3u8
 #EXTINF:-1, Telecine Action [4K]
@@ -3317,7 +3321,7 @@ https://telemadrid-23.secure2.footprint.net/master.m3u8
 https://new-international-23.secure2.footprint.net/index.m3u8
 #EXTINF:-1 tvg-id="Telemotril.es" tvg-logo="https://i.imgur.com/4nspLHb.png" group-title="Undefined",Telemotril (720p) [Not 24/7]
 https://5940924978228.streamlock.net/8431/8431/playlist.m3u8
-#EXTINF:-1 tvg-id="TelemusicaTV.co" tvg-logo="https://i.imgur.com/Nz67Uq6.png" group-title="Music",Telemúsica TV (540p)
+#EXTINF:-1 tvg-id="TelemusicaTV.co" tvg-logo="https://i.imgur.com/Nz67Uq6.png" group-title="Music",Telemúsica TV (540p) [Geo-blocked]
 https://canal.mediaserver.com.co/live/telemusica.m3u8
 #EXTINF:-1 tvg-id="TeleMusikSenegal.sn" tvg-logo="https://i.imgur.com/dPAPLsd.png" group-title="Music",TeleMusik Sénégal (720p)
 https://58c04fb1d143f.streamlock.net/rezopropartner_1/rezopropartner_1/playlist.m3u8
@@ -4016,7 +4020,7 @@ https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/6
 #EXTINF:-1 tvg-id="VevoTrueSchoolHipHop.us" tvg-logo="https://i.imgur.com/owUXUih.png" group-title="Music",Vevo True School Hip-Hop
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/61d4c2817a823d00070ba53e/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c2ce918-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=90c1dbc6-366d-4ba4-913a-7ff94babe33e
 #EXTINF:-1 tvg-id="VH1East.us" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/VH1_logonew.svg/512px-VH1_logonew.svg.png" group-title="Music",VH1
-https://170.254.18.106/VH1/index.m3u8
+https://streamer1.nexgen.bz/VH1/index.m3u8
 #EXTINF:-1 tvg-id="VH1.it" tvg-logo="https://i.imgur.com/ZZEvehR.png" group-title="Music",VH1 Italia (1080p)
 https://content.uplynk.com/channel/36953f5b6546464590d2fcd954bc89cf.m3u8
 #EXTINF:-1 tvg-id="PlutoTVVH1Plus.it" tvg-logo="https://i.imgur.com/KsiOX0r.png" group-title="Music",VH1+ Italy (720p)
