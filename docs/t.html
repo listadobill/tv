@@ -173,7 +173,7 @@
     <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/main/zteste.m3u"; // Corrigido para um caminho válido
+            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/main/zteste.m3u";
             var listaCanaisElemento = document.getElementById("lista-canais");
             var searchInput = document.getElementById("search-input");
             var video = videojs('video-player', {
@@ -186,7 +186,6 @@
                 window.location.href = "https://listadobill.github.io/tv/inicial";
             };
 
-            // Variável para armazenar os canais
             var canais = [];
 
             // Função para abrir em tela cheia
@@ -198,26 +197,18 @@
                 }
             }
 
-            // Função de reconexão indefinida
+            // Função de reconexão
             function configurarReconexao(player) {
                 function tentarReconectar() {
-                    console.log('Tentando reconectar...');
                     setTimeout(function() {
                         player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
-                        player.play().catch(function(error) {
-                            console.log('Erro ao reproduzir, tentando novamente...', error);
-                            tentarReconectar(); // Se falhar, tenta novamente
-                        });
+                        player.play().catch(tentarReconectar);
                     }, 3000);
                 }
 
-                player.on('error', function() {
-                    console.log('Erro de reprodução detectado.');
-                    tentarReconectar(); // Tenta reconectar ao detectar erro
-                });
+                player.on('error', tentarReconectar);
             }
 
-            // Carregar canais da URL
             fetch(listaURL)
                 .then(response => response.text())
                 .then(data => {
@@ -236,7 +227,6 @@
                     carregarCanais(canais);
                 });
 
-            // Função para carregar canais na lista
             function carregarCanais(canais) {
                 listaCanaisElemento.innerHTML = ''; // Limpar lista
                 canais.forEach(function(canal) {
@@ -245,13 +235,12 @@
                     li.onclick = function() {
                         video.src({ src: canal.url, type: 'application/x-mpegURL' });
                         video.play();
-                        abrirTelaCheia(); // Abre em tela cheia
+                        abrirTelaCheia();
                     };
                     listaCanaisElemento.appendChild(li);
                 });
             }
 
-            // Filtro de busca
             searchInput.addEventListener("input", function() {
                 var termoBusca = this.value.toLowerCase();
                 var canaisFiltrados = canais.filter(function(canal) {
@@ -260,7 +249,6 @@
                 carregarCanais(canaisFiltrados);
             });
 
-            // Configurar reconexão
             configurarReconexao(video);
         });
     </script>
