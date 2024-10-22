@@ -1173,26 +1173,16 @@ http://play.1list.vip/live/tradicao/obhqakxwo7/38397.m3u8
 http://play.1list.vip/live/tradicao/obhqakxwo7/62840.m3u8
 #EXTINF:-1, Globo News HD
 http://play.1list.vip/live/tradicao/obhqakxwo7/36917.m3u8
-#EXTINF:-1, Globo NSC TV [4K]
+#EXTINF:-1, NSC TV [4K]
 http://play.1list.vip/live/tradicao/obhqakxwo7/215395.m3u8
-#EXTINF:-1, Globo NSC TV Blumenau
+#EXTINF:-1, NSC TV Blumenau
 http://play.1list.vip/live/tradicao/obhqakxwo7/91283.m3u8
-#EXTINF:-1, Globo NSC TV Blumenau FHD - H265
+#EXTINF:-1, NSC TV Blumenau FHD - H265
 http://play.1list.vip/live/tradicao/obhqakxwo7/68079.m3u8
-#EXTINF:-1, Globo NSC TV Blumenau FHD H265
+#EXTINF:-1, NSC TV Blumenau FHD H265
 http://play.1list.vip/live/tradicao/obhqakxwo7/91284.m3u8
-#EXTINF:-1, Globo NSC TV Santa Catarina HD
+#EXTINF:-1, NSC TV Santa Catarina HD
 http://play.1list.vip/live/tradicao/obhqakxwo7/65270.m3u8
-#EXTINF:-1, Globo TV Brasilia FHD - H265
-http://play.1list.vip/live/tradicao/obhqakxwo7/68076.m3u8
-#EXTINF:-1, Globo TV Gazeta Alagoas FHD
-http://play.1list.vip/live/tradicao/obhqakxwo7/42995.m3u8
-#EXTINF:-1, Globo TV Gazeta Alagoas FHD - H265
-http://play.1list.vip/live/tradicao/obhqakxwo7/68073.m3u8
-#EXTINF:-1, Globo TV Gazeta Alagoas HD
-http://play.1list.vip/live/tradicao/obhqakxwo7/42996.m3u8
-#EXTINF:-1, Globo TV Gazeta FHD - H265
-http://play.1list.vip/live/tradicao/obhqakxwo7/68075.m3u8
 #EXTINF:-1, Gloob
 http://play.1list.vip/live/tradicao/obhqakxwo7/37089.m3u8
 #EXTINF:-1, Gloob - H265
@@ -3673,8 +3663,6 @@ https://video01.kshost.com.br:4443/humberto3322/humberto3322/playlist.m3u8
 https://streaming01.zas.media/gideoes/programacao/playlist.m3u8
 #EXTINF:-1 tvg-id="TVGirona.es" tvg-logo="https://i.imgur.com/yfiK1Vp.png" group-title="Undefined",TV Girona (1080p)
 http://ventdelnord.tv:8080/girona/directe.m3u8
-#EXTINF:-1, TV Globo Recife FHD
-http://play.1list.vip/live/tradicao/obhqakxwo7/91265.m3u8
 #EXTINF:-1 tvg-id="TVGramado.br" tvg-logo="https://i.imgur.com/5558bMI.png" group-title="General",TV Gramado (720p)
 https://video01.kshost.com.br:4443/tv4477/tv4477/playlist.m3u8
 #EXTINF:-1 tvg-id="TVGrandeNatal.br" tvg-logo="https://i.imgur.com/MTuErdw.png" group-title="Entertainment",TV Grande Natal (1080p)
