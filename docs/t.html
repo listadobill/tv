@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IPTV Player 2</title>
+    <title>IPTV Player</title>
     <link rel="stylesheet" href="https://vjs.zencdn.net/7.15.4/video-js.css">
     <script src="https://vjs.zencdn.net/7.15.4/video.min.js"></script>
     <style>
@@ -27,28 +27,25 @@
     </div>
     <script>
         var player = videojs('iptv-player');
-        var proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-
+        
         // Função para carregar a lista de canais
-        fetch(proxyUrl + 'https://raw.githubusercontent.com/listadobill/tv/main/zteste.m3u')
+        fetch('https://raw.githubusercontent.com/listadobill/tv/main/zteste.m3u')
             .then(response => response.text())
             .then(data => {
                 var lines = data.split('\n');
                 var channelList = document.getElementById('channel-list');
+                var channelName = '';
                 for (var i = 0; i < lines.length; i++) {
                     if (lines[i].startsWith('#EXTINF:-1')) {
-                        var channelName = lines[i].split(',')[1].trim();
-                        var channelUrl = proxyUrl + lines[i + 1].trim();
-                        
-                        if (channelUrl.includes('.m3u8')) {
-                            var li = document.createElement('li');
-                            var a = document.createElement('a');
-                            a.href = '#';
-                            a.setAttribute('data-url', channelUrl);
-                            a.textContent = channelName;
-                            li.appendChild(a);
-                            channelList.appendChild(li);
-                        }
+                        channelName = lines[i].split(',')[1].trim();
+                    } else if (lines[i].trim() !== '' && lines[i].includes('.m3u8')) {
+                        var li = document.createElement('li');
+                        var a = document.createElement('a');
+                        a.href = '#';
+                        a.setAttribute('data-url', lines[i].trim());
+                        a.textContent = channelName;
+                        li.appendChild(a);
+                        channelList.appendChild(li);
                     }
                 }
 
