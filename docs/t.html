@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IPTV Player</title>
+    <title>IPTV Player 22</title>
     <link rel="stylesheet" href="https://vjs.zencdn.net/7.15.4/video-js.css">
     <script src="https://vjs.zencdn.net/7.15.4/video.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/videojs-contrib-hls/dist/videojs-contrib-hls.min.js"></script>
     <style>
         body { font-family: Arial, sans-serif; }
         #menu { max-width: 200px; float: left; margin-right: 20px; }
@@ -27,9 +28,10 @@
     </div>
     <script>
         var player = videojs('iptv-player');
-        
+        var proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+
         // Função para carregar a lista de canais
-        fetch('https://raw.githubusercontent.com/listadobill/tv/main/zteste.m3u')
+        fetch(proxyUrl + 'https://raw.githubusercontent.com/listadobill/tv/main/zteste.m3u')
             .then(response => response.text())
             .then(data => {
                 var lines = data.split('\n');
@@ -42,7 +44,7 @@
                         var li = document.createElement('li');
                         var a = document.createElement('a');
                         a.href = '#';
-                        a.setAttribute('data-url', lines[i].trim());
+                        a.setAttribute('data-url', proxyUrl + lines[i].trim());
                         a.textContent = channelName;
                         li.appendChild(a);
                         channelList.appendChild(li);
