@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IPTV Player</title>
+    <title>IPTV Player 11</title>
     <link rel="stylesheet" href="https://vjs.zencdn.net/7.15.4/video-js.css">
     <script src="https://vjs.zencdn.net/7.15.4/video.min.js"></script>
     <style>
@@ -27,7 +27,7 @@
     </div>
     <script>
         var player = videojs('iptv-player');
-        var proxyUrl = 'http://localhost:1337/';
+        var proxyUrl = 'https://cors-anywhere.herokuapp.com/';
 
         // Função para carregar a lista de canais
         fetch(proxyUrl + 'https://raw.githubusercontent.com/listadobill/tv/main/zteste.m3u')
@@ -41,9 +41,11 @@
                         channelName = lines[i].split(',')[1].trim();
                     } else if (lines[i].trim() !== '' && lines[i].includes('.m3u8')) {
                         var li = document.createElement('li');
+                        li.className = 'nav-item';
                         var a = document.createElement('a');
-                        a.href = '#';
-                        a.setAttribute('data-url', proxyUrl + lines[i].trim());
+                        a.href = 'javascript:void(0);';
+                        a.className = 'channel nav-link';
+                        a.setAttribute('data-value', proxyUrl + lines[i].trim());
                         a.textContent = channelName;
                         li.appendChild(a);
                         channelList.appendChild(li);
@@ -54,7 +56,7 @@
                 document.querySelectorAll('#channel-list a').forEach(function(link) {
                     link.addEventListener('click', function(e) {
                         e.preventDefault();
-                        var url = this.getAttribute('data-url');
+                        var url = this.getAttribute('data-value');
                         player.src({ src: url, type: 'application/x-mpegURL' });
                         player.play();
                     });
