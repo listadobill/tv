@@ -1389,8 +1389,6 @@ http://iptl.xyz:19741/live/nabilchakour/819980312869/114847.m3u8
 http://iptl.xyz:19741/live/nabilchakour/819980312869/114846.m3u8
 #EXTINF:-1,GLOBO INTERNACIONAL HD
 http://iptl.xyz:19741/live/nabilchakour/819980312869/114707.m3u8
-#EXTINF:-1,Globo MINAS HD
-http://iptl.xyz:19741/live/nabilchakour/819980312869/114620.m3u8
 #EXTINF:-1, Globo News
 http://play.1list.vip/live/tradicao/obhqakxwo7/37093.m3u8
 #EXTINF:-1,Globo News
@@ -1407,18 +1405,6 @@ http://play.1list.vip/live/tradicao/obhqakxwo7/62840.m3u8
 http://play.1list.vip/live/tradicao/obhqakxwo7/36917.m3u8
 #EXTINF:-1,Globo News HD
 http://iptl.xyz:19741/live/nabilchakour/819980312869/114841.m3u8
-#EXTINF:-1,Globo Nordeste
-http://iptl.xyz:19741/live/nabilchakour/819980312869/114619.m3u8
-#EXTINF:-1, NSC TV [4K]
-http://play.1list.vip/live/tradicao/obhqakxwo7/215395.m3u8
-#EXTINF:-1, NSC TV Blumenau
-http://play.1list.vip/live/tradicao/obhqakxwo7/91283.m3u8
-#EXTINF:-1, NSC TV Blumenau FHD - H265
-http://play.1list.vip/live/tradicao/obhqakxwo7/68079.m3u8
-#EXTINF:-1, NSC TV Blumenau FHD H265
-http://play.1list.vip/live/tradicao/obhqakxwo7/91284.m3u8
-#EXTINF:-1, NSC TV Santa Catarina HD
-http://play.1list.vip/live/tradicao/obhqakxwo7/65270.m3u8
 #EXTINF:-1,Globo RJ
 http://iptl.xyz:19741/live/nabilchakour/819980312869/114621.m3u8
 #EXTINF:-1,GLOBO RJ FHD
@@ -2375,6 +2361,16 @@ https://lightning-now80s-samsungnz.amagi.tv/playlist.m3u8
 https://lightning-now90s-samsungnz.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="CKNOFM.ca" tvg-logo="https://i.imgur.com/sF2g7KE.png" group-title="Music",Now TV 102.3FM Edmonton (CKNO-FM)
 https://videostream.jpbgdigital.com/NOWTV.m3u8
+#EXTINF:-1, NSC TV [4K]
+http://play.1list.vip/live/tradicao/obhqakxwo7/215395.m3u8
+#EXTINF:-1, NSC TV Blumenau
+http://play.1list.vip/live/tradicao/obhqakxwo7/91283.m3u8
+#EXTINF:-1, NSC TV Blumenau FHD - H265
+http://play.1list.vip/live/tradicao/obhqakxwo7/68079.m3u8
+#EXTINF:-1, NSC TV Blumenau FHD H265
+http://play.1list.vip/live/tradicao/obhqakxwo7/91284.m3u8
+#EXTINF:-1, NSC TV Santa Catarina HD
+http://play.1list.vip/live/tradicao/obhqakxwo7/65270.m3u8
 #EXTINF:-1, NSC TV Blumenau
 http://play.1list.vip/live/tradicao/obhqakxwo7/52571.m3u8
 #EXTINF:-1, NSC TV Blumenau FHD
