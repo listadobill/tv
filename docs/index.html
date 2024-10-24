@@ -173,7 +173,7 @@
 <body>
     <div id="container">
         <div id="header">
-            SERVIDOR 1 - DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV - Atualização, 29 de Setembro de 2024: https://bit.ly/tvdobill-iptv - EPG https://bit.ly/tvdobill-epg 
+            SERVIDOR 2 - DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV - Atualização, 29 de Setembro de 2024: https://bit.ly/tvdobill-iptv - EPG https://bit.ly/tvdobill-epg 
             <div>
                 <button id="home-button">CANAIS, SÉRIES E FILMES STREAM</button>
                 <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/'">SERVIDOR 1</button>
@@ -240,73 +240,101 @@
                         player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
                         player.play().catch(function(error) {
                             console.log('Erro ao reproduzir, tentando novamente...', error);
-                            tentarReconectar(); // Se falhar, tenta novamente
+                            tentarReconectar(); // tenta reconectar novamente
                         });
-                    }, 3000); // Tentar reconectar após 3 segundos
+                    }, 3000);
                 }
 
                 player.on('error', function() {
-                    console.log('Erro de reprodução detectado.');
+                    console.log('Erro detectado, tentativa de reconexão iniciada.');
                     tentarReconectar();
-                });
-
-                player.on('ended', function() {
-                    console.log('Transmissão encerrada. Tentando reconectar...');
-                    player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
-                    player.play().catch(function(error) {
-                        console.log('Erro ao reproduzir após término, tentando novamente...', error);
-                        tentarReconectar();
-                    });
                 });
             }
 
-            // Carregar lista de canais e configurá-los
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', listaURL, true);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    var linhas = xhr.responseText.split("\n");
+            configurarReconexao(video);
 
-                    for (var i = 0; i < linhas.length; i++) {
-                        if (linhas[i].startsWith("#EXTINF")) {
-                            var nomeCanal = linhas[i].split(',')[1].trim();
-                            var urlCanal = linhas[i + 1].trim();
+            function carregarListaM3U(url) {
+                fetch(url)
+                    .then(response => response.text())
+                    .then(data => {
+                        var linhas = data.split("\n");
+                        var nomeCanal = "";
+                        var logoCanal = "";
+                        var urlCanal = "";
+                        canais = [];
 
-                            canais.push({ nome: nomeCanal, url: urlCanal });
+                        for (var i = 0; i < linhas.length; i++) {
+                            var linha = linhas[i].trim();
+
+                            if (linha.startsWith("#EXTINF")) {
+                                var match = linha.match(/tvg-logo="([^"]+)"/);
+                                logoCanal = match ? match[1] : "";
+                                nomeCanal = linha.split(",")[1].trim();
+                            } else if (linha && !linha.startsWith("#")) {
+                                urlCanal = linha;
+                                canais.push({ nome: nomeCanal, logo: logoCanal, url: urlCanal });
+                            }
                         }
+
+                        exibirCanais(canais);
+                    })
+                    .catch(error => console.error("Erro ao carregar a lista M3U:", error));
+            }
+
+            function exibirCanais(canais) {
+                listaCanaisElemento.innerHTML = "";
+
+                // Ordenar canais por A-Z, depois 0-9 e por último caracteres especiais
+                canais.sort(function(a, b) {
+                    var nomeA = a.nome.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase();
+                    var nomeB = b.nome.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase();
+                    
+                    if (/^[a-z]/i.test(nomeA) && /^[a-z]/i.test(nomeB)) {
+                        return nomeA.localeCompare(nomeB);
+                    } else if (/^[a-z]/i.test(nomeA)) {
+                        return -1; // Letras A-Z antes
+                    } else if (/^[a-z]/i.test(nomeB)) {
+                        return 1;
+                    } else if (/^[0-9]/.test(nomeA) && /^[0-9]/.test(nomeB)) {
+                        return nomeA.localeCompare(nomeB); // Números 0-9 depois
+                    } else if (/^[0-9]/.test(nomeA)) {
+                        return -1;
+                    } else if (/^[0-9]/.test(nomeB)) {
+                        return 1;
+                    } else {
+                        return nomeA.localeCompare(nomeB); // Caracteres especiais no final
                     }
+                });
 
-                    carregarCanais(canais);
-                }
-            };
-            xhr.send();
-
-            function carregarCanais(canaisFiltrados) {
-                listaCanaisElemento.innerHTML = '';
-
-                canaisFiltrados.forEach(function(canal) {
-                    var li = document.createElement('li');
-                    li.innerHTML = '<p>' + canal.nome + '</p>';
+                canais.forEach(function(canal) {
+                    var li = document.createElement("li");
                     li.onclick = function() {
-                        video.src({ src: canal.url, type: 'application/x-mpegURL' });
+                        video.src({ src: canal.url, type: "application/x-mpegURL" });
                         video.play();
-                        abrirTelaCheia(); // Abre em tela cheia ao clicar no canal
+                        abrirTelaCheia();
                     };
+
+                    var img = document.createElement("img");
+                    img.src = canal.logo || "https://via.placeholder.com/50";
+                    li.appendChild(img);
+
+                    var p = document.createElement("p");
+                    p.textContent = canal.nome;
+                    li.appendChild(p);
+
                     listaCanaisElemento.appendChild(li);
                 });
             }
 
-            // Implementar busca
-            searchInput.addEventListener('input', function() {
-                var termoBusca = searchInput.value.toLowerCase();
-                var canaisFiltrados = canais.filter(function(canal) {
-                    return canal.nome.toLowerCase().includes(termoBusca);
-                });
-                carregarCanais(canaisFiltrados);
-            });
+            carregarListaM3U(listaURL);
 
-            // Configurar reconexão
-            configurarReconexao(video);
+            searchInput.addEventListener("input", function() {
+                var busca = searchInput.value.toLowerCase();
+                var canaisFiltrados = canais.filter(function(canal) {
+                    return canal.nome.toLowerCase().includes(busca);
+                });
+                exibirCanais(canaisFiltrados);
+            });
         });
     </script>
 </body>
