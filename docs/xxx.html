@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>TV DO BILL - ALGUNS CANAIS PODEM ESTAR FORA, AGUARDE ATUALIZAÇÃO - DESATIVE CONEXÃO SEGURA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV DO BILL - ALGUNS CANAIS PODEM ESTAR FORA, AGUARDE ATUALIZAÇÃO - USE O VIA BROWSER, C LITE BROWSER, OU PESQUISE COMO DESATIVAR CONEXÃO SEGURA DO SEU NAVEGADOR</title>
     <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
     <style>
         body {
@@ -15,7 +15,7 @@
             display: flex;
             flex-direction: column;
             height: 100vh;
-            overflow: hidden;
+            overflow-y: auto;
         }
 
         #container {
@@ -26,191 +26,192 @@
         }
 
         #header {
-            background-color: rgba(0, 0, 0, 0.9);
+            background-color: rgba(0, 128, 0, 0.8); /* Verde */
             padding: 10px;
             text-align: center;
-            font-size: 1em;
-            border-bottom: 1px solid #444;
+            font-size: 1.2em;
+            border-bottom: 1px solid #ffcc00; /* Amarelo */
         }
 
-        #home-button {
-            background-color: #4CAF50;
-            color: white;
+        #home-button, .nav-button {
+            background-color: #ffcc00; /* Amarelo */
+            color: #000;
             border: none;
-            padding: 8px;
+            padding: 6px 12px;
             border-radius: 5px;
             cursor: pointer;
             font-size: 0.9em;
+            margin: 5px;
             transition: background-color 0.3s ease;
         }
 
-        #home-button:hover {
-            background-color: #45a049;
+        #home-button:hover, .nav-button:hover {
+            background-color: #e6b800; /* Amarelo escuro */
+        }
+
+        #search-bar {
+            padding: 10px;
+            background-color: #333;
+            text-align: center;
+        }
+
+        #search-input {
+            width: 95%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
         }
 
         #main {
             display: flex;
-            flex-direction: row;
             flex: 1;
+            overflow-y: auto;
+        }
+
+        #player {
+            flex: 2;
+            background-color: rgba(0, 0, 0, 0.8);
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             overflow: hidden;
+        }
+
+        .video-js {
+            width: 100% !important;
+            height: 100% !important;
+            background-color: #000;
+        }
+
+        .vjs-tech {
+            width: 100% !important;
+            height: 100% !important;
         }
 
         #sidebar {
             flex: 1;
-            background-color: rgba(34, 34, 34, 0.9);
+            background-color: rgba(34, 34, 34, 0.8);
             overflow-y: auto;
             padding: 10px;
-            border-right: 1px solid #444;
-            max-width: 250px;
+            border-left: 2px solid #ffcc00; /* Amarelo */
         }
 
         #sidebar ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
 
         #sidebar li {
-            background-color: rgba(50, 50, 50, 0.9);
+            background-color: rgba(50, 50, 50, 0.8);
             border-radius: 8px;
             padding: 10px;
-            margin-bottom: 10px;
-            cursor: pointer;
             display: flex;
             align-items: center;
+            cursor: pointer;
             transition: background-color 0.3s ease;
         }
 
         #sidebar li:hover {
-            background-color: #4CAF50;
+            background-color: #ffcc00; /* Amarelo */
+        }
+
+        #sidebar img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 50%;
+            border: 2px solid #ffcc00; /* Amarelo */
+            object-fit: cover;
         }
 
         #sidebar p {
             margin: 0;
-            font-size: 0.95em;
+            font-size: 1.1em;
         }
 
-        #player-container {
-            flex: 3;
-            background-color: rgba(0, 0, 0, 0.9);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start; /* Mudar para flex-start */
-            overflow: hidden;
-        }
-
-        .video-js {
-            width: 100%;
-            height: 100%;
-        }
-
-        /* Estilo dos controles na parte superior */
-        .vjs-controls-enabled .vjs-control-bar {
-            position: absolute;
-            top: 0; /* Coloca os controles na parte superior */
-            left: 0;
-            right: 0;
-            z-index: 10; /* Para garantir que os controles estejam acima do player */
-        }
-
-        /* Scrollbar customization */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background-color: #4CAF50;
-            border-radius: 10px;
-        }
-
-        /* Responsive design */
-        @media only screen and (max-width: 768px) {
-            #main {
-                flex-direction: column;
-            }
-
-            #sidebar {
-                max-width: none;
-                width: 100%;
-                border-right: none;
-                border-bottom: 1px solid #444;
-            }
-
-            #player-container {
-                flex: 1;
-                height: calc(100vh - 100px);
-            }
-        }
-
-        /* Fullscreen styles */
         .video-js.vjs-fullscreen {
-            width: 100%;
-            height: 100%;
+            width: 100% !important;
+            height: 100% !important;
             position: fixed;
             top: 0;
             left: 0;
         }
 
+        .video-js.vjs-default-skin .vjs-control-bar {
+            background: rgba(0, 0, 0, 0.6);
+        }
+
         .video-js .vjs-big-play-button {
-            background-color: rgba(76, 175, 80, 0.8);
+            background-color: rgba(76, 175, 80, 0.8); /* Verde */
             border: none;
             border-radius: 50%;
-            font-size: 3em; /* Aumentado para maior visibilidade */
+            font-size: 2.5em;
+            line-height: 1.5;
+            transition: background-color 0.3s ease;
         }
 
         .video-js .vjs-big-play-button:hover {
-            background-color: rgba(76, 175, 80, 1);
+            background-color: rgba(76, 175, 80, 1); /* Verde escuro */
         }
 
-        /* Aumentar o tamanho dos controles */
-        .video-js .vjs-control {
-            height: 50px; /* Aumentar a altura dos controles */
+        ::-webkit-scrollbar {
+            width: 10px;
         }
 
-        .video-js .vjs-control .vjs-icon-placeholder {
-            font-size: 2.5em; /* Aumentar o tamanho dos ícones */
+        ::-webkit-scrollbar-thumb {
+            background-color: #ffcc00; /* Amarelo */
+            border-radius: 10px;
         }
 
-        .video-js .vjs-volume-panel,
-        .video-js .vjs-play-progress,
-        .video-js .vjs-volume-slider {
-            height: 50px; /* Aumentar a altura do controle de volume */
+        #contador {
+            margin: 10px 0;
+            font-size: 0.9em;
         }
 
-        .video-js .vjs-play-control,
-        .video-js .vjs-volume-control {
-            font-size: 2.5em; /* Aumentar o tamanho do texto dos controles */
-        }
-
-        .video-js .vjs-time-control {
-            font-size: 1.5em; /* Aumentar o tamanho do texto de tempo atual e duração */
-        }
-
-        .video-js .vjs-text-track-button,
-        .video-js .vjs-playback-rate {
-            font-size: 1.5em; /* Aumentar o tamanho do texto do controle de legendas e velocidade */
+        /* Ocultar mensagens de erro */
+        .vjs-error-display {
+            display: none !important;
         }
     </style>
 </head>
 <body>
     <div id="container">
         <div id="header">
-            DESATIVE CONEXÃO SEGURA - Lista de canais para o KODI ou Apps de IPTV: <a href="https://bit.ly/tvdobill-iptv" style="color: #4CAF50;">https://bit.ly/tvdobill-iptv</a> - EPG? <a href="https://bit.ly/tvdobill-epg" style="color: #4CAF50;">https://bit.ly/tvdobill-epg</a>
+            TV DO BILL - ALGUNS CANAIS PODEM ESTAR FORA, AGUARDE ATUALIZAÇÃO - USE O VIA BROWSER, C LITE BROWSER, OU PESQUISE COMO DESATIVAR CONEXÃO SEGURA DO SEU NAVEGADOR - LISTA IPTV: https://bit.ly/tvdobill-iptv - EPG https://bit.ly/tvdobill-epg 
+            <div id="contador">
+                Visitantes: <span id="contador-visitantes">0</span>
+            </div>
             <div>
-                <button id="home-button">CANAIS, SÉRIES E FILMES STREAM</button>               
+                <button id="home-button">CANAIS, SÉRIES E FILMES STREAM</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/'">SERVIDOR 1</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/iptv2'">SERVIDOR 2</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/ott'">SERVIDOR 3</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/argentina'">ARGENTINA</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/brasil'">BRASIL</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/carros'">CARROS</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/espanha'">ESPANHA</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/musica'">MÚSICA</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/portugal'">PORTUGAL</button>
+                <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/moble'">PARA CELULARES E TABLETS</button>
             </div>
         </div>
         <div id="main">
             <div id="sidebar">
                 <div id="search-bar">
-                    <input type="text" id="search-input" placeholder="Buscar canal..." style="width: 100%; padding: 8px; border-radius: 5px;">
+                    <input type="text" id="search-input" placeholder="Buscar canal...">
                 </div>
                 <ul id="lista-canais">
                     <!-- Canais serão carregados dinamicamente -->
                 </ul>
             </div>
-            <div id="player-container">
-                <video id="video-player" class="video-js vjs-default-skin" controls preload="auto" data-setup='{"controlBar": {"playToggle": true, "volumePanel": true, "fullscreenToggle": true, "currentTimeDisplay": true, "durationDisplay": true, "textTrackButton": true, "playbackRateMenuButton": true, "pictureInPictureToggle": true}}'></video>
+            <div id="player">
+                <video id="video-player" class="video-js vjs-default-skin" controls></video>
             </div>
         </div>
     </div>
@@ -224,89 +225,81 @@
             var video = videojs('video-player', {
                 controls: true,
                 autoplay: false,
-                preload: 'auto'
+                preload: 'auto',
+                fluid: true,
+                responsive: true
             });
 
-            document.getElementById('home-button').onclick = function() {
-                window.location.href = "https://listadobill.github.io/tv/inicial";
-            };
+            // Incrementar contador de visitantes
+            if (!localStorage.getItem('visitantes')) {
+                localStorage.setItem('visitantes', 0);
+            }
+            localStorage.setItem('visitantes', parseInt(localStorage.getItem('visitantes')) + 1);
+            document.getElementById('contador-visitantes').innerText = localStorage.getItem('visitantes');
 
-            // Variável para armazenar os canais
-            var canais = [];
-
-            // Função para abrir em tela cheia
-            function abrirTelaCheia() {
-                if (video.isFullscreen()) {
-                    video.exitFullscreen();
-                } else {
-                    video.requestFullscreen();
-                }
+            // Função para atualizar o contador de usuários online
+            function atualizarContadorOnline() {
+                var online = Math.floor(Math.random() * 100); // Simulação de usuários online
+                document.getElementById('contador-online').innerText = online;
             }
 
-            // Função de reconexão indefinida
-            function configurarReconexao(player) {
-                function tentarReconectar() {
-                    console.log('Tentando reconectar...');
-                    setTimeout(function() {
-                        player.src({ src: player.currentSrc(), type: 'application/x-mpegURL' });
-                        player.play().catch(function(error) {
-                            console.log('Erro ao reproduzir, tentando novamente...', error);
-                            tentarReconectar(); // Se falhar, tenta novamente
-                        });
-                    }, 3000);
-                }
-
-                player.on('error', function() {
-                    console.log('Erro de reprodução detectado.');
-                    tentarReconectar(); // Tenta reconectar ao detectar erro
-                });
-            }
-
-            // Carregar canais da URL
+            // Carregar canais da lista
             fetch(listaURL)
                 .then(response => response.text())
                 .then(data => {
                     var linhas = data.split('\n');
-                    var canalAtual = {};
-                    linhas.forEach(function(linha) {
-                        if (linha.startsWith('#EXTINF:')) {
-                            canalAtual = {};
-                            var partes = linha.split(',');
-                            canalAtual.nome = partes[1].trim();
-                        } else if (linha.startsWith('http')) {
-                            canalAtual.url = linha.trim();
-                            canais.push(canalAtual);
+                    var canais = [];
+
+                    linhas.forEach(linha => {
+                        if (linha.startsWith('#EXTINF')) {
+                            var canal = linha.split(',')[1].trim();
+                            var url = linhas[linhas.indexOf(linha) + 1];
+                            canais.push({ name: canal, url: url });
                         }
                     });
-                    carregarCanais(canais);
+
+                    // Função para renderizar canais na lista
+                    function renderizarCanais(canaisParaRenderizar) {
+                        listaCanaisElemento.innerHTML = ''; // Limpa a lista existente
+                        canaisParaRenderizar.forEach(canal => {
+                            var li = document.createElement('li');
+                            li.innerHTML = `<img src="https://via.placeholder.com/50" alt="${canal.name}">${canal.name}`;
+                            li.addEventListener('click', function() {
+                                video.src({ type: 'application/x-mpegURL', src: canal.url });
+                                video.play();
+                                video.requestFullscreen(); // Abre em tela cheia automaticamente
+                                reconectar(canal.url); // Chama função de reconexão
+                            });
+                            listaCanaisElemento.appendChild(li);
+                        });
+                    }
+
+                    // Inicializa a lista com todos os canais
+                    renderizarCanais(canais);
+
+                    // Função de filtro
+                    searchInput.addEventListener('input', function() {
+                        var filtro = searchInput.value.toLowerCase();
+                        var canaisFiltrados = canais.filter(canal => canal.name.toLowerCase().includes(filtro));
+                        renderizarCanais(canaisFiltrados);
+                    });
                 });
 
-            // Função para carregar canais na lista
-            function carregarCanais(canais) {
-                listaCanaisElemento.innerHTML = ''; // Limpar lista
-                canais.forEach(function(canal) {
-                    var li = document.createElement('li');
-                    li.textContent = canal.nome;
-                    li.onclick = function() {
-                        video.src({ src: canal.url, type: 'application/x-mpegURL' });
-                        video.play();
-                        abrirTelaCheia(); // Abre em tela cheia
-                    };
-                    listaCanaisElemento.appendChild(li);
+            // Função de reconexão
+            function reconectar(url) {
+                video.src({ type: 'application/x-mpegURL', src: url });
+                video.play();
+
+                // Tentar reconectar indefinidamente
+                video.on('error', function() {
+                    setTimeout(function() {
+                        reconectar(url);
+                    }, 5000); // Tenta reconectar a cada 5 segundos
                 });
             }
 
-            // Filtro de busca
-            searchInput.addEventListener("input", function() {
-                var termoBusca = this.value.toLowerCase();
-                var canaisFiltrados = canais.filter(function(canal) {
-                    return canal.nome.toLowerCase().includes(termoBusca);
-                });
-                carregarCanais(canaisFiltrados);
-            });
-
-            // Configurar reconexão
-            configurarReconexao(video);
+            // Atualizar contador online a cada 5 segundos
+            setInterval(atualizarContadorOnline, 5000);
         });
     </script>
 </body>
