@@ -168,12 +168,25 @@
             background-color: #ffcc00; /* Amarelo */
             border-radius: 10px;
         }
+
+        #contador {
+            margin: 10px 0;
+            font-size: 0.9em;
+        }
+
+        /* Ocultar mensagens de erro */
+        .vjs-error-display {
+            display: none !important;
+        }
     </style>
 </head>
 <body>
     <div id="container">
         <div id="header">
             TV DO BILL - ALGUNS CANAIS PODEM ESTAR FORA, AGUARDE ATUALIZAÇÃO - USE O VIA BROWSER, C LITE BROWSER, OU PESQUISE COMO DESATIVAR CONEXÃO SEGURA DO SEU NAVEGADOR - LISTA IPTV: https://bit.ly/tvdobill-iptv - EPG https://bit.ly/tvdobill-epg 
+            <div id="contador">
+                Visitantes: <span id="contador-visitantes">0</span>
+            </div>
             <div>
                 <button id="home-button">CANAIS, SÉRIES E FILMES STREAM</button>
                 <button class="nav-button" onclick="window.location.href='https://listadobill.github.io/tv/'">SERVIDOR 1</button>
@@ -212,66 +225,81 @@
             var video = videojs('video-player', {
                 controls: true,
                 autoplay: false,
-                preload: 'auto'
+                preload: 'auto',
+                fluid: true,
+                responsive: true
             });
 
-            document.getElementById('home-button').onclick = function() {
-                window.location.href = "https://listadobill.github.io/tv/inicial";
-            };
+            // Incrementar contador de visitantes
+            if (!localStorage.getItem('visitantes')) {
+                localStorage.setItem('visitantes', 0);
+            }
+            localStorage.setItem('visitantes', parseInt(localStorage.getItem('visitantes')) + 1);
+            document.getElementById('contador-visitantes').innerText = localStorage.getItem('visitantes');
 
-            // Variável para armazenar os canais
-            var canais = [];
-
-            // Função para abrir em tela cheia
-            function abrirTelaCheia() {
-                if (video.isFullscreen()) {
-                    video.exitFullscreen();
-                } else {
-                    video.requestFullscreen();
-                }
+            // Função para atualizar o contador de usuários online
+            function atualizarContadorOnline() {
+                var online = Math.floor(Math.random() * 100); // Simulação de usuários online
+                document.getElementById('contador-online').innerText = online;
             }
 
-            // Função para reproduzir o vídeo e abrir em tela cheia
-            function reproduzirCanal(url) {
-                video.src({ type: 'application/x-mpegURL', src: url });
-                video.play();
-                video.on('play', abrirTelaCheia); // Ativa a tela cheia ao iniciar a reprodução
-            }
-
-            // Carregar a lista de canais
+            // Carregar canais da lista
             fetch(listaURL)
                 .then(response => response.text())
                 .then(data => {
                     var linhas = data.split('\n');
-                    linhas.forEach(function(linha) {
+                    var canais = [];
+
+                    linhas.forEach(linha => {
                         if (linha.startsWith('#EXTINF')) {
-                            var partes = linha.split(',');
-                            var canalNome = partes[1].trim();
-                            var canalUrl = linhas[linhas.indexOf(linha) + 1];
-                            canais.push({ nome: canalNome, url: canalUrl });
+                            var canal = linha.split(',')[1].trim();
+                            var url = linhas[linhas.indexOf(linha) + 1];
+                            canais.push({ name: canal, url: url });
                         }
                     });
 
-                    // Adiciona os canais à lista HTML
-                    canais.forEach(function(canal) {
-                        var li = document.createElement('li');
-                        li.innerHTML = `<img src="https://via.placeholder.com/50" alt="${canal.nome}"> <p>${canal.nome}</p>`;
-                        li.onclick = function() {
-                            reproduzirCanal(canal.url);
-                        };
-                        listaCanaisElemento.appendChild(li);
+                    // Função para renderizar canais na lista
+                    function renderizarCanais(canaisParaRenderizar) {
+                        listaCanaisElemento.innerHTML = ''; // Limpa a lista existente
+                        canaisParaRenderizar.forEach(canal => {
+                            var li = document.createElement('li');
+                            li.innerHTML = `<img src="https://via.placeholder.com/50" alt="${canal.name}">${canal.name}`;
+                            li.addEventListener('click', function() {
+                                video.src({ type: 'application/x-mpegURL', src: canal.url });
+                                video.play();
+                                video.requestFullscreen(); // Abre em tela cheia automaticamente
+                                reconectar(canal.url); // Chama função de reconexão
+                            });
+                            listaCanaisElemento.appendChild(li);
+                        });
+                    }
+
+                    // Inicializa a lista com todos os canais
+                    renderizarCanais(canais);
+
+                    // Função de filtro
+                    searchInput.addEventListener('input', function() {
+                        var filtro = searchInput.value.toLowerCase();
+                        var canaisFiltrados = canais.filter(canal => canal.name.toLowerCase().includes(filtro));
+                        renderizarCanais(canaisFiltrados);
                     });
                 });
 
-            // Função de busca
-            searchInput.addEventListener("input", function() {
-                var filtro = searchInput.value.toLowerCase();
-                var items = listaCanaisElemento.getElementsByTagName("li");
-                Array.from(items).forEach(function(item) {
-                    var texto = item.textContent.toLowerCase();
-                    item.style.display = texto.includes(filtro) ? "" : "none";
+            // Função de reconexão
+            function reconectar(url) {
+                video.src({ type: 'application/x-mpegURL', src: url });
+                video.play();
+
+                // Tentar reconectar indefinidamente
+                video.on('error', function() {
+                    setTimeout(function() {
+                        reconectar(url);
+                    }, 5000); // Tenta reconectar a cada 5 segundos
                 });
-            });
+            }
+
+            // Atualizar contador online a cada 5 segundos
+            setInterval(atualizarContadorOnline, 5000);
         });
     </script>
 </body>
