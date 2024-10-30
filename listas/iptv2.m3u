@@ -1,189 +1,190 @@
 #EXTM3U
 #EXTINF:-1, ATUALIZAÇÃO (30 de outubro de 2024 às 9:18)
-http://1.m3u8
-#EXTINF:-1,GLOBO BRASILIA HD
-http://194.4.55.26:8080/Victormanuel/120087/27108
+http://1.m3u8/live/.m3u8
 #EXTINF:-1,A&E HD
-http://194.4.55.26:8080/Victormanuel/120087/27109
+http://194.4.55.26:8080/live/Victormanuel/120087/27109.m3u8
 #EXTINF:-1,ANIMAL PLANET HD
-http://194.4.55.26:8080/Victormanuel/120087/27110
+http://194.4.55.26:8080/live/Victormanuel/120087/27110.m3u8
 #EXTINF:-1,AXN HD
-http://194.4.55.26:8080/Victormanuel/120087/27111
+http://194.4.55.26:8080/live/Victormanuel/120087/27111.m3u8
 #EXTINF:-1,BAND HD
-http://194.4.55.26:8080/Victormanuel/120087/27112
+http://194.4.55.26:8080/live/Victormanuel/120087/27112.m3u8
 #EXTINF:-1,BAND NEWS HD
-http://194.4.55.26:8080/Victormanuel/120087/27113
+http://194.4.55.26:8080/live/Victormanuel/120087/27113.m3u8
 #EXTINF:-1,BAND SPORTS HD
-http://194.4.55.26:8080/Victormanuel/120087/27114
+http://194.4.55.26:8080/live/Victormanuel/120087/27114.m3u8
 #EXTINF:-1,BIS HD
-http://194.4.55.26:8080/Victormanuel/120087/27124
-#EXTINF:-1,CARTOONITO HD
-http://194.4.55.26:8080/Victormanuel/120087/27131
+http://194.4.55.26:8080/live/Victormanuel/120087/27124.m3u8
 #EXTINF:-1,CANAL BRASIL HD
-http://194.4.55.26:8080/Victormanuel/120087/27139
+http://194.4.55.26:8080/live/Victormanuel/120087/27139.m3u8
 #EXTINF:-1,CARTOON NETWORK HD
-http://194.4.55.26:8080/Victormanuel/120087/27142
+http://194.4.55.26:8080/live/Victormanuel/120087/27142.m3u8
+#EXTINF:-1,CARTOONITO HD
+http://194.4.55.26:8080/live/Victormanuel/120087/27131.m3u8
 #EXTINF:-1,CINEMAX HD
-http://194.4.55.26:8080/Victormanuel/120087/27143
+http://194.4.55.26:8080/live/Victormanuel/120087/27143.m3u8
 #EXTINF:-1,COMEDY CENTRAL HD
-http://194.4.55.26:8080/Victormanuel/120087/27144
+http://194.4.55.26:8080/live/Victormanuel/120087/27144.m3u8
 #EXTINF:-1,DISCOVERY CH. HD
-http://194.4.55.26:8080/Victormanuel/120087/27145
+http://194.4.55.26:8080/live/Victormanuel/120087/27145.m3u8
 #EXTINF:-1,DISCOVERY CIVILIZATION HD
-http://194.4.55.26:8080/Victormanuel/120087/27146
+http://194.4.55.26:8080/live/Victormanuel/120087/27146.m3u8
 #EXTINF:-1,DISCOVERY H&H HD
-http://194.4.55.26:8080/Victormanuel/120087/27147
+http://194.4.55.26:8080/live/Victormanuel/120087/27147.m3u8
 #EXTINF:-1,DISCOVERY ID HD
-http://194.4.55.26:8080/Victormanuel/120087/27148
+http://194.4.55.26:8080/live/Victormanuel/120087/27148.m3u8
 #EXTINF:-1,DISCOVERY KIDS HD
-http://194.4.55.26:8080/Victormanuel/120087/27149
+http://194.4.55.26:8080/live/Victormanuel/120087/27149.m3u8
 #EXTINF:-1,DISCOVERY SCIENCE HD
-http://194.4.55.26:8080/Victormanuel/120087/27150
+http://194.4.55.26:8080/live/Victormanuel/120087/27150.m3u8
 #EXTINF:-1,DISCOVERY THEATHER HD
-http://194.4.55.26:8080/Victormanuel/120087/27151
+http://194.4.55.26:8080/live/Victormanuel/120087/27151.m3u8
 #EXTINF:-1,DISCOVERY TURBO HD
-http://194.4.55.26:8080/Victormanuel/120087/27152
+http://194.4.55.26:8080/live/Victormanuel/120087/27152.m3u8
 #EXTINF:-1,DISCOVERY WORLD HD
-http://194.4.55.26:8080/Victormanuel/120087/27153
+http://194.4.55.26:8080/live/Victormanuel/120087/27153.m3u8
 #EXTINF:-1,DISNEY CHANNEL HD
-http://194.4.55.26:8080/Victormanuel/120087/27154
+http://194.4.55.26:8080/live/Victormanuel/120087/27154.m3u8
 #EXTINF:-1,DISNEY JUNIOR HD
-http://194.4.55.26:8080/Victormanuel/120087/27155
+http://194.4.55.26:8080/live/Victormanuel/120087/27155.m3u8
 #EXTINF:-1,E! HD
-http://194.4.55.26:8080/Victormanuel/120087/27156
+http://194.4.55.26:8080/live/Victormanuel/120087/27156.m3u8
 #EXTINF:-1,ESPN 2 HD
-http://194.4.55.26:8080/Victormanuel/120087/27157
+http://194.4.55.26:8080/live/Victormanuel/120087/27157.m3u8
 #EXTINF:-1,ESPN BRASIL HD
-http://194.4.55.26:8080/Victormanuel/120087/27158
+http://194.4.55.26:8080/live/Victormanuel/120087/27158.m3u8
 #EXTINF:-1,ESPN EXTRA HD
-http://194.4.55.26:8080/Victormanuel/120087/27159
+http://194.4.55.26:8080/live/Victormanuel/120087/27159.m3u8
 #EXTINF:-1,ESPN HD
-http://194.4.55.26:8080/Victormanuel/120087/27160
+http://194.4.55.26:8080/live/Victormanuel/120087/27160.m3u8
 #EXTINF:-1,FISH TV HD
-http://194.4.55.26:8080/Victormanuel/120087/27161
-#EXTINF:-1,Star Channel HD
-http://194.4.55.26:8080/Victormanuel/120087/27162
-#EXTINF:-1,Star Life HD
-http://194.4.55.26:8080/Victormanuel/120087/27163
+http://194.4.55.26:8080/live/Victormanuel/120087/27161.m3u8
 #EXTINF:-1,FOX PREMIUM 1 HD
-http://194.4.55.26:8080/Victormanuel/120087/27164
+http://194.4.55.26:8080/live/Victormanuel/120087/27164.m3u8
 #EXTINF:-1,FOX PREMIUM 2 HD
-http://194.4.55.26:8080/Victormanuel/120087/27165
+http://194.4.55.26:8080/live/Victormanuel/120087/27165.m3u8
 #EXTINF:-1,FOX SPORTS 2 HD
-http://194.4.55.26:8080/Victormanuel/120087/27166
+http://194.4.55.26:8080/live/Victormanuel/120087/27166.m3u8
 #EXTINF:-1,FOX SPORTS HD
-http://194.4.55.26:8080/Victormanuel/120087/27167
+http://194.4.55.26:8080/live/Victormanuel/120087/27167.m3u8
 #EXTINF:-1,FUTURA HD
-http://194.4.55.26:8080/Victormanuel/120087/27168
+http://194.4.55.26:8080/live/Victormanuel/120087/27168.m3u8
 #EXTINF:-1,FX HD
-http://194.4.55.26:8080/Victormanuel/120087/27169
+http://194.4.55.26:8080/live/Victormanuel/120087/27169.m3u8
+#EXTINF:-1,GLOBO BRASILIA HD
+http://194.4.55.26:8080/live/Victormanuel/120087/27108.m3u8
 #EXTINF:-1,GLOBO NEWS HD
-http://194.4.55.26:8080/Victormanuel/120087/27170
+http://194.4.55.26:8080/live/Victormanuel/120087/27170.m3u8
 #EXTINF:-1,GLOBO RIO HD
-http://194.4.55.26:8080/Victormanuel/120087/27171
+http://194.4.55.26:8080/live/Victormanuel/120087/27171.m3u8
 #EXTINF:-1,GLOBO SP HD
-http://194.4.55.26:8080/Victormanuel/120087/27172
+http://194.4.55.26:8080/live/Victormanuel/120087/27172.m3u8
 #EXTINF:-1,GLOOB HD
-http://194.4.55.26:8080/Victormanuel/120087/27173
+http://194.4.55.26:8080/live/Victormanuel/120087/27173.m3u8
 #EXTINF:-1,GNT HD
-http://194.4.55.26:8080/Victormanuel/120087/27174
+http://194.4.55.26:8080/live/Victormanuel/120087/27174.m3u8
 #EXTINF:-1,HBO 2 HD
-http://194.4.55.26:8080/Victormanuel/120087/27175
+http://194.4.55.26:8080/live/Victormanuel/120087/27175.m3u8
 #EXTINF:-1,HBO FAMILY HD
-http://194.4.55.26:8080/Victormanuel/120087/27176
+http://194.4.55.26:8080/live/Victormanuel/120087/27176.m3u8
 #EXTINF:-1,HBO HD
-http://194.4.55.26:8080/Victormanuel/120087/27177
+http://194.4.55.26:8080/live/Victormanuel/120087/27177.m3u8
 #EXTINF:-1,HBO SIGNATURE HD
-http://194.4.55.26:8080/Victormanuel/120087/27178
+http://194.4.55.26:8080/live/Victormanuel/120087/27178.m3u8
 #EXTINF:-1,HISTORY 2 HD
-http://194.4.55.26:8080/Victormanuel/120087/27179
+http://194.4.55.26:8080/live/Victormanuel/120087/27179.m3u8
 #EXTINF:-1,HISTORY HD
-http://194.4.55.26:8080/Victormanuel/120087/27180
+http://194.4.55.26:8080/live/Victormanuel/120087/27180.m3u8
 #EXTINF:-1,LIFETIME HD
-http://194.4.55.26:8080/Victormanuel/120087/27181
+http://194.4.55.26:8080/live/Victormanuel/120087/27181.m3u8
 #EXTINF:-1,MAIS GLOBOSAT HD
-http://194.4.55.26:8080/Victormanuel/120087/27182
+http://194.4.55.26:8080/live/Victormanuel/120087/27182.m3u8
 #EXTINF:-1,MAX HD
-http://194.4.55.26:8080/Victormanuel/120087/27183
+http://194.4.55.26:8080/live/Victormanuel/120087/27183.m3u8
 #EXTINF:-1,MAX PRIME HD
-http://194.4.55.26:8080/Victormanuel/120087/27184
+http://194.4.55.26:8080/live/Victormanuel/120087/27184.m3u8
 #EXTINF:-1,MAX UP HD
-http://194.4.55.26:8080/Victormanuel/120087/27185
+http://194.4.55.26:8080/live/Victormanuel/120087/27185.m3u8
 #EXTINF:-1,MEGAPIX HD
-http://194.4.55.26:8080/Victormanuel/120087/27186
+http://194.4.55.26:8080/live/Victormanuel/120087/27186.m3u8
 #EXTINF:-1,MULTISHOW HD
-http://194.4.55.26:8080/Victormanuel/120087/27187
+http://194.4.55.26:8080/live/Victormanuel/120087/27187.m3u8
 #EXTINF:-1,NAT GEO KIDS HD
-http://194.4.55.26:8080/Victormanuel/120087/27188
+http://194.4.55.26:8080/live/Victormanuel/120087/27188.m3u8
 #EXTINF:-1,NAT GEO WILD HD
-http://194.4.55.26:8080/Victormanuel/120087/27189
+http://194.4.55.26:8080/live/Victormanuel/120087/27189.m3u8
 #EXTINF:-1,NATIONAL GEOGRAPHIC HD
-http://194.4.55.26:8080/Victormanuel/120087/27190
+http://194.4.55.26:8080/live/Victormanuel/120087/27190.m3u8
 #EXTINF:-1,NICK JR HD
-http://194.4.55.26:8080/Victormanuel/120087/27191
+http://194.4.55.26:8080/live/Victormanuel/120087/27191.m3u8
 #EXTINF:-1,NICKELODEON HD
-http://194.4.55.26:8080/Victormanuel/120087/27192
+http://194.4.55.26:8080/live/Victormanuel/120087/27192.m3u8
 #EXTINF:-1,OFF HD
-http://194.4.55.26:8080/Victormanuel/120087/27193
+http://194.4.55.26:8080/live/Victormanuel/120087/27193.m3u8
 #EXTINF:-1,PARAMOUNT HD
-http://194.4.55.26:8080/Victormanuel/120087/27194
+http://194.4.55.26:8080/live/Victormanuel/120087/27194.m3u8
 #EXTINF:-1,PREMIERE 8 HD
-http://194.4.55.26:8080/Victormanuel/120087/27195
+http://194.4.55.26:8080/live/Victormanuel/120087/27195.m3u8
 #EXTINF:-1,PRIME BOX BRASIL HD
-http://194.4.55.26:8080/Victormanuel/120087/27196
+http://194.4.55.26:8080/live/Victormanuel/120087/27196.m3u8
 #EXTINF:-1,RECORD HD
-http://194.4.55.26:8080/Victormanuel/120087/27197
+http://194.4.55.26:8080/live/Victormanuel/120087/27197.m3u8
 #EXTINF:-1,RECORD NEWS HD
-http://194.4.55.26:8080/Victormanuel/120087/27198
+http://194.4.55.26:8080/live/Victormanuel/120087/27198.m3u8
 #EXTINF:-1,REDE VIDA HD
-http://194.4.55.26:8080/Victormanuel/120087/27199
+http://194.4.55.26:8080/live/Victormanuel/120087/27199.m3u8
 #EXTINF:-1,SONY HD
-http://194.4.55.26:8080/Victormanuel/120087/27200
+http://194.4.55.26:8080/live/Victormanuel/120087/27200.m3u8
 #EXTINF:-1,SPACE HD
-http://194.4.55.26:8080/Victormanuel/120087/27201
+http://194.4.55.26:8080/live/Victormanuel/120087/27201.m3u8
 #EXTINF:-1,SPORTV 2 HD
-http://194.4.55.26:8080/Victormanuel/120087/27202
+http://194.4.55.26:8080/live/Victormanuel/120087/27202.m3u8
 #EXTINF:-1,SPORTV 3 HD
-http://194.4.55.26:8080/Victormanuel/120087/27203
+http://194.4.55.26:8080/live/Victormanuel/120087/27203.m3u8
 #EXTINF:-1,SPORTV HD
-http://194.4.55.26:8080/Victormanuel/120087/27204
+http://194.4.55.26:8080/live/Victormanuel/120087/27204.m3u8
 #EXTINF:-1,STUDIO UNIVERSAL HD
-http://194.4.55.26:8080/Victormanuel/120087/27205
+http://194.4.55.26:8080/live/Victormanuel/120087/27205.m3u8
 #EXTINF:-1,SYFY HD
-http://194.4.55.26:8080/Victormanuel/120087/27206
+http://194.4.55.26:8080/live/Victormanuel/120087/27206.m3u8
+#EXTINF:-1,Star Channel HD
+http://194.4.55.26:8080/live/Victormanuel/120087/27162.m3u8
+#EXTINF:-1,Star Life HD
+http://194.4.55.26:8080/live/Victormanuel/120087/27163.m3u8
 #EXTINF:-1,TBS HD
-http://194.4.55.26:8080/Victormanuel/120087/27207
+http://194.4.55.26:8080/live/Victormanuel/120087/27207.m3u8
 #EXTINF:-1,TELECINE ACTION HD
-http://194.4.55.26:8080/Victormanuel/120087/27208
+http://194.4.55.26:8080/live/Victormanuel/120087/27208.m3u8
 #EXTINF:-1,TELECINE CULT HD
-http://194.4.55.26:8080/Victormanuel/120087/27209
+http://194.4.55.26:8080/live/Victormanuel/120087/27209.m3u8
 #EXTINF:-1,TELECINE FUN HD
-http://194.4.55.26:8080/Victormanuel/120087/27210
+http://194.4.55.26:8080/live/Victormanuel/120087/27210.m3u8
 #EXTINF:-1,TELECINE PIPOCA HD
-http://194.4.55.26:8080/Victormanuel/120087/27211
+http://194.4.55.26:8080/live/Victormanuel/120087/27211.m3u8
 #EXTINF:-1,TELECINE PREMIUM HD
-http://194.4.55.26:8080/Victormanuel/120087/27212
+http://194.4.55.26:8080/live/Victormanuel/120087/27212.m3u8
 #EXTINF:-1,TELECINE TOUCH HD
-http://194.4.55.26:8080/Victormanuel/120087/27213
+http://194.4.55.26:8080/live/Victormanuel/120087/27213.m3u8
 #EXTINF:-1,TLC HD
-http://194.4.55.26:8080/Victormanuel/120087/27214
+http://194.4.55.26:8080/live/Victormanuel/120087/27214.m3u8
 #EXTINF:-1,TNT HD
-http://194.4.55.26:8080/Victormanuel/120087/27215
+http://194.4.55.26:8080/live/Victormanuel/120087/27215.m3u8
 #EXTINF:-1,TNT SERIES HD
-http://194.4.55.26:8080/Victormanuel/120087/27216
+http://194.4.55.26:8080/live/Victormanuel/120087/27216.m3u8
 #EXTINF:-1,TOONCAST HD
-http://194.4.55.26:8080/Victormanuel/120087/27217
+http://194.4.55.26:8080/live/Victormanuel/120087/27217.m3u8
 #EXTINF:-1,TV BRASIL HD
-http://194.4.55.26:8080/Victormanuel/120087/27218
-#EXTINF:-1,TV CÂMARA HD
-http://194.4.55.26:8080/Victormanuel/120087/27219
+http://194.4.55.26:8080/live/Victormanuel/120087/27218.m3u8
 #EXTINF:-1,TV CULTURA HD
-http://194.4.55.26:8080/Victormanuel/120087/27220
+http://194.4.55.26:8080/live/Victormanuel/120087/27220.m3u8
+#EXTINF:-1,TV CÂMARA HD
+http://194.4.55.26:8080/live/Victormanuel/120087/27219.m3u8
 #EXTINF:-1,TV GAZETA HD
-http://194.4.55.26:8080/Victormanuel/120087/27221
+http://194.4.55.26:8080/live/Victormanuel/120087/27221.m3u8
 #EXTINF:-1,VIVA HD
-http://194.4.55.26:8080/Victormanuel/120087/27222
+http://194.4.55.26:8080/live/Victormanuel/120087/27222.m3u8
 #EXTINF:-1,WARNER HD
-http://194.4.55.26:8080/Victormanuel/120087/27223
+http://194.4.55.26:8080/live/Victormanuel/120087/27223.m3u8
 #EXTINF:-1,WOOHOO HD
-http://194.4.55.26:8080/Victormanuel/120087/27224
+http://194.4.55.26:8080/live/Victormanuel/120087/27224.m3u8
+#EXTM3U
