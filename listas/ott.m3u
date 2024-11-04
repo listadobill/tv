@@ -1,201 +1,484 @@
 #EXTM3U
-#EXTINF:-1, ATUALIZAÇÃO (31 de outubro de 2024 às 10:50)
+#EXTINF:-1, 01 - ATUALIZAÇÃO (4 de novembro de 2024 às 17:51)
 http://1.m3u8
-#EXTINF:-1,A&E
-http://bornan.top:8080/live/841710785646145/5a204f234713/10677.m3u8
-#EXTINF:-1,AMC
-http://bornan.top:8080/live/841710785646145/5a204f234713/10678.m3u8
-#EXTINF:-1,ANIMAL PLANET
-http://bornan.top:8080/live/841710785646145/5a204f234713/10679.m3u8
-#EXTINF:-1,AXN
-http://bornan.top:8080/live/841710785646145/5a204f234713/10680.m3u8
-#EXTINF:-1,BABY
-http://bornan.top:8080/live/841710785646145/5a204f234713/10681.m3u8
-#EXTINF:-1,BAND NEWS
-http://bornan.top:8080/live/841710785646145/5a204f234713/10682.m3u8
-#EXTINF:-1,BAND SPORT
-http://bornan.top:8080/live/841710785646145/5a204f234713/10672.m3u8
-#EXTINF:-1,BOOMERANG
-http://bornan.top:8080/live/841710785646145/5a204f234713/10683.m3u8
-#EXTINF:-1,CARTOON NETWORK
-http://bornan.top:8080/live/841710785646145/5a204f234713/10676.m3u8
-#EXTINF:-1,CINEMAX
-http://bornan.top:8080/live/841710785646145/5a204f234713/10728.m3u8
-#EXTINF:-1,COMBATE
-http://bornan.top:8080/live/841710785646145/5a204f234713/10685.m3u8
-#EXTINF:-1,COMEDY CENTRAL
-http://bornan.top:8080/live/841710785646145/5a204f234713/10686.m3u8
-#EXTINF:-1,CONMEBOL 2
-http://bornan.top:8080/live/841710785646145/5a204f234713/10687.m3u8
-#EXTINF:-1,DISCOVERY CHANNEL
-http://bornan.top:8080/live/841710785646145/5a204f234713/10689.m3u8
-#EXTINF:-1,DISCOVERY HOME & HEALTH
-http://bornan.top:8080/live/841710785646145/5a204f234713/10691.m3u8
-#EXTINF:-1,DISCOVERY ID
-http://bornan.top:8080/live/841710785646145/5a204f234713/10692.m3u8
-#EXTINF:-1,DISCOVERY KIDS
-http://bornan.top:8080/live/841710785646145/5a204f234713/10693.m3u8
-#EXTINF:-1,DISCOVERY SCIENCE
-http://bornan.top:8080/live/841710785646145/5a204f234713/10694.m3u8
-#EXTINF:-1,DISCOVERY THEATER
-http://bornan.top:8080/live/841710785646145/5a204f234713/10695.m3u8
-#EXTINF:-1,DISCOVERY TLC
-http://bornan.top:8080/live/841710785646145/5a204f234713/10696.m3u8
-#EXTINF:-1,DISCOVERY TURBO
-http://bornan.top:8080/live/841710785646145/5a204f234713/10697.m3u8
-#EXTINF:-1,DISCOVERY WORLD
-http://bornan.top:8080/live/841710785646145/5a204f234713/10698.m3u8
-#EXTINF:-1,DISNEY CHANNEL
-http://bornan.top:8080/live/841710785646145/5a204f234713/10699.m3u8
-#EXTINF:-1,DISNEY JR
-http://bornan.top:8080/live/841710785646145/5a204f234713/10700.m3u8
-#EXTINF:-1,E!
-http://bornan.top:8080/live/841710785646145/5a204f234713/10702.m3u8
-#EXTINF:-1,ESPN
-http://bornan.top:8080/live/841710785646145/5a204f234713/10703.m3u8
-#EXTINF:-1,ESPN 2
-http://bornan.top:8080/live/841710785646145/5a204f234713/10704.m3u8
-#EXTINF:-1,ESPN4
-http://bornan.top:8080/live/841710785646145/5a204f234713/10671.m3u8
-#EXTINF:-1,FOOD NETWORK
-http://bornan.top:8080/live/841710785646145/5a204f234713/10705.m3u8
-#EXTINF:-1,FOX LIFE
-http://bornan.top:8080/live/841710785646145/5a204f234713/10707.m3u8
-#EXTINF:-1,FOX SPORTS 2
-http://bornan.top:8080/live/841710785646145/5a204f234713/10708.m3u8
-#EXTINF:-1,FX
-http://bornan.top:8080/live/841710785646145/5a204f234713/10710.m3u8
-#EXTINF:-1,GLOBO
-http://bornan.top:8080/live/841710785646145/5a204f234713/10717.m3u8
-#EXTINF:-1,GLOBO EPTV CAMPINAS
-http://bornan.top:8080/live/841710785646145/5a204f234713/10713.m3u8
-#EXTINF:-1,GLOBO INTERNACIONAL
-http://bornan.top:8080/live/841710785646145/5a204f234713/10714.m3u8
-#EXTINF:-1,GLOBO NEWS
-http://bornan.top:8080/live/841710785646145/5a204f234713/10715.m3u8
-#EXTINF:-1,GLOOB
-http://bornan.top:8080/live/841710785646145/5a204f234713/10718.m3u8
-#EXTINF:-1,GNT
-http://bornan.top:8080/live/841710785646145/5a204f234713/10719.m3u8
-#EXTINF:-1,Globo RJ
-http://bornan.top:8080/live/841710785646145/5a204f234713/56036.m3u8
-#EXTINF:-1,H2
-http://bornan.top:8080/live/841710785646145/5a204f234713/10720.m3u8
-#EXTINF:-1,HBO 1
-http://bornan.top:8080/live/841710785646145/5a204f234713/10721.m3u8
-#EXTINF:-1,HBO 2
-http://bornan.top:8080/live/841710785646145/5a204f234713/10722.m3u8
-#EXTINF:-1,HBO FAMILY
-http://bornan.top:8080/live/841710785646145/5a204f234713/10723.m3u8
-#EXTINF:-1,HBO PLUS
-http://bornan.top:8080/live/841710785646145/5a204f234713/10724.m3u8
-#EXTINF:-1,HBO SIGNATURE
-http://bornan.top:8080/live/841710785646145/5a204f234713/10725.m3u8
-#EXTINF:-1,HGTV
-http://bornan.top:8080/live/841710785646145/5a204f234713/10690.m3u8
-#EXTINF:-1,HISTORY CHANNEL
-http://bornan.top:8080/live/841710785646145/5a204f234713/10726.m3u8
-#EXTINF:-1,ID InvestigaÃ§Ã£o Discovery SD
-http://bornan.top:8080/live/841710785646145/5a204f234713/56019.m3u8
-#EXTINF:-1,LIFE TIME
-http://bornan.top:8080/live/841710785646145/5a204f234713/10727.m3u8
-#EXTINF:-1,MEGA PIX
-http://bornan.top:8080/live/841710785646145/5a204f234713/10729.m3u8
-#EXTINF:-1,MTV
-http://bornan.top:8080/live/841710785646145/5a204f234713/10730.m3u8
-#EXTINF:-1,MULTI SHOW
-http://bornan.top:8080/live/841710785646145/5a204f234713/10731.m3u8
-#EXTINF:-1,NAT GEO
-http://bornan.top:8080/live/841710785646145/5a204f234713/10732.m3u8
-#EXTINF:-1,NAT GEO KIDS
-http://bornan.top:8080/live/841710785646145/5a204f234713/10733.m3u8
-#EXTINF:-1,NAT GEO WILD
-http://bornan.top:8080/live/841710785646145/5a204f234713/10734.m3u8
-#EXTINF:-1,NICKELODEON
-http://bornan.top:8080/live/841710785646145/5a204f234713/10735.m3u8
-#EXTINF:-1,NOVO TEMPO
-http://bornan.top:8080/live/841710785646145/5a204f234713/10736.m3u8
-#EXTINF:-1,OFF
-http://bornan.top:8080/live/841710785646145/5a204f234713/10737.m3u8
-#EXTINF:-1,PARAMOUNT CHANNEL
-http://bornan.top:8080/live/841710785646145/5a204f234713/10738.m3u8
-#EXTINF:-1,PREMIERE 2
-http://bornan.top:8080/live/841710785646145/5a204f234713/10739.m3u8
-#EXTINF:-1,PREMIERE 3
-http://bornan.top:8080/live/841710785646145/5a204f234713/10740.m3u8
-#EXTINF:-1,PREMIERE 4
-http://bornan.top:8080/live/841710785646145/5a204f234713/10741.m3u8
-#EXTINF:-1,PREMIERE 5
-http://bornan.top:8080/live/841710785646145/5a204f234713/10742.m3u8
-#EXTINF:-1,PREMIERE 6
-http://bornan.top:8080/live/841710785646145/5a204f234713/10743.m3u8
-#EXTINF:-1,PREMIERE CLUBES
-http://bornan.top:8080/live/841710785646145/5a204f234713/10744.m3u8
-#EXTINF:-1,RA TIM BUM
-http://bornan.top:8080/live/841710785646145/5a204f234713/10745.m3u8
-#EXTINF:-1,RECORD
-http://bornan.top:8080/live/841710785646145/5a204f234713/10746.m3u8
-#EXTINF:-1,RECORD NEWS
-http://bornan.top:8080/live/841710785646145/5a204f234713/10747.m3u8
-#EXTINF:-1,REDE TV
-http://bornan.top:8080/live/841710785646145/5a204f234713/10748.m3u8
-#EXTINF:-1,RPC TV CURITIBA
-http://bornan.top:8080/live/841710785646145/5a204f234713/10749.m3u8
-#EXTINF:-1,SBT
-http://bornan.top:8080/live/841710785646145/5a204f234713/10750.m3u8
-#EXTINF:-1,SBT NORDESTE
-http://bornan.top:8080/live/841710785646145/5a204f234713/10751.m3u8
-#EXTINF:-1,SONY
-http://bornan.top:8080/live/841710785646145/5a204f234713/10752.m3u8
-#EXTINF:-1,SPACE
-http://bornan.top:8080/live/841710785646145/5a204f234713/10753.m3u8
-#EXTINF:-1,SPORTV 1
-http://bornan.top:8080/live/841710785646145/5a204f234713/10675.m3u8
-#EXTINF:-1,SPORTV 2
-http://bornan.top:8080/live/841710785646145/5a204f234713/10674.m3u8
-#EXTINF:-1,SPORTV 3
-http://bornan.top:8080/live/841710785646145/5a204f234713/10673.m3u8
-#EXTINF:-1,STAR CHANNEL
-http://bornan.top:8080/live/841710785646145/5a204f234713/10706.m3u8
-#EXTINF:-1,STUDIO UNIVERSAL
-http://bornan.top:8080/live/841710785646145/5a204f234713/10754.m3u8
-#EXTINF:-1,SYFY
-http://bornan.top:8080/live/841710785646145/5a204f234713/10755.m3u8
-#EXTINF:-1,TBS
-http://bornan.top:8080/live/841710785646145/5a204f234713/10756.m3u8
-#EXTINF:-1,TCM
-http://bornan.top:8080/live/841710785646145/5a204f234713/10757.m3u8
-#EXTINF:-1,TELE CINE ACTION
-http://bornan.top:8080/live/841710785646145/5a204f234713/10758.m3u8
-#EXTINF:-1,TELE CINE CULT
-http://bornan.top:8080/live/841710785646145/5a204f234713/10759.m3u8
-#EXTINF:-1,TELE CINE FUN
-http://bornan.top:8080/live/841710785646145/5a204f234713/10760.m3u8
-#EXTINF:-1,TELE CINE PIPOCA
-http://bornan.top:8080/live/841710785646145/5a204f234713/10761.m3u8
-#EXTINF:-1,TELE CINE PREMIUM
-http://bornan.top:8080/live/841710785646145/5a204f234713/10762.m3u8
-#EXTINF:-1,TELE CINE TOUCH
-http://bornan.top:8080/live/841710785646145/5a204f234713/10763.m3u8
-#EXTINF:-1,TNT
-http://bornan.top:8080/live/841710785646145/5a204f234713/10764.m3u8
-#EXTINF:-1,TNT SERIES
-http://bornan.top:8080/live/841710785646145/5a204f234713/10765.m3u8
-#EXTINF:-1,TOONCAST
-http://bornan.top:8080/live/841710785646145/5a204f234713/10766.m3u8
-#EXTINF:-1,TV BRASIL
-http://bornan.top:8080/live/841710785646145/5a204f234713/10767.m3u8
-#EXTINF:-1,TV DIARIO
-http://bornan.top:8080/live/841710785646145/5a204f234713/10768.m3u8
-#EXTINF:-1,TV EVANGELIZAR
-http://bornan.top:8080/live/841710785646145/5a204f234713/10769.m3u8
-#EXTINF:-1,UNIVERSAL CHANNEL
-http://bornan.top:8080/live/841710785646145/5a204f234713/10770.m3u8
-#EXTINF:-1,VIVA
-http://bornan.top:8080/live/841710785646145/5a204f234713/10771.m3u8
-#EXTINF:-1,WARNER CHANNEL
-http://bornan.top:8080/live/841710785646145/5a204f234713/10772.m3u8
-#EXTINF:-1,WOOHOO
-http://bornan.top:8080/live/841710785646145/5a204f234713/10773.m3u8
-#EXTINF:-1,BRA: ID InvestigaÃ§Ã£o Discovery HD
-http://bornan.top:8080/live/841710785646145/5a204f234713/56020.m3u8
+
+#EXTINF:-1,01:A&E HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2531.m3u8
+#EXTINF:-1,02:AMC HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2530.m3u8
+#EXTINF:-1,03:Animal Planet HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2529.m3u8
+#EXTINF:-1,05:AXN HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2527.m3u8
+#EXTINF:-1,06:Band HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2526.m3u8
+#EXTINF:-1,07:Band News HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2525.m3u8
+#EXTINF:-1,08:Band Sports HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2524.m3u8
+#EXTINF:-1,09:Tooncast
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2523.m3u8
+#EXTINF:-1,10:BIS HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2522.m3u8
+#EXTINF:-1,11:Boomerang HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2521.m3u8
+#EXTINF:-1,12:FISH TV HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2520.m3u8
+#EXTINF:-1,13:Cartoon Network HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2519.m3u8
+#EXTINF:-1,14:Cinemax HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2518.m3u8
+#EXTINF:-1,15:Combate HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2517.m3u8
+#EXTINF:-1,16:Comedy Central HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2516.m3u8
+#EXTINF:-1,17:Baby TV HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2515.m3u8
+#EXTINF:-1,18:Discovery HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2514.m3u8
+#EXTINF:-1,19:Discovery Civilization HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2513.m3u8
+#EXTINF:-1,20:Discovery Home Health HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2512.m3u8
+#EXTINF:-1,21:Discovery Kids HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2511.m3u8
+#EXTINF:-1,22:Discovery Science HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2510.m3u8
+#EXTINF:-1,23:Discovery Theater HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2509.m3u8
+#EXTINF:-1,24:Discovery Turbo HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2508.m3u8
+#EXTINF:-1,25:Discovery World HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2507.m3u8
+#EXTINF:-1,26:Disney HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2506.m3u8
+#EXTINF:-1,27:DISNEY JR HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2505.m3u8
+#EXTINF:-1,28:Disney XD HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2504.m3u8
+#EXTINF:-1,29:E! HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2503.m3u8
+#EXTINF:-1,30:ESPN Extra HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2502.m3u8
+#EXTINF:-1,31:ESPN BRASIL HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2501.m3u8
+#EXTINF:-1,32:WOOHOO HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2500.m3u8
+#EXTINF:-1,33:ESPN HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2499.m3u8
+#EXTINF:-1,34:DAZN 1 HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2498.m3u8
+#EXTINF:-1,35:VIVA HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2497.m3u8
+#EXTINF:-1,36:TV Record HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2496.m3u8
+#EXTINF:-1,37:Food Network HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2495.m3u8
+#EXTINF:-1,38:Fox HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2494.m3u8
+#EXTINF:-1,39:Fox Life HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2493.m3u8
+#EXTINF:-1,42:Fox Sports 2 HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2490.m3u8
+#EXTINF:-1,43:Fox Sports 1 HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2489.m3u8
+#EXTINF:-1,44:FX HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2488.m3u8
+#EXTINF:-1,45:Globo News HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2487.m3u8
+#EXTINF:-1,46:Globo Rbs Porto Alegre
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2486.m3u8
+#EXTINF:-1,47:Globo RJ HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2485.m3u8
+#EXTINF:-1,48:Globo HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2484.m3u8
+#EXTINF:-1,49:Gloobinho HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2483.m3u8
+#EXTINF:-1,50:GNT HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2482.m3u8
+#EXTINF:-1,51:H2 HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2481.m3u8
+#EXTINF:-1,52:HBO 2 HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2480.m3u8
+#EXTINF:-1,53:HBO Family HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2479.m3u8
+#EXTINF:-1,54:HBO HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2478.m3u8
+#EXTINF:-1,55:HBO Plus HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2477.m3u8
+#EXTINF:-1,56:HBO Signature HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2476.m3u8
+#EXTINF:-1,57:History HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2475.m3u8
+#EXTINF:-1,58:Investigacao Discovery HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2474.m3u8
+#EXTINF:-1,59:Lifetime HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2473.m3u8
+#EXTINF:-1,60:Mais Globosat
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2472.m3u8
+#EXTINF:-1,61:Max
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2471.m3u8
+#EXTINF:-1,62:Max Prime
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2470.m3u8
+#EXTINF:-1,63:Max Up
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2469.m3u8
+#EXTINF:-1,64:MegaPix HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2468.m3u8
+#EXTINF:-1,65:MTV HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2467.m3u8
+#EXTINF:-1,66:Multishow HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2466.m3u8
+#EXTINF:-1,67:BG MUSIC HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2465.m3u8
+#EXTINF:-1,68:NAT GEO HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2464.m3u8
+#EXTINF:-1,69:NAT GEO Kids HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2463.m3u8
+#EXTINF:-1,70:NAT GEO Wild HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2462.m3u8
+#EXTINF:-1,71:NICK JR HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2461.m3u8
+#EXTINF:-1,72:Nickelodeon FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2460.m3u8
+#EXTINF:-1,73:Off HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2459.m3u8
+#EXTINF:-1,74:Paramount Channel HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2458.m3u8
+#EXTINF:-1,75:Premiere 2 HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2457.m3u8
+#EXTINF:-1,76:Premiere 3 HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2456.m3u8
+#EXTINF:-1,77:Premiere 4 HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2455.m3u8
+#EXTINF:-1,78:Premiere 5 HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2454.m3u8
+#EXTINF:-1,79:CNN BRASIL HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2453.m3u8
+#EXTINF:-1,80:Globo SP
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2452.m3u8
+#EXTINF:-1,81:Premiere Clubes HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2451.m3u8
+#EXTINF:-1,82:Warner Channel HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2450.m3u8
+#EXTINF:-1,83:Record Amazonas
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2449.m3u8
+#EXTINF:-1,84:Rede TV HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2448.m3u8
+#EXTINF:-1,85:SBT HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2447.m3u8
+#EXTINF:-1,86:Space HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2446.m3u8
+#EXTINF:-1,87:Sport TV 2 HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2445.m3u8
+#EXTINF:-1,88:Sport TV 3 HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2444.m3u8
+#EXTINF:-1,89:Sport TV 1 HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2443.m3u8
+#EXTINF:-1,90:Studio Universal HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2442.m3u8
+#EXTINF:-1,91:SYFY HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2441.m3u8
+#EXTINF:-1,92:TBS HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2440.m3u8
+#EXTINF:-1,93:Telecine Action HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2439.m3u8
+#EXTINF:-1,94:Telecine Cult HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2438.m3u8
+#EXTINF:-1,95:Telecine Fun HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2437.m3u8
+#EXTINF:-1,96:Telecine Pipoca HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2436.m3u8
+#EXTINF:-1,97:Telecine Premium HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2435.m3u8
+#EXTINF:-1,98:Telecine Touch HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2434.m3u8
+#EXTINF:-1,99:TLC HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2433.m3u8
+#EXTINF:-1,BR100:TNT HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2432.m3u8
+#EXTINF:-1,BR101:TNT Series  HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2431.m3u8
+#EXTINF:-1,BR102:TV Ra Tim Bum
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2430.m3u8
+#EXTINF:-1,BR103:Universal Channel HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/2429.m3u8
+#EXTINF:-1,BR104:A&E FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65659.m3u8
+#EXTINF:-1,BR105:A&E SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65660.m3u8
+#EXTINF:-1,BR106:AMC FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65661.m3u8
+#EXTINF:-1,BR107:AMC SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65662.m3u8
+#EXTINF:-1,BR108:Animal Planet FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65663.m3u8
+#EXTINF:-1,BR112:AXN FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65667.m3u8
+#EXTINF:-1,BR113:AXN SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65668.m3u8
+#EXTINF:-1,BR114:Baby tv SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65669.m3u8
+#EXTINF:-1,BR117:Band Sports SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65672.m3u8
+#EXTINF:-1,BR118:Boomerang FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65673.m3u8
+#EXTINF:-1,BR119:Boomerang SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65674.m3u8
+#EXTINF:-1,BR120:Cartoon Network FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65675.m3u8
+#EXTINF:-1,BR121:Cartoon Network SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65676.m3u8
+#EXTINF:-1,BR122:Cinemax FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65677.m3u8
+#EXTINF:-1,BR123:Cinemax SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65678.m3u8
+#EXTINF:-1,BR127:Conmebol 1
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65682.m3u8
+#EXTINF:-1,BR128:comedy central FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65683.m3u8
+#EXTINF:-1,BR129:comedy central SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65684.m3u8
+#EXTINF:-1,BR134:Discovery Home & Health FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65689.m3u8
+#EXTINF:-1,BR135:Discovery Home & Health SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65690.m3u8
+#EXTINF:-1,BR136:Discovery Kids FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65691.m3u8
+#EXTINF:-1,BR137:Discovery Kids SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65692.m3u8
+#EXTINF:-1,BR138:Discovery Science FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65693.m3u8
+#EXTINF:-1,BR139:Discovery Science SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65694.m3u8
+#EXTINF:-1,BR142:Discovery TLC SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65697.m3u8
+#EXTINF:-1,BR144:Discovery Turbo SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65699.m3u8
+#EXTINF:-1,BR145:Discovery World FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65700.m3u8
+#EXTINF:-1,BR146:Discovery World SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65701.m3u8
+#EXTINF:-1,BR147:Disney Channel FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65702.m3u8
+#EXTINF:-1,BR148:Disney Channel SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65703.m3u8
+#EXTINF:-1,BR153:E! SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65708.m3u8
+#EXTINF:-1,BR154:Espn Brasil FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65709.m3u8
+#EXTINF:-1,BR155:Espn Brasil SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65710.m3u8
+#EXTINF:-1,BR156:Espn Extra FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65711.m3u8
+#EXTINF:-1,BR157:Conmebol 2
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65712.m3u8
+#EXTINF:-1,BR158:Espn SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65713.m3u8
+#EXTINF:-1,BR160:Food Network FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65715.m3u8
+#EXTINF:-1,BR161:Food Network SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65716.m3u8
+#EXTINF:-1,BR162:Fox FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65717.m3u8
+#EXTINF:-1,BR163:Fox Life SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65718.m3u8
+#EXTINF:-1,BR168:Fox SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65723.m3u8
+#EXTINF:-1,BR173:Fx FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65728.m3u8
+#EXTINF:-1,BR174:Fx SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65729.m3u8
+#EXTINF:-1,BR176:Globo News FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65731.m3u8
+#EXTINF:-1,BR177:Globo News SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65732.m3u8
+#EXTINF:-1,BR178:Globo Amazonas
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65733.m3u8
+#EXTINF:-1,BR179:GLOBO MINAS
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65734.m3u8
+#EXTINF:-1,BR180:Gloob FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65735.m3u8
+#EXTINF:-1,BR181:Gloob SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65736.m3u8
+#EXTINF:-1,BR182:Gloobinho SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65737.m3u8
+#EXTINF:-1,BR183:Gnt SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65738.m3u8
+#EXTINF:-1,BR184:H2 FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65739.m3u8
+#EXTINF:-1,BR185:H2 SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65740.m3u8
+#EXTINF:-1,BR186:Hbo 2 FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65741.m3u8
+#EXTINF:-1,BR187:Hbo 2 SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65742.m3u8
+#EXTINF:-1,BR188:Hbo family SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65743.m3u8
+#EXTINF:-1,BR189:Hbo FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65744.m3u8
+#EXTINF:-1,BR190:Hbo Mundi SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65745.m3u8
+#EXTINF:-1,BR191:Hbo Plus FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65746.m3u8
+#EXTINF:-1,BR192:Hbo Plus SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65747.m3u8
+#EXTINF:-1,BR193:Hbo SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65748.m3u8
+#EXTINF:-1,BR194:Hbo Signature FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65749.m3u8
+#EXTINF:-1,BR195:Hbo Signature SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65750.m3u8
+#EXTINF:-1,BR196:Hbo Xtreme FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65751.m3u8
+#EXTINF:-1,BR197:Hbo Xtreme SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65752.m3u8
+#EXTINF:-1,BR198:History Channel FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65753.m3u8
+#EXTINF:-1,BR199:History Channel SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65754.m3u8
+#EXTINF:-1,BR201:Investigacao Discovery SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65756.m3u8
+#EXTINF:-1,BR205:Mtv FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65760.m3u8
+#EXTINF:-1,BR207:Multishow FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65762.m3u8
+#EXTINF:-1,BR209:Music Box SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65764.m3u8
+#EXTINF:-1,BR211:Nat Geo Kids SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65766.m3u8
+#EXTINF:-1,BR214:Nick JR FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65769.m3u8
+#EXTINF:-1,BR215:Nick JR SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65770.m3u8
+#EXTINF:-1,BR216:Nickelodeon SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65771.m3u8
+#EXTINF:-1,BR217:Off SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65772.m3u8
+#EXTINF:-1,BR218:Paramount Channel FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65773.m3u8
+#EXTINF:-1,BR219:Paramount Channel SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65774.m3u8
+#EXTINF:-1,BR220:Premiere 2 FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65775.m3u8
+#EXTINF:-1,BR221:Premiere 2 SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65776.m3u8
+#EXTINF:-1,BR222:Premiere 3 SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65777.m3u8
+#EXTINF:-1,BR223:Premiere 4 FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65778.m3u8
+#EXTINF:-1,BR224:Premiere 4 SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65779.m3u8
+#EXTINF:-1,BR225:Premiere 5 FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65780.m3u8
+#EXTINF:-1,BR226:Premiere 5 SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65781.m3u8
+#EXTINF:-1,BR227:Premiere Clubes FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65782.m3u8
+#EXTINF:-1,BR228:Premiere Clubes SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65783.m3u8
+#EXTINF:-1,BR229:Tv Brasil
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65784.m3u8
+#EXTINF:-1,BR230:Sbt FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65785.m3u8
+#EXTINF:-1,BR231:Sbt SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65786.m3u8
+#EXTINF:-1,BR232:Space FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65787.m3u8
+#EXTINF:-1,BR233:Space SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65788.m3u8
+#EXTINF:-1,BR234:Sportv 2 FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65789.m3u8
+#EXTINF:-1,BR235:Sportv 2 SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65790.m3u8
+#EXTINF:-1,BR236:Sportv 3 FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65791.m3u8
+#EXTINF:-1,BR237:Sportv 3 SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65792.m3u8
+#EXTINF:-1,BR238:Sportv FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65793.m3u8
+#EXTINF:-1,BR239:Sportv SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65794.m3u8
+#EXTINF:-1,BR240:Studio Universal FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65795.m3u8
+#EXTINF:-1,BR241:Studio Universal SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65796.m3u8
+#EXTINF:-1,BR242:Syfy FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65797.m3u8
+#EXTINF:-1,BR243:Syfy SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65798.m3u8
+#EXTINF:-1,BR244:Tbs FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65799.m3u8
+#EXTINF:-1,BR245:Telecine Action FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65800.m3u8
+#EXTINF:-1,BR246:Telecine Action SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65801.m3u8
+#EXTINF:-1,BR247:Telecine Cult FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65802.m3u8
+#EXTINF:-1,BR248:Telecine Cult SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65803.m3u8
+#EXTINF:-1,BR249:Telecine Fun FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65804.m3u8
+#EXTINF:-1,BR250:Telecine Fun SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65805.m3u8
+#EXTINF:-1,BR251:Telecine Pipoca FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65806.m3u8
+#EXTINF:-1,BR252:Telecine Pipoca SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65807.m3u8
+#EXTINF:-1,BR253:Telecine Premium FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65808.m3u8
+#EXTINF:-1,BR254:Telecine Premium SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65809.m3u8
+#EXTINF:-1,BR255:Telecine Touch FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65810.m3u8
+#EXTINF:-1,BR256:Telecine Touch SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65811.m3u8
+#EXTINF:-1,BR259:TNT Series FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65814.m3u8
+#EXTINF:-1,BR260:TNT Series SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65815.m3u8
+#EXTINF:-1,BR261:Universal Channel FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65816.m3u8
+#EXTINF:-1,BR262:Universal Channel SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65817.m3u8
+#EXTINF:-1,BR264:Viva FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65819.m3u8
+#EXTINF:-1,BR265:Viva SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65820.m3u8
+#EXTINF:-1,BR267:Warner Channel SD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65822.m3u8
+#EXTINF:-1,BR268:Woohoo FHD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/65823.m3u8
+#EXTINF:-1,BR270:Globo Nordeste HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/66006.m3u8
+#EXTINF:-1,BR271:Globo Rio HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/66007.m3u8
+#EXTINF:-1,BR272:CANAL BRASIL
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/66008.m3u8
+#EXTINF:-1,BR273:REDE VIDA HD
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/49959.m3u8
+#EXTINF:-1,BR:-----|24 Horas|---------------------------------
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/66020.m3u8
+#EXTINF:-1,BR:-----|Canais Abertos|---------------------------------
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/66017.m3u8
+#EXTINF:-1,BR:-----|Canais Hbo|---------------------------------
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/66018.m3u8
+#EXTINF:-1,BR:-----|Canais Premiere|---------------------------------
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/66019.m3u8
+#EXTINF:-1,BR:-----|Canais Telecine|---------------------------------
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/66012.m3u8
+#EXTINF:-1,BR:-----|Documentarios|---------------------------------
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/66167.m3u8
+#EXTINF:-1,BR:-----|Esportes|---------------------------------
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/66013.m3u8
+#EXTINF:-1,BR:-----|Filmes e Series|---------------------------------
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/66011.m3u8
+#EXTINF:-1,BR:-----|Infantis|---------------------------------
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/66016.m3u8
+#EXTINF:-1,BR:-----|Musicas|--------------------------
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/66168.m3u8
+#EXTINF:-1,BR:-----|Noticias|-----------------------
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/66165.m3u8
+#EXTINF:-1,BR:-----|Rede Globo|---------------------------------
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/66015.m3u8
+#EXTINF:-1,BR:-----|Variedades|---------------------------------
+http://mohdtv.com:8880/live/ALLChannelsc46e0000b8dc/pMbOA3yzqcEtpcIt/66014.m3u8
