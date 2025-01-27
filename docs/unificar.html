@@ -60,14 +60,9 @@
                             let infoLine = entries[j]
                                 .replace(/tvg-id="[^"]*"/g, '') // Remove tvg-id
                                 .replace(/-1/g, '') // Remove -1
+                                .replace(/tvg-logo="[^"]*"/g, '') // Remove tvg-logo
                                 .replace(/group-title="[^"]*"/g, '') // Remove qualquer group-title antigo
                                 .replace('#EXTINF:', `#EXTINF: group-title="${groupTitle}"`); // Adiciona novo group-title
-
-                            // Manter o logo se presente
-                            const logoMatch = entries[j].match(/tvg-logo="([^"]*)"/);
-                            if (logoMatch) {
-                                infoLine += ` tvg-logo="${logoMatch[1]}"`; // Mantém o logo
-                            }
 
                             const urlLine = entries[j + 1];
 
