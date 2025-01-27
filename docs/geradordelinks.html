@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Links IPTV</title>
+</head>
+<body>
+    <h2>Gerador de Links IPTV</h2>
+    <textarea id="inputData" rows="10" cols="50" placeholder="Cole suas listas aqui..."></textarea>
+    <br>
+    <button onclick="generateLinks()">Gerar Links</button>
+    <h3>Links Gerados:</h3>
+    <div id="output"></div>
+
+    <script>
+        function generateLinks() {
+            let input = document.getElementById("inputData").value;
+            let lines = input.split('\n');
+            let baseUrl = "";
+            let outputHtml = "";
+
+            lines.forEach(line => {
+                line = line.replace(/\s*🌐|\s*👤|\s*🔐/g, "").trim(); // Remove os símbolos
+                
+                if (line.startsWith("http")) {
+                    baseUrl = line;
+                } else if (line.includes(" ")) {
+                    let parts = line.split(" ");
+                    if (parts.length === 2) {
+                        let username = parts[0];
+                        let password = parts[1];
+                        let fullUrl = `${baseUrl}/get.php?username=${username}&password=${password}&type=m3u`;
+                        outputHtml += `<a href='${fullUrl}' target='_blank'>${fullUrl}</a><br>`;
+                    }
+                }
+            });
+
+            document.getElementById("output").innerHTML = outputHtml;
+        }
+    </script>
+</body>
+</html>
