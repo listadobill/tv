@@ -29,20 +29,16 @@
     <button id="download-button" style="display: none;">Baixar Lista IPTV Unificada (.m3u)</button>
 
     <script>
-        // URLs e nomes dos grupos
+        // URLs e grupos
         const urls = [
             { url: "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/listas/iptv.m3u", group: "Servidor 1" },
             { url: "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/listas/iptv2.m3u", group: "Servidor 2" },
             { url: "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/listas/ott.m3u", group: "Servidor 3" },
             { url: "https://iptv-org.github.io/iptv/countries/br.m3u", group: "Canais Brasileiros" },
-            { url: "https://iptv-org.github.io/iptv/languages/por.m3u", group: "Canais Portugueses" },
-            { url: "https://iptv-org.github.io/iptv/countries/ag.m3u", group: "Canais Argentinos" },
-            { url: "https://iptv-org.github.io/iptv/countries/es.m3u", group: "Canais Espanhois" },
-            { url: "https://iptv-org.github.io/iptv/categories/auto.m3u", group: "Canais de Carros" },
-            { url: "https://iptv-org.github.io/iptv/categories/music.m3u", group: "Canais de Músicas" }
+            { url: "https://iptv-org.github.io/iptv/languages/por.m3u", group: "Canais Portugueses" }
         ];
 
-        let unifiedM3UContent = "#EXTM3U\n"; // Começo do arquivo M3U
+        let unifiedM3UContent = "#EXTM3U\n";
 
         async function fetchM3U() {
             const totalUrls = urls.length;
@@ -61,12 +57,22 @@
 
                     for (let j = 0; j < entries.length; j++) {
                         if (entries[j].startsWith('#EXTINF')) {
-                            let infoLine = entries[j].replace(/group-title="[^"]*"/, ''); // Remove o group-title existente, se houver
-                            infoLine = infoLine.replace('#EXTINF:', `#EXTINF: group-title="${groupTitle}"`); // Adiciona o novo group-title
-                            const urlLine = entries[j + 1]; // A próxima linha deve ser a URL
+                            let infoLine = entries[j]
+                                .replace(/tvg-id="[^"]*"/g, '') // Remove tvg-id
+                                .replace(/-1/g, '') // Remove -1
+                                .replace(/group-title="[^"]*"/g, '') // Remove qualquer group-title antigo
+                                .replace('#EXTINF:', `#EXTINF: group-title="${groupTitle}"`); // Adiciona novo group-title
+
+                            // Manter o logo se presente
+                            const logoMatch = entries[j].match(/tvg-logo="([^"]*)"/);
+                            if (logoMatch) {
+                                infoLine += ` tvg-logo="${logoMatch[1]}"`; // Mantém o logo
+                            }
+
+                            const urlLine = entries[j + 1];
 
                             if (urlLine) {
-                                allEntries.push({ info: infoLine, url: urlLine });
+                                allEntries.push({ info: infoLine.trim(), url: urlLine.trim() });
                             }
                         }
                     }
@@ -79,29 +85,14 @@
                 }
             }
 
-            // Adiciona a data e hora de geração do arquivo
+            // Adiciona um marcador de atualização
             const now = new Date();
-            const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false };
-            const formattedDate = now.toLocaleString('pt-BR', options).replace(',', '');
-
-            // Criação da entrada de atualização
+            const formattedDate = now.toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }).replace(',', '');
             const updateEntry = `#EXTINF:-1, ATUALIZAÇÃO (${formattedDate})\nhttp://1.m3u8\n`;
             unifiedM3UContent += updateEntry;
 
-            // Unificação e ordenação
+            // Unificação das entradas
             document.getElementById('status').textContent = 'Unificando listas...';
-            allEntries.sort((a, b) => {
-                const nameA = a.info.split(',').pop().trim();
-                const nameB = b.info.split(',').pop().trim();
-
-                const startsWithNumberA = /^[0-9]/.test(nameA);
-                const startsWithNumberB = /^[0-9]/.test(nameB);
-
-                if (startsWithNumberA && !startsWithNumberB) return -1;
-                if (!startsWithNumberA && startsWithNumberB) return 1;
-
-                return nameA.localeCompare(nameB);
-            });
 
             allEntries.forEach(entry => {
                 unifiedM3UContent += entry.info + '\n' + entry.url + '\n';
@@ -124,7 +115,6 @@
         }
 
         document.getElementById('download-button').addEventListener('click', downloadM3U);
-
         fetchM3U();
     </script>
 </body>
