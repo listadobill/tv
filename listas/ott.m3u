@@ -1,275 +1,730 @@
 #EXTM3U
-#EXTINF:-1, ATUALIZAÇÃO (27 de janeiro de 2025 às 17:59)
+#EXTINF:-1, ATUALIZAÇÃO (29 de janeiro de 2025 às 11:10)
 http://1.m3u8
-#EXTINF:-1,A&E HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821666.m3u8
-#EXTINF:-1,AMAZON PRIME 01
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821618.m3u8
-#EXTINF:-1,AMAZON PRIME 02
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821619.m3u8
-#EXTINF:-1,AMAZON PRIME 03
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821620.m3u8
-#EXTINF:-1,AMAZON PRIME 04
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821621.m3u8
+#EXTINF:-1,A&E FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71917.m3u8
+#EXTINF:-1,A&E SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72047.m3u8
+#EXTINF:-1,AE HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71863.m3u8
+#EXTINF:-1,ALL SPORTS HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72049.m3u8
 #EXTINF:-1,AMC HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821667.m3u8
-#EXTINF:-1,ANIMAL PLANET HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821682.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71919.m3u8
+#EXTINF:-1,AMC SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72045.m3u8
+#EXTINF:-1,AXN FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71921.m3u8
 #EXTINF:-1,AXN HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821668.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71866.m3u8
+#EXTINF:-1,AXN SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72044.m3u8
+#EXTINF:-1,Animal Planet FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71918.m3u8
+#EXTINF:-1,Animal Planet HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71864.m3u8
+#EXTINF:-1,Animal Planet SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72048.m3u8
+#EXTINF:-1,Arte 1
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71865.m3u8
+#EXTINF:-1,Arte 1 FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72046.m3u8
+#EXTINF:-1,Arte 1 HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71920.m3u8
 #EXTINF:-1,BABY TV HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821697.m3u8
-#EXTINF:-1,BAND BA HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821761.m3u8
-#EXTINF:-1,BAND CAMPINAS HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821705.m3u8
-#EXTINF:-1,BAND HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821706.m3u8
-#EXTINF:-1,BAND MANAUS HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821757.m3u8
-#EXTINF:-1,BAND MG HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821759.m3u8
-#EXTINF:-1,BAND NEWS HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821723.m3u8
-#EXTINF:-1,BAND SP HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821707.m3u8
-#EXTINF:-1,BAND SPORTS HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821634.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71922.m3u8
+#EXTINF:-1,BAND CAMPINAS
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71923.m3u8
+#EXTINF:-1,BAND NEWS FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71924.m3u8
+#EXTINF:-1,BBB 21 ACOMPANHE A CASA
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71857.m3u8
+#EXTINF:-1,BBB 21 ACOMPANHE A CASA EXTRA
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71856.m3u8
+#EXTINF:-1,BBB 21 CAM PRINCIPAL
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71858.m3u8
+#EXTINF:-1,BBB 21 CONFESSIONARIO
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71855.m3u8
+#EXTINF:-1,BBB 21 COZINHA XEPA
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71852.m3u8
+#EXTINF:-1,BBB 21 HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71848.m3u8
+#EXTINF:-1,BBB 21 JARDIM
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71849.m3u8
+#EXTINF:-1,BBB 21 MOSAICO
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71859.m3u8
+#EXTINF:-1,BBB 21 PISCINA
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71850.m3u8
+#EXTINF:-1,BBB 21 QUARTO COLORIDO
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71853.m3u8
+#EXTINF:-1,BBB 21 QUARTO CORDEL
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71854.m3u8
+#EXTINF:-1,BBB 21 SALA DE ESTAR
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71851.m3u8
+#EXTINF:-1,BBB CAM 1 HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71862.m3u8
+#EXTINF:-1,BBB CAM 2 HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71861.m3u8
+#EXTINF:-1,BBB CAM 3 HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71860.m3u8
+#EXTINF:-1,BIS FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72057.m3u8
 #EXTINF:-1,BIS HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821727.m3u8
-#EXTINF:-1,CANAL SONY HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821675.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71925.m3u8
+#EXTINF:-1,BIS SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72056.m3u8
+#EXTINF:-1,BOOMERANG HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71926.m3u8
+#EXTINF:-1,Baby TV SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72050.m3u8
+#EXTINF:-1,Band Campinas HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72055.m3u8
+#EXTINF:-1,Band FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72054.m3u8
+#EXTINF:-1,Band HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72053.m3u8
+#EXTINF:-1,Band News HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71869.m3u8
+#EXTINF:-1,Band News SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72051.m3u8
+#EXTINF:-1,Band Sport HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71867.m3u8
+#EXTINF:-1,Band Sports FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72052.m3u8
+#EXTINF:-1,Boomerang SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72058.m3u8
 #EXTINF:-1,CARTOON NETWORK HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821699.m3u8
-#EXTINF:-1,CARTOONITO HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821698.m3u8
-#EXTINF:-1,CINE CANAL HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821671.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71928.m3u8
 #EXTINF:-1,CINEMAX HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821669.m3u8
-#EXTINF:-1,CNN BRASIL HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821724.m3u8
-#EXTINF:-1,COMBATE HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821635.m3u8
-#EXTINF:-1,COMEDY CENTRAL HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821728.m3u8
-#EXTINF:-1,CURTA HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821752.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71929.m3u8
+#EXTINF:-1,CNN HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72217.m3u8
+#EXTINF:-1,CNN Internacional SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72061.m3u8
+#EXTINF:-1,COMBATE FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71930.m3u8
+#EXTINF:-1,COMEDY CENTRAL FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71931.m3u8
+#EXTINF:-1,CULTURA HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71932.m3u8
+#EXTINF:-1,CURTA! HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71933.m3u8
+#EXTINF:-1,Can
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71868.m3u8
+#EXTINF:-1,Canal asil FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72063.m3u8
+#EXTINF:-1,Canal asil HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71927.m3u8
+#EXTINF:-1,Canal asil SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72062.m3u8
+#EXTINF:-1,Cartoon Network FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72060.m3u8
+#EXTINF:-1,Cartoon Network SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72059.m3u8
+#EXTINF:-1,Cinemax FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72067.m3u8
+#EXTINF:-1,Cinemax SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72066.m3u8
+#EXTINF:-1,Combate HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72069.m3u8
+#EXTINF:-1,Combate SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72068.m3u8
+#EXTINF:-1,Comedy Central HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72065.m3u8
+#EXTINF:-1,Comedy Central SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72064.m3u8
 #EXTINF:-1,DISCOVERY CHANNEL HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821683.m3u8
-#EXTINF:-1,DISCOVERY HOME & HEALTH HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821684.m3u8
-#EXTINF:-1,DISCOVERY ID INVESTIGAÇÃO HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821693.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71934.m3u8
+#EXTINF:-1,DISCOVERY CIVILIZATION HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71935.m3u8
+#EXTINF:-1,DISCOVERY HOME & HEALTH FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71936.m3u8
 #EXTINF:-1,DISCOVERY KIDS HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821700.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71937.m3u8
 #EXTINF:-1,DISCOVERY SCIENCE HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821685.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71938.m3u8
 #EXTINF:-1,DISCOVERY THEATER HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821686.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71939.m3u8
 #EXTINF:-1,DISCOVERY TLC HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821687.m3u8
-#EXTINF:-1,DISCOVERY TURBO HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821688.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71940.m3u8
 #EXTINF:-1,DISCOVERY WORLD HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821751.m3u8
-#EXTINF:-1,DISNEY CHANNEL HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821701.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71941.m3u8
+#EXTINF:-1,DISNEY CHANNEL FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71942.m3u8
+#EXTINF:-1,DISNEY Junior
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71943.m3u8
+#EXTINF:-1,DISNEY XD HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71944.m3u8
+#EXTINF:-1,Discovery Channel FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72084.m3u8
+#EXTINF:-1,Discovery Channel SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72083.m3u8
+#EXTINF:-1,Discovery H&H HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72081.m3u8
+#EXTINF:-1,Discovery H&H SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72080.m3u8
+#EXTINF:-1,Discovery Kids SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72070.m3u8
+#EXTINF:-1,Discovery Science FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72082.m3u8
+#EXTINF:-1,Discovery TV
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71870.m3u8
+#EXTINF:-1,Discovery Theater FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72079.m3u8
+#EXTINF:-1,Discovery Turbo FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72078.m3u8
+#EXTINF:-1,Discovery Turbo HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71916.m3u8
+#EXTINF:-1,Discovery Turbo SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72077.m3u8
+#EXTINF:-1,Discovery World FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72075.m3u8
+#EXTINF:-1,Discovery World SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72076.m3u8
+#EXTINF:-1,Disney Channel SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72071.m3u8
+#EXTINF:-1,Disney JR FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72072.m3u8
+#EXTINF:-1,Disney Jr HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72073.m3u8
+#EXTINF:-1,Disney XD SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72074.m3u8
 #EXTINF:-1,E! HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821729.m3u8
-#EXTINF:-1,ESPN EXTRA HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821637.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71945.m3u8
+#EXTINF:-1,E! SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72085.m3u8
+#EXTINF:-1,ESPN 2 FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72090.m3u8
+#EXTINF:-1,ESPN 2 HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71948.m3u8
+#EXTINF:-1,ESPN ASIL HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71947.m3u8
+#EXTINF:-1,ESPN Extra FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72088.m3u8
+#EXTINF:-1,ESPN Extra HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72087.m3u8
+#EXTINF:-1,ESPN Extra SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72086.m3u8
 #EXTINF:-1,ESPN HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821636.m3u8
-#EXTINF:-1,ESPN2 HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821638.m3u8
-#EXTINF:-1,ESPN3 HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821756.m3u8
-#EXTINF:-1,ESPN4 HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821640.m3u8
-#EXTINF:-1,EVANGELIZAR HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821695.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71946.m3u8
+#EXTINF:-1,ESPN azil SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72089.m3u8
 #EXTINF:-1,FISH TV HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821689.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71949.m3u8
 #EXTINF:-1,FOOD NETWORK HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821754.m3u8
-#EXTINF:-1,FOX SPORTS2 HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821639.m3u8
-#EXTINF:-1,FX HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821672.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71950.m3u8
+#EXTINF:-1,FOX FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72098.m3u8
+#EXTINF:-1,FOX HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71951.m3u8
+#EXTINF:-1,FOX LIFE HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71952.m3u8
+#EXTINF:-1,FOX Life FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72096.m3u8
+#EXTINF:-1,FOX Life SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72095.m3u8
+#EXTINF:-1,FOX PREMIUM 1 HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71953.m3u8
+#EXTINF:-1,FOX PREMIUM 2 HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71954.m3u8
+#EXTINF:-1,FOX Premium 1 FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72099.m3u8
+#EXTINF:-1,FOX Premium 1 SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72100.m3u8
+#EXTINF:-1,FOX Premium 2 FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72101.m3u8
+#EXTINF:-1,FOX SPORTS 2 HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71956.m3u8
+#EXTINF:-1,FOX SPORTS FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71955.m3u8
+#EXTINF:-1,FOX Sports 2
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71873.m3u8
+#EXTINF:-1,FOX Sports HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71872.m3u8
+#EXTINF:-1,FOX Sports SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72102.m3u8
+#EXTINF:-1,FUTURA HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71957.m3u8
+#EXTINF:-1,FX FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71958.m3u8
+#EXTINF:-1,Fish TV
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71871.m3u8
+#EXTINF:-1,Food Network FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72092.m3u8
+#EXTINF:-1,Food Network SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72091.m3u8
+#EXTINF:-1,Fox SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72097.m3u8
+#EXTINF:-1,Fox Sports 2 FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72043.m3u8
+#EXTINF:-1,Fx HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72094.m3u8
+#EXTINF:-1,Fx SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72093.m3u8
 #EXTINF:-1,GLOBO AMAZONAS HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821653.m3u8
-#EXTINF:-1,GLOBO BAURU HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821654.m3u8
-#EXTINF:-1,GLOBO BRASILIA HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821655.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71959.m3u8
+#EXTINF:-1,GLOBO ASILIA
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72035.m3u8
+#EXTINF:-1,GLOBO ASILIA
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71961.m3u8
+#EXTINF:-1,GLOBO BAHIA FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71960.m3u8
+#EXTINF:-1,GLOBO CUIABA HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71962.m3u8
 #EXTINF:-1,GLOBO EPTV CAMPINAS HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821656.m3u8
-#EXTINF:-1,GLOBO FLORIANOPOLIS HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821657.m3u8
-#EXTINF:-1,GLOBO HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821658.m3u8
-#EXTINF:-1,GLOBO MINAS HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821659.m3u8
-#EXTINF:-1,GLOBO NEWS HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821725.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71963.m3u8
+#EXTINF:-1,GLOBO EPTV RIBEIR
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71964.m3u8
+#EXTINF:-1,GLOBO EPTV RIBEIRAO PRETO
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72014.m3u8
+#EXTINF:-1,GLOBO EPTV SAO CARLOS
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71965.m3u8
+#EXTINF:-1,GLOBO INTERNACIONAL HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71966.m3u8
+#EXTINF:-1,GLOBO NEWS FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71967.m3u8
 #EXTINF:-1,GLOBO NORDESTE HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821660.m3u8
-#EXTINF:-1,GLOBO RBS POA HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821661.m3u8
-#EXTINF:-1,GLOBO RJ HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821662.m3u8
-#EXTINF:-1,GLOBO RPC CURITIBA HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821652.m3u8
-#EXTINF:-1,GLOBO SERGIPE HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821663.m3u8
-#EXTINF:-1,GLOBO SP HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821664.m3u8
-#EXTINF:-1,GLOBO VERDES MARES HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821665.m3u8
-#EXTINF:-1,GLOOB HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821702.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71968.m3u8
+#EXTINF:-1,GLOBO RBS PORTO ALEGRE
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71969.m3u8
+#EXTINF:-1,GLOBO RIBEIR HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71970.m3u8
+#EXTINF:-1,GLOBO RIO GRANDE DO NORTE HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71971.m3u8
+#EXTINF:-1,GLOBO RJ FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71972.m3u8
+#EXTINF:-1,GLOBO RPC TV
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71973.m3u8
+#EXTINF:-1,GLOBO SP FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71974.m3u8
+#EXTINF:-1,GLOBO TV BELEM
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71975.m3u8
+#EXTINF:-1,GLOBO TV TRIBUNA SANTOS
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71976.m3u8
+#EXTINF:-1,GLOBO TV VANGUARDA S.J DOS CAMPOS
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71977.m3u8
+#EXTINF:-1,GLOBO TV VERDES MARES FORTALEZA HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71978.m3u8
+#EXTINF:-1,GLOOB FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71979.m3u8
+#EXTINF:-1,GNT FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72107.m3u8
 #EXTINF:-1,GNT HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821755.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71980.m3u8
+#EXTINF:-1,GNT SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72106.m3u8
+#EXTINF:-1,Globo FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72109.m3u8
+#EXTINF:-1,Globo HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72108.m3u8
+#EXTINF:-1,Globo MINAS HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71876.m3u8
+#EXTINF:-1,Globo News
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71874.m3u8
+#EXTINF:-1,Globo News HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72103.m3u8
+#EXTINF:-1,Globo Nordeste
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71875.m3u8
+#EXTINF:-1,Globo RJ
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71877.m3u8
+#EXTINF:-1,Globo RJ HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71878.m3u8
+#EXTINF:-1,Globo SP
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71879.m3u8
+#EXTINF:-1,Globo SP HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71880.m3u8
+#EXTINF:-1,Gloob
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71881.m3u8
+#EXTINF:-1,Gloob HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72104.m3u8
+#EXTINF:-1,Gloobinho HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72105.m3u8
+#EXTINF:-1,Gospel Movies Television
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72212.m3u8
+#EXTINF:-1,H2 FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71981.m3u8
+#EXTINF:-1,H2 HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72112.m3u8
+#EXTINF:-1,H2 SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72111.m3u8
 #EXTINF:-1,HBO 2 HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821736.m3u8
-#EXTINF:-1,HBO EXTREME HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821743.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71983.m3u8
+#EXTINF:-1,HBO 2 SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72116.m3u8
 #EXTINF:-1,HBO FAMILY HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821737.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71984.m3u8
+#EXTINF:-1,HBO FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72119.m3u8
+#EXTINF:-1,HBO Family FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72117.m3u8
 #EXTINF:-1,HBO HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821738.m3u8
-#EXTINF:-1,HBO MUNDI HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821739.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71982.m3u8
+#EXTINF:-1,HBO Mundi
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72213.m3u8
+#EXTINF:-1,HBO Mundi FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72214.m3u8
+#EXTINF:-1,HBO PLUS FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71985.m3u8
 #EXTINF:-1,HBO PLUS HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821740.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71986.m3u8
 #EXTINF:-1,HBO POP HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821741.m3u8
-#EXTINF:-1,HBO SIGNATURE HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821742.m3u8
-#EXTINF:-1,HGTV HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821691.m3u8
-#EXTINF:-1,HISTORY CHANNEL HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821692.m3u8
-#EXTINF:-1,HISTORY2 HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821690.m3u8
-#EXTINF:-1,Jovem Pan News HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821633.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71991.m3u8
+#EXTINF:-1,HBO Plus SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72115.m3u8
+#EXTINF:-1,HBO SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72118.m3u8
+#EXTINF:-1,HBO SIGNATURE FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71987.m3u8
+#EXTINF:-1,HBO Signature HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72114.m3u8
+#EXTINF:-1,HBO Signature SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72113.m3u8
+#EXTINF:-1,HBO Xtreme FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71990.m3u8
+#EXTINF:-1,History FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71882.m3u8
+#EXTINF:-1,History SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72110.m3u8
+#EXTINF:-1,ID Discovery HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72121.m3u8
+#EXTINF:-1,ID Discovery SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72120.m3u8
+#EXTINF:-1,ID FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71988.m3u8
 #EXTINF:-1,LIFETIME HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821730.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71989.m3u8
+#EXTINF:-1,Lifetime FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72123.m3u8
 #EXTINF:-1,MEGAPIX HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821673.m3u8
-#EXTINF:-1,MTV 00s HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821651.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71992.m3u8
+#EXTINF:-1,MTV
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71883.m3u8
+#EXTINF:-1,MTV FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72124.m3u8
 #EXTINF:-1,MTV HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821731.m3u8
-#EXTINF:-1,MULTISHOW HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821732.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71993.m3u8
+#EXTINF:-1,MTV LIVE FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71994.m3u8
+#EXTINF:-1,MUSIC BOX AZIL
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71995.m3u8
+#EXTINF:-1,Mais Globosat HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71884.m3u8
+#EXTINF:-1,Mais Globosat SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72125.m3u8
+#EXTINF:-1,MegaPix
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71885.m3u8
+#EXTINF:-1,MegaPix TV
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71886.m3u8
+#EXTINF:-1,Megapix 4K
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72130.m3u8
+#EXTINF:-1,Megapix SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72129.m3u8
+#EXTINF:-1,Multishow FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72128.m3u8
+#EXTINF:-1,Multishow HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72127.m3u8
+#EXTINF:-1,Multishow SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72126.m3u8
+#EXTINF:-1,NAT GEO KIDS HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71996.m3u8
+#EXTINF:-1,NAT GEO WILD HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71997.m3u8
 #EXTINF:-1,NATIONAL GEOGRAPHIC HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821694.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71998.m3u8
 #EXTINF:-1,NICK JR HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821703.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71999.m3u8
 #EXTINF:-1,NICKELODEON HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821704.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72000.m3u8
+#EXTINF:-1,NatGeo Kids FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72132.m3u8
+#EXTINF:-1,NatGeo Kids SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72131.m3u8
+#EXTINF:-1,NatGeo SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72138.m3u8
+#EXTINF:-1,NatGeo Wild SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72137.m3u8
+#EXTINF:-1,Nick Jr SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72133.m3u8
+#EXTINF:-1,Nickelodeon FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72136.m3u8
+#EXTINF:-1,Nickelodeon SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72135.m3u8
 #EXTINF:-1,OFF HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821733.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72001.m3u8
+#EXTINF:-1,Off FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72140.m3u8
+#EXTINF:-1,Off SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72139.m3u8
 #EXTINF:-1,PARAMOUNT CHANNEL HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821674.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72002.m3u8
+#EXTINF:-1,PFC
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72042.m3u8
+#EXTINF:-1,PREMIERE 1 HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71909.m3u8
 #EXTINF:-1,PREMIERE 2 HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821641.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71910.m3u8
 #EXTINF:-1,PREMIERE 3 HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821642.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71911.m3u8
 #EXTINF:-1,PREMIERE 4 HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821643.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71912.m3u8
 #EXTINF:-1,PREMIERE 5 HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821644.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71913.m3u8
+#EXTINF:-1,PREMIERE 6 HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71914.m3u8
 #EXTINF:-1,PREMIERE 7 HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821645.m3u8
-#EXTINF:-1,PREMIERE 8 HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821646.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71915.m3u8
 #EXTINF:-1,PREMIERE CLUBES HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821647.m3u8
-#EXTINF:-1,RECORD BRASILIA HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821708.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72003.m3u8
+#EXTINF:-1,Paramount FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72142.m3u8
+#EXTINF:-1,Paramount SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72141.m3u8
+#EXTINF:-1,Premier 1 FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72144.m3u8
+#EXTINF:-1,Premier 1 SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72143.m3u8
+#EXTINF:-1,Premier 2 FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72145.m3u8
+#EXTINF:-1,Premier 3 FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72146.m3u8
+#EXTINF:-1,Premier 4 FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72147.m3u8
+#EXTINF:-1,Premier 4 SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72148.m3u8
+#EXTINF:-1,Premier 5 FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72149.m3u8
+#EXTINF:-1,Premier 7 SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72151.m3u8
+#EXTINF:-1,Premiere 6 FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72150.m3u8
+#EXTINF:-1,RECORD AMAZONAS HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72005.m3u8
 #EXTINF:-1,RECORD CAMPINAS HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821709.m3u8
-#EXTINF:-1,RECORD ES - TV VITORIA HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821760.m3u8
-#EXTINF:-1,RECORD GOIAS HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821710.m3u8
-#EXTINF:-1,RECORD ITAPOAN HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821711.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72006.m3u8
+#EXTINF:-1,RECORD ESP. SANTO HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72007.m3u8
+#EXTINF:-1,RECORD HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72004.m3u8
 #EXTINF:-1,RECORD MG HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821712.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72008.m3u8
 #EXTINF:-1,RECORD NEWS HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821726.m3u8
-#EXTINF:-1,RECORD RJ HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821713.m3u8
-#EXTINF:-1,RECORD RS HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821714.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72009.m3u8
+#EXTINF:-1,RECORD NORDESTE HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72010.m3u8
 #EXTINF:-1,RECORD SP HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821715.m3u8
-#EXTINF:-1,REDE BRASIL HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821758.m3u8
-#EXTINF:-1,REDE SECULO 21 HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821762.m3u8
-#EXTINF:-1,REDE TV HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821716.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72011.m3u8
+#EXTINF:-1,REDE FAMILIA FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72012.m3u8
 #EXTINF:-1,REDE VIDA HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821696.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72013.m3u8
+#EXTINF:-1,Record Ba HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72154.m3u8
+#EXTINF:-1,Record FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72160.m3u8
+#EXTINF:-1,Record Mg SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72153.m3u8
+#EXTINF:-1,Record News SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72158.m3u8
+#EXTINF:-1,Record Parana HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72155.m3u8
+#EXTINF:-1,Record RJ HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72152.m3u8
+#EXTINF:-1,Record RJ SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72156.m3u8
+#EXTINF:-1,Record RS SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72157.m3u8
+#EXTINF:-1,Record TV SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72159.m3u8
+#EXTINF:-1,Rede Gospel
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71888.m3u8
+#EXTINF:-1,Rede TV
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71889.m3u8
+#EXTINF:-1,Rede asil
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71887.m3u8
+#EXTINF:-1,SBT Cidade Verde HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72162.m3u8
+#EXTINF:-1,SBT FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72167.m3u8
 #EXTINF:-1,SBT HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821717.m3u8
-#EXTINF:-1,SBT PIAUI
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821763.m3u8
-#EXTINF:-1,SBT RJ HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821718.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72015.m3u8
+#EXTINF:-1,SBT Interior SP
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72164.m3u8
+#EXTINF:-1,SBT Parana SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72165.m3u8
 #EXTINF:-1,SBT SP HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821719.m3u8
-#EXTINF:-1,SPACE HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821676.m3u8
-#EXTINF:-1,SPORTV 2 HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821648.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72166.m3u8
+#EXTINF:-1,SBT SP SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72163.m3u8
+#EXTINF:-1,SBT TV CIDADE VERDE PIAUI HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72016.m3u8
+#EXTINF:-1,SBT TV Jornal HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72161.m3u8
+#EXTINF:-1,SONY FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72017.m3u8
+#EXTINF:-1,SPACE
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72018.m3u8
+#EXTINF:-1,SPORTV 1 HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72019.m3u8
+#EXTINF:-1,SPORTV 2 FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72020.m3u8
 #EXTINF:-1,SPORTV 3 HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821649.m3u8
-#EXTINF:-1,SPORTV HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821650.m3u8
-#EXTINF:-1,STAR CHANNEL HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821670.m3u8
-#EXTINF:-1,STUDIO UNIVERSAL HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821677.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72021.m3u8
+#EXTINF:-1,STUDIO UNIVERSAL FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72022.m3u8
 #EXTINF:-1,SYFY HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821734.m3u8
-#EXTINF:-1,TBS HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821753.m3u8
-#EXTINF:-1,TELECINE ACTION HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821744.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72023.m3u8
+#EXTINF:-1,Sony SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72170.m3u8
+#EXTINF:-1,Space HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72168.m3u8
+#EXTINF:-1,SporTV 1
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71890.m3u8
+#EXTINF:-1,SporTV 2
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71891.m3u8
+#EXTINF:-1,SporTV 3
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71892.m3u8
+#EXTINF:-1,Sportv 1 FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72175.m3u8
+#EXTINF:-1,Sportv 2 HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72174.m3u8
+#EXTINF:-1,Sportv 3 FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72173.m3u8
+#EXTINF:-1,Studio Universal HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71905.m3u8
+#EXTINF:-1,Studio Universal SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72172.m3u8
+#EXTINF:-1,SyFy FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72169.m3u8
+#EXTINF:-1,Syfy
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71893.m3u8
+#EXTINF:-1,TBS
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72024.m3u8
+#EXTINF:-1,TBS FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72186.m3u8
+#EXTINF:-1,TC Action
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71894.m3u8
+#EXTINF:-1,TC Cult
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71895.m3u8
+#EXTINF:-1,TC Fun
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71896.m3u8
+#EXTINF:-1,TC Pipoca HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71897.m3u8
+#EXTINF:-1,TCM HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72025.m3u8
+#EXTINF:-1,TCM SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72187.m3u8
+#EXTINF:-1,TELECINE ACTION FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72026.m3u8
 #EXTINF:-1,TELECINE CULT HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821745.m3u8
-#EXTINF:-1,TELECINE FUN HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821746.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72027.m3u8
+#EXTINF:-1,TELECINE FUN FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72028.m3u8
 #EXTINF:-1,TELECINE PIPOCA HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821750.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72029.m3u8
 #EXTINF:-1,TELECINE PREMIUM HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821747.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72030.m3u8
 #EXTINF:-1,TELECINE TOUCH HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821748.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72031.m3u8
+#EXTINF:-1,TLC
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71900.m3u8
+#EXTINF:-1,TNT
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72033.m3u8
+#EXTINF:-1,TNT FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72188.m3u8
 #EXTINF:-1,TNT HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821678.m3u8
-#EXTINF:-1,TNT SÉRIES HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821679.m3u8
-#EXTINF:-1,TV BRASIL HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821720.m3u8
-#EXTINF:-1,TV Diário HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821721.m3u8
-#EXTINF:-1,TVE BAHIA
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821764.m3u8
-#EXTINF:-1,UNIVERSAL CHANNEL HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821680.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71898.m3u8
+#EXTINF:-1,TNT Series
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72034.m3u8
+#EXTINF:-1,TNT Series FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72190.m3u8
+#EXTINF:-1,TNT Series HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72189.m3u8
+#EXTINF:-1,TV Aparecida
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72219.m3u8
+#EXTINF:-1,TV Cultura HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72182.m3u8
+#EXTINF:-1,TV GAZETA FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72036.m3u8
+#EXTINF:-1,TV Gazeta HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71901.m3u8
+#EXTINF:-1,TV Globo
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71902.m3u8
+#EXTINF:-1,TV Globo Premium
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71903.m3u8
+#EXTINF:-1,TV Ra Tim Bum SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72178.m3u8
+#EXTINF:-1,TV asil Central
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71899.m3u8
+#EXTINF:-1,TV asil FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72216.m3u8
+#EXTINF:-1,TV asil HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72215.m3u8
+#EXTINF:-1,TVE Bahia HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72211.m3u8
+#EXTINF:-1,Telecine Action HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72201.m3u8
+#EXTINF:-1,Telecine Action SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72200.m3u8
+#EXTINF:-1,Telecine Cult FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72199.m3u8
+#EXTINF:-1,Telecine Cult SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72198.m3u8
+#EXTINF:-1,Telecine Fun HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72197.m3u8
+#EXTINF:-1,Telecine Fun SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72196.m3u8
+#EXTINF:-1,Telecine Pipoca FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72191.m3u8
+#EXTINF:-1,Telecine Premium FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72195.m3u8
+#EXTINF:-1,Telecine Premium SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72194.m3u8
+#EXTINF:-1,Telecine Touch FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72193.m3u8
+#EXTINF:-1,Telecine Touch SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72192.m3u8
+#EXTINF:-1,Tooncast FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72037.m3u8
+#EXTINF:-1,Tooncast HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72179.m3u8
+#EXTINF:-1,Tooncast SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72180.m3u8
+#EXTINF:-1,TruTV SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72184.m3u8
+#EXTINF:-1,UNIVERSAL TV FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72038.m3u8
+#EXTINF:-1,Universal TV
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71904.m3u8
+#EXTINF:-1,VH1
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72039.m3u8
+#EXTINF:-1,VH1 FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72204.m3u8
+#EXTINF:-1,VH1 Mega Hits
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71907.m3u8
 #EXTINF:-1,VIVA HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821722.m3u8
-#EXTINF:-1,WARNER HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821681.m3u8
-#EXTINF:-1,WOOHOO HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821735.m3u8
-#EXTINF:-1,ZOOMOO HD
-http://noxvhcms1.cfd:80/live/sezginocak2/7L7g99srnM/821749.m3u8
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72032.m3u8
+#EXTINF:-1,Viva FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72203.m3u8
+#EXTINF:-1,Viva SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72202.m3u8
+#EXTINF:-1,WARNER CHANNEL FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72040.m3u8
+#EXTINF:-1,WOOHOO FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72041.m3u8
+#EXTINF:-1,Warner Channel HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72206.m3u8
+#EXTINF:-1,Warner Channel SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72205.m3u8
+#EXTINF:-1,Warner TV
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71908.m3u8
+#EXTINF:-1,Woohoo HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/71906.m3u8
+#EXTINF:-1,Woohoo SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72207.m3u8
+#EXTINF:-1,Zoomoo FHD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72210.m3u8
+#EXTINF:-1,Zoomoo HD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72209.m3u8
+#EXTINF:-1,Zoomoo SD
+http://quizbit.vip:8080/live/MihaiHertug/aWFMa2H2Yf/72208.m3u8
+#EXTM3U
