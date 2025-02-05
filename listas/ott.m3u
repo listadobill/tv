@@ -1,267 +1,270 @@
 #EXTM3U
-#EXTINF:-1, ATUALIZAÇÃO (5 de fevereiro de 2025 às 16:51)
+#EXTINF:-1, ATUALIZAÇÃO (5 de fevereiro de 2025 às 16:53)
 http://1.m3u8
-#EXTINF:-1 tvg-id="AandE.br" tvg-name="A&E" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/a-and-e-us.png?raw=true" group-title="Brazil",A&E
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15796
-#EXTINF:-1 tvg-id="amc.br" tvg-name="AMC" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/amc-us.png?raw=true" group-title="Brazil",AMC
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15797
-#EXTINF:-1 tvg-id="animalplanet.br" tvg-name="ANIMAL PLANET" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/animal-planet-us.png?raw=true" group-title="Brazil",ANIMAL PLANET
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15798
-#EXTINF:-1 tvg-id="arte1.br" tvg-name="ARTE 1" tvg-logo="https://www.dropbox.com/s/b17ai94atvq94ji/ARTE%201.png?dl=1" group-title="Brazil",ARTE 1
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15799
-#EXTINF:-1 tvg-id="axn.br" tvg-name="AXN" tvg-logo="https://www.dropbox.com/s/jkvl3l8cw9ielb4/1280px-AXN_logo_%282015%29.png?dl=1" group-title="Brazil",AXN
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15800
-#EXTINF:-1 tvg-id="babytv.br" tvg-name="BABY TV" tvg-logo="https://www.dropbox.com/s/7bh1n0utb99y2vy/baby%20tv.png?dl=1" group-title="Brazil",BABY TV
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15801
 #EXTINF:-1 tvg-id="" tvg-name="BAND CAMPINAS" tvg-logo="https://www.dropbox.com/s/m6oq24osehnoqyk/BAND%20CAMPINAS.png?dl=1" group-title="Brazil",BAND CAMPINAS
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15802
-#EXTINF:-1 tvg-id="bandnews.br" tvg-name="BAND NEWS" tvg-logo="https://www.dropbox.com/s/vlhz30aov17g89q/BAND%20NEWS.png?dl=1" group-title="Brazil",BAND NEWS
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15803
-#EXTINF:-1 tvg-id="bis.br" tvg-name="BIS" tvg-logo="https://www.dropbox.com/s/h0u1dl34uose3oi/BIS.png?dl=1" group-title="Brazil",BIS
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15805
-#EXTINF:-1 tvg-id="boomerang.br" tvg-name="BOOMERANG" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/boomerang-us.png?raw=true" group-title="Brazil",BOOMERANG
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15806
-#EXTINF:-1 tvg-id="canalbrasil.br" tvg-name="CANAL BRASIL" tvg-logo="https://www.dropbox.com/s/l3eitapvmh5okvn/CANAL%20BRASIL.png?dl=1" group-title="Brazil",CANAL BRASIL
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15807
-#EXTINF:-1 tvg-id="gnt.br" tvg-name="GNT" tvg-logo="https://www.dropbox.com/s/6qd0p1c4o3f25h1/gnt.png?dl=1" group-title="Brazil",GNT
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15808
-#EXTINF:-1 tvg-id="cinemax.br" tvg-name="CINEMAX" tvg-logo="https://www.dropbox.com/s/wx7swoucame8up2/cinemax.jpg?dl=1" group-title="Brazil",CINEMAX
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15810
-#EXTINF:-1 tvg-id="combate.br" tvg-name="COMBATE" tvg-logo="https://www.dropbox.com/s/7ybzdzgn178cbsn/COMBATE.png?dl=1" group-title="Brazil",COMBATE
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15811
-#EXTINF:-1 tvg-id="ComedyCentral.br" tvg-name="COMEDY CENTRAL" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/comedy-central-us.png?raw=true" group-title="Brazil",COMEDY CENTRAL
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15812
-#EXTINF:-1 tvg-id="tvcultura.br" tvg-name="CULTURA" tvg-logo="https://www.dropbox.com/s/xx1lzl3movcqcis/CULTURA.png?dl=1" group-title="Brazil",CULTURA
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15813
-#EXTINF:-1 tvg-id="DiscoveryChannel.br" tvg-name="DISCOVERY CHANNEL" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/discovery-channel-us.png?raw=true" group-title="Brazil",DISCOVERY CHANNEL
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15815
-#EXTINF:-1 tvg-id="discivil.br" tvg-name="DISCOVERY CIVILIZATION" tvg-logo="https://www.dropbox.com/s/thjezxrcsc86yms/DISCOVERY%20CIVILIZATION.png?dl=1" group-title="Brazil",DISCOVERY CIVILIZATION
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15816
-#EXTINF:-1 tvg-id="dischealth.br" tvg-name="DISCOVERY HOME & HEALTH" tvg-logo="https://www.dropbox.com/s/i9fs34c6hswpeaq/DISCOVERY%20HOME%20%26%20HEALTH.png?dl=1" group-title="Brazil",DISCOVERY HOME & HEALTH
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15817
-#EXTINF:-1 tvg-id="disckids.br" tvg-name="DISCOVERY KIDS" tvg-logo="https://www.dropbox.com/s/tsm9ajjq8uaxa66/DISCOVERY%20KIDS.png?dl=1" group-title="Brazil",DISCOVERY KIDS
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15818
-#EXTINF:-1 tvg-id="DiscoveryScience.br" tvg-name="DISCOVERY SCIENCE" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/discovery-science-us.png?raw=true" group-title="Brazil",DISCOVERY SCIENCE
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15819
-#EXTINF:-1 tvg-id="disctheater.br" tvg-name="DISCOVERY THEATER" tvg-logo="https://www.dropbox.com/s/o5vfte6y1zeqdp2/DISCOVERY%20THEATER.png?dl=1" group-title="Brazil",DISCOVERY THEATER
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15820
-#EXTINF:-1 tvg-id="tlc.br" tvg-name="DISCOVERY TLC" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/tlc-us.png?raw=true" group-title="Brazil",DISCOVERY TLC
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15821
-#EXTINF:-1 tvg-id="discturbo.br" tvg-name="DISCOVERY TURBO" tvg-logo="https://www.dropbox.com/s/wncyzwixpuwetke/DISCOVERY%20TURBO.png?dl=1" group-title="Brazil",DISCOVERY TURBO
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15822
-#EXTINF:-1 tvg-id="EPG123.66488.XMLTV.CO" tvg-name="DISCOVERY WORLD" tvg-logo="https://www.dropbox.com/s/qseepdjb7uq9j4a/DISCOVERY%20WORLD.png?dl=1" group-title="Brazil",DISCOVERY WORLD
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15823
-#EXTINF:-1 tvg-id="DisneyChannel.br" tvg-name="DISNEY CHANNEL" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/disney-channel-us.png?raw=true" group-title="Brazil",DISNEY CHANNEL
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15824
-#EXTINF:-1 tvg-id="E.br" tvg-name="E!" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/e-entertainment-us.png?raw=true" group-title="Brazil",E!
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15827
-#EXTINF:-1 tvg-id="espn.br" tvg-name="ESPN" tvg-logo="" group-title="Brazil",ESPN
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15828
-#EXTINF:-1 tvg-id="ESPN.br" tvg-name="ESPN" tvg-logo="https://www.dropbox.com/s/fsnmzb9x71boaun/ESPN%20BRASIL.png?dl=1" group-title="Brazil",ESPN
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15829
-#EXTINF:-1 tvg-id="" tvg-name="ESPN2" tvg-logo="https://www.dropbox.com/s/plykcikatvocb5v/ESPN2_logo.png?dl=1" group-title="Brazil",ESPN2
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15830
-#EXTINF:-1 tvg-id="" tvg-name="FISH TV" tvg-logo="https://www.dropbox.com/s/ltyyfokhts2nvhn/FISH%20TV.png?dl=1" group-title="Brazil",FISH TV
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15831
-#EXTINF:-1 tvg-id="FoodNetwork.br" tvg-name="FOOD NETWORK" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/food-network-us.png?raw=true" group-title="Brazil",FOOD NETWORK
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15832
-#EXTINF:-1 tvg-id="fox.br" tvg-name="FOX" tvg-logo="https://www.dropbox.com/s/kl0m8wof8barlwh/FOX.png?dl=1" group-title="Brazil",FOX
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15833
-#EXTINF:-1 tvg-id="foxlife.br" tvg-name="FOX LIFE" tvg-logo="https://www.dropbox.com/s/pl64w5qcf523v5j/fox%20life.jpg?dl=1" group-title="Brazil",FOX LIFE
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15834
-#EXTINF:-1 tvg-id="" tvg-name="FOX PREMIUM 2" tvg-logo="https://www.dropbox.com/s/knq1gbmefmujait/FOX%20PREMIUM%202.png?dl=1" group-title="Brazil",FOX PREMIUM 2
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15836
-#EXTINF:-1 tvg-id="foxsports.br" tvg-name="FOX SPORTS" tvg-logo="https://www.dropbox.com/s/03f7q8aczwf65iw/FOX%20SPORTS%20.png?dl=1" group-title="Brazil",FOX SPORTS
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15837
-#EXTINF:-1 tvg-id="foxsports2.br" tvg-name="FOX SPORTS 2" tvg-logo="https://www.dropbox.com/s/e4qq7eurr5r2np5/fox%20sports%202.jpg?dl=1" group-title="Brazil",FOX SPORTS 2
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15838
-#EXTINF:-1 tvg-id="futura.br" tvg-name="FUTURA" tvg-logo="https://www.dropbox.com/s/7aoa6jwi4qoo3qu/FUTURA.png?dl=1" group-title="Brazil",FUTURA
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15839
-#EXTINF:-1 tvg-id="fx.br" tvg-name="FX" tvg-logo="https://www.dropbox.com/s/gzgpb13ix213784/fx.jpg?dl=1" group-title="Brazil",FX
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15840
-#EXTINF:-1 tvg-id="" tvg-name="GLOBO AMAZONAS" tvg-logo="https://www.dropbox.com/s/pklny7o2v22b21a/GLOBO%20AMAZONAS.jpg?dl=1" group-title="Brazil",GLOBO AMAZONAS
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15841
-#EXTINF:-1 tvg-id="" tvg-name="GLOBO BAHIA" tvg-logo="" group-title="Brazil",GLOBO BAHIA
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15842
-#EXTINF:-1 tvg-id="" tvg-name="GLOBO CUIABA" tvg-logo="" group-title="Brazil",GLOBO CUIABA
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15844
-#EXTINF:-1 tvg-id="" tvg-name="GLOBO EPTV CAMPINAS" tvg-logo="https://www.dropbox.com/s/ego3u3u1dkmfuo2/GLOBO%20EPTV%20CAMPINAS.jpg?dl=1" group-title="Brazil",GLOBO EPTV CAMPINAS
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15845
-#EXTINF:-1 tvg-id="" tvg-name="GLOBO EPTV SAO CARLOS" tvg-logo="https://www.dropbox.com/s/ego3u3u1dkmfuo2/GLOBO%20EPTV%20CAMPINAS.jpg?dl=1" group-title="Brazil",GLOBO EPTV SAO CARLOS
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15847
-#EXTINF:-1 tvg-id="" tvg-name="GLOBO INTERNACIONAL" tvg-logo="https://www.dropbox.com/s/ffvaz1n9e14ed3l/GLOBO%20INTERNACIONAL.jpg?dl=1" group-title="Brazil",GLOBO INTERNACIONAL
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15848
-#EXTINF:-1 tvg-id="globominas.br" tvg-name="GLOBO MINAS" tvg-logo="https://www.dropbox.com/s/qog6t6dvj6gyl6d/GLOBO%20MINAS.jpg?dl=1" group-title="Brazil",GLOBO MINAS
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15849
-#EXTINF:-1 tvg-id="globonews.br" tvg-name="GLOBO NEWS" tvg-logo="https://www.dropbox.com/s/t1lk7vtzolhm6wi/GLOBO%20NEWS.png?dl=1" group-title="Brazil",GLOBO NEWS
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15850
-#EXTINF:-1 tvg-id="" tvg-name="GLOBO RBS PORTO ALEGRE" tvg-logo="https://www.dropbox.com/s/r2zk964p6ysvlbr/GLOBO%20RBS%20PORTO%20ALEGRE.jpg?dl=1" group-title="Brazil",GLOBO RBS PORTO ALEGRE
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15852
-#EXTINF:-1 tvg-id="" tvg-name="GLOBO RIBEIR" tvg-logo="https://www.dropbox.com/s/nkyf1b2r4j5l3cf/GLOBO.jpg?dl=1" group-title="Brazil",GLOBO RIBEIR
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15853
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15802.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR GLOBO RIO GRANDE DO NORTE" tvg-logo="" group-title="Brazil",BR GLOBO RIO GRANDE DO NORTE
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15854
-#EXTINF:-1 tvg-id="" tvg-name="GLOBO RPC TV" tvg-logo="https://www.dropbox.com/s/a9ea36vh68hseuc/GLOBO%20RPC%20TV.jpg?dl=1" group-title="Brazil",GLOBO RPC TV
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15856
-#EXTINF:-1 tvg-id="globosp.br" tvg-name="GLOBO SP" tvg-logo="https://www.dropbox.com/s/wsg0bjs32czw6bu/GLOBO%20SP.jpg?dl=1" group-title="Brazil",GLOBO SP
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15857
-#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV BELEM" tvg-logo="https://www.dropbox.com/s/nkyf1b2r4j5l3cf/GLOBO.jpg?dl=1" group-title="Brazil",GLOBO TV BELEM
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15858
-#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV TEM SOROCABA" tvg-logo="https://www.dropbox.com/s/kx62yz1j0tb1d4z/GLOBO%20TV%20TEM%20SOROCABA.jpg?dl=1" group-title="Brazil",GLOBO TV TEM SOROCABA
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15859
-#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV TRIBUNA SANTOS" tvg-logo="https://www.dropbox.com/s/o3gnbop9tlsldtu/GLOBO%20TV%20TRIBUNA%20SANTOS.jpg?dl=1" group-title="Brazil",GLOBO TV TRIBUNA SANTOS
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15860
-#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV VANGUARDA S.J DOS CAMPOS" tvg-logo="https://www.dropbox.com/s/tnib7zfuszf4tc7/GLOBO%20TV%20VANGUARDA%20S.J%20DOS%20CAMPOS.jpg?dl=1" group-title="Brazil",GLOBO TV VANGUARDA S.J DOS CAMPOS
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15861
-#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV VERDES MARES FORTALEZA" tvg-logo="https://www.dropbox.com/s/wza2gipj3kgg3pi/GLOBO%20TV%20VERDES%20MARES%20FORTALEZA.jpg?dl=1" group-title="Brazil",GLOBO TV VERDES MARES FORTALEZA
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15862
-#EXTINF:-1 tvg-id="gloob.br" tvg-name="GLOOB" tvg-logo="https://www.dropbox.com/s/cbs82b8oww8fslw/GLOOB.jpg?dl=1" group-title="Brazil",GLOOB
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15864
-#EXTINF:-1 tvg-id="history2.br" tvg-name="H2" tvg-logo="https://www.dropbox.com/s/oi4d3kxp13dd7vz/h2.jpg?dl=1" group-title="Brazil",H2
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15866
-#EXTINF:-1 tvg-id="hbo.br" tvg-name="HBO" tvg-logo="https://www.dropbox.com/s/l6mxuqf8doswsav/hbo.jpg?dl=1" group-title="Brazil",HBO
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15867
-#EXTINF:-1 tvg-id="HBOPNHE" tvg-name="HBO 2" tvg-logo="https://www.dropbox.com/s/k8mlcc64p5afglc/HBO%202.png?dl=1" group-title="Brazil",HBO 2
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15868
-#EXTINF:-1 tvg-id="hbofamily.br" tvg-name="HBO FAMILY" tvg-logo="https://www.dropbox.com/s/m3qe1ecy37bbsgm/HBO%20FAMILY.png?dl=1" group-title="Brazil",HBO FAMILY
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15869
-#EXTINF:-1 tvg-id="hboplus.br" tvg-name="HBO PLUS" tvg-logo="https://www.dropbox.com/s/0dg57ilfy7x8ugp/hbo%20plus.jpg?dl=1" group-title="Brazil",HBO PLUS
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15870
-#EXTINF:-1 tvg-id="hbosignature.br" tvg-name="HBO SIGNATURE" tvg-logo="https://www.dropbox.com/s/hpycw1hojnrd2bg/hbo%20signature.jpg?dl=1" group-title="Brazil",HBO SIGNATURE
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15872
-#EXTINF:-1 tvg-id="HistoryChannel.br" tvg-name="HISTORY CHANNEL" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/history-channel-us.png?raw=true" group-title="Brazil",HISTORY CHANNEL
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15873
-#EXTINF:-1 tvg-id="" tvg-name="INVESTIGA" tvg-logo="https://www.dropbox.com/s/luf4a9yjg0gakhl/investigation%20discovery.png?dl=1" group-title="Brazil",INVESTIGA
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15874
-#EXTINF:-1 tvg-id="Lifetime.br" tvg-name="LIFETIME" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/lifetime-us.png?raw=true" group-title="Brazil",LIFETIME
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15875
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15854.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR MAX PRIME*E" tvg-logo="" group-title="Brazil",BR MAX PRIME*E
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15877
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15877.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR MAX UP" tvg-logo="" group-title="Brazil",BR MAX UP
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15878
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15878.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR MEGAPIX" tvg-logo="" group-title="Brazil",BR MEGAPIX
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15879
-#EXTINF:-1 tvg-id="MTV.br" tvg-name="BR MTV" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/mtv-us.png?raw=true" group-title="Brazil",BR MTV
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15880
-#EXTINF:-1 tvg-id="MTVLive.br" tvg-name="BR MTV LIVE" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/mtv-live-us.png?raw=true" group-title="Brazil",BR MTV LIVE
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15881
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15879.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR MUSIC BOX BRAZIL" tvg-logo="" group-title="Brazil",BR MUSIC BOX BRAZIL
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15882
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15882.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR NAT GEO KIDS" tvg-logo="" group-title="Brazil",BR NAT GEO KIDS
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15883
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15883.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR NATGEO WILD" tvg-logo="" group-title="Brazil",BR NATGEO WILD
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15884
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15884.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR NATIONAL GEOGRAPHIC" tvg-logo="" group-title="Brazil",BR NATIONAL GEOGRAPHIC
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15885
-#EXTINF:-1 tvg-id="NickJr.br" tvg-name="BR NICK JR" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nick-jr-us.png?raw=true" group-title="Brazil",BR NICK JR
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15886
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15885.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR NICKELODEON" tvg-logo="" group-title="Brazil",BR NICKELODEON
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15887
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15887.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR OFF" tvg-logo="" group-title="Brazil",BR OFF
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15888
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15888.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR PARAMOUNT CHANNEL" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/paramount-network-us.png?raw=true" group-title="Brazil",BR PARAMOUNT CHANNEL
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15889
-#EXTINF:-1 tvg-id="PRM10BR" tvg-name="PREMIERE 1" tvg-logo="https://www.dropbox.com/s/zg5g4qidmgne32t/PREMIERE%201.png?dl=1" group-title="Brazil",PREMIERE 1
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15890
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15889.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR PREMIERE 2" tvg-logo="" group-title="Brazil",BR PREMIERE 2
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15891
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15891.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR PREMIERE 3" tvg-logo="" group-title="Brazil",BR PREMIERE 3
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15892
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15892.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR PREMIERE 4" tvg-logo="" group-title="Brazil",BR PREMIERE 4
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15893
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15893.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR PREMIERE 5" tvg-logo="" group-title="Brazil",BR PREMIERE 5
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15894
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15894.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR PREMIERE 6" tvg-logo="" group-title="Brazil",BR PREMIERE 6
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15895
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15895.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR PREMIERE 7" tvg-logo="" group-title="Brazil",BR PREMIERE 7
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15896
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15896.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR PREMIERE 8" tvg-logo="" group-title="Brazil",BR PREMIERE 8
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15897
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15897.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR PREMIERE CLUBES" tvg-logo="" group-title="Brazil",BR PREMIERE CLUBES
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15898
-#EXTINF:-1 tvg-id="" tvg-name="RECORD" tvg-logo="https://www.dropbox.com/s/tg4eugocxi2y4bp/RECORD.jpg?dl=1" group-title="Brazil",RECORD
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15899
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15898.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR RECORD AMAZONAS" tvg-logo="" group-title="Brazil",BR RECORD AMAZONAS
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15900
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15900.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR RECORD CAMPINAS" tvg-logo="" group-title="Brazil",BR RECORD CAMPINAS
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15901
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15901.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR RECORD NEWS" tvg-logo="" group-title="Brazil",BR RECORD NEWS
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15904
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15904.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR RECORD NORDESTE" tvg-logo="" group-title="Brazil",BR RECORD NORDESTE
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15905
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15905.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR RECORD SP" tvg-logo="" group-title="Brazil",BR RECORD SP
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15906
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15906.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR REDE FAMILIA" tvg-logo="" group-title="Brazil",BR REDE FAMILIA
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15907
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15907.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR REDE TV" tvg-logo="" group-title="Brazil",BR REDE TV
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15908
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15908.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR REDE VIDA" tvg-logo="" group-title="Brazil",BR REDE VIDA
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15909
-#EXTINF:-1 tvg-id="" tvg-name="GLOBO EPTV RIBEIR" tvg-logo="https://www.dropbox.com/s/ego3u3u1dkmfuo2/GLOBO%20EPTV%20CAMPINAS.jpg?dl=1" group-title="Brazil",GLOBO EPTV RIBEIR
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15910
-#EXTINF:-1 tvg-id="" tvg-name="BR SBT" tvg-logo="" group-title="Brazil",BR SBT
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15911
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15909.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR SBT TV CIDADE VERDE PIAUI" tvg-logo="" group-title="Brazil",BR SBT TV CIDADE VERDE PIAUI
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15912
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15912.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BR SBT" tvg-logo="" group-title="Brazil",BR SBT
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15911.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR SONY" tvg-logo="" group-title="Brazil",BR SONY
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15913
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15913.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR SPACE" tvg-logo="" group-title="Brazil",BR SPACE
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15914
-#EXTINF:-1 tvg-id="" tvg-name="BR SPORTV" tvg-logo="" group-title="Brazil",BR SPORTV
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15915
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15914.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR SPORTV 2" tvg-logo="" group-title="Brazil",BR SPORTV 2
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15916
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15916.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR SPORTV 3" tvg-logo="" group-title="Brazil",BR SPORTV 3
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15917
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15917.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BR SPORTV" tvg-logo="" group-title="Brazil",BR SPORTV
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15915.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR STUDIO UNIVERSAL" tvg-logo="" group-title="Brazil",BR STUDIO UNIVERSAL
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15918
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15918.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR SYFY" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/syfy-us.png?raw=true" group-title="Brazil",BR SYFY
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15919
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15919.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR TBS" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/tbs-us.png?raw=true" group-title="Brazil",BR TBS
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15920
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15920.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR TCM" tvg-logo="" group-title="Brazil",BR TCM
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15921
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15921.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR TELECINE ACTION" tvg-logo="" group-title="Brazil",BR TELECINE ACTION
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15922
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15922.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR TELECINE CULT" tvg-logo="" group-title="Brazil",BR TELECINE CULT
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15923
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15923.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR TELECINE FUN" tvg-logo="" group-title="Brazil",BR TELECINE FUN
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15924
-#EXTINF:-1 tvg-id="TelecinePipoca.br" tvg-name="BR TELECINE PIPOCA" tvg-logo="" group-title="Brazil",BR TELECINE PIPOCA
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15925
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15924.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR TELECINE PREMIUM" tvg-logo="" group-title="Brazil",BR TELECINE PREMIUM
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15926
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15926.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR TELECINE TOUCH" tvg-logo="" group-title="Brazil",BR TELECINE TOUCH
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15927
-#EXTINF:-1 tvg-id="" tvg-name="BR VIVA" tvg-logo="" group-title="Brazil",BR VIVA
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15928
-#EXTINF:-1 tvg-id="" tvg-name="TNT" tvg-logo="" group-title="Brazil",TNT
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15929
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15927.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR TNT Series" tvg-logo="" group-title="Brazil",BR TNT Series
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15930
-#EXTINF:-1 tvg-id="GloboBrasil.br" tvg-name="GLOBO BRASILIA" tvg-logo="https://www.dropbox.com/s/6oh9thr0qx9u17s/GLOBO%20BRASILIA.jpg?dl=1" group-title="Brazil",GLOBO BRASILIA
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15931
-#EXTINF:-1 tvg-id="" tvg-name="CURTA!" tvg-logo="https://www.dropbox.com/s/7dfe78ah7k0av3o/CURTA.png?dl=1" group-title="Brazil",CURTA!
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15932
-#EXTINF:-1 tvg-id="cnt.br" tvg-name="CNT" tvg-logo="" group-title="Brazil",CNT
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15933
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15930.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR TV GAZETA" tvg-logo="" group-title="Brazil",BR TV GAZETA
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15934
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15934.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR Tooncast" tvg-logo="" group-title="Brazil",BR Tooncast
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15935
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15935.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR UNIVERSAL CHANNEL" tvg-logo="" group-title="Brazil",BR UNIVERSAL CHANNEL
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15936
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15936.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR VIVA" tvg-logo="" group-title="Brazil",BR VIVA
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15938
-#EXTINF:-1 tvg-id="WarnerChannel.br" tvg-name="BR WARNER CHANNEL" tvg-logo="" group-title="Brazil",BR WARNER CHANNEL
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15939
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15928.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BR VIVA" tvg-logo="" group-title="Brazil",BR VIVA
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15938.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BR WOOHOO" tvg-logo="" group-title="Brazil",BR WOOHOO
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15940
-#EXTINF:-1 tvg-id="globoribeirao.br" tvg-name="GLOBO EPTV RIBEIRÃO PRETO " tvg-logo="https://www.dropbox.com/s/ego3u3u1dkmfuo2/GLOBO%20EPTV%20CAMPINAS.jpg?dl=1" group-title="Brazil",GLOBO EPTV RIBEIRÃO PRETO
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/23422
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15940.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CURTA!" tvg-logo="https://www.dropbox.com/s/7dfe78ah7k0av3o/CURTA.png?dl=1" group-title="Brazil",CURTA!
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15932.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="ESPN2" tvg-logo="https://www.dropbox.com/s/plykcikatvocb5v/ESPN2_logo.png?dl=1" group-title="Brazil",ESPN2
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15830.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="FISH TV" tvg-logo="https://www.dropbox.com/s/ltyyfokhts2nvhn/FISH%20TV.png?dl=1" group-title="Brazil",FISH TV
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15831.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="FOX PREMIUM 2" tvg-logo="https://www.dropbox.com/s/knq1gbmefmujait/FOX%20PREMIUM%202.png?dl=1" group-title="Brazil",FOX PREMIUM 2
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15836.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO AMAZONAS" tvg-logo="https://www.dropbox.com/s/pklny7o2v22b21a/GLOBO%20AMAZONAS.jpg?dl=1" group-title="Brazil",GLOBO AMAZONAS
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15841.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO BAHIA" tvg-logo="" group-title="Brazil",GLOBO BAHIA
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15842.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO CUIABA" tvg-logo="" group-title="Brazil",GLOBO CUIABA
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15844.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO EPTV CAMPINAS" tvg-logo="https://www.dropbox.com/s/ego3u3u1dkmfuo2/GLOBO%20EPTV%20CAMPINAS.jpg?dl=1" group-title="Brazil",GLOBO EPTV CAMPINAS
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15845.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO EPTV RIBEIR" tvg-logo="https://www.dropbox.com/s/ego3u3u1dkmfuo2/GLOBO%20EPTV%20CAMPINAS.jpg?dl=1" group-title="Brazil",GLOBO EPTV RIBEIR
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15910.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO EPTV SAO CARLOS" tvg-logo="https://www.dropbox.com/s/ego3u3u1dkmfuo2/GLOBO%20EPTV%20CAMPINAS.jpg?dl=1" group-title="Brazil",GLOBO EPTV SAO CARLOS
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15847.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO INTERNACIONAL" tvg-logo="https://www.dropbox.com/s/ffvaz1n9e14ed3l/GLOBO%20INTERNACIONAL.jpg?dl=1" group-title="Brazil",GLOBO INTERNACIONAL
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15848.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="GLOBO NORDESTE " tvg-logo="https://www.dropbox.com/s/fif5spqrhyb5oj9/GLOBO%20NORDESTE%20.jpg?dl=1" group-title="Brazil",GLOBO NORDESTE
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/23423
-#EXTINF:-1 tvg-id="BandSports.br" tvg-name="BAND SPORTS" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/brazil/band-sports-br.png?raw=true" group-title="SPORTS NETWORKS",BAND SPORTS
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/15804
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/23423.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RBS PORTO ALEGRE" tvg-logo="https://www.dropbox.com/s/r2zk964p6ysvlbr/GLOBO%20RBS%20PORTO%20ALEGRE.jpg?dl=1" group-title="Brazil",GLOBO RBS PORTO ALEGRE
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15852.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RIBEIR" tvg-logo="https://www.dropbox.com/s/nkyf1b2r4j5l3cf/GLOBO.jpg?dl=1" group-title="Brazil",GLOBO RIBEIR
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15853.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO RPC TV" tvg-logo="https://www.dropbox.com/s/a9ea36vh68hseuc/GLOBO%20RPC%20TV.jpg?dl=1" group-title="Brazil",GLOBO RPC TV
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15856.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV BELEM" tvg-logo="https://www.dropbox.com/s/nkyf1b2r4j5l3cf/GLOBO.jpg?dl=1" group-title="Brazil",GLOBO TV BELEM
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15858.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV TEM SOROCABA" tvg-logo="https://www.dropbox.com/s/kx62yz1j0tb1d4z/GLOBO%20TV%20TEM%20SOROCABA.jpg?dl=1" group-title="Brazil",GLOBO TV TEM SOROCABA
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15859.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV TRIBUNA SANTOS" tvg-logo="https://www.dropbox.com/s/o3gnbop9tlsldtu/GLOBO%20TV%20TRIBUNA%20SANTOS.jpg?dl=1" group-title="Brazil",GLOBO TV TRIBUNA SANTOS
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15860.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV VANGUARDA S.J DOS CAMPOS" tvg-logo="https://www.dropbox.com/s/tnib7zfuszf4tc7/GLOBO%20TV%20VANGUARDA%20S.J%20DOS%20CAMPOS.jpg?dl=1" group-title="Brazil",GLOBO TV VANGUARDA S.J DOS CAMPOS
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15861.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GLOBO TV VERDES MARES FORTALEZA" tvg-logo="https://www.dropbox.com/s/wza2gipj3kgg3pi/GLOBO%20TV%20VERDES%20MARES%20FORTALEZA.jpg?dl=1" group-title="Brazil",GLOBO TV VERDES MARES FORTALEZA
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15862.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="INVESTIGA" tvg-logo="https://www.dropbox.com/s/luf4a9yjg0gakhl/investigation%20discovery.png?dl=1" group-title="Brazil",INVESTIGA
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15874.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="RECORD" tvg-logo="https://www.dropbox.com/s/tg4eugocxi2y4bp/RECORD.jpg?dl=1" group-title="Brazil",RECORD
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15899.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="TNT" tvg-logo="" group-title="Brazil",TNT
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15929.m3u8
+#EXTINF:-1 tvg-id="AandE.br" tvg-name="A&E" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/a-and-e-us.png?raw=true" group-title="Brazil",A&E
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15796.m3u8
 #EXTINF:-1 tvg-id="BandNews.br" tvg-name="BAND NEWS" tvg-logo="http://lucidhosting.xyz:82/images/1043bdf2e4de2a0729bd88d5682dc635.png" group-title="Brazil",BAND NEWS
-http://lucidhosting.xyz:82/keissa17@gmail.com/Cju2GmPYsP/14852
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/14852.m3u8
+#EXTINF:-1 tvg-id="BandSports.br" tvg-name="BAND SPORTS" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/brazil/band-sports-br.png?raw=true" group-title="SPORTS NETWORKS",BAND SPORTS
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15804.m3u8
+#EXTINF:-1 tvg-id="ComedyCentral.br" tvg-name="COMEDY CENTRAL" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/comedy-central-us.png?raw=true" group-title="Brazil",COMEDY CENTRAL
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15812.m3u8
+#EXTINF:-1 tvg-id="DiscoveryChannel.br" tvg-name="DISCOVERY CHANNEL" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/discovery-channel-us.png?raw=true" group-title="Brazil",DISCOVERY CHANNEL
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15815.m3u8
+#EXTINF:-1 tvg-id="DiscoveryScience.br" tvg-name="DISCOVERY SCIENCE" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/discovery-science-us.png?raw=true" group-title="Brazil",DISCOVERY SCIENCE
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15819.m3u8
+#EXTINF:-1 tvg-id="DisneyChannel.br" tvg-name="DISNEY CHANNEL" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/disney-channel-us.png?raw=true" group-title="Brazil",DISNEY CHANNEL
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15824.m3u8
+#EXTINF:-1 tvg-id="E.br" tvg-name="E!" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/e-entertainment-us.png?raw=true" group-title="Brazil",E!
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15827.m3u8
+#EXTINF:-1 tvg-id="EPG123.66488.XMLTV.CO" tvg-name="DISCOVERY WORLD" tvg-logo="https://www.dropbox.com/s/qseepdjb7uq9j4a/DISCOVERY%20WORLD.png?dl=1" group-title="Brazil",DISCOVERY WORLD
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15823.m3u8
+#EXTINF:-1 tvg-id="ESPN.br" tvg-name="ESPN" tvg-logo="https://www.dropbox.com/s/fsnmzb9x71boaun/ESPN%20BRASIL.png?dl=1" group-title="Brazil",ESPN
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15829.m3u8
+#EXTINF:-1 tvg-id="FoodNetwork.br" tvg-name="FOOD NETWORK" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/food-network-us.png?raw=true" group-title="Brazil",FOOD NETWORK
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15832.m3u8
+#EXTINF:-1 tvg-id="GloboBrasil.br" tvg-name="GLOBO BRASILIA" tvg-logo="https://www.dropbox.com/s/6oh9thr0qx9u17s/GLOBO%20BRASILIA.jpg?dl=1" group-title="Brazil",GLOBO BRASILIA
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15931.m3u8
+#EXTINF:-1 tvg-id="HBOPNHE" tvg-name="HBO 2" tvg-logo="https://www.dropbox.com/s/k8mlcc64p5afglc/HBO%202.png?dl=1" group-title="Brazil",HBO 2
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15868.m3u8
+#EXTINF:-1 tvg-id="HistoryChannel.br" tvg-name="HISTORY CHANNEL" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/history-channel-us.png?raw=true" group-title="Brazil",HISTORY CHANNEL
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15873.m3u8
+#EXTINF:-1 tvg-id="Lifetime.br" tvg-name="LIFETIME" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/lifetime-us.png?raw=true" group-title="Brazil",LIFETIME
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15875.m3u8
+#EXTINF:-1 tvg-id="MTV.br" tvg-name="BR MTV" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/mtv-us.png?raw=true" group-title="Brazil",BR MTV
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15880.m3u8
+#EXTINF:-1 tvg-id="MTVLive.br" tvg-name="BR MTV LIVE" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/mtv-live-us.png?raw=true" group-title="Brazil",BR MTV LIVE
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15881.m3u8
+#EXTINF:-1 tvg-id="NickJr.br" tvg-name="BR NICK JR" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nick-jr-us.png?raw=true" group-title="Brazil",BR NICK JR
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15886.m3u8
+#EXTINF:-1 tvg-id="PRM10BR" tvg-name="PREMIERE 1" tvg-logo="https://www.dropbox.com/s/zg5g4qidmgne32t/PREMIERE%201.png?dl=1" group-title="Brazil",PREMIERE 1
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15890.m3u8
+#EXTINF:-1 tvg-id="TelecinePipoca.br" tvg-name="BR TELECINE PIPOCA" tvg-logo="" group-title="Brazil",BR TELECINE PIPOCA
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15925.m3u8
+#EXTINF:-1 tvg-id="WarnerChannel.br" tvg-name="BR WARNER CHANNEL" tvg-logo="" group-title="Brazil",BR WARNER CHANNEL
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15939.m3u8
+#EXTINF:-1 tvg-id="amc.br" tvg-name="AMC" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/amc-us.png?raw=true" group-title="Brazil",AMC
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15797.m3u8
+#EXTINF:-1 tvg-id="animalplanet.br" tvg-name="ANIMAL PLANET" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/animal-planet-us.png?raw=true" group-title="Brazil",ANIMAL PLANET
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15798.m3u8
+#EXTINF:-1 tvg-id="arte1.br" tvg-name="ARTE 1" tvg-logo="https://www.dropbox.com/s/b17ai94atvq94ji/ARTE%201.png?dl=1" group-title="Brazil",ARTE 1
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15799.m3u8
+#EXTINF:-1 tvg-id="axn.br" tvg-name="AXN" tvg-logo="https://www.dropbox.com/s/jkvl3l8cw9ielb4/1280px-AXN_logo_%282015%29.png?dl=1" group-title="Brazil",AXN
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15800.m3u8
+#EXTINF:-1 tvg-id="babytv.br" tvg-name="BABY TV" tvg-logo="https://www.dropbox.com/s/7bh1n0utb99y2vy/baby%20tv.png?dl=1" group-title="Brazil",BABY TV
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15801.m3u8
+#EXTINF:-1 tvg-id="bandnews.br" tvg-name="BAND NEWS" tvg-logo="https://www.dropbox.com/s/vlhz30aov17g89q/BAND%20NEWS.png?dl=1" group-title="Brazil",BAND NEWS
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15803.m3u8
+#EXTINF:-1 tvg-id="bis.br" tvg-name="BIS" tvg-logo="https://www.dropbox.com/s/h0u1dl34uose3oi/BIS.png?dl=1" group-title="Brazil",BIS
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15805.m3u8
+#EXTINF:-1 tvg-id="boomerang.br" tvg-name="BOOMERANG" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/boomerang-us.png?raw=true" group-title="Brazil",BOOMERANG
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15806.m3u8
+#EXTINF:-1 tvg-id="canalbrasil.br" tvg-name="CANAL BRASIL" tvg-logo="https://www.dropbox.com/s/l3eitapvmh5okvn/CANAL%20BRASIL.png?dl=1" group-title="Brazil",CANAL BRASIL
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15807.m3u8
+#EXTINF:-1 tvg-id="cinemax.br" tvg-name="CINEMAX" tvg-logo="https://www.dropbox.com/s/wx7swoucame8up2/cinemax.jpg?dl=1" group-title="Brazil",CINEMAX
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15810.m3u8
+#EXTINF:-1 tvg-id="cnt.br" tvg-name="CNT" tvg-logo="" group-title="Brazil",CNT
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15933.m3u8
+#EXTINF:-1 tvg-id="combate.br" tvg-name="COMBATE" tvg-logo="https://www.dropbox.com/s/7ybzdzgn178cbsn/COMBATE.png?dl=1" group-title="Brazil",COMBATE
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15811.m3u8
+#EXTINF:-1 tvg-id="dischealth.br" tvg-name="DISCOVERY HOME & HEALTH" tvg-logo="https://www.dropbox.com/s/i9fs34c6hswpeaq/DISCOVERY%20HOME%20%26%20HEALTH.png?dl=1" group-title="Brazil",DISCOVERY HOME & HEALTH
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15817.m3u8
+#EXTINF:-1 tvg-id="discivil.br" tvg-name="DISCOVERY CIVILIZATION" tvg-logo="https://www.dropbox.com/s/thjezxrcsc86yms/DISCOVERY%20CIVILIZATION.png?dl=1" group-title="Brazil",DISCOVERY CIVILIZATION
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15816.m3u8
+#EXTINF:-1 tvg-id="disckids.br" tvg-name="DISCOVERY KIDS" tvg-logo="https://www.dropbox.com/s/tsm9ajjq8uaxa66/DISCOVERY%20KIDS.png?dl=1" group-title="Brazil",DISCOVERY KIDS
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15818.m3u8
+#EXTINF:-1 tvg-id="disctheater.br" tvg-name="DISCOVERY THEATER" tvg-logo="https://www.dropbox.com/s/o5vfte6y1zeqdp2/DISCOVERY%20THEATER.png?dl=1" group-title="Brazil",DISCOVERY THEATER
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15820.m3u8
+#EXTINF:-1 tvg-id="discturbo.br" tvg-name="DISCOVERY TURBO" tvg-logo="https://www.dropbox.com/s/wncyzwixpuwetke/DISCOVERY%20TURBO.png?dl=1" group-title="Brazil",DISCOVERY TURBO
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15822.m3u8
+#EXTINF:-1 tvg-id="espn.br" tvg-name="ESPN" tvg-logo="" group-title="Brazil",ESPN
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15828.m3u8
+#EXTINF:-1 tvg-id="fox.br" tvg-name="FOX" tvg-logo="https://www.dropbox.com/s/kl0m8wof8barlwh/FOX.png?dl=1" group-title="Brazil",FOX
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15833.m3u8
+#EXTINF:-1 tvg-id="foxlife.br" tvg-name="FOX LIFE" tvg-logo="https://www.dropbox.com/s/pl64w5qcf523v5j/fox%20life.jpg?dl=1" group-title="Brazil",FOX LIFE
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15834.m3u8
+#EXTINF:-1 tvg-id="foxsports.br" tvg-name="FOX SPORTS" tvg-logo="https://www.dropbox.com/s/03f7q8aczwf65iw/FOX%20SPORTS%20.png?dl=1" group-title="Brazil",FOX SPORTS
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15837.m3u8
+#EXTINF:-1 tvg-id="foxsports2.br" tvg-name="FOX SPORTS 2" tvg-logo="https://www.dropbox.com/s/e4qq7eurr5r2np5/fox%20sports%202.jpg?dl=1" group-title="Brazil",FOX SPORTS 2
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15838.m3u8
+#EXTINF:-1 tvg-id="futura.br" tvg-name="FUTURA" tvg-logo="https://www.dropbox.com/s/7aoa6jwi4qoo3qu/FUTURA.png?dl=1" group-title="Brazil",FUTURA
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15839.m3u8
+#EXTINF:-1 tvg-id="fx.br" tvg-name="FX" tvg-logo="https://www.dropbox.com/s/gzgpb13ix213784/fx.jpg?dl=1" group-title="Brazil",FX
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15840.m3u8
+#EXTINF:-1 tvg-id="globominas.br" tvg-name="GLOBO MINAS" tvg-logo="https://www.dropbox.com/s/qog6t6dvj6gyl6d/GLOBO%20MINAS.jpg?dl=1" group-title="Brazil",GLOBO MINAS
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15849.m3u8
+#EXTINF:-1 tvg-id="globonews.br" tvg-name="GLOBO NEWS" tvg-logo="https://www.dropbox.com/s/t1lk7vtzolhm6wi/GLOBO%20NEWS.png?dl=1" group-title="Brazil",GLOBO NEWS
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15850.m3u8
+#EXTINF:-1 tvg-id="globoribeirao.br" tvg-name="GLOBO EPTV RIBEIRÃO PRETO " tvg-logo="https://www.dropbox.com/s/ego3u3u1dkmfuo2/GLOBO%20EPTV%20CAMPINAS.jpg?dl=1" group-title="Brazil",GLOBO EPTV RIBEIRÃO PRETO
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/23422.m3u8
+#EXTINF:-1 tvg-id="globosp.br" tvg-name="GLOBO SP" tvg-logo="https://www.dropbox.com/s/wsg0bjs32czw6bu/GLOBO%20SP.jpg?dl=1" group-title="Brazil",GLOBO SP
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15857.m3u8
+#EXTINF:-1 tvg-id="gloob.br" tvg-name="GLOOB" tvg-logo="https://www.dropbox.com/s/cbs82b8oww8fslw/GLOOB.jpg?dl=1" group-title="Brazil",GLOOB
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15864.m3u8
+#EXTINF:-1 tvg-id="gnt.br" tvg-name="GNT" tvg-logo="https://www.dropbox.com/s/6qd0p1c4o3f25h1/gnt.png?dl=1" group-title="Brazil",GNT
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15808.m3u8
+#EXTINF:-1 tvg-id="hbo.br" tvg-name="HBO" tvg-logo="https://www.dropbox.com/s/l6mxuqf8doswsav/hbo.jpg?dl=1" group-title="Brazil",HBO
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15867.m3u8
+#EXTINF:-1 tvg-id="hbofamily.br" tvg-name="HBO FAMILY" tvg-logo="https://www.dropbox.com/s/m3qe1ecy37bbsgm/HBO%20FAMILY.png?dl=1" group-title="Brazil",HBO FAMILY
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15869.m3u8
+#EXTINF:-1 tvg-id="hboplus.br" tvg-name="HBO PLUS" tvg-logo="https://www.dropbox.com/s/0dg57ilfy7x8ugp/hbo%20plus.jpg?dl=1" group-title="Brazil",HBO PLUS
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15870.m3u8
+#EXTINF:-1 tvg-id="hbosignature.br" tvg-name="HBO SIGNATURE" tvg-logo="https://www.dropbox.com/s/hpycw1hojnrd2bg/hbo%20signature.jpg?dl=1" group-title="Brazil",HBO SIGNATURE
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15872.m3u8
+#EXTINF:-1 tvg-id="history2.br" tvg-name="H2" tvg-logo="https://www.dropbox.com/s/oi4d3kxp13dd7vz/h2.jpg?dl=1" group-title="Brazil",H2
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15866.m3u8
+#EXTINF:-1 tvg-id="tlc.br" tvg-name="DISCOVERY TLC" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/tlc-us.png?raw=true" group-title="Brazil",DISCOVERY TLC
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15821.m3u8
+#EXTINF:-1 tvg-id="tvcultura.br" tvg-name="CULTURA" tvg-logo="https://www.dropbox.com/s/xx1lzl3movcqcis/CULTURA.png?dl=1" group-title="Brazil",CULTURA
+http://lucidhosting.xyz:82/live/keissa17@gmail.com/Cju2GmPYsP/15813.m3u8
+#EXTINF:-1, ATUALIZAÇÃO (5 de fevereiro de 2025 às 16:51)
+http://1.m3u8/live/.m3u8
+#EXTM3U
