@@ -1,14 +1,5 @@
 #EXTM3U
 #EXTINF:-1, ATUALIZAÇÃO (18/03/2025 15:04)
-http://1.m3u8
-#EXTINF: group-title="Servidor 1"  tvg-name="[24H] Eu, a Patroa e as Crianças" tvg-logo="https://i.postimg.cc/q7jRQH6S/24h-hd.png" ,[24H] Eu, a Patroa e as Crianças
-http://cdn69.site:80/live/2241919220/7830130066/404844.m3u8
-#EXTINF: group-title="Servidor 2", ATUALIZAÇÃO (18 de março de 2025 às 15:01)
-http://1.m3u8
-#EXTINF: group-title="Servidor 1", ATUALIZAÇÃO (26 de fevereiro de 2025 às 01:42)
-http://1.m3u8
-#EXTINF: group-title="Servidor 3", ATUALIZAÇÃO (26 de fevereiro de 2025 às 1:24)
-http://1.m3u8
 #EXTINF: group-title="Canais de Música"  tvg-logo="https://i.imgur.com/OFhQQCD.png"  user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.4044.138 Safari/537.36",VIVA Russia (1080p) [Not 24/7]
 #EXTVLCOPT:http-referrer=https://goodgame.ru
 #EXTINF: group-title="Servidor 1"  tvg-name="(SP) - Antena 1 FM 94.7" tvg-logo="https://img.radios.com.br/radio/lg/radio9505_1574106966.jpg" ,(SP) - Antena 1 FM 94.7
