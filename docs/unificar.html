@@ -40,10 +40,10 @@
         ];
 
         let unifiedM3UContent = "#EXTM3U\n";
+        let allEntries = [];
 
         async function fetchM3U() {
             const totalUrls = urls.length;
-            let allEntries = [];
 
             for (let i = 0; i < totalUrls; i++) {
                 try {
@@ -61,18 +61,23 @@
                             let infoLine = entries[j]
                                 .replace(/tvg-id="[^"]*"/g, '') // Remove tvg-id
                                 .replace(/-1/g, '') // Remove -1
-                                .replace(/tvg-logo="[^"]*"/g, '') // Remove tvg-logo
                                 .replace(/group-title="[^"]*"/g, '') // Remove qualquer group-title antigo
                                 .replace('#EXTINF:', `#EXTINF: group-title="${groupTitle}"`); // Adiciona novo group-title
 
-                            const urlLine = entries[j + 1];
+                            // Mantém o logo (se existir)
+                            const logoMatch = entries[j].match(/tvg-logo="([^"]*)"/);
+                            if (logoMatch) {
+                                infoLine = infoLine.replace(/tvg-logo="[^"]*"/, `tvg-logo="${logoMatch[1]}"`);
+                            }
 
+                            const urlLine = entries[j + 1];
                             if (urlLine) {
                                 allEntries.push({ info: infoLine.trim(), url: urlLine.trim() });
                             }
                         }
                     }
 
+                    // Atualizar barra de progresso
                     const progress = ((i + 1) / totalUrls) * 100;
                     document.getElementById('progress-bar').style.width = progress + '%';
                 } catch (error) {
@@ -86,6 +91,13 @@
             const formattedDate = now.toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }).replace(',', '');
             const updateEntry = `#EXTINF:-1, ATUALIZAÇÃO (${formattedDate})\nhttp://1.m3u8\n`;
             unifiedM3UContent += updateEntry;
+
+            // Ordenação alfabética por nome de canal (extraído da linha #EXTINF)
+            allEntries.sort((a, b) => {
+                const nameA = a.info.split(',')[1].toLowerCase(); // Nome do canal
+                const nameB = b.info.split(',')[1].toLowerCase();
+                return nameA.localeCompare(nameB); // Ordenar em ordem alfabética
+            });
 
             // Unificação das entradas
             document.getElementById('status').textContent = 'Unificando listas...';
