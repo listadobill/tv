@@ -1,533 +1,201 @@
 #EXTM3U
-#EXTINF:-1, ATUALIZAÇÃO (18 de março de 2025 às 15:55)
+#EXTINF:-1, ATUALIZAÇÃO (24 de abril de 2025 às 18:58)
 http://1.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="A&E" tvg-logo="http://fanc.tmsimg.com/assets/s77795_ll_h3_aa.png" group-title="Brazil",A&E
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120580.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="ALL SPORTS" tvg-logo="" group-title="Brazil",ALL SPORTS
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120581.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="AMC" tvg-logo="http://fanc.tmsimg.com/assets/s99628_ll_h3_aa.png" group-title="Brazil",AMC
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120582.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="ANIMAL PLANET" tvg-logo="http://fanc.tmsimg.com/assets/s102407_ll_h3_ab.png" group-title="Brazil",ANIMAL PLANET
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120583.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="ARTE 1" tvg-logo="http://fanc.tmsimg.com/assets/s103707_ll_h3_aa.png" group-title="Brazil",ARTE 1
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120584.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="AXN" tvg-logo="http://fanc.tmsimg.com/assets/s75580_ll_h3_ab.png" group-title="Brazil",AXN
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120585.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Amazon Sat" tvg-logo="" group-title="Brazil",Amazon Sat
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120789.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="BABY" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2NsZDpbr56w8hOM7fSmuumsizBCu88mNDjzv5EshoxtyH7-30jNJ1dZErQcj12q9tw.png" group-title="Brazil",BABY
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120586.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="BAND NEWS" tvg-logo="" group-title="Brazil",BAND NEWS
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120587.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="BIS" tvg-logo="http://fanc.tmsimg.com/assets/s94122_ll_h3_ab.png" group-title="Brazil",BIS
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120589.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="BOOMERANG" tvg-logo="http://fanc.tmsimg.com/assets/s104741_ll_h3_aa.png" group-title="Brazil",BOOMERANG
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120590.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Baby TV" tvg-logo="" group-title="Brazil",Baby TV
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120799.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Band Campinas" tvg-logo="" group-title="Brazil",Band Campinas
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120801.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Band Sports" tvg-logo="http://fanc.tmsimg.com/assets/s94563_ll_h3_ab.png" group-title="Brazil",Band Sports
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120588.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Band" tvg-logo="" group-title="Brazil",Band
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120800.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="CARTOON NETWORK" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2Dx3ler5TYyYwLOJu-YD78RuauIRM6wYA9-rCL3QO-lbgndnksb_akTsRMSuwQPSzw.png" group-title="Brazil",CARTOON NETWORK
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120594.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="CBN Español" tvg-logo="" group-title="Brazil",CBN Español
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120596.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="CINEMAX" tvg-logo="http://fanc.tmsimg.com/assets/s75583_ll_h3_ab.png" group-title="Brazil",CINEMAX
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120597.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="CNN BRASIL" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2CQmSialG6ZFMmnpVE7A3yoqKPiyUQ2s6r2geuNYrcC9yAjGiSuPy2U1exFyNs1N-g.png" group-title="Brazil",CNN BRASIL
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120598.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="COMBATE" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2PBRuLsddRY96gtDGyMjRwKxQ_sJNjifywj_6xAsI57I2oM5gVw-lbMoP5OuMgTkfw.png" group-title="Brazil",COMBATE
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120599.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="COMEDY CENTRAL" tvg-logo="http://fanc.tmsimg.com/assets/s83200_ll_h3_ab.png" group-title="Brazil",COMEDY CENTRAL
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120600.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="CONMEBOL 2" tvg-logo="" group-title="Brazil",CONMEBOL 2
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120601.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="CULTURA" tvg-logo="http://fanc.tmsimg.com/assets/s98046_ll_h3_aa.png" group-title="Brazil",CULTURA
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120602.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="CURTA!" tvg-logo="http://fanc.tmsimg.com/assets/s105950_ll_h3_ab.png" group-title="Brazil",CURTA!
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120603.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="CURTA" tvg-logo="" group-title="Brazil",CURTA
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120802.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Canal Brasil" tvg-logo="http://fanc.tmsimg.com/assets/s94564_ll_h3_aa.png" group-title="Brazil",Canal Brasil
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120591.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Canal Sony" tvg-logo="" group-title="Brazil",Canal Sony
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120803.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Canal Tv Aparecida" tvg-logo="" group-title="Brazil",Canal Tv Aparecida
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120592.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Canal do Criador" tvg-logo="" group-title="Brazil",Canal do Criador
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120790.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Cartoonito" tvg-logo="" group-title="Brazil",Cartoonito
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120595.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Cine SKY 06+" tvg-logo="" group-title="Brazil",Cine SKY 06+
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120804.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Curta" tvg-logo="" group-title="Brazil",Curta
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120805.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="DAZN 2" tvg-logo="" group-title="Brazil",DAZN 2
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120605.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="DAZN 3" tvg-logo="" group-title="Brazil",DAZN 3
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120606.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="DAZN" tvg-logo="" group-title="Brazil",DAZN
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120604.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="DISCOVERY CHANNEL" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2Dx3ler5TYyYwLOJu-YD78Rc5mzrdhPicPTx8EzgbTzgV6NXm_v7sJ0Ntk0-gQkXKQ.png" group-title="Brazil",DISCOVERY CHANNEL
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120607.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="DISCOVERY CIVILIZATION" tvg-logo="" group-title="Brazil",DISCOVERY CIVILIZATION
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120806.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="DISCOVERY H&H" tvg-logo="" group-title="Brazil",DISCOVERY H&H
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120807.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="DISCOVERY HOME & HEALTH" tvg-logo="http://fanc.tmsimg.com/assets/s83208_ll_h3_ab.png" group-title="Brazil",DISCOVERY HOME & HEALTH
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120608.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="DISCOVERY ID" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2Dx3ler5TYyYwLOJu-YD78Rc5mzrdhPicPTx8EzgbTzgV6NXm_v7sJ0Ntk0-gQkXKQ.png" group-title="Brazil",DISCOVERY ID
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120609.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="DISCOVERY KIDS" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2PBRuLsddRY96gtDGyMjRwKGVFUFcpzJsbk69YviU7csgxsQh7BjZpR4CkRmJ0ZQEg.png" group-title="Brazil",DISCOVERY KIDS
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120610.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="DISCOVERY SCIENCE" tvg-logo="http://fanc.tmsimg.com/assets/s107895_ll_h3_aa.png" group-title="Brazil",DISCOVERY SCIENCE
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120611.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="DISCOVERY THEATER" tvg-logo="http://fanc.tmsimg.com/assets/s75835_ll_h3_ab.png" group-title="Brazil",DISCOVERY THEATER
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120612.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="DISCOVERY TLC" tvg-logo="" group-title="Brazil",DISCOVERY TLC
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120613.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="DISCOVERY TURBO" tvg-logo="http://fanc.tmsimg.com/assets/s90874_ll_h3_ab.png" group-title="Brazil",DISCOVERY TURBO
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120614.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="DISCOVERY WORLD" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2Dx3ler5TYyYwLOJu-YD78QfS9y6lVcTsQnF_-HH7Vslde02eCjj4rGqGl4Eqvudlw.png" group-title="Brazil",DISCOVERY WORLD
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120615.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="DISNEY CHANNEL" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2Dx3ler5TYyYwLOJu-YD78TzDr5CW1Bwmbi0XFSFClq81nnUVV7d0zHKCRfqXi_yAQ.png" group-title="Brazil",DISNEY CHANNEL
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120616.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="DISNEY JR" tvg-logo="" group-title="Brazil",DISNEY JR
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120617.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="DISNEY JUNIOR" tvg-logo="" group-title="Brazil",DISNEY JUNIOR
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120808.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="DISNEY XD" tvg-logo="http://fanc.tmsimg.com/assets/s101131_h3_aa.png" group-title="Brazil",DISNEY XD
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120618.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Demais TV" tvg-logo="" group-title="Brazil",Demais TV
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120791.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Discovery H&H" tvg-logo="" group-title="Brazil",Discovery H&H
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120809.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="E!" tvg-logo="http://fanc.tmsimg.com/assets/s102367_ll_h3_aa.png" group-title="Brazil",E!
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120619.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="ESPN 2" tvg-logo="http://fanc.tmsimg.com/assets/s75585_ll_h3_ab.png" group-title="Brazil",ESPN 2
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120622.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="ESPN 3" tvg-logo="" group-title="Brazil",ESPN 3
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120623.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="ESPN 4" tvg-logo="" group-title="Brazil",ESPN 4
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120624.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="ESPN Extra" tvg-logo="http://fanc.tmsimg.com/assets/s109973_ll_h3_ab.png" group-title="Brazil",ESPN Extra
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120625.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="ESPN" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2CQmSialG6ZFMmnpVE7A3yo6hRmqjhoI74Txazrwqhjv5uu5YW71LCj7kslTzWcW7g.png" group-title="Brazil",ESPN
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120621.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Ei Maxx Brasil" tvg-logo="" group-title="Brazil",Ei Maxx Brasil
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120620.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="FOOD NETWORK" tvg-logo="http://fanc.tmsimg.com/assets/s90905_ll_h3_aa.png" group-title="Brazil",FOOD NETWORK
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120627.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="FOX LIFE" tvg-logo="" group-title="Brazil",FOX LIFE
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120811.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="FOX PREMIUM 1" tvg-logo="" group-title="Brazil",FOX PREMIUM 1
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120629.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="FOX PREMIUM 2" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2CQmSialG6ZFMmnpVE7A3you-ip3nKdfJnq1_Go69lNhl_6ombjzZfRfTUKEf2zUmQ.png" group-title="Brazil",FOX PREMIUM 2
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120630.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="FOX SPORTS 2" tvg-logo="http://fanc.tmsimg.com/assets/s86787_ll_h3_aa.png" group-title="Brazil",FOX SPORTS 2
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120631.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="FOX" tvg-logo="" group-title="Brazil",FOX
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120810.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="FX" tvg-logo="http://fanc.tmsimg.com/assets/s98922_ll_h3_aa.png" group-title="Brazil",FX
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120634.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Fish TV" tvg-logo="http://fanc.tmsimg.com/assets/s110390_ll_h3_ad.png" group-title="Brazil",Fish TV
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120626.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Fonte TV" tvg-logo="" group-title="Brazil",Fonte TV
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120792.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Fox Sports" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2Dx3ler5TYyYwLOJu-YD78QnK_DGcx63tOky8R7rxPskpxMoiJclp8-8GiV5w6w_Kw.png" group-title="Brazil",Fox Sports
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120632.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Futura" tvg-logo="http://fanc.tmsimg.com/assets/s103720_ll_h3_aa.png" group-title="Brazil",Futura
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120633.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="GLOBO BRASILIA" tvg-logo="http://fanc.tmsimg.com/assets/s98744_ll_h3_ca.png" group-title="Brazil",GLOBO BRASILIA
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120637.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="GLOBO EPTV CAMPINAS" tvg-logo="" group-title="Brazil",GLOBO EPTV CAMPINAS
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120638.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="GLOBO INTERNACIONAL" tvg-logo="" group-title="Brazil",GLOBO INTERNACIONAL
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120643.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="GLOBO NEWS" tvg-logo="http://fanc.tmsimg.com/assets/s95744_ll_h3_aa.png" group-title="Brazil",GLOBO NEWS
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120647.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="GLOBO NORDESTE" tvg-logo="http://fanc.tmsimg.com/assets/s104176_ll_h3_ab.png" group-title="Brazil",GLOBO NORDESTE
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120648.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="GLOBO NSC CHAPECO" tvg-logo="" group-title="Brazil",GLOBO NSC CHAPECO
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120651.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="GLOBO NSC CRICIUMA" tvg-logo="" group-title="Brazil",GLOBO NSC CRICIUMA
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120652.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="GLOBO NSC JOINVILLE" tvg-logo="" group-title="Brazil",GLOBO NSC JOINVILLE
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120654.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="GLOBO RIO" tvg-logo="" group-title="Brazil",GLOBO RIO
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120812.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="GLOBO SP - NBR" tvg-logo="" group-title="Brazil",GLOBO SP - NBR
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120813.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="GLOBO SP NBR" tvg-logo="" group-title="Brazil",GLOBO SP NBR
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120667.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="GLOBO SP TV TRIBUNA" tvg-logo="" group-title="Brazil",GLOBO SP TV TRIBUNA
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120668.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="GLOBO" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2PncQnjvX0UIbf-mXiFDYhgbIZ11oi6Hxotssqd4WHtOGSFA3gdZxXhO1TS66wHYGQ.png" group-title="Brazil",GLOBO
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120635.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="GLOOB" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2Dx3ler5TYyYwLOJu-YD78TJRdyE9ZIOJnlUZDw9Var6Sme6vuYKHhAwImXSjMQHLA.png" group-title="Brazil",GLOOB
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120687.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="GNT" tvg-logo="" group-title="Brazil",GNT
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120689.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo Amazonas" tvg-logo="" group-title="Brazil",Globo Amazonas
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120814.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo Anhanguera Goiania" tvg-logo="" group-title="Brazil",Globo Anhanguera Goiania
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120636.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo CENTRO AMERICA CUIABA" tvg-logo="" group-title="Brazil",Globo CENTRO AMERICA CUIABA
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120815.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo Centro AmÃ©rica" tvg-logo="" group-title="Brazil",Globo Centro AmÃ©rica
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120816.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo EPTV Ribeirao Preto" tvg-logo="" group-title="Brazil",Globo EPTV Ribeirao Preto
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120639.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo EPTV Sul de Minas" tvg-logo="" group-title="Brazil",Globo EPTV Sul de Minas
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120640.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo Inter PT" tvg-logo="" group-title="Brazil",Globo Inter PT
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120641.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo Inter TV Grande Minas" tvg-logo="" group-title="Brazil",Globo Inter TV Grande Minas
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120642.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo InterTV Alto Litoral" tvg-logo="" group-title="Brazil",Globo InterTV Alto Litoral
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120644.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo InterTV Serra Mar" tvg-logo="" group-title="Brazil",Globo InterTV Serra Mar
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120645.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo Minas" tvg-logo="" group-title="Brazil",Globo Minas
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120646.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo NSC Centro Oeste" tvg-logo="" group-title="Brazil",Globo NSC Centro Oeste
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120650.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo NSC Florianopolis" tvg-logo="" group-title="Brazil",Globo NSC Florianopolis
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120653.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo RBS Porto Alegre" tvg-logo="" group-title="Brazil",Globo RBS Porto Alegre
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120655.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo RBS TV POA" tvg-logo="" group-title="Brazil",Globo RBS TV POA
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120658.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo RBS TV Pelotas" tvg-logo="" group-title="Brazil",Globo RBS TV Pelotas
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120657.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo RBS TV Santa Maria" tvg-logo="" group-title="Brazil",Globo RBS TV Santa Maria
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120659.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo RBS TV" tvg-logo="" group-title="Brazil",Globo RBS TV
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120656.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo RJ" tvg-logo="" group-title="Brazil",Globo RJ
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120662.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo RPC Curitiba" tvg-logo="" group-title="Brazil",Globo RPC Curitiba
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120663.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo RPC Ponta Grossa" tvg-logo="" group-title="Brazil",Globo RPC Ponta Grossa
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120664.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo RPC TV Foz do Iguacu" tvg-logo="" group-title="Brazil",Globo RPC TV Foz do Iguacu
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120665.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo Recife" tvg-logo="" group-title="Brazil",Globo Recife
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120660.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo Rede Amazonica" tvg-logo="" group-title="Brazil",Globo Rede Amazonica
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120661.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo SP" tvg-logo="" group-title="Brazil",Globo SP
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120666.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo TV Bahia" tvg-logo="" group-title="Brazil",Globo TV Bahia
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120817.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo TV Belem" tvg-logo="" group-title="Brazil",Globo TV Belem
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120669.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo TV Cabo Branco" tvg-logo="" group-title="Brazil",Globo TV Cabo Branco
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120670.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo TV Diario" tvg-logo="" group-title="Brazil",Globo TV Diario
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120671.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo TV Gazeta Sul ES" tvg-logo="" group-title="Brazil",Globo TV Gazeta Sul ES
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120672.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo TV Gazeta VitÃ³ria" tvg-logo="" group-title="Brazil",Globo TV Gazeta VitÃ³ria
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120673.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo TV Integracao Juiz de Fora" tvg-logo="" group-title="Brazil",Globo TV Integracao Juiz de Fora
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120674.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo TV IntegraÃ§Ã£o Araxa" tvg-logo="" group-title="Brazil",Globo TV IntegraÃ§Ã£o Araxa
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120675.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo TV Liberal BelÃ©m" tvg-logo="" group-title="Brazil",Globo TV Liberal BelÃ©m
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120676.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo TV Mirante" tvg-logo="" group-title="Brazil",Globo TV Mirante
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120677.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo TV Morena" tvg-logo="" group-title="Brazil",Globo TV Morena
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120678.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo TV Rio Sul" tvg-logo="" group-title="Brazil",Globo TV Rio Sul
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120679.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo TV Sergipe" tvg-logo="" group-title="Brazil",Globo TV Sergipe
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120680.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo TV Tem Bauru" tvg-logo="" group-title="Brazil",Globo TV Tem Bauru
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120681.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo TV Tem Sorocaba" tvg-logo="" group-title="Brazil",Globo TV Tem Sorocaba
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120682.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo TV Tribuna Santos" tvg-logo="" group-title="Brazil",Globo TV Tribuna Santos
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120683.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo TV Vanguarda SÃ£o JosÃ dos Campos" tvg-logo="" group-title="Brazil",Globo TV Vanguarda SÃ£o JosÃ dos Campos
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120684.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globo TV Verdes Mares Fortaleza" tvg-logo="" group-title="Brazil",Globo TV Verdes Mares Fortaleza
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120685.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Globosat Full" tvg-logo="" group-title="Brazil",Globosat Full
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120686.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Gloobinho" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2CQmSialG6ZFMmnpVE7A3yqWSUDfWpbd1SkkH7XPcRuDQ4tv7cAwwV6Jw7H3TxwIjA.png" group-title="Brazil",Gloobinho
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120688.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="H2" tvg-logo="" group-title="Brazil",H2
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120690.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="HBO 2" tvg-logo="" group-title="Brazil",HBO 2
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120692.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="HBO Extreme" tvg-logo="" group-title="Brazil",HBO Extreme
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120693.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="HBO FAMILY" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2NsZDpbr56w8hOM7fSmuumtyC7yZQoiBEsvzN3M4HLHsg6bhMAY71LSEijuvkjDeyA.png" group-title="Brazil",HBO FAMILY
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120694.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="HBO Mundi" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2IPJinOlJVnENfBFlS2f8OESQXd36GQ7iRwGgy7iQ71JEwde38_rsignhDkusNoDyQ.png" group-title="Brazil",HBO Mundi
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120695.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="HBO PLUS" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2CQmSialG6ZFMmnpVE7A3yrUius15_BgTZ5WS7Et2-M28G_oq8UIFnHlfMEiuJ4t3g.png" group-title="Brazil",HBO PLUS
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120696.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="HBO Pop" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2Dx3ler5TYyYwLOJu-YD78R36XWYXWGQns6z0sVfBDkKeP3iY1rN1dvUZGi3b6_Wog.png" group-title="Brazil",HBO Pop
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120697.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="HBO SIGNATURE" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2NsZDpbr56w8hOM7fSmuums94P2iM7UT072_tFUbSugtW_4acxJStjYS6w3yiu158Q.png" group-title="Brazil",HBO SIGNATURE
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120698.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="HBO XTREME" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2GwUee_HeV47TzX8gNpnfyAXiZsFqSv4VrHkm_OzGuOolSjY4ETiwXAKG_mxymIHNw.png" group-title="Brazil",HBO XTREME
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120699.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="HBO" tvg-logo="" group-title="Brazil",HBO
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120691.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="HGTV" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2CQmSialG6ZFMmnpVE7A3yrNQo0Wu_zIUR40AOjITRMwgd6Qpv2UKlAZuEJVc9Na0Q.png" group-title="Brazil",HGTV
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120700.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="HISTORY CHANNEL" tvg-logo="" group-title="Brazil",HISTORY CHANNEL
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120701.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="ID InvestigaÃ§Ã£o Discovery" tvg-logo="" group-title="Brazil",ID InvestigaÃ§Ã£o Discovery
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120818.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="JOVEM PAN NEWS" tvg-logo="" group-title="Brazil",JOVEM PAN NEWS
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120702.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Kuriakos Kids" tvg-logo="" group-title="Brazil",Kuriakos Kids
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120793.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="LIFETIME" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2PBRuLsddRY96gtDGyMjRwLndcvXQat1dJuR9nb_tbTNCnZupqNsP3RGfaKHhjnSug.png" group-title="Brazil",LIFETIME
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120703.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="MAIS GLOBOSAT" tvg-logo="" group-title="Brazil",MAIS GLOBOSAT
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120819.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="MAX PRIME" tvg-logo="" group-title="Brazil",MAX PRIME
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120821.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="MAX" tvg-logo="" group-title="Brazil",MAX
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120820.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="MEGA PIX" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2Dx3ler5TYyYwLOJu-YD78SICggQDNxN-EpyvoWkgN3wj2BxE7-uzgG2fv6W-SBN-g.png" group-title="Brazil",MEGA PIX
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120704.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="MEGAPIX" tvg-logo="" group-title="Brazil",MEGAPIX
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120822.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="MEGAPIX" tvg-logo="" group-title="Brazil",MEGAPIX
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120823.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="MTV 00S" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2CQmSialG6ZFMmnpVE7A3yrVSW0rJHbINntMdxukVyAQtbrMzxtQDYltZZJHZDM7XA.png" group-title="Brazil",MTV 00S
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120784.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="MTV" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2Dx3ler5TYyYwLOJu-YD78Qkv-7HlRdCgI2Kwwd7k9Tqys_FyTdz5wGp5jzcnuJcNg.png" group-title="Brazil",MTV
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120705.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="MULTI SHOW" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2Dx3ler5TYyYwLOJu-YD78RN7uYZs_LpOZqoqGQBi5ZRMDwhd4GBYUjO_X9QFRuTMA.png" group-title="Brazil",MULTI SHOW
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120706.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="MULTISHOW" tvg-logo="" group-title="Brazil",MULTISHOW
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120824.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Mais Globosat" tvg-logo="" group-title="Brazil",Mais Globosat
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120825.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Megapix" tvg-logo="" group-title="Brazil",Megapix
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120826.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Modo Viagem" tvg-logo="" group-title="Brazil",Modo Viagem
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120827.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Music Box Brazil" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2NsZDpbr56w8hOM7fSmuumuzYQSrKDj8wf6Z7AIhS2vE330LWpuD4HApp_j7JiEDWg.png" group-title="Brazil",Music Box Brazil
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120707.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="NAT GEO KIDS" tvg-logo="https://asiagrandiptv.us/logo/natgeokids.png" group-title="Brazil",NAT GEO KIDS
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120708.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="NAT GEO WILD" tvg-logo="" group-title="Brazil",NAT GEO WILD
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120709.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="NAT GEO" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2NsZDpbr56w8hOM7fSmuums_-fkkhbLP6THI49y2dSTcdang8NMOZZZcYNvZnLCZQw.png" group-title="Brazil",NAT GEO
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120710.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="NDTV Criciuma" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2Dx3ler5TYyYwLOJu-YD78ReiE4KhOFIZZGcCGM34k11gsmFhOVocnnKsJzczXrHsQ.png" group-title="Brazil",NDTV Criciuma
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120794.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="NICKELODEON" tvg-logo="" group-title="Brazil",NICKELODEON
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120711.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="NOVA ERA TV" tvg-logo="" group-title="Brazil",NOVA ERA TV
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120712.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="NOVO TEMPO" tvg-logo="" group-title="Brazil",NOVO TEMPO
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120713.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="OFF" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2NsZDpbr56w8hOM7fSmuumvPxne6s8u-idTICPIyYkAIign9niJGEOna9wyVwBgdQA.png" group-title="Brazil",OFF
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120714.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="PARAMOUNT CHANNEL" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2NsZDpbr56w8hOM7fSmuumsUWGJUuemGkTCyDt5YNFdoJCWjrcPm2c6nZix0EF072w.png" group-title="Brazil",PARAMOUNT CHANNEL
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120715.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="PREMIERE 1" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2CQmSialG6ZFMmnpVE7A3yp8ZWC2gdt72Y53OaYgUhQ_nJTjLnT7LkFykVqjGJ2YNg.png" group-title="Brazil",PREMIERE 1
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120716.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="PREMIERE 2" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2CQmSialG6ZFMmnpVE7A3yovCWcHTtVlnmBgi73W3vNrNLPdop8kFSqSDXCXbhMCVg.png" group-title="Brazil",PREMIERE 2
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120717.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="PREMIERE 3" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2CQmSialG6ZFMmnpVE7A3yqhD96mzCHwwuDgnYXb7W0Wmn9188NN6VPJFF8h2pef9w.png" group-title="Brazil",PREMIERE 3
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120718.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="PREMIERE 4" tvg-logo="" group-title="Brazil",PREMIERE 4
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120719.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="PREMIERE 5" tvg-logo="" group-title="Brazil",PREMIERE 5
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120720.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="PREMIERE 7" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2CQmSialG6ZFMmnpVE7A3ypkV6vUdeuYfTJTTrvl7jcvmLUFpzn-B350LsZzXVudsw.png" group-title="Brazil",PREMIERE 7
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120721.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="PREMIERE 8" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2CQmSialG6ZFMmnpVE7A3yrHBsGRZJVZsG6ihsuR-cpdWVMVgCaNGH_myv-KAyl9rg.png" group-title="Brazil",PREMIERE 8
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120722.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="PREMIERE CLUBES" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2NsZDpbr56w8hOM7fSmuumt7XIuhJ0uQ_6nrxRmgQdoCluN9ikpPprn9OQkG4Dbzzw.png" group-title="Brazil",PREMIERE CLUBES
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120723.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="PRIME BOX BRASIL" tvg-logo="" group-title="Brazil",PRIME BOX BRASIL
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120828.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Play TV" tvg-logo="" group-title="Brazil",Play TV
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120795.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Plena TV" tvg-logo="" group-title="Brazil",Plena TV
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120796.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Premiere Clubes Extra" tvg-logo="" group-title="Brazil",Premiere Clubes Extra
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120829.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="RA TIM BUM" tvg-logo="" group-title="Brazil",RA TIM BUM
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120724.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="RBATV" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2CQmSialG6ZFMmnpVE7A3yrrDJaH2bIsH9BFMY8WYvnpdaJJ9OWh3Q5uBct313MTWg.png" group-title="Brazil",RBATV
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120797.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="RECORD NEWS" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2P5cikx_X-5NLuSijpV3_Zg_XA_pOlqZhg_XEWzwDbXEV7109ARRwmAzz01UO811VA.png" group-title="Brazil",RECORD NEWS
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120726.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="RECORD RJ" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2CQmSialG6ZFMmnpVE7A3ypmGPEfbuWufXOg6REJouU3XEmNjotH8LOJDvhG9_bIHw.png" group-title="Brazil",RECORD RJ
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120727.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="RECORD" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2Dx3ler5TYyYwLOJu-YD78Qm_WxvU5l5L1CQHJ17RmDI1M8Bry08JrYi3IoH-iZqJg.png" group-title="Brazil",RECORD
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120725.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="REDE TV" tvg-logo="" group-title="Brazil",REDE TV
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120733.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="REDE VIDA" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2P5cikx_X-5NLuSijpV3_ZgFFP-6RrztbCZtHs1aoY1EAFD7L0tx374md4YQpvKnlQ.png" group-title="Brazil",REDE VIDA
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120734.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="RPC TV CURITIBA" tvg-logo="" group-title="Brazil",RPC TV CURITIBA
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120735.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="RTL-TVI" tvg-logo="" group-title="Brazil",RTL-TVI
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120736.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Record Nordeste" tvg-logo="" group-title="Brazil",Record Nordeste
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120830.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Record RS" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2Dx3ler5TYyYwLOJu-YD78RWj0VcS2ON0DfbVCz7TAX1emEeFkvYsGc5Lq5_zqGc7Q.png" group-title="Brazil",Record RS
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120728.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Record SP" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2CQmSialG6ZFMmnpVE7A3yoOw9GJs8x3GpMu7nCFgC2ttsSPI5fZu4rSCFDvn1hd2A.png" group-title="Brazil",Record SP
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120729.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="RedBull TV" tvg-logo="" group-title="Brazil",RedBull TV
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120730.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Rede Gospel" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2CQmSialG6ZFMmnpVE7A3yo4eBJQS-hr7eTL24lDOlnJcp2NmoX-6z2d-sBaYrk5hQ.png" group-title="Brazil",Rede Gospel
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120731.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Rede Mão Amiga" tvg-logo="" group-title="Brazil",Rede Mão Amiga
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120732.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="SBT NORDESTE" tvg-logo="" group-title="Brazil",SBT NORDESTE
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120739.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="SBT RJ" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2NsZDpbr56w8hOM7fSmuums2pUfIfIEHw9UdDrTZ25Uuarx_bv7saV03FQyeczb0DA.png" group-title="Brazil",SBT RJ
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120740.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="SBT SP" tvg-logo="" group-title="Brazil",SBT SP
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120831.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="SBT" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2CQmSialG6ZFMmnpVE7A3yrYi_-kWYPl1Kzd-innRahu85R4QuoVsv4vQRur7iFZVA.png" group-title="Brazil",SBT
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120737.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="SONY" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2Dx3ler5TYyYwLOJu-YD78SXCbgAhmBzUIvf4dcPcXShSaVhxznVd0TiqB2q4eB5iA.png" group-title="Brazil",SONY
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120741.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="SPACE" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2CQmSialG6ZFMmnpVE7A3yprT2_BMEJPNh0Sr1LxFhBDSk5iBj6zX0dtwo6c3wnH7Q.png" group-title="Brazil",SPACE
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120742.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="SPORTV 1" tvg-logo="" group-title="Brazil",SPORTV 1
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120743.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="SPORTV 2  [Live During Events Only]" tvg-logo="" group-title="Brazil",SPORTV 2  [Live During Events Only]
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120744.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="SPORTV 2" tvg-logo="" group-title="Brazil",SPORTV 2
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120833.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="SPORTV 3" tvg-logo="" group-title="Brazil",SPORTV 3
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120745.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="SPORTV" tvg-logo="" group-title="Brazil",SPORTV
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120832.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="STAR CHANNEL" tvg-logo="" group-title="Brazil",STAR CHANNEL
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120746.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="STAR LIFE (FOX LIFE)" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2CQmSialG6ZFMmnpVE7A3yrXHNZyPySvinWww5ouNPfngBUSiUCjbUkvGgt38uX18A.png" group-title="Brazil",STAR LIFE (FOX LIFE)
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120628.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="STUDIO UNIVERSAL" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2CQmSialG6ZFMmnpVE7A3yrPuBh03Xfdb48Xzv964VAV4vDYqHarq1GhHWvHlwxr-g.png" group-title="Brazil",STUDIO UNIVERSAL
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120747.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="SYFY" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2CQmSialG6ZFMmnpVE7A3ypoY4nmktG56WE3SARSy8i57m0s8PVnhEd-_V0WfUtfEA.png" group-title="Brazil",SYFY
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120748.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Sbt Cidade Verde" tvg-logo="" group-title="Brazil",Sbt Cidade Verde
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120738.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Star Life" tvg-logo="" group-title="Brazil",Star Life
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120834.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TBS" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2PBRuLsddRY96gtDGyMjRwIwogUo4Rhe963iwKrSTdx5kZdCt3d3BtP2KHHFkow3MA.png" group-title="Brazil",TBS
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120749.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TCM 10" tvg-logo="" group-title="Brazil",TCM 10
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120593.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TCM" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2GwUee_HeV47TzX8gNpnfyB6-amoo_bB94PIAm3fod98NzlzFkX1QADSJgFB7DQyVQ.png" group-title="Brazil",TCM
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120750.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TELE CINE CULT" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2PBRuLsddRY96gtDGyMjRwLAoJXyfD4GGhda6eLySSYBVjWVs2N2--ruckU0cwd-Ew.png" group-title="Brazil",TELE CINE CULT
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120752.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TELECINE ACTION" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2Dx3ler5TYyYwLOJu-YD78TSeFUilfmEfsSD_zydqnVSDvgKAfVBqIQA3wbv0GSGHA.png" group-title="Brazil",TELECINE ACTION
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120751.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TELECINE CULT" tvg-logo="" group-title="Brazil",TELECINE CULT
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120835.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TELECINE FUN" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2Dx3ler5TYyYwLOJu-YD78RlEO8BhxRQDLJJDaTktIMkQ1UShC1Ydmw0-orh90t7AA.png" group-title="Brazil",TELECINE FUN
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120753.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TELECINE PIPOCA" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2Dx3ler5TYyYwLOJu-YD78TN7GVaFf54dm1KD00HZvn2hymV0nCuFPs_zRDQRMAX5g.png" group-title="Brazil",TELECINE PIPOCA
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120754.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TELECINE PREMIUM" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2PncQnjvX0UIbf-mXiFDYhjZeyMvH3JEHsmfXc5U6ICSMphbl2Ysnz8buYSOZy4oVw.png" group-title="Brazil",TELECINE PREMIUM
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120755.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TELECINE TOUCH" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2Dx3ler5TYyYwLOJu-YD78T56-tVc-7qhPa0XS5KkgEdS0Usx8z_ErvmhcY5bHhVqA.png" group-title="Brazil",TELECINE TOUCH
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120756.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TLC" tvg-logo="" group-title="Brazil",TLC
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120836.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TNT SERIES" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2CQmSialG6ZFMmnpVE7A3ypRXDGw-RlHCJZLGiOlu7hD6zEam3ylgniQX623EUIONA.png" group-title="Brazil",TNT SERIES
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120759.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TNT Sports" tvg-logo="" group-title="Brazil",TNT Sports
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120760.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TNT SÃ©ries" tvg-logo="" group-title="Brazil",TNT SÃ©ries
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120837.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TNT" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2CQmSialG6ZFMmnpVE7A3yoaPcbrEhaPi6UqWX-HZUxt6gWnxWcN2r0qT1-yPR-mvw.png" group-title="Brazil",TNT
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120758.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TOONCAST" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2PBRuLsddRY96gtDGyMjRwKEjcvbIPe2-JRoIDm1da60JTF5jquhKvEubTM9ktzRAA.png" group-title="Brazil",TOONCAST
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120763.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TRAVEL CHANNEL" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2CQmSialG6ZFMmnpVE7A3yrlOY5kyt7y1LRdgkBMh1daW0qKnDXKqPVbrsi4eoeZOg.png" group-title="Brazil",TRAVEL CHANNEL
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120764.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TV Aparecida" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2CQmSialG6ZFMmnpVE7A3ypqP8Vhec4La9s2QeaJ5CTAf9kieOZpAsrPLuWW_MckEQ.png" group-title="Brazil",TV Aparecida
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120766.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TV BRASIL" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2I7gRHQqlt2urJ_cA-odHswY_yMdT8AWvzFJRhDVaA0azI-n9hlv9PrXVtOgjV3Trw.png" group-title="Brazil",TV BRASIL
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120767.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TV CULTURA" tvg-logo="" group-title="Brazil",TV CULTURA
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120838.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TV Carioca" tvg-logo="" group-title="Brazil",TV Carioca
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120768.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TV Cultura PA" tvg-logo="" group-title="Brazil",TV Cultura PA
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120769.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TV Cultura PA" tvg-logo="" group-title="Brazil",TV Cultura PA
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120783.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TV CÃMARA" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2Dx3ler5TYyYwLOJu-YD78Qrnik4JKed3RNU4H-J59O_aKpXkwaAODla5bBvSZiTzQ.png" group-title="Brazil",TV CÃMARA
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120770.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TV Destak" tvg-logo="" group-title="Brazil",TV Destak
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120771.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TV ESCOLA" tvg-logo="" group-title="Brazil",TV ESCOLA
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120839.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TV EVANGELIZAR" tvg-logo="" group-title="Brazil",TV EVANGELIZAR
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120773.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TV Educativa de Porto Alegre" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2CQmSialG6ZFMmnpVE7A3ypIyPlL_KuVudCUr0d1k--F6osKQlEIAqqG1loh9lq4zg.png" group-title="Brazil",TV Educativa de Porto Alegre
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120772.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TV Galega Blumenau" tvg-logo="" group-title="Brazil",TV Galega Blumenau
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120649.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TV Gazeta" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2CQmSialG6ZFMmnpVE7A3ypWBnt3FwtImSNQA-Ma56pSpdJAB7Bw8DGpJ-H_GJ4SWQ.png" group-title="Brazil",TV Gazeta
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120774.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TV Maná Moçambique" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2CQmSialG6ZFMmnpVE7A3yrEimqXNFh4uAtF7os6O7Cw31g18TDkxnI-kLXh99hBow.png" group-title="Brazil",TV Maná Moçambique
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120775.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TV PAI ETERNO" tvg-logo="" group-title="Brazil",TV PAI ETERNO
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120776.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TV PARANA TURISMO" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2Dx3ler5TYyYwLOJu-YD78S83nCarzw6U6n4HR_wLtghCrl5y6mGJHzy5q1gGvws1g.png" group-title="Brazil",TV PARANA TURISMO
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120777.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TV Ra Tim Bum" tvg-logo="" group-title="Brazil",TV Ra Tim Bum
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120778.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TV SOL COMUNIDADE" tvg-logo="" group-title="Brazil",TV SOL COMUNIDADE
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120779.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TV Sol Comunidade" tvg-logo="" group-title="Brazil",TV Sol Comunidade
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120780.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TVCINE ACTION" tvg-logo="" group-title="Brazil",TVCINE ACTION
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120840.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TVN Brasil" tvg-logo="" group-title="Brazil",TVN Brasil
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120781.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Tastemade" tvg-logo="" group-title="Brazil",Tastemade
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120798.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Telecine Cult" tvg-logo="" group-title="Brazil",Telecine Cult
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120841.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TerraViva" tvg-logo="" group-title="Brazil",TerraViva
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120757.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Tru TV" tvg-logo="" group-title="Brazil",Tru TV
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120765.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="UNIVERSAL CHANNEL" tvg-logo="" group-title="Brazil",UNIVERSAL CHANNEL
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120782.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="UNIVERSAL TV" tvg-logo="" group-title="Brazil",UNIVERSAL TV
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120842.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="VH1" tvg-logo="" group-title="Brazil",VH1
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120843.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="VIVA" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2NsZDpbr56w8hOM7fSmuumtGTPZ-bG51xZNYd1DG2-D_7Qsy8onRDiPYKF97BpNv0Q.png" group-title="Brazil",VIVA
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120785.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="WARNER CHANNEL" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2CQmSialG6ZFMmnpVE7A3yrIRUzMt92eOT9XEeS0KfwXTohEhIg0Cbv52OXZo8HFNw.png" group-title="Brazil",WARNER CHANNEL
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120786.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="WARNER" tvg-logo="" group-title="Brazil",WARNER
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120844.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="WOOHOO" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2CQmSialG6ZFMmnpVE7A3yp7t3WvonXGB3XJNk10Fif_7cYSVNE51oP9QHkQ-UUcyQ.png" group-title="Brazil",WOOHOO
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120787.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Zoomoo" tvg-logo="http://landiptv.vip:2095/images/HM3xx55KZnCUdlPuNC1k2CQmSialG6ZFMmnpVE7A3yp233OJirPjsQt4btJOZ4y084Kx4Yx_tiOlK3JspXQbhQ.png" group-title="Brazil",Zoomoo
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120788.m3u8
-#EXTINF:-1 tvg-id="TNT.Sports.2.uk" tvg-name="TNT SPORTS 2" tvg-logo="" group-title="Brazil",TNT SPORTS 2
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120761.m3u8
-#EXTINF:-1 tvg-id="TNT.Sports.3.uk" tvg-name="TNT SPORTS 3" tvg-logo="" group-title="Brazil",TNT SPORTS 3
-http://5startv.xyz:8080/live/2055933128/WQbim7hzch/120762.m3u8
+#EXTINF:-1,A&E
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4829.m3u8
+#EXTINF:-1,AMC
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4830.m3u8
+#EXTINF:-1,ANIMAL PLANET
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4831.m3u8
+#EXTINF:-1,AXN
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4832.m3u8
+#EXTINF:-1,BABY
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4833.m3u8
+#EXTINF:-1,BAND NEWS
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4834.m3u8
+#EXTINF:-1,BAND SPORT
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4835.m3u8
+#EXTINF:-1,BOOMERANG
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4836.m3u8
+#EXTINF:-1,CARTOON NETWORK
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4837.m3u8
+#EXTINF:-1,CINEMAX
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4876.m3u8
+#EXTINF:-1,COMBATE
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4838.m3u8
+#EXTINF:-1,COMEDY CENTRAL
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4839.m3u8
+#EXTINF:-1,CONMEBOL 2
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4840.m3u8
+#EXTINF:-1,DISCOVERY CHANNEL
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4841.m3u8
+#EXTINF:-1,DISCOVERY HOME & HEALTH
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4843.m3u8
+#EXTINF:-1,DISCOVERY ID
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4844.m3u8
+#EXTINF:-1,DISCOVERY KIDS
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4845.m3u8
+#EXTINF:-1,DISCOVERY SCIENCE
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4846.m3u8
+#EXTINF:-1,DISCOVERY THEATER
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4847.m3u8
+#EXTINF:-1,DISCOVERY TLC
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4848.m3u8
+#EXTINF:-1,DISCOVERY TURBO
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4849.m3u8
+#EXTINF:-1,DISCOVERY WORLD
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4850.m3u8
+#EXTINF:-1,DISNEY CHANNEL
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4851.m3u8
+#EXTINF:-1,DISNEY JR
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4852.m3u8
+#EXTINF:-1,E!
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4853.m3u8
+#EXTINF:-1,ESPN
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4854.m3u8
+#EXTINF:-1,ESPN 2
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4855.m3u8
+#EXTINF:-1,ESPN4
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4859.m3u8
+#EXTINF:-1,FOOD NETWORK
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4856.m3u8
+#EXTINF:-1,FOX LIFE
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4858.m3u8
+#EXTINF:-1,FOX SPORTS 2
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4860.m3u8
+#EXTINF:-1,FX
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4861.m3u8
+#EXTINF:-1,GLOBO
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4865.m3u8
+#EXTINF:-1,GLOBO EPTV CAMPINAS
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4862.m3u8
+#EXTINF:-1,GLOBO INTERNACIONAL
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4863.m3u8
+#EXTINF:-1,GLOBO NEWS
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4864.m3u8
+#EXTINF:-1,GLOOB
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4866.m3u8
+#EXTINF:-1,GNT
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4867.m3u8
+#EXTINF:-1,H2
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4868.m3u8
+#EXTINF:-1,HBO 1
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4869.m3u8
+#EXTINF:-1,HBO 2
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4870.m3u8
+#EXTINF:-1,HBO FAMILY
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4871.m3u8
+#EXTINF:-1,HBO PLUS
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4872.m3u8
+#EXTINF:-1,HBO SIGNATURE
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4873.m3u8
+#EXTINF:-1,HGTV
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4842.m3u8
+#EXTINF:-1,HISTORY CHANNEL
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4874.m3u8
+#EXTINF:-1,LIFE TIME
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4875.m3u8
+#EXTINF:-1,MEGA PIX
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4877.m3u8
+#EXTINF:-1,MTV
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4878.m3u8
+#EXTINF:-1,MULTI SHOW
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4879.m3u8
+#EXTINF:-1,NAT GEO
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4880.m3u8
+#EXTINF:-1,NAT GEO KIDS
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4881.m3u8
+#EXTINF:-1,NAT GEO WILD
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4882.m3u8
+#EXTINF:-1,NICKELODEON
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4883.m3u8
+#EXTINF:-1,NOVO TEMPO
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4884.m3u8
+#EXTINF:-1,OFF
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4885.m3u8
+#EXTINF:-1,PARAMOUNT CHANNEL
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4886.m3u8
+#EXTINF:-1,PREMIERE 2
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4887.m3u8
+#EXTINF:-1,PREMIERE 3
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4888.m3u8
+#EXTINF:-1,PREMIERE 4
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4889.m3u8
+#EXTINF:-1,PREMIERE 5
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4890.m3u8
+#EXTINF:-1,PREMIERE 6
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4891.m3u8
+#EXTINF:-1,PREMIERE CLUBES
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4892.m3u8
+#EXTINF:-1,RA TIM BUM
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4893.m3u8
+#EXTINF:-1,RECORD
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4894.m3u8
+#EXTINF:-1,RECORD NEWS
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4895.m3u8
+#EXTINF:-1,REDE TV
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4896.m3u8
+#EXTINF:-1,RPC TV CURITIBA
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4897.m3u8
+#EXTINF:-1,Record RJ
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/58729.m3u8
+#EXTINF:-1,Record RS
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/58730.m3u8
+#EXTINF:-1,Record SP
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/58731.m3u8
+#EXTINF:-1,SBT
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4898.m3u8
+#EXTINF:-1,SBT NORDESTE
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4899.m3u8
+#EXTINF:-1,SONY
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4900.m3u8
+#EXTINF:-1,SPACE
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4901.m3u8
+#EXTINF:-1,SPORTV 1
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4902.m3u8
+#EXTINF:-1,SPORTV 2
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4903.m3u8
+#EXTINF:-1,SPORTV 3
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4904.m3u8
+#EXTINF:-1,STAR CHANNEL
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4857.m3u8
+#EXTINF:-1,STUDIO UNIVERSAL
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4905.m3u8
+#EXTINF:-1,SYFY
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4906.m3u8
+#EXTINF:-1,TBS
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4907.m3u8
+#EXTINF:-1,TCM
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4908.m3u8
+#EXTINF:-1,TELE CINE ACTION
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4909.m3u8
+#EXTINF:-1,TELE CINE CULT
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4910.m3u8
+#EXTINF:-1,TELE CINE FUN
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4911.m3u8
+#EXTINF:-1,TELE CINE PIPOCA
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4912.m3u8
+#EXTINF:-1,TELE CINE PREMIUM
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4913.m3u8
+#EXTINF:-1,TELE CINE TOUCH
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4914.m3u8
+#EXTINF:-1,TNT
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4915.m3u8
+#EXTINF:-1,TNT SERIES
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4916.m3u8
+#EXTINF:-1,TOONCAST
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4917.m3u8
+#EXTINF:-1,TV BRASIL
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4918.m3u8
+#EXTINF:-1,TV DIARIO
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4919.m3u8
+#EXTINF:-1,TV EVANGELIZAR
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4920.m3u8
+#EXTINF:-1,UNIVERSAL CHANNEL
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4921.m3u8
+#EXTINF:-1,VIVA
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4922.m3u8
+#EXTINF:-1,WARNER CHANNEL
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4923.m3u8
+#EXTINF:-1,WOOHOO
+http://vipsdef.top:8080/live/VIP01391741845728368/75f58aa2056d/4924.m3u8
