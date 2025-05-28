@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>IPTV PLAYER</title>
+  <title>Carregando Player</title>
   <style>
     html, body {
       height: 100%;
@@ -28,11 +28,17 @@
     .contador {
       font-size: 20px;
       color: #0af;
+      margin-bottom: 15px;
     }
 
-    a {
+    .fallback {
+      font-size: 18px;
+    }
+
+    .fallback a {
       color: #0af;
-      text-decoration: none;
+      text-decoration: underline;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -40,10 +46,13 @@
   <div class="container">
     <div class="mensagem">
       Adicione a lista IPTV nas configurações.<br>
-      Lista: <a href="https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/zteste.m3u" target="_blank">https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/zteste.m3u</a>
+      Lista: <a href="https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/zteste.m3u">https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/zteste.m3u</a>
     </div>
     <div class="contador" id="contador">
       Carregando player em 10 segundos...
+    </div>
+    <div class="fallback">
+      SE O PLAYER NÃO CARREGAR <a href="https://app.ss-iptv.com/">CLIQUE AQUI</a>
     </div>
   </div>
 
