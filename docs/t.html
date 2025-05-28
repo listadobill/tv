@@ -2,38 +2,65 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>IPTV Player</title>
+  <title>Carregando Player</title>
   <style>
     html, body {
-      margin: 0;
-      padding: 0;
       height: 100%;
-    }
-
-    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
       display: flex;
-      flex-direction: column;
-    }
-
-    iframe {
-      flex: 1;
-      border: none;
-    }
-
-    .info {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
       background-color: #000;
       color: #fff;
-      text-align: center;
-      padding: 10px;
-      font-family: Arial, sans-serif;
-      font-size: 14px;
+    }
+
+    .container {
+      max-width: 800px;
+    }
+
+    .mensagem {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .contador {
+      font-size: 20px;
+      color: #0af;
+    }
+
+    a {
+      color: #0af;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <iframe src="https://app.ss-iptv.com/"></iframe>
-  <div class="info">
-    Adicione a lista IPTV nas configurações. Lista: <a href="https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/zteste.m3u" style="color: #0af;" target="_blank">https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/zteste.m3u</a>
+  <div class="container">
+    <div class="mensagem">
+      Adicione a lista IPTV nas configurações.<br>
+      Lista: <a href="https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/zteste.m3u" target="_blank">https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/zteste.m3u</a>
+    </div>
+    <div class="contador" id="contador">
+      Carregando player em 10 segundos...
+    </div>
   </div>
+
+  <script>
+    let segundos = 10;
+    const contador = document.getElementById('contador');
+
+    const intervalo = setInterval(() => {
+      segundos--;
+      if (segundos > 0) {
+        contador.textContent = `Carregando player em ${segundos} segundos...`;
+      } else {
+        clearInterval(intervalo);
+        contador.textContent = "Redirecionando...";
+        window.location.href = "https://app.ss-iptv.com/";
+      }
+    }, 1000);
+  </script>
 </body>
 </html>
