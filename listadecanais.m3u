@@ -1,334 +1,8 @@
 #EXTM3U
-#EXTINF:-1, ATUALIZAÇÃO (28/05/2025 20:31)
+#EXTINF:-1, ATUALIZAÇÃO (23/06/2025 20:31)
 http://1.m3u8
 #EXTINF: group-title="Canais Brasileiros"  tvg-logo="https://i.imgur.com/dWA9y2J.png" ,1001 Noites (720p) [Not 24/7]
 https://cdn.jmvstream.com/w/LVW-8155/ngrp:LVW8155_41E1ciuCvO_all/playlist.m3u8
-#EXTINF: group-title="Canais Brasileiros"  tvg-logo="https://i.imgur.com/IUVRm5L.png" ,24 Horas Internacional [Geo-blocked]
-https://rtvelivestream.akamaized.net/rtvesec/24h/24h_main_dvr.m3u8
-#EXTINF: group-title="Servidor 1"  tvg-name="24H 3 Palavrinhas" tvg-logo="http://appcliente.com:8880/images/1d6568c4d1167a00410efd579474580c.png" ,24H 3 Palavrinhas
-http://mixmil.cyou:80/carlos01/carlos01/2028714
-#EXTINF: group-title="Servidor 1"  tvg-name="24H 44 Gatos" tvg-logo="https://imagizer.imageshack.com/v2/640x480q70/924/sLDGHP.png" ,24H 44 Gatos
-http://mixmil.cyou:80/carlos01/carlos01/2028715
-#EXTINF: group-title="Servidor 1"  tvg-name="24H A Árvore Familiar dos Croods" tvg-logo="https://imagizer.imageshack.com/v2/640x480q70/922/oDn5rU.png" ,24H A Árvore Familiar dos Croods
-http://mixmil.cyou:80/carlos01/carlos01/2028727
-#EXTINF: group-title="Servidor 1"  tvg-name="24H A Casa Magica da Gabby" tvg-logo="https://imagizer.imageshack.com/v2/640x480q70/922/QSAGhR.png" ,24H A Casa Magica da Gabby
-http://mixmil.cyou:80/carlos01/carlos01/2028716
-#EXTINF: group-title="Servidor 1"  tvg-name="24H A Familia Adams" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/922/XNdCuz.png" ,24H A Familia Adams
-http://mixmil.cyou:80/carlos01/carlos01/2028717
-#EXTINF: group-title="Servidor 1"  tvg-name="24H A Formiga e o Tamanduá" tvg-logo="https://imagizer.imageshack.com/v2/640x480q70/923/kNabMF.png" ,24H A Formiga e o Tamanduá
-http://mixmil.cyou:80/carlos01/carlos01/2028718
-#EXTINF: group-title="Servidor 1"  tvg-name="24H A Galinha Pintadinha" tvg-logo="https://imagizer.imageshack.com/v2/1280x1024q90/923/w95jle.png" ,24H A Galinha Pintadinha
-http://mixmil.cyou:80/carlos01/carlos01/2028719
-#EXTINF: group-title="Servidor 1"  tvg-name="24H A Mulher Biônica (Clássico)" tvg-logo="https://imagizer.imageshack.com/v2/640x480q70/923/83Zxeq.png" ,24H A Mulher Biônica (Clássico)
-http://mixmil.cyou:80/carlos01/carlos01/2028720
-#EXTINF: group-title="Servidor 1"  tvg-name="24H A Mulher Maravilha" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/924/GAVyKf.png" ,24H A Mulher Maravilha
-http://mixmil.cyou:80/carlos01/carlos01/2028721
-#EXTINF: group-title="Servidor 1"  tvg-name="24H A Pequena Sereia" tvg-logo="https://imagizer.imageshack.com/img924/5528/NoVrRE.png" ,24H A Pequena Sereia
-http://mixmil.cyou:80/carlos01/carlos01/2028722
-#EXTINF: group-title="Servidor 1"  tvg-name="24H A Turma da Mônica" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/921/tbJ0NA.png" ,24H A Turma da Mônica
-http://mixmil.cyou:80/carlos01/carlos01/2028723
-#EXTINF: group-title="Servidor 1"  tvg-name="24H A Turma do Bairro" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/921/QNLR06.png" ,24H A Turma do Bairro
-http://mixmil.cyou:80/carlos01/carlos01/2028724
-#EXTINF: group-title="Servidor 1"  tvg-name="24H A Turma do Manda-Chuva" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/922/uow6Mh.png" ,24H A Turma do Manda-Chuva
-http://mixmil.cyou:80/carlos01/carlos01/2028725
-#EXTINF: group-title="Servidor 1"  tvg-name="24H A Vaca e o Frango" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/924/9wFrz1.png" ,24H A Vaca e o Frango
-http://mixmil.cyou:80/carlos01/carlos01/2028726
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Aladdin" tvg-logo="https://picfiles.alphacoders.com/712/71289.png" ,24H Aladdin
-http://mixmil.cyou:80/carlos01/carlos01/2028728
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Andy Panda" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/921/fkd2xG.png" ,24H Andy Panda
-http://mixmil.cyou:80/carlos01/carlos01/2028729
-#EXTINF: group-title="Servidor 1"  tvg-name="24H As Aventuras de Jackie Chan" tvg-logo="http://appcliente.com:8880/images/c1666d95c6e82c452ae8207bb384ebcb.png" ,24H As Aventuras de Jackie Chan
-http://mixmil.cyou:80/carlos01/carlos01/2028731
-#EXTINF: group-title="Servidor 1"  tvg-name="24H As Aventuras de Ladybug" tvg-logo="https://imagizer.imageshack.com/v2/150x100q90/923/dDff8P.png" ,24H As Aventuras de Ladybug
-http://mixmil.cyou:80/carlos01/carlos01/2028732
-#EXTINF: group-title="Servidor 1"  tvg-name="24H As Aventuras de Tintim" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/924/7OCsQd.png" ,24H As Aventuras de Tintim
-http://mixmil.cyou:80/carlos01/carlos01/2028733
-#EXTINF: group-title="Servidor 1"  tvg-name="24H As Panteras (Clássico)" tvg-logo="https://imagizer.imageshack.com/v2/640x480q70/923/Amo2qq.png" ,24H As Panteras (Clássico)
-http://mixmil.cyou:80/carlos01/carlos01/2028734
-#EXTINF: group-title="Servidor 1"  tvg-name="24H As Tartarugas Ninja" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/924/YgZwHu.png" ,24H As Tartarugas Ninja
-http://mixmil.cyou:80/carlos01/carlos01/2028735
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Bacamarte e Chumbinho" tvg-logo="https://imagizer.imageshack.com/img922/9797/kME6OB.gif" ,24H Bacamarte e Chumbinho
-http://mixmil.cyou:80/carlos01/carlos01/2028737
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Bakugan" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/923/GwELog.png" ,24H Bakugan
-http://mixmil.cyou:80/carlos01/carlos01/2028738
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Barbie" tvg-logo="https://imagizer.imageshack.com/v2/640x480q70/922/X2fNEQ.png" ,24H Barbie
-http://mixmil.cyou:80/carlos01/carlos01/2028739
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Batfino" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/924/MKPFDU.png" ,24H Batfino
-http://mixmil.cyou:80/carlos01/carlos01/2028740
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Batman Animated Serie" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/924/ikWxSX.png" ,24H Batman Animated Serie
-http://mixmil.cyou:80/carlos01/carlos01/2028741
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Batman do Futuro" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/923/tOpq8k.png" ,24H Batman do Futuro
-http://mixmil.cyou:80/carlos01/carlos01/2028742
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Batman e Robin (Clássico)" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/922/cgTdHe.png" ,24H Batman e Robin (Clássico)
-http://mixmil.cyou:80/carlos01/carlos01/2028743
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Batwheels" tvg-logo="https://imagizer.imageshack.com/v2/320x240q70/922/7ccKwD.png" ,24H Batwheels
-http://mixmil.cyou:80/carlos01/carlos01/2028744
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Ben 10" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/924/4h2FRG.png" ,24H Ben 10
-http://mixmil.cyou:80/carlos01/carlos01/2028745
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Bicudo o Lobisomen" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/922/NVCq8R.png" ,24H Bicudo o Lobisomen
-http://mixmil.cyou:80/carlos01/carlos01/2028746
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Bob Esponja" tvg-logo="https://imagizer.imageshack.com/v2/640x480q90/922/XBs0GS.png" ,24H Bob Esponja
-http://mixmil.cyou:80/carlos01/carlos01/2028747
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Bob Zoom" tvg-logo="https://imagizer.imageshack.com/v2/640x480q90/924/yhOGXx.png" ,24H Bob Zoom
-http://mixmil.cyou:80/carlos01/carlos01/2028748
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Cadilac & Dinossauros" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/922/ZrWQ7s.png" ,24H Cadilac & Dinossauros
-http://mixmil.cyou:80/carlos01/carlos01/2028749
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Capitão Caverna" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/922/IN8Ktl.png" ,24H Capitão Caverna
-http://mixmil.cyou:80/carlos01/carlos01/2028750
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Capitão Harlock" tvg-logo="https://imagizer.imageshack.com/v2/640x480q70/924/AI0jHf.png" ,24H Capitão Harlock
-http://mixmil.cyou:80/carlos01/carlos01/2028751
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Capitão Planeta" tvg-logo="https://imagizer.imageshack.com/img924/9238/NBlvuN.gif" ,24H Capitão Planeta
-http://mixmil.cyou:80/carlos01/carlos01/2028752
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Careta e Mutreta" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/923/9PXliM.png" ,24H Careta e Mutreta
-http://mixmil.cyou:80/carlos01/carlos01/2028753
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Castores Pirados" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/922/if8pF8.png" ,24H Castores Pirados
-http://mixmil.cyou:80/carlos01/carlos01/2028754
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Cavaleiros do Zodiaco" tvg-logo="https://imagizer.imageshack.com/img921/1162/jnF1ZM.png" ,24H Cavaleiros do Zodiaco
-http://mixmil.cyou:80/carlos01/carlos01/2028755
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Cavalo de Fogo" tvg-logo="https://i.pinimg.com/originals/60/96/35/60963558bc1dcc21357ae9eab5f68468.png" ,24H Cavalo de Fogo
-http://mixmil.cyou:80/carlos01/carlos01/2028756
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Caverna do Dragão" tvg-logo="https://imagizer.imageshack.com/v2/640x480q90/922/xjaGR4.png" ,24H Caverna do Dragão
-http://mixmil.cyou:80/carlos01/carlos01/2028757
-#EXTINF: group-title="Servidor 1"  tvg-name="24H CHAVES" tvg-logo="https://files.jpnetwork.com.br/index.php/s/aC2J9RNqw4trgPs/download/CHAVES1.png" ,24H CHAVES
-http://mixmil.cyou:80/carlos01/carlos01/2029128
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Chaves Animado" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/924/10rTPW.png" ,24H Chaves Animado
-http://mixmil.cyou:80/carlos01/carlos01/2028758
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Comandos em Ação" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/922/BHFeNm.png" ,24H Comandos em Ação
-http://mixmil.cyou:80/carlos01/carlos01/2028759
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Comichão e coçadinha" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/922/GOLKXX.png" ,24H Comichão e coçadinha
-http://mixmil.cyou:80/carlos01/carlos01/2028760
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Coragem o Cão Covarde" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/922/Ic3Tar.png" ,24H Coragem o Cão Covarde
-http://mixmil.cyou:80/carlos01/carlos01/2028761
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Coragem o Cão Covarde FHD" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/922/Ic3Tar.png" ,24H Coragem o Cão Covarde FHD
-http://mixmil.cyou:80/carlos01/carlos01/2028875
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Cosmo Warrior Zero" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/923/GoZxs9.png" ,24H Cosmo Warrior Zero
-http://mixmil.cyou:80/carlos01/carlos01/2028762
-#EXTINF: group-title="Servidor 1"  tvg-name="24H De Volta para o Futuro" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/924/WGU85K.png" ,24H De Volta para o Futuro
-http://mixmil.cyou:80/carlos01/carlos01/2028763
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Death" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/924/BH4Zqz.png" ,24H Death
-http://mixmil.cyou:80/carlos01/carlos01/2028764
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Debi & Loide" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/924/qsGTik.png" ,24H Debi & Loide
-http://mixmil.cyou:80/carlos01/carlos01/2028765
-#EXTINF: group-title="Servidor 1"  tvg-name="24H DESENHO 24H" tvg-logo="" ,24H DESENHO 24H
-http://mixmil.cyou:80/carlos01/carlos01/2028766
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Desenhos Biblicos" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/923/Xr04xC.png" ,24H Desenhos Biblicos
-http://mixmil.cyou:80/carlos01/carlos01/2028767
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Desenhos Novo testamento" tvg-logo="" ,24H Desenhos Novo testamento
-http://mixmil.cyou:80/carlos01/carlos01/2028768
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Di-Gata Defenders" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/923/korkeT.png" ,24H Di-Gata Defenders
-http://mixmil.cyou:80/carlos01/carlos01/2028769
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Digimon" tvg-logo="http://appcliente.com:8880/images/df3b932e814b096428caf3e9c04992a2.png" ,24H Digimon
-http://mixmil.cyou:80/carlos01/carlos01/2028770
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Digimon Adventure" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/924/OkLi7v.png" ,24H Digimon Adventure
-http://mixmil.cyou:80/carlos01/carlos01/2028771
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Doug Funnie" tvg-logo="https://imagizer.imageshack.com/v2/640x480q70/924/Jy8DAH.png" ,24H Doug Funnie
-http://mixmil.cyou:80/carlos01/carlos01/2028772
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Dragon Ball Z" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/923/dUaSis.png" ,24H Dragon Ball Z
-http://mixmil.cyou:80/carlos01/carlos01/2028773
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Du Dudu e Edu" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/924/iotwTZ.png" ,24H Du Dudu e Edu
-http://mixmil.cyou:80/carlos01/carlos01/2028774
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Duck Dodges" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/924/G4qUjp.png" ,24H Duck Dodges
-http://mixmil.cyou:80/carlos01/carlos01/2028775
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Ducktales" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/922/vkMF8I.png" ,24H Ducktales
-http://mixmil.cyou:80/carlos01/carlos01/2028776
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Fabulas da Disney" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/922/xuzbns.png" ,24H Fabulas da Disney
-http://mixmil.cyou:80/carlos01/carlos01/2028777
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Falcão Azul e Bionicão" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/924/qcnd8D.png" ,24H Falcão Azul e Bionicão
-http://mixmil.cyou:80/carlos01/carlos01/2028778
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Família Dinossauros" tvg-logo="https://imagizer.imageshack.com/v2/640x480q90/923/uXmXEU.png" ,24H Família Dinossauros
-http://mixmil.cyou:80/carlos01/carlos01/2028779
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Formiga Atômica" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/924/3pJNkj.png" ,24H Formiga Atômica
-http://mixmil.cyou:80/carlos01/carlos01/2028780
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Frango Kung Fu" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/924/1bYhXD.png" ,24H Frango Kung Fu
-http://mixmil.cyou:80/carlos01/carlos01/2028781
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Futurama" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/923/T9y6lM.png" ,24H Futurama
-http://mixmil.cyou:80/carlos01/carlos01/2028782
-#EXTINF: group-title="Servidor 1"  tvg-name="24H G.I Joe Sigma 6" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/923/lMSeyH.png" ,24H G.I Joe Sigma 6
-http://mixmil.cyou:80/carlos01/carlos01/2028783
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Galaxy Rangers" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/923/iBgRWv.png" ,24H Galaxy Rangers
-http://mixmil.cyou:80/carlos01/carlos01/2028784
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Galinha Baby" tvg-logo="https://imagizer.imageshack.com/v2/640x480q70/923/BHvslI.png" ,24H Galinha Baby
-http://mixmil.cyou:80/carlos01/carlos01/2028785
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Garfield" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/922/5YOyCe.png" ,24H Garfield
-http://mixmil.cyou:80/carlos01/carlos01/2028786
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Gasparzinho e seus amigos" tvg-logo="https://imagizer.imageshack.com/img922/7264/v9U7Ta.gif" ,24H Gasparzinho e seus amigos
-http://mixmil.cyou:80/carlos01/carlos01/2028787
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Gato Felix" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/923/UqbOeB.png" ,24H Gato Felix
-http://mixmil.cyou:80/carlos01/carlos01/2028788
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Gormeti" tvg-logo="https://imagizer.imageshack.com/v2/640x480q70/922/1QfUKC.png" ,24H Gormeti
-http://mixmil.cyou:80/carlos01/carlos01/2028789
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Hellsing" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/922/1FSqlr.png" ,24H Hellsing
-http://mixmil.cyou:80/carlos01/carlos01/2028790
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Hey Arnold" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/924/F7Apes.png" ,24H Hey Arnold
-http://mixmil.cyou:80/carlos01/carlos01/2028791
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Homem Aranha" tvg-logo="https://imagizer.imageshack.com/img924/6775/MQcPCr.png" ,24H Homem Aranha
-http://mixmil.cyou:80/carlos01/carlos01/2028792
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Homem de Ferro" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/922/hDsAxW.png" ,24H Homem de Ferro
-http://mixmil.cyou:80/carlos01/carlos01/2028793
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Homem Pássaro" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/924/jV7ro7.png" ,24H Homem Pássaro
-http://mixmil.cyou:80/carlos01/carlos01/2028794
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Hot Wheels Battle Force 5" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/923/R6XbOn.png" ,24H Hot Wheels Battle Force 5
-http://mixmil.cyou:80/carlos01/carlos01/2028795
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Hulk" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/922/gUrzDV.png" ,24H Hulk
-http://mixmil.cyou:80/carlos01/carlos01/2028796
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Invasor Zim" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/922/3aCPlx.png" ,24H Invasor Zim
-http://mixmil.cyou:80/carlos01/carlos01/2028797
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Jonny Quest" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/923/oXObmA.png" ,24H Jonny Quest
-http://mixmil.cyou:80/carlos01/carlos01/2028798
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Josie e as Gatinhas no Espaço" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/923/LGEeZR.png" ,24H Josie e as Gatinhas no Espaço
-http://mixmil.cyou:80/carlos01/carlos01/2028799
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Krypto O Supercão" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/924/GXeULu.png" ,24H Krypto O Supercão
-http://mixmil.cyou:80/carlos01/carlos01/2028800
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Leão da Montanha" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/923/xB4dkQ.png" ,24H Leão da Montanha
-http://mixmil.cyou:80/carlos01/carlos01/2028802
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Legião dos Super Heróis" tvg-logo="https://imagizer.imageshack.com/v2/640x480q70/924/PlN7LP.png" ,24H Legião dos Super Heróis
-http://mixmil.cyou:80/carlos01/carlos01/2028801
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Ligeirinho" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/923/82arbB.png" ,24H Ligeirinho
-http://mixmil.cyou:80/carlos01/carlos01/2028803
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Lilo e Stitch" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/922/Yt3ZIe.png" ,24H Lilo e Stitch
-http://mixmil.cyou:80/carlos01/carlos01/2028804
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Looney Tunes" tvg-logo="https://imagizer.imageshack.com/v2/640x480q70/922/VlnhQA.png" ,24H Looney Tunes
-http://mixmil.cyou:80/carlos01/carlos01/2028805
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Luluzinha" tvg-logo="http://2.bp.blogspot.com/--hbv5tZnx6I/TlkLV2K_sqI/AAAAAAAAF0o/TZsL3fLlngQ/s400/luluzinha.png" ,24H Luluzinha
-http://mixmil.cyou:80/carlos01/carlos01/2028806
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Maguila o Gorila" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/922/TgaAdm.png" ,24H Maguila o Gorila
-http://mixmil.cyou:80/carlos01/carlos01/2028807
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Masha e o Urso" tvg-logo="https://imagizer.imageshack.com/img924/1707/g0Htxb.png" ,24H Masha e o Urso
-http://mixmil.cyou:80/carlos01/carlos01/2028808
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Meu Amigo da Escola e um Macaco" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/922/uuKYZV.png" ,24H Meu Amigo da Escola e um Macaco
-http://mixmil.cyou:80/carlos01/carlos01/2028809
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Mickey e Donald" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/923/Vaehef.png" ,24H Mickey e Donald
-http://mixmil.cyou:80/carlos01/carlos01/2028810
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Mickey Mouse" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/923/xRLBZr.png" ,24H Mickey Mouse
-http://mixmil.cyou:80/carlos01/carlos01/2028811
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Mickey Mouse - Clássico" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/924/RrIc0A.png" ,24H Mickey Mouse - Clássico
-http://mixmil.cyou:80/carlos01/carlos01/2028812
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Mister Magoo" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/922/MpMPrb.png" ,24H Mister Magoo
-http://mixmil.cyou:80/carlos01/carlos01/2028813
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Mortal Kombat" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/924/WEB3bJ.png" ,24H Mortal Kombat
-http://mixmil.cyou:80/carlos01/carlos01/2028814
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Naruto" tvg-logo="https://imgur.com/046zDW4.png" ,24H Naruto
-http://mixmil.cyou:80/carlos01/carlos01/2028815
-#EXTINF: group-title="Servidor 1"  tvg-name="24H O Fantástico Mundo de Bobby" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/924/AX7ijA.png" ,24H O Fantástico Mundo de Bobby
-http://mixmil.cyou:80/carlos01/carlos01/2028816
-#EXTINF: group-title="Servidor 1"  tvg-name="24H O Máskara" tvg-logo="https://imagizer.imageshack.com/v2/150x100q90/924/WUPyfJ.png" ,24H O Máskara
-http://mixmil.cyou:80/carlos01/carlos01/2028817
-#EXTINF: group-title="Servidor 1"  tvg-name="24H O Pirata do Espaço" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/922/i5VSoe.png" ,24H O Pirata do Espaço
-http://mixmil.cyou:80/carlos01/carlos01/2028818
-#EXTINF: group-title="Servidor 1"  tvg-name="24H O Rei do Pedaço" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/922/rBXhe1.png" ,24H O Rei do Pedaço
-http://mixmil.cyou:80/carlos01/carlos01/2028819
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Os Flintstones" tvg-logo="https://imagizer.imageshack.com/v2/280x200q90/922/qZrBpA.png" ,24H Os Flintstones
-http://mixmil.cyou:80/carlos01/carlos01/2028820
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Os Jetsons" tvg-logo="https://imagizer.imageshack.com/v2/280x200q90/923/Zs2XD0.png" ,24H Os Jetsons
-http://mixmil.cyou:80/carlos01/carlos01/2028821
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Os Jovens Titans" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/923/VBMZ98.png" ,24H Os Jovens Titans
-http://mixmil.cyou:80/carlos01/carlos01/2028822
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Os Padrinhos Mágicos" tvg-logo="https://imagizer.imageshack.com/img923/8383/Q8xd4y.png" ,24H Os Padrinhos Mágicos
-http://mixmil.cyou:80/carlos01/carlos01/2028823
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Os Pinguins de Madagascar" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/924/6Xx6Lh.png" ,24H Os Pinguins de Madagascar
-http://mixmil.cyou:80/carlos01/carlos01/2028824
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Os Simpsons" tvg-logo="https://imagizer.imageshack.com/v2/640x480q90/921/R7HHdp.png" ,24H Os Simpsons
-http://mixmil.cyou:80/carlos01/carlos01/2028825
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Os Smurfs" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/922/i5bLF8.png" ,24H Os Smurfs
-http://mixmil.cyou:80/carlos01/carlos01/2028826
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Os Três Patetas" tvg-logo="https://imagizer.imageshack.com/v2/640x480q70/923/P4t7Xv.png" ,24H Os Três Patetas
-http://mixmil.cyou:80/carlos01/carlos01/2028827
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Os Ursinhos Gummi" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/923/1bCiJi.png" ,24H Os Ursinhos Gummi
-http://mixmil.cyou:80/carlos01/carlos01/2028828
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Os Vingadores" tvg-logo="https://imagizer.imageshack.com/img922/9453/6wZGO0.png" ,24H Os Vingadores
-http://mixmil.cyou:80/carlos01/carlos01/2028829
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Pantera Cor de Rosa" tvg-logo="https://4.bp.blogspot.com/-wMxtQXyabR0/VzJGNPP__YI/AAAAAAABLMU/_TFkz1XeDpcc5-EO6jqxbXuxLByX3tqIQCLcB/s1600/pantera-cor-de-rosa-colorir-pintar-imprimir-desenho-imagem-molde-risco-pink-panther-coloring-pages-dibujos-www.espacoeducar-colorir.com%2B%25281%2529.png" ,24H Pantera Cor de Rosa
-http://mixmil.cyou:80/carlos01/carlos01/2028830
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Papa Léguas" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/924/unQUTw.png" ,24H Papa Léguas
-http://mixmil.cyou:80/carlos01/carlos01/2028831
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Patati Patata" tvg-logo="https://imagizer.imageshack.com/img921/9915/tNFkhE.png" ,24H Patati Patata
-http://mixmil.cyou:80/carlos01/carlos01/2028832
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Patrulha Canina" tvg-logo="https://imagizer.imageshack.com/v2/640x480q90/923/ko9inv.png" ,24H Patrulha Canina
-http://mixmil.cyou:80/carlos01/carlos01/2028833
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Pepe Legal" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/923/aGGCSD.png" ,24H Pepe Legal
-http://mixmil.cyou:80/carlos01/carlos01/2028834
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Peppa Pig" tvg-logo="https://imagizer.imageshack.com/v2/640x480q70/923/sFTjbn.png" ,24H Peppa Pig
-http://mixmil.cyou:80/carlos01/carlos01/2028835
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Pernalonga e sua Turma" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/923/EIdbLB.png" ,24H Pernalonga e sua Turma
-http://mixmil.cyou:80/carlos01/carlos01/2028836
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Picolino" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/924/bYguqo.png" ,24H Picolino
-http://mixmil.cyou:80/carlos01/carlos01/2028837
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Pinky e Cérebro" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/923/GOQQ9s.png" ,24H Pinky e Cérebro
-http://mixmil.cyou:80/carlos01/carlos01/2028838
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Pokemon" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/923/gc7cT9.png" ,24H Pokemon
-http://mixmil.cyou:80/carlos01/carlos01/2028839
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Popeye" tvg-logo="https://imagizer.imageshack.com/img924/7897/2Iivjh.png" ,24H Popeye
-http://mixmil.cyou:80/carlos01/carlos01/2028840
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Rabugento" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/923/MWc3uK.png" ,24H Rabugento
-http://mixmil.cyou:80/carlos01/carlos01/2028841
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Recruta Zero e Hagar o Terrível" tvg-logo="https://imagizer.imageshack.com/v2/640x480q70/924/903EM1.png" ,24H Recruta Zero e Hagar o Terrível
-http://mixmil.cyou:80/carlos01/carlos01/2028842
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Riquinho Rico" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/924/LBvJ9w.png" ,24H Riquinho Rico
-http://mixmil.cyou:80/carlos01/carlos01/2028843
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Sabrina - A Bruxinha Adolescente" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/924/HRce4i.png" ,24H Sabrina - A Bruxinha Adolescente
-http://mixmil.cyou:80/carlos01/carlos01/2028844
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Sakura Card Captors" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/924/ZRg2Sd.png" ,24H Sakura Card Captors
-http://mixmil.cyou:80/carlos01/carlos01/2028845
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Samurai Jack" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/922/1z4I4p.png" ,24H Samurai Jack
-http://mixmil.cyou:80/carlos01/carlos01/2028846
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Scooby Doo" tvg-logo="http://imageshack.com/a/img922/7168/9FBTC5.png" ,24H Scooby Doo
-http://mixmil.cyou:80/carlos01/carlos01/2028847
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Shazzan" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/922/df4CNd.png" ,24H Shazzan
-http://mixmil.cyou:80/carlos01/carlos01/2028848
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Shurato" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/922/fHvBrk.png" ,24H Shurato
-http://mixmil.cyou:80/carlos01/carlos01/2028849
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Snoopy" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/923/LtOKv1.png" ,24H Snoopy
-http://mixmil.cyou:80/carlos01/carlos01/2028850
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Sonic-X" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/923/Ukx38F.png" ,24H Sonic-X
-http://mixmil.cyou:80/carlos01/carlos01/2028851
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Space Goofs" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/923/zRzDhy.png" ,24H Space Goofs
-http://mixmil.cyou:80/carlos01/carlos01/2028852
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Speed Racer" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/923/tItxbg.png" ,24H Speed Racer
-http://mixmil.cyou:80/carlos01/carlos01/2028853
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Star Wars - The Clone Wars" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/924/31ePLp.png" ,24H Star Wars - The Clone Wars
-http://mixmil.cyou:80/carlos01/carlos01/2028854
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Street Fighter" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/923/UoZBcq.png" ,24H Street Fighter
-http://mixmil.cyou:80/carlos01/carlos01/2028855
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Super Amigos" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/924/oy7b0w.png" ,24H Super Amigos
-http://mixmil.cyou:80/carlos01/carlos01/2028856
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Super Homem" tvg-logo="https://imagizer.imageshack.com/v2/640x480q70/922/hwwN1U.png" ,24H Super Homem
-http://mixmil.cyou:80/carlos01/carlos01/2028857
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Super Shock" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/923/uZvxoy.png" ,24H Super Shock
-http://mixmil.cyou:80/carlos01/carlos01/2028858
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Surfista Prateado" tvg-logo="https://imagizer.imageshack.com/v2/150x100q90/924/optSlM.png" ,24H Surfista Prateado
-http://mixmil.cyou:80/carlos01/carlos01/2028859
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Tartaruga Touche" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/923/uLraje.png" ,24H Tartaruga Touche
-http://mixmil.cyou:80/carlos01/carlos01/2028860
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Taz Mania" tvg-logo="https://imagizer.imageshack.com/v2/640x480q70/923/Q0stVV.png" ,24H Taz Mania
-http://mixmil.cyou:80/carlos01/carlos01/2028861
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Thundercats" tvg-logo="https://imagizer.imageshack.com/img921/322/sMQof0.png" ,24H Thundercats
-http://mixmil.cyou:80/carlos01/carlos01/2028862
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Tico e Teco" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/924/WZDsMi.png" ,24H Tico e Teco
-http://mixmil.cyou:80/carlos01/carlos01/2028863
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Timão e Pumba" tvg-logo="https://imagizer.imageshack.com/img922/8126/z1Zw6K.gif" ,24H Timão e Pumba
-http://mixmil.cyou:80/carlos01/carlos01/2028864
-#EXTINF: group-title="Servidor 1"  tvg-name="24H TODO MUNDO ODEIA O CHRIS" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/923/HUmzYG.png" ,24H TODO MUNDO ODEIA O CHRIS
-http://mixmil.cyou:80/carlos01/carlos01/2028876
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Tom & Jerry" tvg-logo="https://imagizer.imageshack.com/v2/640x480q90/923/5k2iQk.png" ,24H Tom & Jerry
-http://mixmil.cyou:80/carlos01/carlos01/2028865
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Toro e Pancho" tvg-logo="https://imagizer.imageshack.com/img923/7039/TrGVLD.gif" ,24H Toro e Pancho
-http://mixmil.cyou:80/carlos01/carlos01/2028866
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Transformers" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/923/YXAz95.png" ,24H Transformers
-http://mixmil.cyou:80/carlos01/carlos01/2028867
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Transformers Beast Machines" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/922/iSh7kn.png" ,24H Transformers Beast Machines
-http://mixmil.cyou:80/carlos01/carlos01/2028868
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Tres Espias Demais" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/924/BUn2Dx.png" ,24H Tres Espias Demais
-http://mixmil.cyou:80/carlos01/carlos01/2028869
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Uma Família da Pesada" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/923/fUNMlu.png" ,24H Uma Família da Pesada
-http://mixmil.cyou:80/carlos01/carlos01/2028870
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Ursinho Pooh e Seus Amigos" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/923/LEmdI3.png" ,24H Ursinho Pooh e Seus Amigos
-http://mixmil.cyou:80/carlos01/carlos01/2028871
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Ursinhos Carinhosos" tvg-logo="https://imagizer.imageshack.com/v2/320x240q90/924/ek2223.png" ,24H Ursinhos Carinhosos
-http://mixmil.cyou:80/carlos01/carlos01/2028872
-#EXTINF: group-title="Servidor 1"  tvg-name="24H X-Men" tvg-logo="https://i.pinimg.com/originals/cf/b0/06/cfb006d76a5ff03cb23c08d8831a4ce3.png" ,24H X-Men
-http://mixmil.cyou:80/carlos01/carlos01/2028873
-#EXTINF: group-title="Servidor 1"  tvg-name="24H Zé Buscapé" tvg-logo="https://imagizer.imageshack.com/v2/100x75q90/922/8eC2rw.png" ,24H Zé Buscapé
-http://mixmil.cyou:80/carlos01/carlos01/2028874
 #EXTINF: group-title="Servidor 1"  tvg-name="RADIO ITATIAIA FM 95,7" tvg-logo="" ,RADIO ITATIAIA FM 95,7
 http://mixmil.cyou:80/carlos01/carlos01/380134
 #EXTINF: group-title="Servidor 1"  tvg-name="RADIO JOVEM PAN 101,7" tvg-logo="" ,RADIO JOVEM PAN 101,7
@@ -735,180 +409,8 @@ https://stream1.sersat.com/hls/garagetv.m3u8
 https://stream.ichibantv.com:3764/hybrid/play.m3u8
 #EXTINF: group-title="Canais Brasileiros"  tvg-logo="https://i.imgur.com/ZVO8GVI.png" ,Ghost TV (712p) [Not 24/7]
 https://stmv.video.expressolider.com.br/ghostv/ghostv/playlist.m3u8
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO ALAGOAS" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO ALAGOAS
-http://mixmil.cyou:80/carlos01/carlos01/407910
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO AMAZONAS" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO AMAZONAS
-http://mixmil.cyou:80/carlos01/carlos01/407922
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO ASA BRANCA HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO ASA BRANCA HD
-http://mixmil.cyou:80/carlos01/carlos01/684019
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO BAHIA HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO BAHIA HD
-http://mixmil.cyou:80/carlos01/carlos01/407990
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO BAHIA SD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO BAHIA SD
-http://mixmil.cyou:80/carlos01/carlos01/356671
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO BELEM HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO BELEM HD
-http://mixmil.cyou:80/carlos01/carlos01/356710
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO BRASILIA FHD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO BRASILIA FHD
-http://mixmil.cyou:80/carlos01/carlos01/279889
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO BRASILIA HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO BRASILIA HD
-http://mixmil.cyou:80/carlos01/carlos01/279930
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO BRASILIA SD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO BRASILIA SD
-http://mixmil.cyou:80/carlos01/carlos01/141323
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO CAMPINAS FHD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO CAMPINAS FHD
-http://mixmil.cyou:80/carlos01/carlos01/408221
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO CAMPINAS HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO CAMPINAS HD
-http://mixmil.cyou:80/carlos01/carlos01/356675
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO CAMPINAS SD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO CAMPINAS SD
-http://mixmil.cyou:80/carlos01/carlos01/408222
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO EPTV RIBEIRAO PRETO HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO EPTV RIBEIRAO PRETO HD
-http://mixmil.cyou:80/carlos01/carlos01/356836
-#EXTINF: group-title="Servidor 1"  tvg-name="Globo EPTV SUL DE MINAS FHD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,Globo EPTV SUL DE MINAS FHD
-http://mixmil.cyou:80/carlos01/carlos01/356716
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO EPTV SUL DE MINAS HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO EPTV SUL DE MINAS HD
-http://mixmil.cyou:80/carlos01/carlos01/356717
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO EPTV SUL DE MINAS SD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO EPTV SUL DE MINAS SD
-http://mixmil.cyou:80/carlos01/carlos01/356718
 #EXTINF: group-title="Servidor 1"  tvg-name="GLOBO FLORIANOPOLIS SC" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO FLORIANOPOLIS SC
 http://mixmil.cyou:80/carlos01/carlos01/407920
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO FORTALEZA FHD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO FORTALEZA FHD
-http://mixmil.cyou:80/carlos01/carlos01/336857
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO FORTALEZA HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO FORTALEZA HD
-http://mixmil.cyou:80/carlos01/carlos01/356877
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO GAZETA ES" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO GAZETA ES
-http://mixmil.cyou:80/carlos01/carlos01/407911
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO GOIAS" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO GOIAS
-http://mixmil.cyou:80/carlos01/carlos01/407908
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO INTEGRAÇÃO MG FHD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO INTEGRAÇÃO MG FHD
-http://mixmil.cyou:80/carlos01/carlos01/356793
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO INTEGRAÇÃO MG HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO INTEGRAÇÃO MG HD
-http://mixmil.cyou:80/carlos01/carlos01/356720
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO INTER TV ALTO LITORAL" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO INTER TV ALTO LITORAL
-http://mixmil.cyou:80/carlos01/carlos01/141352
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO JOINVILE HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO JOINVILE HD
-http://mixmil.cyou:80/carlos01/carlos01/408233
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO LITORAL BAURU SP" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO LITORAL BAURU SP
-http://mixmil.cyou:80/carlos01/carlos01/407988
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO LITORAL SANTOS" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO LITORAL SANTOS
-http://mixmil.cyou:80/carlos01/carlos01/407987
-#EXTINF: group-title="Servidor 1"  tvg-name="Globo Londrina HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,Globo Londrina HD
-http://mixmil.cyou:80/carlos01/carlos01/1306907
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO MACEIO" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO MACEIO
-http://mixmil.cyou:80/carlos01/carlos01/407992
-#EXTINF: group-title="Servidor 1"  tvg-name="Globo Maringa FHD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,Globo Maringa FHD
-http://mixmil.cyou:80/carlos01/carlos01/1412771
-#EXTINF: group-title="Servidor 1"  tvg-name="Globo Maringa HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,Globo Maringa HD
-http://mixmil.cyou:80/carlos01/carlos01/1306908
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO MG FHD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO MG FHD
-http://mixmil.cyou:80/carlos01/carlos01/407993
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO MG HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO MG HD
-http://mixmil.cyou:80/carlos01/carlos01/356796
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO MINAS HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO MINAS HD
-http://mixmil.cyou:80/carlos01/carlos01/356802
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO MINAS SD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO MINAS SD
-http://mixmil.cyou:80/carlos01/carlos01/356840
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO MIRANTE" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO MIRANTE
-http://mixmil.cyou:80/carlos01/carlos01/407921
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO MT" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO MT
-http://mixmil.cyou:80/carlos01/carlos01/407923
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO NEWS FHD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/RoWKDDLfpLTcDs3/download/globonews.png" ,GLOBO NEWS FHD
-http://mixmil.cyou:80/carlos01/carlos01/404641
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO NEWS HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/RoWKDDLfpLTcDs3/download/globonews.png" ,GLOBO NEWS HD
-http://mixmil.cyou:80/carlos01/carlos01/404642
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO NORDESTE HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO NORDESTE HD
-http://mixmil.cyou:80/carlos01/carlos01/408225
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO NSC FLORIANOPOLIS SD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO NSC FLORIANOPOLIS SD
-http://mixmil.cyou:80/carlos01/carlos01/356845
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO NSC SANTA CATARINA FHD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO NSC SANTA CATARINA FHD
-http://mixmil.cyou:80/carlos01/carlos01/356737
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO PERNABUCO  HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO PERNABUCO  HD
-http://mixmil.cyou:80/carlos01/carlos01/407997
-#EXTINF: group-title="Servidor 1"  tvg-name="Globo Ponta Grossa HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,Globo Ponta Grossa HD
-http://mixmil.cyou:80/carlos01/carlos01/1378921
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO RBS CAXIAS FHD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO RBS CAXIAS FHD
-http://mixmil.cyou:80/carlos01/carlos01/356742
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO RBS CAXIAS HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO RBS CAXIAS HD
-http://mixmil.cyou:80/carlos01/carlos01/356743
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO RBS PORTO ALEGRE HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO RBS PORTO ALEGRE HD
-http://mixmil.cyou:80/carlos01/carlos01/356847
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO RBS TV PELOTAS FHD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO RBS TV PELOTAS FHD
-http://mixmil.cyou:80/carlos01/carlos01/356687
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO REDE AMAZONICA MANAUS FHD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO REDE AMAZONICA MANAUS FHD
-http://mixmil.cyou:80/carlos01/carlos01/356849
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO REDE AMAZONICA MANAUS HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO REDE AMAZONICA MANAUS HD
-http://mixmil.cyou:80/carlos01/carlos01/356729
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO RIO BRANCO" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO RIO BRANCO
-http://mixmil.cyou:80/carlos01/carlos01/549761
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO RIO BRANCO HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO RIO BRANCO HD
-http://mixmil.cyou:80/carlos01/carlos01/549760
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO RIO GRANDE DO SUL" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO RIO GRANDE DO SUL
-http://mixmil.cyou:80/carlos01/carlos01/549763
-#EXTINF: group-title="Servidor 1"  tvg-name="Globo Rio Sul HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,Globo Rio Sul HD
-http://mixmil.cyou:80/carlos01/carlos01/1387717
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO RJ FHD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO RJ FHD
-http://mixmil.cyou:80/carlos01/carlos01/549768
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO RJ HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO RJ HD
-http://mixmil.cyou:80/carlos01/carlos01/336850
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO RJ SD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO RJ SD
-http://mixmil.cyou:80/carlos01/carlos01/356851
-#EXTINF: group-title="Servidor 1"  tvg-name="Globo RN HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,Globo RN HD
-http://mixmil.cyou:80/carlos01/carlos01/1630603
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO RORAIMA FHD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO RORAIMA FHD
-http://mixmil.cyou:80/carlos01/carlos01/407998
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO RPC" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO RPC
-http://mixmil.cyou:80/carlos01/carlos01/407916
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO RPC CURITIBA FHD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO RPC CURITIBA FHD
-http://mixmil.cyou:80/carlos01/carlos01/356852
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO RPC CURITIBA HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO RPC CURITIBA HD
-http://mixmil.cyou:80/carlos01/carlos01/1412770
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO RPC HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO RPC HD
-http://mixmil.cyou:80/carlos01/carlos01/141336
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO RS HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO RS HD
-http://mixmil.cyou:80/carlos01/carlos01/408229
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO RS SD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO RS SD
-http://mixmil.cyou:80/carlos01/carlos01/408228
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO SANTA CATARINA FHD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO SANTA CATARINA FHD
-http://mixmil.cyou:80/carlos01/carlos01/407994
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO SÃO CARLOS" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO SÃO CARLOS
-http://mixmil.cyou:80/carlos01/carlos01/408224
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO SAO CARLOS HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO SAO CARLOS HD
-http://mixmil.cyou:80/carlos01/carlos01/407999
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO SE FHD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO SE FHD
-http://mixmil.cyou:80/carlos01/carlos01/408231
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO SE HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO SE HD
-http://mixmil.cyou:80/carlos01/carlos01/408232
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO SP FHD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO SP FHD
-http://mixmil.cyou:80/carlos01/carlos01/356694
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO SP HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO SP HD
-http://mixmil.cyou:80/carlos01/carlos01/141338
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO SP SD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO SP SD
-http://mixmil.cyou:80/carlos01/carlos01/141339
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO TV BELEM FHD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO TV BELEM FHD
-http://mixmil.cyou:80/carlos01/carlos01/356774
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO TV CABO BRANCO FHD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO TV CABO BRANCO FHD
-http://mixmil.cyou:80/carlos01/carlos01/408004
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO TV CABO BRANCO HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO TV CABO BRANCO HD
-http://mixmil.cyou:80/carlos01/carlos01/408005
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO TV CABUGI HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO TV CABUGI HD
-http://mixmil.cyou:80/carlos01/carlos01/1824501
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO TV GAZETA ALAGOAS FHD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO TV GAZETA ALAGOAS FHD
-http://mixmil.cyou:80/carlos01/carlos01/356824
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO TV LIBERAL BELEM HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO TV LIBERAL BELEM HD
-http://mixmil.cyou:80/carlos01/carlos01/356869
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO TV MORENA FHD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO TV MORENA FHD
-http://mixmil.cyou:80/carlos01/carlos01/408007
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO TV MORENA HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO TV MORENA HD
-http://mixmil.cyou:80/carlos01/carlos01/408008
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO TV TEM SOROCABA FHD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO TV TEM SOROCABA FHD
-http://mixmil.cyou:80/carlos01/carlos01/356832
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO TV TEM SOROCABA SD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO TV TEM SOROCABA SD
-http://mixmil.cyou:80/carlos01/carlos01/356833
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO TV TRIBUNA SANTOS FHD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO TV TRIBUNA SANTOS FHD
-http://mixmil.cyou:80/carlos01/carlos01/356834
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO VANGUARDA HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO VANGUARDA HD
-http://mixmil.cyou:80/carlos01/carlos01/408002
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO VANGUARDA SD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO VANGUARDA SD
-http://mixmil.cyou:80/carlos01/carlos01/407989
-#EXTINF: group-title="Servidor 1"  tvg-name="GLOBO VERDES MARES HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/cfL3carRDkFXdji/download/globo.png" ,GLOBO VERDES MARES HD
-http://mixmil.cyou:80/carlos01/carlos01/407985
 #EXTINF: group-title="Servidor 1"  tvg-name="GLOOB FHD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/NaXRGLDPkKE2XJZ/download/gloob.png" ,GLOOB FHD
 http://mixmil.cyou:80/carlos01/carlos01/141613
 #EXTINF: group-title="Servidor 1"  tvg-name="GLOOB HD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/NaXRGLDPkKE2XJZ/download/gloob.png" ,GLOOB HD
@@ -1931,3 +1433,1023 @@ http://mixmil.cyou:80/carlos01/carlos01/393238
 http://mixmil.cyou:80/carlos01/carlos01/141625
 #EXTINF: group-title="Servidor 1"  tvg-name="ZOOMOO SD" tvg-logo="https://files.jpnetwork.com.br/index.php/s/FtET63y4iLLf36X/download/zoomoo.png" ,ZOOMOO SD
 http://mixmil.cyou:80/carlos01/carlos01/141626
+
+#EXTINF:-1,BR: A&E FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043721
+#EXTINF:-1,BR: A&E HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043722
+#EXTINF:-1,BR: A&E HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043723
+#EXTINF:-1,BR: A&E SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043724
+#EXTINF:-1,BR: Agro Canal HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043725
+#EXTINF:-1,BR: All Sports HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043726
+#EXTINF:-1,BR: AMC FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043727
+#EXTINF:-1,BR: AMC HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043728
+#EXTINF:-1,BR: AMC SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043729
+#EXTINF:-1,BR: Animal Planet FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043730
+#EXTINF:-1,BR: Animal Planet HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043731
+#EXTINF:-1,BR: Animal Planet HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043732
+#EXTINF:-1,BR: Animal Planet SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043733
+#EXTINF:-1,BR: Aparecida TV
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043734
+#EXTINF:-1,BR: Arte 1 FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043735
+#EXTINF:-1,BR: Arte 1 HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043736
+#EXTINF:-1,BR: Arte 1 SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043737
+#EXTINF:-1,BR: AXN FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043738
+#EXTINF:-1,BR: AXN HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043739
+#EXTINF:-1,BR: AXN HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043740
+#EXTINF:-1,BR: AXN SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043741
+#EXTINF:-1,BR: Baby TV HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043742
+#EXTINF:-1,BR: Baby TV SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043743
+#EXTINF:-1,BR: Band Campinas
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043744
+#EXTINF:-1,BR: Band FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043745
+#EXTINF:-1,BR: Band HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043746
+#EXTINF:-1,BR: Band HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043747
+#EXTINF:-1,BR: Band Minas
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043748
+#EXTINF:-1,BR: Band News FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043749
+#EXTINF:-1,BR: Band News HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043750
+#EXTINF:-1,BR: Band News SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043751
+#EXTINF:-1,BR: Band Parana HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043752
+#EXTINF:-1,BR: Band SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043753
+#EXTINF:-1,BR: Band Sports FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043754
+#EXTINF:-1,BR: Band Sports HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043755
+#EXTINF:-1,BR: Band Sports HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043756
+#EXTINF:-1,BR: Band Sports SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043757
+#EXTINF:-1,BR: BBB Cam 1
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043758
+#EXTINF:-1,BR: BBB Cam 10
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043759
+#EXTINF:-1,BR: BBB Cam 11
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043760
+#EXTINF:-1,BR: BBB Cam 12
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043761
+#EXTINF:-1,BR: BBB Cam 2
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043762
+#EXTINF:-1,BR: BBB Cam 3
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043763
+#EXTINF:-1,BR: BBB Cam 4
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043764
+#EXTINF:-1,BR: BBB Cam 5
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043765
+#EXTINF:-1,BR: BBB Cam 6
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043766
+#EXTINF:-1,BR: BBB Cam 7
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043767
+#EXTINF:-1,BR: BBB Cam 8
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043768
+#EXTINF:-1,BR: BBB Cam 9
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043769
+#EXTINF:-1,BR: BBB Mosaico HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043770
+#EXTINF:-1,BR: BIS FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043771
+#EXTINF:-1,BR: BIS HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043772
+#EXTINF:-1,BR: BIS SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043773
+#EXTINF:-1,BR: Boa Vontade FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043774
+#EXTINF:-1,BR: Boomerang FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043775
+#EXTINF:-1,BR: Boomerang HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043776
+#EXTINF:-1,BR: Boomerang SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043777
+#EXTINF:-1,BR: Campeonato Baiano 1 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043778
+#EXTINF:-1,BR: Campeonato Baiano 2 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043779
+#EXTINF:-1,BR: Campeonato Carioca 1 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043780
+#EXTINF:-1,BR: Campeonato Carioca 2 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043781
+#EXTINF:-1,BR: Campeonato Catarinense 1 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043782
+#EXTINF:-1,BR: Campeonato Catarinense 2 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043783
+#EXTINF:-1,BR: Campeonato Catarinense 3 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043784
+#EXTINF:-1,BR: Campeonato Catarinense 4 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043785
+#EXTINF:-1,BR: Campeonato Sergipano HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043786
+#EXTINF:-1,BR: Canal Brasil FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043787
+#EXTINF:-1,BR: Canal Brasil HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043788
+#EXTINF:-1,BR: Canal Brasil SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043789
+#EXTINF:-1,BR: Canal Rural FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043790
+#EXTINF:-1,BR: Canal Sony FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043791
+#EXTINF:-1,BR: Canal Sony HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043792
+#EXTINF:-1,BR: Canal Sony HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043793
+#EXTINF:-1,BR: Canal Sony SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043794
+#EXTINF:-1,BR: Canção Nova FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043795
+#EXTINF:-1,BR: Cartoon Network FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043796
+#EXTINF:-1,BR: Cartoon Network HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043797
+#EXTINF:-1,BR: Cartoon Network SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043798
+#EXTINF:-1,BR: Chef TV FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043799
+#EXTINF:-1,BR: Chef TV HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043800
+#EXTINF:-1,BR: Chef TV SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043801
+#EXTINF:-1,BR: Cine Sky 1 HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043802
+#EXTINF:-1,BR: Cine Sky 2 HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043803
+#EXTINF:-1,BR: Cine Sky 3 HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043804
+#EXTINF:-1,BR: Cine Sky 4 HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043805
+#EXTINF:-1,BR: Cine Sky 5 HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043806
+#EXTINF:-1,BR: Cine Sky 6 HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043807
+#EXTINF:-1,BR: Cine Sky 7 HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043808
+#EXTINF:-1,BR: Cinemax FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043809
+#EXTINF:-1,BR: Cinemax HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043810
+#EXTINF:-1,BR: Cinemax SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043811
+#EXTINF:-1,BR: CNN Brasil FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043812
+#EXTINF:-1,BR: CNN Brasil HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043813
+#EXTINF:-1,BR: CNN Brasil SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043814
+#EXTINF:-1,BR: CNN Internacional HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043815
+#EXTINF:-1,BR: Combate FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043816
+#EXTINF:-1,BR: Combate HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043817
+#EXTINF:-1,BR: Combate HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043818
+#EXTINF:-1,BR: Combate SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043819
+#EXTINF:-1,BR: Comedy Central FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043820
+#EXTINF:-1,BR: Comedy Central HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043821
+#EXTINF:-1,BR: Comedy Central SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043822
+#EXTINF:-1,BR: Conmebol 1 FHD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043823
+#EXTINF:-1,BR: Conmebol 1 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043824
+#EXTINF:-1,BR: Conmebol 1 HEVC (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043825
+#EXTINF:-1,BR: Conmebol 2 FHD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043826
+#EXTINF:-1,BR: Conmebol 2 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043827
+#EXTINF:-1,BR: Conmebol 3 FHD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043828
+#EXTINF:-1,BR: Conmebol 3 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043829
+#EXTINF:-1,BR: Conmebol 4 FHD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043830
+#EXTINF:-1,BR: Conmebol 4 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043831
+#EXTINF:-1,BR: Copa Libertadores HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043832
+#EXTINF:-1,BR: Copa Nordeste 1 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043833
+#EXTINF:-1,BR: Copa Nordeste 2 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043834
+#EXTINF:-1,BR: Copa Nordeste 3 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043835
+#EXTINF:-1,BR: Curta! FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043836
+#EXTINF:-1,BR: Curta! HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043837
+#EXTINF:-1,BR: Curta! SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043838
+#EXTINF:-1,BR: DAZN 1 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043839
+#EXTINF:-1,BR: DAZN 2 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043840
+#EXTINF:-1,BR: DAZN 3 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043841
+#EXTINF:-1,BR: DAZN 4 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043842
+#EXTINF:-1,BR: Discovery Channel FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043843
+#EXTINF:-1,BR: Discovery Channel HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043844
+#EXTINF:-1,BR: Discovery Channel HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043845
+#EXTINF:-1,BR: Discovery Channel SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043846
+#EXTINF:-1,BR: Discovery H&H FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043847
+#EXTINF:-1,BR: Discovery H&H HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043848
+#EXTINF:-1,BR: Discovery H&H SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043849
+#EXTINF:-1,BR: Discovery Kids FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043850
+#EXTINF:-1,BR: Discovery Kids HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043851
+#EXTINF:-1,BR: Discovery Kids SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043852
+#EXTINF:-1,BR: Discovery Science FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043853
+#EXTINF:-1,BR: Discovery Science HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043854
+#EXTINF:-1,BR: Discovery Science SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043855
+#EXTINF:-1,BR: Discovery Theater FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043856
+#EXTINF:-1,BR: Discovery Theater HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043857
+#EXTINF:-1,BR: Discovery Theater HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043858
+#EXTINF:-1,BR: Discovery Theater Legendado HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043859
+#EXTINF:-1,BR: Discovery Theater SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043860
+#EXTINF:-1,BR: Discovery Turbo FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043861
+#EXTINF:-1,BR: Discovery Turbo HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043862
+#EXTINF:-1,BR: Discovery Turbo SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043863
+#EXTINF:-1,BR: Discovery World FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043864
+#EXTINF:-1,BR: Discovery World HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043865
+#EXTINF:-1,BR: Discovery World SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043866
+#EXTINF:-1,BR: Disney Channel FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043867
+#EXTINF:-1,BR: Disney Channel HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043868
+#EXTINF:-1,BR: Disney Channel HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043869
+#EXTINF:-1,BR: Disney Channel SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043870
+#EXTINF:-1,BR: Dog TV FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043871
+#EXTINF:-1,BR: Dog TV HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043872
+#EXTINF:-1,BR: DW SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043873
+#EXTINF:-1,BR: E! HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043874
+#EXTINF:-1,BR: E! HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043875
+#EXTINF:-1,BR: E! SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043876
+#EXTINF:-1,BR: ESPN 2 FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043877
+#EXTINF:-1,BR: ESPN 2 SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043878
+#EXTINF:-1,BR: ESPN 3 HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043879
+#EXTINF:-1,BR: ESPN 4 FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043880
+#EXTINF:-1,BR: ESPN 4 HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043881
+#EXTINF:-1,BR: ESPN 4 HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043882
+#EXTINF:-1,BR: ESPN 4 SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043883
+#EXTINF:-1,BR: ESPN Brasil FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043884
+#EXTINF:-1,BR: ESPN Brasil HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043885
+#EXTINF:-1,BR: ESPN Brasil HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043886
+#EXTINF:-1,BR: ESPN Brasil SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043887
+#EXTINF:-1,BR: ESPN Extra FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043888
+#EXTINF:-1,BR: ESPN Extra HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043889
+#EXTINF:-1,BR: ESPN Extra SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043890
+#EXTINF:-1,BR: ESPN FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043891
+#EXTINF:-1,BR: ESPN HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043892
+#EXTINF:-1,BR: ESPN HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043893
+#EXTINF:-1,BR: ESPN SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043894
+#EXTINF:-1,BR: Estadio TNT Sports FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043895
+#EXTINF:-1,BR: Estadio TNT Sports HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043896
+#EXTINF:-1,BR: Estádio TNT 01 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043897
+#EXTINF:-1,BR: Estádio TNT 02 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043898
+#EXTINF:-1,BR: Estádio TNT 03 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043899
+#EXTINF:-1,BR: Estádio TNT 04 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043900
+#EXTINF:-1,BR: Estádio TNT 05 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043901
+#EXTINF:-1,BR: Estádio TNT 06 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043902
+#EXTINF:-1,BR: Eurochannel HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043903
+#EXTINF:-1,BR: Fashion Box
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043904
+#EXTINF:-1,BR: Fashion TV HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043905
+#EXTINF:-1,BR: Fazenda TV HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043906
+#EXTINF:-1,BR: Film & Arts HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043907
+#EXTINF:-1,BR: Fish TV FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043908
+#EXTINF:-1,BR: Fish TV HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043909
+#EXTINF:-1,BR: Fish TV SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043910
+#EXTINF:-1,BR: Food Network FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043911
+#EXTINF:-1,BR: Food Network HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043912
+#EXTINF:-1,BR: Food Network SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043913
+#EXTINF:-1,BR: Fox Sports 2 FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043914
+#EXTINF:-1,BR: Fox Sports 2 HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043915
+#EXTINF:-1,BR: Fox Sports 2 HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043916
+#EXTINF:-1,BR: Fox Sports 2 SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043917
+#EXTINF:-1,BR: Furg TV
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043918
+#EXTINF:-1,BR: Futura FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043919
+#EXTINF:-1,BR: Futura SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043920
+#EXTINF:-1,BR: FX FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043921
+#EXTINF:-1,BR: FX HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043922
+#EXTINF:-1,BR: FX HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043923
+#EXTINF:-1,BR: FX SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043924
+#EXTINF:-1,BR: Globo NSC Chapeco FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043972
+#EXTINF:-1,BR: Globo NSC Joinville FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043973
+#EXTINF:-1,BR: Globo NSC Joinville HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043974
+#EXTINF:-1,BR: Globo NSC Joinville SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1043975
+#EXTINF:-1,BR: Globo RBS TV Criciuma FHD
+#EXTINF:-1,BR: Globo SP FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044009
+#EXTINF:-1,BR: Globo SP HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044010
+#EXTINF:-1,BR: Globo SP HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044011
+#EXTINF:-1,BR: Globo SP SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044012
+#EXTINF:-1,BR: Gloob FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044064
+#EXTINF:-1,BR: Gloob HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044065
+#EXTINF:-1,BR: Gloob SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044066
+#EXTINF:-1,BR: Gloobinho HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044067
+#EXTINF:-1,BR: Gloobinho SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044068
+#EXTINF:-1,BR: GNT FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044069
+#EXTINF:-1,BR: GNT HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044070
+#EXTINF:-1,BR: GNT HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044071
+#EXTINF:-1,BR: GNT SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044072
+#EXTINF:-1,BR: H2 FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044073
+#EXTINF:-1,BR: H2 HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044074
+#EXTINF:-1,BR: H2 SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044075
+#EXTINF:-1,BR: HBO 2 FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044076
+#EXTINF:-1,BR: HBO 2 HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044077
+#EXTINF:-1,BR: HBO 2 SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044078
+#EXTINF:-1,BR: HBO Family FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044079
+#EXTINF:-1,BR: HBO Family HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044080
+#EXTINF:-1,BR: HBO Family HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044081
+#EXTINF:-1,BR: HBO Family SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044082
+#EXTINF:-1,BR: HBO FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044083
+#EXTINF:-1,BR: HBO FHD Dual Audio
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044084
+#EXTINF:-1,BR: HBO HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044085
+#EXTINF:-1,BR: HBO HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044086
+#EXTINF:-1,BR: HBO Max Champions League 1 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044087
+#EXTINF:-1,BR: HBO Max Champions League 2 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044088
+#EXTINF:-1,BR: HBO Max Champions League 3 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044089
+#EXTINF:-1,BR: HBO Max Champions League 4 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044090
+#EXTINF:-1,BR: HBO Max Champions League 5 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044091
+#EXTINF:-1,BR: HBO Mundi FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044092
+#EXTINF:-1,BR: HBO Mundi HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044093
+#EXTINF:-1,BR: HBO Mundi HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044094
+#EXTINF:-1,BR: HBO Mundi SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044095
+#EXTINF:-1,BR: HBO Pop FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044096
+#EXTINF:-1,BR: HBO Pop HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044097
+#EXTINF:-1,BR: HBO Pop SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044098
+#EXTINF:-1,BR: HBO SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044099
+#EXTINF:-1,BR: HBO Signature FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044100
+#EXTINF:-1,BR: HBO Signature HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044101
+#EXTINF:-1,BR: HBO Signature HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044102
+#EXTINF:-1,BR: HBO Signature SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044103
+#EXTINF:-1,BR: HBO Xtreme FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044104
+#EXTINF:-1,BR: HBO Xtreme HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044105
+#EXTINF:-1,BR: HBO Xtreme HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044106
+#EXTINF:-1,BR: HBO Xtreme SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044107
+#EXTINF:-1,BR: HBO+ FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044108
+#EXTINF:-1,BR: HBO+ HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044109
+#EXTINF:-1,BR: HBO+ HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044110
+#EXTINF:-1,BR: HBO+ SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044111
+#EXTINF:-1,BR: HGTV FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044112
+#EXTINF:-1,BR: HGTV HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044113
+#EXTINF:-1,BR: History FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044114
+#EXTINF:-1,BR: History HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044115
+#EXTINF:-1,BR: History SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044116
+#EXTINF:-1,BR: ID Investigação Discovery FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044117
+#EXTINF:-1,BR: ID Investigação Discovery HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044118
+#EXTINF:-1,BR: ID Investigação Discovery SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044119
+#EXTINF:-1,BR: Jovem Pan News HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044120
+#EXTINF:-1,BR: Lifetime FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044121
+#EXTINF:-1,BR: Lifetime HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044122
+#EXTINF:-1,BR: Lifetime HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044123
+#EXTINF:-1,BR: Lifetime SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044124
+#EXTINF:-1,BR: Mais na Tela FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044125
+#EXTINF:-1,BR: Mais na Tela HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044126
+#EXTINF:-1,BR: Mais na Tela HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044127
+#EXTINF:-1,BR: Mais na Tela SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044128
+#EXTINF:-1,BR: Megapix FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044129
+#EXTINF:-1,BR: Megapix HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044130
+#EXTINF:-1,BR: Megapix HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044131
+#EXTINF:-1,BR: Megapix SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044132
+#EXTINF:-1,BR: Miami TV HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044133
+#EXTINF:-1,BR: MTV 00s SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044134
+#EXTINF:-1,BR: MTV FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044135
+#EXTINF:-1,BR: MTV HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044136
+#EXTINF:-1,BR: MTV HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044137
+#EXTINF:-1,BR: MTV Live HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044138
+#EXTINF:-1,BR: MTV Live SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044139
+#EXTINF:-1,BR: MTV SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044140
+#EXTINF:-1,BR: Multishow FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044141
+#EXTINF:-1,BR: Multishow HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044142
+#EXTINF:-1,BR: Multishow HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044143
+#EXTINF:-1,BR: Multishow SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044144
+#EXTINF:-1,BR: Music Box FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044145
+#EXTINF:-1,BR: Music Box SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044146
+#EXTINF:-1,BR: National Geographic FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044147
+#EXTINF:-1,BR: National Geographic HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044148
+#EXTINF:-1,BR: National Geographic HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044149
+#EXTINF:-1,BR: National Geographic SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044150
+#EXTINF:-1,BR: NHK World HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044151
+#EXTINF:-1,BR: NHK World SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044152
+#EXTINF:-1,BR: Nick Jr FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044153
+#EXTINF:-1,BR: Nick Jr HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044154
+#EXTINF:-1,BR: Nick Jr HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044155
+#EXTINF:-1,BR: Nick Jr SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044156
+#EXTINF:-1,BR: Nickelodeon FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044157
+#EXTINF:-1,BR: Nickelodeon HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044158
+#EXTINF:-1,BR: Nickelodeon SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044159
+#EXTINF:-1,BR: Novo Tempo HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044160
+#EXTINF:-1,BR: Novo Tempo SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044161
+#EXTINF:-1,BR: OFF FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044162
+#EXTINF:-1,BR: OFF HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044163
+#EXTINF:-1,BR: OFF HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044164
+#EXTINF:-1,BR: OFF SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044165
+#EXTINF:-1,BR: Paramount FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044166
+#EXTINF:-1,BR: Paramount HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044167
+#EXTINF:-1,BR: Paramount HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044168
+#EXTINF:-1,BR: Paramount SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044169
+#EXTINF:-1,BR: PFC Internacional SD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044170
+#EXTINF:-1,BR: Play TV SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044171
+#EXTINF:-1,BR: Playboy FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044172
+#EXTINF:-1,BR: Playboy HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044173
+#EXTINF:-1,BR: Playboy SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044174
+#EXTINF:-1,BR: Polishop SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044175
+#EXTINF:-1,BR: Premiere 2 FHD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044176
+#EXTINF:-1,BR: Premiere 2 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044177
+#EXTINF:-1,BR: Premiere 2 SD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044178
+#EXTINF:-1,BR: Premiere 3 FHD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044179
+#EXTINF:-1,BR: Premiere 3 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044180
+#EXTINF:-1,BR: Premiere 3 SD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044181
+#EXTINF:-1,BR: Premiere 4 FHD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044182
+#EXTINF:-1,BR: Premiere 4 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044183
+#EXTINF:-1,BR: Premiere 4 SD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044184
+#EXTINF:-1,BR: Premiere 5 FHD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044185
+#EXTINF:-1,BR: Premiere 5 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044186
+#EXTINF:-1,BR: Premiere 5 SD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044187
+#EXTINF:-1,BR: Premiere 6 FHD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044188
+#EXTINF:-1,BR: Premiere 6 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044189
+#EXTINF:-1,BR: Premiere 6 SD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044190
+#EXTINF:-1,BR: Premiere 7 FHD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044191
+#EXTINF:-1,BR: Premiere 7 SD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044192
+#EXTINF:-1,BR: Premiere 8 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044193
+#EXTINF:-1,BR: Premiere 8 HD (Event Only)
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044194
+#EXTINF:-1,BR: Premiere FC FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044195
+#EXTINF:-1,BR: Premiere FC HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044196
+#EXTINF:-1,BR: Premiere FC HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044197
+#EXTINF:-1,BR: Premiere FC SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044198
+#EXTINF:-1,BR: Prime Box FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044199
+#EXTINF:-1,BR: Prime Box HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044200
+#EXTINF:-1,BR: Prime Box SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044201
+#EXTINF:-1,BR: RAI Italia HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044202
+#EXTINF:-1,BR: Record MG HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044203
+#EXTINF:-1,BR: Record News FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044204
+#EXTINF:-1,BR: Record News HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044205
+#EXTINF:-1,BR: Record News SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044206
+#EXTINF:-1,BR: Record Parana HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044207
+#EXTINF:-1,BR: Record RJ HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044208
+#EXTINF:-1,BR: Record SP HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044209
+#EXTINF:-1,BR: Record SP SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044210
+#EXTINF:-1,BR: Record TV HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044211
+#EXTINF:-1,BR: Record TV SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044212
+#EXTINF:-1,BR: Red Bull TV HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044213
+#EXTINF:-1,BR: Rede Gospel FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044214
+#EXTINF:-1,BR: Rede Gospel HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044215
+#EXTINF:-1,BR: Rede Minas FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044216
+#EXTINF:-1,BR: Rede TV FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044217
+#EXTINF:-1,BR: Rede TV HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044218
+#EXTINF:-1,BR: Rede TV SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044219
+#EXTINF:-1,BR: Rede Vida HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044220
+#EXTINF:-1,BR: RIT FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044221
+#EXTINF:-1,BR: Sabor & Arte FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044222
+#EXTINF:-1,BR: Sabor & Arte HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044223
+#EXTINF:-1,BR: Sabor & Arte HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044224
+#EXTINF:-1,BR: Santa Cecilia TV HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044225
+#EXTINF:-1,BR: SBN HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044226
+#EXTINF:-1,BR: SBT HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044227
+#EXTINF:-1,BR: SBT Parana HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044228
+#EXTINF:-1,BR: SBT RJ HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044229
+#EXTINF:-1,BR: SBT SP HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044230
+#EXTINF:-1,BR: SBT SP SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044231
+#EXTINF:-1,BR: Sextreme HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044232
+#EXTINF:-1,BR: Sextreme SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044233
+#EXTINF:-1,BR: Sexy Hot FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044234
+#EXTINF:-1,BR: Sexy Hot HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044235
+#EXTINF:-1,BR: Sexy Hot SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044236
+#EXTINF:-1,BR: Shop Time HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044237
+#EXTINF:-1,BR: Shop Time HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044238
+#EXTINF:-1,BR: SIC Internacional HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044239
+#EXTINF:-1,BR: Smithsonian FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044240
+#EXTINF:-1,BR: Smithsonian HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044241
+#EXTINF:-1,BR: Space FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044242
+#EXTINF:-1,BR: Space HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044243
+#EXTINF:-1,BR: Space HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044244
+#EXTINF:-1,BR: Space SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044245
+#EXTINF:-1,BR: SporTV 2 FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044246
+#EXTINF:-1,BR: SporTV 2 HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044247
+#EXTINF:-1,BR: SporTV 2 HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044248
+#EXTINF:-1,BR: SporTV 2 SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044249
+#EXTINF:-1,BR: SporTV 3 FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044250
+#EXTINF:-1,BR: SporTV 3 HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044251
+#EXTINF:-1,BR: SporTV 3 HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044252
+#EXTINF:-1,BR: SporTV 3 SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044253
+#EXTINF:-1,BR: SporTV 4 HD***
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044254
+#EXTINF:-1,BR: SporTV FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044255
+#EXTINF:-1,BR: SporTV HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044256
+#EXTINF:-1,BR: SporTV HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044257
+#EXTINF:-1,BR: SporTV SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044258
+#EXTINF:-1,BR: Star Channel FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044259
+#EXTINF:-1,BR: Star Channel HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044260
+#EXTINF:-1,BR: Star Channel SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044261
+#EXTINF:-1,BR: Star Hits 2 SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044262
+#EXTINF:-1,BR: Star Hits HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044263
+#EXTINF:-1,BR: Star Hits SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044264
+#EXTINF:-1,BR: Star Life FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044265
+#EXTINF:-1,BR: Star Life HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044266
+#EXTINF:-1,BR: Star Life HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044267
+#EXTINF:-1,BR: Star Life SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044268
+#EXTINF:-1,BR: Studio Universal FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044269
+#EXTINF:-1,BR: Studio Universal HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044270
+#EXTINF:-1,BR: Studio Universal HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044271
+#EXTINF:-1,BR: Studio Universal SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044272
+#EXTINF:-1,BR: SyFy FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044273
+#EXTINF:-1,BR: SyFy HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044274
+#EXTINF:-1,BR: SyFy HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044275
+#EXTINF:-1,BR: SyFy SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044276
+#EXTINF:-1,BR: TBS FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044277
+#EXTINF:-1,BR: TBS SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044278
+#EXTINF:-1,BR: TCM HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044279
+#EXTINF:-1,BR: TCM SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044280
+#EXTINF:-1,BR: Telecine Action FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044281
+#EXTINF:-1,BR: Telecine Action HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044282
+#EXTINF:-1,BR: Telecine Action HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044283
+#EXTINF:-1,BR: Telecine Action SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044284
+#EXTINF:-1,BR: Telecine Cult FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044285
+#EXTINF:-1,BR: Telecine Cult HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044286
+#EXTINF:-1,BR: Telecine Cult HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044287
+#EXTINF:-1,BR: Telecine Cult SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044288
+#EXTINF:-1,BR: Telecine Fun FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044289
+#EXTINF:-1,BR: Telecine Fun HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044290
+#EXTINF:-1,BR: Telecine Fun HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044291
+#EXTINF:-1,BR: Telecine Fun SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044292
+#EXTINF:-1,BR: Telecine Pipoca FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044293
+#EXTINF:-1,BR: Telecine Pipoca HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044294
+#EXTINF:-1,BR: Telecine Pipoca HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044295
+#EXTINF:-1,BR: Telecine Pipoca SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044296
+#EXTINF:-1,BR: Telecine Premium FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044297
+#EXTINF:-1,BR: Telecine Premium HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044298
+#EXTINF:-1,BR: Telecine Premium HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044299
+#EXTINF:-1,BR: Telecine Premium SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044300
+#EXTINF:-1,BR: Telecine Touch FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044301
+#EXTINF:-1,BR: Telecine Touch HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044302
+#EXTINF:-1,BR: Telecine Touch HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044303
+#EXTINF:-1,BR: Telecine Touch SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044304
+#EXTINF:-1,BR: TLC FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044305
+#EXTINF:-1,BR: TLC HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044306
+#EXTINF:-1,BR: TLC HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044307
+#EXTINF:-1,BR: TLC SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044308
+#EXTINF:-1,BR: TNT FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044309
+#EXTINF:-1,BR: TNT HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044310
+#EXTINF:-1,BR: TNT HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044311
+#EXTINF:-1,BR: TNT Novelas HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044312
+#EXTINF:-1,BR: TNT SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044313
+#EXTINF:-1,BR: TNT Séries FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044314
+#EXTINF:-1,BR: TNT Séries HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044315
+#EXTINF:-1,BR: TNT Séries HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044316
+#EXTINF:-1,BR: TNT Séries SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044317
+#EXTINF:-1,BR: Tooncast HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044318
+#EXTINF:-1,BR: Tooncast SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044319
+#EXTINF:-1,BR: Trace Brazuca FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044320
+#EXTINF:-1,BR: Travel Box HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044321
+#EXTINF:-1,BR: TruTV FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044322
+#EXTINF:-1,BR: TruTV HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044323
+#EXTINF:-1,BR: TruTV SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044324
+#EXTINF:-1,BR: TV Brasil 2 FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044325
+#EXTINF:-1,BR: TV Brasil FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044326
+#EXTINF:-1,BR: TV Camara SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044327
+#EXTINF:-1,BR: TV Cinec SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044328
+#EXTINF:-1,BR: TV Cultura FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044329
+#EXTINF:-1,BR: TV Cultura HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044330
+#EXTINF:-1,BR: TV Cultura SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044331
+#EXTINF:-1,BR: TV Diario FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044332
+#EXTINF:-1,BR: TV Justiça SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044333
+#EXTINF:-1,BR: TV Max Rio HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044334
+#EXTINF:-1,BR: TV Pampa HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044335
+#EXTINF:-1,BR: TV Rá-Tim-Bum FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044336
+#EXTINF:-1,BR: TV Rá-Tim-Bum HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044337
+#EXTINF:-1,BR: TV Rá-Tim-Bum SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044338
+#EXTINF:-1,BR: TV Senado SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044339
+#EXTINF:-1,BR: Universal TV FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044340
+#EXTINF:-1,BR: Universal TV HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044341
+#EXTINF:-1,BR: Universal TV HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044342
+#EXTINF:-1,BR: Universal TV SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044343
+#EXTINF:-1,BR: Venus FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044344
+#EXTINF:-1,BR: Venus HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044345
+#EXTINF:-1,BR: Venus SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044346
+#EXTINF:-1,BR: Viva FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044347
+#EXTINF:-1,BR: Viva HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044348
+#EXTINF:-1,BR: Viva SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044349
+#EXTINF:-1,BR: Warner TV FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044350
+#EXTINF:-1,BR: Warner TV HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044351
+#EXTINF:-1,BR: Warner TV HEVC
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044352
+#EXTINF:-1,BR: Warner TV SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044353
+#EXTINF:-1,BR: Woohoo FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044354
+#EXTINF:-1,BR: Woohoo HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044355
+#EXTINF:-1,BR: Woohoo SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044356
+#EXTINF:-1,BR: Yeeaah! HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044357
+#EXTINF:-1,BR: Zoomoo FHD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044358
+#EXTINF:-1,BR: Zoomoo HD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044359
+#EXTINF:-1,BR: Zoomoo SD
+http://91.239.79.63:8080/rossinc2323@gmail.com/8408378406/1044360
