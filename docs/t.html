@@ -2,74 +2,80 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Carregando Player</title>
+  <title>IPTV Player Web</title>
   <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background-color: #000;
-      color: #fff;
-    }
-
-    .container {
-      max-width: 800px;
-    }
-
-    .mensagem {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-
-    .contador {
-      font-size: 20px;
-      color: #0af;
-      margin-bottom: 15px;
-    }
-
-    .fallback {
-      font-size: 18px;
-    }
-
-    .fallback a {
-      color: #0af;
-      text-decoration: underline;
-      font-weight: bold;
-    }
+    body { font-family: sans-serif; margin: 0; display: flex; height: 100vh; }
+    #sidebar { width: 300px; background: #111; color: #fff; overflow-y: auto; padding: 10px; }
+    #player { flex: 1; background: #000; display: flex; flex-direction: column; }
+    video { width: 100%; height: 100%; background: #000; }
+    .channel { padding: 8px; border-bottom: 1px solid #333; cursor: pointer; }
+    .channel:hover { background: #222; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="mensagem">
-      Adicione a lista IPTV nas configurações.<br>
-      Lista: <a href="https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/zteste.m3u">https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/zteste.m3u</a>
-    </div>
-    <div class="contador" id="contador">
-      Carregando player em 10 segundos...
-    </div>
-    <div class="fallback">
-      SE O PLAYER NÃO CARREGAR <a href="https://app.ss-iptv.com/">CLIQUE AQUI</a>
-    </div>
+  <div id="sidebar">
+    <h3>📺 IPTV Player</h3>
+    <p>Lista carregada automaticamente</p>
+    <div id="channelList">Carregando canais...</div>
+  </div>
+  <div id="player">
+    <video id="video" controls autoplay></video>
   </div>
 
   <script>
-    let segundos = 10;
-    const contador = document.getElementById('contador');
+    const M3U_URL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/zteste.m3u";
+    const channelList = document.getElementById('channelList');
+    const video = document.getElementById('video');
 
-    const intervalo = setInterval(() => {
-      segundos--;
-      if (segundos > 0) {
-        contador.textContent = `Carregando player em ${segundos} segundos...`;
-      } else {
-        clearInterval(intervalo);
-        contador.textContent = "Redirecionando...";
-        window.location.href = "https://app.ss-iptv.com/";
+    fetch(M3U_URL)
+      .then(res => {
+        if (!res.ok) throw new Error("Erro ao carregar lista M3U");
+        return res.text();
+      })
+      .then(parseM3U)
+      .catch(err => {
+        channelList.innerHTML = "<p style='color: red;'>Falha ao carregar lista M3U</p>";
+        console.error(err);
+      });
+
+    function parseM3U(text) {
+      const lines = text.split('\n');
+      let channels = [];
+      let current = {};
+
+      lines.forEach(line => {
+        line = line.trim();
+        if (line.startsWith('#EXTINF')) {
+          const nameMatch = line.match(/,(.*)$/);
+          current.name = nameMatch ? nameMatch[1] : 'Sem nome';
+        } else if (line && !line.startsWith('#')) {
+          current.url = line;
+          channels.push({ ...current });
+          current = {};
+        }
+      });
+
+      renderChannelList(channels);
+    }
+
+    function renderChannelList(channels) {
+      channelList.innerHTML = '';
+      channels.forEach(channel => {
+        const div = document.createElement('div');
+        div.className = 'channel';
+        div.textContent = channel.name;
+        div.onclick = () => {
+          video.src = channel.url;
+          video.play();
+        };
+        channelList.appendChild(div);
+      });
+
+      if (channels.length > 0) {
+        video.src = channels[0].url;
+        video.play();
       }
-    }, 1000);
+    }
   </script>
 </body>
 </html>
