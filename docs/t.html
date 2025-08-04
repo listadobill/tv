@@ -193,44 +193,6 @@
                 responsive: true,
             });
 
-            // Função de reconexão robusta - tenta reconectar instantaneamente em qualquer interrupção
-            function reconectar(url) {
-                // Flag para evitar loops infinitos de reconexão simultânea
-                let isReconnecting = false;
-
-                function tentarReconectar() {
-                    if (isReconnecting) return;
-                    isReconnecting = true;
-                    video.src({ type: "application/x-mpegURL", src: url });
-                    video.play().catch(() => {});
-                    // Resetar flag após 1s para permitir nova tentativa se necessário
-                    setTimeout(() => {
-                        isReconnecting = false;
-                    }, 1000);
-                }
-
-                // Desliga event listeners anteriores para evitar múltiplas chamadas
-                video.off("error");
-                video.off("stalled");
-                video.off("waiting");
-                video.off("pause");
-                video.off("ended");
-
-                // Eventos que indicam interrupção do fluxo
-                video.on("error", tentarReconectar);
-                video.on("stalled", tentarReconectar);
-                video.on("waiting", tentarReconectar);
-                video.on("pause", () => {
-                    if (!video.ended()) {
-                        tentarReconectar();
-                    }
-                });
-                video.on("ended", tentarReconectar);
-
-                // Inicia o vídeo na primeira vez
-                tentarReconectar();
-            }
-
             // Carregar canais da lista
             fetch(listaURL)
                 .then((response) => response.text())
@@ -253,8 +215,10 @@
                             var li = document.createElement("li");
                             li.innerHTML = `<img src="https://via.placeholder.com/50" alt="${canal.name}">${canal.name}`;
                             li.addEventListener("click", function () {
-                                reconectar(canal.url);
+                                video.src({ type: "application/x-mpegURL", src: canal.url });
+                                video.play();
                                 video.requestFullscreen(); // Abre em tela cheia automaticamente
+                                reconectar(canal.url); // Chama função de reconexão
                             });
                             listaCanaisElemento.appendChild(li);
                         });
@@ -272,6 +236,33 @@
                         renderizarCanais(canaisFiltrados);
                     });
                 });
+
+            // Função de reconexão
+            function reconectar(url) {
+                // Remove event listeners antigos para evitar múltiplos disparos
+                video.off('error');
+                video.off('ended');
+                video.off('stalled');
+
+                // Função para tentar reconectar imediatamente
+                const tentarReconectar = () => {
+                    video.off('error');
+                    video.off('ended');
+                    video.off('stalled');
+                    video.src({ type: "application/x-mpegURL", src: url });
+                    video.play();
+                    video.on('error', tentarReconectar);
+                    video.on('ended', tentarReconectar);
+                    video.on('stalled', tentarReconectar);
+                };
+
+                video.src({ type: "application/x-mpegURL", src: url });
+                video.play();
+
+                video.on('error', tentarReconectar);
+                video.on('ended', tentarReconectar);
+                video.on('stalled', tentarReconectar);
+            }
         });
     </script>
 </body>
