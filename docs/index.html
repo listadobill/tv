@@ -208,17 +208,20 @@
                         }
                     });
 
+                    // Ordenar canais por ordem alfabética
+                    canais.sort((a, b) => a.name.localeCompare(b.name, 'pt-BR', { sensitivity: 'base' }));
+
                     // Função para renderizar canais na lista
                     function renderizarCanais(canaisParaRenderizar) {
-                        listaCanaisElemento.innerHTML = ""; // Limpa a lista existente
+                        listaCanaisElemento.innerHTML = "";
                         canaisParaRenderizar.forEach((canal) => {
                             var li = document.createElement("li");
                             li.innerHTML = `<img src="https://via.placeholder.com/50" alt="${canal.name}">${canal.name}`;
                             li.addEventListener("click", function () {
                                 video.src({ type: "application/x-mpegURL", src: canal.url });
                                 video.play();
-                                video.requestFullscreen(); // Abre em tela cheia automaticamente
-                                reconectar(canal.url); // Chama função de reconexão
+                                video.requestFullscreen();
+                                reconectar(canal.url);
                             });
                             listaCanaisElemento.appendChild(li);
                         });
@@ -239,12 +242,10 @@
 
             // Função de reconexão
             function reconectar(url) {
-                // Remove event listeners antigos para evitar múltiplos disparos
                 video.off('error');
                 video.off('ended');
                 video.off('stalled');
 
-                // Função para tentar reconectar imediatamente
                 const tentarReconectar = () => {
                     video.off('error');
                     video.off('ended');
