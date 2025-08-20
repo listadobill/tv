@@ -1,250 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TV DO BILL</title>
-    <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet" />
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #121212;
-            color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        #container {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            height: 100%;
-        }
-
-        #header {
-            background: #00897b;
-            padding: 10px;
-            text-align: center;
-            font-size: 14px;
-        }
-
-        #main {
-            display: flex;
-            flex: 1;
-            overflow: hidden;
-        }
-
-        #sidebar {
-            flex: 0 0 250px;
-            background: #1e1e1e;
-            display: flex;
-            flex-direction: column;
-        }
-
-        #search-bar {
-            padding: 10px;
-            border-bottom: 1px solid #333;
-        }
-
-        #search-input {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #444;
-            border-radius: 4px;
-            background: #2a2a2a;
-            color: #fff;
-        }
-
-        #lista-canais {
-            flex: 1;
-            overflow-y: auto;
-            list-style: none;
-            margin: 0;
-            padding: 5px;
-        }
-
-        #lista-canais li {
-            background: #2a2a2a;
-            border: 1px solid #444;
-            border-radius: 4px;
-            padding: 10px;
-            margin-bottom: 6px;
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-        }
-
-        #lista-canais li:hover {
-            background: #388e3c;
-        }
-
-        #lista-canais img {
-            width: 32px;
-            height: 32px;
-            margin-right: 10px;
-            border-radius: 4px;
-            object-fit: cover;
-        }
-
-        #lista-canais p {
-            margin: 0;
-            font-size: 14px;
-        }
-
-        #player {
-            flex: 1;
-            background: #000000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .video-js {
-            width: 100% !important;
-            height: 100% !important;
-            background-color: #000;
-        }
-
-        .vjs-error-display {
-            display: none !important;
-        }
-
-        ::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #555;
-            border-radius: 3px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #777;
-        }
-
-        @media (max-width: 768px) {
-            #main {
-                flex-direction: column;
-            }
-            #sidebar {
-                flex: 0 0 180px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TV DO BILL</title>
+  <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      display: flex;
+      height: 100vh;
+    }
+    #sidebar {
+      width: 250px;
+      background: #1e1e1e;
+      display: flex;
+      flex-direction: column;
+    }
+    #search-bar {
+      padding: 10px;
+    }
+    #search-input {
+      width: 100%;
+      padding: 8px;
+      border: none;
+      border-radius: 4px;
+    }
+    #lista-canais {
+      flex: 1;
+      overflow-y: auto;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    #lista-canais li {
+      padding: 10px;
+      border-bottom: 1px solid #333;
+      cursor: pointer;
+    }
+    #lista-canais li:hover {
+      background: #333;
+    }
+    #player {
+      flex: 1;
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .video-js {
+      width: 100% !important;
+      height: 100% !important;
+    }
+  </style>
 </head>
 <body>
-    <div id="container">
-        <div id="header">
-            TV DO BILL - LISTA IPTV: https://bit.ly/bill-iptv - EPG: https://bit.ly/tvdobill-epg
-        </div>
-        <div id="main">
-            <div id="sidebar">
-                <div id="search-bar">
-                    <input type="text" id="search-input" placeholder="🔍 Buscar canal..." />
-                </div>
-                <ul id="lista-canais">
-                    <!-- Canais -->
-                </ul>
-            </div>
-            <div id="player">
-                <video id="video-player" class="video-js vjs-default-skin" controls></video>
-            </div>
-        </div>
+  <div id="sidebar">
+    <div id="search-bar">
+      <input type="text" id="search-input" placeholder="🔍 Buscar canal...">
     </div>
+    <ul id="lista-canais"></ul>
+  </div>
+  <div id="player">
+    <video id="video-player" class="video-js vjs-default-skin" controls></video>
+  </div>
 
-    <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/zteste.m3u";
-            var listaCanaisElemento = document.getElementById("lista-canais");
-            var searchInput = document.getElementById("search-input");
-            var video = videojs("video-player", {
-                controls: true,
-                autoplay: false,
-                preload: "auto",
-                fluid: true,
-                responsive: true,
-            });
+  <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/zteste.m3u";
+      var listaCanaisElemento = document.getElementById("lista-canais");
+      var searchInput = document.getElementById("search-input");
+      var video = videojs("video-player");
 
-            fetch(listaURL)
-                .then((response) => response.text())
-                .then((data) => {
-                    var linhas = data.split("\n");
-                    var canais = [];
+      fetch(listaURL)
+        .then((response) => response.text())
+        .then((data) => {
+          var linhas = data.split("\n");
+          var canais = [];
 
-                    for (let i = 0; i < linhas.length; i++) {
-                        if (linhas[i].startsWith("#EXTINF")) {
-                            var canal = linhas[i].split(",")[1]?.trim() || "Sem nome";
-                            var url = linhas[i + 1];
-                            canais.push({ name: canal, url: url });
-                        }
-                    }
-
-                    canais.sort((a, b) => a.name.localeCompare(b.name, 'pt-BR', { sensitivity: 'base' }));
-
-                    function renderizarCanais(lista) {
-                        listaCanaisElemento.innerHTML = "";
-                        lista.forEach((canal) => {
-                            var li = document.createElement("li");
-                            li.innerHTML = `<p>${canal.name}</p>`;
-                            li.addEventListener("click", function () {
-                                video.src({ type: "application/x-mpegURL", src: canal.url });
-                                video.play();
-                                video.requestFullscreen();
-                                reconectar(canal.url);
-                            });
-                            listaCanaisElemento.appendChild(li);
-                        });
-                    }
-
-                    renderizarCanais(canais);
-
-                    searchInput.addEventListener("input", function () {
-                        var filtro = searchInput.value.toLowerCase();
-                        var filtrados = canais.filter((c) =>
-                            c.name.toLowerCase().includes(filtro)
-                        );
-                        renderizarCanais(filtrados);
-                    });
-                })
-                .catch(() => {
-                    listaCanaisElemento.innerHTML = "<li>Erro ao carregar canais</li>";
-                });
-
-            function reconectar(url) {
-                video.off('error');
-                video.off('ended');
-                video.off('stalled');
-
-                const tentarReconectar = () => {
-                    video.off('error');
-                    video.off('ended');
-                    video.off('stalled');
-                    video.src({ type: "application/x-mpegURL", src: url });
-                    video.play();
-                    video.on('error', tentarReconectar);
-                    video.on('ended', tentarReconectar);
-                    video.on('stalled', tentarReconectar);
-                };
-
-                video.src({ type: "application/x-mpegURL", src: url });
-                video.play();
-
-                video.on('error', tentarReconectar);
-                video.on('ended', tentarReconectar);
-                video.on('stalled', tentarReconectar);
+          for (let i = 0; i < linhas.length; i++) {
+            if (linhas[i].startsWith("#EXTINF")) {
+              let nome = linhas[i].split(",")[1].trim();
+              let url = linhas[i + 1];
+              canais.push({ name: nome, url: url });
             }
+          }
 
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && video.isFullscreen()) {
-                    video.exitFullscreen();
-                }
+          // Ordena por nome
+          canais.sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
+
+          function render(canaisFiltrados) {
+            listaCanaisElemento.innerHTML = "";
+            canaisFiltrados.forEach((canal) => {
+              let li = document.createElement("li");
+              li.textContent = canal.name;
+              li.onclick = function () {
+                video.src({ type: "application/x-mpegURL", src: canal.url });
+                video.play();
+              };
+              listaCanaisElemento.appendChild(li);
             });
+          }
+
+          render(canais);
+
+          searchInput.addEventListener("input", function () {
+            let filtro = this.value.toLowerCase();
+            let filtrados = canais.filter(c => c.name.toLowerCase().includes(filtro));
+            render(filtrados);
+          });
+        })
+        .catch(() => {
+          listaCanaisElemento.innerHTML = "<li>Erro ao carregar canais</li>";
         });
-    </script>
+    });
+  </script>
 </body>
 </html>
