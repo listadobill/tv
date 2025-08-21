@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TV DO BILL - Sistema Avançado de Reconexão</title>
+<title>TV DO BILL - Compatível com Smart TV</title>
 <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
     body { 
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        font-family: 'Segoe UI', Tahoma, Arial, sans-serif; 
         margin:0; 
         padding:0; 
         background:#111; 
@@ -17,6 +17,7 @@
         flex-direction:column; 
         height:100vh; 
         overflow:hidden; 
+        -webkit-text-size-adjust: 100%;
     }
     #container { 
         display:flex; 
@@ -354,9 +355,22 @@
             max-height: 30vh;
         }
     }
+    
+    /* Melhorias para compatibilidade com TV */
+    .tv-optimized {
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+    
+    /* Estilos para navegação por controle remoto */
+    .remote-focus {
+        box-shadow: 0 0 0 3px #ffcc00;
+    }
 </style>
 </head>
-<body>
+<body class="tv-optimized">
 <div id="container">
     <div id="main">
         <div id="sidebar">
@@ -407,6 +421,74 @@
 
 <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
 <script>
+// Verificação de compatibilidade com Smart TV
+function isSmartTV() {
+    return /SmartTV|Smart.TV|WebOS|Tizen|TV|NetCast|BOXEE|Kylo|Roku|DLNADOC|CE-HTML|Xbox|PLAYSTATION|CrKey|AFTT|AFTM|AFTS/i.test(navigator.userAgent);
+}
+
+// Polyfill para funcionalidades ausentes em navegadores de TV
+if (typeof Object.assign != 'function') {
+    Object.assign = function(target) {
+        if (target == null) {
+            throw new TypeError('Cannot convert undefined or null to object');
+        }
+        target = Object(target);
+        for (var index = 1; index < arguments.length; index++) {
+            var source = arguments[index];
+            if (source != null) {
+                for (var key in source) {
+                    if (Object.prototype.hasOwnProperty.call(source, key)) {
+                        target[key] = source[key];
+                    }
+                }
+            }
+        }
+        return target;
+    };
+}
+
+// Polyfill para fetch se necessário
+if (!window.fetch) {
+    window.fetch = function(url, options) {
+        return new Promise(function(resolve, reject) {
+            var xhr = new XMLHttpRequest();
+            xhr.open(options && options.method || 'GET', url);
+            
+            if (options && options.headers) {
+                Object.keys(options.headers).forEach(function(key) {
+                    xhr.setRequestHeader(key, options.headers[key]);
+                });
+            }
+            
+            xhr.onload = function() {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    resolve({
+                        ok: true,
+                        status: xhr.status,
+                        statusText: xhr.statusText,
+                        text: function() { return Promise.resolve(xhr.responseText); },
+                        json: function() { return Promise.resolve(JSON.parse(xhr.responseText)); }
+                    });
+                } else {
+                    reject({
+                        status: xhr.status,
+                        statusText: xhr.statusText
+                    });
+                }
+            };
+            
+            xhr.onerror = function() {
+                reject({
+                    status: xhr.status,
+                    statusText: xhr.statusText
+                });
+            };
+            
+            xhr.send(options && options.body);
+        });
+    };
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     const listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/zteste.m3u";
     const listaCanaisElemento = document.getElementById("lista-canais");
@@ -432,23 +514,30 @@ document.addEventListener("DOMContentLoaded", function() {
     let connectionCheckInterval = null;
     let bufferCheckInterval = null;
     let isOnline = true;
-    let retryDelay = 3000; // 3 segundos conforme solicitado
+    let retryDelay = 3000;
     let lastBufferLength = 0;
     let bufferStallCount = 0;
 
+    // Configuração do Video.js com melhor compatibilidade
     const video = videojs('video-player', {
         controls: true,
         autoplay: false,
         preload: 'auto',
         fluid: true,
         responsive: true,
+        liveui: true,
+        playbackRates: [0.5, 1, 1.5, 2],
         html5: {
             vhs: {
-                overrideNative: true,
+                overrideNative: !isSmartTV(), // Em Smart TVs, usar player nativo pode ser melhor
                 enableLowInitialPlaylist: true,
                 smoothQualityChange: true,
-                useDevicePixelRatio: true
-            }
+                useDevicePixelRatio: true,
+                bufferBehind: 30,
+                maxBufferLength: 30
+            },
+            nativeAudioTracks: false,
+            nativeVideoTracks: false
         }
     });
 
@@ -578,38 +667,46 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Verificar status da conexão
     function checkConnection() {
-        // Simples verificação de conexão
-        fetch('https://httpbin.org/get?t=' + new Date().getTime(), {
-            method: 'HEAD',
-            cache: 'no-cache'
-        })
-        .then(() => {
+        // Verificação de conexão compatível com TVs
+        var xhr = new XMLHttpRequest();
+        xhr.open('HEAD', 'https://httpbin.org/get?t=' + new Date().getTime());
+        xhr.timeout = 5000;
+        
+        xhr.onload = function() {
             if (!isOnline) {
                 isOnline = true;
                 updateConnectionStatus('Conectado', true);
             }
-        })
-        .catch(() => {
+        };
+        
+        xhr.onerror = xhr.ontimeout = function() {
             if (isOnline) {
                 isOnline = false;
                 updateConnectionStatus('Sem conexão', false);
             }
-        });
+        };
+        
+        try {
+            xhr.send();
+        } catch (e) {
+            console.warn('Erro ao verificar conexão:', e);
+        }
     }
 
     // Monitorar saúde do buffer
     function startBufferMonitoring() {
         bufferCheckInterval = setInterval(() => {
-            if (video && video.tech_ && video.tech_.vhs) {
+            if (video && typeof video.buffered === 'function') {
                 try {
-                    const bufferEnd = video.buffered().length > 0 ? video.buffered().end(0) : 0;
+                    const buffered = video.buffered();
+                    const bufferEnd = buffered.length > 0 ? buffered.end(0) : 0;
                     const currentTime = video.currentTime();
-                    const length = bufferEnd - currentTime;
+                    const length = Math.max(0, bufferEnd - currentTime);
                     
                     updateBufferHealth(length);
                     
                     // Detectar stalls no buffer
-                    if (length === lastBufferLength && length < 2 && video.playing()) {
+                    if (length === lastBufferLength && length < 2 && !video.paused()) {
                         bufferStallCount++;
                         
                         if (bufferStallCount > 3) {
@@ -633,9 +730,10 @@ document.addEventListener("DOMContentLoaded", function() {
     function adjustQualityBasedOnBuffer() {
         if (video && video.tech_ && video.tech_.vhs) {
             try {
-                const bufferEnd = video.buffered().length > 0 ? video.buffered().end(0) : 0;
+                const buffered = video.buffered();
+                const bufferEnd = buffered.length > 0 ? buffered.end(0) : 0;
                 const currentTime = video.currentTime();
-                const length = bufferEnd - currentTime;
+                const length = Math.max(0, bufferEnd - currentTime);
                 
                 if (length < 2) {
                     // Buffer baixo, reduzir qualidade se possível
@@ -668,8 +766,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Aplicar configuração de qualidade
     function applyQualitySetting() {
-        // Em um player real, isso alteraria a resolução/bitrate
-        // Esta é uma implementação simplificada
         showErrorNotification('Qualidade alterada', `Qualidade definida para: ${qualitySelect.value}`, 'info');
     }
 
@@ -690,11 +786,17 @@ document.addEventListener("DOMContentLoaded", function() {
         // Mostrar seletor de qualidade para streams que suportam
         qualitySelector.style.display = 'block';
         
-        video.src({ type: 'application/x-mpegURL', src: channel.url });
-        video.play().catch(error => {
-            console.error('Erro ao reproduzir vídeo:', error);
-            handleVideoError('Erro ao reproduzir o vídeo', error);
-        });
+        // Tentar carregar o canal
+        try {
+            video.src({ type: 'application/x-mpegURL', src: channel.url });
+            video.play().catch(error => {
+                console.error('Erro ao reproduzir vídeo:', error);
+                handleVideoError('Erro ao reproduzir o vídeo', error);
+            });
+        } catch (e) {
+            console.error('Erro ao carregar canal:', e);
+            handleVideoError('Erro ao carregar canal', e);
+        }
     }
 
     // Função para tratar erros de vídeo
@@ -743,6 +845,184 @@ document.addEventListener("DOMContentLoaded", function() {
         }, retryDelay);
     }
 
+    // Carregar a lista de canais com fallback robusto
+    function loadChannelList() {
+        showLoading('Carregando lista de canais...');
+        
+        // Tentativa com fetch moderno
+        fetch(listaURL)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Erro HTTP ${response.status}: ${response.statusText}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                processChannelData(data);
+            })
+            .catch(error => {
+                console.error('Erro ao carregar lista com fetch:', error);
+                // Fallback para XHR se fetch falhar
+                loadChannelListWithXHR();
+            });
+    }
+
+    // Fallback para carregar lista com XHR (mais compatível)
+    function loadChannelListWithXHR() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', listaURL);
+        xhr.timeout = 10000;
+        
+        xhr.onload = function() {
+            if (xhr.status >= 200 && xhr.status < 300) {
+                processChannelData(xhr.responseText);
+            } else {
+                throw new Error(`Erro HTTP ${xhr.status}: ${xhr.statusText}`);
+            }
+        };
+        
+        xhr.onerror = xhr.ontimeout = function() {
+            console.error('Erro ao carregar lista com XHR:', xhr.statusText);
+            showErrorNotification('Erro ao carregar canais', 'Não foi possível carregar a lista de canais. Verifique sua conexão.', 'error');
+            
+            // Adicionar alguns canais de fallback para demonstração
+            canais = [
+                { name: 'Canal Exemplo 1', url: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8', icon: 'fas fa-tv' },
+                { name: 'Canal Exemplo 2', url: 'https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8', icon: 'fas fa-tv' },
+                { name: 'Canal Exemplo 3', url: 'https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8', icon: 'fas fa-tv' }
+            ];
+            renderCanais(canais);
+            hideLoading();
+        };
+        
+        try {
+            xhr.send();
+        } catch (e) {
+            console.error('Exceção ao carregar lista com XHR:', e);
+            showErrorNotification('Erro grave', 'Falha crítica ao carregar a lista de canais.', 'error');
+            hideLoading();
+        }
+    }
+
+    // Processar dados da lista de canais
+    function processChannelData(data) {
+        const linhas = data.split('\n');
+        const canaisTemp = [];
+
+        for (let i = 0; i < linhas.length; i++) {
+            const linha = linhas[i];
+            if (linha.startsWith('#EXTINF')) {
+                const nome = linha.split(',')[1] ? linha.split(',')[1].trim() : 'Canal Desconhecido';
+                const url = linhas[i + 1];
+                if (url && !url.startsWith('#') && url.trim() !== '') {
+                    // Adicionar ícone baseado no tipo de canal
+                    let icon = 'fas fa-tv';
+                    const nomeLower = nome.toLowerCase();
+                    if (nomeLower.includes('filme') || nomeLower.includes('movie')) icon = 'fas fa-film';
+                    if (nomeLower.includes('esporte') || nomeLower.includes('sport')) icon = 'fas fa-basketball-ball';
+                    if (nomeLower.includes('notícia') || nomeLower.includes('news')) icon = 'fas fa-newspaper';
+                    if (nomeLower.includes('infantil') || nomeLower.includes('kid')) icon = 'fas fa-child';
+                    
+                    canaisTemp.push({ 
+                        name: nome, 
+                        url: url.trim(),
+                        icon: icon
+                    });
+                }
+            }
+        }
+
+        canais = canaisTemp.sort((a, b) => a.name.localeCompare(b.name, 'pt-BR', {sensitivity: 'base'}));
+        renderCanais(canais);
+        
+        // Mostrar notificação de sucesso
+        showErrorNotification('Playlist carregada', `${canais.length} canais disponíveis`, 'info');
+        hideLoading();
+    }
+
+    // Função para renderizar a lista de canais
+    function renderCanais(lista) {
+        listaCanaisElemento.innerHTML = '';
+        for (let i = 0; i < lista.length; i++) {
+            const canal = lista[i];
+            const li = document.createElement('li');
+            li.tabIndex = 0;
+            li.innerHTML = `<i class="${canal.icon} channel-icon"></i> ${canal.name}`;
+            li.addEventListener('click', function() {
+                loadChannel(canal);
+                // Marca canal ativo
+                const items = listaCanaisElemento.querySelectorAll('li');
+                for (let j = 0; j < items.length; j++) {
+                    items[j].classList.remove('active');
+                }
+                li.classList.add('active');
+            });
+            listaCanaisElemento.appendChild(li);
+        }
+        
+        // Focar no primeiro canal se existir
+        if (lista.length > 0) {
+            const primeiro = listaCanaisElemento.querySelector('li');
+            primeiro.classList.add('remote-focus');
+        }
+    }
+
+    // Configurar busca
+    searchInput.addEventListener('input', () => {
+        const filtro = searchInput.value.toLowerCase();
+        const filtrados = canais.filter(c => c.name.toLowerCase().includes(filtro));
+        renderCanais(filtrados);
+    });
+
+    // Navegação por teclado (para controles remotos de TV)
+    document.addEventListener('keydown', e => {
+        const ativo = document.activeElement;
+        
+        // Navegação na lista de canais
+        if (ativo.tagName.toLowerCase() === 'li' && ativo.parentNode === listaCanaisElemento) {
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                const next = ativo.nextElementSibling;
+                if (next) {
+                    ativo.classList.remove('remote-focus');
+                    next.focus();
+                    next.classList.add('remote-focus');
+                    next.scrollIntoView({block: 'nearest'});
+                }
+            }
+            if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                const prev = ativo.previousElementSibling;
+                if (prev) {
+                    ativo.classList.remove('remote-focus');
+                    prev.focus();
+                    prev.classList.add('remote-focus');
+                    prev.scrollIntoView({block: 'nearest'});
+                }
+            }
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                ativo.click();
+            }
+        }
+        
+        // Atalhos globais
+        if (e.key === 'Backspace' || e.key === 'Escape') {
+            if (errorDisplay.classList.contains('visible')) {
+                hideError();
+            }
+            searchInput.value = '';
+            renderCanais(canais);
+            searchInput.focus();
+        }
+    });
+
+    // Focar no search input por padrão
+    searchInput.focus();
+
+    // Iniciar carregamento da lista de canais
+    loadChannelList();
+
     // Configurar event listeners para o player de vídeo
     video.on('loadstart', function() {
         updateConnectionStatus('Conectando...');
@@ -756,12 +1036,8 @@ document.addEventListener("DOMContentLoaded", function() {
         reconnectCount = 0;
         updateReconnectAttempts(reconnectCount);
         
-        // Mostrar notificação de sucesso na primeira conexão
-        if (reconnectCount === 0) {
-            showErrorNotification('Conexão estabelecida', `Conectado a ${currentChannel.name}`, 'info');
-        } else {
-            showErrorNotification('Reconexão bem-sucedida', `Reconectado a ${currentChannel.name} após ${reconnectCount} tentativas`, 'info');
-        }
+        // Mostrar notificação de sucesso
+        showErrorNotification('Conexão estabelecida', `Conectado a ${currentChannel.name}`, 'info');
     });
 
     video.on('waiting', function() {
@@ -782,106 +1058,6 @@ document.addEventListener("DOMContentLoaded", function() {
     video.on('ended', function() {
         showErrorNotification('Transmissão encerrada', 'A transmissão do canal foi encerrada.', 'info');
     });
-
-    // Carregar a lista de canais
-    fetch(listaURL)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`Erro HTTP ${response.status}: ${response.statusText}`);
-            }
-            return response.text();
-        })
-        .then(data => {
-            const linhas = data.split('\n');
-            const canaisTemp = [];
-
-            linhas.forEach((linha, index) => {
-                if (linha.startsWith('#EXTINF')) {
-                    const nome = linha.split(',')[1].trim();
-                    const url = linhas[index + 1];
-                    if (url && !url.startsWith('#') && url.trim() !== '') {
-                        // Adicionar ícone baseado no tipo de canal
-                        let icon = 'fas fa-tv';
-                        if (nome.toLowerCase().includes('filme') || nome.toLowerCase().includes('movie')) icon = 'fas fa-film';
-                        if (nome.toLowerCase().includes('esporte') || nome.toLowerCase().includes('sport')) icon = 'fas fa-basketball-ball';
-                        if (nome.toLowerCase().includes('notícia') || nome.toLowerCase().includes('news')) icon = 'fas fa-newspaper';
-                        if (nome.toLowerCase().includes('infantil') || nome.toLowerCase().includes('kid')) icon = 'fas fa-child';
-                        
-                        canaisTemp.push({ 
-                            name: nome, 
-                            url: url,
-                            icon: icon
-                        });
-                    }
-                }
-            });
-
-            canais = canaisTemp.sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
-            renderCanais(canais);
-            
-            // Mostrar notificação de sucesso
-            showErrorNotification('Playlist carregada', `${canais.length} canais disponíveis`, 'info');
-        })
-        .catch(error => {
-            console.error('Erro ao cargar a lista de canais:', error);
-            showErrorNotification('Erro ao carregar canais', 'Não foi possível carregar a lista de canais. Verifique sua conexão.', 'error');
-            
-            // Adicionar alguns canais de fallback para demonstração
-            canais = [
-                { name: 'Canal Exemplo 1', url: 'https://example.com/stream1.m3u8', icon: 'fas fa-tv' },
-                { name: 'Canal Exemplo 2', url: 'https://example.com/stream2.m3u8', icon: 'fas fa-tv' },
-                { name: 'Canal Exemplo 3', url: 'https://example.com/stream3.m3u8', icon: 'fas fa-tv' }
-            ];
-            renderCanais(canais);
-        });
-
-    // Função para renderizar a lista de canais
-    function renderCanais(lista) {
-        listaCanaisElemento.innerHTML = '';
-        lista.forEach(canal => {
-            const li = document.createElement('li');
-            li.tabIndex = 0;
-            li.innerHTML = `<i class="${canal.icon} channel-icon"></i> ${canal.name}`;
-            li.addEventListener('click', function() {
-                loadChannel(canal);
-                // Marca canal ativo
-                document.querySelectorAll('#lista-canais li').forEach(el => el.classList.remove('active'));
-                li.classList.add('active');
-            });
-            listaCanaisElemento.appendChild(li);
-        });
-    }
-
-    // Configurar busca
-    searchInput.addEventListener('input', () => {
-        const filtro = searchInput.value.toLowerCase();
-        const filtrados = canais.filter(c => c.name.toLowerCase().includes(filtro));
-        renderCanais(filtrados);
-    });
-
-    // Navegação por teclado
-    listaCanaisElemento.addEventListener('keydown', e => {
-        const ativo = document.activeElement;
-        if (ativo.tagName.toLowerCase() === 'li') {
-            if (e.key === 'ArrowDown' && ativo.nextElementSibling) {
-                ativo.nextElementSibling.focus();
-                ativo.nextElementSibling.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                e.preventDefault();
-            }
-            if (e.key === 'ArrowUp' && ativo.previousElementSibling) {
-                ativo.previousElementSibling.focus();
-                ativo.previousElementSibling.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                e.preventDefault();
-            }
-            if (e.key === 'Enter') ativo.click();
-        }
-    });
-
-    // Focar no primeiro canal ao carregar
-    setTimeout(() => {
-        const primeiro = listaCanaisElemento.querySelector('li');
-        if (primeiro) primeiro.focus();
-    }, 1000);
 
     // Limpar intervalos quando a página for fechada
     window.addEventListener('beforeunload', function() {
