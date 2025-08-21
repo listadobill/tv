@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TV DO BILL1</title>
+<title>TV DO BILL</title>
 <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
 <style>
     body { font-family: Arial,sans-serif; margin:0; padding:0; background:#000; color:#fff; display:flex; flex-direction:column; height:100vh; overflow:hidden; }
@@ -40,11 +40,11 @@
 <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    var listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/zteste.m3u";
-    var listaCanaisElemento = document.getElementById("lista-canais");
-    var searchInput = document.getElementById("search-input");
+    const listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/zteste.m3u";
+    const listaCanaisElemento = document.getElementById("lista-canais");
+    const searchInput = document.getElementById("search-input");
 
-    var video = videojs('video-player', {
+    const video = videojs('video-player', {
         controls: true,
         autoplay: false,
         preload: 'auto',
@@ -55,78 +55,76 @@ document.addEventListener("DOMContentLoaded", function() {
     fetch(listaURL)
         .then(r => r.text())
         .then(data => {
-            var linhas = data.split('\n');
-            var canais = [];
-            linhas.forEach((linha,index)=>{
-                if(linha.startsWith('#EXTINF')){
-                    var canal = linha.split(',')[1].trim();
-                    var url = linhas[index+1];
-                    canais.push({name:canal,url:url});
+            const linhas = data.split('\n');
+            const canais = [];
+
+            linhas.forEach((linha, index) => {
+                if (linha.startsWith('#EXTINF')) {
+                    const nome = linha.split(',')[1].trim();
+                    const url = linhas[index + 1];
+                    canais.push({ name: nome, url: url });
                 }
             });
-            canais.sort((a,b)=>a.name.localeCompare(b.name,'pt-BR'));
 
-            function renderizarCanais(lista){
-                listaCanaisElemento.innerHTML='';
-                lista.forEach(canal=>{
-                    var li=document.createElement('li');
-                    li.tabIndex=0;
-                    li.textContent=canal.name;
-                    li.addEventListener('click',()=>playCanal(canal.url,li));
+            canais.sort((a,b) => a.name.localeCompare(b.name,'pt-BR'));
+
+            function renderizarCanais(lista) {
+                listaCanaisElemento.innerHTML = '';
+                lista.forEach(canal => {
+                    const li = document.createElement('li');
+                    li.tabIndex = 0;
+                    li.textContent = canal.name;
+                    li.addEventListener('click', function() {
+                        // **Aqui está a lógica original funcional para Smart TV**
+                        video.src({ type:'application/x-mpegURL', src: canal.url });
+                        video.play();
+                        if(video.requestFullscreen) video.requestFullscreen();
+                        reconectar(canal.url);
+                        // Marca canal ativo
+                        document.querySelectorAll('#lista-canais li').forEach(el=>el.classList.remove('active'));
+                        li.classList.add('active');
+                    });
                     listaCanaisElemento.appendChild(li);
                 });
             }
 
             renderizarCanais(canais);
 
-            searchInput.addEventListener('input',()=>{
-                var filtro = searchInput.value.toLowerCase();
-                var filtrados = canais.filter(c=>c.name.toLowerCase().includes(filtro));
+            searchInput.addEventListener('input', () => {
+                const filtro = searchInput.value.toLowerCase();
+                const filtrados = canais.filter(c => c.name.toLowerCase().includes(filtro));
                 renderizarCanais(filtrados);
             });
 
-            listaCanaisElemento.addEventListener('keydown',function(e){
-                var ativo=document.activeElement;
-                if(ativo.tagName.toLowerCase()==='li'){
-                    if(e.key==='ArrowDown' && ativo.nextElementSibling){
+            // Navegação por teclado
+            listaCanaisElemento.addEventListener('keydown', e => {
+                const ativo = document.activeElement;
+                if(ativo.tagName.toLowerCase() === 'li'){
+                    if(e.key === 'ArrowDown' && ativo.nextElementSibling){
                         ativo.nextElementSibling.focus();
-                        ativo.nextElementSibling.scrollIntoView({behavior:'smooth',block:'nearest'});
+                        ativo.nextElementSibling.scrollIntoView({behavior:'smooth', block:'nearest'});
                         e.preventDefault();
                     }
-                    if(e.key==='ArrowUp' && ativo.previousElementSibling){
+                    if(e.key === 'ArrowUp' && ativo.previousElementSibling){
                         ativo.previousElementSibling.focus();
-                        ativo.previousElementSibling.scrollIntoView({behavior:'smooth',block:'nearest'});
+                        ativo.previousElementSibling.scrollIntoView({behavior:'smooth', block:'nearest'});
                         e.preventDefault();
                     }
-                    if(e.key==='Enter') ativo.click();
+                    if(e.key === 'Enter') ativo.click();
                 }
             });
 
-            var primeiro = listaCanaisElemento.querySelector('li');
+            const primeiro = listaCanaisElemento.querySelector('li');
             if(primeiro) primeiro.focus();
         });
 
-    function playCanal(url,liElemento){
-        document.querySelectorAll('#lista-canais li').forEach(el=>el.classList.remove('active'));
-        liElemento.classList.add('active');
-
-        video.ready(function(){
-            video.src({type:'application/x-mpegURL',src:url});
-            setTimeout(()=>video.play(),50); // delay mínimo para Smart TV
-        });
-
-        setTimeout(()=>{ // fullscreen delay mínimo para Smart TVs
-            if(video.requestFullscreen) video.requestFullscreen();
-        },100);
-
-        reconectar(url);
-    }
-
     function reconectar(url){
-        video.src({type:'application/x-mpegURL',src:url});
+        video.src({ type:'application/x-mpegURL', src: url });
         video.play();
         video.off('error');
-        video.on('error',()=>reconectar(url));
+        video.on('error', function() {
+            setTimeout(()=>reconectar(url), 5000);
+        });
     }
 });
 </script>
