@@ -69,11 +69,6 @@
         background-color: #000;
     }
 
-    .vjs-tech {
-        width: 100% !important;
-        height: 100% !important;
-    }
-
     #sidebar {
         flex: 1;
         background-color: rgba(34, 34, 34, 0.8);
@@ -99,9 +94,12 @@
         transition: background-color 0.3s ease;
     }
 
-    #sidebar li:hover {
+    #sidebar li:hover,
+    #sidebar li:focus,
+    #sidebar li.active {
         background-color: #ffcc00;
         color: #000;
+        outline: none;
     }
 
     .video-js.vjs-fullscreen {
@@ -117,7 +115,7 @@
     }
 
     ::-webkit-scrollbar {
-        width: 10px;
+        width: 16px;
     }
 
     ::-webkit-scrollbar-thumb {
@@ -183,18 +181,16 @@ document.addEventListener("DOMContentLoaded", function() {
                 listaCanaisElemento.innerHTML = '';
                 canaisParaRenderizar.forEach(canal => {
                     var li = document.createElement('li');
+                    li.tabIndex = 0; // necessário para foco
                     li.textContent = canal.name;
                     li.addEventListener('click', function() {
-                        video.src({ type: 'application/x-mpegURL', src: canal.url });
-                        video.play();
-                        video.requestFullscreen();
-                        reconectar(canal.url);
+                        playCanal(canal.url, li);
                     });
                     listaCanaisElemento.appendChild(li);
                 });
             }
 
-            // Inicializa a lista com todos os canais
+            // Inicializa a lista
             renderizarCanais(canais);
 
             // Função de filtro
@@ -203,7 +199,49 @@ document.addEventListener("DOMContentLoaded", function() {
                 var canaisFiltrados = canais.filter(canal => canal.name.toLowerCase().includes(filtro));
                 renderizarCanais(canaisFiltrados);
             });
+
+            // ============================
+            // Navegação com controle remoto
+            // ============================
+            listaCanaisElemento.addEventListener('keydown', function(e) {
+                var ativo = document.activeElement;
+                if(ativo.tagName.toLowerCase() === 'li') {
+                    if(e.key === 'ArrowDown') {
+                        if(ativo.nextElementSibling) {
+                            ativo.nextElementSibling.focus();
+                            ativo.nextElementSibling.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                        }
+                        e.preventDefault();
+                    }
+                    if(e.key === 'ArrowUp') {
+                        if(ativo.previousElementSibling) {
+                            ativo.previousElementSibling.focus();
+                            ativo.previousElementSibling.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                        }
+                        e.preventDefault();
+                    }
+                    if(e.key === 'Enter') {
+                        ativo.click();
+                    }
+                }
+            });
+
+            // Foco inicial no primeiro canal
+            var primeiro = listaCanaisElemento.querySelector('li');
+            if(primeiro) primeiro.focus();
         });
+
+    // Função para tocar canal
+    function playCanal(url, liElemento) {
+        // Remove classe ativa
+        document.querySelectorAll('#lista-canais li').forEach(el => el.classList.remove('active'));
+        liElemento.classList.add('active');
+
+        video.src({ type: 'application/x-mpegURL', src: url });
+        video.play();
+        video.requestFullscreen();
+        reconectar(url);
+    }
 
     // Função de reconexão
     function reconectar(url) {
