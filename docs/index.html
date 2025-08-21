@@ -26,7 +26,6 @@
     }
 
     #header {
-        background-color: rgba(0, 128, 0, 0.8);
         padding: 10px;
         text-align: center;
         font-size: 1.2em;
@@ -158,7 +157,6 @@ document.addEventListener("DOMContentLoaded", function() {
         responsive: true
     });
 
-    // Carregar canais da lista
     fetch(listaURL)
         .then(response => response.text())
         .then(data => {
@@ -173,15 +171,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             });
 
-            // Ordenar alfabeticamente
             canais.sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
 
-            // Função para renderizar canais na lista
             function renderizarCanais(canaisParaRenderizar) {
                 listaCanaisElemento.innerHTML = '';
                 canaisParaRenderizar.forEach(canal => {
                     var li = document.createElement('li');
-                    li.tabIndex = 0; // necessário para foco
+                    li.tabIndex = 0;
                     li.textContent = canal.name;
                     li.addEventListener('click', function() {
                         playCanal(canal.url, li);
@@ -190,19 +186,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 });
             }
 
-            // Inicializa a lista
             renderizarCanais(canais);
 
-            // Função de filtro
             searchInput.addEventListener('input', function() {
                 var filtro = searchInput.value.toLowerCase();
                 var canaisFiltrados = canais.filter(canal => canal.name.toLowerCase().includes(filtro));
                 renderizarCanais(canaisFiltrados);
             });
 
-            // ============================
-            // Navegação com controle remoto
-            // ============================
             listaCanaisElemento.addEventListener('keydown', function(e) {
                 var ativo = document.activeElement;
                 if(ativo.tagName.toLowerCase() === 'li') {
@@ -226,14 +217,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             });
 
-            // Foco inicial no primeiro canal
             var primeiro = listaCanaisElemento.querySelector('li');
             if(primeiro) primeiro.focus();
         });
 
-    // Função para tocar canal
     function playCanal(url, liElemento) {
-        // Remove classe ativa
         document.querySelectorAll('#lista-canais li').forEach(el => el.classList.remove('active'));
         liElemento.classList.add('active');
 
@@ -243,7 +231,6 @@ document.addEventListener("DOMContentLoaded", function() {
         reconectar(url);
     }
 
-    // Função de reconexão
     function reconectar(url) {
         video.src({ type: 'application/x-mpegURL', src: url });
         video.play();
