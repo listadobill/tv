@@ -5,19 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TV DO BILL - Compatível com Smart TV</title>
 <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
     body { 
-        font-family: 'Segoe UI', Tahoma, Arial, sans-serif; 
+        font-family: Arial, sans-serif; 
         margin:0; 
         padding:0; 
-        background:#111; 
+        background:#000; 
         color:#fff; 
         display:flex; 
         flex-direction:column; 
         height:100vh; 
         overflow:hidden; 
-        -webkit-text-size-adjust: 100%;
     }
     #container { 
         display:flex; 
@@ -32,7 +30,7 @@
     }
     #player { 
         flex:2; 
-        background:rgba(0,0,0,0.9); 
+        background:rgba(0,0,0,0.8); 
         position:relative; 
         display:flex; 
         justify-content:center; 
@@ -46,11 +44,10 @@
     }
     #sidebar { 
         flex:1; 
-        background:rgba(34,34,34,0.95); 
+        background:rgba(34,34,34,0.8); 
         overflow-y:auto; 
         padding:10px; 
         border-left:2px solid #ffcc00; 
-        max-width: 350px;
     }
     #sidebar ul { 
         list-style:none; 
@@ -63,54 +60,38 @@
     #sidebar li { 
         background:rgba(50,50,50,0.8); 
         border-radius:8px; 
-        padding:12px 15px;
+        padding:10px; 
         cursor:pointer; 
-        transition:all 0.3s; 
-        display: flex;
-        align-items: center;
-        gap: 10px;
+        transition:background-color 0.3s; 
     }
     #sidebar li:hover, #sidebar li:focus, #sidebar li.active { 
         background:#ffcc00; 
         color:#000; 
         outline:none; 
-        transform: translateX(5px);
-    }
-    #sidebar li .channel-icon {
-        font-size: 18px;
     }
     #search-bar { 
-        padding:15px 10px; 
+        padding:10px; 
         text-align:center; 
-        background: rgba(40,40,40,0.9);
-        border-radius: 8px;
-        margin-bottom: 15px;
     }
     #search-input { 
         width:95%; 
-        padding:12px 15px; 
+        padding:10px; 
         border:none; 
         border-radius:5px; 
         font-size:1em; 
-        background: #222;
-        color: white;
-        border: 1px solid #444;
-    }
-    #search-input:focus {
-        outline: 2px solid #ffcc00;
     }
     .vjs-error-display { 
         display:none !important; 
     }
     ::-webkit-scrollbar { 
-        width:12px; 
+        width:16px; 
     }
     ::-webkit-scrollbar-thumb { 
         background:#ffcc00; 
         border-radius:10px; 
     }
     
-    /* Sistema de notificação de erros */
+    /* Sistema simplificado de notificação */
     #error-system {
         position: absolute;
         top: 20px;
@@ -119,81 +100,20 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-        max-width: 350px;
+        max-width: 300px;
     }
     
     .error-notification {
         background: rgba(200, 0, 0, 0.9);
         color: white;
-        padding: 15px;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        padding: 12px;
+        border-radius: 6px;
         display: flex;
         align-items: center;
-        gap: 12px;
-        animation: slideIn 0.3s ease-out;
-        transform-origin: top right;
+        gap: 10px;
     }
     
-    .error-notification.warning {
-        background: rgba(220, 150, 0, 0.9);
-    }
-    
-    .error-notification.info {
-        background: rgba(0, 100, 200, 0.9);
-    }
-    
-    .error-notification .error-icon {
-        font-size: 24px;
-        flex-shrink: 0;
-    }
-    
-    .error-notification .error-content {
-        flex: 1;
-    }
-    
-    .error-notification .error-title {
-        font-weight: bold;
-        margin-bottom: 5px;
-        font-size: 16px;
-    }
-    
-    .error-notification .error-message {
-        font-size: 14px;
-        opacity: 0.9;
-    }
-    
-    .error-notification .error-close {
-        background: none;
-        border: none;
-        color: white;
-        cursor: pointer;
-        font-size: 18px;
-        padding: 0;
-        width: 24px;
-        height: 24px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        flex-shrink: 0;
-    }
-    
-    .error-notification .error-close:hover {
-        background: rgba(255,255,255,0.2);
-    }
-    
-    @keyframes slideIn {
-        from {
-            transform: translateX(100px);
-            opacity: 0;
-        }
-        to {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
-    
+    /* Tela de erro simplificada */
     #error-display {
         position: absolute;
         top: 0;
@@ -206,7 +126,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 30px;
+        padding: 20px;
         text-align: center;
     }
     
@@ -214,58 +134,22 @@
         display: flex;
     }
     
-    #error-display .error-icon {
-        font-size: 60px;
-        color: #ff3333;
-        margin-bottom: 20px;
-    }
-    
     #error-display h2 {
         color: #ff3333;
         margin: 0 0 15px 0;
-        font-size: 28px;
-    }
-    
-    #error-display p {
-        font-size: 18px;
-        max-width: 600px;
-        line-height: 1.5;
-        margin-bottom: 25px;
     }
     
     #error-display .error-actions {
         display: flex;
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
     }
     
     #error-display button {
-        padding: 12px 25px;
+        padding: 10px 20px;
         border: none;
         border-radius: 5px;
-        font-size: 16px;
         cursor: pointer;
-        transition: all 0.2s;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-    
-    #error-display button.primary {
-        background: #ffcc00;
-        color: #000;
-        font-weight: bold;
-    }
-    
-    #error-display button.secondary {
-        background: rgba(255,255,255,0.2);
-        color: white;
-    }
-    
-    #error-display button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     }
     
     #loading-overlay {
@@ -277,100 +161,25 @@
         background: rgba(0,0,0,0.8);
         z-index: 998;
         display: none;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
     
-    #loading-overlay.visible {
-        display: flex;
-    }
-    
     .spinner {
-        width: 60px;
-        height: 60px;
-        border: 5px solid rgba(255,255,255,0.3);
+        width: 40px;
+        height: 40px;
+        border: 4px solid rgba(255,255,255,0.3);
         border-radius: 50%;
         border-top-color: #ffcc00;
-        animation: spin 1s ease-in-out infinite;
-        margin-bottom: 20px;
+        animation: spin 1s linear infinite;
     }
     
     @keyframes spin {
         to { transform: rotate(360deg); }
     }
-    
-    #player-stats {
-        position: absolute;
-        bottom: 15px;
-        left: 15px;
-        background: rgba(0,0,0,0.7);
-        padding: 8px 12px;
-        border-radius: 5px;
-        font-size: 12px;
-        z-index: 997;
-        display: flex;
-        gap: 15px;
-    }
-    
-    #player-stats div {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-    }
-    
-    .stats-icon {
-        color: #ffcc00;
-    }
-    
-    #quality-selector {
-        position: absolute;
-        bottom: 15px;
-        right: 15px;
-        background: rgba(0,0,0,0.7);
-        padding: 8px 12px;
-        border-radius: 5px;
-        font-size: 12px;
-        z-index: 997;
-        display: none;
-    }
-    
-    #quality-selector select {
-        background: #333;
-        color: white;
-        border: 1px solid #555;
-        border-radius: 3px;
-        padding: 3px 5px;
-    }
-    
-    @media (max-width: 1200px) {
-        #main {
-            flex-direction: column;
-        }
-        
-        #sidebar {
-            max-width: none;
-            border-left: none;
-            border-top: 2px solid #ffcc00;
-            max-height: 30vh;
-        }
-    }
-    
-    /* Melhorias para compatibilidade com TV */
-    .tv-optimized {
-        -webkit-tap-highlight-color: transparent;
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        user-select: none;
-    }
-    
-    /* Estilos para navegação por controle remoto */
-    .remote-focus {
-        box-shadow: 0 0 0 3px #ffcc00;
-    }
 </style>
 </head>
-<body class="tv-optimized">
+<body>
 <div id="container">
     <div id="main">
         <div id="sidebar">
@@ -383,34 +192,16 @@
             <video id="video-player" class="video-js vjs-default-skin" controls playsinline></video>
             
             <div id="error-display">
-                <i class="fas fa-exclamation-circle error-icon"></i>
                 <h2 id="error-title">Erro ao Carregar Conteúdo</h2>
-                <p id="error-message">Não foi possível carregar o conteúdo solicitado. Por favor, tente novamente.</p>
+                <p id="error-message">Não foi possível carregar o conteúdo solicitado.</p>
                 <div class="error-actions">
-                    <button id="retry-button" class="primary"><i class="fas fa-redo"></i> Tentar Novamente</button>
-                    <button id="change-channel-button" class="secondary"><i class="fas fa-list"></i> Escolher Outro Canal</button>
+                    <button id="retry-button">Tentar Novamente</button>
+                    <button id="change-channel-button">Escolher Outro Canal</button>
                 </div>
             </div>
             
             <div id="loading-overlay">
                 <div class="spinner"></div>
-                <p id="loading-message">Carregando transmissão...</p>
-            </div>
-            
-            <div id="player-stats">
-                <div><i class="fas fa-wifi stats-icon"></i> <span id="connection-status">Conectando...</span></div>
-                <div><i class="fas fa-clock stats-icon"></i> <span id="reconnect-attempts">Tentativas: 0</span></div>
-                <div><i class="fas fa-broadcast-tower stats-icon"></i> <span id="buffer-health">Buffer: 0s</span></div>
-            </div>
-            
-            <div id="quality-selector">
-                <label for="quality-select">Qualidade: </label>
-                <select id="quality-select">
-                    <option value="auto">Auto</option>
-                    <option value="high">Alta</option>
-                    <option value="medium">Média</option>
-                    <option value="low">Baixa</option>
-                </select>
             </div>
         </div>
     </div>
@@ -421,74 +212,6 @@
 
 <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
 <script>
-// Verificação de compatibilidade com Smart TV
-function isSmartTV() {
-    return /SmartTV|Smart.TV|WebOS|Tizen|TV|NetCast|BOXEE|Kylo|Roku|DLNADOC|CE-HTML|Xbox|PLAYSTATION|CrKey|AFTT|AFTM|AFTS/i.test(navigator.userAgent);
-}
-
-// Polyfill para funcionalidades ausentes em navegadores de TV
-if (typeof Object.assign != 'function') {
-    Object.assign = function(target) {
-        if (target == null) {
-            throw new TypeError('Cannot convert undefined or null to object');
-        }
-        target = Object(target);
-        for (var index = 1; index < arguments.length; index++) {
-            var source = arguments[index];
-            if (source != null) {
-                for (var key in source) {
-                    if (Object.prototype.hasOwnProperty.call(source, key)) {
-                        target[key] = source[key];
-                    }
-                }
-            }
-        }
-        return target;
-    };
-}
-
-// Polyfill para fetch se necessário
-if (!window.fetch) {
-    window.fetch = function(url, options) {
-        return new Promise(function(resolve, reject) {
-            var xhr = new XMLHttpRequest();
-            xhr.open(options && options.method || 'GET', url);
-            
-            if (options && options.headers) {
-                Object.keys(options.headers).forEach(function(key) {
-                    xhr.setRequestHeader(key, options.headers[key]);
-                });
-            }
-            
-            xhr.onload = function() {
-                if (xhr.status >= 200 && xhr.status < 300) {
-                    resolve({
-                        ok: true,
-                        status: xhr.status,
-                        statusText: xhr.statusText,
-                        text: function() { return Promise.resolve(xhr.responseText); },
-                        json: function() { return Promise.resolve(JSON.parse(xhr.responseText)); }
-                    });
-                } else {
-                    reject({
-                        status: xhr.status,
-                        statusText: xhr.statusText
-                    });
-                }
-            };
-            
-            xhr.onerror = function() {
-                reject({
-                    status: xhr.status,
-                    statusText: xhr.statusText
-                });
-            };
-            
-            xhr.send(options && options.body);
-        });
-    };
-}
-
 document.addEventListener("DOMContentLoaded", function() {
     const listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/zteste.m3u";
     const listaCanaisElemento = document.getElementById("lista-canais");
@@ -499,82 +222,37 @@ document.addEventListener("DOMContentLoaded", function() {
     const retryButton = document.getElementById("retry-button");
     const changeChannelButton = document.getElementById("change-channel-button");
     const loadingOverlay = document.getElementById("loading-overlay");
-    const loadingMessage = document.getElementById("loading-message");
-    const connectionStatus = document.getElementById("connection-status");
-    const reconnectAttempts = document.getElementById("reconnect-attempts");
-    const bufferHealth = document.getElementById("buffer-health");
     const errorSystem = document.getElementById('error-system');
-    const qualitySelector = document.getElementById('quality-selector');
-    const qualitySelect = document.getElementById('quality-select');
 
     let canais = [];
     let currentChannel = null;
     let reconnectCount = 0;
     let errorTimeout = null;
-    let connectionCheckInterval = null;
-    let bufferCheckInterval = null;
-    let isOnline = true;
-    let retryDelay = 3000;
-    let lastBufferLength = 0;
-    let bufferStallCount = 0;
 
-    // Configuração do Video.js com melhor compatibilidade
     const video = videojs('video-player', {
         controls: true,
         autoplay: false,
         preload: 'auto',
         fluid: true,
-        responsive: true,
-        liveui: true,
-        playbackRates: [0.5, 1, 1.5, 2],
-        html5: {
-            vhs: {
-                overrideNative: !isSmartTV(), // Em Smart TVs, usar player nativo pode ser melhor
-                enableLowInitialPlaylist: true,
-                smoothQualityChange: true,
-                useDevicePixelRatio: true,
-                bufferBehind: 30,
-                maxBufferLength: 30
-            },
-            nativeAudioTracks: false,
-            nativeVideoTracks: false
-        }
+        responsive: true
     });
 
-    // Iniciar verificação de conexão
-    startConnectionMonitoring();
-    
-    // Iniciar monitoramento de buffer
-    startBufferMonitoring();
-
     // Função para mostrar notificação de erro
-    function showErrorNotification(title, message, type = 'error') {
+    function showErrorNotification(message, type = 'error') {
         const notification = document.createElement('div');
-        notification.className = `error-notification ${type}`;
+        notification.className = `error-notification`;
         notification.innerHTML = `
-            <i class="fas ${type === 'error' ? 'fa-exclamation-circle' : type === 'warning' ? 'fa-exclamation-triangle' : 'fa-info-circle'} error-icon"></i>
-            <div class="error-content">
-                <div class="error-title">${title}</div>
-                <div class="error-message">${message}</div>
-            </div>
-            <button class="error-close"><i class="fas fa-times"></i></button>
+            <div>${message}</div>
         `;
         
         errorSystem.appendChild(notification);
         
-        // Fechar notificação ao clicar no botão
-        notification.querySelector('.error-close').addEventListener('click', function() {
-            notification.style.animation = 'slideIn 0.3s ease-out reverse';
-            setTimeout(() => notification.remove(), 300);
-        });
-        
-        // Remover automaticamente após 7 segundos
+        // Remover automaticamente após 5 segundos
         setTimeout(() => {
             if (notification.parentNode) {
-                notification.style.animation = 'slideIn 0.3s ease-out reverse';
-                setTimeout(() => notification.remove(), 300);
+                notification.remove();
             }
-        }, 7000);
+        }, 5000);
     }
 
     // Função para mostrar tela de erro
@@ -590,39 +268,13 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Função para mostrar loading
-    function showLoading(message = 'Carregando transmissão...') {
-        loadingMessage.textContent = message;
-        loadingOverlay.classList.add('visible');
+    function showLoading() {
+        loadingOverlay.style.display = 'flex';
     }
 
     // Função para ocultar loading
     function hideLoading() {
-        loadingOverlay.classList.remove('visible');
-    }
-
-    // Atualizar status da conexão
-    function updateConnectionStatus(status, isConnected = false) {
-        connectionStatus.textContent = status;
-        connectionStatus.style.color = isConnected ? '#4caf50' : '#ffcc00';
-    }
-
-    // Atualizar contador de tentativas
-    function updateReconnectAttempts(attempts) {
-        reconnectAttempts.textContent = `Tentativas: ${attempts}`;
-    }
-
-    // Atualizar saúde do buffer
-    function updateBufferHealth(length) {
-        bufferHealth.textContent = `Buffer: ${length.toFixed(1)}s`;
-        
-        // Cor indicativa baseada no tamanho do buffer
-        if (length > 10) {
-            bufferHealth.style.color = '#4caf50'; // Verde - bom
-        } else if (length > 5) {
-            bufferHealth.style.color = '#ffcc00'; // Amarelo - médio
-        } else {
-            bufferHealth.style.color = '#f44336'; // Vermelho - crítico
-        }
+        loadingOverlay.style.display = 'none';
     }
 
     // Configurar eventos de botão
@@ -635,239 +287,68 @@ document.addEventListener("DOMContentLoaded", function() {
 
     changeChannelButton.addEventListener('click', function() {
         hideError();
-        // Dá foco na lista de canais para navegação por teclado
         const firstChannel = listaCanaisElemento.querySelector('li');
         if (firstChannel) firstChannel.focus();
     });
 
-    // Monitorar conexão com a internet
-    function startConnectionMonitoring() {
-        // Verificar online/offline
-        window.addEventListener('online', function() {
-            isOnline = true;
-            updateConnectionStatus('Conectado', true);
-            showErrorNotification('Conexão restaurada', 'Sua conexão com a internet foi restabelecida.', 'info');
-            
-            // Se estávamos tentando reconectar, força uma nova tentativa
-            if (currentChannel && !video.playing()) {
-                showErrorNotification('Reconectando', 'Tentando reconectar ao canal...', 'info');
-                setTimeout(() => loadChannel(currentChannel), 1000);
-            }
-        });
-
-        window.addEventListener('offline', function() {
-            isOnline = false;
-            updateConnectionStatus('Sem conexão', false);
-            showErrorNotification('Sem conexão', 'Sua conexão com a internet foi perdida.', 'error');
-        });
-
-        // Verificar periodicamente a conexão
-        connectionCheckInterval = setInterval(checkConnection, 5000);
-    }
-
-    // Verificar status da conexão
-    function checkConnection() {
-        // Verificação de conexão compatível com TVs
-        var xhr = new XMLHttpRequest();
-        xhr.open('HEAD', 'https://httpbin.org/get?t=' + new Date().getTime());
-        xhr.timeout = 5000;
-        
-        xhr.onload = function() {
-            if (!isOnline) {
-                isOnline = true;
-                updateConnectionStatus('Conectado', true);
-            }
-        };
-        
-        xhr.onerror = xhr.ontimeout = function() {
-            if (isOnline) {
-                isOnline = false;
-                updateConnectionStatus('Sem conexão', false);
-            }
-        };
-        
-        try {
-            xhr.send();
-        } catch (e) {
-            console.warn('Erro ao verificar conexão:', e);
-        }
-    }
-
-    // Monitorar saúde do buffer
-    function startBufferMonitoring() {
-        bufferCheckInterval = setInterval(() => {
-            if (video && typeof video.buffered === 'function') {
-                try {
-                    const buffered = video.buffered();
-                    const bufferEnd = buffered.length > 0 ? buffered.end(0) : 0;
-                    const currentTime = video.currentTime();
-                    const length = Math.max(0, bufferEnd - currentTime);
-                    
-                    updateBufferHealth(length);
-                    
-                    // Detectar stalls no buffer
-                    if (length === lastBufferLength && length < 2 && !video.paused()) {
-                        bufferStallCount++;
-                        
-                        if (bufferStallCount > 3) {
-                            showErrorNotification('Problema de buffer', 'Tentando melhorar a qualidade de transmissão...', 'warning');
-                            adjustQualityBasedOnBuffer();
-                            bufferStallCount = 0;
-                        }
-                    } else {
-                        bufferStallCount = 0;
-                    }
-                    
-                    lastBufferLength = length;
-                } catch (e) {
-                    console.warn('Erro ao verificar buffer:', e);
-                }
-            }
-        }, 1000);
-    }
-
-    // Ajustar qualidade baseado no buffer
-    function adjustQualityBasedOnBuffer() {
-        if (video && video.tech_ && video.tech_.vhs) {
-            try {
-                const buffered = video.buffered();
-                const bufferEnd = buffered.length > 0 ? buffered.end(0) : 0;
-                const currentTime = video.currentTime();
-                const length = Math.max(0, bufferEnd - currentTime);
-                
-                if (length < 2) {
-                    // Buffer baixo, reduzir qualidade se possível
-                    const currentQuality = qualitySelect.value;
-                    if (currentQuality === 'high') {
-                        qualitySelect.value = 'medium';
-                        showErrorNotification('Qualidade reduzida', 'Mudando para qualidade média para melhor fluidez', 'info');
-                    } else if (currentQuality === 'medium') {
-                        qualitySelect.value = 'low';
-                        showErrorNotification('Qualidade reduzida', 'Mudando para qualidade baixa para melhor fluidez', 'info');
-                    }
-                    applyQualitySetting();
-                } else if (length > 15) {
-                    // Buffer saudável, tentar aumentar qualidade
-                    const currentQuality = qualitySelect.value;
-                    if (currentQuality === 'low') {
-                        qualitySelect.value = 'medium';
-                        showErrorNotification('Qualidade melhorada', 'Mudando para qualidade média', 'info');
-                    } else if (currentQuality === 'medium') {
-                        qualitySelect.value = 'high';
-                        showErrorNotification('Qualidade melhorada', 'Mudando para qualidade alta', 'info');
-                    }
-                    applyQualitySetting();
-                }
-            } catch (e) {
-                console.warn('Erro ao ajustar qualidade:', e);
-            }
-        }
-    }
-
-    // Aplicar configuração de qualidade
-    function applyQualitySetting() {
-        showErrorNotification('Qualidade alterada', `Qualidade definida para: ${qualitySelect.value}`, 'info');
-    }
-
-    // Função para carregar um canal
+    // Função para carregar um canal - MANTIDA A LÓGICA ORIGINAL
     function loadChannel(channel) {
-        if (!isOnline) {
-            showError('Sem conexão', 'Você está offline. Verifique sua conexão com a internet e tente novamente.');
-            return;
-        }
-
         currentChannel = channel;
-        reconnectCount++;
-        updateReconnectAttempts(reconnectCount);
+        reconnectCount = 0;
         
-        showLoading(`Conectando a ${channel.name}...`);
-        updateConnectionStatus('Conectando...');
+        showLoading();
         
-        // Mostrar seletor de qualidade para streams que suportam
-        qualitySelector.style.display = 'block';
+        // Lógica original que funciona na Smart TV
+        video.src({ type: 'application/x-mpegURL', src: channel.url });
+        video.play().catch(error => {
+            console.error('Erro ao reproduzir vídeo:', error);
+            handleVideoError('Erro ao reproduzir o vídeo', error);
+        });
         
-        // Tentar carregar o canal
-        try {
-            video.src({ type: 'application/x-mpegURL', src: channel.url });
-            video.play().catch(error => {
-                console.error('Erro ao reproduzir vídeo:', error);
-                handleVideoError('Erro ao reproduzir o vídeo', error);
-            });
-        } catch (e) {
-            console.error('Erro ao carregar canal:', e);
-            handleVideoError('Erro ao carregar canal', e);
-        }
+        // Marca canal ativo
+        document.querySelectorAll('#lista-canais li').forEach(el => el.classList.remove('active'));
+        const activeLi = Array.from(listaCanaisElemento.querySelectorAll('li')).find(li => 
+            li.textContent.includes(channel.name) || li.textContent === channel.name
+        );
+        if (activeLi) activeLi.classList.add('active');
     }
 
-    // Função para tratar erros de vídeo
+    // Função para tratar erros de vídeo - MANTIDA A LÓGICA ORIGINAL
     function handleVideoError(context, error) {
         console.error(`${context}:`, error);
         
-        // Mostrar notificação
-        let errorType = 'unknown';
-        let errorMessage = 'Erro desconhecido ao carregar o vídeo.';
+        showErrorNotification('Erro de reprodução. Tentando reconectar...');
         
-        if (error && error.code) {
-            switch(error.code) {
-                case 1:
-                    errorType = 'network';
-                    errorMessage = 'Problema de conexão. Verifique sua internet.';
-                    break;
-                case 2:
-                    errorType = 'format';
-                    errorMessage = 'Formato de mídia não suportado.';
-                    break;
-                case 3:
-                    errorType = 'decode';
-                    errorMessage = 'Erro ao decodificar o vídeo.';
-                    break;
-                case 4:
-                    errorType = 'src';
-                    errorMessage = 'Fonte de vídeo não suportada.';
-                    break;
-                default:
-                    errorType = 'unknown';
-                    errorMessage = 'Erro desconhecido ao carregar o vídeo.';
-            }
-        }
-        
-        showErrorNotification('Erro de Reprodução', errorMessage, 'error');
-        
-        // Mostrar mensagem de tentativa de reconexão (sem limite de tentativas)
-        showLoading(`Tentativa ${reconnectCount}. Reconectando em 3 segundos...`);
-        
-        // Tentar reconexão após delay (3 segundos conforme solicitado)
+        // Reconexão a cada 3 segundos (conforme solicitado)
         if (errorTimeout) clearTimeout(errorTimeout);
         errorTimeout = setTimeout(() => {
             if (currentChannel) {
                 loadChannel(currentChannel);
             }
-        }, retryDelay);
+        }, 3000);
     }
 
-    // Carregar a lista de canais com fallback robusto
-    function loadChannelList() {
-        showLoading('Carregando lista de canais...');
-        
-        // Tentativa com fetch moderno
-        fetch(listaURL)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`Erro HTTP ${response.status}: ${response.statusText}`);
-                }
-                return response.text();
-            })
-            .then(data => {
-                processChannelData(data);
-            })
-            .catch(error => {
-                console.error('Erro ao carregar lista com fetch:', error);
-                // Fallback para XHR se fetch falhar
-                loadChannelListWithXHR();
-            });
-    }
+    // CARREGAMENTO DA LISTA - MANTIDO O MÉTODO ORIGINAL QUE FUNCIONA
+    showLoading();
+    
+    // Primeiro tenta com fetch
+    fetch(listaURL)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Erro HTTP ${response.status}`);
+            }
+            return response.text();
+        })
+        .then(data => {
+            processChannelData(data);
+        })
+        .catch(error => {
+            console.error('Erro com fetch, tentando XHR:', error);
+            // Fallback para XHR como no original
+            loadChannelListWithXHR();
+        });
 
-    // Fallback para carregar lista com XHR (mais compatível)
+    // Fallback para XHR
     function loadChannelListWithXHR() {
         var xhr = new XMLHttpRequest();
         xhr.open('GET', listaURL);
@@ -877,34 +358,35 @@ document.addEventListener("DOMContentLoaded", function() {
             if (xhr.status >= 200 && xhr.status < 300) {
                 processChannelData(xhr.responseText);
             } else {
-                throw new Error(`Erro HTTP ${xhr.status}: ${xhr.statusText}`);
+                showErrorNotification('Erro ao carregar lista de canais');
+                loadDefaultChannels();
             }
         };
         
         xhr.onerror = xhr.ontimeout = function() {
-            console.error('Erro ao carregar lista com XHR:', xhr.statusText);
-            showErrorNotification('Erro ao carregar canais', 'Não foi possível carregar a lista de canais. Verifique sua conexão.', 'error');
-            
-            // Adicionar alguns canais de fallback para demonstração
-            canais = [
-                { name: 'Canal Exemplo 1', url: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8', icon: 'fas fa-tv' },
-                { name: 'Canal Exemplo 2', url: 'https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8', icon: 'fas fa-tv' },
-                { name: 'Canal Exemplo 3', url: 'https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8', icon: 'fas fa-tv' }
-            ];
-            renderCanais(canais);
-            hideLoading();
+            showErrorNotification('Erro de conexão ao carregar canais');
+            loadDefaultChannels();
         };
         
         try {
             xhr.send();
         } catch (e) {
-            console.error('Exceção ao carregar lista com XHR:', e);
-            showErrorNotification('Erro grave', 'Falha crítica ao carregar a lista de canais.', 'error');
-            hideLoading();
+            console.error('Exceção ao carregar lista:', e);
+            loadDefaultChannels();
         }
     }
 
-    // Processar dados da lista de canais
+    // Canais padrão se não carregar
+    function loadDefaultChannels() {
+        canais = [
+            { name: 'Canal Exemplo 1', url: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8' },
+            { name: 'Canal Exemplo 2', url: 'https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8' }
+        ];
+        renderCanais(canais);
+        hideLoading();
+    }
+
+    // Processar dados da lista de canais - MÉTODO ORIGINAL
     function processChannelData(data) {
         const linhas = data.split('\n');
         const canaisTemp = [];
@@ -915,155 +397,87 @@ document.addEventListener("DOMContentLoaded", function() {
                 const nome = linha.split(',')[1] ? linha.split(',')[1].trim() : 'Canal Desconhecido';
                 const url = linhas[i + 1];
                 if (url && !url.startsWith('#') && url.trim() !== '') {
-                    // Adicionar ícone baseado no tipo de canal
-                    let icon = 'fas fa-tv';
-                    const nomeLower = nome.toLowerCase();
-                    if (nomeLower.includes('filme') || nomeLower.includes('movie')) icon = 'fas fa-film';
-                    if (nomeLower.includes('esporte') || nomeLower.includes('sport')) icon = 'fas fa-basketball-ball';
-                    if (nomeLower.includes('notícia') || nomeLower.includes('news')) icon = 'fas fa-newspaper';
-                    if (nomeLower.includes('infantil') || nomeLower.includes('kid')) icon = 'fas fa-child';
-                    
                     canaisTemp.push({ 
                         name: nome, 
-                        url: url.trim(),
-                        icon: icon
+                        url: url.trim()
                     });
                 }
             }
         }
 
-        canais = canaisTemp.sort((a, b) => a.name.localeCompare(b.name, 'pt-BR', {sensitivity: 'base'}));
+        canais = canaisTemp.sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
         renderCanais(canais);
-        
-        // Mostrar notificação de sucesso
-        showErrorNotification('Playlist carregada', `${canais.length} canais disponíveis`, 'info');
         hideLoading();
     }
 
-    // Função para renderizar a lista de canais
+    // Função para renderizar a lista de canais - MÉTODO ORIGINAL SIMPLIFICADO
     function renderCanais(lista) {
         listaCanaisElemento.innerHTML = '';
-        for (let i = 0; i < lista.length; i++) {
-            const canal = lista[i];
+        lista.forEach(canal => {
             const li = document.createElement('li');
             li.tabIndex = 0;
-            li.innerHTML = `<i class="${canal.icon} channel-icon"></i> ${canal.name}`;
+            li.textContent = canal.name;
             li.addEventListener('click', function() {
+                // **LÓGICA ORIGINAL QUE FUNCIONA NA SMART TV**
                 loadChannel(canal);
-                // Marca canal ativo
-                const items = listaCanaisElemento.querySelectorAll('li');
-                for (let j = 0; j < items.length; j++) {
-                    items[j].classList.remove('active');
+                
+                // Tela cheia como no original
+                if (video.requestFullscreen) {
+                    video.requestFullscreen().catch(e => console.log('Fullscreen não suportado:', e));
                 }
-                li.classList.add('active');
             });
             listaCanaisElemento.appendChild(li);
-        }
-        
-        // Focar no primeiro canal se existir
-        if (lista.length > 0) {
-            const primeiro = listaCanaisElemento.querySelector('li');
-            primeiro.classList.add('remote-focus');
-        }
+        });
+
+        // Navegação por teclado - MÉTODO ORIGINAL
+        listaCanaisElemento.addEventListener('keydown', e => {
+            const ativo = document.activeElement;
+            if (ativo.tagName.toLowerCase() === 'li') {
+                if (e.key === 'ArrowDown' && ativo.nextElementSibling) {
+                    ativo.nextElementSibling.focus();
+                    e.preventDefault();
+                }
+                if (e.key === 'ArrowUp' && ativo.previousElementSibling) {
+                    ativo.previousElementSibling.focus();
+                    e.preventDefault();
+                }
+                if (e.key === 'Enter') ativo.click();
+            }
+        });
+
+        // Focar no primeiro canal
+        const primeiro = listaCanaisElemento.querySelector('li');
+        if (primeiro) primeiro.focus();
     }
 
-    // Configurar busca
+    // Configurar busca - MÉTODO ORIGINAL
     searchInput.addEventListener('input', () => {
         const filtro = searchInput.value.toLowerCase();
         const filtrados = canais.filter(c => c.name.toLowerCase().includes(filtro));
         renderCanais(filtrados);
     });
 
-    // Navegação por teclado (para controles remotos de TV)
-    document.addEventListener('keydown', e => {
-        const ativo = document.activeElement;
-        
-        // Navegação na lista de canais
-        if (ativo.tagName.toLowerCase() === 'li' && ativo.parentNode === listaCanaisElemento) {
-            if (e.key === 'ArrowDown') {
-                e.preventDefault();
-                const next = ativo.nextElementSibling;
-                if (next) {
-                    ativo.classList.remove('remote-focus');
-                    next.focus();
-                    next.classList.add('remote-focus');
-                    next.scrollIntoView({block: 'nearest'});
-                }
-            }
-            if (e.key === 'ArrowUp') {
-                e.preventDefault();
-                const prev = ativo.previousElementSibling;
-                if (prev) {
-                    ativo.classList.remove('remote-focus');
-                    prev.focus();
-                    prev.classList.add('remote-focus');
-                    prev.scrollIntoView({block: 'nearest'});
-                }
-            }
-            if (e.key === 'Enter') {
-                e.preventDefault();
-                ativo.click();
-            }
-        }
-        
-        // Atalhos globais
-        if (e.key === 'Backspace' || e.key === 'Escape') {
-            if (errorDisplay.classList.contains('visible')) {
-                hideError();
-            }
-            searchInput.value = '';
-            renderCanais(canais);
-            searchInput.focus();
-        }
-    });
-
-    // Focar no search input por padrão
-    searchInput.focus();
-
-    // Iniciar carregamento da lista de canais
-    loadChannelList();
-
     // Configurar event listeners para o player de vídeo
     video.on('loadstart', function() {
-        updateConnectionStatus('Conectando...');
-        showLoading('Carregando transmissão...');
+        showLoading();
     });
 
     video.on('loadeddata', function() {
-        updateConnectionStatus('Conectado', true);
         hideLoading();
         hideError();
-        reconnectCount = 0;
-        updateReconnectAttempts(reconnectCount);
-        
-        // Mostrar notificação de sucesso
-        showErrorNotification('Conexão estabelecida', `Conectado a ${currentChannel.name}`, 'info');
     });
 
     video.on('waiting', function() {
-        updateConnectionStatus('Buffering...');
-        showLoading('Buffering...');
+        showLoading();
     });
 
     video.on('playing', function() {
-        updateConnectionStatus('Conectado', true);
         hideLoading();
     });
 
     video.on('error', function() {
         const error = video.error();
         handleVideoError('Erro no player de vídeo', error);
-    });
-
-    video.on('ended', function() {
-        showErrorNotification('Transmissão encerrada', 'A transmissão do canal foi encerrada.', 'info');
-    });
-
-    // Limpar intervalos quando a página for fechada
-    window.addEventListener('beforeunload', function() {
-        if (connectionCheckInterval) clearInterval(connectionCheckInterval);
-        if (bufferCheckInterval) clearInterval(bufferCheckInterval);
-        if (errorTimeout) clearTimeout(errorTimeout);
     });
 });
 </script>
