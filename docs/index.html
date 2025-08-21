@@ -89,14 +89,12 @@
     }
 
     #sidebar li:hover,
-    #sidebar li:focus,
     #sidebar li.active {
         background-color: #ffcc00;
         color: #000;
-        outline: none;
     }
 
-    /* Barra de rolagem mais larga para Smart TV */
+    /* Barra de rolagem larga para Smart TV */
     #sidebar::-webkit-scrollbar {
         width: 16px;
     }
@@ -163,10 +161,8 @@ document.addEventListener("DOMContentLoaded", function() {
             listaCanaisElemento.innerHTML = '';
             canaisParaRenderizar.forEach((canal, i) => {
                 let li = document.createElement('li');
-                li.tabIndex = 0;
                 li.textContent = canal.name;
                 li.addEventListener('click', () => playCanal(canal.url, li));
-                li.addEventListener('keypress', e => { if(e.key === 'Enter') playCanal(canal.url, li); });
                 listaCanaisElemento.appendChild(li);
             });
         }
@@ -181,10 +177,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     function playCanal(url, liElemento) {
-        // Remove classe ativa de outros elementos
         document.querySelectorAll('#lista-canais li').forEach(el => el.classList.remove('active'));
         liElemento.classList.add('active');
-
         video.src({ type: 'application/x-mpegURL', src: url });
         video.play();
         video.requestFullscreen();
@@ -195,25 +189,8 @@ document.addEventListener("DOMContentLoaded", function() {
         video.src({ type: 'application/x-mpegURL', src: url });
         video.play();
         video.off('error');
-        video.on('error', () => {
-            reconectar(url);
-        });
+        video.on('error', () => reconectar(url));
     }
-
-    // Navegação via teclado/controle remoto
-    listaCanaisElemento.addEventListener('keydown', e => {
-        let ativo = document.activeElement;
-        if(ativo.tagName.toLowerCase() === 'li') {
-            if(e.key === 'ArrowDown' && ativo.nextElementSibling) {
-                ativo.nextElementSibling.focus();
-                ativo.nextElementSibling.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            }
-            if(e.key === 'ArrowUp' && ativo.previousElementSibling) {
-                ativo.previousElementSibling.focus();
-                ativo.previousElementSibling.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            }
-        }
-    });
 });
 </script>
 </body>
