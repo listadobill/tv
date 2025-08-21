@@ -46,11 +46,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const video = videojs('video-player', {
         controls: true,
-        autoplay: false,
+        autoplay: true,   // habilita autoplay
+        muted: true,      // inicia mudo para passar nas regras de autoplay
         preload: 'auto',
         fluid: true,
         responsive: true
     });
+
+    // Função para tentar play mesmo se o navegador bloquear
+    function tentarPlay() {
+        video.play().then(() => {
+            // Assim que começar a tocar, desativa o mudo
+            if (video.muted()) {
+                video.muted(false);
+            }
+        }).catch(err => {
+            console.log("Autoplay bloqueado, precisa de interação:", err);
+        });
+    }
 
     fetch(listaURL)
         .then(r => r.text())
@@ -75,9 +88,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     li.tabIndex = 0;
                     li.textContent = canal.name;
                     li.addEventListener('click', function() {
-                        // **Aqui está a lógica original funcional para Smart TV**
                         video.src({ type:'application/x-mpegURL', src: canal.url });
-                        video.play();
+                        tentarPlay();
                         if(video.requestFullscreen) video.requestFullscreen();
                         reconectar(canal.url);
                         // Marca canal ativo
@@ -120,12 +132,35 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function reconectar(url){
         video.src({ type:'application/x-mpegURL', src: url });
-        video.play();
+        tentarPlay();
         video.off('error');
         video.on('error', function() {
             setTimeout(()=>reconectar(url), 5000);
         });
     }
+
+    // Eventos extras para autoplay forçado
+    video.on('ended', () => {
+        console.log("Stream terminou, tentando autoplay...");
+        tentarPlay();
+    });
+
+    video.on('pause', () => {
+        if (!video.ended()) {
+            console.log("Pausou inesperadamente, tentando autoplay...");
+            tentarPlay();
+        }
+    });
+
+    video.on('stalled', () => {
+        console.log("Stalled detectado, tentando autoplay...");
+        tentarPlay();
+    });
+
+    video.on('waiting', () => {
+        console.log("Esperando dados, tentando autoplay...");
+        tentarPlay();
+    });
 });
 </script>
 </body>
