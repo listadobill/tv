@@ -26,12 +26,12 @@
     }
 
     #header {
-        background-color: rgba(0, 128, 0, 0.8); /* Verde */
+        background-color: rgba(0, 128, 0, 0.8);
         padding: 10px;
         text-align: center;
         font-size: 1.4em;
         font-weight: bold;
-        border-bottom: 1px solid #ffcc00; /* Amarelo */
+        border-bottom: 1px solid #ffcc00;
     }
 
     #main {
@@ -58,7 +58,7 @@
         background-color: rgba(34, 34, 34, 0.8);
         overflow-y: auto;
         padding: 10px;
-        border-left: 2px solid #ffcc00; /* Amarelo */
+        border-left: 2px solid #ffcc00;
     }
 
     #search-bar {
@@ -82,26 +82,28 @@
     #sidebar li {
         background-color: rgba(50, 50, 50, 0.8);
         border-radius: 8px;
-        padding: 10px;
-        display: flex;
-        align-items: center;
+        padding: 12px 10px;
         cursor: pointer;
+        font-size: 1.1em;
         transition: background-color 0.3s ease;
     }
 
     #sidebar li:hover,
-    #sidebar li:focus {
-        background-color: #ffcc00; /* Amarelo */
+    #sidebar li:focus,
+    #sidebar li.active {
+        background-color: #ffcc00;
+        color: #000;
         outline: none;
     }
 
-    #sidebar img {
-        width: 50px;
-        height: 50px;
-        margin-right: 10px;
-        border-radius: 50%;
-        border: 2px solid #ffcc00; /* Amarelo */
-        object-fit: cover;
+    /* Barra de rolagem mais larga para Smart TV */
+    #sidebar::-webkit-scrollbar {
+        width: 16px;
+    }
+
+    #sidebar::-webkit-scrollbar-thumb {
+        background-color: #ffcc00;
+        border-radius: 8px;
     }
 
     .video-js.vjs-fullscreen {
@@ -112,38 +114,21 @@
         left: 0;
     }
 
-    /* Ocultar mensagens de erro do player */
     .vjs-error-display {
         display: none !important;
-    }
-
-    /* Scrollbar suave */
-    #sidebar::-webkit-scrollbar {
-        width: 8px;
-    }
-
-    #sidebar::-webkit-scrollbar-thumb {
-        background-color: #666;
-        border-radius: 4px;
     }
 </style>
 </head>
 <body>
 <div id="container">
-    <div id="header">
-        TV DO BILL
-    </div>
-
+    <div id="header">TV DO BILL</div>
     <div id="main">
         <div id="sidebar">
             <div id="search-bar">
                 <input type="text" id="search-input" placeholder="Buscar canal...">
             </div>
-            <ul id="lista-canais">
-                <!-- Canais serão carregados dinamicamente -->
-            </ul>
+            <ul id="lista-canais"></ul>
         </div>
-
         <div id="player">
             <video id="video-player" class="video-js vjs-default-skin" controls></video>
         </div>
@@ -158,7 +143,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const searchInput = document.getElementById("search-input");
     const video = videojs('video-player', { controls: true, autoplay: false, preload: 'auto', fluid: true });
 
-    // Carregar canais da lista M3U
     fetch(listaURL)
     .then(response => response.text())
     .then(data => {
@@ -173,17 +157,16 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
 
-        // Ordenar alfabeticamente
         canais.sort((a,b) => a.name.localeCompare(b.name, 'pt-BR'));
 
         function renderizarCanais(canaisParaRenderizar) {
             listaCanaisElemento.innerHTML = '';
-            canaisParaRenderizar.forEach(canal => {
+            canaisParaRenderizar.forEach((canal, i) => {
                 let li = document.createElement('li');
-                li.tabIndex = 0; // Para navegação via teclado/controle remoto
-                li.innerHTML = `<img src="https://via.placeholder.com/50" alt="${canal.name}">${canal.name}`;
-                li.addEventListener('click', () => playCanal(canal.url));
-                li.addEventListener('keypress', e => { if(e.key === 'Enter') playCanal(canal.url); });
+                li.tabIndex = 0;
+                li.textContent = canal.name;
+                li.addEventListener('click', () => playCanal(canal.url, li));
+                li.addEventListener('keypress', e => { if(e.key === 'Enter') playCanal(canal.url, li); });
                 listaCanaisElemento.appendChild(li);
             });
         }
@@ -197,7 +180,11 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    function playCanal(url) {
+    function playCanal(url, liElemento) {
+        // Remove classe ativa de outros elementos
+        document.querySelectorAll('#lista-canais li').forEach(el => el.classList.remove('active'));
+        liElemento.classList.add('active');
+
         video.src({ type: 'application/x-mpegURL', src: url });
         video.play();
         video.requestFullscreen();
@@ -207,11 +194,26 @@ document.addEventListener("DOMContentLoaded", function() {
     function reconectar(url) {
         video.src({ type: 'application/x-mpegURL', src: url });
         video.play();
-        video.off('error'); // Remove handlers antigos
+        video.off('error');
         video.on('error', () => {
-            reconectar(url); // Reconecta imediatamente
+            reconectar(url);
         });
     }
+
+    // Navegação via teclado/controle remoto
+    listaCanaisElemento.addEventListener('keydown', e => {
+        let ativo = document.activeElement;
+        if(ativo.tagName.toLowerCase() === 'li') {
+            if(e.key === 'ArrowDown' && ativo.nextElementSibling) {
+                ativo.nextElementSibling.focus();
+                ativo.nextElementSibling.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+            if(e.key === 'ArrowUp' && ativo.previousElementSibling) {
+                ativo.previousElementSibling.focus();
+                ativo.previousElementSibling.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+    });
 });
 </script>
 </body>
