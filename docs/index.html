@@ -15,7 +15,7 @@
         display: flex;
         flex-direction: column;
         height: 100vh;
-        overflow-y: auto;
+        overflow: hidden;
     }
 
     #container {
@@ -25,31 +25,10 @@
         height: 100%;
     }
 
-    #header {
-        padding: 10px;
-        text-align: center;
-        font-size: 1.2em;
-        border-bottom: 1px solid #ffcc00;
-    }
-
-    #search-bar {
-        padding: 10px;
-        background-color: #333;
-        text-align: center;
-    }
-
-    #search-input {
-        width: 95%;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        font-size: 1em;
-    }
-
     #main {
         display: flex;
         flex: 1;
-        overflow-y: auto;
+        overflow: hidden;
     }
 
     #player {
@@ -113,6 +92,19 @@
         display: none !important;
     }
 
+    #search-bar {
+        padding: 10px;
+        text-align: center;
+    }
+
+    #search-input {
+        width: 95%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+    }
+
     ::-webkit-scrollbar {
         width: 16px;
     }
@@ -125,9 +117,6 @@
 </head>
 <body>
 <div id="container">
-    <div id="header">
-        TV DO BILL
-    </div>
     <div id="main">
         <div id="sidebar">
             <div id="search-bar">
