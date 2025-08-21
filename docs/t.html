@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TV DO BILL1</title>
+<title>TV DO BILL</title>
 <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
 <style>
     body { font-family: Arial,sans-serif; margin:0; padding:0; background:#000; color:#fff; display:flex; flex-direction:column; height:100vh; overflow:hidden; }
@@ -46,8 +46,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const video = videojs('video-player', {
         controls: true,
-        autoplay: true,   // 🔑 habilita autoplay
-        muted: true,      // 🔑 necessário para autoplay automático
+        autoplay: true,   // habilita autoplay
+        muted: true,      // inicia mudo para passar nas regras de autoplay
         preload: 'auto',
         fluid: true,
         responsive: true
@@ -55,7 +55,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Função para tentar play mesmo se o navegador bloquear
     function tentarPlay() {
-        video.play().catch(err => {
+        video.play().then(() => {
+            // Assim que começar a tocar, desativa o mudo
+            if (video.muted()) {
+                video.muted(false);
+            }
+        }).catch(err => {
             console.log("Autoplay bloqueado, precisa de interação:", err);
         });
     }
@@ -134,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // 🔑 Eventos extras para autoplay forçado
+    // Eventos extras para autoplay forçado
     video.on('ended', () => {
         console.log("Stream terminou, tentando autoplay...");
         tentarPlay();
@@ -160,4 +165,3 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 </body>
 </html>
-
