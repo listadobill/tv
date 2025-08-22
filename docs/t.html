@@ -42,20 +42,25 @@ body {
 ::-webkit-scrollbar-thumb { background:#ffcc00; border-radius:10px; }
 
 /* ================================
-   Video.js Custom Controls - YouTube Style
+   Video.js Custom Controls - YouTube Style no topo
 ================================ */
 
-/* Barra de controles */
+/* Barra de controles no topo */
 .video-js .vjs-control-bar {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
     background: rgba(0,0,0,0.6) !important;
-    padding: 10px 15px !important;
-    display:flex !important;
-    align-items:center !important;
+    padding: 8px 15px !important;
+    display: flex !important;
+    align-items: center !important;
+    box-sizing: border-box;
 }
 
 /* Centraliza os controles horizontais */
 .video-js .vjs-control-bar .vjs-control {
-    margin: 0 8px !important;
+    margin: 0 6px !important;
 }
 
 /* Botão de play grande central */
@@ -74,7 +79,7 @@ body {
 /* Barra de progresso */
 .video-js .vjs-progress-holder {
     height: 14px !important;
-    margin: 0 10px !important;
+    margin: 0 5px !important;
     border-radius:7px;
 }
 .video-js .vjs-play-progress {
@@ -87,16 +92,14 @@ body {
     height: 14px !important;
     border-radius:7px;
 }
-.video-js .vjs-slider {
-    height: 14px !important;
-}
+.video-js .vjs-slider { height: 14px !important; }
 
 /* Tempo e tooltip */
 .video-js .vjs-time-control, .video-js .vjs-current-time, .video-js .vjs-duration {
     font-size: 1.2em !important;
 }
 
-/* Botões */
+/* Botões grandes e alinhados */
 .video-js .vjs-control {
     width: 45px !important;
     height: 45px !important;
