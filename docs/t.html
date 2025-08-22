@@ -152,13 +152,15 @@ document.addEventListener("DOMContentLoaded", function() {
         }).catch(err => console.log("Autoplay bloqueado:", err));
     }
 
-    // Clique no player ativa fullscreen
+    // Toggle fullscreen em clique único
     const playerContainer = document.getElementById('player');
     playerContainer.addEventListener('click', () => {
-        if(video.requestFullscreen) {
-            video.requestFullscreen().catch(()=>console.log("Fullscreen não disponível"));
-        } else if(video.webkitRequestFullscreen) {
-            video.webkitRequestFullscreen();
+        if (!document.fullscreenElement) {
+            if(video.requestFullscreen) video.requestFullscreen().catch(()=>console.log("Fullscreen não disponível"));
+            else if(video.webkitRequestFullscreen) video.webkitRequestFullscreen();
+        } else {
+            if(document.exitFullscreen) document.exitFullscreen();
+            else if(document.webkitExitFullscreen) document.webkitExitFullscreen();
         }
     });
 
