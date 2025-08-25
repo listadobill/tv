@@ -26,23 +26,23 @@ body {
     width:100% !important;
     height:100% !important;
     background:#000;
-    font-size: 1.3em;
+    font-size: 1.4em;
 }
 
 /* Sidebar */
-#sidebar { flex:1; background:rgba(34,34,34,0.8); overflow-y:auto; padding:10px; border-left:2px solid #ffcc00; }
+#sidebar { flex:1; background:rgba(20,20,20,0.9); overflow-y:auto; padding:10px; border-left:3px solid #600; }
 #sidebar ul { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px; }
-#sidebar li { background:rgba(50,50,50,0.8); border-radius:8px; padding:10px; cursor:pointer; transition:background-color 0.3s; }
-#sidebar li:hover, #sidebar li:focus, #sidebar li.active { background:#ffcc00; color:#000; outline:none; }
+#sidebar li { background:rgba(60,60,60,0.85); border-radius:8px; padding:12px; cursor:pointer; transition:all 0.3s; font-size:1.1em; }
+#sidebar li:hover, #sidebar li:focus, #sidebar li.active { background:#900; color:#fff; outline:none; transform:scale(1.03); }
 #search-bar { padding:10px; text-align:center; }
 #search-input { width:95%; padding:10px; border:none; border-radius:5px; font-size:1em; }
 
 .vjs-error-display { display:none !important; }
 ::-webkit-scrollbar { width:16px; }
-::-webkit-scrollbar-thumb { background:#ffcc00; border-radius:10px; }
+::-webkit-scrollbar-thumb { background:#900; border-radius:10px; }
 
 /* ================================
-   Video.js Custom Controls - YouTube Style no topo
+   Video.js Custom Controls - estilo TV
 ================================ */
 
 /* Barra de controles no topo */
@@ -51,26 +51,27 @@ body {
     top: 0 !important;
     left: 0 !important;
     width: 100% !important;
-    background: rgba(0,0,0,0.6) !important;
-    padding: 8px 15px !important;
+    background: rgba(60,0,0,0.85) !important;
+    padding: 10px 15px !important;
     display: flex !important;
     align-items: center !important;
     box-sizing: border-box;
+    height:70px !important;
 }
 
 /* Centraliza os controles horizontais */
 .video-js .vjs-control-bar .vjs-control {
-    margin: 0 6px !important;
+    margin: 0 8px !important;
 }
 
 /* Botão de play grande central */
 .video-js .vjs-big-play-button {
-    background: rgba(255,0,0,0.8) !important;
+    background: rgba(200,0,0,0.85) !important;
     border:none !important;
     border-radius:50% !important;
-    width:90px !important;
-    height:90px !important;
-    font-size: 2.5em !important;
+    width:100px !important;
+    height:100px !important;
+    font-size: 2.8em !important;
     top:50% !important;
     left:50% !important;
     transform: translate(-50%, -50%) !important;
@@ -83,12 +84,12 @@ body {
     border-radius:7px;
 }
 .video-js .vjs-play-progress {
-    background-color: #ff0000 !important;
+    background-color: #c00 !important;
     height: 14px !important;
     border-radius:7px;
 }
 .video-js .vjs-load-progress {
-    background-color: rgba(255,255,255,0.3) !important;
+    background-color: rgba(255,255,255,0.25) !important;
     height: 14px !important;
     border-radius:7px;
 }
@@ -96,22 +97,23 @@ body {
 
 /* Tempo e tooltip */
 .video-js .vjs-time-control, .video-js .vjs-current-time, .video-js .vjs-duration {
-    font-size: 1.2em !important;
+    font-size: 1.3em !important;
+    color: #fff !important;
 }
 
-/* Botões grandes e alinhados */
+/* Botões maiores */
 .video-js .vjs-control {
-    width: 45px !important;
-    height: 45px !important;
+    width: 50px !important;
+    height: 50px !important;
 }
 .video-js .vjs-play-control .vjs-icon-placeholder,
 .video-js .vjs-fullscreen-control .vjs-icon-placeholder,
 .video-js .vjs-volume-menu-button .vjs-icon-placeholder {
-    font-size: 2em !important;
+    font-size: 2.2em !important;
 }
 
 /* Volume */
-.video-js .vjs-volume-level { background-color: #ff0000 !important; }
+.video-js .vjs-volume-level { background-color: #c00 !important; }
 .video-js .vjs-volume-bar { height:14px !important; border-radius:7px; }
 </style>
 </head>
