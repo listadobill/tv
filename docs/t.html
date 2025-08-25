@@ -5,30 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TV DO BILL</title>
 <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
-:root {
-    --primary: #ff3366;
-    --secondary: #20c4f5;
-    --dark: #0f172a;
-    --light-dark: #1e293b;
-    --darker: #020617;
-    --text: #f8fafc;
-    --text-secondary: #94a3b8;
-    --success: #10b981;
-    --overlay: rgba(0, 0, 0, 0.85);
-}
-
-* {
-    box-sizing: border-box;
-}
-
+/* Reset e estilos básicos */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: var(--darker);
-    color: var(--text);
+    background: #000;
+    color: #fff;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -40,7 +24,7 @@ body {
     flex-direction: column; 
     width: 100%; 
     height: 100%; 
-    background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%);
+    background: #000;
 }
 
 #main { 
@@ -52,53 +36,46 @@ body {
 /* Player */
 #player { 
     flex: 2; 
-    background: var(--overlay); 
+    background: #000; 
     position: relative; 
     display: flex; 
     justify-content: center; 
     align-items: center; 
     overflow: hidden; 
     cursor: pointer;
-    border-right: 1px solid var(--light-dark);
+    border-right: 1px solid #333;
 }
 
 .video-js {
     width: 100% !important;
     height: 100% !important;
     background: #000;
-    font-size: 1.3em;
 }
 
 /* Sidebar */
 #sidebar { 
     flex: 1; 
-    background: var(--overlay); 
+    background: #111; 
     overflow-y: auto; 
     padding: 0;
     display: flex;
     flex-direction: column;
     max-width: 400px;
     min-width: 300px;
-    border-left: 1px solid var(--light-dark);
 }
 
 .sidebar-header {
-    padding: 20px;
-    background: var(--dark);
-    border-bottom: 1px solid var(--light-dark);
+    padding: 15px;
+    background: #222;
+    border-bottom: 1px solid #333;
 }
 
 .sidebar-title {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin: 0 0 15px 0;
-    font-size: 1.5rem;
-    color: var(--secondary);
-}
-
-.sidebar-title i {
-    color: var(--primary);
+    margin: 0 0 10px 0;
+    font-size: 1.3rem;
+    color: #20c4f5;
 }
 
 #search-bar { 
@@ -108,31 +85,25 @@ body {
 
 #search-input { 
     width: 100%; 
-    padding: 12px 15px 12px 45px; 
-    border: 1px solid var(--light-dark);
-    background: var(--dark);
-    border-radius: 8px; 
-    font-size: 1rem;
-    color: var(--text);
-    transition: all 0.3s;
+    padding: 10px 10px 10px 35px; 
+    border: 1px solid #333;
+    background: #222;
+    border-radius: 4px; 
+    font-size: 0.9rem;
+    color: #fff;
 }
 
-#search-input:focus {
-    outline: none;
-    border-color: var(--secondary);
-    box-shadow: 0 0 0 2px rgba(32, 196, 245, 0.3);
-}
-
-#search-bar i {
+#search-bar:before {
+    content: "🔍";
     position: absolute;
-    left: 15px;
+    left: 10px;
     top: 50%;
     transform: translateY(-50%);
-    color: var(--text-secondary);
+    color: #999;
 }
 
 #lista-canais {
-    padding: 15px;
+    padding: 10px;
     margin: 0;
 }
 
@@ -142,172 +113,149 @@ body {
     margin: 0; 
     display: flex; 
     flex-direction: column; 
-    gap: 8px; 
+    gap: 5px; 
 }
 
 #sidebar li { 
-    background: var(--light-dark); 
-    border-radius: 8px; 
-    padding: 12px 15px;
+    background: #222; 
+    border-radius: 4px; 
+    padding: 10px;
     cursor: pointer; 
-    transition: all 0.3s;
     display: flex;
     align-items: center;
-    gap: 10px;
-    border-left: 4px solid transparent;
+    border-left: 3px solid transparent;
 }
 
-#sidebar li:hover, 
-#sidebar li:focus { 
-    background: var(--dark);
-    border-left-color: var(--primary);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+#sidebar li:hover { 
+    background: #333;
 }
 
 #sidebar li.active { 
-    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    background: #ff3366;
     color: white;
     border-left-color: white;
 }
 
 .channel-icon {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text-secondary);
+    margin-right: 8px;
+    color: #999;
 }
 
 #sidebar li.active .channel-icon {
     color: white;
 }
 
-/* Scrollbar personalizada */
+/* Scrollbar simplificada */
 ::-webkit-scrollbar { 
-    width: 10px; 
+    width: 8px; 
 }
 
 ::-webkit-scrollbar-thumb { 
-    background: var(--primary); 
-    border-radius: 10px; 
+    background: #ff3366; 
+    border-radius: 4px; 
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--dark);
+    background: #222;
 }
 
-/* Video.js Custom Controls - YouTube Style no topo */
+/* Video.js Custom Controls */
 .video-js .vjs-control-bar {
     position: absolute !important;
     top: 0 !important;
     left: 0 !important;
     width: 100% !important;
-    background: rgba(15, 23, 42, 0.9) !important;
-    padding: 12px 20px !important;
+    background: rgba(0, 0, 0, 0.8) !important;
+    padding: 10px 15px !important;
     display: flex !important;
     align-items: center !important;
     box-sizing: border-box;
-    border-bottom: 1px solid var(--light-dark);
+    border-bottom: 1px solid #333;
 }
 
 .video-js .vjs-control-bar .vjs-control {
-    margin: 0 8px !important;
+    margin: 0 5px !important;
 }
 
 .video-js .vjs-big-play-button {
-    background: var(--primary) !important;
+    background: #ff3366 !important;
     border: none !important;
     border-radius: 50% !important;
-    width: 80px !important;
-    height: 80px !important;
-    font-size: 2.5em !important;
+    width: 70px !important;
+    height: 70px !important;
+    font-size: 2em !important;
     top: 50% !important;
     left: 50% !important;
     transform: translate(-50%, -50%) !important;
-    transition: all 0.3s;
-    box-shadow: 0 4px 12px rgba(255, 51, 102, 0.4);
-}
-
-.video-js .vjs-big-play-button:hover {
-    background: var(--secondary) !important;
-    transform: translate(-50%, -50%) scale(1.1) !important;
 }
 
 .video-js .vjs-progress-holder {
-    height: 10px !important;
-    margin: 0 8px !important;
-    border-radius: 5px;
+    height: 8px !important;
+    margin: 0 5px !important;
+    border-radius: 4px;
     background: rgba(255, 255, 255, 0.2);
 }
 
 .video-js .vjs-play-progress {
-    background: linear-gradient(90deg, var(--primary), var(--secondary)) !important;
-    height: 10px !important;
-    border-radius: 5px;
+    background: #ff3366 !important;
+    height: 8px !important;
+    border-radius: 4px;
 }
 
 .video-js .vjs-load-progress {
     background: rgba(255, 255, 255, 0.1) !important;
-    height: 10px !important;
-    border-radius: 5px;
+    height: 8px !important;
+    border-radius: 4px;
 }
 
 .video-js .vjs-slider { 
-    height: 10px !important; 
+    height: 8px !important; 
 }
 
 .video-js .vjs-time-control, 
 .video-js .vjs-current-time, 
 .video-js .vjs-duration {
-    font-size: 1.1em !important;
-    color: var(--text) !important;
+    font-size: 1em !important;
+    color: #fff !important;
 }
 
 .video-js .vjs-control {
-    width: 40px !important;
-    height: 40px !important;
+    width: 35px !important;
+    height: 35px !important;
 }
 
 .video-js .vjs-play-control .vjs-icon-placeholder,
 .video-js .vjs-fullscreen-control .vjs-icon-placeholder,
 .video-js .vjs-volume-menu-button .vjs-icon-placeholder {
-    font-size: 1.8em !important;
-    color: var(--text);
+    font-size: 1.5em !important;
+    color: #fff;
 }
 
 .video-js .vjs-volume-level { 
-    background: var(--secondary) !important; 
+    background: #20c4f5 !important; 
 }
 
 .video-js .vjs-volume-bar { 
-    height: 12px !important; 
-    border-radius: 6px; 
+    height: 10px !important; 
+    border-radius: 5px; 
     background: rgba(255, 255, 255, 0.2);
-}
-
-.video-js .vjs-mute-control:hover,
-.video-js .vjs-play-control:hover,
-.video-js .vjs-fullscreen-control:hover {
-    color: var(--secondary) !important;
-}
-
-/* Loading indicator */
-.vjs-loading-spinner {
-    border-color: var(--primary) !important;
 }
 
 /* Status message */
 .status-message {
     position: absolute;
-    top: 20px;
+    top: 15px;
     left: 50%;
     transform: translateX(-50%);
-    background: var(--overlay);
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 0.9rem;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 0.8rem;
     z-index: 10;
     display: none;
 }
@@ -333,30 +281,30 @@ body {
         min-width: 100%;
         max-height: 40%;
         border-left: none;
-        border-top: 1px solid var(--light-dark);
+        border-top: 1px solid #333;
     }
     
     .video-js .vjs-control-bar {
-        padding: 10px 15px !important;
+        padding: 8px 12px !important;
     }
     
     .video-js .vjs-control {
-        width: 36px !important;
-        height: 36px !important;
+        width: 32px !important;
+        height: 32px !important;
     }
 }
 
 @media (max-width: 768px) {
     .sidebar-title {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     
     #search-input {
-        padding: 10px 15px 10px 40px;
+        padding: 8px 8px 8px 30px;
     }
     
     #sidebar li {
-        padding: 10px 12px;
+        padding: 8px;
     }
 }
 </style>
@@ -371,9 +319,8 @@ body {
         </div>
         <div id="sidebar">
             <div class="sidebar-header">
-                <h2 class="sidebar-title"><i class="fas fa-tv"></i> TV DO BILL</h2>
+                <h2 class="sidebar-title">TV DO BILL</h2>
                 <div id="search-bar">
-                    <i class="fas fa-search"></i>
                     <input type="text" id="search-input" placeholder="Buscar canal...">
                 </div>
             </div>
@@ -467,7 +414,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     
                     const icon = document.createElement('div');
                     icon.className = 'channel-icon';
-                    icon.innerHTML = '<i class="fas fa-play"></i>';
+                    icon.innerHTML = '▶';
                     
                     const text = document.createElement('span');
                     text.textContent = canal.name;
