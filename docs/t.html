@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <title>TV DO BILL</title>
+  <style>
+    :root{
+      --bg:#0b0f14;       /* fundo principal */
+      --bg2:#0f141b;      /* painel/gradiente */
+      --fg:#e7edf5;       /* texto principal */
+      --muted:#a6b0be;    /* texto secundário */
+      --accent:#00d4ff;   /* cor de destaque */
+      --accent-2:#7c4dff; /* cor de destaque 2 */
+      --card:#121821;     /* fundo do card */
+      --border:#1e2632;   /* borda sutil */
+      --shadow: 0 12px 30px rgba(0,0,0,.35), 0 2px 10px rgba(0,0,0,.3);
+    }
+
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Noto Sans", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color:var(--fg);
+      background:
+        radial-gradient(1200px 800px at 10% 0%, rgba(124,77,255,.15), transparent 60%),
+        radial-gradient(1200px 800px at 100% 100%, rgba(0,212,255,.12), transparent 60%),
+        linear-gradient(180deg, var(--bg2), var(--bg));
+      background-attachment: fixed;
+    }
+
+    .wrap{
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 28px 20px 64px;
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:22px;
+    }
+    .brand{
+      display:flex;align-items:center;gap:14px;
+    }
+    .brand-logo{
+      width:56px;height:56px;border-radius:16px;overflow:hidden;box-shadow: var(--shadow);
+      background:#000 url('https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2Fg1Qau6PT4Wk%2Fmaxresdefault.jpg&sp=1756831966T718a749d76a74bfade1fc82940a16c291fc8d034745d12405f900f344d5aa014') center/cover no-repeat;
+      flex:0 0 auto;
+    }
+    .brand h1{margin:0;font-size:clamp(22px,4vw,32px);letter-spacing:.4px}
+    .brand h1 span{background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hint{color:var(--muted);font-size:14px}
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap:20px;
+    }
+
+    .card{
+      position:relative;
+      background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01)) ;
+      border:1px solid var(--border);
+      border-radius:24px;
+      overflow:hidden;
+      box-shadow: var(--shadow);
+      outline:none;
+    }
+    .card:focus-visible{box-shadow:0 0 0 4px rgba(124,77,255,.5), var(--shadow)}
+
+    .thumb{
+      height:180px;
+      background:#000 url('https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2Fg1Qau6PT4Wk%2Fmaxresdefault.jpg&sp=1756831966T718a749d76a74bfade1fc82940a16c291fc8d034745d12405f900f344d5aa014') center/cover no-repeat;
+      filter:saturate(0.9) contrast(1.05);
+    }
+
+    .card-body{padding:18px}
+
+    .title{margin:0 0 8px;font-size:22px}
+    .desc{margin:0 0 18px;color:var(--muted)}
+
+    .row{display:flex;gap:12px;flex-wrap:wrap}
+
+    .btn{
+      appearance:none;border:none;cursor:pointer;
+      padding:14px 18px;border-radius:16px;font-weight:700;font-size:18px;letter-spacing:.2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2)); color:#000;
+      box-shadow: var(--shadow);
+      transition: transform .08s ease, filter .2s ease, box-shadow .2s ease;
+      text-decoration:none;display:inline-flex;align-items:center;gap:10px;
+    }
+    .btn:hover{transform:translateY(-2px);filter:brightness(1.05)}
+    .btn:active{transform:translateY(0)}
+
+    .link-download{display:inline-block;margin-top:12px;font-size:15px;color:var(--fg);opacity:.9;text-decoration:none}
+    .link-download:hover{text-decoration:underline}
+
+    .app-cta{
+      margin-top:28px;
+      padding:16px;
+      border:1px dashed var(--border);
+      border-radius:20px;
+      background:linear-gradient(180deg, rgba(124,77,255,.08), rgba(0,212,255,.06));
+      display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap
+    }
+    .app-cta strong{font-size:18px}
+
+    /* Tamanho confortável para Smart TV */
+    @media (min-width: 1024px){
+      .btn{font-size:20px;padding:16px 22px}
+      .title{font-size:24px}
+      .desc{font-size:17px}
+      .thumb{height:200px}
+    }
+
+    /* Navegação por setas (indicativo) */
+    .kbd{font: 600 12px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; background:#11161f; border:1px solid var(--border); padding:2px 6px; border-radius:6px; color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand" aria-label="TV DO BILL">
+        <div class="brand-logo" role="img" aria-label="Logotipo TV DO BILL"></div>
+        <h1>TV DO BILL <span>• canais web</span></h1>
+      </div>
+      <div class="hint">Use <span class="kbd">↔</span> e <span class="kbd">↕</span> para navegar; <span class="kbd">Enter</span> para abrir.</div>
+    </header>
+
+    <section class="grid" aria-label="Lista de servidores e canais">
+      <!-- Servidor 1 -->
+      <article class="card" tabindex="0">
+        <div class="thumb" aria-hidden="true"></div>
+        <div class="card-body">
+          <h2 class="title">Servidor 1</h2>
+          <p class="desc">Acesse a lista principal de canais via servidor 1.</p>
+          <div class="row">
+            <a class="btn" href="https://listadobill.github.io/tv/servidor1" target="_blank" rel="noopener">Abrir Servidor 1</a>
+          </div>
+          <a href="#" class="link-download" onclick="return downloadSource('https://listadobill.github.io/tv/servidor1','servidor1.html')">Para assistir no computador clique aqui</a>
+        </div>
+      </article>
+
+      <!-- Servidor 2 -->
+      <article class="card" tabindex="0">
+        <div class="thumb" aria-hidden="true"></div>
+        <div class="card-body">
+          <h2 class="title">Servidor 2</h2>
+          <p class="desc">Alternativa de acesso com a mesma experiência.</p>
+          <div class="row">
+            <a class="btn" href="https://listadobill.github.io/tv/servidor2" target="_blank" rel="noopener">Abrir Servidor 2</a>
+          </div>
+          <a href="#" class="link-download" onclick="return downloadSource('https://listadobill.github.io/tv/servidor2','servidor2.html')">Para assistir no computador clique aqui</a>
+        </div>
+      </article>
+
+      <!-- Canais WEB Brasileiros -->
+      <article class="card" tabindex="0">
+        <div class="thumb" aria-hidden="true"></div>
+        <div class="card-body">
+          <h2 class="title">Canais WEB Brasileiros</h2>
+          <p class="desc">Coleção de canais web focados no Brasil.</p>
+          <div class="row">
+            <a class="btn" href="https://listadobill.github.io/tv/brasil" target="_blank" rel="noopener">Abrir Canais WEB Brasileiros</a>
+          </div>
+          <a href="#" class="link-download" onclick="return downloadSource('https://listadobill.github.io/tv/brasil','canais-web-brasileiros.html')">Para assistir no computador clique aqui</a>
+        </div>
+      </article>
+    </section>
+
+    <div class="app-cta">
+      <strong>Quer assistir no Android com app leve?</strong>
+      <a class="btn" href="https://drive.google.com/file/d/1uVNYvaBjf6YI1pS48WQ2W_XoMTgM3CYq/view?usp=sharing" target="_blank" rel="noopener">Baixe o APP DO BILL para Android</a>
+    </div>
+  </div>
+
+  <script>
+    // Download do código-fonte (se CORS permitir). Se não, gera um HTML de redirecionamento como alternativa.
+    async function downloadSource(url, filename){
+      try{
+        const res = await fetch(url, {mode:'cors', cache:'no-store'});
+        if(!res.ok) throw new Error('HTTP '+res.status);
+        const text = await res.text();
+        const blob = new Blob([text], {type:'text/html;charset=utf-8'});
+        triggerDownload(blob, filename);
+      }catch(err){
+        // Fallback: entrega um HTML simples que abre a página desejada
+        const safeUrl = url.replace(/"/g,'&quot;');
+        const fallback = `<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8">`+
+          `<meta name="viewport" content="width=device-width, initial-scale=1">`+
+          `<title>${filename}</title>`+
+          `<meta http-equiv="refresh" content="0;url=${safeUrl}">`+
+          `</head><body>`+
+          `<p style="font-family:system-ui,Arial">Abrindo <a href="${safeUrl}">${safeUrl}</a>...</p>`+
+          `</body></html>`;
+        const blob = new Blob([fallback], {type:'text/html;charset=utf-8'});
+        triggerDownload(blob, filename);
+      }
+      return false; // previne navegação do link
+    }
+
+    function triggerDownload(blob, filename){
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(()=>{URL.revokeObjectURL(a.href); a.remove();}, 0);
+    }
+
+    // Navegação por setas entre os cards (útil em Smart TVs/teclado)
+    (function enableArrowNav(){
+      const cards = Array.from(document.querySelectorAll('.card'));
+      cards.forEach((c,i)=>c.dataset.index=i);
+      document.addEventListener('keydown', (e)=>{
+        const active = document.activeElement.closest?.('.card');
+        if(!active) return;
+        const i = Number(active.dataset.index);
+        let target = null;
+        if(e.key==='ArrowRight'){ target = cards[Math.min(i+1, cards.length-1)]; }
+        if(e.key==='ArrowLeft'){ target = cards[Math.max(i-1, 0)]; }
+        if(e.key==='ArrowDown'){ target = cards[Math.min(i+1, cards.length-1)]; }
+        if(e.key==='ArrowUp'){ target = cards[Math.max(i-1, 0)]; }
+        if(target && target !== active){
+          e.preventDefault();
+          target.focus();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
