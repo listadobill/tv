@@ -11,6 +11,7 @@
       font-family: Arial, sans-serif;
       background:#000;
       color:#fff;
+      overflow:hidden; /* sem barra de rolagem */
     }
 
     header{
@@ -23,24 +24,31 @@
     }
 
     .grid{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap:12px;
+      display:flex;
+      justify-content:center;
+      align-items:stretch;
+      gap:16px;
       padding:12px;
+      box-sizing:border-box;
     }
 
     .card{
+      flex:1;
+      max-width:300px; /* largura máxima de cada card */
       background:#111;
       border-radius:12px;
       overflow:hidden;
       text-align:center;
       font-size:14px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
     }
 
     .card img{
       width:100%;
-      height:120px; /* Aumentado de 100px para 120px */
-      object-fit:contain; /* Alterado de 'cover' para 'contain' para melhor visualização */
+      height:80px;
+      object-fit:contain;
       padding:10px;
       box-sizing:border-box;
     }
@@ -78,7 +86,7 @@
     .link-download:hover{text-decoration:underline}
 
     .app-cta{
-      margin:20px;
+      margin:10px;
       text-align:center;
       padding:10px;
       border:1px dashed #333;
@@ -106,7 +114,7 @@
 
   <div class="grid">
     <div class="card">
-      <img src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fpng.pngtree.com%2Fpng-clipart%2F20220628%2Foriginal%2Fpngtree-tv-logo-design-flat-icon-illustration-design-png-image_8256689.png&sp=1756833858T5b60b822860eeebce678334ef9ccb4943df756dce9922ea378fd4656511be0ef" alt="Servidor 1">
+      <img src="https://i.ytimg.com/vi/g1Qau6PT4Wk/maxresdefault.jpg" alt="Servidor 1">
       <h2>Servidor 1</h2>
       <p>Acesse a lista principal de canais via servidor 1.</p>
       <a class="btn" href="https://listadobill.github.io/tv/servidor1">Abrir Servidor 1</a>
@@ -114,7 +122,7 @@
     </div>
 
     <div class="card">
-      <img src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fpng.pngtree.com%2Fpng-clipart%2F20220628%2Original%2Fpngtree-tv-logo-design-flat-icon-illustration-design-png-image_8256689.png&sp=1756833858T5b60b822860eeebce678334ef9ccb4943df756dce9922ea378fd4656511be0ef" alt="Servidor 2">
+      <img src="https://i.ytimg.com/vi/g1Qau6PT4Wk/maxresdefault.jpg" alt="Servidor 2">
       <h2>Servidor 2</h2>
       <p>Alternativa de acesso com a mesma experiência.</p>
       <a class="btn" href="https://listadobill.github.io/tv/servidor2">Abrir Servidor 2</a>
@@ -122,7 +130,7 @@
     </div>
 
     <div class="card">
-      <img src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fpng.pngtree.com%2Fpng-clipart%2F20220628%2Foriginal%2Fpngtree-tv-logo-design-flat-icon-illustration-design-png-image_8256689.png&sp=1756833858T5b60b822860eeebce678334ef9ccb4943df756dce9922ea378fd4656511be0ef" alt="Canais WEB Brasileiros">
+      <img src="https://i.ytimg.com/vi/g1Qau6PT4Wk/maxresdefault.jpg" alt="Canais WEB Brasileiros">
       <h2>Canais WEB Brasileiros</h2>
       <p>Coleção de canais focados no Brasil.</p>
       <a class="btn" href="https://listadobill.github.io/tv/brasil">Abrir Canais WEB</a>
@@ -150,10 +158,10 @@
           throw new Error('HTTP '+xhr.status);
         }
       } catch(err) {
-        var safeUrl = url.replace(/"/g,'&quot;');
-        var fallback = '<!DOCTYPE html><html><head><meta charset="UTF-8">'+
-          '<meta http-equiv="refresh" content="0;url='+safeUrl+'"></head>'+
-          '<body><p>Abrindo <a href="'+safeUrl+'">'+safeUrl+'</a>...</p></body></html>';
+        var safeUrl = url.replace(/\"/g,'&quot;');
+        var fallback = '<!DOCTYPE html><html><head><meta charset=\"UTF-8\">'+
+          '<meta http-equiv=\"refresh\" content=\"0;url='+safeUrl+'\"></head>'+
+          '<body><p>Abrindo <a href=\"'+safeUrl+'\">'+safeUrl+'</a>...</p></body></html>';
         var blob = new Blob([fallback], {type:'text/html;charset=utf-8'});
         triggerDownload(blob, filename);
       }
