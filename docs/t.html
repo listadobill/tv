@@ -1,508 +1,554 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TV DO BILL - Estilo Kodi 2</title>
-<!-- Fallback para caso o CDN do Video.js não carregue -->
-<script>
-// Verificar se o Video.js carregou
-function checkVideoJS() {
-    if (typeof videojs === 'undefined') {
-        document.getElementById('videojs-error').style.display = 'block';
-        document.getElementById('player').style.backgroundColor = '#333';
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>TV DO BILL</title>
+
+  <!-- Video.js CSS -->
+  <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#000;
+      --panel:#0b0b0b;
+      --muted:#222;
+      --accent:#900;
+      --accent-2:#007acc;
+      --text:#fff;
     }
-}
-// Tentar carregar o Video.js com fallback
-window.addEventListener('load', function() {
-    setTimeout(checkVideoJS, 3000);
-});
-</script>
-<link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet" onerror="document.getElementById('videojs-error').style.display='block'">
-<style>
-/* Estilos simplificados para melhor compatibilidade */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-    font-family: Arial, sans-serif;
-    background: #141519;
-    color: #e6e6e6;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
+    html,body{height:100%;margin:0;background:var(--bg);color:var(--text);font-family:Arial, Helvetica, sans-serif;}
+    /* Layout geral: 3 colunas: categorias | canais | player */
+    .wrap{display:flex;height:100vh;box-sizing:border-box;gap:8px;padding:8px;}
+    .col-categories{width:16%;min-width:180px;background:var(--panel);border-radius:8px;padding:10px;box-sizing:border-box;overflow:auto;}
+    .col-channels{width:34%;min-width:300px;background:var(--panel);border-radius:8px;padding:10px;box-sizing:border-box;overflow:auto;display:flex;flex-direction:column;gap:10px;}
+    .col-player{flex:1;background:linear-gradient(180deg,#0b0b0b,#070707);border-radius:8px;padding:10px;box-sizing:border-box;display:flex;flex-direction:column;align-items:stretch;justify-content:space-between;}
 
-/* Barra de navegação */
-#nav-bar {
-    background: #23262a;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    padding: 0 15px;
-    border-bottom: 1px solid #2e3238;
-    font-size: 16px;
-    flex-shrink: 0;
-}
+/* Header pequeno dentro do player */
+    .player-header{display:flex;align-items:center;gap:12px;padding:6px 8px;}
+    .logo-small{width:56px;height:56px;object-fit:contain;border-radius:8px;background:var(--muted);padding:6px;}
+    .channel-meta{display:flex;flex-direction:column;}
+    .channel-title{font-size:20px;font-weight:700;}
+    .channel-sub{font-size:13px;color:#ccc;margin-top:4px;}
 
-#nav-path { color: #a0a5aa; }
-#nav-path span { margin: 0 5px; color: #5e6368; }
-#current-channel { margin-left: auto; color: #ffffff; }
+/* Lista de categorias estilo Kodi */
+    .category-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;}
+    .category-list li{padding:10px;border-radius:6px;cursor:pointer;background:transparent;color:var(--text);transition:transform .12s, background .12s;}
+    .category-list li:focus, .category-list li:hover, .category-list li.active{outline:none;background:var(--accent);transform:scale(1.02);}
 
-/* Container principal */
-#container { 
-    display: flex; 
-    flex-direction: column; 
-    flex: 1; 
-    overflow: hidden; 
-}
+/* Campo de busca */
+    .search{margin-bottom:8px;}
+    .search input{width:100%;padding:8px;border-radius:6px;border:none;font-size:14px;box-sizing:border-box;background:#111;color:var(--text);}
 
-#main { 
-    display: flex; 
-    flex: 1; 
-    overflow: hidden; 
-}
+/* Grid/Lista de canais (mini-cards) */
+    .channels-grid{display:grid;grid-template-columns:repeat(1,1fr);gap:8px;align-items:start;overflow:auto;}
+    .channel-card{display:flex;gap:10px;align-items:center;padding:8px;border-radius:6px;background:rgba(30,30,30,0.6);cursor:pointer;transition:transform .08s, background .12s;}
+    .channel-card:focus, .channel-card:hover, .channel-card.active{outline:none;background:var(--accent-2);transform:translateX(4px);color:#000;}
+    .channel-thumb{width:88px;height:52px;object-fit:contain;border-radius:6px;background:#111;padding:6px;}
+    .channel-info{display:flex;flex-direction:column;}
+    .channel-name{font-size:16px;font-weight:600;}
+    .channel-group{font-size:12px;color:#ccc;margin-top:6px;}
 
-/* Player de vídeo */
-#player { 
-    flex: 2; 
-    background: #000;
-    position: relative; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-}
+/* Player area */
+    .player-area{flex:1;display:flex;align-items:center;justify-content:center;min-height:320px;position:relative;}
+    .video-js{width:100%!important;height:100%!important;border-radius:8px;background:#000;}
+    /* Controle grande central já no seu CSS original: mantido via video-js */
 
-.video-js {
-    width: 100%;
-    height: 100%;
-    background: #000;
-}
+    /* Footer / ações */
+    .player-actions{display:flex;gap:8px;align-items:center;justify-content:flex-end;padding-top:8px;}
+    .btn{background:var(--accent);color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:700;cursor:pointer;border:none;}
+    .btn-ghost{background:transparent;border:1px solid #333;color:#fff;padding:6px 10px;border-radius:6px;}
 
-/* Sidebar */
-#sidebar { 
-    flex: 1; 
-    background: #1a1c21; 
-    overflow-y: auto; 
-    padding: 10px;
-    border-left: 1px solid #2e3238;
-    max-width: 400px;
-}
+/* Scrollbar grande para TV */
+    ::-webkit-scrollbar{height:12px;width:12px;}
+    ::-webkit-scrollbar-thumb{background:var(--accent);border-radius:10px;}
 
-#search-bar { 
-    padding: 10px; 
-    margin-bottom: 10px;
-}
-
-#search-input { 
-    width: 100%; 
-    padding: 12px 15px; 
-    border: 1px solid #2e3238; 
-    background: #23262a;
-    color: #e6e6e6;
-    font-size: 16px; /* Maior para TVs */
-}
-
-#lista-canais { 
-    list-style: none; 
-}
-
-#lista-canais li { 
-    background: #23262a;
-    padding: 15px;
-    margin-bottom: 5px;
-    cursor: pointer; 
-    display: flex;
-    align-items: center;
-    border-left: 3px solid transparent;
-    font-size: 18px; /* Maior para TVs */
-}
-
-#lista-canais li .channel-number {
-    color: #a0a5aa;
-    margin-right: 15px;
-    min-width: 30px;
-    text-align: right;
-}
-
-#lista-canais li .channel-name {
-    flex: 1;
-}
-
-#lista-canais li:hover, 
-#lista-canais li:focus { 
-    background: #2d3036; 
-    border-left-color: #ff0000;
-}
-
-#lista-canais li.active { 
-    background: #2d3036; 
-    border-left: 3px solid #ff0000;
-}
-
-/* Mensagens de status */
-.status-message {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
-    z-index: 100;
-    max-width: 80%;
-}
-
-/* Loader */
-.loader {
-    border: 5px solid #333;
-    border-top: 5px solid #c00;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 1s linear infinite;
-    margin: 0 auto 15px;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-/* Melhorias para controles de vídeo em TV */
-.video-js .vjs-control-bar {
-    font-size: 16px;
-    height: 50px;
-}
-
-.video-js .vjs-big-play-button {
-    font-size: 2.5em;
-    width: 80px;
-    height: 80px;
-    line-height: 80px;
-    border-radius: 50%;
-}
-
-/* Para modo de tela cheia */
-:-webkit-full-screen #main {
-    width: 100%;
-    height: 100%;
-}
-
-:-webkit-full-screen #sidebar {
-    display: none;
-}
-
-:-webkit-full-screen #player {
-    flex: 1;
-}
-
-/* Melhorias de acessibilidade para foco */
-button:focus, input:focus, li:focus {
-    outline: 2px solid #c00;
-}
-
-/* Scrollbar simplificada */
-::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-thumb { background: #2d3036; }
-
-/* Responsividade para TV */
-@media (max-width: 1200px) {
-    #sidebar {
-        max-width: 350px;
+    /* Responsividade para telas pequenas: empilha colunas */
+    @media (max-width:1000px){
+      .wrap{flex-direction:column;padding:6px;}
+      .col-categories,.col-channels{width:100%;min-width:0;height:160px;overflow:auto;}
+      .col-player{width:100%;height:calc(100vh - 360px);}
+      .channels-grid{grid-template-columns:repeat(2,1fr);}
     }
-    
-    #lista-canais li {
-        padding: 12px;
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 768px) {
-    #main {
-        flex-direction: column;
-    }
-    
-    #sidebar {
-        max-width: none;
-        border-left: none;
-        border-top: 1px solid #2e3238;
-        max-height: 40vh;
-    }
-}
-</style>
+  </style>
 </head>
 <body>
-<!-- Mensagens de status -->
-<div id="loading-message" class="status-message">
-    <div class="loader"></div>
-    <p>Carregando lista de canais...</p>
-</div>
 
-<div id="error-message" class="status-message">
-    <p>Erro ao carregar a lista de canais.</p>
-    <button onclick="window.location.reload()" style="margin-top: 15px; padding: 10px 20px; background: #c00; color: white; border: none; cursor: pointer;">Recarregar</button>
-</div>
-
-<div id="videojs-error" class="status-message">
-    <p>Erro ao carregar o player de vídeo.</p>
-    <p>Verifique sua conexão com a internet.</p>
-    <button onclick="window.location.reload()" style="margin-top: 15px; padding: 10px 20px; background: #c00; color: white; border: none; cursor: pointer;">Tentar Novamente</button>
-</div>
-
-<!-- Barra de navegação -->
-<div id="nav-bar">
-    <div id="nav-path">TV <span>></span> Canais <span>></span> Todos os canais</div>
-    <div id="current-channel"></div>
-</div>
-
-<div id="container">
-    <div id="main">
-        <div id="sidebar">
-            <div id="search-bar">
-                <input type="text" id="search-input" placeholder="Buscar canal..." autocomplete="off">
-            </div>
-            <ul id="lista-canais"></ul>
-        </div>
-        <div id="player">
-            <video id="video-player" class="video-js vjs-default-skin" controls playsinline preload="auto"></video>
-        </div>
+  <div style="padding:8px;display:flex;align-items:center;gap:14px;">
+    <img src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fpng.pngtree.com%2Fpng-clipart%2F20220628%2Foriginal%2Fpngtree-tv-logo-design-flat-icon-illustration-design-png-image_8256689.png&sp=1756833858T5b60b822860eeebce678334ef9ccb4943df756dce9922ea378fd4656511be0ef" alt="TV DO BILL" style="height:44px;border-radius:6px;">
+    <h1 style="font-size:20px;margin:0;">TV DO BILL — Kodi Style</h1>
+    <div style="margin-left:auto;display:flex;gap:8px;align-items:center;">
+      <input id="global-search" placeholder="Buscar (global)..." style="padding:8px;border-radius:6px;border:none;background:#111;color:#fff;font-size:14px;">
+      <button id="btn-fullscreen" class="btn" title="Tela cheia">Tela cheia</button>
     </div>
-</div>
+  </div>
 
-<!-- Video.js com fallback -->
-<script src="https://vjs.zencdn.net/7.20.2/video.min.js" onerror="document.getElementById('videojs-error').style.display='block'"></script>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    // Mostrar mensagem de carregamento
-    document.getElementById('loading-message').style.display = 'block';
-    
-    const listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/servidor1.m3u";
-    const listaCanaisElemento = document.getElementById("lista-canais");
-    const searchInput = document.getElementById("search-input");
-    const currentChannelElement = document.getElementById("current-channel");
-    const loadingMessage = document.getElementById('loading-message');
-    const errorMessage = document.getElementById('error-message');
+  <div class="wrap" role="application" aria-label="TV DO BILL interface">
 
-    // Verificar se Video.js carregou
-    if (typeof videojs === 'undefined') {
-        document.getElementById('videojs-error').style.display = 'block';
-        loadingMessage.style.display = 'none';
-        return;
+    <!-- CATEGORIAS -->
+    <aside class="col-categories" aria-label="Categorias">
+      <div class="search">
+        <input id="cat-search" placeholder="Filtrar categorias..." aria-label="Filtrar categorias">
+      </div>
+      <ul id="categories" class="category-list" tabindex="0">
+        <!-- categorias serão inseridas aqui -->
+      </ul>
+    </aside>
+
+    <!-- CANAIS -->
+    <main class="col-channels" aria-label="Lista de canais">
+      <div style="display:flex;align-items:center;justify-content:space-between;">
+        <strong style="font-size:16px">Canais</strong>
+        <div style="font-size:13px;color:#ccc">Use setas + Enter</div>
+      </div>
+
+      <div style="margin-top:8px;">
+        <input id="chan-search" placeholder="Buscar canal nesta lista..." style="width:100%;padding:8px;border-radius:6px;border:none;background:#111;color:#fff;">
+      </div>
+
+      <div id="channels" class="channels-grid" style="margin-top:8px;">
+        <!-- cards de canais -->
+      </div>
+    </main>
+
+    <!-- PLAYER -->
+    <section class="col-player" aria-label="Player">
+      <div class="player-header">
+        <img id="selected-thumb" class="logo-small" src="https://via.placeholder.com/120x90?text=TV" alt="logo canal">
+        <div class="channel-meta">
+          <div id="selected-name" class="channel-title">Selecione um canal</div>
+          <div id="selected-sub" class="channel-sub">Número · Categoria · URL</div>
+        </div>
+      </div>
+
+      <div class="player-area" id="playerArea">
+        <video id="video-player" class="video-js vjs-default-skin" controls playsinline></video>
+      </div>
+
+      <div class="player-actions">
+        <button class="btn" id="play-btn">Reproduzir</button>
+        <button class="btn-ghost" id="download-btn">Download (fallback)</button>
+      </div>
+    </section>
+  </div>
+
+  <!-- Video.js -->
+  <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
+
+  <script>
+  /**************************************************************************
+   * Configurações iniciais - adicione ou remova URLs conforme desejar
+   **************************************************************************/
+  const m3uSources = [
+    "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/servidor1.m3u",
+    "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/servidor2.m3u",
+    "https://iptv-org.github.io/iptv/countries/br.m3u" // exemplo público
+  ];
+
+  // Elementos UI
+  const categoriesEl = document.getElementById('categories');
+  const channelsEl = document.getElementById('channels');
+  const selectedThumb = document.getElementById('selected-thumb');
+  const selectedName = document.getElementById('selected-name');
+  const selectedSub = document.getElementById('selected-sub');
+  const globalSearch = document.getElementById('global-search');
+  const catSearch = document.getElementById('cat-search');
+  const chanSearch = document.getElementById('chan-search');
+  const btnFullscreen = document.getElementById('btn-fullscreen');
+  const btnPlay = document.getElementById('play-btn');
+  const btnDownload = document.getElementById('download-btn');
+  const playerArea = document.getElementById('playerArea');
+
+  // Video.js instance (mantendo sua configuração original)
+  const video = videojs('video-player', {
+    controls: true,
+    autoplay: true,
+    muted: true,
+    preload: 'auto',
+    fluid: true,
+    responsive: true
+  });
+
+  function tentarPlay() {
+    video.play().then(()=> {
+      if (video.muted()) video.muted(false);
+    }).catch(err => console.log("Autoplay bloqueado:", err));
+  }
+
+  // Fullscreen toggle em clique único no container do player (compatível com TVs)
+  playerArea.addEventListener('click', () => {
+    if (!document.fullscreenElement) {
+      try {
+        if (playerArea.requestFullscreen) playerArea.requestFullscreen();
+        else if (playerArea.webkitRequestFullscreen) playerArea.webkitRequestFullscreen();
+      } catch (e) { console.log("fullscreen error", e); }
+    } else {
+      try { if (document.exitFullscreen) document.exitFullscreen(); } catch(e){}
+    }
+  });
+
+  // Botão fullscreen (manual)
+  btnFullscreen.addEventListener('click', () => {
+    if (!document.fullscreenElement) {
+      try { document.documentElement.requestFullscreen(); } catch(e){ }
+    } else {
+      try { document.exitFullscreen(); } catch(e){ }
+    }
+  });
+
+  /**************************************************************************
+   * Parsers M3U: extrai dados importantes de #EXTINF
+   **************************************************************************/
+  function parseExtInf(line) {
+    // extrai atributos como tvg-id, tvg-name, tvg-logo, group-title e o nome após a vírgula
+    const attrs = {};
+    // pega atributos no formato key="value"
+    const attrPattern = /([a-zA-Z0-9\-\_]+?)="(.*?)"/g;
+    let m;
+    while ((m = attrPattern.exec(line)) !== null) {
+      attrs[m[1]] = m[2];
+    }
+    // nome após a última vírgula
+    const nameMatch = line.match(/,(.*)$/);
+    attrs._name = nameMatch ? nameMatch[1].trim() : "";
+    return attrs;
+  }
+
+  /**************************************************************************
+   * Carrega todas as listas M3U e constrói estrutura: categorias -> canais
+   **************************************************************************/
+  async function loadAllM3U(sources) {
+    const allLines = [];
+    for (const src of sources) {
+      try {
+        const r = await fetch(src);
+        if (!r.ok) { console.warn("Erro ao buscar:", src, r.status); continue; }
+        const txt = await r.text();
+        const lines = txt.split(/\r?\n/);
+        // remove linhas vazias do final
+        allLines.push({ src, lines });
+      } catch (e) {
+        console.warn("Falha fetch", src, e);
+      }
+    }
+    // Parse simples: procurar cada EXTINF e a próxima linha com URL
+    const channels = [];
+    allLines.forEach(set => {
+      const lines = set.lines;
+      for (let i=0;i<lines.length;i++){
+        const l = lines[i].trim();
+        if (!l) continue;
+        if (l.startsWith('#EXTINF')) {
+          const attrs = parseExtInf(l);
+          // próxima linha pode ser a url (procura até encontrar linha começando com http/rtmp/udp/rtsp)
+          let url = '';
+          for (let j=i+1;j<Math.min(i+6, lines.length);j++){
+            const cand = lines[j].trim();
+            if (cand && /^https?:\/\//i.test(cand) || /^http/i.test(cand) || /^rtmp:|^udp:|^rtsp:/i.test(cand)) {
+              url = cand;
+              break;
+            }
+            // alguns m3u usam http(s) sem protocolo? raros — deixamos o basicamente com http
+          }
+          const ch = {
+            name: attrs._name || attrs['tvg-name'] || attrs['name'] || 'Sem nome',
+            logo: attrs['tvg-logo'] || '',
+            group: attrs['group-title'] || 'Sem categoria',
+            id: attrs['tvg-id'] || '',
+            url: url || '',
+            raw: l,
+            source:set.src
+          };
+          // só adicionar se tiver url
+          if (ch.url) channels.push(ch);
+        }
+      }
+    });
+
+    // Deduplicar por url (preferível) ou por nome
+    const seen = new Set();
+    const unique = [];
+    for (const c of channels) {
+      const key = c.url || c.name;
+      if (!seen.has(key)) {
+        seen.add(key);
+        unique.push(c);
+      }
     }
 
-    const video = videojs('video-player', {
-        controls: true,
-        autoplay: false, // Desativar autoplay inicial para melhor compatibilidade
-        muted: true,
-        preload: 'auto',
-        fluid: true,
-        responsive: true,
-        liveui: true,
-        playbackRates: [0.5, 1, 1.5, 2]
+    // Agrupar por categoria
+    const groups = {};
+    unique.forEach(c => {
+      const g = c.group || 'Sem categoria';
+      if (!groups[g]) groups[g] = [];
+      groups[g].push(c);
     });
 
-    // Adicionar tratamento de erro para o player de vídeo
-    video.on('error', function() {
-        console.error('Erro no player de vídeo:', video.error());
-        currentChannelElement.textContent = 'Erro ao carregar o canal';
-    });
-
-    // Toggle fullscreen em clique duplo (melhor para TVs)
-    const playerContainer = document.getElementById('player');
-    let lastClick = 0;
-    playerContainer.addEventListener('click', function(e) {
-        const currentTime = new Date().getTime();
-        const diff = currentTime - lastClick;
-        
-        if (diff < 300) { // Clique duplo
-            toggleFullscreen();
-        }
-        
-        lastClick = currentTime;
-    });
-
-    function toggleFullscreen() {
-        if (!document.fullscreenElement) {
-            if (playerContainer.requestFullscreen) {
-                playerContainer.requestFullscreen().catch(err => {
-                    console.log("Fullscreen não disponível:", err);
-                });
-            } else if (playerContainer.webkitRequestFullscreen) {
-                playerContainer.webkitRequestFullscreen();
-            } else if (playerContainer.msRequestFullscreen) {
-                playerContainer.msRequestFullscreen();
-            }
-        } else {
-            if (document.exitFullscreen) {
-                document.exitFullscreen();
-            } else if (document.webkitExitFullscreen) {
-                document.webkitExitFullscreen();
-            } else if (document.msExitFullscreen) {
-                document.msExitFullscreen();
-            }
-        }
+    // Ordenações
+    for (const g in groups) {
+      groups[g].sort((a,b)=> a.name.localeCompare(b.name,'pt-BR'));
     }
 
-    // Carregar lista de canais
-    fetch(listaURL)
-        .then(response => {
-            if (!response.ok) throw new Error('Erro ao carregar a lista');
-            return response.text();
-        })
-        .then(data => {
-            loadingMessage.style.display = 'none';
-            const linhas = data.split('\n');
-            const canais = [];
+    return { groups, channels: unique };
+  }
 
-            for (let i = 0; i < linhas.length; i++) {
-                if (linhas[i].startsWith('#EXTINF')) {
-                    const nome = linhas[i].split(',')[1].trim();
-                    const url = linhas[i + 1];
-                    if (url && !url.startsWith('#') && url.trim() !== '') {
-                        canais.push({ name: nome, url: url.trim() });
-                    }
-                }
-            }
+  /**************************************************************************
+   * Render UI: categorias e canais (cards)
+   **************************************************************************/
+  let STATE = {
+    groups: {},
+    channels: [],
+    currentGroup: null,
+    filteredChannels: []
+  };
 
-            if (canais.length === 0) {
-                throw new Error('Nenhum canal encontrado na lista');
-            }
+  function renderCategories(groupsObj) {
+    categoriesEl.innerHTML = '';
+    const groups = Object.keys(groupsObj).sort((a,b)=> a.localeCompare(b,'pt-BR'));
+    // botão "Todas"
+    const liAll = document.createElement('li');
+    liAll.textContent = `Todas (${STATE.channels.length})`;
+    liAll.tabIndex = 0;
+    liAll.classList.add('active');
+    liAll.addEventListener('click', ()=>selectGroup(null, liAll));
+    categoriesEl.appendChild(liAll);
 
-            canais.sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
-
-            function renderizarCanais(lista) {
-                listaCanaisElemento.innerHTML = '';
-                lista.forEach((canal, index) => {
-                    const li = document.createElement('li');
-                    li.tabIndex = 0;
-                    
-                    // Extrair número do canal se existir no nome
-                    let numero = (index + 1).toString();
-                    let nomeDisplay = canal.name;
-                    
-                    // Verificar se o nome começa com um número
-                    const match = canal.name.match(/^(\d+)\s/);
-                    if (match) {
-                        numero = match[1];
-                        nomeDisplay = canal.name.replace(/^\d+\s/, '');
-                    }
-                    
-                    li.innerHTML = `<span class="channel-number">${numero}</span><span class="channel-name">${nomeDisplay}</span>`;
-                    
-                    li.addEventListener('click', function() {
-                        playChannel(canal);
-                    });
-                    
-                    // Suporte a navegação por teclado/controle
-                    li.addEventListener('keydown', function(e) {
-                        if (e.key === 'Enter') {
-                            playChannel(canal);
-                        }
-                    });
-                    
-                    listaCanaisElemento.appendChild(li);
-                });
-                
-                // Adicionar o primeiro canal como ativo por padrão
-                if (lista.length > 0 && !document.querySelector('#lista-canais li.active')) {
-                    const primeiro = listaCanaisElemento.querySelector('li');
-                    primeiro.classList.add('active');
-                    currentChannelElement.textContent = lista[0].name;
-                    // Não reproduzir automaticamente - esperar interação do usuário
-                }
-            }
-
-            function playChannel(canal) {
-                loadingMessage.style.display = 'block';
-                currentChannelElement.textContent = `Carregando: ${canal.name}`;
-                
-                // Remover classes ativas de todos os itens
-                document.querySelectorAll('#lista-canais li').forEach(el => {
-                    el.classList.remove('active');
-                });
-                
-                // Adicionar classe ativa ao item clicado
-                event.currentTarget.classList.add('active');
-                
-                // Definir fonte do vídeo
-                video.src({ type: 'application/x-mpegURL', src: canal.url });
-                
-                // Tentar reproduzir
-                video.play().then(() => {
-                    if (video.muted()) video.muted(false);
-                    loadingMessage.style.display = 'none';
-                    currentChannelElement.textContent = canal.name;
-                }).catch(err => {
-                    console.error("Erro ao reproduzir:", err);
-                    loadingMessage.style.display = 'none';
-                    currentChannelElement.textContent = `Erro: ${canal.name}`;
-                    
-                    // Em caso de erro, tentar novamente após 3 segundos
-                    setTimeout(() => playChannel(canal), 3000);
-                });
-            }
-
-            renderizarCanais(canais);
-
-            // Configurar busca
-            searchInput.addEventListener('input', () => {
-                const filtro = searchInput.value.toLowerCase();
-                const filtrados = canais.filter(c => c.name.toLowerCase().includes(filtro));
-                renderizarCanais(filtrados);
-            });
-
-            // Navegação por teclado na lista
-            listaCanaisElemento.addEventListener('keydown', e => {
-                const ativo = document.activeElement;
-                if (ativo.tagName.toLowerCase() === 'li') {
-                    if (e.key === 'ArrowDown') {
-                        if (ativo.nextElementSibling) {
-                            ativo.nextElementSibling.focus();
-                            ativo.nextElementSibling.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                        }
-                        e.preventDefault();
-                    }
-                    if (e.key === 'ArrowUp') {
-                        if (ativo.previousElementSibling) {
-                            ativo.previousElementSibling.focus();
-                            ativo.previousElementSibling.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                        } else {
-                            searchInput.focus();
-                        }
-                        e.preventDefault();
-                    }
-                    if (e.key === 'Enter') {
-                        ativo.click();
-                    }
-                }
-            });
-
-            // Focar na barra de pesquisa por padrão
-            searchInput.focus();
-        })
-        .catch(error => {
-            console.error('Erro ao carregar lista de canais:', error);
-            loadingMessage.style.display = 'none';
-            errorMessage.style.display = 'block';
-        });
-
-    // Tecla ESC para sair do fullscreen
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && document.fullscreenElement) {
-            if (document.exitFullscreen) document.exitFullscreen();
-            else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
-            else if (document.msExitFullscreen) document.msExitFullscreen();
-        }
-        
-        // Atalho para focar na busca (tecla B)
-        if (e.key === 'b' || e.key === 'B') {
-            searchInput.focus();
-            e.preventDefault();
-        }
+    groups.forEach(name => {
+      const li = document.createElement('li');
+      li.textContent = `${name} (${groupsObj[name].length})`;
+      li.tabIndex = 0;
+      li.addEventListener('click', ()=>selectGroup(name, li));
+      categoriesEl.appendChild(li);
     });
-});
-</script>
+  }
+
+  function renderChannels(list) {
+    channelsEl.innerHTML = '';
+    if (!list || list.length===0) {
+      channelsEl.innerHTML = '<div style="color:#aaa;padding:20px">Nenhum canal encontrado.</div>';
+      return;
+    }
+    list.forEach((c, idx) => {
+      const card = document.createElement('div');
+      card.className = 'channel-card';
+      card.tabIndex = 0;
+      card.dataset.index = idx;
+      card.innerHTML = `
+        <img class="channel-thumb" src="${escapeAttr(c.logo) || 'https://via.placeholder.com/160x90?text=logo'}" alt="${escapeAttr(c.name)}">
+        <div class="channel-info">
+          <div class="channel-name">${escapeHtml(c.name)}</div>
+          <div class="channel-group">${escapeHtml(c.group)} • ${shortUrl(c.url)}</div>
+        </div>
+      `;
+      card.addEventListener('click', ()=>selectChannel(c, card));
+      card.addEventListener('keydown', (e)=>{
+        if (e.key==='Enter') selectChannel(c, card);
+      });
+      channelsEl.appendChild(card);
+    });
+  }
+
+  /**************************************************************************
+   * Helpers
+   **************************************************************************/
+  function escapeHtml(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+  function escapeAttr(s){ try{return encodeURI(s||''); }catch(e){ return s||''; } }
+  function shortUrl(u){
+    if(!u) return '';
+    try {
+      const p = new URL(u);
+      return p.hostname + (p.pathname.length>1? p.pathname.split('/').slice(0,2).join('/') : '');
+    } catch(e){ return u.slice(0,40); }
+  }
+
+  /**************************************************************************
+   * Seleção de grupo / canal e ações
+   **************************************************************************/
+  function selectGroup(groupName, el) {
+    // remover active
+    categoriesEl.querySelectorAll('li').forEach(li => li.classList.remove('active'));
+    if (el) el.classList.add('active');
+    STATE.currentGroup = groupName;
+    const filtered = groupName ? STATE.groups[groupName] : STATE.channels;
+    STATE.filteredChannels = filtered;
+    renderChannels(filtered);
+    // focus no primeiro canal
+    setTimeout(()=> {
+      const first = channelsEl.querySelector('.channel-card');
+      if (first) { first.focus(); first.scrollIntoView({block:'nearest'}); }
+    },80);
+  }
+
+  function selectChannel(canal, cardEl) {
+    // destacar card
+    channelsEl.querySelectorAll('.channel-card').forEach(el=>el.classList.remove('active'));
+    if (cardEl) cardEl.classList.add('active');
+
+    selectedThumb.src = canal.logo || 'https://via.placeholder.com/160x90?text=logo';
+    selectedName.textContent = canal.name;
+    selectedSub.textContent = `${canal.id || '—'} · ${canal.group} · ${shortUrl(canal.url)}`;
+
+    // setar video.js src e tocar (mantendo tipo HLS)
+    video.src({ type:'application/x-mpegURL', src: canal.url });
+    tentarPlay();
+    // tentar fullscreen se desejar (comentar se não quiser)
+    // if (playerArea.requestFullscreen) playerArea.requestFullscreen();
+
+    // configurar botão download
+    btnDownload.onclick = ()=>downloadSource(canal.url, sanitizeFilename(canal.name) + '.html');
+
+    // reconectar lógica: remover ouvintes antigos e reaplicar
+    reconectar(canal.url);
+  }
+
+  function sanitizeFilename(s){ return s.replace(/[<>:"\/\\|?*\x00-\x1F]/g,'_').slice(0,120); }
+
+  /**************************************************************************
+   * Busca (global, categorias e canais)
+   **************************************************************************/
+  globalSearch.addEventListener('input', ()=> {
+    const q = globalSearch.value.trim().toLowerCase();
+    if (!q) {
+      // reset
+      renderCategories(STATE.groups);
+      selectGroup(STATE.currentGroup, categoriesEl.querySelector('li.active') || null);
+      return;
+    }
+    // busca global por nome, grupo ou source
+    const found = STATE.channels.filter(c => (c.name + ' ' + c.group + ' ' + c.source).toLowerCase().includes(q));
+    renderChannels(found);
+  });
+
+  catSearch.addEventListener('input', ()=> {
+    const q = catSearch.value.trim().toLowerCase();
+    const cats = Object.keys(STATE.groups).filter(g => g.toLowerCase().includes(q));
+    categoriesEl.innerHTML = '';
+    const liAll = document.createElement('li');
+    liAll.textContent = `Todas (${STATE.channels.length})`;
+    liAll.tabIndex = 0;
+    liAll.addEventListener('click', ()=>selectGroup(null, liAll));
+    categoriesEl.appendChild(liAll);
+
+    cats.forEach(name => {
+      const li = document.createElement('li');
+      li.textContent = `${name} (${STATE.groups[name].length})`;
+      li.tabIndex = 0;
+      li.addEventListener('click', ()=>selectGroup(name, li));
+      categoriesEl.appendChild(li);
+    });
+  });
+
+  chanSearch.addEventListener('input', ()=> {
+    const q = chanSearch.value.trim().toLowerCase();
+    if (!q) {
+      renderChannels(STATE.filteredChannels.length?STATE.filteredChannels:STATE.channels);
+      return;
+    }
+    const pool = STATE.filteredChannels.length?STATE.filteredChannels:STATE.channels;
+    const filt = pool.filter(c => c.name.toLowerCase().includes(q) || c.group.toLowerCase().includes(q));
+    renderChannels(filt);
+  });
+
+  /**************************************************************************
+   * Reconectar (mesma lógica do seu original)
+   **************************************************************************/
+  function reconectar(url){
+    try {
+      video.src({ type:'application/x-mpegURL', src: url });
+      tentarPlay();
+      video.off('error');
+      video.on('error', function() {
+        console.log('Erro no player — reconectando em 5s', url);
+        setTimeout(()=>reconectar(url), 5000);
+      });
+    } catch(e){ console.warn('reconectar falhou', e); }
+  }
+
+  // play button manual
+  btnPlay.addEventListener('click', ()=> tentarPlay());
+
+  /**************************************************************************
+   * Download fallback (gera HTML que redireciona para o stream — como seu original)
+   **************************************************************************/
+  function downloadSource(url, filename){
+    try {
+      // Tentativa simples de buscar o conteúdo (pode falhar por CORS), se não, gera fallback redirect
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', url, false);
+      xhr.send();
+
+      if (xhr.status === 200) {
+        var text = xhr.responseText;
+        var blob = new Blob([text], {type:'text/plain;charset=utf-8'});
+        triggerDownload(blob, filename);
+      } else {
+        throw new Error('HTTP '+xhr.status);
+      }
+    } catch(err) {
+      var safeUrl = url.replace(/\"/g,'&quot;');
+      var fallback = '<!DOCTYPE html><html><head><meta charset="UTF-8">'+
+        '<meta http-equiv="refresh" content="0;url='+safeUrl+'"></head>'+
+        '<body><p>Abrindo <a href="'+safeUrl+'">'+safeUrl+'</a>...</p></body></html>';
+      var blob = new Blob([fallback], {type:'text/html;charset=utf-8'});
+      triggerDownload(blob, filename);
+    }
+    return false;
+  }
+
+  function triggerDownload(blob, filename){
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(function(){ document.body.removeChild(a); URL.revokeObjectURL(a.href); }, 200);
+  }
+
+  /**************************************************************************
+   * Inicialização: carregar listas e renderizar
+   **************************************************************************/
+  (async function init(){
+    const { groups, channels } = await loadAllM3U(m3uSources);
+    STATE.groups = groups;
+    STATE.channels = channels;
+    STATE.currentGroup = null;
+    renderCategories(groups);
+    renderChannels(channels);
+
+    // foco no primeiro item (UX TV)
+    setTimeout(()=> {
+      const firstCat = categoriesEl.querySelector('li');
+      if (firstCat) firstCat.focus();
+      const firstChan = channelsEl.querySelector('.channel-card');
+      if (firstChan) firstChan.focus();
+    },140);
+
+    // teclado global: navegar entre categorias/ canais com setas
+    document.addEventListener('keydown', e => {
+      const active = document.activeElement;
+      if (e.key === 'ArrowRight') {
+        // mover foco da categoria -> primeiro canal -> player
+        if (active && active.parentElement === categoriesEl) {
+          // focus first channel
+          const firstChan = channelsEl.querySelector('.channel-card');
+          if (firstChan) firstChan.focus();
+        } else if (active && active.parentElement === channelsEl) {
+          // focus player play button
+          btnPlay.focus();
+        }
+      } else if (e.key === 'ArrowLeft') {
+        // mover foco para categorias
+        const firstCat = categoriesEl.querySelector('li');
+        if (firstCat) firstCat.focus();
+      } else if (e.key === 'Escape') {
+        // sair do fullscreen
+        if (document.fullscreenElement) {
+          try { document.exitFullscreen(); } catch(e){}
+        }
+      }
+    });
+
+  })();
+  </script>
 </body>
 </html>
