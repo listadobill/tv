@@ -1,248 +1,184 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TV DO BILL</title>
-<link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
-<style>
-body {
-    font-family: Arial,sans-serif;
-    margin:0;
-    padding:0;
-    background:#000;
-    color:#fff;
-    display:flex;
-    flex-direction:column;
-    height:100vh;
-    overflow:hidden;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <title>TV DO BILL</title>
+  <style>
+    body{
+      margin:0;
+      font-family: Arial, sans-serif;
+      background:#000;
+      color:#fff;
+      overflow:hidden; /* sem barra de rolagem */
+    }
 
-#container { display:flex; flex-direction:column; width:100%; height:100%; }
-#main { display:flex; flex:1; overflow:hidden; }
-#player { flex:2; background:rgba(0,0,0,0.8); position:relative; display:flex; justify-content:center; align-items:center; overflow:hidden; cursor:pointer; }
+    header{
+      text-align:center;
+      padding:10px;
+    }
+    header h1{
+      font-size:22px;
+      margin:8px 0;
+    }
 
-.video-js {
-    width:100% !important;
-    height:100% !important;
-    background:#000;
-    font-size: 1.4em;
-}
+    .grid{
+      display:flex;
+      justify-content:center;
+      align-items:stretch;
+      gap:16px;
+      padding:12px;
+      box-sizing:border-box;
+    }
 
-/* Sidebar */
-#sidebar { flex:1; background:rgba(20,20,20,0.9); overflow-y:auto; padding:10px; border-left:3px solid #600; }
-#sidebar ul { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px; }
-#sidebar li { background:rgba(60,60,60,0.85); border-radius:8px; padding:12px; cursor:pointer; transition:all 0.3s; font-size:1.1em; }
-#sidebar li:hover, #sidebar li:focus, #sidebar li.active { background:#900; color:#fff; outline:none; transform:scale(1.03); }
-#search-bar { padding:10px; text-align:center; }
-#search-input { width:95%; padding:10px; border:none; border-radius:5px; font-size:1em; }
+    .card{
+      flex:1;
+      max-width:300px; /* largura máxima de cada card */
+      background:#111;
+      border-radius:12px;
+      overflow:hidden;
+      text-align:center;
+      font-size:14px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
 
-.vjs-error-display { display:none !important; }
-::-webkit-scrollbar { width:16px; }
-::-webkit-scrollbar-thumb { background:#900; border-radius:10px; }
+    .card img{
+      width:100%;
+      height:80px;
+      object-fit:contain;
+      padding:10px;
+      box-sizing:border-box;
+    }
 
-/* ================================
-   Video.js Custom Controls - estilo TV
-================================ */
+    .card h2{
+      margin:8px 0 4px;
+      font-size:16px;
+    }
 
-/* Barra de controles no topo */
-.video-js .vjs-control-bar {
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    background: rgba(60,0,0,0.85) !important;
-    padding: 10px 15px !important;
-    display: flex !important;
-    align-items: center !important;
-    box-sizing: border-box;
-    height:70px !important;
-}
+    .card p{
+      margin:4px 0 10px;
+      font-size:13px;
+      color:#bbb;
+    }
 
-/* Centraliza os controles horizontais */
-.video-js .vjs-control-bar .vjs-control {
-    margin: 0 8px !important;
-}
+    .btn{
+      display:inline-block;
+      padding:6px 10px;
+      margin:4px 0;
+      background:#00d4ff;
+      color:#000;
+      font-weight:bold;
+      text-decoration:none;
+      border-radius:8px;
+      font-size:14px;
+    }
 
-/* Botão de play grande central */
-.video-js .vjs-big-play-button {
-    background: rgba(200,0,0,0.85) !important;
-    border:none !important;
-    border-radius:50% !important;
-    width:100px !important;
-    height:100px !important;
-    font-size: 2.8em !important;
-    top:50% !important;
-    left:50% !important;
-    transform: translate(-50%, -50%) !important;
-}
+    .link-download{
+      display:block;
+      margin-top:6px;
+      font-size:12px;
+      color:#ccc;
+      text-decoration:none;
+    }
+    .link-download:hover{text-decoration:underline}
 
-/* Barra de progresso */
-.video-js .vjs-progress-holder {
-    height: 14px !important;
-    margin: 0 5px !important;
-    border-radius:7px;
-}
-.video-js .vjs-play-progress {
-    background-color: #c00 !important;
-    height: 14px !important;
-    border-radius:7px;
-}
-.video-js .vjs-load-progress {
-    background-color: rgba(255,255,255,0.25) !important;
-    height: 14px !important;
-    border-radius:7px;
-}
-.video-js .vjs-slider { height: 14px !important; }
-
-/* Tempo e tooltip */
-.video-js .vjs-time-control, .video-js .vjs-current-time, .video-js .vjs-duration {
-    font-size: 1.3em !important;
-    color: #fff !important;
-}
-
-/* Botões maiores */
-.video-js .vjs-control {
-    width: 50px !important;
-    height: 50px !important;
-}
-.video-js .vjs-play-control .vjs-icon-placeholder,
-.video-js .vjs-fullscreen-control .vjs-icon-placeholder,
-.video-js .vjs-volume-menu-button .vjs-icon-placeholder {
-    font-size: 2.2em !important;
-}
-
-/* Volume */
-.video-js .vjs-volume-level { background-color: #c00 !important; }
-.video-js .vjs-volume-bar { height:14px !important; border-radius:7px; }
-</style>
+    .app-cta{
+      margin:10px;
+      text-align:center;
+      padding:10px;
+      border:1px dashed #333;
+      border-radius:10px;
+      background:#111;
+      font-size:14px;
+    }
+    .app-cta a{
+      display:inline-block;
+      margin-top:8px;
+      padding:8px 14px;
+      background:#7c4dff;
+      color:#fff;
+      border-radius:8px;
+      font-size:14px;
+      text-decoration:none;
+    }
+  </style>
 </head>
 <body>
-<div id="container">
-    <div id="main">
-        <div id="sidebar">
-            <div id="search-bar">
-                <input type="text" id="search-input" placeholder="Buscar canal...">
-            </div>
-            <ul id="lista-canais"></ul>
-        </div>
-        <div id="player">
-            <video id="video-player" class="video-js vjs-default-skin" controls playsinline></video>
-        </div>
+  <header>
+    <img src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fpng.pngtree.com%2Fpng-clipart%2F20220628%2Foriginal%2Fpngtree-tv-logo-design-flat-icon-illustration-design-png-image_8256689.png&sp=1756833858T5b60b822860eeebce678334ef9ccb4943df756dce9922ea378fd4656511be0ef" alt="logo" style="height:40px;border-radius:6px;vertical-align:middle;">
+    <h1>TV DO BILL</h1>
+  </header>
+
+  <div class="grid">
+    <div class="card">
+      <img src="https://i.ytimg.com/vi/g1Qau6PT4Wk/maxresdefault.jpg" alt="Servidor 1">
+      <h2>Servidor 1</h2>
+      <p>Acesse a lista principal de canais via servidor 1.</p>
+      <a class="btn" href="https://listadobill.github.io/tv/servidor1">Abrir Servidor 1</a>
+      <a href="#" class="link-download" onclick="return downloadSource('https://listadobill.github.io/tv/servidor1','servidor1.html')">Para assistir no computador clique aqui</a>
     </div>
-</div>
 
-<script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    const listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/servidor1.m3u";
-    const listaCanaisElemento = document.getElementById("lista-canais");
-    const searchInput = document.getElementById("search-input");
+    <div class="card">
+      <img src="https://i.ytimg.com/vi/g1Qau6PT4Wk/maxresdefault.jpg" alt="Servidor 2">
+      <h2>Servidor 2</h2>
+      <p>Alternativa de acesso com a mesma experiência.</p>
+      <a class="btn" href="https://listadobill.github.io/tv/servidor2">Abrir Servidor 2</a>
+      <a href="#" class="link-download" onclick="return downloadSource('https://listadobill.github.io/tv/servidor2','servidor2.html')">Para assistir no computador clique aqui</a>
+    </div>
 
-    const video = videojs('video-player', {
-        controls: true,
-        autoplay: true,
-        muted: true,
-        preload: 'auto',
-        fluid: true,
-        responsive: true
-    });
+    <div class="card">
+      <img src="https://i.ytimg.com/vi/g1Qau6PT4Wk/maxresdefault.jpg" alt="Canais WEB Brasileiros">
+      <h2>Canais WEB Brasileiros</h2>
+      <p>Coleção de canais focados no Brasil.</p>
+      <a class="btn" href="https://listadobill.github.io/tv/brasil">Abrir Canais WEB</a>
+      <a href="#" class="link-download" onclick="return downloadSource('https://listadobill.github.io/tv/brasil','canais-web-brasileiros.html')">Para assistir no computador clique aqui</a>
+    </div>
+  </div>
 
-    function tentarPlay() {
-        video.play().then(() => {
-            if (video.muted()) video.muted(false);
-        }).catch(err => console.log("Autoplay bloqueado:", err));
-    }
+  <div class="app-cta">
+    <div>Quer assistir no Android com app leve?</div>
+    <a href="https://drive.google.com/file/d/1uVNYvaBjf6YI1pS48WQ2W_XoMTgM3CYq/view?usp=sharing">Baixe o APP DO BILL para Android</a>
+  </div>
 
-    // Toggle fullscreen em clique único
-    const playerContainer = document.getElementById('player');
-    playerContainer.addEventListener('click', () => {
-        if (!document.fullscreenElement) {
-            if(video.requestFullscreen) video.requestFullscreen().catch(()=>console.log("Fullscreen não disponível"));
-            else if(video.webkitRequestFullscreen) video.webkitRequestFullscreen();
+  <script>
+    function downloadSource(url, filename){
+      try {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', url, false);
+        xhr.send();
+        
+        if (xhr.status === 200) {
+          var text = xhr.responseText;
+          var blob = new Blob([text], {type:'text/html;charset=utf-8'});
+          triggerDownload(blob, filename);
         } else {
-            if(document.exitFullscreen) document.exitFullscreen();
-            else if(document.webkitExitFullscreen) document.webkitExitFullscreen();
+          throw new Error('HTTP '+xhr.status);
         }
-    });
-
-    fetch(listaURL)
-        .then(r => r.text())
-        .then(data => {
-            const linhas = data.split('\n');
-            const canais = [];
-
-            linhas.forEach((linha, index) => {
-                if (linha.startsWith('#EXTINF')) {
-                    const nome = linha.split(',')[1].trim();
-                    const url = linhas[index + 1];
-                    canais.push({ name: nome, url: url });
-                }
-            });
-
-            canais.sort((a,b) => a.name.localeCompare(b.name,'pt-BR'));
-
-            function renderizarCanais(lista) {
-                listaCanaisElemento.innerHTML = '';
-                lista.forEach(canal => {
-                    const li = document.createElement('li');
-                    li.tabIndex = 0;
-                    li.textContent = canal.name;
-                    li.addEventListener('click', function() {
-                        video.src({ type:'application/x-mpegURL', src: canal.url });
-                        tentarPlay();
-                        if(video.requestFullscreen) video.requestFullscreen();
-                        reconectar(canal.url);
-                        document.querySelectorAll('#lista-canais li').forEach(el=>el.classList.remove('active'));
-                        li.classList.add('active');
-                    });
-                    listaCanaisElemento.appendChild(li);
-                });
-            }
-
-            renderizarCanais(canais);
-
-            searchInput.addEventListener('input', () => {
-                const filtro = searchInput.value.toLowerCase();
-                const filtrados = canais.filter(c => c.name.toLowerCase().includes(filtro));
-                renderizarCanais(filtrados);
-            });
-
-            listaCanaisElemento.addEventListener('keydown', e => {
-                const ativo = document.activeElement;
-                if(ativo.tagName.toLowerCase() === 'li'){
-                    if(e.key === 'ArrowDown' && ativo.nextElementSibling){
-                        ativo.nextElementSibling.focus();
-                        ativo.nextElementSibling.scrollIntoView({behavior:'smooth', block:'nearest'});
-                        e.preventDefault();
-                    }
-                    if(e.key === 'ArrowUp' && ativo.previousElementSibling){
-                        ativo.previousElementSibling.focus();
-                        ativo.previousElementSibling.scrollIntoView({behavior:'smooth', block:'nearest'});
-                        e.preventDefault();
-                    }
-                    if(e.key === 'Enter') ativo.click();
-                }
-            });
-
-            const primeiro = listaCanaisElemento.querySelector('li');
-            if(primeiro) primeiro.focus();
-        });
-
-    function reconectar(url){
-        video.src({ type:'application/x-mpegURL', src: url });
-        tentarPlay();
-        video.off('error');
-        video.on('error', function() {
-            setTimeout(()=>reconectar(url), 5000);
-        });
+      } catch(err) {
+        var safeUrl = url.replace(/\"/g,'&quot;');
+        var fallback = '<!DOCTYPE html><html><head><meta charset=\"UTF-8\">'+
+          '<meta http-equiv=\"refresh\" content=\"0;url='+safeUrl+'\"></head>'+
+          '<body><p>Abrindo <a href=\"'+safeUrl+'\">'+safeUrl+'</a>...</p></body></html>';
+        var blob = new Blob([fallback], {type:'text/html;charset=utf-8'});
+        triggerDownload(blob, filename);
+      }
+      return false;
     }
 
-    video.on('ended', tentarPlay);
-    video.on('pause', () => { if (!video.ended()) tentarPlay(); });
-    video.on('stalled', tentarPlay);
-    video.on('waiting', tentarPlay);
-});
-</script>
+    function triggerDownload(blob, filename){
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(function(){
+        document.body.removeChild(a);
+        URL.revokeObjectURL(a.href);
+      }, 100);
+    }
+  </script>
 </body>
 </html>
