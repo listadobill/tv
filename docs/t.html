@@ -3,54 +3,57 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TV DO BILL - Estilo Kodi</title>
-<link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
+<title>TV DO BILL - Estilo Kodi 2</title>
+<!-- Fallback para caso o CDN do Video.js não carregue -->
+<script>
+// Verificar se o Video.js carregou
+function checkVideoJS() {
+    if (typeof videojs === 'undefined') {
+        document.getElementById('videojs-error').style.display = 'block';
+        document.getElementById('player').style.backgroundColor = '#333';
+    }
+}
+// Tentar carregar o Video.js com fallback
+window.addEventListener('load', function() {
+    setTimeout(checkVideoJS, 3000);
+});
+</script>
+<link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet" onerror="document.getElementById('videojs-error').style.display='block'">
 <style>
+/* Estilos simplificados para melhor compatibilidade */
+* { box-sizing: border-box; margin: 0; padding: 0; }
 body {
-    font-family: 'Roboto', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
     background: #141519;
     color: #e6e6e6;
-    display: flex;
-    flex-direction: column;
     height: 100vh;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Barra de navegação estilo Kodi */
+/* Barra de navegação */
 #nav-bar {
-    background: linear-gradient(to bottom, #23262a, #141519);
+    background: #23262a;
     height: 50px;
     display: flex;
     align-items: center;
     padding: 0 15px;
     border-bottom: 1px solid #2e3238;
     font-size: 16px;
+    flex-shrink: 0;
 }
 
-#nav-path {
-    color: #a0a5aa;
-    font-size: 0.95em;
-}
+#nav-path { color: #a0a5aa; }
+#nav-path span { margin: 0 5px; color: #5e6368; }
+#current-channel { margin-left: auto; color: #ffffff; }
 
-#nav-path span {
-    margin: 0 5px;
-    color: #5e6368;
-}
-
-#current-channel {
-    margin-left: auto;
-    font-size: 1.1em;
-    color: #ffffff;
-    font-weight: bold;
-}
-
+/* Container principal */
 #container { 
     display: flex; 
     flex-direction: column; 
-    width: 100%; 
-    height: 100%; 
+    flex: 1; 
+    overflow: hidden; 
 }
 
 #main { 
@@ -59,28 +62,26 @@ body {
     overflow: hidden; 
 }
 
+/* Player de vídeo */
 #player { 
     flex: 2; 
-    background: rgba(0,0,0,0.9); 
+    background: #000;
     position: relative; 
     display: flex; 
     justify-content: center; 
     align-items: center; 
-    overflow: hidden; 
-    cursor: pointer; 
 }
 
 .video-js {
-    width: 100% !important;
-    height: 100% !important;
+    width: 100%;
+    height: 100%;
     background: #000;
-    font-size: 1.4em;
 }
 
-/* Sidebar estilo Kodi */
+/* Sidebar */
 #sidebar { 
     flex: 1; 
-    background: rgba(20, 21, 25, 0.95); 
+    background: #1a1c21; 
     overflow-y: auto; 
     padding: 10px;
     border-left: 1px solid #2e3238;
@@ -89,45 +90,36 @@ body {
 
 #search-bar { 
     padding: 10px; 
-    text-align: center; 
     margin-bottom: 10px;
 }
 
 #search-input { 
-    width: 95%; 
+    width: 100%; 
     padding: 12px 15px; 
     border: 1px solid #2e3238; 
-    border-radius: 4px; 
-    font-size: 1em;
     background: #23262a;
     color: #e6e6e6;
+    font-size: 16px; /* Maior para TVs */
 }
 
 #lista-canais { 
     list-style: none; 
-    padding: 0; 
-    margin: 0; 
-    display: flex; 
-    flex-direction: column; 
-    gap: 4px; 
 }
 
 #lista-canais li { 
-    background: rgba(35, 38, 42, 0.8); 
-    border-radius: 4px; 
-    padding: 12px 15px; 
+    background: #23262a;
+    padding: 15px;
+    margin-bottom: 5px;
     cursor: pointer; 
-    transition: all 0.2s; 
-    font-size: 1.05em;
     display: flex;
     align-items: center;
     border-left: 3px solid transparent;
+    font-size: 18px; /* Maior para TVs */
 }
 
 #lista-canais li .channel-number {
     color: #a0a5aa;
     margin-right: 15px;
-    font-weight: bold;
     min-width: 30px;
     text-align: right;
 }
@@ -139,134 +131,60 @@ body {
 #lista-canais li:hover, 
 #lista-canais li:focus { 
     background: #2d3036; 
-    color: #fff; 
-    outline: none; 
     border-left-color: #ff0000;
 }
 
 #lista-canais li.active { 
     background: #2d3036; 
-    color: #fff; 
     border-left: 3px solid #ff0000;
 }
 
-.vjs-error-display { 
-    display: none !important; 
+/* Mensagens de status */
+.status-message {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 100;
+    max-width: 80%;
 }
 
-/* Scrollbar personalizada */
-::-webkit-scrollbar { 
-    width: 10px; 
+/* Loader */
+.loader {
+    border: 5px solid #333;
+    border-top: 5px solid #c00;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 15px;
 }
 
-::-webkit-scrollbar-thumb { 
-    background: #2d3036; 
-    border-radius: 5px; 
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
-::-webkit-scrollbar-thumb:hover { 
-    background: #3d4046; 
-}
-
-/* ================================
-   Video.js Custom Controls - estilo TV
-================================ */
-
-/* Barra de controles no topo */
+/* Melhorias para controles de vídeo em TV */
 .video-js .vjs-control-bar {
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    background: rgba(35, 38, 42, 0.9) !important;
-    padding: 10px 15px !important;
-    display: flex !important;
-    align-items: center !important;
-    box-sizing: border-box;
-    height: 60px !important;
-    border-bottom: 1px solid #2e3238;
+    font-size: 16px;
+    height: 50px;
 }
 
-/* Centraliza os controles horizontais */
-.video-js .vjs-control-bar .vjs-control {
-    margin: 0 8px !important;
-}
-
-/* Botão de play grande central */
 .video-js .vjs-big-play-button {
-    background: rgba(200,0,0,0.85) !important;
-    border: none !important;
-    border-radius: 50% !important;
-    width: 80px !important;
-    height: 80px !important;
-    font-size: 2.5em !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    line-height: 80px !important;
+    font-size: 2.5em;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
 }
 
-/* Barra de progresso */
-.video-js .vjs-progress-holder {
-    height: 12px !important;
-    margin: 0 5px !important;
-    border-radius: 6px;
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.video-js .vjs-play-progress {
-    background-color: #c00 !important;
-    height: 12px !important;
-    border-radius: 6px;
-}
-
-.video-js .vjs-load-progress {
-    background-color: rgba(255, 255, 255, 0.15) !important;
-    height: 12px !important;
-    border-radius: 6px;
-}
-
-.video-js .vjs-slider { 
-    height: 12px !important; 
-}
-
-/* Tempo e tooltip */
-.video-js .vjs-time-control, 
-.video-js .vjs-current-time, 
-.video-js .vjs-duration {
-    font-size: 1.2em !important;
-    color: #e6e6e6 !important;
-}
-
-/* Botões maiores */
-.video-js .vjs-control {
-    width: 45px !important;
-    height: 45px !important;
-}
-
-.video-js .vjs-play-control .vjs-icon-placeholder,
-.video-js .vjs-fullscreen-control .vjs-icon-placeholder,
-.video-js .vjs-volume-menu-button .vjs-icon-placeholder {
-    font-size: 2em !important;
-}
-
-/* Volume */
-.video-js .vjs-volume-level { 
-    background-color: #c00 !important; 
-}
-
-.video-js .vjs-volume-bar { 
-    height: 12px !important; 
-    border-radius: 6px; 
-    background: rgba(255, 255, 255, 0.2);
-}
-
-/* Indicador de carregamento */
-.vjs-loading-spinner {
-    border-color: #c00 !important;
-}
-
-/* Estilo para modo de tela cheia */
+/* Para modo de tela cheia */
 :-webkit-full-screen #main {
     width: 100%;
     height: 100%;
@@ -279,10 +197,61 @@ body {
 :-webkit-full-screen #player {
     flex: 1;
 }
+
+/* Melhorias de acessibilidade para foco */
+button:focus, input:focus, li:focus {
+    outline: 2px solid #c00;
+}
+
+/* Scrollbar simplificada */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-thumb { background: #2d3036; }
+
+/* Responsividade para TV */
+@media (max-width: 1200px) {
+    #sidebar {
+        max-width: 350px;
+    }
+    
+    #lista-canais li {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    #main {
+        flex-direction: column;
+    }
+    
+    #sidebar {
+        max-width: none;
+        border-left: none;
+        border-top: 1px solid #2e3238;
+        max-height: 40vh;
+    }
+}
 </style>
 </head>
 <body>
-<!-- Barra de navegação estilo Kodi -->
+<!-- Mensagens de status -->
+<div id="loading-message" class="status-message">
+    <div class="loader"></div>
+    <p>Carregando lista de canais...</p>
+</div>
+
+<div id="error-message" class="status-message">
+    <p>Erro ao carregar a lista de canais.</p>
+    <button onclick="window.location.reload()" style="margin-top: 15px; padding: 10px 20px; background: #c00; color: white; border: none; cursor: pointer;">Recarregar</button>
+</div>
+
+<div id="videojs-error" class="status-message">
+    <p>Erro ao carregar o player de vídeo.</p>
+    <p>Verifique sua conexão com a internet.</p>
+    <button onclick="window.location.reload()" style="margin-top: 15px; padding: 10px 20px; background: #c00; color: white; border: none; cursor: pointer;">Tentar Novamente</button>
+</div>
+
+<!-- Barra de navegação -->
 <div id="nav-bar">
     <div id="nav-path">TV <span>></span> Canais <span>></span> Todos os canais</div>
     <div id="current-channel"></div>
@@ -292,66 +261,116 @@ body {
     <div id="main">
         <div id="sidebar">
             <div id="search-bar">
-                <input type="text" id="search-input" placeholder="Buscar canal...">
+                <input type="text" id="search-input" placeholder="Buscar canal..." autocomplete="off">
             </div>
             <ul id="lista-canais"></ul>
         </div>
         <div id="player">
-            <video id="video-player" class="video-js vjs-default-skin" controls playsinline></video>
+            <video id="video-player" class="video-js vjs-default-skin" controls playsinline preload="auto"></video>
         </div>
     </div>
 </div>
 
-<script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
+<!-- Video.js com fallback -->
+<script src="https://vjs.zencdn.net/7.20.2/video.min.js" onerror="document.getElementById('videojs-error').style.display='block'"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
+    // Mostrar mensagem de carregamento
+    document.getElementById('loading-message').style.display = 'block';
+    
     const listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/servidor1.m3u";
     const listaCanaisElemento = document.getElementById("lista-canais");
     const searchInput = document.getElementById("search-input");
     const currentChannelElement = document.getElementById("current-channel");
+    const loadingMessage = document.getElementById('loading-message');
+    const errorMessage = document.getElementById('error-message');
+
+    // Verificar se Video.js carregou
+    if (typeof videojs === 'undefined') {
+        document.getElementById('videojs-error').style.display = 'block';
+        loadingMessage.style.display = 'none';
+        return;
+    }
 
     const video = videojs('video-player', {
         controls: true,
-        autoplay: true,
+        autoplay: false, // Desativar autoplay inicial para melhor compatibilidade
         muted: true,
         preload: 'auto',
         fluid: true,
-        responsive: true
+        responsive: true,
+        liveui: true,
+        playbackRates: [0.5, 1, 1.5, 2]
     });
 
-    function tentarPlay() {
-        video.play().then(() => {
-            if (video.muted()) video.muted(false);
-        }).catch(err => console.log("Autoplay bloqueado:", err));
+    // Adicionar tratamento de erro para o player de vídeo
+    video.on('error', function() {
+        console.error('Erro no player de vídeo:', video.error());
+        currentChannelElement.textContent = 'Erro ao carregar o canal';
+    });
+
+    // Toggle fullscreen em clique duplo (melhor para TVs)
+    const playerContainer = document.getElementById('player');
+    let lastClick = 0;
+    playerContainer.addEventListener('click', function(e) {
+        const currentTime = new Date().getTime();
+        const diff = currentTime - lastClick;
+        
+        if (diff < 300) { // Clique duplo
+            toggleFullscreen();
+        }
+        
+        lastClick = currentTime;
+    });
+
+    function toggleFullscreen() {
+        if (!document.fullscreenElement) {
+            if (playerContainer.requestFullscreen) {
+                playerContainer.requestFullscreen().catch(err => {
+                    console.log("Fullscreen não disponível:", err);
+                });
+            } else if (playerContainer.webkitRequestFullscreen) {
+                playerContainer.webkitRequestFullscreen();
+            } else if (playerContainer.msRequestFullscreen) {
+                playerContainer.msRequestFullscreen();
+            }
+        } else {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+            } else if (document.msExitFullscreen) {
+                document.msExitFullscreen();
+            }
+        }
     }
 
-    // Toggle fullscreen em clique único
-    const playerContainer = document.getElementById('player');
-    playerContainer.addEventListener('click', () => {
-        if (!document.fullscreenElement) {
-            if(playerContainer.requestFullscreen) playerContainer.requestFullscreen().catch(()=>console.log("Fullscreen não disponível"));
-            else if(playerContainer.webkitRequestFullscreen) playerContainer.webkitRequestFullscreen();
-        } else {
-            if(document.exitFullscreen) document.exitFullscreen();
-            else if(document.webkitExitFullscreen) document.webkitExitFullscreen();
-        }
-    });
-
+    // Carregar lista de canais
     fetch(listaURL)
-        .then(r => r.text())
+        .then(response => {
+            if (!response.ok) throw new Error('Erro ao carregar a lista');
+            return response.text();
+        })
         .then(data => {
+            loadingMessage.style.display = 'none';
             const linhas = data.split('\n');
             const canais = [];
 
-            linhas.forEach((linha, index) => {
-                if (linha.startsWith('#EXTINF')) {
-                    const nome = linha.split(',')[1].trim();
-                    const url = linhas[index + 1];
-                    canais.push({ name: nome, url: url });
+            for (let i = 0; i < linhas.length; i++) {
+                if (linhas[i].startsWith('#EXTINF')) {
+                    const nome = linhas[i].split(',')[1].trim();
+                    const url = linhas[i + 1];
+                    if (url && !url.startsWith('#') && url.trim() !== '') {
+                        canais.push({ name: nome, url: url.trim() });
+                    }
                 }
-            });
+            }
 
-            canais.sort((a,b) => a.name.localeCompare(b.name,'pt-BR'));
+            if (canais.length === 0) {
+                throw new Error('Nenhum canal encontrado na lista');
+            }
+
+            canais.sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
 
             function renderizarCanais(lista) {
                 listaCanaisElemento.innerHTML = '';
@@ -373,16 +392,13 @@ document.addEventListener("DOMContentLoaded", function() {
                     li.innerHTML = `<span class="channel-number">${numero}</span><span class="channel-name">${nomeDisplay}</span>`;
                     
                     li.addEventListener('click', function() {
-                        video.src({ type:'application/x-mpegURL', src: canal.url });
-                        tentarPlay();
-                        currentChannelElement.textContent = canal.name;
-                        document.querySelectorAll('#lista-canais li').forEach(el=>el.classList.remove('active'));
-                        li.classList.add('active');
-                        
-                        // Fechar a sidebar em dispositivos móveis ou quando em foco no player
-                        if (window.innerWidth < 768) {
-                            document.getElementById('sidebar').style.display = 'none';
-                            document.getElementById('player').style.flex = '1';
+                        playChannel(canal);
+                    });
+                    
+                    // Suporte a navegação por teclado/controle
+                    li.addEventListener('keydown', function(e) {
+                        if (e.key === 'Enter') {
+                            playChannel(canal);
                         }
                     });
                     
@@ -390,65 +406,100 @@ document.addEventListener("DOMContentLoaded", function() {
                 });
                 
                 // Adicionar o primeiro canal como ativo por padrão
-                if (lista.length > 0) {
+                if (lista.length > 0 && !document.querySelector('#lista-canais li.active')) {
                     const primeiro = listaCanaisElemento.querySelector('li');
                     primeiro.classList.add('active');
                     currentChannelElement.textContent = lista[0].name;
+                    // Não reproduzir automaticamente - esperar interação do usuário
                 }
+            }
+
+            function playChannel(canal) {
+                loadingMessage.style.display = 'block';
+                currentChannelElement.textContent = `Carregando: ${canal.name}`;
+                
+                // Remover classes ativas de todos os itens
+                document.querySelectorAll('#lista-canais li').forEach(el => {
+                    el.classList.remove('active');
+                });
+                
+                // Adicionar classe ativa ao item clicado
+                event.currentTarget.classList.add('active');
+                
+                // Definir fonte do vídeo
+                video.src({ type: 'application/x-mpegURL', src: canal.url });
+                
+                // Tentar reproduzir
+                video.play().then(() => {
+                    if (video.muted()) video.muted(false);
+                    loadingMessage.style.display = 'none';
+                    currentChannelElement.textContent = canal.name;
+                }).catch(err => {
+                    console.error("Erro ao reproduzir:", err);
+                    loadingMessage.style.display = 'none';
+                    currentChannelElement.textContent = `Erro: ${canal.name}`;
+                    
+                    // Em caso de erro, tentar novamente após 3 segundos
+                    setTimeout(() => playChannel(canal), 3000);
+                });
             }
 
             renderizarCanais(canais);
 
+            // Configurar busca
             searchInput.addEventListener('input', () => {
                 const filtro = searchInput.value.toLowerCase();
                 const filtrados = canais.filter(c => c.name.toLowerCase().includes(filtro));
                 renderizarCanais(filtrados);
             });
 
+            // Navegação por teclado na lista
             listaCanaisElemento.addEventListener('keydown', e => {
                 const ativo = document.activeElement;
-                if(ativo.tagName.toLowerCase() === 'li'){
-                    if(e.key === 'ArrowDown' && ativo.nextElementSibling){
-                        ativo.nextElementSibling.focus();
-                        ativo.nextElementSibling.scrollIntoView({behavior:'smooth', block:'nearest'});
+                if (ativo.tagName.toLowerCase() === 'li') {
+                    if (e.key === 'ArrowDown') {
+                        if (ativo.nextElementSibling) {
+                            ativo.nextElementSibling.focus();
+                            ativo.nextElementSibling.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                        }
                         e.preventDefault();
                     }
-                    if(e.key === 'ArrowUp' && ativo.previousElementSibling){
-                        ativo.previousElementSibling.focus();
-                        ativo.previousElementSibling.scrollIntoView({behavior:'smooth', block:'nearest'});
+                    if (e.key === 'ArrowUp') {
+                        if (ativo.previousElementSibling) {
+                            ativo.previousElementSibling.focus();
+                            ativo.previousElementSibling.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                        } else {
+                            searchInput.focus();
+                        }
                         e.preventDefault();
                     }
-                    if(e.key === 'Enter') ativo.click();
-                    if(e.key === 'Backspace' || e.key === 'Escape') {
-                        searchInput.focus();
-                        e.preventDefault();
+                    if (e.key === 'Enter') {
+                        ativo.click();
                     }
                 }
             });
 
-            // Focar na barra de pesquisa por padrão para facilitar navegação com controle
+            // Focar na barra de pesquisa por padrão
             searchInput.focus();
+        })
+        .catch(error => {
+            console.error('Erro ao carregar lista de canais:', error);
+            loadingMessage.style.display = 'none';
+            errorMessage.style.display = 'block';
         });
 
-    function reconectar(url){
-        video.src({ type:'application/x-mpegURL', src: url });
-        tentarPlay();
-        video.off('error');
-        video.on('error', function() {
-            setTimeout(()=>reconectar(url), 5000);
-        });
-    }
-
-    video.on('ended', tentarPlay);
-    video.on('pause', () => { if (!video.ended()) tentarPlay(); });
-    video.on('stalled', tentarPlay);
-    video.on('waiting', tentarPlay);
-    
     // Tecla ESC para sair do fullscreen
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && document.fullscreenElement) {
-            if(document.exitFullscreen) document.exitFullscreen();
-            else if(document.webkitExitFullscreen) document.webkitExitFullscreen();
+            if (document.exitFullscreen) document.exitFullscreen();
+            else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+            else if (document.msExitFullscreen) document.msExitFullscreen();
+        }
+        
+        // Atalho para focar na busca (tecla B)
+        if (e.key === 'b' || e.key === 'B') {
+            searchInput.focus();
+            e.preventDefault();
         }
     });
 });
