@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Filtro M3U Inteligente — TV DO BILL</title>
+<style>
+  :root { color-scheme: dark; }
+  body{margin:0;background:#0b0b0b;color:#eaeaea;font-family:system-ui,Arial,sans-serif}
+  header{padding:18px 16px;border-bottom:1px solid #222;background:#101010}
+  h1{margin:0;font-size:18px}
+  main{padding:16px;display:grid;gap:16px}
+  .card{background:#101214;border:1px solid #1f242a;border-radius:14px;padding:14px}
+  label{font-size:13px;color:#bfc7d4}
+  textarea{width:100%;min-height:180px;background:#0e1114;color:#e6edf3;border:1px solid #1f242a;border-radius:10px;padding:10px;resize:vertical}
+  input[type=file]{display:block;margin-top:8px}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .btn{background:#1f6feb;border:0;color:#fff;padding:10px 14px;border-radius:10px;cursor:pointer;font-weight:600}
+  .btn:disabled{opacity:.6;cursor:not-allowed}
+  .btn.sec{background:#2d333b}
+  .pill{background:#17202a;border:1px solid #22303c;color:#cdd9e5;border-radius:999px;padding:6px 10px;font-size:12px}
+  .muted{color:#9aa7b2;font-size:12px}
+  .list{max-height:280px;overflow:auto;border:1px dashed #2a3138;border-radius:10px;padding:10px;background:#0e1114}
+  .stat{display:inline-block;margin-right:12px;font-size:13px;color:#c7d1db}
+  .toggle{display:flex;gap:8px;align-items:center;margin:8px 0}
+  .dropzone{border:2px dashed #2a3138;border-radius:12px;padding:14px;text-align:center;background:#0e1114}
+  .dropzone.drag{background:#0b141d}
+  code.small{font-family:ui-monospace,Monaco,Consolas,monospace;font-size:12px}
+  .progress {width:100%;height:8px;background:#2d333b;border-radius:4px;overflow:hidden;margin:10px 0}
+  .progress-bar {height:100%;background:#1f6feb;transition:width 0.3s}
+</style>
+</head>
+<body>
+<header><h1>Filtro M3U Inteligente — TV DO BILL</h1></header>
+<main>
+  <section class="card">
+    <label><b>1) Cole suas listas M3U (uma ou várias):</b></label>
+    <textarea id="pasteArea" placeholder="#EXTM3U
+#EXTINF:-1 tvg-id=&quot;...&quot; group-title=&quot;BRASIL&quot;, Telecine Pipoca
+https://exemplo/playlist.m3u8"></textarea>
+    <div class="muted">Você pode colar múltiplas listas aqui, uma após a outra.</div>
+  </section>
+
+  <section class="card">
+    <label><b>2) Ou envie arquivos .m3u/.m3u8 (múltiplos):</b></label>
+    <input id="fileInput" type="file" accept=".m3u,.m3u8,.txt" multiple />
+    <div id="dropzone" class="dropzone muted">Arraste e solte arquivos aqui</div>
+  </section>
+
+  <section class="card">
+    <div class="toggle">
+      <input type="checkbox" id="onlyBR" checked />
+      <label for="onlyBR">Apenas canais de grupos brasileiros</label>
+    </div>
+    <div class="toggle">
+      <input type="checkbox" id="removeMetadata" checked />
+      <label for="removeMetadata">Remover metadados extras (KODIPROP, EXTVLCOPT)</label>
+    </div>
+    <div class="row">
+      <button id="processBtn" class="btn">Processar e Filtrar</button>
+      <button id="downloadBtn" class="btn sec" disabled>Baixar .m3u filtrado</button>
+      <span id="stats" class="pill">Pronto para processar</span>
+    </div>
+    <div class="muted">Deduplicação automática por URL. Filtro inteligente que reconhece variações de nomes.</div>
+    <div class="progress" id="progressContainer" style="display: none;">
+      <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <label><b>Prévia dos canais mantidos</b></label>
+    <div id="preview" class="list muted">Nenhum item ainda.</div>
+  </section>
+</main>
+
+<script>
+/* ===================== Configuração dos termos ===================== */
+const CHANNEL_TERMS = {
+  "GLOBO": ["globo", "redeglobo", "tvglobo", "globosp", "globotv"],
+  "GLOBO NEWS": ["globonews", "globo news"],
+  "RECORD": ["record", "recordtv", "tvrecord"],
+  "SBT": ["sbt", "sbtv"],
+  "BAND": ["band", "bandeirantes", "tvband"],
+  "REDE TV": ["redetv", "rede tv"],
+  "CNN BRASIL": ["cnn", "cnn brasil"],
+  "TV BRASIL": ["tvbrasil", "tv brasil"],
+  "TV CULTURA": ["cultuta", "tvcultura", "tv cultura"],
+  "TV APARECIDA": ["aparecida", "tvaparecida"],
+  "GAZETA": ["gazeta", "gazetatv"],
+  "TV JUSTIÇA": ["justica", "tvjustica"],
+  
+  "BAND NEWS": ["bandnews"],
+  "BAND SPORTS": ["bandsports", "band sports"],
+  
+  "HBO": ["hbo"],
+  "HBO 2": ["hbo2"],
+  "HBO FAMILY": ["hbo family", "hbofamily"],
+  "HBO SIGNATURE": ["hbo signature", "hbo signature"],
+  "HBO PLUS": ["hbo plus", "hboplus"],
+  "HBO MUNDI": ["hbo mundi", "hbomundi"],
+  "HBO POP": ["hbo pop", "hbopop"],
+  "HBO XTREME": ["hbo xtreme", "hboxtreme"],
+  
+  "MAX": ["max", "maxprime", "max prime"],
+  "MAX UP": ["max up"],
+  "MAX 2": ["max2"],
+  
+  "CINEMAX": ["cinemax"],
+  
+  "TELE CINE ACTION": ["telecine action", "telecineaction"],
+  "TELE CINE PREMIUM": ["telecine premium", "telecinepremium"],
+  "TELE CINE FUN": ["telecine fun", "telecinefun"],
+  "TELE CINE TOUCH": ["telecine touch", "telecinetouch"],
+  "TELE CINE PIPOCA": ["telecine pipoca", "telecinepipoca"],
+  "TELE CINE CULT": ["telecine cult", "telecinecult"],
+  
+  "TNT": ["tnt"],
+  "TNT SERIES": ["tnt series", "tntseries"],
+  
+  "SPACE": ["space"],
+  
+  "FX": ["fx"],
+  
+  "FOX": ["fox"],
+  "FOX SPORTS": ["fox sports", "foxsports"],
+  "FOX SPORTS 2": ["fox sports 2", "foxsports2"],
+  "FOX PREMIUM": ["fox premium", "foxpremium"],
+  "FOX PREMIUM 1": ["fox premium 1", "foxpremium1"],
+  "FOX PREMIUM 2": ["fox premium 2", "foxpremium2"],
+  
+  "ESPN": ["espn"],
+  "ESPN 2": ["espn2", "espn 2"],
+  "ESPN 3": ["espn3", "espn 3"],
+  "ESPN 4": ["espn4", "espn 4"],
+  "ESPN BRASIL": ["espn brasil"],
+  
+  "COMBATE": ["combate"],
+  
+  "PREMIERE": ["premiere", "premierefc"],
+  "PREMIERE 2": ["premiere 2", "premiere2"],
+  "PREMIERE 3": ["premiere 3", "premiere3"],
+  "PREMIERE 4": ["premiere 4", "premiere4"],
+  "PREMIERE 5": ["premiere 5", "premiere5"],
+  "PREMIERE 6": ["premiere 6", "premiere6"],
+  "PREMIERE 7": ["premiere 7", "premiere7"],
+  "PREMIERE 8": ["premiere 8", "premiere8"],
+  "PREMIERE 9": ["premiere 9", "premiere9"],
+  
+  "CONMEBOL TV": ["conmebol", "conmeboltv"],
+  
+  "DAZN": ["dazn"],
+  
+  "SPORTV": ["sportv", "sport tv"],
+  "SPORTV 2": ["sportv2", "sportv 2"],
+  "SPORTV 3": ["sportv3", "sportv 3"],
+  
+  "DISCOVERY": ["discovery", "discoverychannel"],
+  "DISCOVERY TURBO": ["discovery turbo", "discoveryturbo"],
+  "DISCOVERY SCIENCE": ["discovery science", "discoveryscience"],
+  "DISCOVERY THEATER": ["discovery theater", "discoverytheater"],
+  "DISCOVERY WORLD": ["discovery world", "discoveryworld"],
+  "DISCOVERY H&H": ["discovery h&h", "discovery home", "discoveryhome"],
+  "DISCOVERY KIDS": ["discovery kids", "discoverykids"],
+  
+  "ANIMAL PLANET": ["animal planet", "animalplanet"],
+  
+  "NAT GEO": ["natgeo", "national geographic", "nat geo"],
+  "NAT GEO WILD": ["nat geo wild", "natgeowild"],
+  
+  "HISTORY": ["history", "historychannel"],
+  "H2": ["h2"],
+  "A&E": ["a&e"],
+  
+  "AMC": ["amc"],
+  
+  "AXN": ["axn"],
+  
+  "SONY": ["sony"],
+  
+  "TLC": ["tlc"],
+  
+  "UNIVERSAL": ["universal", "universalchannel"],
+  
+  "SYFY": ["syfy"],
+  
+  "WARNER": ["warner", "warnerchannel"],
+  
+  "STUDIO UNIVERSAL": ["studio universal", "studiouniversal"],
+  
+  "MTV": ["mtv"],
+  
+  "MULTISHOW": ["multishow"],
+  
+  "VH1": ["vh1"],
+  
+  "E!": ["e!", "e entertainment"],
+  
+  "DISNEY": ["disney", "disneychannel"],
+  "DISNEY JUNIOR": ["disney junior", "disneyjunior"],
+  "DISNEY XD": ["disney xd", "disneyxd"],
+  
+  "NICKELODEON": ["nickelodeon", "nick"],
+  "NICK JR": ["nick jr", "nickjr"],
+  
+  "CARTOON NETWORK": ["cartoon network", "cartoonnetwork"],
+  "CARTOONITO": ["cartoonito"],
+  
+  "BOOMERANG": ["boomerang"],
+  
+  "BABY TV": ["baby tv", "babytv"],
+  
+  "TV RÁTIM BUM": ["ratimbum", "tv ratimbum"],
+  
+  "GLOOB": ["globo"],
+  "GNT": ["gnt"],
+  
+  "VIVA": ["viva"],
+  
+  "TV ESCOLA": ["tv escola", "tvescola"],
+  
+  "TV SENADO": ["tv senado", "tvsenado"],
+  
+  "TV CÂMARA": ["tv camara", "camara", "tvcamara"],
+  
+  "CANAL BRASIL": ["canal brasil", "canalbrasil"],
+  
+  "CANÇÃO NOVA": ["cancao nova", "cancaonova"],
+  
+  "Rede Vida": ["rede vida", "redevida"],
+  
+  "Rede Super": ["rede super", "redesuper"],
+  
+  "TV NOVO TEMPO": ["novo tempo", "novotempo"],
+  
+  "TV Evangelizar": ["evangelizar"],
+  
+  "PlayTV": ["playtv"],
+  
+  "Futura": ["futura"],
+  
+  "Arte 1": ["arte 1", "arte1"],
+  
+  "Curta!": ["curta"],
+  
+  "Prime Box Brazil": ["prime box", "primebox"],
+  
+  "OFF": ["off"],
+  
+  "Mega Pixel": ["mega pixel", "megapixel"],
+  
+  "Ideal TV": ["ideal tv", "idealtv"],
+  
+  "RIT": ["rit"],
+  
+  "TV Climatempo": ["climatempo"],
+  
+  "TV Jaguar": ["jaguar"],
+  
+  "Music Box Brazil": ["music box", "musicbox"],
+  
+  "Rede Brasil": ["rede brasil", "redebrasil"]
+};
+
+/* ===================== Utilidades de parsing ===================== */
+const isExtInf = (line) => line.startsWith("#EXTINF");
+const isComment = (line) => line.startsWith("#");
+
+/* Normalização: remove acentos, caracteres especiais, converte para minúsculas e remove espaços extras */
+const normalize = (s) => {
+  if (!s) return '';
+  return s
+    .normalize("NFD").replace(/\p{Diacritic}/gu, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim()
+    .replace(/\s+/g, " ");
+};
+
+/* Remove prefixos/sufixos comuns (HD, FHD, SD, TV, etc.) */
+const cleanChannelName = (name) => {
+  return name
+    .replace(/\b(hd|fhd|sd|uhd|4k|tv|channel|canal)\b/gi, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+};
+
+/* Extrai atributos do #EXTINF (ex.: group-title, tvg-country) */
+function parseExtinfAttrs(extinfLine) {
+  const attrs = {};
+  const attrRegex = /([a-zA-Z0-9_-]+)\s*=\s*"([^"]*)"/g;
+  let m;
+  while ((m = attrRegex.exec(extinfLine)) !== null) {
+    attrs[m[1].toLowerCase()] = m[2];
+  }
+  return attrs;
+}
+
+/* Extrai o nome exibido do canal do #EXTINF (texto após a última vírgula) */
+function extractDisplayName(extinfLine) {
+  const commaIdx = extinfLine.lastIndexOf(",");
+  if (commaIdx >= 0) return extinfLine.slice(commaIdx + 1).trim();
+  return extinfLine.trim();
+}
+
+/* Checa se pertence a grupo BR */
+function isBrazilianGroup(extinfLine) {
+  const attrs = parseExtinfAttrs(extinfLine);
+  const group = (attrs["group-title"] || "").toLowerCase();
+  const tvgCountry = (attrs["tvg-country"] || attrs["tvg_country"] || "").toLowerCase();
+
+  // tvg-country="BR" conta como Brasil
+  if (/\bbr\b/.test(tvgCountry)) return true;
+
+  // Verifica se o grupo termina com "BR" (case insensitive)
+  if (/br$/i.test(group)) return true;
+  
+  // Verifica se contém termos brasileiros comuns
+  const brTerms = ["brasil", "brazil", "br:", "canais", "abertos", "esportes", "filmes", "series", "variedades", "noticias", "infantis", "religiosos", "radios"];
+  const normalizedGroup = normalize(group);
+  
+  for (const term of brTerms) {
+    if (normalizedGroup.includes(term)) return true;
+  }
+
+  return false;
+}
+
+/* Verifica se o canal corresponde a algum dos termos conhecidos */
+function matchesChannelTerms(channelName) {
+  const cleanedName = cleanChannelName(channelName);
+  const normalizedName = normalize(cleanedName);
+  
+  // Verifica cada categoria de canal
+  for (const [category, terms] of Object.entries(CHANNEL_TERMS)) {
+    for (const term of terms) {
+      if (normalizedName.includes(term)) {
+        return true;
+      }
+    }
+  }
+  
+  return false;
+}
+
+/* Deduplicação: por URL normalizada */
+const normURL = (u) => u.trim();
+
+/* ===================== Núcleo: processa um ou mais textos M3U ===================== */
+function processM3UTexts(texts, onlyBR=true, removeMetadata=true) {
+  const kept = [];     // {extinf, url}
+  const seen = new Set();
+
+  for (const text of texts) {
+    const lines = text.split(/\r?\n/);
+    let pendingExtinf = null;
+    let pendingMetadata = [];
+
+    for (let i=0;i<lines.length;i++){
+      const raw = lines[i];
+      const line = raw.trim();
+
+      if (!line) continue;
+
+      if (isExtInf(line)) {
+        pendingExtinf = line;
+        pendingMetadata = [];
+        continue;
+      }
+
+      if (pendingExtinf) {
+        // Coletar metadados extras se necessário
+        if (isComment(line)) {
+          if (!removeMetadata) {
+            pendingMetadata.push(line);
+          }
+          continue;
+        }
+        
+        // linha de URL
+        const url = line;
+        const name = extractDisplayName(pendingExtinf);
+
+        // Filtros
+        const isBR = isBrazilianGroup(pendingExtinf);
+        const matches = matchesChannelTerms(name);
+        
+        if ((!onlyBR || isBR) && matches) {
+          const key = normURL(url).toLowerCase();
+          if (!seen.has(key)) {
+            kept.push({ 
+              extinf: pendingExtinf, 
+              url,
+              metadata: [...pendingMetadata] 
+            });
+            seen.add(key);
+          }
+        }
+        pendingExtinf = null;
+      }
+    }
+  }
+
+  // Monta a saída M3U
+  const out = ["#EXTM3U"];
+  for (const item of kept) {
+    out.push(item.extinf);
+    if (!removeMetadata) {
+      out.push(...item.metadata);
+    }
+    out.push(item.url);
+  }
+  return { m3u: out.join("\n"), count: kept.length, items: kept };
+}
+
+/* ===================== UI / Interações ===================== */
+const pasteArea = document.getElementById("pasteArea");
+const fileInput = document.getElementById("fileInput");
+const dropzone  = document.getElementById("dropzone");
+const onlyBRChk = document.getElementById("onlyBR");
+const removeMetadataChk = document.getElementById("removeMetadata");
+const processBtn = document.getElementById("processBtn");
+const downloadBtn = document.getElementById("downloadBtn");
+const statsSpan = document.getElementById("stats");
+const previewDiv = document.getElementById("preview");
+const progressContainer = document.getElementById("progressContainer");
+const progressBar = document.getElementById("progressBar");
+
+let lastResult = null;
+
+function setStats(text){ statsSpan.textContent = text; }
+function setPreview(items){
+  if (!items || items.length===0){ 
+    previewDiv.textContent = "Nenhum item após o filtro."; 
+    previewDiv.classList.add("muted"); 
+    return; 
+  }
+  
+  const frag = document.createDocumentFragment();
+  for (const it of items.slice(0,50)) {
+    const name = extractDisplayName(it.extinf);
+    const div = document.createElement("div");
+    div.innerHTML = `<b>${name}</b><br><code class="small">${it.url}</code>`;
+    div.style.padding="6px 0";
+    frag.appendChild(div);
+  }
+  previewDiv.innerHTML = "";
+  previewDiv.classList.remove("muted");
+  previewDiv.appendChild(frag);
+  
+  if (items.length>50){
+    const more = document.createElement("div");
+    more.className = "muted";
+    more.textContent = `… e mais ${items.length-50} canais.`;
+    previewDiv.appendChild(more);
+  }
+}
+
+function updateProgress(percent) {
+  progressBar.style.width = `${percent}%`;
+}
+
+async function readFiles(files){
+  const texts = [];
+  const total = files.length;
+  
+  for (let i = 0; i < files.length; i++) {
+    const f = files[i];
+    const t = await f.text();
+    texts.push(t);
+    updateProgress(((i + 1) / total) * 100);
+  }
+  
+  return texts;
+}
+
+/* Drag & drop */
+dropzone.addEventListener("dragover", e => {
+  e.preventDefault(); 
+  dropzone.classList.add("drag");
+});
+dropzone.addEventListener("dragleave", () => dropzone.classList.remove("drag"));
+dropzone.addEventListener("drop", async e => {
+  e.preventDefault(); 
+  dropzone.classList.remove("drag");
+  const files = e.dataTransfer.files;
+  progressContainer.style.display = 'block';
+  const texts = await readFiles(files);
+  progressContainer.style.display = 'none';
+  pasteArea.value += (pasteArea.value ? "\n\n" : "") + texts.join("\n\n");
+  setStats(`Adicionados ${files.length} arquivo(s) via arrastar/soltar`);
+});
+
+processBtn.addEventListener("click", async () => {
+  processBtn.disabled = true;
+  setStats("Processando…");
+  progressContainer.style.display = 'block';
+
+  const texts = [];
+  const pasted = pasteArea.value.trim();
+  if (pasted) texts.push(pasted);
+
+  const files = fileInput.files;
+  if (files && files.length) {
+    const fileTexts = await readFiles(files);
+    texts.push(...fileTexts);
+  }
+
+  if (texts.length===0){
+    setStats("Nenhuma lista fornecida");
+    processBtn.disabled = false;
+    progressContainer.style.display = 'none';
+    return;
+  }
+
+  try {
+    updateProgress(50);
+    const { m3u, count, items } = processM3UTexts(
+      texts, 
+      onlyBRChk.checked, 
+      removeMetadataChk.checked
+    );
+    updateProgress(100);
+    
+    lastResult = m3u;
+    setStats(`Canais mantidos: ${count}`);
+    setPreview(items);
+    downloadBtn.disabled = count===0;
+  } catch (error) {
+    setStats(`Erro: ${error.message}`);
+    console.error(error);
+  }
+  
+  processBtn.disabled = false;
+  setTimeout(() => {
+    progressContainer.style.display = 'none';
+  }, 500);
+});
+
+downloadBtn.addEventListener("click", () => {
+  if (!lastResult) return;
+  const blob = new Blob([lastResult], {type:"audio/x-mpegurl"});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  const stamp = new Date().toISOString().replace(/[:.]/g,"-");
+  a.href = url;
+  a.download = `lista_filtrada_br_${stamp}.m3u`;
+  document.body.appendChild(a);
+  a.click();
+  URL.revokeObjectURL(url);
+  a.remove();
+});
+
+// Carregar lista de exemplo ao iniciar (para teste)
+pasteArea.value = `#EXTM3U
+#EXTINF:-1 tvg-id="GloboRJ.br" tvg-name="GLOBO RJ" tvg-logo="http://example.com/logo.png" group-title="CANAIS ABERTOS",GLOBO RJ
+http://example.com/stream1.m3u8
+#EXTINF:-1 tvg-id="GloboSP.br" tvg-name="GLOBO SP FHD" tvg-logo="http://example.com/logo.png" group-title="CANAIS ABERTOS",GLOBO SP FHD
+http://example.com/stream2.m3u8
+#EXTINF:-1 tvg-id="Band.br" tvg-name="BAND" tvg-logo="http://example.com/logo.png" group-title="CANAIS ABERTOS",BAND
+http://example.com/stream3.m3u8
+#EXTINF:-1 tvg-id="HBO.br" tvg-name="HBO" tvg-logo="http://example.com/logo.png" group-title="FILMES",HBO
+http://example.com/stream4.m3u8
+#EXTINF:-1 tvg-id="FoxSports.br" tvg-name="FOX SPORTS" tvg-logo="http://example.com/logo.png" group-title="ESPORTES",FOX SPORTS
+http://example.com/stream5.m3u8`;
+</script>
+</body>
+</html>
