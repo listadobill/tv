@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de URLs M3U - Download Automático</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            background-attachment: fixed;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        
+        .description {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+        }
+        
+        .input-area {
+            margin-bottom: 25px;
+        }
+        
+        textarea {
+            width: 100%;
+            height: 200px;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            resize: vertical;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        textarea:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+        
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+        
+        button {
+            padding: 14px 28px;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        #generateBtn {
+            background-color: #2ecc71;
+        }
+        
+        #generateBtn:hover:not(:disabled) {
+            background-color: #27ae60;
+        }
+        
+        #downloadAllBtn {
+            background-color: #9b59b6;
+        }
+        
+        #downloadAllBtn:hover:not(:disabled) {
+            background-color: #8e44ad;
+        }
+        
+        #copyAllBtn {
+            background-color: #3498db;
+        }
+        
+        #copyAllBtn:hover:not(:disabled) {
+            background-color: #2980b9;
+        }
+        
+        #clearBtn {
+            background-color: #e74c3c;
+        }
+        
+        #clearBtn:hover:not(:disabled) {
+            background-color: #c0392b;
+        }
+        
+        .download-btn {
+            background-color: #9b59b6;
+            padding: 8px 15px;
+            font-size: 14px;
+        }
+        
+        .download-btn:hover {
+            background-color: #8e44ad;
+        }
+        
+        .results {
+            margin-top: 20px;
+        }
+        
+        .url-item {
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            border-left: 5px solid #3498db;
+            word-break: break-all;
+            transition: transform 0.2s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .url-item:hover {
+            transform: translateX(5px);
+        }
+        
+        .url-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .url-link {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            flex-grow: 1;
+        }
+        
+        .url-link:hover {
+            text-decoration: underline;
+        }
+        
+        .server-info {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-top: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 25px;
+            color: white;
+            border-radius: 8px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .notification.show {
+            opacity: 1;
+        }
+        
+        .notification.success {
+            background-color: #2ecc71;
+        }
+        
+        .notification.error {
+            background-color: #e74c3c;
+        }
+        
+        .instructions {
+            background-color: #e8f4fc;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border-left: 5px solid #3498db;
+        }
+        
+        .instructions h3 {
+            margin-bottom: 15px;
+            color: #2c3e50;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .instructions ol {
+            margin-left: 20px;
+        }
+        
+        .instructions li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        .counter {
+            text-align: center;
+            margin-top: 15px;
+            font-weight: 600;
+            color: #7f8c8d;
+        }
+        
+        .progress-container {
+            width: 100%;
+            height: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            margin: 15px 0;
+            overflow: hidden;
+            display: none;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #3498db, #2ecc71);
+            border-radius: 10px;
+            width: 0%;
+            transition: width 0.3s;
+        }
+        
+        .status-text {
+            text-align: center;
+            margin-bottom: 15px;
+            font-weight: 500;
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .buttons {
+                flex-direction: column;
+            }
+            
+            button {
+                width: 100%;
+            }
+            
+            .server-info {
+                flex-direction: column;
+                gap: 5px;
+            }
+            
+            .url-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+        
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo-icon {
+            font-size: 3rem;
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+        
+        .download-all-section {
+            text-align: center;
+            margin: 25px 0;
+            padding: 15px;
+            background-color: #e8f4fc;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="logo-icon">📺</div>
+                <h1>Gerador de URLs M3U</h1>
+            </div>
+            <p class="description">Cole os códigos dos servidores IPTV abaixo para gerar URLs M3U e baixar automaticamente</p>
+        </header>
+        
+        <div class="instructions">
+            <h3>📋 Como usar:</h3>
+            <ol>
+                <li>Cole todo o texto com os servidores no campo abaixo</li>
+                <li>Clique em "Gerar URLs"</li>
+                <li>Clique em "Baixar Todas as Listas" para iniciar o download automático</li>
+                <li>Os arquivos serão salvos na pasta "Listas" dentro de seus Downloads</li>
+                <li>Você também pode baixar listas individualmente</li>
+            </ol>
+        </div>
+        
+        <div class="input-area">
+            <textarea id="inputText" placeholder="Cole aqui os códigos dos servidores no formato:
+
+🌐 http://exemplo.com:8080
+👤 usuario 🔐 senha
+
+🌐 http://outroservidor.com
+👤 user123 🔐 pass123"></textarea>
+        </div>
+        
+        <div class="buttons">
+            <button id="generateBtn">🔗 Gerar URLs</button>
+            <button id="downloadAllBtn">📦 Baixar Todas as Listas</button>
+            <button id="copyAllBtn">📋 Copiar Todos</button>
+            <button id="clearBtn">🗑️ Limpar Tudo</button>
+        </div>
+        
+        <div class="status-text" id="statusText">Preparando download...</div>
+        <div class="progress-container" id="progressContainer">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        
+        <div class="counter" id="counter">0 URLs gerados</div>
+        
+        <div class="results" id="resultsContainer">
+            <!-- Os resultados serão gerados aqui -->
+        </div>
+    </div>
+    
+    <div class="notification" id="notification">Links copiados para a área de transferência!</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const inputText = document.getElementById('inputText');
+            const generateBtn = document.getElementById('generateBtn');
+            const downloadAllBtn = document.getElementById('downloadAllBtn');
+            const copyAllBtn = document.getElementById('copyAllBtn');
+            const clearBtn = document.getElementById('clearBtn');
+            const resultsContainer = document.getElementById('resultsContainer');
+            const notification = document.getElementById('notification');
+            const counter = document.getElementById('counter');
+            const progressContainer = document.getElementById('progressContainer');
+            const progressBar = document.getElementById('progressBar');
+            const statusText = document.getElementById('statusText');
+            
+            let generatedUrls = [];
+            
+            generateBtn.addEventListener('click', generateUrls);
+            downloadAllBtn.addEventListener('click', downloadAllM3U);
+            copyAllBtn.addEventListener('click', copyAllUrls);
+            clearBtn.addEventListener('click', clearAll);
+            
+            function generateUrls() {
+                const text = inputText.value.trim();
+                if (!text) {
+                    showNotification('Por favor, cole os códigos dos servidores primeiro.', 'error');
+                    return;
+                }
+                
+                resultsContainer.innerHTML = '';
+                const lines = text.split('\n');
+                let currentUrl = '';
+                generatedUrls = [];
+                
+                for (let i = 0; i < lines.length; i++) {
+                    const line = lines[i].trim();
+                    
+                    if (line.startsWith('🌐 ') || line.includes('http')) {
+                        // Encontrou uma linha com URL
+                        const urlMatch = line.match(/(https?:\/\/[^\s]+)/);
+                        if (urlMatch) {
+                            currentUrl = urlMatch[0];
+                        }
+                    } else if ((line.startsWith('👤 ') || line.includes('🔐')) && currentUrl) {
+                        // Encontrou uma linha com credenciais
+                        const userMatch = line.match(/👤 (.+?) 🔐 (.+)/) || line.match(/(.+?) 🔐 (.+)/);
+                        
+                        if (userMatch && userMatch.length >= 3) {
+                            const username = userMatch[1].trim();
+                            const password = userMatch[2].trim();
+                            
+                            // Criar URL M3U
+                            let m3uUrl = currentUrl;
+                            if (!m3uUrl.endsWith('/')) {
+                                m3uUrl += '/';
+                            }
+                            m3uUrl += `get.php?username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}&type=m3u_plus&output=m3u8`;
+                            
+                            // Armazenar URL para possível download em lote
+                            generatedUrls.push({
+                                url: m3uUrl,
+                                server: currentUrl,
+                                username: username,
+                                password: password,
+                                filename: `Lista_${generatedUrls.length + 1}_${username}.m3u`
+                            });
+                            
+                            // Criar elemento para mostrar o link
+                            const urlElement = document.createElement('div');
+                            urlElement.className = 'url-item';
+                            
+                            const urlHeader = document.createElement('div');
+                            urlHeader.className = 'url-header';
+                            
+                            const link = document.createElement('a');
+                            link.href = m3uUrl;
+                            link.target = '_blank';
+                            link.className = 'url-link';
+                            link.textContent = m3uUrl;
+                            link.onclick = function(e) {
+                                e.stopPropagation();
+                                showNotification('Abrindo playlist em nova aba...', 'success');
+                            };
+                            
+                            const downloadBtn = document.createElement('button');
+                            downloadBtn.className = 'download-btn';
+                            downloadBtn.innerHTML = '💾 Baixar';
+                            downloadBtn.onclick = function() {
+                                downloadM3U(m3uUrl, `Lista_${generatedUrls.length}_${username}.m3u`);
+                            };
+                            
+                            urlHeader.appendChild(link);
+                            urlHeader.appendChild(downloadBtn);
+                            
+                            const serverInfo = document.createElement('div');
+                            serverInfo.className = 'server-info';
+                            serverInfo.innerHTML = `
+                                <span><strong>Servidor:</strong> ${currentUrl}</span>
+                                <span><strong>Usuário:</strong> ${username}</span>
+                                <span><strong>Senha:</strong> ${password}</span>
+                            `;
+                            
+                            urlElement.appendChild(urlHeader);
+                            urlElement.appendChild(serverInfo);
+                            resultsContainer.appendChild(urlElement);
+                        }
+                    }
+                }
+                
+                counter.textContent = `${generatedUrls.length} URLs gerados`;
+                
+                if (resultsContainer.children.length === 0) {
+                    resultsContainer.innerHTML = '<div class="url-item">Nenhum servidor válido encontrado. Verifique o formato dos dados.</div>';
+                }
+                
+                // Habilitar/desabilitar botões conforme resultado
+                downloadAllBtn.disabled = generatedUrls.length === 0;
+                copyAllBtn.disabled = generatedUrls.length === 0;
+            }
+            
+            async function downloadAllM3U() {
+                if (generatedUrls.length === 0) {
+                    showNotification('Nenhum URL para baixar. Gere os URLs primeiro.', 'error');
+                    return;
+                }
+                
+                // Configurar interface de progresso
+                progressContainer.style.display = 'block';
+                statusText.style.display = 'block';
+                statusText.textContent = 'Preparando download...';
+                progressBar.style.width = '0%';
+                downloadAllBtn.disabled = true;
+                
+                let successfulDownloads = 0;
+                
+                for (let i = 0; i < generatedUrls.length; i++) {
+                    const item = generatedUrls[i];
+                    
+                    statusText.textContent = `Baixando ${i+1} de ${generatedUrls.length}: ${item.filename}`;
+                    progressBar.style.width = `${(i / generatedUrls.length) * 100}%`;
+                    
+                    try {
+                        await downloadM3U(item.url, item.filename);
+                        successfulDownloads++;
+                    } catch (error) {
+                        console.error(`Erro ao baixar ${item.url}:`, error);
+                    }
+                    
+                    // Pequena pausa entre os downloads para não sobrecarregar
+                    await new Promise(resolve => setTimeout(resolve, 500));
+                }
+                
+                progressBar.style.width = '100%';
+                statusText.textContent = 'Download concluído!';
+                
+                showNotification(`Download concluído! ${successfulDownloads} de ${generatedUrls.length} arquivos baixados.`, 'success');
+                
+                // Restaurar interface após 3 segundos
+                setTimeout(() => {
+                    progressContainer.style.display = 'none';
+                    statusText.style.display = 'none';
+                    downloadAllBtn.disabled = false;
+                }, 3000);
+            }
+            
+            function downloadM3U(url, filename) {
+                return new Promise((resolve, reject) => {
+                    showNotification(`Iniciando download: ${filename}`, 'success');
+                    
+                    // Usar um proxy CORS para contornar as restrições
+                    const corsProxy = "https://corsproxy.io/?";
+                    
+                    fetch(corsProxy + encodeURIComponent(url))
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error(`Erro HTTP: ${response.status}`);
+                            }
+                            return response.text();
+                        })
+                        .then(content => {
+                            // Criar um blob com o conteúdo
+                            const blob = new Blob([content], { type: 'application/x-mpegurl' });
+                            
+                            // Criar um link para download
+                            const a = document.createElement('a');
+                            a.href = URL.createObjectURL(blob);
+                            a.download = filename;
+                            document.body.appendChild(a);
+                            a.click();
+                            document.body.removeChild(a);
+                            
+                            showNotification(`Download concluído: ${filename}`, 'success');
+                            resolve();
+                        })
+                        .catch(error => {
+                            console.error('Erro ao baixar o arquivo:', error);
+                            showNotification(`Erro ao baixar ${filename}. Tente baixar manualmente.`, 'error');
+                            reject(error);
+                        });
+                });
+            }
+            
+            function copyAllUrls() {
+                if (generatedUrls.length === 0) {
+                    showNotification('Gere os URLs primeiro antes de copiar.', 'error');
+                    return;
+                }
+                
+                let textToCopy = '';
+                generatedUrls.forEach(item => {
+                    textToCopy += item.url + '\n';
+                });
+                
+                navigator.clipboard.writeText(textToCopy.trim()).then(() => {
+                    showNotification('Links copiados para a área de transferência!', 'success');
+                }).catch(err => {
+                    console.error('Erro ao copiar texto: ', err);
+                    showNotification('Não foi possível copiar os URLs. Tente manualmente.', 'error');
+                });
+            }
+            
+            function showNotification(message, type) {
+                notification.textContent = message;
+                notification.className = `notification ${type} show`;
+                
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                }, 3000);
+            }
+            
+            function clearAll() {
+                inputText.value = '';
+                resultsContainer.innerHTML = '';
+                counter.textContent = '0 URLs gerados';
+                generatedUrls = [];
+                downloadAllBtn.disabled = true;
+                copyAllBtn.disabled = true;
+                progressContainer.style.display = 'none';
+                statusText.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
