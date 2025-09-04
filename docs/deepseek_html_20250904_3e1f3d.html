@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limpador de Lista M3U</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f5f5f5;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 25px;
+        }
+        .section {
+            margin-bottom: 25px;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        textarea, input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        textarea {
+            min-height: 200px;
+            font-family: monospace;
+            font-size: 14px;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        button {
+            padding: 12px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        button.secondary {
+            background-color: #7f8c8d;
+        }
+        button.secondary:hover {
+            background-color: #636e70;
+        }
+        button.success {
+            background-color: #27ae60;
+        }
+        button.success:hover {
+            background-color: #219653;
+        }
+        .file-input {
+            margin-bottom: 15px;
+        }
+        .result-info {
+            background-color: #e8f4fc;
+            padding: 12px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            display: none;
+        }
+        .channel-example {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            margin: 10px 0;
+            font-family: monospace;
+            font-size: 14px;
+        }
+        .instructions {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .instructions h3 {
+            margin-top: 0;
+        }
+        .instructions ul {
+            padding-left: 20px;
+        }
+        .instructions li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Limpador de Lista M3U</h1>
+        
+        <div class="instructions">
+            <h3>Instruções de uso:</h3>
+            <ul>
+                <li>Cole sua lista M3U no campo de texto OU faça upload do arquivo</li>
+                <li>No campo "Caracteres a remover", digite os textos que deseja eliminar (separados por vírgula)</li>
+                <li>Clique em "Processar Lista" para gerar a nova lista limpa</li>
+                <li>Use o botão "Copiar Lista" ou "Baixar Arquivo" para salvar o resultado</li>
+            </ul>
+            <p><strong>Exemplo:</strong> Para remover "BR: ", "BRA-" e "(M)(720)", digite: <code>BR: , BRA-, (M)(720)</code></p>
+        </div>
+        
+        <div class="section">
+            <h2>Entrada da Lista M3U</h2>
+            <div class="file-input">
+                <label for="fileUpload">Ou faça upload do arquivo M3U:</label>
+                <input type="file" id="fileUpload" accept=".m3u,.m3u8">
+            </div>
+            <label for="originalPlaylist">Cole sua lista M3U aqui:</label>
+            <textarea id="originalPlaylist" placeholder="Cole o conteúdo da sua lista M3U aqui..."></textarea>
+        </div>
+        
+        <div class="section">
+            <h2>Configuração de Limpeza</h2>
+            <label for="charsToRemove">Caracteres a remover (separados por vírgula):</label>
+            <input type="text" id="charsToRemove" placeholder="Ex: BR: , BRA-, (M)(720)">
+            
+            <div class="buttons">
+                <button id="processBtn" class="success">Processar Lista</button>
+                <button id="resetBtn" class="secondary">Limpar Tudo</button>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Resultado</h2>
+            <div id="resultInfo" class="result-info"></div>
+            <label for="cleanedPlaylist">Lista processada:</label>
+            <textarea id="cleanedPlaylist" readonly placeholder="A lista processada aparecerá aqui..."></textarea>
+            
+            <div class="buttons">
+                <button id="copyBtn" class="secondary">Copiar Lista</button>
+                <button id="downloadBtn">Baixar Arquivo</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const originalPlaylist = document.getElementById('originalPlaylist');
+            const charsToRemove = document.getElementById('charsToRemove');
+            const cleanedPlaylist = document.getElementById('cleanedPlaylist');
+            const processBtn = document.getElementById('processBtn');
+            const resetBtn = document.getElementById('resetBtn');
+            const copyBtn = document.getElementById('copyBtn');
+            const downloadBtn = document.getElementById('downloadBtn');
+            const fileUpload = document.getElementById('fileUpload');
+            const resultInfo = document.getElementById('resultInfo');
+            
+            // Exemplo de lista M3U para facilitar os testes
+            const examplePlaylist = `   `;
+
+            originalPlaylist.value = examplePlaylist;
+            charsToRemove.value = "BR: , BRA-, (M)(720), BR ,";
+            
+            // Upload de arquivo
+            fileUpload.addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (!file) return;
+                
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    originalPlaylist.value = e.target.result;
+                };
+                reader.readAsText(file);
+            });
+            
+            // Processar lista
+            processBtn.addEventListener('click', function() {
+                const original = originalPlaylist.value.trim();
+                if (!original) {
+                    alert('Por favor, cole ou faça upload de uma lista M3U.');
+                    return;
+                }
+                
+                const removeStrings = charsToRemove.value.split(',').map(s => s.trim()).filter(s => s);
+                if (removeStrings.length === 0) {
+                    alert('Por favor, informe os caracteres a serem removidos.');
+                    return;
+                }
+                
+                const lines = original.split('\n');
+                let cleanedLines = [];
+                let channelsProcessed = 0;
+                
+                for (let i = 0; i < lines.length; i++) {
+                    let line = lines[i];
+                    
+                    // Processar apenas linhas EXTINF
+                    if (line.startsWith('#EXTINF:')) {
+                        let newLine = line;
+                        
+                        // Remover cada string indesejada
+                        for (const str of removeStrings) {
+                            // Usar expressão regular para fazer replace globalmente
+                            const regex = new RegExp(str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
+                            newLine = newLine.replace(regex, '');
+                        }
+                        
+                        cleanedLines.push(newLine);
+                        channelsProcessed++;
+                    } else {
+                        cleanedLines.push(line);
+                    }
+                }
+                
+                cleanedPlaylist.value = cleanedLines.join('\n');
+                
+                // Mostrar informações do resultado
+                resultInfo.style.display = 'block';
+                resultInfo.textContent = `Processamento concluído! ${channelsProcessed} canais foram modificados.`;
+            });
+            
+            // Copiar lista processada
+            copyBtn.addEventListener('click', function() {
+                if (!cleanedPlaylist.value) {
+                    alert('Não há conteúdo para copiar. Processe a lista primeiro.');
+                    return;
+                }
+                
+                cleanedPlaylist.select();
+                document.execCommand('copy');
+                alert('Lista copiada para a área de transferência!');
+            });
+            
+            // Baixar arquivo
+            downloadBtn.addEventListener('click', function() {
+                if (!cleanedPlaylist.value) {
+                    alert('Não há conteúdo para baixar. Processe a lista primeiro.');
+                    return;
+                }
+                
+                const blob = new Blob([cleanedPlaylist.value], { type: 'application/x-mpegURL' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'lista_limpa.m3u';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            });
+            
+            // Resetar tudo
+            resetBtn.addEventListener('click', function() {
+                originalPlaylist.value = '';
+                cleanedPlaylist.value = '';
+                charsToRemove.value = '';
+                resultInfo.style.display = 'none';
+                fileUpload.value = '';
+            });
+        });
+    </script>
+</body>
+</html>
