@@ -56,6 +56,10 @@ https://exemplo/playlist.m3u8"></textarea>
       <input type="checkbox" id="removeMetadata" checked />
       <label for="removeMetadata">Remover metadados extras (KODIPROP, EXTVLCOPT)</label>
     </div>
+    <div class="toggle">
+      <input type="checkbox" id="filterVideoFiles" checked />
+      <label for="filterVideoFiles">Remover arquivos de vídeo (.mp4, .mkv, .avi, etc.)</label>
+    </div>
     <div class="row">
       <button id="processBtn" class="btn">Processar e Filtrar</button>
       <button id="downloadBtn" class="btn sec" disabled>Baixar .m3u filtrado</button>
@@ -261,6 +265,13 @@ const CHANNEL_TERMS = {
   "Rede Brasil": ["rede brasil", "redebrasil"]
 };
 
+/* Lista de extensões de arquivo de vídeo a serem filtradas */
+const VIDEO_FILE_EXTENSIONS = [
+  '.mp4', '.mkv', '.avi', '.mov', '.wmv', '.flv', '.webm', 
+  '.3gp', '.mpg', '.mpeg', '.mxf', '.vob', '.mts', '.m2ts', 
+  '.divx', '.rm', '.asf', '.ogv', '.f4v'
+];
+
 /* ===================== Utilidades de parsing ===================== */
 const isExtInf = (line) => line.startsWith("#EXTINF");
 const isComment = (line) => line.startsWith("#");
@@ -283,6 +294,12 @@ const cleanChannelName = (name) => {
     .replace(/\s+/g, ' ')
     .trim();
 };
+
+/* Verifica se a URL é um arquivo de vídeo */
+function isVideoFile(url) {
+  const lowerUrl = url.toLowerCase();
+  return VIDEO_FILE_EXTENSIONS.some(ext => lowerUrl.includes(ext));
+}
 
 /* Extrai atributos do #EXTINF (ex.: group-title, tvg-country) */
 function parseExtinfAttrs(extinfLine) {
@@ -346,7 +363,7 @@ function matchesChannelTerms(channelName) {
 const normURL = (u) => u.trim();
 
 /* ===================== Núcleo: processa um ou mais textos M3U ===================== */
-function processM3UTexts(texts, onlyBR=true, removeMetadata=true) {
+function processM3UTexts(texts, onlyBR=true, removeMetadata=true, filterVideoFiles=true) {
   const kept = [];     // {extinf, url}
   const seen = new Set();
 
@@ -378,6 +395,13 @@ function processM3UTexts(texts, onlyBR=true, removeMetadata=true) {
         
         // linha de URL
         const url = line;
+        
+        // Pular se for arquivo de vídeo e o filtro estiver ativo
+        if (filterVideoFiles && isVideoFile(url)) {
+          pendingExtinf = null;
+          continue;
+        }
+        
         const name = extractDisplayName(pendingExtinf);
 
         // Filtros
@@ -418,6 +442,7 @@ const fileInput = document.getElementById("fileInput");
 const dropzone  = document.getElementById("dropzone");
 const onlyBRChk = document.getElementById("onlyBR");
 const removeMetadataChk = document.getElementById("removeMetadata");
+const filterVideoFilesChk = document.getElementById("filterVideoFiles");
 const processBtn = document.getElementById("processBtn");
 const downloadBtn = document.getElementById("downloadBtn");
 const statsSpan = document.getElementById("stats");
@@ -474,7 +499,7 @@ async function readFiles(files){
 }
 
 /* Drag & drop */
-dropzone.addEventListener("dragover", e => {
+dropzone.addEventListener("dragoover", e => {
   e.preventDefault(); 
   dropzone.classList.add("drag");
 });
@@ -517,7 +542,8 @@ processBtn.addEventListener("click", async () => {
     const { m3u, count, items } = processM3UTexts(
       texts, 
       onlyBRChk.checked, 
-      removeMetadataChk.checked
+      removeMetadataChk.checked,
+      filterVideoFilesChk.checked
     );
     updateProgress(100);
     
@@ -551,17 +577,7 @@ downloadBtn.addEventListener("click", () => {
 });
 
 // Carregar lista de exemplo ao iniciar (para teste)
-pasteArea.value = `#EXTM3U
-#EXTINF:-1 tvg-id="GloboRJ.br" tvg-name="GLOBO RJ" tvg-logo="http://example.com/logo.png" group-title="CANAIS ABERTOS",GLOBO RJ
-http://example.com/stream1.m3u8
-#EXTINF:-1 tvg-id="GloboSP.br" tvg-name="GLOBO SP FHD" tvg-logo="http://example.com/logo.png" group-title="CANAIS ABERTOS",GLOBO SP FHD
-http://example.com/stream2.m3u8
-#EXTINF:-1 tvg-id="Band.br" tvg-name="BAND" tvg-logo="http://example.com/logo.png" group-title="CANAIS ABERTOS",BAND
-http://example.com/stream3.m3u8
-#EXTINF:-1 tvg-id="HBO.br" tvg-name="HBO" tvg-logo="http://example.com/logo.png" group-title="FILMES",HBO
-http://example.com/stream4.m3u8
-#EXTINF:-1 tvg-id="FoxSports.br" tvg-name="FOX SPORTS" tvg-logo="http://example.com/logo.png" group-title="ESPORTES",FOX SPORTS
-http://example.com/stream5.m3u8`;
+pasteArea.value = ``;
 </script>
 </body>
 </html>
