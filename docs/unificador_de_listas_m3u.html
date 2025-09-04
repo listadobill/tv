@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unificador de Listas M3U</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        
+        .description {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .input-section, .output-section {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .section-title {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        .upload-area {
+            border: 3px dashed #3498db;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+            background-color: #f8fafc;
+        }
+        
+        .upload-area:hover {
+            background-color: #e8f4fc;
+            border-color: #2980b9;
+            transform: translateY(-2px);
+        }
+        
+        .upload-area p {
+            margin-bottom: 15px;
+            color: #7f8c8d;
+            font-size: 1.1rem;
+        }
+        
+        .file-input {
+            display: none;
+        }
+        
+        .file-label {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(to right, #3498db, #2980b9);
+            color: white;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+        
+        .file-label:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+        }
+        
+        .selected-files {
+            margin-top: 20px;
+            text-align: left;
+        }
+        
+        .file-list {
+            list-style-type: none;
+            margin-top: 10px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        
+        .file-list li {
+            padding: 10px;
+            background-color: #f1f1f1;
+            margin-bottom: 8px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.2s;
+        }
+        
+        .file-list li:hover {
+            background-color: #e3e3e3;
+        }
+        
+        .remove-file {
+            color: #e74c3c;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.2rem;
+            padding: 0 5px;
+        }
+        
+        .paste-area {
+            margin-top: 20px;
+        }
+        
+        .paste-area textarea {
+            width: 100%;
+            height: 120px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            resize: vertical;
+            font-family: monospace;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        
+        .actions {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 14px 28px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+            font-size: 1rem;
+            box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+        
+        .btn-process {
+            background: linear-gradient(to right, #2ecc71, #27ae60);
+            color: white;
+        }
+        
+        .btn-process:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+        }
+        
+        .btn-download {
+            background: linear-gradient(to right, #3498db, #2980b9);
+            color: white;
+            display: none;
+        }
+        
+        .btn-download:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+        }
+        
+        .btn-clear {
+            background: linear-gradient(to right, #e74c3c, #c0392b);
+            color: white;
+        }
+        
+        .btn-clear:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+        }
+        
+        .result-area {
+            margin-top: 20px;
+            border: 2px solid #3498db;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #f8fafc;
+            display: none;
+        }
+        
+        .result-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        textarea#resultContent {
+            width: 100%;
+            height: 250px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            resize: vertical;
+            font-family: monospace;
+            font-size: 14px;
+            background-color: #fdfdfd;
+        }
+        
+        .status {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            display: none;
+            font-weight: bold;
+        }
+        
+        .status.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .status.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .info-box {
+            background-color: #e8f4fc;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            
+            .actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Unificador de Listas M3U</h1>
+            <p class="description">Faça upload de vários arquivos M3U ou cole o conteúdo diretamente para gerar uma lista unificada e ordenada alfabeticamente.</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="input-section">
+                <h2 class="section-title">Entrada de Dados</h2>
+                
+                <div class="upload-area">
+                    <p>Selecione os arquivos M3U ou arraste e solte aqui</p>
+                    <input type="file" id="fileInput" class="file-input" multiple accept=".m3u,.m3u8">
+                    <label for="fileInput" class="file-label">Selecionar Arquivos</label>
+                    
+                    <div class="selected-files">
+                        <h3>Arquivos selecionados:</h3>
+                        <ul id="fileList" class="file-list"></ul>
+                    </div>
+                </div>
+                
+                <div class="paste-area">
+                    <h3>Ou cole o conteúdo M3U aqui:</h3>
+                    <textarea id="pasteContent" placeholder="Cole o conteúdo da sua lista M3U aqui..."></textarea>
+                </div>
+                
+                <div class="info-box">
+                    <p><strong>Instruções:</strong> Selecione os arquivos M3U ou cole o conteúdo diretamente na caixa de texto. Clique em "Processar Listas" para unificar e ordenar as entradas. Após o processamento, use o botão "Download da Lista Unificada" para baixar o arquivo final.</p>
+                </div>
+            </div>
+            
+            <div class="output-section">
+                <h2 class="section-title">Resultado</h2>
+                
+                <div class="result-area" id="resultArea">
+                    <div class="result-header">
+                        <h3>Lista Unificada (Ordenada Alfabeticamente)</h3>
+                    </div>
+                    <textarea id="resultContent" readonly></textarea>
+                </div>
+                
+                <div class="actions">
+                    <button id="processBtn" class="btn btn-process">Processar Listas</button>
+                    <button id="downloadBtn" class="btn btn-download">Download da Lista Unificada</button>
+                    <button id="clearBtn" class="btn btn-clear">Limpar Tudo</button>
+                </div>
+                
+                <div id="status" class="status"></div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Unificador de Listas M3U &copy; 2023 - Todos os direitos reservados</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const fileInput = document.getElementById('fileInput');
+            const fileList = document.getElementById('fileList');
+            const pasteContent = document.getElementById('pasteContent');
+            const processBtn = document.getElementById('processBtn');
+            const downloadBtn = document.getElementById('downloadBtn');
+            const clearBtn = document.getElementById('clearBtn');
+            const resultArea = document.getElementById('resultArea');
+            const resultContent = document.getElementById('resultContent');
+            const status = document.getElementById('status');
+            
+            let files = [];
+            let unifiedContent = '';
+            
+            // Manipulação de drag and drop
+            const uploadArea = document.querySelector('.upload-area');
+            uploadArea.addEventListener('dragover', function(e) {
+                e.preventDefault();
+                this.style.backgroundColor = '#e8f4fc';
+                this.style.borderColor = '#2980b9';
+            });
+            
+            uploadArea.addEventListener('dragleave', function() {
+                this.style.backgroundColor = '#f8fafc';
+                this.style.borderColor = '#3498db';
+            });
+            
+            uploadArea.addEventListener('drop', function(e) {
+                e.preventDefault();
+                this.style.backgroundColor = '#f8fafc';
+                this.style.borderColor = '#3498db';
+                
+                const droppedFiles = e.dataTransfer.files;
+                handleFiles(droppedFiles);
+            });
+            
+            fileInput.addEventListener('change', function() {
+                handleFiles(this.files);
+            });
+            
+            function handleFiles(newFiles) {
+                for (let i = 0; i < newFiles.length; i++) {
+                    const file = newFiles[i];
+                    // Verificar se é um arquivo M3U
+                    if (file.name.endsWith('.m3u') || file.name.endsWith('.m3u8')) {
+                        // Verificar se o arquivo já foi adicionado
+                        if (!files.some(f => f.name === file.name && f.size === file.size)) {
+                            files.push(file);
+                            addFileToList(file);
+                        }
+                    }
+                }
+            }
+            
+            function addFileToList(file) {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    <span>${file.name}</span> 
+                    <span class="remove-file" data-name="${file.name}">×</span>
+                `;
+                fileList.appendChild(li);
+                
+                // Adicionar evento para remover arquivo
+                li.querySelector('.remove-file').addEventListener('click', function() {
+                    const fileName = this.getAttribute('data-name');
+                    files = files.filter(f => f.name !== fileName);
+                    li.remove();
+                });
+            }
+            
+            processBtn.addEventListener('click', async function() {
+                if (files.length === 0 && pasteContent.value.trim() === '') {
+                    showStatus('Por favor, selecione pelo menos um arquivo M3U ou cole o conteúdo.', 'error');
+                    return;
+                }
+                
+                showStatus('Processando listas...', '');
+                
+                try {
+                    // Processar arquivos selecionados
+                    let allContent = '';
+                    
+                    // Processar arquivos carregados
+                    for (const file of files) {
+                        const content = await readFile(file);
+                        allContent += content + '\n';
+                    }
+                    
+                    // Adicionar conteúdo colado
+                    if (pasteContent.value.trim() !== '') {
+                        allContent += pasteContent.value + '\n';
+                    }
+                    
+                    // Unificar e ordenar a lista
+                    unifiedContent = unifyAndSortM3U(allContent);
+                    
+                    // Exibir resultado
+                    resultContent.value = unifiedContent;
+                    resultArea.style.display = 'block';
+                    downloadBtn.style.display = 'inline-block';
+                    
+                    showStatus('Listas processadas com sucesso!', 'success');
+                } catch (error) {
+                    showStatus('Erro ao processar as listas: ' + error.message, 'error');
+                }
+            });
+            
+            downloadBtn.addEventListener('click', function() {
+                if (!unifiedContent) {
+                    showStatus('Nenhum conteúdo para download.', 'error');
+                    return;
+                }
+                
+                const blob = new Blob([unifiedContent], { type: 'audio/x-mpegurl' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'lista_unificada.m3u';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+                
+                showStatus('Download iniciado!', 'success');
+            });
+            
+            clearBtn.addEventListener('click', function() {
+                files = [];
+                fileList.innerHTML = '';
+                pasteContent.value = '';
+                resultContent.value = '';
+                resultArea.style.display = 'none';
+                downloadBtn.style.display = 'none';
+                status.style.display = 'none';
+                fileInput.value = '';
+            });
+            
+            function readFile(file) {
+                return new Promise((resolve, reject) => {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        resolve(e.target.result);
+                    };
+                    reader.onerror = function(e) {
+                        reject(new Error('Falha ao ler o arquivo: ' + file.name));
+                    };
+                    reader.readAsText(file);
+                });
+            }
+            
+            function unifyAndSortM3U(content) {
+                const lines = content.split('\n');
+                const entries = [];
+                let currentEntry = null;
+                
+                // Processar cada linha do conteúdo M3U
+                for (const line of lines) {
+                    if (line.startsWith('#EXTINF:')) {
+                        currentEntry = {
+                            info: line,
+                            url: ''
+                        };
+                    } else if (line.trim() !== '' && !line.startsWith('#EXTM3U')) {
+                        if (currentEntry) {
+                            currentEntry.url = line;
+                            entries.push(currentEntry);
+                            currentEntry = null;
+                        }
+                    }
+                }
+                
+                // Ordenar entradas alfabeticamente pelo nome do canal (extraído da linha EXTINF)
+                entries.sort((a, b) => {
+                    // Extrair o nome do canal (normalmente após a última vírgula na linha EXTINF)
+                    const nameA = a.info.split(',').pop().trim().toLowerCase();
+                    const nameB = b.info.split(',').pop().trim().toLowerCase();
+                    return nameA.localeCompare(nameB);
+                });
+                
+                // Construir o novo conteúdo M3U
+                let result = '#EXTM3U\n';
+                for (const entry of entries) {
+                    result += entry.info + '\n';
+                    result += entry.url + '\n';
+                }
+                
+                return result;
+            }
+            
+            function showStatus(message, type) {
+                status.textContent = message;
+                status.className = 'status';
+                if (type) {
+                    status.classList.add(type);
+                }
+                status.style.display = 'block';
+                
+                // Esconder a mensagem após 5 segundos
+                if (type === 'success') {
+                    setTimeout(() => {
+                        status.style.display = 'none';
+                    }, 5000);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
