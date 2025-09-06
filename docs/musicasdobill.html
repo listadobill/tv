@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Archive Album Player</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+body {margin:0;font-family:Segoe UI,Tahoma,sans-serif;background:#111;color:#fff;display:flex;flex-direction:column;height:100vh;}
+.header {padding:15px 20px;display:flex;align-items:center;gap:15px;border-bottom:2px solid #0f0;}
+.header h1 {color:#0ff;}
+.search-container {flex:1;display:flex;gap:10px;}
+.search-container input {flex:1;padding:10px;border-radius:20px;border:2px solid #0f0;background:#222;color:#fff;}
+.search-container button {padding:0 20px;border:none;background:#0f0;color:#000;border-radius:20px;cursor:pointer;}
+.main {flex:1;display:flex;overflow:hidden;}
+.sidebar {width:35%;background:#000;border-right:2px solid #0f0;overflow-y:auto;padding:20px;}
+.results {display:flex;flex-direction:column;gap:8px;}
+.result-item {background:#222;padding:10px 15px;border-radius:5px;cursor:pointer;display:flex;align-items:center;gap:10px;transition:0.2s;}
+.result-item:hover {background:#333;}
+.result-item.playing {border-left:3px solid #0ff;}
+.item-title {font-weight:bold;}
+.player {flex:1;display:flex;flex-direction:column;align-items:center;padding:20px;overflow-y:auto;}
+.player-controls {display:flex;gap:15px;margin-bottom:10px;}
+.player-controls button {padding:10px 15px;border:none;border-radius:5px;background:#0f0;color:#000;cursor:pointer;}
+.breadcrumb {font-size:14px;margin-bottom:15px;}
+.breadcrumb a {color:#0f0;text-decoration:none;cursor:pointer;}
+.breadcrumb a:hover {text-decoration:underline;}
+.loader {border:3px solid rgba(0,255,0,0.3);border-top:3px solid #0f0;border-radius:50%;width:20px;height:20px;animation:spin 1s linear infinite;margin:10px auto;}
+@keyframes spin {to{transform:rotate(360deg);}}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Archive Album Player</h1>
+  <div class="search-container">
+    <input type="text" id="query" placeholder="Digite artista + álbum..." onkeypress="if(event.key==='Enter'){buscarAlbum();}">
+    <button onclick="buscarAlbum()"><i class="fas fa-search"></i></button>
+  </div>
+</div>
+<div class="main">
+  <div class="sidebar">
+    <div class="breadcrumb" id="breadcrumb"><span><a onclick="resetSidebar()">Início</a></span></div>
+    <div class="results" id="results"></div>
+  </div>
+  <div class="player">
+    <div class="player-controls">
+      <button onclick="prevTrack()"><i class="fas fa-backward"></i> Anterior</button>
+      <button onclick="nextTrack()"><i class="fas fa-forward"></i> Próximo</button>
+      <button onclick="resetSidebar()"><i class="fas fa-search"></i> Nova Busca</button>
+    </div>
+    <audio id="audio-player" controls></audio>
+    <video id="video-player" controls style="display:none;"></video>
+    <div id="track-info"></div>
+  </div>
+</div>
+<script>
+let tracks=[], currentTrack=0, currentIdentifier='', currentPath=[];
+
+const audioPlayer=document.getElementById('audio-player');
+const videoPlayer=document.getElementById('video-player');
+const resultsContainer=document.getElementById('results');
+const breadcrumb=document.getElementById('breadcrumb');
+const trackInfo=document.getElementById('track-info');
+
+function normalizeText(text){
+  return text.toLowerCase()
+             .normalize("NFD").replace(/[\u0300-\u036f]/g,"")
+             .replace(/[^a-z0-9]/g,"");
+}
+
+function similarity(s1,s2){
+  s1=normalizeText(s1);
+  s2=normalizeText(s2);
+  if(s1===s2) return 1;
+  let longer=Math.max(s1.length,s2.length);
+  let matches=0;
+  for(let i=0;i<Math.min(s1.length,s2.length);i++){
+    if(s1[i]===s2[i]) matches++;
+  }
+  return matches/longer;
+}
+
+async function buscarAlbum(){
+  const query=document.getElementById('query').value.trim();
+  if(!query) return;
+  resultsContainer.innerHTML='<div class="loader"></div>';
+  
+  const url=`https://archive.org/advancedsearch.php?q=${encodeURIComponent(query)}&fl[]=identifier,title&sort[]=downloads desc&rows=50&output=json`;
+  const res=await fetch(url);
+  const data=await res.json();
+  resultsContainer.innerHTML='';
+
+  if(data.response.docs.length===0){
+    resultsContainer.innerHTML='Nenhum álbum encontrado.';
+    return;
+  }
+
+  const qNorm=normalizeText(query);
+  let bestItem=null, bestScore=0;
+  data.response.docs.forEach(d=>{
+    const score=similarity(d.title,qNorm);
+    if(score>bestScore){
+      bestScore=score;
+      bestItem=d;
+    }
+  });
+
+  if(bestItem){
+    carregarArquivos(bestItem.identifier,[]);
+  } else {
+    resultsContainer.innerHTML='Nenhum álbum encontrado.';
+  }
+}
+
+async function carregarArquivos(identifier,path){
+  resultsContainer.innerHTML='<div class="loader"></div>';
+  const res=await fetch(`https://archive.org/metadata/${identifier}`);
+  const data=await res.json();
+  resultsContainer.innerHTML=''; tracks=[]; currentIdentifier=identifier; currentPath=path;
+
+  breadcrumb.innerHTML='<span><a onclick="resetSidebar()">Início</a></span>';
+  path.forEach((p,i)=>breadcrumb.innerHTML+=` / <a onclick="navigateTo(${i})">${p}</a>`);
+
+  // Pastas
+  const folders=new Set();
+  data.files.forEach(f=>{
+    const parts=f.name.split('/');
+    if(parts.length>1 && parts.length>path.length){
+      folders.add(parts[path.length]);
+    }
+  });
+  folders.forEach(folder=>{
+    const el=document.createElement('div'); el.className='result-item';
+    el.innerHTML=`<i class="fas fa-folder"></i> ${folder}`;
+    el.onclick=()=>carregarArquivos(identifier,[...path,folder]);
+    resultsContainer.appendChild(el);
+  });
+
+  // MP3 e MP4 (qualquer subpasta abaixo da pasta atual)
+  data.files.forEach(f=>{
+    const isAudio=f.name.match(/\.mp3$/i);
+    const isVideo=f.name.match(/\.mp4$/i);
+    const fileParts=f.name.split('/');
+    if(isAudio || isVideo){
+      if(path.length === 0 || fileParts.slice(0,path.length).join('/') === path.join('/')){
+        const el=document.createElement('div'); el.className='result-item';
+        const track={title:fileParts[fileParts.length-1],url:`https://archive.org/download/${identifier}/${f.name}`,type:isVideo?'video':'audio',element:el};
+        el.innerHTML=`<i class="fas ${isVideo?'fa-video':'fa-music'}"></i> ${track.title}`;
+        el.onclick=()=>playTrack(tracks.indexOf(track));
+        tracks.push(track);
+        resultsContainer.appendChild(el);
+      }
+    }
+  });
+
+  if(tracks.length>0){
+    playTrack(0);
+  }
+}
+
+function playTrack(index){
+  const track=tracks[index];
+  currentTrack=index;
+  tracks.forEach(t=>t.element.classList.remove('playing'));
+  track.element.classList.add('playing');
+  trackInfo.textContent=track.title;
+
+  audioPlayer.pause(); audioPlayer.src='';
+  videoPlayer.pause(); videoPlayer.src='';
+
+  if(track.type==='audio'){
+    videoPlayer.style.display='none';
+    audioPlayer.style.display='block';
+    audioPlayer.src=track.url;
+    audioPlayer.play();
+  } else {
+    audioPlayer.style.display='none';
+    videoPlayer.style.display='block';
+    videoPlayer.src=track.url;
+    videoPlayer.play();
+  }
+}
+
+function nextTrack(){
+  if(currentTrack<tracks.length-1){
+    playTrack(currentTrack+1);
+  }
+}
+
+function prevTrack(){
+  if(currentTrack>0){
+    playTrack(currentTrack-1);
+  }
+}
+
+audioPlayer.addEventListener('ended', nextTrack);
+videoPlayer.addEventListener('ended', nextTrack);
+
+function resetSidebar(){ 
+  resultsContainer.innerHTML=''; 
+  breadcrumb.innerHTML='<span><a onclick="resetSidebar()">Início</a></span>'; 
+  tracks=[]; trackInfo.textContent=''; currentIdentifier=''; currentPath=[];
+}
+function navigateTo(index){ 
+  carregarArquivos(currentIdentifier,currentPath.slice(0,index+1)); 
+}
+</script>
+</body>
+</html>
