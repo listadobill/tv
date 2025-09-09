@@ -5,40 +5,68 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TV DO BILL</title>
 <style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     background: #000;
     color: #fff;
+    display: flex;
     height: 100vh;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
 }
 
 #container {
     display: flex;
-    flex-direction: column;
     width: 100%;
     height: 100%;
 }
 
-#main {
-    display: flex;
-    flex: 1;
-    overflow: hidden;
-    position: relative;
+#sidebar {
+    width: 30%;
+    max-width: 350px;
+    background: #222;
+    overflow-y: auto;
+    padding: 10px;
+    border-right: 2px solid #600;
+}
+
+#search-bar {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#search-input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    background: #333;
+    color: #fff;
+}
+
+#lista-canais {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#lista-canais li {
+    padding: 12px;
+    margin-bottom: 5px;
+    background: #333;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#lista-canais li:hover, #lista-canais li.active {
+    background: #900;
 }
 
 #player {
-    flex: 2;
+    flex: 1;
     background: #000;
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,128 +76,6 @@ body {
     width: 100%;
     height: 100%;
     background: #000;
-    outline: none;
-}
-
-#player-message {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 10;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 8px;
-    display: none;
-    max-width: 80%;
-}
-
-#sidebar {
-    flex: 1;
-    background: rgba(20, 20, 20, 0.95);
-    overflow-y: auto;
-    padding: 10px;
-    border-left: 3px solid #600;
-    min-width: 250px;
-    max-width: 350px;
-    display: flex;
-    flex-direction: column;
-}
-
-#search-bar {
-    padding: 10px;
-    position: relative;
-    margin-bottom: 10px;
-}
-
-#search-input {
-    width: 100%;
-    padding: 10px 40px 10px 10px;
-    border: 1px solid #444;
-    border-radius: 5px;
-    font-size: 1em;
-    background: #333;
-    color: #fff;
-}
-
-#search-clear {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    color: #999;
-    font-size: 1.2em;
-    cursor: pointer;
-    display: none;
-}
-
-#sidebar-tabs {
-    display: flex;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #444;
-}
-
-.sidebar-tab {
-    flex: 1;
-    padding: 8px;
-    text-align: center;
-    cursor: pointer;
-    background: #333;
-    margin-right: 2px;
-}
-
-.sidebar-tab.active {
-    background: #600;
-    font-weight: bold;
-}
-
-#lista-canais {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    flex: 1;
-    overflow-y: auto;
-}
-
-#lista-canais li {
-    background: rgba(60, 60, 60, 0.85);
-    border-radius: 6px;
-    padding: 12px;
-    cursor: pointer;
-    transition: all 0.2s;
-    font-size: 0.95em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#lista-canais li:hover {
-    background: #722;
-}
-
-#lista-canais li.active {
-    background: #900;
-    color: #fff;
-    font-weight: bold;
-}
-
-#lista-canais li .favorite-btn {
-    background: none;
-    border: none;
-    color: #aaa;
-    font-size: 1.2em;
-    cursor: pointer;
-    padding: 0 5px;
-}
-
-#lista-canais li .favorite-btn.favorited {
-    color: gold;
 }
 
 #loading {
@@ -185,18 +91,10 @@ body {
     z-index: 1000;
 }
 
-.spinner {
-    width: 50px;
-    height: 50px;
-    border: 5px solid #333;
-    border-top: 5px solid #900;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+.loading-text {
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
 }
 
 #error-message {
@@ -212,522 +110,181 @@ body {
     max-width: 80%;
     text-align: center;
 }
-
-.error-retry-btn {
-    background: #700;
-    border: none;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 3px;
-    margin-top: 8px;
-    cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    #main {
-        flex-direction: column;
-    }
-    
-    #sidebar {
-        max-width: 100%;
-        border-left: none;
-        border-top: 3px solid #600;
-        max-height: 40vh;
-    }
-    
-    #player {
-        min-height: 60vh;
-    }
-}
-
-/* Estilo para scrollbar */
-#sidebar::-webkit-scrollbar, #lista-canais::-webkit-scrollbar {
-    width: 8px;
-}
-
-#sidebar::-webkit-scrollbar-track, #lista-canais::-webkit-scrollbar-track {
-    background: #222;
-}
-
-#sidebar::-webkit-scrollbar-thumb, #lista-canais::-webkit-scrollbar-thumb {
-    background: #600;
-    border-radius: 4px;
-}
-
-#sidebar::-webkit-scrollbar-thumb:hover, #lista-canais::-webkit-scrollbar-thumb:hover {
-    background: #900;
-}
-
-.channel-number {
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    background: #444;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 25px;
-    margin-right: 8px;
-    font-size: 0.8em;
-}
-
-.active .channel-number {
-    background: #a00;
-}
 </style>
 </head>
 <body>
 <div id="container">
-    <div id="main">
-        <div id="sidebar">
-            <div id="search-bar">
-                <input type="text" id="search-input" placeholder="Buscar canal...">
-                <button id="search-clear">×</button>
-            </div>
-            <div id="sidebar-tabs">
-                <div class="sidebar-tab active" data-tab="all">Todos</div>
-                <div class="sidebar-tab" data-tab="favorites">Favoritos</div>
-            </div>
-            <ul id="lista-canais"></ul>
+    <div id="sidebar">
+        <div id="search-bar">
+            <input type="text" id="search-input" placeholder="Buscar canal...">
         </div>
-        <div id="player">
-            <video id="video-player" playsinline controls></video>
-            <div id="player-message"></div>
-        </div>
+        <ul id="lista-canais"></ul>
+    </div>
+    <div id="player">
+        <video id="video-player" controls playsinline></video>
     </div>
 </div>
 
 <div id="loading">
-    <div class="spinner"></div>
+    <div>
+        <div style="width:50px;height:50px;border:5px solid #333;border-top:5px solid #900;border-radius:50%;animation:spin 1s linear infinite;margin:0 auto;"></div>
+        <div class="loading-text">Carregando canais...</div>
+    </div>
 </div>
 
 <div id="error-message"></div>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    // Elementos DOM
-    const listaCanaisElemento = document.getElementById("lista-canais");
-    const searchInput = document.getElementById("search-input");
-    const searchClear = document.getElementById("search-clear");
-    const video = document.getElementById("video-player");
-    const loadingElement = document.getElementById("loading");
-    const errorElement = document.getElementById("error-message");
-    const playerMessage = document.getElementById("player-message");
-    const sidebarTabs = document.querySelectorAll(".sidebar-tab");
-    
-    // Variáveis de estado
-    let allChannels = [];
-    let favoriteChannels = JSON.parse(localStorage.getItem('favoriteChannels')) || [];
-    let currentTab = 'all';
-    let currentSearch = '';
-    let currentChannelIndex = 0;
-    let retryCount = 0;
-    const MAX_RETRIES = 3;
-    
-    // Configuração do CORS proxy - usando vários proxies como fallback
-    const CORS_PROXIES = [
-        "https://corsproxy.io/?",
-        "https://api.codetabs.com/v1/proxy?quest=",
-        "https://cors-anywhere.herokuapp.com/"
-    ];
-    let currentProxyIndex = 0;
-    const LISTA_URL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/servidor1.m3u";
-    
-    // Inicializar a aplicação
-    init();
-    
-    function init() {
-        setupEventListeners();
-        loadChannels();
-    }
-    
-    function setupEventListeners() {
-        // Limpar busca
-        searchClear.addEventListener('click', () => {
-            searchInput.value = '';
-            currentSearch = '';
-            searchClear.style.display = 'none';
-            renderChannels();
-        });
-        
-        // Input de busca
-        searchInput.addEventListener('input', (e) => {
-            currentSearch = e.target.value.toLowerCase();
-            searchClear.style.display = currentSearch ? 'block' : 'none';
-            renderChannels();
-        });
-        
-        // Alternar entre abas
-        sidebarTabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                sidebarTabs.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                currentTab = tab.dataset.tab;
-                renderChannels();
-            });
-        });
-        
-        // Tratamento de erro do vídeo
-        video.addEventListener('error', function() {
-            handleVideoError();
-        });
-        
-        video.addEventListener('waiting', function() {
-            showPlayerMessage('Buffering...');
-        });
-        
-        video.addEventListener('playing', function() {
-            hidePlayerMessage();
-            retryCount = 0; // Reset retry count on successful play
-        });
-        
-        video.addEventListener('canplay', function() {
-            hidePlayerMessage();
-        });
-        
-        // Suporte a teclado para navegação
-        document.addEventListener('keydown', handleKeyDown);
-    }
-    
-    function handleKeyDown(e) {
-        // Navegação por teclado para Smart TVs
-        const activeElement = document.activeElement;
-        if (activeElement && (activeElement.tagName === 'INPUT' || activeElement.tagName === 'TEXTAREA')) {
-            return; // Ignorar se estiver em campo de texto
-        }
-        
-        const channels = getFilteredChannels();
-        if (channels.length === 0) return;
-        
-        switch(e.key) {
-            case 'ArrowUp':
-                e.preventDefault();
-                navigateChannels(-1);
-                break;
-            case 'ArrowDown':
-                e.preventDefault();
-                navigateChannels(1);
-                break;
-            case 'Enter':
-                e.preventDefault();
-                if (currentChannelIndex >= 0 && currentChannelIndex < channels.length) {
-                    playChannel(channels[currentChannelIndex]);
-                }
-                break;
-        }
-    }
-    
-    function navigateChannels(direction) {
-        const channels = getFilteredChannels();
-        if (channels.length === 0) return;
-        
-        currentChannelIndex = (currentChannelIndex + direction + channels.length) % channels.length;
-        
-        // Atualizar visualmente o canal selecionado
-        const listItems = listaCanaisElemento.querySelectorAll('li');
-        listItems.forEach((item, index) => {
-            item.classList.toggle('active', index === currentChannelIndex);
-        });
-        
-        // Scroll para o item selecionado
-        if (listItems[currentChannelIndex]) {
-            listItems[currentChannelIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }
-    }
-    
-    function getFilteredChannels() {
-        let channels = currentTab === 'favorites' 
-            ? allChannels.filter(c => c.isFavorite) 
-            : allChannels;
-            
-        if (currentSearch) {
-            channels = channels.filter(c => 
-                c.name.toLowerCase().includes(currentSearch)
-            );
-        }
-        
-        return channels;
-    }
-    
-    function loadChannels() {
-        showLoading();
-        
-        // Verificar se temos dados em cache
-        const cachedChannels = localStorage.getItem('cachedChannels');
-        const cacheTimestamp = localStorage.getItem('cacheTimestamp');
-        const isCacheValid = cacheTimestamp && (Date.now() - parseInt(cacheTimestamp)) < 24 * 60 * 60 * 1000; // 24 horas
-        
-        if (cachedChannels && isCacheValid) {
-            try {
-                processChannelsData(cachedChannels);
-                hideLoading();
-                return;
-            } catch (e) {
-                console.error("Erro ao processar cache:", e);
-                localStorage.removeItem('cachedChannels');
-                localStorage.removeItem('cacheTimestamp');
-            }
-        }
-        
-        // Buscar dados atualizados
-        fetchWithRetry();
-    }
-    
-    function fetchWithRetry() {
-        const proxyUrl = CORS_PROXIES[currentProxyIndex] + encodeURIComponent(LISTA_URL);
-        
-        fetch(proxyUrl)
-            .then(response => {
-                if (!response.ok) throw new Error('Falha ao carregar a lista');
-                return response.text();
-            })
-            .then(data => {
-                processChannelsData(data);
-                // Salvar no cache local
-                localStorage.setItem('cachedChannels', data);
-                localStorage.setItem('cacheTimestamp', Date.now().toString());
-                hideLoading();
-            })
-            .catch(error => {
-                console.error("Erro ao carregar canais com proxy", currentProxyIndex, ":", error);
-                
-                // Tentar próximo proxy
-                currentProxyIndex = (currentProxyIndex + 1) % CORS_PROXIES.length;
-                
-                if (currentProxyIndex === 0) {
-                    // Todos os proxies falharam
-                    showError("Erro ao carregar a lista de canais. Verifique sua conexão.");
-                    hideLoading();
-                    
-                    // Tentar usar cache mesmo expirado em caso de erro
-                    if (cachedChannels) {
-                        try {
-                            processChannelsData(cachedChannels);
-                        } catch (e) {
-                            console.error("Também falhou ao usar cache:", e);
-                        }
-                    }
-                } else {
-                    // Tentar com próximo proxy
-                    setTimeout(fetchWithRetry, 1000);
-                }
-            });
-    }
-    
-    function processChannelsData(data) {
-        const linhas = data.split('\n');
-        allChannels = [];
-        
-        for (let i = 0; i < linhas.length; i++) {
-            if (linhas[i].startsWith('#EXTINF')) {
-                const nomeMatch = linhas[i].match(/,(.*)$/);
-                const nome = nomeMatch ? nomeMatch[1].trim() : "Sem nome";
-                const logoMatch = linhas[i].match(/tvg-logo="([^"]*)"/);
-                const logo = logoMatch ? logoMatch[1] : null;
-                const grupoMatch = linhas[i].match(/group-title="([^"]*)"/);
-                const grupo = grupoMatch ? grupoMatch[1] : null;
-                const url = linhas[i + 1];
-                
-                if (url && (url.startsWith("http://") || url.startsWith("https://"))) {
-                    allChannels.push({
-                        name: nome,
-                        url: url,
-                        logo: logo,
-                        group: grupo,
-                        isFavorite: favoriteChannels.includes(nome)
-                    });
-                }
-            }
-        }
-        
-        allChannels.sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
-        renderChannels();
-        
-        // Reproduzir o primeiro canal se não houver nenhum sendo reproduzido
-        if (allChannels.length > 0 && !video.src) {
-            playChannel(allChannels[0]);
-        }
-    }
-    
-    function renderChannels() {
-        listaCanaisElemento.innerHTML = '';
-        
-        // Filtrar canais com base na aba ativa e busca
-        const channelsToShow = getFilteredChannels();
-            
-        if (channelsToShow.length === 0) {
-            const li = document.createElement('li');
-            li.textContent = currentTab === 'favorites' 
-                ? 'Nenhum favorito encontrado' 
-                : 'Nenhum canal encontrado';
-            li.style.cursor = 'default';
-            li.style.background = 'transparent';
-            listaCanaisElemento.appendChild(li);
-            return;
-        }
-        
-        channelsToShow.forEach((canal, index) => {
-            const li = document.createElement('li');
-            
-            const channelContent = document.createElement('div');
-            channelContent.style.display = 'flex';
-            channelContent.style.alignItems = 'center';
-            
-            const channelNumber = document.createElement('span');
-            channelNumber.className = 'channel-number';
-            channelNumber.textContent = index + 1;
-            
-            const nameSpan = document.createElement('span');
-            nameSpan.textContent = canal.name;
-            
-            channelContent.appendChild(channelNumber);
-            channelContent.appendChild(nameSpan);
-            
-            const favButton = document.createElement('button');
-            favButton.className = `favorite-btn ${canal.isFavorite ? 'favorited' : ''}`;
-            favButton.innerHTML = '★';
-            favButton.title = canal.isFavorite ? 'Remover dos favoritos' : 'Adicionar aos favoritos';
-            
-            favButton.addEventListener('click', (e) => {
-                e.stopPropagation();
-                toggleFavorite(canal);
-            });
-            
-            li.appendChild(channelContent);
-            li.appendChild(favButton);
-            
-            li.addEventListener('click', function() {
-                playChannel(canal);
-                document.querySelectorAll('#lista-canais li').forEach(el => el.classList.remove('active'));
-                li.classList.add('active');
-                currentChannelIndex = index;
-            });
-            
-            // Marcar como ativo se for o canal atual
-            if (video.src === canal.url) {
-                li.classList.add('active');
-                currentChannelIndex = index;
-            }
-            
-            listaCanaisElemento.appendChild(li);
-        });
-    }
-    
-    function playChannel(canal) {
-        showPlayerMessage('Carregando...');
-        retryCount = 0;
-        
-        // Tentar detectar se o formato é HLS
-        const isHLS = canal.url.includes('.m3u8');
-        
-        // Para Smart TVs e navegadores antigos, usar approach mais simples
-        video.src = canal.url;
-        
-        // Limpar event listeners anteriores para evitar duplicação
-        video.onerror = null;
-        video.onloadstart = function() {
-            showPlayerMessage('Carregando canal...');
-        };
-        
-        video.oncanplay = function() {
-            hidePlayerMessage();
-        };
-        
-        video.onerror = function() {
-            handleVideoError();
-        };
-        
-        const playPromise = video.play();
-        
-        if (playPromise !== undefined) {
-            playPromise.catch(error => {
-                console.error("Erro ao reproduzir:", error);
-                handleVideoError();
-            });
-        }
-    }
-    
-    function handleVideoError() {
-        retryCount++;
-        
-        if (retryCount <= MAX_RETRIES) {
-            showPlayerMessage(`Erro ao carregar. Tentativa ${retryCount}/${MAX_RETRIES}...`);
-            
-            // Tentar novamente após um delay
-            setTimeout(() => {
-                video.src = video.src; // Tentar recarregar a mesma fonte
-                video.play().catch(e => console.error("Erro ao reproduzir:", e));
-            }, 2000 * retryCount); // Aumentar delay a cada tentativa
-        } else {
-            showPlayerMessage('Erro ao carregar o vídeo. Selecione outro canal.');
-            showError('Não foi possível carregar este canal. Tente outro.', true);
-        }
-    }
-    
-    function toggleFavorite(canal) {
-        canal.isFavorite = !canal.isFavorite;
-        
-        if (canal.isFavorite) {
-            if (!favoriteChannels.includes(canal.name)) {
-                favoriteChannels.push(canal.name);
-            }
-        } else {
-            const index = favoriteChannels.indexOf(canal.name);
-            if (index > -1) {
-                favoriteChannels.splice(index, 1);
-            }
-        }
-        
-        localStorage.setItem('favoriteChannels', JSON.stringify(favoriteChannels));
-        renderChannels();
-    }
-    
-    function showPlayerMessage(message) {
-        playerMessage.textContent = message;
-        playerMessage.style.display = 'block';
-    }
-    
-    function hidePlayerMessage() {
-        playerMessage.style.display = 'none';
-    }
-    
-    function showError(message, showRetry = false) {
-        errorElement.innerHTML = message;
-        if (showRetry) {
-            const retryBtn = document.createElement('button');
-            retryBtn.className = 'error-retry-btn';
-            retryBtn.textContent = 'Tentar Novamente';
-            retryBtn.onclick = function() {
-                retryCount = 0;
-                if (allChannels.length > 0) {
-                    playChannel(allChannels[currentChannelIndex]);
-                }
-                errorElement.style.display = 'none';
-            };
-            errorElement.appendChild(document.createElement('br'));
-            errorElement.appendChild(retryBtn);
-        }
-        
-        errorElement.style.display = 'block';
-        
-        if (!showRetry) {
-            setTimeout(() => {
-                errorElement.style.display = 'none';
-            }, 5000);
-        }
-    }
-    
-    function hideError() {
+// Função simples para mostrar/ocultar loading
+function showLoading() {
+    document.getElementById('loading').style.display = 'flex';
+}
+
+function hideLoading() {
+    document.getElementById('loading').style.display = 'none';
+}
+
+// Função para mostrar erro
+function showError(message) {
+    var errorElement = document.getElementById('error-message');
+    errorElement.textContent = message;
+    errorElement.style.display = 'block';
+    setTimeout(function() {
         errorElement.style.display = 'none';
+    }, 5000);
+}
+
+// Carregar lista de canais
+function loadChannels() {
+    showLoading();
+    
+    // URL da lista de canais com proxy CORS simples
+    var listaURL = "https://corsproxy.io/?https://raw.githubusercontent.com/listadobill/tv/main/servidor1.m3u";
+    
+    // Fazer requisição simples usando XMLHttpRequest (mais compatível)
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', listaURL, true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                processChannels(xhr.responseText);
+                hideLoading();
+            } else {
+                showError("Erro ao carregar canais. Tentando novamente...");
+                setTimeout(loadChannels, 3000); // Tentar novamente após 3 segundos
+            }
+        }
+    };
+    xhr.send();
+}
+
+// Processar lista de canais
+function processChannels(data) {
+    var linhas = data.split('\n');
+    var canais = [];
+    
+    for (var i = 0; i < linhas.length; i++) {
+        if (linhas[i].startsWith('#EXTINF')) {
+            var nome = linhas[i].split(',')[1] || "Sem nome";
+            var url = linhas[i + 1];
+            if (url && (url.startsWith("http://") || url.startsWith("https://"))) {
+                canais.push({ name: nome.trim(), url: url });
+            }
+        }
     }
     
-    function showLoading() {
-        loadingElement.style.display = 'flex';
+    // Ordenar canais por nome
+    canais.sort(function(a, b) {
+        return a.name.localeCompare(b.name);
+    });
+    
+    renderChannels(canais);
+    
+    // Reproduzir o primeiro canal se disponível
+    if (canais.length > 0) {
+        playChannel(canais[0]);
+    }
+}
+
+// Renderizar lista de canais
+function renderChannels(canais) {
+    var listaElemento = document.getElementById('lista-canais');
+    listaElemento.innerHTML = '';
+    
+    // Filtrar canais se houver busca
+    var searchText = document.getElementById('search-input').value.toLowerCase();
+    var canaisFiltrados = canais;
+    
+    if (searchText) {
+        canaisFiltrados = canais.filter(function(canal) {
+            return canal.name.toLowerCase().includes(searchText);
+        });
     }
     
-    function hideLoading() {
-        loadingElement.style.display = 'none';
+    // Adicionar canais à lista
+    canaisFiltrados.forEach(function(canal) {
+        var li = document.createElement('li');
+        li.textContent = canal.name;
+        li.onclick = function() {
+            playChannel(canal);
+            // Destacar canal selecionado
+            var itens = listaElemento.getElementsByTagName('li');
+            for (var j = 0; j < itens.length; j++) {
+                itens[j].className = '';
+            }
+            li.className = 'active';
+        };
+        listaElemento.appendChild(li);
+    });
+}
+
+// Reproduzir canal
+function playChannel(canal) {
+    var video = document.getElementById('video-player');
+    
+    // Tentar detectar se é HLS para Smart TVs
+    if (canal.url.includes('.m3u8') && typeof Hls !== 'undefined') {
+        if (Hls.isSupported()) {
+            var hls = new Hls();
+            hls.loadSource(canal.url);
+            hls.attachMedia(video);
+            hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                video.play();
+            });
+        } else {
+            // Fallback para player nativo
+            video.src = canal.url;
+            video.play();
+        }
+    } else {
+        // Para outros formatos
+        video.src = canal.url;
+        video.play();
     }
+    
+    video.onerror = function() {
+        showError("Erro ao carregar o canal. Tente outro.");
+    };
+}
+
+// Inicializar quando a página carregar
+document.addEventListener('DOMContentLoaded', function() {
+    // Configurar busca
+    document.getElementById('search-input').addEventListener('input', function() {
+        loadChannels(); // Recarregar a lista filtrada
+    });
+    
+    // Carregar canais
+    loadChannels();
+    
+    // Carregar Hls.js apenas se necessário (para streams HLS)
+    var script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/hls.js@latest';
+    document.head.appendChild(script);
 });
+
+// Animation para o loading
+document.head.appendChild(document.createElement('style')).textContent = '@keyframes spin {0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}';
 </script>
 </body>
 </html>
