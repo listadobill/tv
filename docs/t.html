@@ -3,165 +3,356 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TV DO BILL</title>
+<title>TV DO BILL - Local</title>
 <style>
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
     background: #000;
     color: #fff;
-    display: flex;
-    height: 100vh;
     overflow: hidden;
-}
-
-#container {
+    height: 100vh;
     display: flex;
-    width: 100%;
-    height: 100%;
+    flex-direction: column;
 }
 
-#sidebar {
-    width: 30%;
-    max-width: 350px;
+.header {
     background: #222;
-    overflow-y: auto;
     padding: 10px;
-    border-right: 2px solid #600;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #900;
 }
 
-#search-bar {
-    padding: 10px;
-    margin-bottom: 10px;
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-right: 15px;
 }
 
-#search-input {
+.search-bar {
+    flex-grow: 1;
+}
+
+.search-input {
     width: 100%;
     padding: 10px;
     border: none;
     border-radius: 4px;
-    font-size: 16px;
     background: #333;
+    color: #fff;
+    font-size: 16px;
+}
+
+.container {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 300px;
+    background: #222;
+    overflow-y: auto;
+    border-right: 2px solid #900;
+    display: flex;
+    flex-direction: column;
+}
+
+.channels-list {
+    flex-grow: 1;
+    overflow-y: auto;
+    list-style: none;
+}
+
+.channels-list li {
+    padding: 12px 15px;
+    border-bottom: 1px solid #333;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.channels-list li:hover {
+    background: #333;
+}
+
+.channels-list li.active {
+    background: #900;
     color: #fff;
 }
 
-#lista-canais {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.channel-logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    object-fit: contain;
 }
 
-#lista-canais li {
-    padding: 12px;
-    margin-bottom: 5px;
-    background: #333;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-#lista-canais li:hover, #lista-canais li.active {
-    background: #900;
-}
-
-#player {
-    flex: 1;
+.player {
+    flex-grow: 1;
     background: #000;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
-#video-player {
+.video-player {
     width: 100%;
     height: 100%;
     background: #000;
 }
 
-#loading {
-    position: fixed;
+.loading {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #333;
+    border-top: 5px solid #900;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
 }
 
 .loading-text {
-    color: white;
-    font-size: 20px;
-    margin-top: 20px;
+    font-size: 18px;
+    color: #fff;
 }
 
-#error-message {
-    display: none;
-    position: fixed;
+.error-message {
+    position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     background: #900;
     padding: 10px 20px;
-    border-radius: 5px;
-    z-index: 1000;
+    border-radius: 4px;
+    z-index: 10;
+    display: none;
     max-width: 80%;
     text-align: center;
+}
+
+.info-panel {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    z-index: 5;
+    display: none;
+}
+
+.format-badge {
+    background: #444;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 11px;
+    margin-left: 8px;
+}
+
+.manual-input {
+    padding: 10px;
+    background: #333;
+    border-top: 1px solid #444;
+}
+
+.manual-input input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 5px;
+    background: #222;
+    border: 1px solid #444;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.manual-input button {
+    width: 100%;
+    padding: 8px;
+    background: #600;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        height: 40%;
+        border-right: none;
+        border-bottom: 2px solid #900;
+    }
 }
 </style>
 </head>
 <body>
-<div id="container">
-    <div id="sidebar">
-        <div id="search-bar">
-            <input type="text" id="search-input" placeholder="Buscar canal...">
+<div class="header">
+    <div class="logo">TV BILL</div>
+    <div class="search-bar">
+        <input type="text" class="search-input" placeholder="Buscar canal..." id="search-input">
+    </div>
+</div>
+
+<div class="container">
+    <div class="sidebar">
+        <ul class="channels-list" id="channels-list"></ul>
+        <div class="manual-input">
+            <input type="text" id="manual-url" placeholder="URL manual (m3u, m3u8, ts)">
+            <button id="add-manual">Adicionar Canal</button>
         </div>
-        <ul id="lista-canais"></ul>
     </div>
-    <div id="player">
-        <video id="video-player" controls playsinline></video>
+    
+    <div class="player">
+        <video class="video-player" id="video-player" controls playsinline></video>
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <div class="loading-text">Carregando...</div>
+        </div>
+        <div class="error-message" id="error-message"></div>
+        <div class="info-panel" id="info-panel"></div>
     </div>
 </div>
-
-<div id="loading">
-    <div>
-        <div style="width:50px;height:50px;border:5px solid #333;border-top:5px solid #900;border-radius:50%;animation:spin 1s linear infinite;margin:0 auto;"></div>
-        <div class="loading-text">Carregando canais...</div>
-    </div>
-</div>
-
-<div id="error-message"></div>
 
 <script>
-// Função simples para mostrar/ocultar loading
-function showLoading() {
-    document.getElementById('loading').style.display = 'flex';
+// Variáveis globais
+var allChannels = [];
+var currentChannel = null;
+var hls = null;
+
+// Inicializar quando a página carregar
+document.addEventListener('DOMContentLoaded', function() {
+    initApp();
+});
+
+function initApp() {
+    setupEventListeners();
+    loadChannels();
 }
 
-function hideLoading() {
-    document.getElementById('loading').style.display = 'none';
+function setupEventListeners() {
+    // Busca de canais
+    var searchInput = document.getElementById('search-input');
+    searchInput.addEventListener('input', filterChannels);
+    
+    // Input manual de URL
+    document.getElementById('add-manual').addEventListener('click', addManualChannel);
+    
+    // Eventos do player de vídeo
+    var videoPlayer = document.getElementById('video-player');
+    
+    videoPlayer.addEventListener('loadstart', function() {
+        showLoading('Carregando canal...');
+    });
+    
+    videoPlayer.addEventListener('canplay', function() {
+        hideLoading();
+    });
+    
+    videoPlayer.addEventListener('error', function(e) {
+        console.error('Erro no vídeo:', e);
+        showError('Erro ao carregar o canal. Tentando método alternativo...');
+        // Tentar método alternativo em caso de erro
+        setTimeout(function() {
+            if (currentChannel) {
+                playChannelFallback(currentChannel);
+            }
+        }, 2000);
+    });
+    
+    videoPlayer.addEventListener('waiting', function() {
+        showLoading('Buffering...');
+    });
+    
+    videoPlayer.addEventListener('playing', function() {
+        hideLoading();
+    });
 }
 
-// Função para mostrar erro
-function showError(message) {
-    var errorElement = document.getElementById('error-message');
-    errorElement.textContent = message;
-    errorElement.style.display = 'block';
-    setTimeout(function() {
-        errorElement.style.display = 'none';
-    }, 5000);
+function addManualChannel() {
+    var urlInput = document.getElementById('manual-url');
+    var url = urlInput.value.trim();
+    
+    if (!url) return;
+    
+    // Detectar formato
+    var format = detectStreamFormat(url);
+    
+    // Criar canal manual
+    var manualChannel = {
+        name: 'Canal Manual (' + format + ')',
+        url: url,
+        logo: '',
+        group: 'Manual',
+        format: format
+    };
+    
+    // Adicionar à lista e reproduzir
+    allChannels.push(manualChannel);
+    renderChannels(allChannels);
+    playChannel(manualChannel);
+    
+    // Limpar input
+    urlInput.value = '';
 }
 
-// Carregar lista de canais
 function loadChannels() {
-    showLoading();
+    showLoading('Carregando lista de canais...');
     
-    // URL da lista de canais com proxy CORS simples
-    var listaURL = "https://corsproxy.io/?https://raw.githubusercontent.com/listadobill/tv/main/servidor1.m3u";
+    // Verificar se há canais no localStorage para uso offline
+    var savedChannels = localStorage.getItem('savedChannels');
+    if (savedChannels) {
+        try {
+            allChannels = JSON.parse(savedChannels);
+            renderChannels(allChannels);
+            hideLoading();
+            
+            if (allChannels.length > 0) {
+                playChannel(allChannels[0]);
+            }
+            return;
+        } catch (e) {
+            console.error('Erro ao carregar canais salvos:', e);
+        }
+    }
     
-    // Fazer requisição simples usando XMLHttpRequest (mais compatível)
+    // Se não há canais salvos, carregar da URL
+    var listaURL = "https://raw.githubusercontent.com/listadobill/tv/main/servidor1.m3u";
+    
+    // Fazer requisição usando XMLHttpRequest (mais compatível)
     var xhr = new XMLHttpRequest();
     xhr.open('GET', listaURL, true);
     xhr.onreadystatechange = function() {
@@ -170,121 +361,362 @@ function loadChannels() {
                 processChannels(xhr.responseText);
                 hideLoading();
             } else {
-                showError("Erro ao carregar canais. Tentando novamente...");
-                setTimeout(loadChannels, 3000); // Tentar novamente após 3 segundos
+                showError('Erro ao carregar lista. Usando canais de exemplo...');
+                // Carregar canais de exemplo em caso de erro
+                loadExampleChannels();
             }
         }
     };
     xhr.send();
 }
 
-// Processar lista de canais
-function processChannels(data) {
-    var linhas = data.split('\n');
-    var canais = [];
+function loadExampleChannels() {
+    // Canais de exemplo para teste local
+    allChannels = [
+        {
+            name: "Globo News HD",
+            url: "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169423",
+            logo: "http://kinglogo.newtvhd.com/logoo/bouquet/Brazil.png",
+            group: "BRASIL",
+            format: "HLS" // Vamos tentar detectar isso
+        },
+        {
+            name: "Exemplo MP4",
+            url: "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/720/Big_Buck_Bunny_720_10s_1MB.mp4",
+            logo: "",
+            group: "Exemplo",
+            format: "MP4"
+        },
+        {
+            name: "Exemplo M3U8",
+            url: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+            logo: "",
+            group: "Exemplo",
+            format: "HLS"
+        }
+    ];
     
-    for (var i = 0; i < linhas.length; i++) {
-        if (linhas[i].startsWith('#EXTINF')) {
-            var nome = linhas[i].split(',')[1] || "Sem nome";
-            var url = linhas[i + 1];
-            if (url && (url.startsWith("http://") || url.startsWith("https://"))) {
-                canais.push({ name: nome.trim(), url: url });
+    // Detectar formatos dos canais de exemplo
+    allChannels.forEach(function(channel) {
+        channel.format = detectStreamFormat(channel.url);
+    });
+    
+    renderChannels(allChannels);
+    
+    if (allChannels.length > 0) {
+        playChannel(allChannels[0]);
+    }
+    
+    // Salvar no localStorage para uso futuro
+    localStorage.setItem('savedChannels', JSON.stringify(allChannels));
+}
+
+function processChannels(data) {
+    var lines = data.split('\n');
+    allChannels = [];
+    
+    for (var i = 0; i < lines.length; i++) {
+        var line = lines[i].trim();
+        
+        if (line.startsWith('#EXTINF:')) {
+            // Extrair informações do canal
+            var channelInfo = parseExtinfLine(line);
+            var streamUrl = lines[i + 1] ? lines[i + 1].trim() : '';
+            
+            if (streamUrl && (streamUrl.startsWith('http://') || streamUrl.startsWith('https://'))) {
+                // Detectar formato com base na URL
+                var format = detectStreamFormat(streamUrl);
+                
+                allChannels.push({
+                    name: channelInfo.name,
+                    url: streamUrl,
+                    logo: channelInfo.logo,
+                    group: channelInfo.group,
+                    format: format
+                });
             }
         }
     }
     
     // Ordenar canais por nome
-    canais.sort(function(a, b) {
+    allChannels.sort(function(a, b) {
         return a.name.localeCompare(b.name);
     });
     
-    renderChannels(canais);
+    renderChannels(allChannels);
+    
+    // Salvar no localStorage para uso offline
+    localStorage.setItem('savedChannels', JSON.stringify(allChannels));
     
     // Reproduzir o primeiro canal se disponível
-    if (canais.length > 0) {
-        playChannel(canais[0]);
+    if (allChannels.length > 0) {
+        playChannel(allChannels[0]);
     }
 }
 
-// Renderizar lista de canais
-function renderChannels(canais) {
-    var listaElemento = document.getElementById('lista-canais');
-    listaElemento.innerHTML = '';
+function detectStreamFormat(url) {
+    // Verificar parâmetros na URL que indicam formato
+    if (url.includes('.m3u8') || url.includes('mpegurl') || url.includes('hls')) return 'HLS';
+    if (url.includes('.mp4')) return 'MP4';
+    if (url.includes('.ts')) return 'TS';
+    if (url.includes('.mkv')) return 'MKV';
+    if (url.includes('.flv')) return 'FLV';
     
-    // Filtrar canais se houver busca
+    // Verificar se a URL termina com números (comum em streams HLS sem extensão)
+    if (/\/\d+$/.test(url)) return 'HLS';
+    
+    // Verificar parâmetros de query comuns
+    if (url.includes('m3u8') || url.includes('hls')) return 'HLS';
+    
+    // Se não foi possível detectar, assumir HLS (mais comum em IPTV)
+    return 'HLS?';
+}
+
+function parseExtinfLine(line) {
+    var info = {
+        name: '',
+        logo: '',
+        group: ''
+    };
+    
+    // Extrair nome (última parte após a vírgula)
+    var commaIndex = line.lastIndexOf(',');
+    if (commaIndex !== -1) {
+        info.name = line.substring(commaIndex + 1).trim();
+    }
+    
+    // Extrair logo
+    var logoMatch = line.match(/tvg-logo="([^"]*)"/);
+    if (logoMatch) {
+        info.logo = logoMatch[1];
+    }
+    
+    // Extrair grupo
+    var groupMatch = line.match(/group-title="([^"]*)"/);
+    if (groupMatch) {
+        info.group = groupMatch[1];
+    }
+    
+    return info;
+}
+
+function renderChannels(channels) {
+    var channelsList = document.getElementById('channels-list');
+    channelsList.innerHTML = '';
+    
+    if (channels.length === 0) {
+        var li = document.createElement('li');
+        li.textContent = 'Nenhum canal encontrado';
+        channelsList.appendChild(li);
+        return;
+    }
+    
+    channels.forEach(function(channel, index) {
+        var li = document.createElement('li');
+        
+        // Adicionar logo se disponível
+        if (channel.logo) {
+            var img = document.createElement('img');
+            img.src = channel.logo;
+            img.className = 'channel-logo';
+            img.alt = '';
+            img.onerror = function() { this.style.display = 'none'; };
+            li.appendChild(img);
+        }
+        
+        var span = document.createElement('span');
+        span.textContent = channel.name;
+        li.appendChild(span);
+        
+        // Adicionar badge de formato
+        if (channel.format) {
+            var formatBadge = document.createElement('span');
+            formatBadge.className = 'format-badge';
+            formatBadge.textContent = channel.format;
+            li.appendChild(formatBadge);
+        }
+        
+        li.onclick = function() {
+            playChannel(channel);
+            setActiveChannel(li);
+        };
+        
+        channelsList.appendChild(li);
+    });
+}
+
+function filterChannels() {
     var searchText = document.getElementById('search-input').value.toLowerCase();
-    var canaisFiltrados = canais;
     
-    if (searchText) {
-        canaisFiltrados = canais.filter(function(canal) {
-            return canal.name.toLowerCase().includes(searchText);
+    if (!searchText) {
+        renderChannels(allChannels);
+        return;
+    }
+    
+    var filteredChannels = allChannels.filter(function(channel) {
+        return channel.name.toLowerCase().includes(searchText);
+    });
+    
+    renderChannels(filteredChannels);
+}
+
+function playChannel(channel) {
+    showLoading('Carregando ' + channel.name + '...');
+    currentChannel = channel;
+    
+    var videoPlayer = document.getElementById('video-player');
+    
+    // Limpar fonte anterior
+    videoPlayer.src = '';
+    
+    // Parar HLS anterior se existir
+    if (hls) {
+        hls.destroy();
+        hls = null;
+    }
+    
+    // Mostrar informações do canal
+    showChannelInfo(channel);
+    
+    // Tentar determinar o tipo de conteúdo com base na URL
+    var type = getVideoType(channel.url);
+    
+    console.log('Tentando reproduzir:', channel.url, 'como', type);
+    
+    // Definir a fonte do vídeo
+    videoPlayer.src = channel.url;
+    
+    if (type) {
+        videoPlayer.type = type;
+    }
+    
+    // Tentar reproduzir
+    var playPromise = videoPlayer.play();
+    
+    if (playPromise !== undefined) {
+        playPromise.catch(function(error) {
+            console.error('Erro ao reproduzir:', error);
+            // Tentar fallback se o método principal falhar
+            playChannelFallback(channel);
         });
     }
-    
-    // Adicionar canais à lista
-    canaisFiltrados.forEach(function(canal) {
-        var li = document.createElement('li');
-        li.textContent = canal.name;
-        li.onclick = function() {
-            playChannel(canal);
-            // Destacar canal selecionado
-            var itens = listaElemento.getElementsByTagName('li');
-            for (var j = 0; j < itens.length; j++) {
-                itens[j].className = '';
-            }
-            li.className = 'active';
-        };
-        listaElemento.appendChild(li);
-    });
 }
 
-// Reproduzir canal
-function playChannel(canal) {
-    var video = document.getElementById('video-player');
-    
-    // Tentar detectar se é HLS para Smart TVs
-    if (canal.url.includes('.m3u8') && typeof Hls !== 'undefined') {
-        if (Hls.isSupported()) {
-            var hls = new Hls();
-            hls.loadSource(canal.url);
-            hls.attachMedia(video);
-            hls.on(Hls.Events.MANIFEST_PARSED, function() {
-                video.play();
-            });
-        } else {
-            // Fallback para player nativo
-            video.src = canal.url;
-            video.play();
-        }
-    } else {
-        // Para outros formatos
-        video.src = canal.url;
-        video.play();
+function getVideoType(url) {
+    if (url.includes('.m3u8') || url.includes('mpegurl') || /\/\d+$/.test(url)) {
+        return 'application/x-mpegURL';
+    } else if (url.includes('.mp4')) {
+        return 'video/mp4';
+    } else if (url.includes('.ts')) {
+        return 'video/MP2T';
     }
     
-    video.onerror = function() {
-        showError("Erro ao carregar o canal. Tente outro.");
-    };
+    // Tipo genérico para URLs sem extensão clara
+    return null;
 }
 
-// Inicializar quando a página carregar
-document.addEventListener('DOMContentLoaded', function() {
-    // Configurar busca
-    document.getElementById('search-input').addEventListener('input', function() {
-        loadChannels(); // Recarregar a lista filtrada
-    });
+function playChannelFallback(channel) {
+    console.log('Tentando método fallback para:', channel.url);
+    var videoPlayer = document.getElementById('video-player');
     
-    // Carregar canais
-    loadChannels();
+    // Se for HLS, tentar usar Hls.js
+    if (channel.format.includes('HLS') && typeof Hls !== 'undefined') {
+        if (Hls.isSupported()) {
+            if (!hls) {
+                hls = new Hls({
+                    debug: false,
+                    enableWorker: false
+                });
+            }
+            
+            hls.loadSource(channel.url);
+            hls.attachMedia(videoPlayer);
+            hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                videoPlayer.play().catch(function(e) {
+                    console.error('Erro no HLS fallback:', e);
+                    showError('Não foi possível reproduzir este canal.');
+                });
+            });
+            
+            return;
+        }
+    }
     
-    // Carregar Hls.js apenas se necessário (para streams HLS)
-    var script = document.createElement('script');
-    script.src = 'https://cdn.jsdelivr.net/npm/hls.js@latest';
-    document.head.appendChild(script);
-});
+    // Para outros formatos, tentar forçar o recarregamento
+    videoPlayer.load();
+    
+    var playPromise = videoPlayer.play();
+    if (playPromise !== undefined) {
+        playPromise.catch(function(error) {
+            console.error('Erro no fallback:', error);
+            showError('Não foi possível reproduzir este canal.');
+        });
+    }
+}
 
-// Animation para o loading
-document.head.appendChild(document.createElement('style')).textContent = '@keyframes spin {0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}';
+function setActiveChannel(selectedLi) {
+    var items = document.getElementById('channels-list').getElementsByTagName('li');
+    for (var i = 0; i < items.length; i++) {
+        items[i].classList.remove('active');
+    }
+    selectedLi.classList.add('active');
+}
+
+function showChannelInfo(channel) {
+    var infoPanel = document.getElementById('info-panel');
+    infoPanel.textContent = channel.name + ' • ' + channel.format;
+    infoPanel.style.display = 'block';
+    
+    // Ocultar após alguns segundos
+    setTimeout(function() {
+        infoPanel.style.display = 'none';
+    }, 3000);
+}
+
+function showLoading(message) {
+    var loading = document.getElementById('loading');
+    var loadingText = loading.querySelector('.loading-text');
+    
+    if (message) {
+        loadingText.textContent = message;
+    }
+    
+    loading.style.display = 'flex';
+}
+
+function hideLoading() {
+    document.getElementById('loading').style.display = 'none';
+}
+
+function showError(message) {
+    var errorElement = document.getElementById('error-message');
+    errorElement.textContent = message;
+    errorElement.style.display = 'block';
+    
+    setTimeout(function() {
+        errorElement.style.display = 'none';
+    }, 5000);
+}
+
+// Carregar Hls.js condicionalmente (apenas se necessário)
+function loadHlsJs() {
+    // Verificar se o navegador precisa de Hls.js para reproduzir HLS
+    var video = document.createElement('video');
+    var canPlayHls = video.canPlayType('application/vnd.apple.mpegurl') ||
+                     video.canPlayType('application/x-mpegURL');
+    
+    if (!canPlayHls) {
+        var script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/hls.js@latest';
+        script.onload = function() {
+            console.log('Hls.js carregado para suporte a streams HLS');
+        };
+        document.head.appendChild(script);
+    }
+}
+
+// Inicializar verificação de HLS
+loadHlsJs();
 </script>
 </body>
 </html>
