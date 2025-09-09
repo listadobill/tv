@@ -1,4 +1,5 @@
 #EXTM3U
+#EXTINF:-1,01 - Lista atualizada em 09/09/2025
 #EXTINF:-1 tvg-id="amc.br" tvg-name="AMC FHD" tvg-logo="https://icons24h.info/logo/Canais/S02E083.png" group-title="Canais | Filmes e Séries",AMC FHD
 http://67.220.70.162:8080/12345678/12345678/239473
 #EXTINF:-1 tvg-id="amc.br" tvg-name="AMC HD" tvg-logo="https://icons24h.info/logo/Canais/S02E083.png" group-title="Canais | Filmes e Séries",AMC HD
