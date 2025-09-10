@@ -193,6 +193,7 @@
             opacity: 0;
             transition: opacity 0.3s;
             pointer-events: none;
+            z-index: 15;
         }
         .player:hover .player-controls {
             opacity: 1;
@@ -369,8 +370,8 @@
         }
         .stats-panel { 
             position: absolute; 
-            bottom: 15px; 
-            right: 15px; 
+            top: 15px; 
+            left: 15px; 
             background: rgba(0, 0, 0, 0.7); 
             padding: 8px 12px; 
             border-radius: 5px; 
@@ -383,12 +384,12 @@
         /* Animations */
         @keyframes spin { 
             0% { transform: rotate(0deg); } 
-            to { transform: rotate(360deg); } 
+            100% { transform: rotate(360deg); } 
         }
         @keyframes pulse { 
             0% { opacity: 1; } 
             50% { opacity: 0.5; } 
-            to { opacity: 1; } 
+            100% { opacity: 1; } 
         }
         .pulsing { 
             animation: pulse 1s infinite; 
@@ -424,6 +425,10 @@
             .header-btn {
                 width: 35px;
                 height: 35px;
+            }
+            .stats-panel {
+                top: 60px;
+                left: 15px;
             }
         }
         
@@ -473,7 +478,7 @@
         </div>
         
         <div class="player" id="player">
-            <video class="video-player" id="video-player" controls playsinline></video>
+            <video class="video-player" id="video-player" playsinline></video>
             
             <div class="player-controls">
                 <button class="control-btn" id="play-pause">
@@ -564,6 +569,10 @@
             
             // Video player events
             var videoPlayer = document.getElementById('video-player');
+            
+            // Remover controles nativos do vídeo para evitar duplicação
+            videoPlayer.controls = false;
+            
             videoPlayer.addEventListener('loadstart', function(){ 
                 showLoading('Carregando canal...'); 
                 hideError(); 
@@ -918,6 +927,8 @@ http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169501`;
                 li.onclick = function(){ 
                     playChannel(channel); 
                     setActiveChannel(li); 
+                    // Reativar tela cheia automática ao trocar de canal
+                    autoFullscreenEnabled = true;
                 };
                 
                 channelsList.appendChild(li);
