@@ -383,12 +383,12 @@
         /* Animations */
         @keyframes spin { 
             0% { transform: rotate(0deg); } 
-            100% { transform: rotate(360deg); } 
+            to { transform: rotate(360deg); } 
         }
         @keyframes pulse { 
             0% { opacity: 1; } 
             50% { opacity: 0.5; } 
-            100% { opacity: 1; } 
+            to { opacity: 1; } 
         }
         .pulsing { 
             animation: pulse 1s infinite; 
@@ -529,6 +529,7 @@
         var connectionStats = { retries: 0, lastError: null, lastSuccess: null };
         var isPlaying = false;
         var autoFullscreenEnabled = true;
+        var m3uUrl = "https://raw.githubusercontent.com/listadobill/tv/main/zteste.m3u";
 
         // Inicialização quando o DOM estiver carregado
         document.addEventListener('DOMContentLoaded', function() {
@@ -775,25 +776,41 @@
         function loadChannels(){
             showLoading('Carregando lista de canais...');
             
-            // Esta é uma lista de exemplo - na implementação real, você carregaria de um arquivo M3U real
-            // Agora com URLs que funcionam tanto localmente quanto remotamente
-            var listaM3U = `#EXTM3U
-#EXTINF:-1,01 - Lista atualizada em 09/09/2025
-http://atualizacao.local/
-#EXTINF:-1 tvg-id="" tvg-name=" AMC HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/AMC_2019.svg/800px-AMC_2019.svg.png" group-title="CANAIS BR", AMC HD
-https://canaismax.com/amc/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-name=" Animal Planet HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Animal_Planet_2018.svg/800px-Animal_Planet_2018.svg.png" group-title="CANAIS BR", Animal Planet HD
-https://canaismax.com/animalplanet/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-name=" Arte 1 HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Arte_1_logo.png/800px-Arte_1_logo.png" group-title="CANAIS BR", Arte 1 HD
-https://canaismax.com/arte1/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-name=" AXN HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/AXN_logo_%282015%29.svg/800px-AXN_logo_%282015%29.svg.png" group-title="CANAIS BR", AXN HD
-https://canaismax.com/axn/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-name=" BAND" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Band_logo_2017.png/800px-Band_logo_2017.png" group-title="CANAIS BR", BAND
-https://canaismax.com/band/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-name=" TESTE LOCAL" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Band_logo_2017.png/800px-Band_logo_2017.png" group-title="TESTE", TESTE LOCAL (MP4)
-https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4`;
+            // Carregar a lista M3U do GitHub
+            fetch(m3uUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Erro ao carregar a lista de canais: ' + response.status);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    processChannels(data);
+                })
+                .catch(error => {
+                    console.error('Erro ao carregar lista M3U:', error);
+                    showError('Erro ao carregar lista de canais: ' + error.message);
+                    
+                    // Carregar lista de fallback em caso de erro
+                    loadFallbackChannels();
+                });
+        }
+
+        function loadFallbackChannels() {
+            // Lista de fallback caso não consiga carregar do GitHub
+            var fallbackM3U = `#EXTM3U
+#EXTINF:-1 tvg-id="" tvg-name=" AMC HD" tvg-logo="http://kinglogo.newtvhd.com/logoo/bouquet/Brazil.png" group-title="CANAIS BR", AMC HD
+http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169382
+#EXTINF:-1 tvg-id="" tvg-name=" Animal Planet HD" tvg-logo="http://kinglogo.newtvhd.com/logoo/bouquet/Brazil.png" group-title="CANAIS BR", Animal Planet HD
+http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169383
+#EXTINF:-1 tvg-id="" tvg-name=" Arte 1 HD" tvg-logo="http://kinglogo.newtvhd.com/logoo/bouquet/Brazil.png" group-title="CANAIS BR", Arte 1 HD
+http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169384
+#EXTINF:-1 tvg-id="" tvg-name=" AXN HD" tvg-logo="http://kinglogo.newtvhd.com/logoo/bouquet/Brazil.png" group-title="CANAIS BR", AXN HD
+http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169385
+#EXTINF:-1 tvg-id="" tvg-name=" BAND" tvg-logo="http://kinglogo.newtvhd.com/logoo/bouquet/Brazil.png" group-title="CANAIS BR", BAND
+http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169501`;
             
-            processChannels(listaM3U);
+            processChannels(fallbackM3U);
         }
 
         function processChannels(data){
