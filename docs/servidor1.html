@@ -1,221 +1,4344 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>TV BILL - Player Universal</title>
-<script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.0/dist/hls.min.js"></script>
-<script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
-<style>
-  body { margin:0; font-family:sans-serif; background:#111; color:#eee; }
-  .topbar { background:#8b0f0f; padding:10px; display:flex; align-items:center; }
-  .topbar .logo { font-weight:bold; font-size:18px; color:#fff; }
-  .search { margin-left:20px; flex:1; }
-  .search input { width:100%; padding:6px 10px; border-radius:20px; border:0; }
-  .container { display:flex; height:calc(100vh - 40px); }
-  .sidebar { width:280px; background:#1d1d1d; overflow-y:auto; }
-  .channel { display:flex; gap:8px; align-items:center; padding:8px; border-bottom:1px solid #333; cursor:pointer; }
-  .channel:hover { background:#333; }
-  .channel.selected { background:#8b0f0f; }
-  .thumb { width:50px; height:30px; background:#222; flex-shrink:0; display:flex; align-items:center; justify-content:center; }
-  .thumb img { width:100%; height:100%; object-fit:cover; }
-  .meta { flex:1; }
-  .meta .title { font-size:14px; font-weight:600; }
-  .meta .group { font-size:12px; color:#aaa; }
-  .player { flex:1; display:flex; flex-direction:column; background:#000; position:relative; }
-  video,audio { width:100%; height:100%; background:#000; }
-  .attempt { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); color:#fff; text-align:center; }
-  .spinner { width:40px; height:40px; border:5px solid rgba(255,255,255,0.2); border-top:5px solid red; border-radius:50%; margin:0 auto 10px; animation:spin 1s linear infinite; }
-  @keyframes spin { to{ transform:rotate(360deg);} }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV BILL - Player Corrigido</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.0/dist/hls.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 20px;
+            gap: 20px;
+        }
+        
+        header {
+            background: linear-gradient(90deg, #8b0f0f 0%, #6a0b0b 100%);
+            border-radius: 12px;
+            padding: 15px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo h1 {
+            font-size: 28px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .logo-icon {
+            font-size: 32px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            padding: 5px 15px;
+            width: 300px;
+            transition: all 0.3s ease;
+        }
+        
+        .search-box:focus-within {
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 0 2px rgba(139, 15, 15, 0.5);
+        }
+        
+        .search-box input {
+            background: transparent;
+            border: none;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            outline: none;
+            font-size: 16px;
+        }
+        
+        .search-box input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .content {
+            display: flex;
+            gap: 20px;
+            height: calc(100vh - 150px);
+        }
+        
+        .sidebar {
+            width: 320px;
+            background: rgba(30, 30, 30, 0.8);
+            border-radius: 12px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .sidebar-title {
+            padding: 10px 0;
+            margin-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 18px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .channels-list {
+            overflow-y: auto;
+            flex: 1;
+            padding-right: 5px;
+        }
+        
+        .channel {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .channel:hover {
+            background: rgba(139, 15, 15, 0.2);
+            transform: translateX(5px);
+        }
+        
+        .channel.selected {
+            background: linear-gradient(90deg, rgba(139, 15, 15, 0.3) 0%, rgba(139, 15, 15, 0.1) 100%);
+            box-shadow: 0 0 0 1px rgba(139, 15, 15, 0.5);
+            transform: translateX(5px);
+        }
+        
+        .channel.error {
+            opacity: 0.6;
+            background: rgba(100, 100, 100, 0.1);
+        }
+        
+        .channel-thumb {
+            width: 60px;
+            height: 40px;
+            border-radius: 6px;
+            background: linear-gradient(135deg, #333 0%, #222 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 20px;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+        
+        .channel-info {
+            flex: 1;
+            overflow: hidden;
+        }
+        
+        .channel-title {
+            font-size: 16px;
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .channel-group {
+            font-size: 12px;
+            color: #aaa;
+            margin-top: 3px;
+        }
+        
+        .channel-status {
+            font-size: 10px;
+            padding: 3px 6px;
+            border-radius: 10px;
+            margin-top: 4px;
+            display: inline-block;
+        }
+        
+        .status-online {
+            background: rgba(76, 175, 80, 0.2);
+            color: #4caf50;
+        }
+        
+        .status-offline {
+            background: rgba(244, 67, 54, 0.2);
+            color: #f44336;
+        }
+        
+        .player-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+        
+        .player-header {
+            padding: 15px 20px;
+            background: linear-gradient(90deg, rgba(30, 30, 30, 0.9) 0%, rgba(20, 20, 20, 0.9) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            z-index: 20;
+        }
+        
+        .current-channel {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .current-channel-name {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .current-channel-group {
+            font-size: 14px;
+            color: #aaa;
+        }
+        
+        .player-controls {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .control-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 18px;
+        }
+        
+        .control-btn:hover {
+            background: rgba(139, 15, 15, 0.5);
+            transform: scale(1.1);
+        }
+        
+        .video-container {
+            flex: 1;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: #000;
+        }
+        
+        .loading-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            gap: 20px;
+        }
+        
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 5px solid rgba(255, 255, 255, 0.2);
+            border-top: 5px solid #8b0f0f;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        .loading-text {
+            font-size: 18px;
+            text-align: center;
+        }
+        
+        .error-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            gap: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .error-icon {
+            font-size: 50px;
+            color: #f44336;
+        }
+        
+        .error-text {
+            font-size: 18px;
+            color: #fff;
+            max-width: 500px;
+        }
+        
+        .retry-btn {
+            background: #8b0f0f;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .retry-btn:hover {
+            background: #a11212;
+            transform: scale(1.05);
+        }
+        
+        .player-info {
+            padding: 15px 20px;
+            background: linear-gradient(90deg, rgba(30, 30, 30, 0.9) 0%, rgba(20, 20, 20, 0.9) 100%);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 20;
+        }
+        
+        .player-stats {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+            color: #aaa;
+        }
+        
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .empty-state {
+            padding: 30px;
+            text-align: center;
+            color: #888;
+        }
+        
+        /* Scrollbar personalizada */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: rgba(139, 15, 15, 0.5);
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(139, 15, 15, 0.7);
+        }
+        
+        @media (max-width: 1200px) {
+            .content {
+                flex-direction: column;
+                height: auto;
+            }
+            
+            .sidebar {
+                width: 100%;
+                height: 300px;
+            }
+            
+            .player-container {
+                height: 500px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .search-box {
+                width: 100%;
+            }
+            
+            .player-controls {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="topbar">
-  <div class="logo">📺 TV BILL</div>
-  <div class="search"><input id="search" placeholder="Buscar canal..." /></div>
-</div>
-<div class="container">
-  <div class="sidebar" id="channels"></div>
-  <div class="player">
-    <video id="video" controls playsinline></video>
-    <audio id="audio" controls playsinline style="display:none"></audio>
-    <div class="attempt" id="attemptBox" style="display:none">
-      <div class="spinner"></div>
-      <div id="attemptText">Reconectando...</div>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="logo-icon">📺</div>
+                <h1>TV BILL Player</h1>
+            </div>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Buscar canal...">
+            </div>
+        </header>
+        
+        <div class="content">
+            <div class="sidebar">
+                <div class="sidebar-title">
+                    <span>📡</span>
+                    <span>Canais de TV</span>
+                </div>
+                <div class="channels-list" id="channels-list">
+                    <!-- Canais serão carregados aqui -->
+                </div>
+            </div>
+            
+            <div class="player-container">
+                <div class="player-header">
+                    <div class="current-channel">
+                        <div class="current-channel-info">
+                            <div class="current-channel-name" id="current-channel-name">Selecione um canal</div>
+                            <div class="current-channel-group" id="current-channel-group">TV BILL</div>
+                        </div>
+                    </div>
+                    <div class="player-controls">
+                        <button class="control-btn" id="fullscreen-btn" title="Tela Cheia">⛶</button>
+                        <button class="control-btn" id="volume-btn" title="Volume">🔊</button>
+                    </div>
+                </div>
+                
+                <div class="video-container">
+                    <video id="video-player" controls playsinline></video>
+                    
+                    <div class="loading-overlay" id="loading-overlay">
+                        <div class="spinner"></div>
+                        <div class="loading-text" id="loading-text">Conectando ao canal...</div>
+                    </div>
+                    
+                    <div class="error-overlay" id="error-overlay" style="display: none;">
+                        <div class="error-icon">⚠️</div>
+                        <div class="error-text" id="error-text">Erro ao carregar o canal. Verifique a conexão.</div>
+                        <button class="retry-btn" id="retry-btn">
+                            <span>🔄</span>
+                            <span>Tentar Novamente</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="player-info">
+                    <div class="player-stats">
+                        <div class="stat">
+                            <span>🔴</span>
+                            <span id="status-text">Não reproduzindo</span>
+                        </div>
+                        <div class="stat">
+                            <span>📶</span>
+                            <span id="quality-text">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
-<script>
-const listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/servidor1.m3u";
-const channelsEl = document.getElementById("channels");
-const searchEl = document.getElementById("search");
-const video = document.getElementById("video");
-const audio = document.getElementById("audio");
-const attemptBox = document.getElementById("attemptBox");
-const attemptText = document.getElementById("attemptText");
-
-let channels = [];
-let current = null;
-let hls = null;
-let dash = null;
-let reconnecting = false;
-let attempt = 0;
-let timer = null;
-
-// carregar lista M3U
-async function loadList() {
-  const res = await fetch(listaURL);
-  const text = await res.text();
-  parseM3U(text);
-  renderList();
-}
-
-function parseM3U(text) {
-  const lines = text.split("\n");
-  let currentInfo = {};
-  channels = [];
-  for (let line of lines) {
-    line = line.trim();
-    if (line.startsWith("#EXTINF")) {
-      const logoMatch = line.match(/tvg-logo="([^"]+)"/);
-      const groupMatch = line.match(/group-title="([^"]+)"/);
-      const name = line.split(",").pop().trim();
-      currentInfo = {
-        title: name,
-        group: groupMatch ? groupMatch[1] : "",
-        logo: logoMatch ? logoMatch[1] : "",
-      };
-    } else if (line && !line.startsWith("#")) {
-      currentInfo.url = line;
-      channels.push(currentInfo);
-      currentInfo = {};
-    }
+    <script>
+        // Lista de canais (substitua com seus próprios canais)
+        const channels = [
+  {
+    "title": "AMC FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239473"
+  },
+  {
+    "title": "AMC HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239474"
+  },
+  {
+    "title": "AMC SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239475"
+  },
+  {
+    "title": "Animal Planet 4K",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083349"
+  },
+  {
+    "title": "Animal Planet FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239583"
+  },
+  {
+    "title": "Animal Planet HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239584"
+  },
+  {
+    "title": "Animal Planet SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239585"
+  },
+  {
+    "title": "Arte 1 FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240221"
+  },
+  {
+    "title": "Arte 1 HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240222"
+  },
+  {
+    "title": "Arte 1 SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240223"
+  },
+  {
+    "title": "AXN 4K",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083350"
+  },
+  {
+    "title": "AXN FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239476"
+  },
+  {
+    "title": "AXN HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239477"
+  },
+  {
+    "title": "AXN SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239478"
+  },
+  {
+    "title": "Band",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083542"
+  },
+  {
+    "title": "Band 4K",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083351"
+  },
+  {
+    "title": "BAND BAHIA",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083543"
+  },
+  {
+    "title": "Band Bahia HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083544"
+  },
+  {
+    "title": "Band Bahia SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083545"
+  },
+  {
+    "title": "BAND ASILIA",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083546"
+  },
+  {
+    "title": "BAND CAMPINAS",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083547"
+  },
+  {
+    "title": "BAND CAMPINAS FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083548"
+  },
+  {
+    "title": "BAND CAMPINAS HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083549"
+  },
+  {
+    "title": "BAND GOIANIA",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083551"
+  },
+  {
+    "title": "BAND MG",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083552"
+  },
+  {
+    "title": "BAND MG FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083553"
+  },
+  {
+    "title": "BAND MG HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083554"
+  },
+  {
+    "title": "BAND NEWS FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239729"
+  },
+  {
+    "title": "Band News HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239730"
+  },
+  {
+    "title": "Band News SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239731"
+  },
+  {
+    "title": "Band PB HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1433340"
+  },
+  {
+    "title": "BAND RJ",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083556"
+  },
+  {
+    "title": "BAND RJ HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083557"
+  },
+  {
+    "title": "BAND RS",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083558"
+  },
+  {
+    "title": "BAND SP",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083559"
+  },
+  {
+    "title": "Band SP FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083560"
+  },
+  {
+    "title": "BAND SP FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083561"
+  },
+  {
+    "title": "Band SP HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083562"
+  },
+  {
+    "title": "BAND SP HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083563"
+  },
+  {
+    "title": "Band Sports FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239668"
+  },
+  {
+    "title": "Band Sports HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239669"
+  },
+  {
+    "title": "Band Sports SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239670"
+  },
+  {
+    "title": "Band Taroba Curitiba HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1433341"
+  },
+  {
+    "title": "Band Taroba Curitiba SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1433342"
+  },
+  {
+    "title": "BandNews 90.7 FM / GO",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1447104"
+  },
+  {
+    "title": "TV Max HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1425315"
+  },
+  {
+    "title": "Canção Nova HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/758767"
+  },
+  {
+    "title": "Canção Nova SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/758766"
+  },
+  {
+    "title": "Cartoon Network 4K",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083352"
+  },
+  {
+    "title": "Cartoon Network HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239458"
+  },
+  {
+    "title": "Cartoon Network SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239457"
+  },
+  {
+    "title": "Cartoonito HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239456"
+  },
+  {
+    "title": "Cartoonito SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239455"
+  },
+  {
+    "title": "Chicago P.D. Distrito 21 (2014)",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1274859"
+  },
+  {
+    "title": "Cinemax FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239479"
+  },
+  {
+    "title": "Cinemax HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239480"
+  },
+  {
+    "title": "Cinemax SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239481"
+  },
+  {
+    "title": "CNN Brasil 4K",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083353"
+  },
+  {
+    "title": "CNN Brasil FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239734"
+  },
+  {
+    "title": "CNN Brasil HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239735"
+  },
+  {
+    "title": "CNN Brasil SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239736"
+  },
+  {
+    "title": "Combate 4K",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083354"
+  },
+  {
+    "title": "Combate FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239671"
+  },
+  {
+    "title": "Combate HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239672"
+  },
+  {
+    "title": "Combate SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239673"
+  },
+  {
+    "title": "Curta! FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240258"
+  },
+  {
+    "title": "Curta! HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240259"
+  },
+  {
+    "title": "DAZN 1",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083680"
+  },
+  {
+    "title": "DAZN 2",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083681"
+  },
+  {
+    "title": "DAZN 3",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083682"
+  },
+  {
+    "title": "DAZN 4",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083683"
+  },
+  {
+    "title": "DAZN 5",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1275062"
+  },
+  {
+    "title": "Desenhos Disney 24HS",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083405"
+  },
+  {
+    "title": "Discovery Channel 4K",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083356"
+  },
+  {
+    "title": "Discovery Channel FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239586"
+  },
+  {
+    "title": "Discovery Channel HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239587"
+  },
+  {
+    "title": "Discovery Channel SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239588"
+  },
+  {
+    "title": "Discovery H&H 4K",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083357"
+  },
+  {
+    "title": "Discovery H&H FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239589"
+  },
+  {
+    "title": "Discovery H&H HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239590"
+  },
+  {
+    "title": "Discovery H&H SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239591"
+  },
+  {
+    "title": "Discovery Kids HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239460"
+  },
+  {
+    "title": "Discovery Kids SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239459"
+  },
+  {
+    "title": "DISCOVERY PLUS 90 DIAS PARA CASAR",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1193597"
+  },
+  {
+    "title": "DISCOVERY PLUS AEROPORTO AREA RESTRITA",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1193598"
+  },
+  {
+    "title": "DISCOVERY PLUS AMOR NA SELVA",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1193599"
+  },
+  {
+    "title": "DISCOVERY PLUS AS PIORES PRISOES DO MUNDO",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1193600"
+  },
+  {
+    "title": "DISCOVERY PLUS CACADORES DE TEMPESTADES",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1193601"
+  },
+  {
+    "title": "DISCOVERY PLUS CARROS IRADOS",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1193602"
+  },
+  {
+    "title": "DISCOVERY PLUS CHAOS IN COURT",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1193603"
+  },
+  {
+    "title": "DISCOVERY PLUS CRIMES QUE ABALARAM O MUNDO",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1193604"
+  },
+  {
+    "title": "DISCOVERY PLUS DUPLA DO BARULHO",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1193605"
+  },
+  {
+    "title": "DISCOVERY PLUS FEE DO OURO CORREDEIRAS DO ALASCA",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1193606"
+  },
+  {
+    "title": "DISCOVERY PLUS IRMAOS A OA",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1193607"
+  },
+  {
+    "title": "DISCOVERY PLUS O CRIME QUASE PERFEITO",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1193608"
+  },
+  {
+    "title": "DISCOVERY PLUS OPERACAO FRONTEIRA AMERICA DO SUL",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1193609"
+  },
+  {
+    "title": "DISCOVERY PLUS PESCA MORTAL",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1193610"
+  },
+  {
+    "title": "DISCOVERY PLUS PIT BULLS CONDENADOS",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1193611"
+  },
+  {
+    "title": "DISCOVERY PLUS REFORMA EM FAMILIA COM KAREN E MINA",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1193612"
+  },
+  {
+    "title": "DISCOVERY PLUS RUMO AO DESCONHECIDO ESPECIAL DE VOLTA PARA O FUTURO",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1193613"
+  },
+  {
+    "title": "DISCOVERY PLUS VIVENDO COM O INIMIGO",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1193614"
+  },
+  {
+    "title": "Discovery Science FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239592"
+  },
+  {
+    "title": "Discovery Science HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239593"
+  },
+  {
+    "title": "Discovery Science SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239594"
+  },
+  {
+    "title": "Discovery Theather FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239595"
+  },
+  {
+    "title": "Discovery Theather HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239596"
+  },
+  {
+    "title": "Discovery Theather SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239597"
+  },
+  {
+    "title": "Discovery Turbo 4K",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083358"
+  },
+  {
+    "title": "Discovery Turbo FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239598"
+  },
+  {
+    "title": "Discovery Turbo HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239599"
+  },
+  {
+    "title": "Discovery Turbo SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239600"
+  },
+  {
+    "title": "Discovery World FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239601"
+  },
+  {
+    "title": "Discovery World HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239602"
+  },
+  {
+    "title": "Discovery World SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239603"
+  },
+  {
+    "title": "Disney Animated Shorts 1921",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1193818"
+  },
+  {
+    "title": "DISNEY MAIS Homem Aranha",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1193755"
+  },
+  {
+    "title": "DISNEY MAIS MCU",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1193756"
+  },
+  {
+    "title": "DISNEY MAIS X Men",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1193757"
+  },
+  {
+    "title": "DISNEY+ STAR+ 1",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083740"
+  },
+  {
+    "title": "DISNEY+ STAR+ 2",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083741"
+  },
+  {
+    "title": "DISNEY+ STAR+ 3",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083742"
+  },
+  {
+    "title": "DISNEY+ STAR+ 4",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083743"
+  },
+  {
+    "title": "DISNEY+ STAR+ 5",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083744"
+  },
+  {
+    "title": "DISNEY+ STAR+ 6",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083745"
+  },
+  {
+    "title": "DISNEY+ STAR+ 7",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083746"
+  },
+  {
+    "title": "ESPN 2 FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239693"
+  },
+  {
+    "title": "ESPN 2 HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239694"
+  },
+  {
+    "title": "ESPN 2 SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239695"
+  },
+  {
+    "title": "ESPN 3 FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239696"
+  },
+  {
+    "title": "ESPN 3 HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239697"
+  },
+  {
+    "title": "ESPN 3 SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239698"
+  },
+  {
+    "title": "ESPN 4 4K",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083359"
+  },
+  {
+    "title": "ESPN 4 FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239699"
+  },
+  {
+    "title": "ESPN 4 HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239700"
+  },
+  {
+    "title": "ESPN 4 SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239701"
+  },
+  {
+    "title": "ESPN 4K",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083360"
+  },
+  {
+    "title": "ESPN 5 FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239674"
+  },
+  {
+    "title": "ESPN 5 HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239675"
+  },
+  {
+    "title": "ESPN 5 SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239676"
+  },
+  {
+    "title": "ESPN 6 FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1323134"
+  },
+  {
+    "title": "ESPN 6 HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1323135"
+  },
+  {
+    "title": "ESPN 6 SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1323136"
+  },
+  {
+    "title": "ESPN EXTRA FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239702"
+  },
+  {
+    "title": "ESPN EXTRA HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239703"
+  },
+  {
+    "title": "ESPN EXTRA SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239704"
+  },
+  {
+    "title": "ESPN FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239705"
+  },
+  {
+    "title": "ESPN HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239706"
+  },
+  {
+    "title": "ESPN SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239707"
+  },
+  {
+    "title": "Evangelizar",
+    "url": "http://67.220.70.162:8080/12345678/12345678/758758"
+  },
+  {
+    "title": "FUTURA HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239552"
+  },
+  {
+    "title": "FUTURA SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239553"
+  },
+  {
+    "title": "Futurama (1999)",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1274844"
+  },
+  {
+    "title": "Gazeta 4K",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083361"
+  },
+  {
+    "title": "Globo 4K",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083362"
+  },
+  {
+    "title": "Globo News 4K",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083363"
+  },
+  {
+    "title": "Globo News FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239742"
+  },
+  {
+    "title": "Globo News HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239743"
+  },
+  {
+    "title": "Globo News SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239744"
+  },
+  {
+    "title": "GNT 4K",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083364"
+  },
+  {
+    "title": "GNT FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240271"
+  },
+  {
+    "title": "GNT HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240272"
+  },
+  {
+    "title": "GNT SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240273"
+  },
+  {
+    "title": "Gospel - Deus é Amor 1210 AM Curitiba",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1443259"
+  },
+  {
+    "title": "Gospel - Gospel 89.3 FM Curitiba",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1443264"
+  },
+  {
+    "title": "H2 FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239607"
+  },
+  {
+    "title": "H2 HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239611"
+  },
+  {
+    "title": "H2 SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239612"
+  },
+  {
+    "title": "HBO  FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239632"
+  },
+  {
+    "title": "HBO  HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239633"
+  },
+  {
+    "title": "HBO  SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239640"
+  },
+  {
+    "title": "HBO 2 FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239626"
+  },
+  {
+    "title": "HBO 2 HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239627"
+  },
+  {
+    "title": "HBO 2 SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239628"
+  },
+  {
+    "title": "HBO 4K",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083365"
+  },
+  {
+    "title": "HBO Family FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239629"
+  },
+  {
+    "title": "HBO Family HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239630"
+  },
+  {
+    "title": "HBO Family SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239631"
+  },
+  {
+    "title": "HBO MAX 01",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1193758"
+  },
+  {
+    "title": "HBO MAX 01",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083714"
+  },
+  {
+    "title": "HBO MAX 02",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1193759"
+  },
+  {
+    "title": "HBO MAX 02",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083715"
+  },
+  {
+    "title": "HBO MAX 03",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1193760"
+  },
+  {
+    "title": "HBO MAX 03",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083716"
+  },
+  {
+    "title": "HBO MAX 04",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083717"
+  },
+  {
+    "title": "HBO MAX 04 Familia",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1193761"
+  },
+  {
+    "title": "HBO MAX 05",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083718"
+  },
+  {
+    "title": "HBO Max 06",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1275064"
+  },
+  {
+    "title": "HBO Max 07",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1435113"
+  },
+  {
+    "title": "HBO Max 08",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1435114"
+  },
+  {
+    "title": "HBO Max 09",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1457222"
+  },
+  {
+    "title": "HBO Max 10 HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1457223"
+  },
+  {
+    "title": "HBO Max 11 HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1457224"
+  },
+  {
+    "title": "HBO Max 12 HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1457225"
+  },
+  {
+    "title": "HBO Max 13 HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1457226"
+  },
+  {
+    "title": "HBO Max 14 HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1457227"
+  },
+  {
+    "title": "HBO Max 15 HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1457228"
+  },
+  {
+    "title": "HBO Max 16 HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1457229"
+  },
+  {
+    "title": "HBO Max 17 HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1457230"
+  },
+  {
+    "title": "HBO Max 18 HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1457231"
+  },
+  {
+    "title": "HBO Max Mosaico Jogos HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1457232"
+  },
+  {
+    "title": "HBO Mundi FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239634"
+  },
+  {
+    "title": "HBO Mundi HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239635"
+  },
+  {
+    "title": "HBO Mundi SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239636"
+  },
+  {
+    "title": "HBO Pop FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239637"
+  },
+  {
+    "title": "HBO Pop HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239638"
+  },
+  {
+    "title": "HBO Pop SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239639"
+  },
+  {
+    "title": "HBO Signature FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239641"
+  },
+  {
+    "title": "HBO Signature HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239642"
+  },
+  {
+    "title": "HBO Signature SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239643"
+  },
+  {
+    "title": "HBO Xtreme FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239644"
+  },
+  {
+    "title": "HBO Xtreme HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239645"
+  },
+  {
+    "title": "HBO Xtreme SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239646"
+  },
+  {
+    "title": "HBO+ FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239647"
+  },
+  {
+    "title": "HBO+ HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239648"
+  },
+  {
+    "title": "HBO+ SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239649"
+  },
+  {
+    "title": "History Channel FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239613"
+  },
+  {
+    "title": "History Channel HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239614"
+  },
+  {
+    "title": "History Channel SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239615"
+  },
+  {
+    "title": "ID - Investigação Discovery FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239616"
+  },
+  {
+    "title": "ID - Investigação Discovery HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239618"
+  },
+  {
+    "title": "ID - Investigação Discovery SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239617"
+  },
+  {
+    "title": "Igreja Universal HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/758760"
+  },
+  {
+    "title": "Liga da Justica (2001)",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1274846"
+  },
+  {
+    "title": "Liga da Justiça Sem Limites (2004)",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1274847"
+  },
+  {
+    "title": "MTV 00s HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240281"
+  },
+  {
+    "title": "MTV FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240282"
+  },
+  {
+    "title": "MTV HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240283"
+  },
+  {
+    "title": "MTV Live FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240284"
+  },
+  {
+    "title": "MTV Live HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240285"
+  },
+  {
+    "title": "MTV Live SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240286"
+  },
+  {
+    "title": "MTV SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240287"
+  },
+  {
+    "title": "Multishow 4K",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083368"
+  },
+  {
+    "title": "Multishow HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240289"
+  },
+  {
+    "title": "Multishow SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240290"
+  },
+  {
+    "title": "Music Box Brasil FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240291"
+  },
+  {
+    "title": "Music Box Brasil HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240293"
+  },
+  {
+    "title": "Music Box Brasil SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240292"
+  },
+  {
+    "title": "Nick Jr. HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239466"
+  },
+  {
+    "title": "Nick Jr. SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239465"
+  },
+  {
+    "title": "Nickelodeon HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239468"
+  },
+  {
+    "title": "Nickelodeon SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239467"
+  },
+  {
+    "title": "OFF FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239677"
+  },
+  {
+    "title": "OFF HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239678"
+  },
+  {
+    "title": "OFF SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239679"
+  },
+  {
+    "title": "Premiere 2 FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240326"
+  },
+  {
+    "title": "Premiere 2 HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240327"
+  },
+  {
+    "title": "Premiere 2 SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240328"
+  },
+  {
+    "title": "Premiere 3 FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240329"
+  },
+  {
+    "title": "Premiere 3 HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240330"
+  },
+  {
+    "title": "Premiere 3 SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240331"
+  },
+  {
+    "title": "Premiere 4 FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1086975"
+  },
+  {
+    "title": "Premiere 4 HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240332"
+  },
+  {
+    "title": "Premiere 4 SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240333"
+  },
+  {
+    "title": "Premiere 5 FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1086976"
+  },
+  {
+    "title": "Premiere 5 HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240334"
+  },
+  {
+    "title": "Premiere 5 SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240335"
+  },
+  {
+    "title": "Premiere 6 FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1086978"
+  },
+  {
+    "title": "Premiere 6 HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240336"
+  },
+  {
+    "title": "Premiere 6 SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1086977"
+  },
+  {
+    "title": "Premiere 7 FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1086980"
+  },
+  {
+    "title": "Premiere 7 HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240337"
+  },
+  {
+    "title": "Premiere 7 SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1086979"
+  },
+  {
+    "title": "Premiere Clubes 4K",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083370"
+  },
+  {
+    "title": "Premiere Clubes FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240338"
+  },
+  {
+    "title": "Premiere Clubes HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240339"
+  },
+  {
+    "title": "Premiere Clubes SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240340"
+  },
+  {
+    "title": "Prime Box Brasil FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240298"
+  },
+  {
+    "title": "Prime Box Brasil HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240297"
+  },
+  {
+    "title": "Prime Box Brasil SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240299"
+  },
+  {
+    "title": "Record 4K",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083371"
+  },
+  {
+    "title": "Record Alagoas",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1422527"
+  },
+  {
+    "title": "Record BA HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1422528"
+  },
+  {
+    "title": "RECORD NEWS FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239747"
+  },
+  {
+    "title": "Record News HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239748"
+  },
+  {
+    "title": "Record News SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239749"
+  },
+  {
+    "title": "Record TV Belem SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1422529"
+  },
+  {
+    "title": "Record TV Belém HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083858"
+  },
+  {
+    "title": "Record TV Brasília HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083859"
+  },
+  {
+    "title": "Record TV Brasília SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1422530"
+  },
+  {
+    "title": "RECORD TV CIDADE CE",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1422531"
+  },
+  {
+    "title": "Record TV Goias SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1422532"
+  },
+  {
+    "title": "Record TV Goiás HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083860"
+  },
+  {
+    "title": "Record TV Itapoan BA FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083861"
+  },
+  {
+    "title": "Record TV Itapoan BA HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083862"
+  },
+  {
+    "title": "Record TV Itapoan BA SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083863"
+  },
+  {
+    "title": "Record TV Manaus HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083864"
+  },
+  {
+    "title": "Record TV Manaus SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1422533"
+  },
+  {
+    "title": "Record TV Minas HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083865"
+  },
+  {
+    "title": "Record TV Minas SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1422534"
+  },
+  {
+    "title": "Record TV NDTV SC SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1422535"
+  },
+  {
+    "title": "Record TV Paranaíba HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083866"
+  },
+  {
+    "title": "Record TV Paraná FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083867"
+  },
+  {
+    "title": "Record TV Paraná HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083868"
+  },
+  {
+    "title": "Record TV RICTV PR HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1422536"
+  },
+  {
+    "title": "Record TV RICTV PR SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1422537"
+  },
+  {
+    "title": "Record TV Rio FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083869"
+  },
+  {
+    "title": "Record TV Rio HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083870"
+  },
+  {
+    "title": "Record TV Rio SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083871"
+  },
+  {
+    "title": "Record TV RS HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083872"
+  },
+  {
+    "title": "Record TV RS SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083873"
+  },
+  {
+    "title": "Record TV SC FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083874"
+  },
+  {
+    "title": "Record TV SC HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083875"
+  },
+  {
+    "title": "Record TV SP FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083876"
+  },
+  {
+    "title": "Record TV SP HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083877"
+  },
+  {
+    "title": "Record TV SP SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083878"
+  },
+  {
+    "title": "Record TV Thathi Campinas HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083879"
+  },
+  {
+    "title": "Record TV Thathi Campinas SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083880"
+  },
+  {
+    "title": "Rede Brasil TV",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239554"
+  },
+  {
+    "title": "Rede Globo Amazônica Amapá FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082859"
+  },
+  {
+    "title": "Rede Globo Amazônica Amapá HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082860"
+  },
+  {
+    "title": "Rede Globo Amazônica Amapá SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082861"
+  },
+  {
+    "title": "Rede Globo Amazônica Ariquemes FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082940"
+  },
+  {
+    "title": "Rede Globo Amazônica Ariquemes HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082941"
+  },
+  {
+    "title": "Rede Globo Amazônica Ariquemes SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082942"
+  },
+  {
+    "title": "Rede Globo Amazônica Boa Vista FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082862"
+  },
+  {
+    "title": "Rede Globo Amazônica Boa Vista HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082863"
+  },
+  {
+    "title": "Rede Globo Amazônica Boa Vista SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082864"
+  },
+  {
+    "title": "Rede Globo Amazônica Cacoal FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082943"
+  },
+  {
+    "title": "Rede Globo Amazônica Cacoal HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082944"
+  },
+  {
+    "title": "Rede Globo Amazônica Cacoal SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082945"
+  },
+  {
+    "title": "Rede Globo Amazônica Cruzeiro do Sul FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082946"
+  },
+  {
+    "title": "Rede Globo Amazônica Cruzeiro do Sul HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082947"
+  },
+  {
+    "title": "Rede Globo Amazônica Cruzeiro do Sul SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082948"
+  },
+  {
+    "title": "Rede Globo Amazônica Itacoatiara FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082949"
+  },
+  {
+    "title": "Rede Globo Amazônica Itacoatiara HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082950"
+  },
+  {
+    "title": "Rede Globo Amazônica Itacoatiara SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082951"
+  },
+  {
+    "title": "Rede Globo Amazônica Ji-Paraná FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082952"
+  },
+  {
+    "title": "Rede Globo Amazônica Ji-Paraná HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082953"
+  },
+  {
+    "title": "Rede Globo Amazônica Ji-Paraná SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082954"
+  },
+  {
+    "title": "Rede Globo Amazônica Manaus FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082865"
+  },
+  {
+    "title": "Rede Globo Amazônica Manaus HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082866"
+  },
+  {
+    "title": "Rede Globo Amazônica Manaus SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082867"
+  },
+  {
+    "title": "Rede Globo Amazônica Parintins FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082958"
+  },
+  {
+    "title": "Rede Globo Amazônica Parintins HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082959"
+  },
+  {
+    "title": "Rede Globo Amazônica Parintins SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082960"
+  },
+  {
+    "title": "Rede Globo Amazônica Porto Velho FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082868"
+  },
+  {
+    "title": "Rede Globo Amazônica Porto Velho HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082869"
+  },
+  {
+    "title": "Rede Globo Amazônica Porto Velho SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082870"
+  },
+  {
+    "title": "Rede Globo Amazônica Rio Branco FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082871"
+  },
+  {
+    "title": "Rede Globo Amazônica Rio Branco HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082872"
+  },
+  {
+    "title": "Rede Globo Amazônica Rio Branco SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082873"
+  },
+  {
+    "title": "Rede Globo Amazônica Vilhena FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082961"
+  },
+  {
+    "title": "Rede Globo Amazônica Vilhena HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082962"
+  },
+  {
+    "title": "Rede Globo Amazônica Vilhena SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082963"
+  },
+  {
+    "title": "Rede Globo EPTV Campinas FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082964"
+  },
+  {
+    "title": "Rede Globo EPTV Campinas HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082965"
+  },
+  {
+    "title": "Rede Globo EPTV Campinas SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082966"
+  },
+  {
+    "title": "Rede Globo EPTV Central FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082967"
+  },
+  {
+    "title": "Rede Globo EPTV Central HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082968"
+  },
+  {
+    "title": "Rede Globo EPTV Central SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082969"
+  },
+  {
+    "title": "Rede Globo EPTV Ribeirão Preto FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082970"
+  },
+  {
+    "title": "Rede Globo EPTV Ribeirão Preto HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082971"
+  },
+  {
+    "title": "Rede Globo EPTV Ribeirão Preto SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082972"
+  },
+  {
+    "title": "Rede Globo EPTV Sul de Minas FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082973"
+  },
+  {
+    "title": "Rede Globo EPTV Sul de Minas HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082974"
+  },
+  {
+    "title": "Rede Globo EPTV Sul de Minas SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082975"
+  },
+  {
+    "title": "Rede Globo Inter TV Cabugi FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082874"
+  },
+  {
+    "title": "Rede Globo Inter TV Cabugi HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082875"
+  },
+  {
+    "title": "Rede Globo Inter TV Cabugi SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082876"
+  },
+  {
+    "title": "Rede Globo Inter TV dos Vales FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082976"
+  },
+  {
+    "title": "Rede Globo Inter TV dos Vales HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082977"
+  },
+  {
+    "title": "Rede Globo Inter TV dos Vales SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082978"
+  },
+  {
+    "title": "Rede Globo InterTV Alto Litoral FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082979"
+  },
+  {
+    "title": "Rede Globo InterTV Alto Litoral HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082980"
+  },
+  {
+    "title": "Rede Globo InterTV Alto Litoral SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082981"
+  },
+  {
+    "title": "Rede Globo InterTV Costa Branca FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082982"
+  },
+  {
+    "title": "Rede Globo InterTV Costa Branca HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082983"
+  },
+  {
+    "title": "Rede Globo InterTV Costa Branca SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082984"
+  },
+  {
+    "title": "Rede Globo InterTV Grande Minas FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082985"
+  },
+  {
+    "title": "Rede Globo InterTV Grande Minas HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082986"
+  },
+  {
+    "title": "Rede Globo InterTV Grande Minas SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082987"
+  },
+  {
+    "title": "Rede Globo InterTV Planície FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082988"
+  },
+  {
+    "title": "Rede Globo InterTV Planície HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082989"
+  },
+  {
+    "title": "Rede Globo InterTV Planície SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082990"
+  },
+  {
+    "title": "Rede Globo InterTV Serra Mar FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082991"
+  },
+  {
+    "title": "Rede Globo InterTV Serra Mar HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082992"
+  },
+  {
+    "title": "Rede Globo InterTV Serra Mar SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082993"
+  },
+  {
+    "title": "Rede Globo Minas FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082877"
+  },
+  {
+    "title": "Rede Globo Minas HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082878"
+  },
+  {
+    "title": "Rede Globo Minas SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082879"
+  },
+  {
+    "title": "Rede Globo NSC Florianopolis FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082880"
+  },
+  {
+    "title": "Rede Globo NSC Florianopolis HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082881"
+  },
+  {
+    "title": "Rede Globo NSC Florianopolis SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082882"
+  },
+  {
+    "title": "Rede Globo NSC TV Blumenau FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082994"
+  },
+  {
+    "title": "Rede Globo NSC TV Blumenau HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082995"
+  },
+  {
+    "title": "Rede Globo NSC TV Blumenau SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082996"
+  },
+  {
+    "title": "Rede Globo NSC TV Centro-Oeste FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082997"
+  },
+  {
+    "title": "Rede Globo NSC TV Centro-Oeste HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082998"
+  },
+  {
+    "title": "Rede Globo NSC TV Centro-Oeste SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082999"
+  },
+  {
+    "title": "Rede Globo NSC TV Chapecó FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083000"
+  },
+  {
+    "title": "Rede Globo NSC TV Chapecó HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083001"
+  },
+  {
+    "title": "Rede Globo NSC TV Chapecó SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083002"
+  },
+  {
+    "title": "Rede Globo NSC TV Criciúma FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083003"
+  },
+  {
+    "title": "Rede Globo NSC TV Criciúma HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083004"
+  },
+  {
+    "title": "Rede Globo NSC TV Criciúma SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083005"
+  },
+  {
+    "title": "Rede Globo NSC TV Joinville FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083006"
+  },
+  {
+    "title": "Rede Globo NSC TV Joinville HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083007"
+  },
+  {
+    "title": "Rede Globo NSC TV Joinville SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083008"
+  },
+  {
+    "title": "Rede Globo RBS TV Bagé FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083009"
+  },
+  {
+    "title": "Rede Globo RBS TV Bagé HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083010"
+  },
+  {
+    "title": "Rede Globo RBS TV Bagé SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083011"
+  },
+  {
+    "title": "Rede Globo RBS TV Caxias do Sul FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083012"
+  },
+  {
+    "title": "Rede Globo RBS TV Caxias do Sul HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083013"
+  },
+  {
+    "title": "Rede Globo RBS TV Caxias do Sul SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083014"
+  },
+  {
+    "title": "Rede Globo RBS TV Cruz Alta FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083015"
+  },
+  {
+    "title": "Rede Globo RBS TV Cruz Alta HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083016"
+  },
+  {
+    "title": "Rede Globo RBS TV Cruz Alta SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083017"
+  },
+  {
+    "title": "Rede Globo RBS TV Erechim FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083018"
+  },
+  {
+    "title": "Rede Globo RBS TV Erechim HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083019"
+  },
+  {
+    "title": "Rede Globo RBS TV Erechim SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083020"
+  },
+  {
+    "title": "Rede Globo RBS TV Passo Fundo FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083021"
+  },
+  {
+    "title": "Rede Globo RBS TV Passo Fundo HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083022"
+  },
+  {
+    "title": "Rede Globo RBS TV Passo Fundo SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083023"
+  },
+  {
+    "title": "Rede Globo RBS TV Pelotas FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083024"
+  },
+  {
+    "title": "Rede Globo RBS TV Pelotas HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083025"
+  },
+  {
+    "title": "Rede Globo RBS TV Pelotas SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083026"
+  },
+  {
+    "title": "Rede Globo RBS TV Porto Alegre FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082883"
+  },
+  {
+    "title": "Rede Globo RBS TV Porto Alegre HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082884"
+  },
+  {
+    "title": "Rede Globo RBS TV Porto Alegre SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082885"
+  },
+  {
+    "title": "Rede Globo RBS TV Rio Grande FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083027"
+  },
+  {
+    "title": "Rede Globo RBS TV Rio Grande HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083028"
+  },
+  {
+    "title": "Rede Globo RBS TV Rio Grande SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083029"
+  },
+  {
+    "title": "Rede Globo RBS TV Santa Cruz do Sul FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083030"
+  },
+  {
+    "title": "Rede Globo RBS TV Santa Cruz do Sul HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083031"
+  },
+  {
+    "title": "Rede Globo RBS TV Santa Cruz do Sul SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083032"
+  },
+  {
+    "title": "Rede Globo RBS TV Santa Maria FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083033"
+  },
+  {
+    "title": "Rede Globo RBS TV Santa Maria HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083034"
+  },
+  {
+    "title": "Rede Globo RBS TV Santa Maria SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083035"
+  },
+  {
+    "title": "Rede Globo RBS TV Santa Rosa FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083036"
+  },
+  {
+    "title": "Rede Globo RBS TV Santa Rosa HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083037"
+  },
+  {
+    "title": "Rede Globo RBS TV Santa Rosa SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083038"
+  },
+  {
+    "title": "Rede Globo RBS TV Uruguaiana FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083039"
+  },
+  {
+    "title": "Rede Globo RBS TV Uruguaiana HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083040"
+  },
+  {
+    "title": "Rede Globo RBS TV Uruguaiana SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083041"
+  },
+  {
+    "title": "Rede Globo Rio de Janeiro FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082886"
+  },
+  {
+    "title": "Rede Globo Rio de Janeiro HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082887"
+  },
+  {
+    "title": "Rede Globo Rio de Janeiro SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082888"
+  },
+  {
+    "title": "Rede Globo RPC Cascavel FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083042"
+  },
+  {
+    "title": "Rede Globo RPC Cascavel HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083043"
+  },
+  {
+    "title": "Rede Globo RPC Cascavel SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083044"
+  },
+  {
+    "title": "Rede Globo RPC Curitiba FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082889"
+  },
+  {
+    "title": "Rede Globo RPC Curitiba HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082890"
+  },
+  {
+    "title": "Rede Globo RPC Curitiba SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082891"
+  },
+  {
+    "title": "Rede Globo RPC Foz do Iguaçu FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083045"
+  },
+  {
+    "title": "Rede Globo RPC Foz do Iguaçu HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083046"
+  },
+  {
+    "title": "Rede Globo RPC Foz do Iguaçu SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083047"
+  },
+  {
+    "title": "Rede Globo RPC Guarapuava FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083048"
+  },
+  {
+    "title": "Rede Globo RPC Guarapuava HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083049"
+  },
+  {
+    "title": "Rede Globo RPC Guarapuava SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083050"
+  },
+  {
+    "title": "Rede Globo RPC Londrina FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083051"
+  },
+  {
+    "title": "Rede Globo RPC Londrina HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083052"
+  },
+  {
+    "title": "Rede Globo RPC Londrina SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083053"
+  },
+  {
+    "title": "Rede Globo RPC Maringá FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083054"
+  },
+  {
+    "title": "Rede Globo RPC Maringá HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083055"
+  },
+  {
+    "title": "Rede Globo RPC Maringá SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083056"
+  },
+  {
+    "title": "Rede Globo RPC Paranavaí FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083057"
+  },
+  {
+    "title": "Rede Globo RPC Paranavaí HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083058"
+  },
+  {
+    "title": "Rede Globo RPC Paranavaí SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083059"
+  },
+  {
+    "title": "Rede Globo RPC Ponta Grossa FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083060"
+  },
+  {
+    "title": "Rede Globo RPC Ponta Grossa HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083061"
+  },
+  {
+    "title": "Rede Globo RPC Ponta Grossa SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083062"
+  },
+  {
+    "title": "Rede Globo São Paulo FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082892"
+  },
+  {
+    "title": "Rede Globo São Paulo HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082893"
+  },
+  {
+    "title": "Rede Globo São Paulo SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082894"
+  },
+  {
+    "title": "Rede Globo TV Alvorada FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083063"
+  },
+  {
+    "title": "Rede Globo TV Alvorada HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083064"
+  },
+  {
+    "title": "Rede Globo TV Alvorada SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083065"
+  },
+  {
+    "title": "Rede Globo TV Anhanguera Anápolis FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083066"
+  },
+  {
+    "title": "Rede Globo TV Anhanguera Anápolis HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083067"
+  },
+  {
+    "title": "Rede Globo TV Anhanguera Anápolis SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083068"
+  },
+  {
+    "title": "Rede Globo TV Anhanguera Araguaína FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083069"
+  },
+  {
+    "title": "Rede Globo TV Anhanguera Araguaína HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083070"
+  },
+  {
+    "title": "Rede Globo TV Anhanguera Araguaína SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083071"
+  },
+  {
+    "title": "Rede Globo TV Anhanguera Catalão FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083072"
+  },
+  {
+    "title": "Rede Globo TV Anhanguera Catalão HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083073"
+  },
+  {
+    "title": "Rede Globo TV Anhanguera Catalão SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083074"
+  },
+  {
+    "title": "Rede Globo TV Anhanguera Goiânia FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082895"
+  },
+  {
+    "title": "Rede Globo TV Anhanguera Goiânia HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082896"
+  },
+  {
+    "title": "Rede Globo TV Anhanguera Goiânia SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082897"
+  },
+  {
+    "title": "Rede Globo TV Anhanguera Gurupi FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083075"
+  },
+  {
+    "title": "Rede Globo TV Anhanguera Gurupi HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083076"
+  },
+  {
+    "title": "Rede Globo TV Anhanguera Gurupi SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083077"
+  },
+  {
+    "title": "Rede Globo TV Anhanguera Itumbiara FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083078"
+  },
+  {
+    "title": "Rede Globo TV Anhanguera Itumbiara HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083079"
+  },
+  {
+    "title": "Rede Globo TV Anhanguera Itumbiara SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083080"
+  },
+  {
+    "title": "Rede Globo TV Anhanguera Jataí FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083081"
+  },
+  {
+    "title": "Rede Globo TV Anhanguera Jataí HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083082"
+  },
+  {
+    "title": "Rede Globo TV Anhanguera Jataí SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083083"
+  },
+  {
+    "title": "Rede Globo TV Anhanguera Luziânia FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083084"
+  },
+  {
+    "title": "Rede Globo TV Anhanguera Luziânia HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083085"
+  },
+  {
+    "title": "Rede Globo TV Anhanguera Luziânia SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083086"
+  },
+  {
+    "title": "Rede Globo TV Anhanguera Palmas FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082898"
+  },
+  {
+    "title": "Rede Globo TV Anhanguera Palmas HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082899"
+  },
+  {
+    "title": "Rede Globo TV Anhanguera Palmas SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082900"
+  },
+  {
+    "title": "Rede Globo TV Anhanguera Porangatu FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083087"
+  },
+  {
+    "title": "Rede Globo TV Anhanguera Porangatu HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083088"
+  },
+  {
+    "title": "Rede Globo TV Anhanguera Porangatu SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083089"
+  },
+  {
+    "title": "Rede Globo TV Anhanguera Rio Verde FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083090"
+  },
+  {
+    "title": "Rede Globo TV Anhanguera Rio Verde HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083091"
+  },
+  {
+    "title": "Rede Globo TV Anhanguera Rio Verde SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083092"
+  },
+  {
+    "title": "Rede Globo TV Asa Branca FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083093"
+  },
+  {
+    "title": "Rede Globo TV Asa Branca HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083094"
+  },
+  {
+    "title": "Rede Globo TV Asa Branca SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083095"
+  },
+  {
+    "title": "Rede Globo TV Bahia FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082901"
+  },
+  {
+    "title": "Rede Globo TV Bahia HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082902"
+  },
+  {
+    "title": "Rede Globo TV Bahia SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082903"
+  },
+  {
+    "title": "Rede Globo TV Cabo Branco FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082904"
+  },
+  {
+    "title": "Rede Globo TV Cabo Branco HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082905"
+  },
+  {
+    "title": "Rede Globo TV Cabo Branco SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082906"
+  },
+  {
+    "title": "Rede Globo TV Centro America FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082907"
+  },
+  {
+    "title": "Rede Globo TV Centro America HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082908"
+  },
+  {
+    "title": "Rede Globo TV Centro America SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082909"
+  },
+  {
+    "title": "Rede Globo TV Centro América Norte FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083096"
+  },
+  {
+    "title": "Rede Globo TV Centro América Norte HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083097"
+  },
+  {
+    "title": "Rede Globo TV Centro América Norte SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083098"
+  },
+  {
+    "title": "Rede Globo TV Centro América Sul FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083099"
+  },
+  {
+    "title": "Rede Globo TV Centro América Sul HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083100"
+  },
+  {
+    "title": "Rede Globo TV Centro América Sul SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083101"
+  },
+  {
+    "title": "Rede Globo TV Centro América Tangará da Serra FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083102"
+  },
+  {
+    "title": "Rede Globo TV Centro América Tangará da Serra HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083103"
+  },
+  {
+    "title": "Rede Globo TV Centro América Tangará da Serra SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083104"
+  },
+  {
+    "title": "Rede Globo TV Clube FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082910"
+  },
+  {
+    "title": "Rede Globo TV Clube HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082911"
+  },
+  {
+    "title": "Rede Globo TV Clube SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082912"
+  },
+  {
+    "title": "Rede Globo TV Diário FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083105"
+  },
+  {
+    "title": "Rede Globo TV Diário HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083106"
+  },
+  {
+    "title": "Rede Globo TV Diário SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083107"
+  },
+  {
+    "title": "Rede Globo TV Fronteira FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083108"
+  },
+  {
+    "title": "Rede Globo TV Fronteira HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083109"
+  },
+  {
+    "title": "Rede Globo TV Fronteira SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083110"
+  },
+  {
+    "title": "Rede Globo TV Gazeta Alagoas FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082913"
+  },
+  {
+    "title": "Rede Globo TV Gazeta Alagoas HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082914"
+  },
+  {
+    "title": "Rede Globo TV Gazeta Alagoas SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082915"
+  },
+  {
+    "title": "Rede Globo TV Gazeta Espirito Santo FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082916"
+  },
+  {
+    "title": "Rede Globo TV Gazeta Espirito Santo HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082917"
+  },
+  {
+    "title": "Rede Globo TV Gazeta Espirito Santo SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082918"
+  },
+  {
+    "title": "Rede Globo TV Gazeta Noroeste FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083111"
+  },
+  {
+    "title": "Rede Globo TV Gazeta Noroeste HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083112"
+  },
+  {
+    "title": "Rede Globo TV Gazeta Noroeste SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083113"
+  },
+  {
+    "title": "Rede Globo TV Gazeta Norte FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083114"
+  },
+  {
+    "title": "Rede Globo TV Gazeta Norte HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083115"
+  },
+  {
+    "title": "Rede Globo TV Gazeta Norte SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083116"
+  },
+  {
+    "title": "Rede Globo TV Gazeta Sul FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083117"
+  },
+  {
+    "title": "Rede Globo TV Gazeta Sul HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083118"
+  },
+  {
+    "title": "Rede Globo TV Gazeta Sul SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083119"
+  },
+  {
+    "title": "Rede Globo TV Grande Rio FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083120"
+  },
+  {
+    "title": "Rede Globo TV Grande Rio HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083121"
+  },
+  {
+    "title": "Rede Globo TV Grande Rio SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083122"
+  },
+  {
+    "title": "Rede Globo TV Integração Araxá FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083123"
+  },
+  {
+    "title": "Rede Globo TV Integração Araxá HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083124"
+  },
+  {
+    "title": "Rede Globo TV Integração Araxá SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083125"
+  },
+  {
+    "title": "Rede Globo TV Integração Juiz de Fora FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083126"
+  },
+  {
+    "title": "Rede Globo TV Integração Juiz de Fora HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083127"
+  },
+  {
+    "title": "Rede Globo TV Integração Juiz de Fora SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083128"
+  },
+  {
+    "title": "Rede Globo TV Integração Uberaba FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083129"
+  },
+  {
+    "title": "Rede Globo TV Integração Uberaba HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083130"
+  },
+  {
+    "title": "Rede Globo TV Integração Uberaba SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083131"
+  },
+  {
+    "title": "Rede Globo TV Integração Uberlândia FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083132"
+  },
+  {
+    "title": "Rede Globo TV Integração Uberlândia HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083133"
+  },
+  {
+    "title": "Rede Globo TV Integração Uberlândia SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083134"
+  },
+  {
+    "title": "Rede Globo TV Liberal Altamira FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083135"
+  },
+  {
+    "title": "Rede Globo TV Liberal Altamira HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083136"
+  },
+  {
+    "title": "Rede Globo TV Liberal Altamira SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083137"
+  },
+  {
+    "title": "Rede Globo TV Liberal Castanhal FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083138"
+  },
+  {
+    "title": "Rede Globo TV Liberal Castanhal HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083139"
+  },
+  {
+    "title": "Rede Globo TV Liberal Castanhal SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083140"
+  },
+  {
+    "title": "Rede Globo TV Liberal FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082919"
+  },
+  {
+    "title": "Rede Globo TV Liberal HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082920"
+  },
+  {
+    "title": "Rede Globo TV Liberal Marabá FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083141"
+  },
+  {
+    "title": "Rede Globo TV Liberal Marabá HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083142"
+  },
+  {
+    "title": "Rede Globo TV Liberal Marabá SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083143"
+  },
+  {
+    "title": "Rede Globo TV Liberal Paragominas FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083144"
+  },
+  {
+    "title": "Rede Globo TV Liberal Paragominas HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083145"
+  },
+  {
+    "title": "Rede Globo TV Liberal Paragominas SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083146"
+  },
+  {
+    "title": "Rede Globo TV Liberal Parauapebas FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083147"
+  },
+  {
+    "title": "Rede Globo TV Liberal Parauapebas HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083148"
+  },
+  {
+    "title": "Rede Globo TV Liberal Parauapebas SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083149"
+  },
+  {
+    "title": "Rede Globo TV Liberal Redenção FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083150"
+  },
+  {
+    "title": "Rede Globo TV Liberal Redenção HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083151"
+  },
+  {
+    "title": "Rede Globo TV Liberal Redenção SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083152"
+  },
+  {
+    "title": "Rede Globo TV Liberal SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082921"
+  },
+  {
+    "title": "Rede Globo TV Mirante Balsas FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083153"
+  },
+  {
+    "title": "Rede Globo TV Mirante Balsas HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083154"
+  },
+  {
+    "title": "Rede Globo TV Mirante Balsas SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083155"
+  },
+  {
+    "title": "Rede Globo TV Mirante Cocais FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083156"
+  },
+  {
+    "title": "Rede Globo TV Mirante Cocais HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083157"
+  },
+  {
+    "title": "Rede Globo TV Mirante Cocais SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083158"
+  },
+  {
+    "title": "Rede Globo TV Mirante FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082922"
+  },
+  {
+    "title": "Rede Globo TV Mirante HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082923"
+  },
+  {
+    "title": "Rede Globo TV Mirante Imperatriz FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083159"
+  },
+  {
+    "title": "Rede Globo TV Mirante Imperatriz HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083160"
+  },
+  {
+    "title": "Rede Globo TV Mirante Imperatriz SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083161"
+  },
+  {
+    "title": "Rede Globo TV Mirante SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082924"
+  },
+  {
+    "title": "Rede Globo TV Morena Corumbá FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083162"
+  },
+  {
+    "title": "Rede Globo TV Morena Corumbá HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083163"
+  },
+  {
+    "title": "Rede Globo TV Morena Corumbá SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083164"
+  },
+  {
+    "title": "Rede Globo TV Morena FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082925"
+  },
+  {
+    "title": "Rede Globo TV Morena HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082926"
+  },
+  {
+    "title": "Rede Globo TV Morena Ponta Porã FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083165"
+  },
+  {
+    "title": "Rede Globo TV Morena Ponta Porã HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083166"
+  },
+  {
+    "title": "Rede Globo TV Morena Ponta Porã SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083167"
+  },
+  {
+    "title": "Rede Globo TV Morena SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082927"
+  },
+  {
+    "title": "Rede Globo TV Oeste FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083168"
+  },
+  {
+    "title": "Rede Globo TV Oeste HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083169"
+  },
+  {
+    "title": "Rede Globo TV Oeste SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083170"
+  },
+  {
+    "title": "Rede Globo TV Paraíba FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083171"
+  },
+  {
+    "title": "Rede Globo TV Paraíba HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083172"
+  },
+  {
+    "title": "Rede Globo TV Paraíba SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083173"
+  },
+  {
+    "title": "Rede Globo TV Pernambuco FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082928"
+  },
+  {
+    "title": "Rede Globo TV Pernambuco HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082929"
+  },
+  {
+    "title": "Rede Globo TV Pernambuco SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082930"
+  },
+  {
+    "title": "Rede Globo TV Rio Sul FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083174"
+  },
+  {
+    "title": "Rede Globo TV Rio Sul HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083175"
+  },
+  {
+    "title": "Rede Globo TV Rio Sul SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083176"
+  },
+  {
+    "title": "Rede Globo TV Santa Cruz FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083177"
+  },
+  {
+    "title": "Rede Globo TV Santa Cruz HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083178"
+  },
+  {
+    "title": "Rede Globo TV Santa Cruz SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083179"
+  },
+  {
+    "title": "Rede Globo TV Sergipe FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082931"
+  },
+  {
+    "title": "Rede Globo TV Sergipe HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082932"
+  },
+  {
+    "title": "Rede Globo TV Sergipe SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082933"
+  },
+  {
+    "title": "Rede Globo TV Subaé FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083180"
+  },
+  {
+    "title": "Rede Globo TV Subaé HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083181"
+  },
+  {
+    "title": "Rede Globo TV Subaé SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083182"
+  },
+  {
+    "title": "Rede Globo TV Sudoeste FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083183"
+  },
+  {
+    "title": "Rede Globo TV Sudoeste HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083184"
+  },
+  {
+    "title": "Rede Globo TV Sudoeste SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083185"
+  },
+  {
+    "title": "Rede Globo TV São Francisco FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083186"
+  },
+  {
+    "title": "Rede Globo TV São Francisco HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083187"
+  },
+  {
+    "title": "Rede Globo TV São Francisco SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083188"
+  },
+  {
+    "title": "Rede Globo TV Tapajós FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083189"
+  },
+  {
+    "title": "Rede Globo TV Tapajós HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083190"
+  },
+  {
+    "title": "Rede Globo TV Tapajós SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083191"
+  },
+  {
+    "title": "Rede Globo TV TEM Bauru FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083192"
+  },
+  {
+    "title": "Rede Globo TV TEM Bauru HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083193"
+  },
+  {
+    "title": "Rede Globo TV TEM Bauru SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083194"
+  },
+  {
+    "title": "Rede Globo TV TEM Itapetininga FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083195"
+  },
+  {
+    "title": "Rede Globo TV TEM Itapetininga HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083196"
+  },
+  {
+    "title": "Rede Globo TV TEM Itapetininga SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083197"
+  },
+  {
+    "title": "Rede Globo TV TEM Sorocaba FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083198"
+  },
+  {
+    "title": "Rede Globo TV TEM Sorocaba HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083199"
+  },
+  {
+    "title": "Rede Globo TV TEM Sorocaba SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083200"
+  },
+  {
+    "title": "Rede Globo TV TEM São José do Rio Preto FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083201"
+  },
+  {
+    "title": "Rede Globo TV TEM São José do Rio Preto HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083202"
+  },
+  {
+    "title": "Rede Globo TV TEM São José do Rio Preto SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083203"
+  },
+  {
+    "title": "Rede Globo TV Tribuna FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083204"
+  },
+  {
+    "title": "Rede Globo TV Tribuna HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083205"
+  },
+  {
+    "title": "Rede Globo TV Tribuna SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083206"
+  },
+  {
+    "title": "Rede Globo TV Vanguarda São José dos Campos FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083207"
+  },
+  {
+    "title": "Rede Globo TV Vanguarda São José dos Campos HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083208"
+  },
+  {
+    "title": "Rede Globo TV Vanguarda São José dos Campos SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083209"
+  },
+  {
+    "title": "Rede Globo TV Vanguarda Taubaté FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083210"
+  },
+  {
+    "title": "Rede Globo TV Vanguarda Taubaté HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083211"
+  },
+  {
+    "title": "Rede Globo TV Vanguarda Taubaté SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083212"
+  },
+  {
+    "title": "Rede Globo TV Verdes Mares Cariri FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083213"
+  },
+  {
+    "title": "Rede Globo TV Verdes Mares Cariri HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083214"
+  },
+  {
+    "title": "Rede Globo TV Verdes Mares Cariri SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083215"
+  },
+  {
+    "title": "Rede Globo TV Verdes Mares FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082934"
+  },
+  {
+    "title": "Rede Globo TV Verdes Mares HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082935"
+  },
+  {
+    "title": "Rede Globo TV Verdes Mares SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082936"
+  },
+  {
+    "title": "Rede VIDA",
+    "url": "http://67.220.70.162:8080/12345678/12345678/347633"
+  },
+  {
+    "title": "RedeTV 4K",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083372"
+  },
+  {
+    "title": "RedeTV FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239556"
+  },
+  {
+    "title": "RedeTV HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239557"
+  },
+  {
+    "title": "RedeTV Pampa RS HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239580"
+  },
+  {
+    "title": "RedeTV SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239558"
+  },
+  {
+    "title": "Rede Globo Brasília FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082937"
+  },
+  {
+    "title": "Rede Globo Brasília HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082938"
+  },
+  {
+    "title": "Rede Globo Brasília SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1082939"
+  },
+  {
+    "title": "RIT TV HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240302"
+  },
+  {
+    "title": "Rádio - Band 96.1 FM",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1443279"
+  },
+  {
+    "title": "Rádio - Bandeirantes 90.9 FM  / SP",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1447107"
+  },
+  {
+    "title": "Rádio - Gazeta 88.1 FM (São Paulo / SP)",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1447115"
+  },
+  {
+    "title": "SBT 4K",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083373"
+  },
+  {
+    "title": "SBT AM HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239560"
+  },
+  {
+    "title": "SBT BA HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239561"
+  },
+  {
+    "title": "SBT BSB",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239562"
+  },
+  {
+    "title": "SBT GO HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239564"
+  },
+  {
+    "title": "SBT MT HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239566"
+  },
+  {
+    "title": "SBT PARANA",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239567"
+  },
+  {
+    "title": "SBT PARANA FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239568"
+  },
+  {
+    "title": "SBT PARANA HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239569"
+  },
+  {
+    "title": "SBT PI FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239570"
+  },
+  {
+    "title": "SBT RJ 2 HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1432029"
+  },
+  {
+    "title": "SBT RJ FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239571"
+  },
+  {
+    "title": "SBT RJ HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239572"
+  },
+  {
+    "title": "SBT RJ SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239574"
+  },
+  {
+    "title": "SBT RS HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239573"
+  },
+  {
+    "title": "SBT SP FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239575"
+  },
+  {
+    "title": "SBT SP HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239576"
+  },
+  {
+    "title": "SBT SP SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239577"
+  },
+  {
+    "title": "SONY FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239497"
+  },
+  {
+    "title": "Sony HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239498"
+  },
+  {
+    "title": "Sony SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239499"
+  },
+  {
+    "title": "Space FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239500"
+  },
+  {
+    "title": "Space HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239501"
+  },
+  {
+    "title": "Space SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239502"
+  },
+  {
+    "title": "SporTV 2 FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239680"
+  },
+  {
+    "title": "SporTV 2 HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239681"
+  },
+  {
+    "title": "SporTV 2 SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239682"
+  },
+  {
+    "title": "SporTV 3 FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239683"
+  },
+  {
+    "title": "SporTV 3 HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239684"
+  },
+  {
+    "title": "SporTV 3 SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239685"
+  },
+  {
+    "title": "SporTV 4K",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083374"
+  },
+  {
+    "title": "SporTV FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239689"
+  },
+  {
+    "title": "SporTV HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239690"
+  },
+  {
+    "title": "SporTV SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239692"
+  },
+  {
+    "title": "Studio Universal FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239509"
+  },
+  {
+    "title": "Studio Universal HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239510"
+  },
+  {
+    "title": "Studio Universal SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239511"
+  },
+  {
+    "title": "TeleCine Action 4K",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083376"
+  },
+  {
+    "title": "Telecine Action FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240341"
+  },
+  {
+    "title": "Telecine Action HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240342"
+  },
+  {
+    "title": "Telecine Action SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240343"
+  },
+  {
+    "title": "Telecine Cult FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240344"
+  },
+  {
+    "title": "Telecine Cult HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240345"
+  },
+  {
+    "title": "Telecine Cult SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240346"
+  },
+  {
+    "title": "Telecine Fun FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240347"
+  },
+  {
+    "title": "Telecine Fun HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240348"
+  },
+  {
+    "title": "Telecine Fun SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240349"
+  },
+  {
+    "title": "Telecine Pipoca 4K",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083377"
+  },
+  {
+    "title": "Telecine Pipoca FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240350"
+  },
+  {
+    "title": "Telecine Pipoca HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240351"
+  },
+  {
+    "title": "Telecine Pipoca SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240352"
+  },
+  {
+    "title": "Telecine Premium 4K",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083378"
+  },
+  {
+    "title": "Telecine Premium FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240353"
+  },
+  {
+    "title": "Telecine Premium HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240354"
+  },
+  {
+    "title": "Telecine Premium SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240355"
+  },
+  {
+    "title": "Telecine Touch FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240356"
+  },
+  {
+    "title": "Telecine Touch HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240357"
+  },
+  {
+    "title": "Telecine Touch SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240358"
+  },
+  {
+    "title": "Terra Viva HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240306"
+  },
+  {
+    "title": "TLC FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239623"
+  },
+  {
+    "title": "TLC HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239624"
+  },
+  {
+    "title": "TLC SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239625"
+  },
+  {
+    "title": "TNT 4K",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083379"
+  },
+  {
+    "title": "TNT FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239521"
+  },
+  {
+    "title": "TNT HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239522"
+  },
+  {
+    "title": "TNT Novelas FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083777"
+  },
+  {
+    "title": "TNT Novelas HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083779"
+  },
+  {
+    "title": "TNT Novelas SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083780"
+  },
+  {
+    "title": "TNT SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239523"
+  },
+  {
+    "title": "TNT Series 4K",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083380"
+  },
+  {
+    "title": "TNT Séries FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239524"
+  },
+  {
+    "title": "TNT Séries HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239525"
+  },
+  {
+    "title": "TNT Séries SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239526"
+  },
+  {
+    "title": "TV Aparecida HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/758768"
+  },
+  {
+    "title": "TV Camara FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240313"
+  },
+  {
+    "title": "TV Camara HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240314"
+  },
+  {
+    "title": "TV Gazeta HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239579"
+  },
+  {
+    "title": "TV Justica",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240317"
+  },
+  {
+    "title": "TV Novo Tempo FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/758757"
+  },
+  {
+    "title": "TV Novo Tempo HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/758761"
+  },
+  {
+    "title": "Universal Channel 4K",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083381"
+  },
+  {
+    "title": "Universal TV FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239529"
+  },
+  {
+    "title": "Universal TV HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239530"
+  },
+  {
+    "title": "Universal TV SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239531"
+  },
+  {
+    "title": "Viva 4K",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083382"
+  },
+  {
+    "title": "Viva FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240319"
+  },
+  {
+    "title": "Viva HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240320"
+  },
+  {
+    "title": "Viva SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/240321"
+  },
+  {
+    "title": "Warner Channel FHD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239532"
+  },
+  {
+    "title": "Warner Channel HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239533"
+  },
+  {
+    "title": "Warner Channel SD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/239534"
+  },
+  {
+    "title": "XY Max TV HD",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1487826"
+  },
+  {
+    "title": "[24H] Futurama",
+    "url": "http://67.220.70.162:8080/12345678/12345678/1083485"
+  },
+  {
+    "title": "PT AMC HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/179171"
+  },
+  {
+    "title": "PT AMC 4K",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/179172"
+  },
+  {
+    "title": "PT AXN HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/179173"
+  },
+  {
+    "title": "PT AXN 4K",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/179174"
+  },
+  {
+    "title": "PT AXN WHITE HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/179175"
+  },
+  {
+    "title": "PT AXN WHITE 4K",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/179176"
+  },
+  {
+    "title": "PT AXN MOVIES HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/179177"
+  },
+  {
+    "title": "PT FOX HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/179178"
+  },
+  {
+    "title": "PT FOX MOVIES 4K",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/179181"
+  },
+  {
+    "title": "PT FOX LIFE HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/179182"
+  },
+  {
+    "title": "PT FOX LIFE 4K",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/179183"
+  },
+  {
+    "title": "PT FOX CRIME HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/179184"
+  },
+  {
+    "title": "PT FOX CRIME 4K",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/179185"
+  },
+  {
+    "title": "PT FOX COMEDY 4K",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/179187"
+  },
+  {
+    "title": "PT SYFY HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/179190"
+  },
+  {
+    "title": "PT SYFY 4K",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/179191"
+  },
+  {
+    "title": "PT AMC Break HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/179192"
+  },
+  {
+    "title": "TNT HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169475"
+  },
+  {
+    "title": "TNT Series HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169476"
+  },
+  {
+    "title": "AMC HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169382"
+  },
+  {
+    "title": "AXN HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169385"
+  },
+  {
+    "title": "Cinemax HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169392"
+  },
+  {
+    "title": "FX HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169417"
+  },
+  {
+    "title": "HBO 2 HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169435"
+  },
+  {
+    "title": "HBO Family HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169436"
+  },
+  {
+    "title": "HBO HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169437"
+  },
+  {
+    "title": "HBO Plus HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169438"
+  },
+  {
+    "title": "HBO Signature HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169439"
+  },
+  {
+    "title": "HBO Extreme HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169441"
+  },
+  {
+    "title": "SyFy HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169471"
+  },
+  {
+    "title": "Telecine Action HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169473"
+  },
+  {
+    "title": "Telecine Cult HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169474"
+  },
+  {
+    "title": "Premiere 1 SD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169453"
+  },
+  {
+    "title": "Premiere 2 HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169454"
+  },
+  {
+    "title": "Premiere 3 HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169455"
+  },
+  {
+    "title": "Premiere 4 HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169456"
+  },
+  {
+    "title": "Premiere 6 HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169457"
+  },
+  {
+    "title": "Premiere Clubes HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169458"
+  },
+  {
+    "title": "Arte 1 HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169384"
+  },
+  {
+    "title": "Fox Life HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169497"
+  },
+  {
+    "title": "Animal Planet HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169383"
+  },
+  {
+    "title": "Discovery Channel HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169396"
+  },
+  {
+    "title": "Discovery Home & Health HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169398"
+  },
+  {
+    "title": "Discovery Kids HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169399"
+  },
+  {
+    "title": "Discovery Science HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169400"
+  },
+  {
+    "title": "Discovery Theater HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169401"
+  },
+  {
+    "title": "Discovery Turbo HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169402"
+  },
+  {
+    "title": "Discovery World HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169403"
+  },
+  {
+    "title": "Disney Channel HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169404"
+  },
+  {
+    "title": "Disney Junior HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169405"
+  },
+  {
+    "title": "Nat Geo Kids HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169446"
+  },
+  {
+    "title": "Nat Geo HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169448"
+  },
+  {
+    "title": "History HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169491"
+  },
+  {
+    "title": "H2 HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169434"
+  },
+  {
+    "title": "Globo Anhanguera Goiania",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169418"
+  },
+  {
+    "title": "Globo Brasilia",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169419"
+  },
+  {
+    "title": "Globo EPTV Campinas HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169420"
+  },
+  {
+    "title": "Globo EPTV Sao Carlos SD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169421"
+  },
+  {
+    "title": "Globo Minas HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169422"
+  },
+  {
+    "title": "Globo News HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169423"
+  },
+  {
+    "title": "Globo Ribeirao Preto",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169425"
+  },
+  {
+    "title": "Globo RPC TV SD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169427"
+  },
+  {
+    "title": "Globo SP HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169429"
+  },
+  {
+    "title": "Globo TV Tem Sorocaba",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169430"
+  },
+  {
+    "title": "Globo TV Tribuna Santos",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169431"
+  },
+  {
+    "title": "Record News HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169460"
+  },
+  {
+    "title": "Record Nordeste HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169461"
+  },
+  {
+    "title": "Record RJ",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169462"
+  },
+  {
+    "title": "Record SP HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169463"
+  },
+  {
+    "title": "Globo INTER TV Cabugi RN SD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169489"
+  },
+  {
+    "title": "Nick Jr. HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169449"
+  },
+  {
+    "title": "Nickelodeon HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169450"
+  },
+  {
+    "title": "Band Campinas",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169386"
+  },
+  {
+    "title": "Band SP HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169387"
+  },
+  {
+    "title": "Band News HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169388"
+  },
+  {
+    "title": "Boomerang HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169390"
+  },
+  {
+    "title": "Cartoon Network HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169391"
+  },
+  {
+    "title": "Combate HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169393"
+  },
+  {
+    "title": "Curta! HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169395"
+  },
+  {
+    "title": "Disney XD HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169406"
+  },
+  {
+    "title": "E! Entertainment HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169407"
+  },
+  {
+    "title": "ESPN 2 HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169408"
+  },
+  {
+    "title": "ESPN HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169410"
+  },
+  {
+    "title": "Fox Sports 2 HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169414"
+  },
+  {
+    "title": "Futura HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169416"
+  },
+  {
+    "title": "GNT HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169433"
+  },
+  {
+    "title": "MTV HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169443"
+  },
+  {
+    "title": "Multishow HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169444"
+  },
+  {
+    "title": "Music Box Brazil",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169445"
+  },
+  {
+    "title": "Novo Tempo",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169451"
+  },
+  {
+    "title": "Sony HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169465"
+  },
+  {
+    "title": "Space HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169466"
+  },
+  {
+    "title": "SporTV 2 HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169467"
+  },
+  {
+    "title": "SporTV 3 HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169468"
+  },
+  {
+    "title": "SporTV HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169469"
+  },
+  {
+    "title": "Studio Universal HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169470"
+  },
+  {
+    "title": "TV Aparecida SD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169478"
+  },
+  {
+    "title": "Universal Channel HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169480"
+  },
+  {
+    "title": "VH1 HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169481"
+  },
+  {
+    "title": "Viva HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169482"
+  },
+  {
+    "title": "Warner Channel HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169483"
+  },
+  {
+    "title": "Globo RPC Curitiba HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169486"
+  },
+  {
+    "title": "SBT Brasilia HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169487"
+  },
+  {
+    "title": "SBT SP",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169488"
+  },
+  {
+    "title": "SBT RJ HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169490"
+  },
+  {
+    "title": "ESPN Extra HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169493"
+  },
+  {
+    "title": "Band Sports HD",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169495"
+  },
+  {
+    "title": "Discovery TLC",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169496"
+  },
+  {
+    "title": "BAND",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169501"
+  },
+  {
+    "title": "Canal Sony",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169502"
+  },
+  {
+    "title": "CNN ASIL",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169503"
+  },
+  {
+    "title": "RPC TV CURITIBA",
+    "url": "http://bouygues-cdn.r1v.us:8080/crespofrance/use66jb4/169504"
   }
-}
+];
 
-function renderList(filter="") {
-  channelsEl.innerHTML = "";
-  const f = filter.toLowerCase();
-  channels.filter(c => c.title.toLowerCase().includes(f)).forEach((c,i) => {
-    const div = document.createElement("div");
-    div.className = "channel";
-    div.dataset.index = i;
-    div.innerHTML = `
-      <div class="thumb">${c.logo ? `<img src="${c.logo}" onerror="this.remove()">`:"TV"}</div>
-      <div class="meta">
-        <div class="title">${c.title}</div>
-        <div class="group">${c.group}</div>
-      </div>`;
-    div.onclick = () => selectChannel(i, div);
-    channelsEl.appendChild(div);
-  });
-}
+        // Elementos DOM
+        const channelsList = document.getElementById('channels-list');
+        const videoPlayer = document.getElementById('video-player');
+        const loadingOverlay = document.getElementById('loading-overlay');
+        const loadingText = document.getElementById('loading-text');
+        const errorOverlay = document.getElementById('error-overlay');
+        const errorText = document.getElementById('error-text');
+        const retryBtn = document.getElementById('retry-btn');
+        const currentChannelName = document.getElementById('current-channel-name');
+        const currentChannelGroup = document.getElementById('current-channel-group');
+        const statusText = document.getElementById('status-text');
+        const qualityText = document.getElementById('quality-text');
+        const searchInput = document.getElementById('search-input');
+        const fullscreenBtn = document.getElementById('fullscreen-btn');
+        const volumeBtn = document.getElementById('volume-btn');
 
-function selectChannel(i, el) {
-  document.querySelectorAll(".channel").forEach(c => c.classList.remove("selected"));
-  el.classList.add("selected");
-  current = channels[i];
-  attempt = 0;
-  stopReconnect();
-  playChannel(current.url);
-  requestFullscreenSafe(video.parentNode);
-}
+        // Variáveis globais
+        let hls = null;
+        let currentChannel = null;
+        let reconnectionAttempts = 0;
+        let reconnectionTimer = null;
 
-function playChannel(url) {
-  cleanup();
-  const ext = url.split("?")[0].split(".").pop().toLowerCase();
-  showAttempt("Conectando...");
+        // Função para corrigir URLs HTTP para HTTPS usando proxy CORS
+        function fixURL(url) {
+            // Se já for HTTPS, retorna diretamente
+            if (url.startsWith('https://')) {
+                return url;
+            }
+            
+            // Se for HTTP, usa um proxy CORS
+            if (url.startsWith('http://')) {
+                // Usar um proxy CORS - várias opções para tentar
+                const proxies = [
+                    `https://corsproxy.io/?${encodeURIComponent(url)}`,
+                    `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(url)}`,
+                    `https://cors-anywhere.herokuapp.com/${url}`
+                ];
+                
+                // Retorna um proxy aleatório para distribuir a carga
+                return proxies[Math.floor(Math.random() * proxies.length)];
+            }
+            
+            return url;
+        }
 
-  if (["mp3","aac"].includes(ext)) {
-    video.style.display="none";
-    audio.style.display="block";
-    audio.src = url;
-    tryPlay(audio);
-    audio.onended = startReconnect;
-    audio.onerror = startReconnect;
-    audio.onstalled = startReconnect;
-    audio.onplaying = hideAttempt;
-  }
-  else {
-    video.style.display="block";
-    audio.style.display="none";
+        // Inicializar a lista de canais
+        function initChannelsList() {
+            channelsList.innerHTML = '';
+            
+            if (channels.length === 0) {
+                channelsList.innerHTML = '<div class="empty-state">Nenhum canal disponível</div>';
+                return;
+            }
+            
+            channels.forEach((channel, index) => {
+                const channelElement = document.createElement('div');
+                channelElement.className = 'channel';
+                channelElement.dataset.index = index;
+                channelElement.innerHTML = `
+                    <div class="channel-thumb">${channel.logo || '📺'}</div>
+                    <div class="channel-info">
+                        <div class="channel-title">${channel.title}</div>
+                        <div class="channel-group">${channel.group || 'Geral'}</div>
+                    </div>
+                `;
+                
+                channelElement.addEventListener('click', () => {
+                    selectChannel(index);
+                });
+                
+                channelsList.appendChild(channelElement);
+            });
+        }
 
-    if (ext === "m3u8") {
-      hls = new Hls();
-      hls.loadSource(url);
-      hls.attachMedia(video);
-      hls.on(Hls.Events.MANIFEST_PARSED, ()=>tryPlay(video));
-      hls.on(Hls.Events.ERROR, (evt,data)=>{ if(data.fatal) startReconnect(); });
-    }
-    else if (ext === "mpd") {
-      dash = dashjs.MediaPlayer().create();
-      dash.initialize(video, url, true);
-      video.onplaying = hideAttempt;
-      video.onerror = startReconnect;
-    }
-    else {
-      video.src = url;
-      tryPlay(video);
-    }
+        // Selecionar um canal
+        function selectChannel(index) {
+            // Remover seleção anterior
+            document.querySelectorAll('.channel').forEach(channel => {
+                channel.classList.remove('selected');
+            });
+            
+            // Adicionar seleção atual
+            const channelElements = document.querySelectorAll('.channel');
+            if (channelElements[index]) {
+                channelElements[index].classList.add('selected');
+            }
+            
+            const channel = channels[index];
+            currentChannel = channel;
+            
+            // Atualizar informações do canal
+            currentChannelName.textContent = channel.title;
+            currentChannelGroup.textContent = channel.group || 'Geral';
+            statusText.textContent = 'Conectando...';
+            
+            // Reproduzir o canal
+            playChannel(channel.url, index);
+        }
 
-    video.onended = startReconnect;
-    video.onerror = startReconnect;
-    video.onstalled = startReconnect;
-  }
-}
+        // Reproduzir o canal
+        function playChannel(url, index) {
+            // Limpar instâncias anteriores
+            if (hls) {
+                hls.destroy();
+                hls = null;
+            }
+            
+            // Mostrar overlay de carregamento
+            showLoading();
+            
+            // Corrigir a URL para evitar mixed content
+            const fixedURL = fixURL(url);
+            console.log('Tentando reproduzir:', fixedURL);
+            
+            // Verificar se é HLS
+            if (fixedURL.includes('.m3u8') || fixedURL.includes('m3u8')) {
+                if (Hls.isSupported()) {
+                    hls = new Hls({
+                        maxBufferLength: 30,
+                        maxMaxBufferLength: 60,
+                        enableWorker: true,
+                        debug: false
+                    });
+                    
+                    hls.loadSource(fixedURL);
+                    hls.attachMedia(videoPlayer);
+                    
+                    hls.on(Hls.Events.MANIFEST_PARSED, () => {
+                        videoPlayer.play()
+                            .then(() => {
+                                hideLoading();
+                                statusText.textContent = 'Reproduzindo';
+                                reconnectionAttempts = 0;
+                                updateChannelStatus('online', index);
+                            })
+                            .catch(error => {
+                                console.error('Erro ao reproduzir:', error);
+                                showError('Erro ao iniciar a reprodução: ' + error.message);
+                                updateChannelStatus('error', index);
+                            });
+                    });
+                    
+                    hls.on(Hls.Events.ERROR, (event, data) => {
+                        console.error('HLS error:', data);
+                        if (data.fatal) {
+                            switch (data.type) {
+                                case Hls.ErrorTypes.NETWORK_ERROR:
+                                    showError('Erro de rede. Tentando reconectar...');
+                                    updateChannelStatus('error', index);
+                                    setTimeout(() => playChannel(url, index), 3000);
+                                    break;
+                                case Hls.ErrorTypes.MEDIA_ERROR:
+                                    showError('Erro de mídia. Tentando recuperar...');
+                                    updateChannelStatus('error', index);
+                                    hls.recoverMediaError();
+                                    break;
+                                default:
+                                    showError('Erro irreparável. Tente outro canal.');
+                                    updateChannelStatus('error', index);
+                                    break;
+                            }
+                        }
+                    });
+                } else if (videoPlayer.canPlayType('application/vnd.apple.mpegurl')) {
+                    // Suporte nativo para HLS (Safari)
+                    videoPlayer.src = fixedURL;
+                    videoPlayer.play()
+                        .then(() => {
+                            hideLoading();
+                            statusText.textContent = 'Reproduzindo';
+                            reconnectionAttempts = 0;
+                            updateChannelStatus('online', index);
+                        })
+                        .catch(error => {
+                            console.error('Erro ao reproduzir:', error);
+                            showError('Erro ao iniciar a reprodução: ' + error.message);
+                            updateChannelStatus('error', index);
+                        });
+                } else {
+                    showError('Seu navegador não suporta reprodução de vídeo HLS.');
+                    updateChannelStatus('error', index);
+                }
+            } else {
+                // Para outros formatos (MP4, etc)
+                videoPlayer.src = fixedURL;
+                videoPlayer.play()
+                    .then(() => {
+                        hideLoading();
+                        statusText.textContent = 'Reproduzindo';
+                        reconnectionAttempts = 0;
+                        updateChannelStatus('online', index);
+                    })
+                    .catch(error => {
+                        console.error('Erro ao reproduzir:', error);
+                        showError('Erro ao iniciar a reprodução: ' + error.message);
+                        updateChannelStatus('error', index);
+                    });
+            }
+            
+            // Event listeners para o player de vídeo
+            const errorHandler = (e) => {
+                console.error('Erro no player de vídeo:', e);
+                showError('Erro no player de vídeo. Tente outro canal.');
+                updateChannelStatus('error', index);
+            };
+            
+            // Remover event listeners anteriores para evitar duplicação
+            videoPlayer.removeEventListener('error', errorHandler);
+            videoPlayer.addEventListener('error', errorHandler);
+            
+            videoPlayer.addEventListener('waiting', () => {
+                statusText.textContent = 'Buffering...';
+            });
+            
+            videoPlayer.addEventListener('playing', () => {
+                statusText.textContent = 'Reproduzindo';
+                updateChannelStatus('online', index);
+            });
+        }
 
-function tryPlay(el) {
-  el.play().then(hideAttempt).catch(startReconnect);
-}
+        // Atualizar status do canal na lista
+        function updateChannelStatus(status, index) {
+            const channelElements = document.querySelectorAll('.channel');
+            if (channelElements[index]) {
+                const channelElement = channelElements[index];
+                channelElement.classList.remove('error');
+                
+                if (status === 'error') {
+                    channelElement.classList.add('error');
+                }
+            }
+        }
 
-function cleanup() {
-  if (hls) { hls.destroy(); hls=null; }
-  if (dash) { dash.reset(); dash=null; }
-  video.pause(); video.removeAttribute("src"); video.load();
-  audio.pause(); audio.removeAttribute("src"); audio.load();
-}
+        // Mostrar overlay de carregamento
+        function showLoading() {
+            loadingOverlay.style.display = 'flex';
+            errorOverlay.style.display = 'none';
+            loadingText.textContent = 'Conectando ao canal...';
+        }
 
-function startReconnect() {
-  if (!current) return;
-  if (reconnecting) return;
-  reconnecting = true;
-  scheduleReconnect();
-}
+        // Ocultar overlay de carregamento
+        function hideLoading() {
+            loadingOverlay.style.display = 'none';
+        }
 
-function scheduleReconnect() {
-  if (!current) return;
-  attempt++;
-  const delay = Math.min(60000, Math.pow(2, Math.min(attempt,10)) * 1000);
-  showAttempt(`Tentativa ${attempt} em ${delay/1000}s...`);
-  timer = setTimeout(() => {
-    reconnecting = false;
-    playChannel(current.url);
-  }, delay);
-}
+        // Mostrar overlay de erro
+        function showError(message) {
+            errorText.textContent = message;
+            loadingOverlay.style.display = 'none';
+            errorOverlay.style.display = 'flex';
+            statusText.textContent = 'Erro';
+        }
 
-function stopReconnect() {
-  reconnecting = false;
-  if (timer) clearTimeout(timer);
-  hideAttempt();
-}
+        // Buscar canais
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.toLowerCase();
+            document.querySelectorAll('.channel').forEach((channel) => {
+                const titleElement = channel.querySelector('.channel-title');
+                if (titleElement) {
+                    const title = titleElement.textContent.toLowerCase();
+                    if (title.includes(searchTerm)) {
+                        channel.style.display = 'flex';
+                    } else {
+                        channel.style.display = 'none';
+                    }
+                }
+            });
+        });
 
-function showAttempt(msg) {
-  attemptBox.style.display = "block";
-  attemptText.textContent = msg;
-}
-function hideAttempt() {
-  attemptBox.style.display = "none";
-}
+        // Botão de tentar novamente
+        retryBtn.addEventListener('click', () => {
+            if (currentChannel) {
+                const channelIndex = channels.findIndex(ch => ch.title === currentChannel.title);
+                if (channelIndex !== -1) {
+                    playChannel(currentChannel.url, channelIndex);
+                }
+            }
+        });
 
-function requestFullscreenSafe(el) {
-  const req = el.requestFullscreen || el.webkitRequestFullscreen || el.msRequestFullscreen;
-  if (req) req.call(el).catch(()=>{});
-}
+        // Botão de tela cheia
+        fullscreenBtn.addEventListener('click', () => {
+            const playerContainer = document.querySelector('.player-container');
+            if (playerContainer.requestFullscreen) {
+                playerContainer.requestFullscreen();
+            } else if (playerContainer.webkitRequestFullscreen) {
+                playerContainer.webkitRequestFullscreen();
+            } else if (playerContainer.msRequestFullscreen) {
+                playerContainer.msRequestFullscreen();
+            }
+        });
 
-searchEl.oninput = e => renderList(e.target.value);
+        // Botão de volume
+        volumeBtn.addEventListener('click', () => {
+            if (videoPlayer.muted) {
+                videoPlayer.muted = false;
+                volumeBtn.innerHTML = '🔊';
+                volumeBtn.title = 'Mudo';
+            } else {
+                videoPlayer.muted = true;
+                volumeBtn.innerHTML = '🔇';
+                volumeBtn.title = 'Som';
+            }
+        });
 
-loadList();
-</script>
+        // Inicializar a aplicação
+        initChannelsList();
+        
+        // Selecionar o primeiro canal automaticamente
+        if (channels.length > 0) {
+            setTimeout(() => {
+                // Selecionar o canal de teste primeiro
+                const testChannelIndex = channels.findIndex(ch => ch.title.includes('TV BILL'));
+                selectChannel(testChannelIndex !== -1 ? testChannelIndex : 0);
+            }, 1000);
+        }
+    </script>
 </body>
 </html>
