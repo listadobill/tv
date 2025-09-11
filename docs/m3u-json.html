@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Conversor M3U → JSON</title>
+<style>
+  body { font-family: sans-serif; background:#111; color:#eee; margin:20px; }
+  h1 { color:#ff4444; }
+  textarea { width:100%; height:200px; margin:10px 0; }
+  input, button { margin:5px 0; padding:8px; cursor:pointer; }
+  pre { background:#222; padding:10px; white-space:pre-wrap; word-wrap:break-word; }
+</style>
+</head>
+<body>
+<h1>Conversor M3U → JSON</h1>
+
+<h3>1. Cole sua lista M3U</h3>
+<textarea id="m3uText" placeholder="#EXTM3U ..."></textarea>
+
+<h3>2. Ou envie um arquivo .m3u</h3>
+<input type="file" id="fileInput" accept=".m3u">
+
+<h3>3. Ou digite a URL da lista</h3>
+<input type="text" id="urlInput" placeholder="https://...lista.m3u">
+<button onclick="loadFromUrl()">Carregar URL</button>
+
+<hr>
+<button onclick="convert()">Converter para JSON</button>
+<button onclick="downloadJSON()">Baixar JSON</button>
+
+<h3>Resultado JSON</h3>
+<pre id="output"></pre>
+
+<script>
+let canais = [];
+
+function parseM3U(text) {
+  const lines = text.split("\n");
+  const lista = [];
+  let info = {};
+  for (let line of lines) {
+    line = line.trim();
+    if (line.startsWith("#EXTINF")) {
+      const parts = line.split(",");
+      const name = parts[parts.length - 1].trim();
+      info = { title: name };
+    } else if (line && !line.startsWith("#")) {
+      info.url = line;
+      lista.push(info);
+      info = {};
+    }
+  }
+  return lista;
+}
+
+function convert() {
+  const text = document.getElementById("m3uText").value;
+  if (!text.trim()) {
+    alert("Cole o conteúdo da lista M3U, ou envie um arquivo, ou carregue por URL.");
+    return;
+  }
+  canais = parseM3U(text);
+  document.getElementById("output").textContent = JSON.stringify(canais, null, 2);
+}
+
+function downloadJSON() {
+  if (!canais.length) {
+    alert("Converta a lista primeiro!");
+    return;
+  }
+  const blob = new Blob([JSON.stringify(canais, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "canais.json";
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+// Arquivo local
+document.getElementById("fileInput").addEventListener("change", function(e){
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(ev) {
+    document.getElementById("m3uText").value = ev.target.result;
+  };
+  reader.readAsText(file);
+});
+
+// Carregar de URL
+function loadFromUrl() {
+  const url = document.getElementById("urlInput").value.trim();
+  if (!url) return alert("Digite uma URL válida.");
+  fetch(url)
+    .then(r => r.text())
+    .then(t => { document.getElementById("m3uText").value = t; })
+    .catch(err => alert("Erro ao carregar URL: " + err));
+}
+</script>
+</body>
+</html>
