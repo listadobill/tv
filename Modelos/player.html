@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV BILL</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.0/dist/hls.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 20px;
+            gap: 20px;
+        }
+        
+        header {
+            background: linear-gradient(90deg, #8b0f0f 0%, #6a0b0b 100%);
+            border-radius: 12px;
+            padding: 15px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo h1 {
+            font-size: 28px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .logo-icon {
+            font-size: 32px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            padding: 5px 15px;
+            width: 300px;
+            transition: all 0.3s ease;
+        }
+        
+        .search-box:focus-within {
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 0 2px rgba(139, 15, 15, 0.5);
+        }
+        
+        .search-box input {
+            background: transparent;
+            border: none;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            outline: none;
+            font-size: 16px;
+        }
+        
+        .search-box input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .content {
+            display: flex;
+            gap: 20px;
+            height: calc(100vh - 150px);
+        }
+        
+        .sidebar {
+            width: 320px;
+            background: rgba(30, 30, 30, 0.8);
+            border-radius: 12px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .sidebar-title {
+            padding: 10px 0;
+            margin-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 18px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .channels-list {
+            overflow-y: auto;
+            flex: 1;
+            padding-right: 5px;
+        }
+        
+        .channel {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .channel:hover {
+            background: rgba(139, 15, 15, 0.2);
+            transform: translateX(5px);
+        }
+        
+        .channel.selected {
+            background: linear-gradient(90deg, rgba(139, 15, 15, 0.3) 0%, rgba(139, 15, 15, 0.1) 100%);
+            box-shadow: 0 0 0 1px rgba(139, 15, 15, 0.5);
+            transform: translateX(5px);
+        }
+        
+        .channel.error {
+            opacity: 0.6;
+            background: rgba(100, 100, 100, 0.1);
+        }
+        
+        .channel-thumb {
+            width: 60px;
+            height: 40px;
+            border-radius: 6px;
+            background: linear-gradient(135deg, #333 0%, #222 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 20px;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+        
+        .channel-info {
+            flex: 1;
+            overflow: hidden;
+        }
+        
+        .channel-title {
+            font-size: 16px;
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .channel-group {
+            font-size: 12px;
+            color: #aaa;
+            margin-top: 3px;
+        }
+        
+        .channel-status {
+            font-size: 10px;
+            padding: 3px 6px;
+            border-radius: 10px;
+            margin-top: 4px;
+            display: inline-block;
+        }
+        
+        .status-online {
+            background: rgba(76, 175, 80, 0.2);
+            color: #4caf50;
+        }
+        
+        .status-offline {
+            background: rgba(244, 67, 54, 0.2);
+            color: #f44336;
+        }
+        
+        .player-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+        
+        .player-header {
+            padding: 15px 20px;
+            background: linear-gradient(90deg, rgba(30, 30, 30, 0.9) 0%, rgba(20, 20, 20, 0.9) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            z-index: 20;
+        }
+        
+        .current-channel {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .current-channel-name {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .current-channel-group {
+            font-size: 14px;
+            color: #aaa;
+        }
+        
+        .player-controls {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .control-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 18px;
+        }
+        
+        .control-btn:hover {
+            background: rgba(139, 15, 15, 0.5);
+            transform: scale(1.1);
+        }
+        
+        .video-container {
+            flex: 1;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: #000;
+        }
+        
+        .loading-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            gap: 20px;
+        }
+        
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 5px solid rgba(255, 255, 255, 0.2);
+            border-top: 5px solid #8b0f0f;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        .loading-text {
+            font-size: 18px;
+            text-align: center;
+        }
+        
+        .error-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            gap: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .error-icon {
+            font-size: 50px;
+            color: #f44336;
+        }
+        
+        .error-text {
+            font-size: 18px;
+            color: #fff;
+            max-width: 500px;
+        }
+        
+        .retry-btn {
+            background: #8b0f0f;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .retry-btn:hover {
+            background: #a11212;
+            transform: scale(1.05);
+        }
+        
+        .player-info {
+            padding: 15px 20px;
+            background: linear-gradient(90deg, rgba(30, 30, 30, 0.9) 0%, rgba(20, 20, 20, 0.9) 100%);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 20;
+        }
+        
+        .player-stats {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+            color: #aaa;
+        }
+        
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .empty-state {
+            padding: 30px;
+            text-align: center;
+            color: #888;
+        }
+        
+        /* Scrollbar personalizada */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: rgba(139, 15, 15, 0.5);
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(139, 15, 15, 0.7);
+        }
+        
+        @media (max-width: 1200px) {
+            .content {
+                flex-direction: column;
+                height: auto;
+            }
+            
+            .sidebar {
+                width: 100%;
+                height: 300px;
+            }
+            
+            .player-container {
+                height: 500px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .search-box {
+                width: 100%;
+            }
+            
+            .player-controls {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="logo-icon">📺</div>
+                <h1>TV BILL Player</h1>
+            </div>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Buscar canal...">
+            </div>
+        </header>
+        
+        <div class="content">
+            <div class="sidebar">
+                <div class="sidebar-title">
+                    <span>📡</span>
+                    <span>Canais de TV</span>
+                </div>
+                <div class="channels-list" id="channels-list">
+                    <!-- Canais serão carregados aqui -->
+                </div>
+            </div>
+            
+            <div class="player-container">
+                <div class="player-header">
+                    <div class="current-channel">
+                        <div class="current-channel-info">
+                            <div class="current-channel-name" id="current-channel-name">Selecione um canal</div>
+                            <div class="current-channel-group" id="current-channel-group">TV BILL</div>
+                        </div>
+                    </div>
+                    <div class="player-controls">
+                        <button class="control-btn" id="fullscreen-btn" title="Tela Cheia">⛶</button>
+                        <button class="control-btn" id="volume-btn" title="Volume">🔊</button>
+                    </div>
+                </div>
+                
+                <div class="video-container">
+                    <video id="video-player" controls playsinline></video>
+                    
+                    <div class="loading-overlay" id="loading-overlay">
+                        <div class="spinner"></div>
+                        <div class="loading-text" id="loading-text">Conectando ao canal...</div>
+                    </div>
+                    
+                    <div class="error-overlay" id="error-overlay" style="display: none;">
+                        <div class="error-icon">⚠️</div>
+                        <div class="error-text" id="error-text">Erro ao carregar o canal. Verifique a conexão.</div>
+                        <button class="retry-btn" id="retry-btn">
+                            <span>🔄</span>
+                            <span>Tentar Novamente</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="player-info">
+                    <div class="player-stats">
+                        <div class="stat">
+                            <span>🔴</span>
+                            <span id="status-text">Não reproduzindo</span>
+                        </div>
+                        <div class="stat">
+                            <span>📶</span>
+                            <span id="quality-text">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Lista de canais (substitua com seus próprios canais)##################################################################################################
+        // ######################################################################################################################################################
+        // ######################################################################################################################################################
+        const channels = [
+            {
+                "title": "AMC FHD",
+                "group": "Filmes e Séries",
+                "url": "http://67.220.70.162:8080/12345678/12345678/239473"
+            },
+            {
+                "title": "AMC HD",
+                "group": "Filmes e Séries",
+                "url": "http://67.220.70.162:8080/12345678/12345678/239474"
+            },
+            {
+                "title": "AMC SD",
+                "group": "Filmes e Séries",
+                "url": "http://67.220.70.162:8080/12345678/12345678/239475"
+            },
+            {
+                "title": "Animal Planet 4K",
+                "group": "Documentários",
+                "url": "http://67.220.70.162:8080/12345678/12345678/1083349"
+            },
+            {
+                "title": "TV BILL (Teste)",
+                "group": "Variedades",
+                "url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"
+            }
+        ];
+        // ######################################################################################################################################################
+        // ######################################################################################################################################################
+        // ######################################################################################################################################################
+        // Elementos DOM
+        const channelsList = document.getElementById('channels-list');
+        const videoPlayer = document.getElementById('video-player');
+        const loadingOverlay = document.getElementById('loading-overlay');
+        const loadingText = document.getElementById('loading-text');
+        const errorOverlay = document.getElementById('error-overlay');
+        const errorText = document.getElementById('error-text');
+        const retryBtn = document.getElementById('retry-btn');
+        const currentChannelName = document.getElementById('current-channel-name');
+        const currentChannelGroup = document.getElementById('current-channel-group');
+        const statusText = document.getElementById('status-text');
+        const qualityText = document.getElementById('quality-text');
+        const searchInput = document.getElementById('search-input');
+        const fullscreenBtn = document.getElementById('fullscreen-btn');
+        const volumeBtn = document.getElementById('volume-btn');
+
+        // Variáveis globais
+        let hls = null;
+        let currentChannel = null;
+        let reconnectionAttempts = 0;
+        let reconnectionTimer = null;
+
+        // Função para corrigir URLs HTTP para HTTPS usando proxy CORS
+        function fixURL(url) {
+            // Se já for HTTPS, retorna diretamente
+            if (url.startsWith('https://')) {
+                return url;
+            }
+            
+            // Se for HTTP, usa um proxy CORS
+            if (url.startsWith('http://')) {
+                // Usar um proxy CORS - várias opções para tentar
+                const proxies = [
+                    `https://corsproxy.io/?${encodeURIComponent(url)}`,
+                    `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(url)}`,
+                    `https://cors-anywhere.herokuapp.com/${url}`
+                ];
+                
+                // Retorna um proxy aleatório para distribuir a carga
+                return proxies[Math.floor(Math.random() * proxies.length)];
+            }
+            
+            return url;
+        }
+
+        // Inicializar a lista de canais
+        function initChannelsList() {
+            channelsList.innerHTML = '';
+            
+            if (channels.length === 0) {
+                channelsList.innerHTML = '<div class="empty-state">Nenhum canal disponível</div>';
+                return;
+            }
+            
+            channels.forEach((channel, index) => {
+                const channelElement = document.createElement('div');
+                channelElement.className = 'channel';
+                channelElement.dataset.index = index;
+                channelElement.innerHTML = `
+                    <div class="channel-thumb">${channel.logo || '📺'}</div>
+                    <div class="channel-info">
+                        <div class="channel-title">${channel.title}</div>
+                        <div class="channel-group">${channel.group || 'Geral'}</div>
+                    </div>
+                `;
+                
+                channelElement.addEventListener('click', () => {
+                    selectChannel(index);
+                });
+                
+                channelsList.appendChild(channelElement);
+            });
+        }
+
+        // Selecionar um canal
+        function selectChannel(index) {
+            // Remover seleção anterior
+            document.querySelectorAll('.channel').forEach(channel => {
+                channel.classList.remove('selected');
+            });
+            
+            // Adicionar seleção atual
+            const channelElements = document.querySelectorAll('.channel');
+            if (channelElements[index]) {
+                channelElements[index].classList.add('selected');
+            }
+            
+            const channel = channels[index];
+            currentChannel = channel;
+            
+            // Atualizar informações do canal
+            currentChannelName.textContent = channel.title;
+            currentChannelGroup.textContent = channel.group || 'Geral';
+            statusText.textContent = 'Conectando...';
+            
+            // Reproduzir o canal
+            playChannel(channel.url, index);
+        }
+
+        // Reproduzir o canal
+        function playChannel(url, index) {
+            // Limpar instâncias anteriores
+            if (hls) {
+                hls.destroy();
+                hls = null;
+            }
+            
+            // Mostrar overlay de carregamento
+            showLoading();
+            
+            // Corrigir a URL para evitar mixed content
+            const fixedURL = fixURL(url);
+            console.log('Tentando reproduzir:', fixedURL);
+            
+            // Verificar se é HLS
+            if (fixedURL.includes('.m3u8') || fixedURL.includes('m3u8')) {
+                if (Hls.isSupported()) {
+                    hls = new Hls({
+                        maxBufferLength: 30,
+                        maxMaxBufferLength: 60,
+                        enableWorker: true,
+                        debug: false
+                    });
+                    
+                    hls.loadSource(fixedURL);
+                    hls.attachMedia(videoPlayer);
+                    
+                    hls.on(Hls.Events.MANIFEST_PARSED, () => {
+                        videoPlayer.play()
+                            .then(() => {
+                                hideLoading();
+                                statusText.textContent = 'Reproduzindo';
+                                reconnectionAttempts = 0;
+                                updateChannelStatus('online', index);
+                            })
+                            .catch(error => {
+                                console.error('Erro ao reproduzir:', error);
+                                showError('Erro ao iniciar a reprodução: ' + error.message);
+                                updateChannelStatus('error', index);
+                            });
+                    });
+                    
+                    hls.on(Hls.Events.ERROR, (event, data) => {
+                        console.error('HLS error:', data);
+                        if (data.fatal) {
+                            switch (data.type) {
+                                case Hls.ErrorTypes.NETWORK_ERROR:
+                                    showError('Erro de rede. Tentando reconectar...');
+                                    updateChannelStatus('error', index);
+                                    setTimeout(() => playChannel(url, index), 3000);
+                                    break;
+                                case Hls.ErrorTypes.MEDIA_ERROR:
+                                    showError('Erro de mídia. Tentando recuperar...');
+                                    updateChannelStatus('error', index);
+                                    hls.recoverMediaError();
+                                    break;
+                                default:
+                                    showError('Erro irreparável. Tente outro canal.');
+                                    updateChannelStatus('error', index);
+                                    break;
+                            }
+                        }
+                    });
+                } else if (videoPlayer.canPlayType('application/vnd.apple.mpegurl')) {
+                    // Suporte nativo para HLS (Safari)
+                    videoPlayer.src = fixedURL;
+                    videoPlayer.play()
+                        .then(() => {
+                            hideLoading();
+                            statusText.textContent = 'Reproduzindo';
+                            reconnectionAttempts = 0;
+                            updateChannelStatus('online', index);
+                        })
+                        .catch(error => {
+                            console.error('Erro ao reproduzir:', error);
+                            showError('Erro ao iniciar a reprodução: ' + error.message);
+                            updateChannelStatus('error', index);
+                        });
+                } else {
+                    showError('Seu navegador não suporta reprodução de vídeo HLS.');
+                    updateChannelStatus('error', index);
+                }
+            } else {
+                // Para outros formatos (MP4, etc)
+                videoPlayer.src = fixedURL;
+                videoPlayer.play()
+                    .then(() => {
+                        hideLoading();
+                        statusText.textContent = 'Reproduzindo';
+                        reconnectionAttempts = 0;
+                        updateChannelStatus('online', index);
+                    })
+                    .catch(error => {
+                        console.error('Erro ao reproduzir:', error);
+                        showError('Erro ao iniciar a reprodução: ' + error.message);
+                        updateChannelStatus('error', index);
+                    });
+            }
+            
+            // Event listeners para o player de vídeo
+            const errorHandler = (e) => {
+                console.error('Erro no player de vídeo:', e);
+                showError('Erro no player de vídeo. Tente outro canal.');
+                updateChannelStatus('error', index);
+            };
+            
+            // Remover event listeners anteriores para evitar duplicação
+            videoPlayer.removeEventListener('error', errorHandler);
+            videoPlayer.addEventListener('error', errorHandler);
+            
+            videoPlayer.addEventListener('waiting', () => {
+                statusText.textContent = 'Buffering...';
+            });
+            
+            videoPlayer.addEventListener('playing', () => {
+                statusText.textContent = 'Reproduzindo';
+                updateChannelStatus('online', index);
+            });
+        }
+
+        // Atualizar status do canal na lista
+        function updateChannelStatus(status, index) {
+            const channelElements = document.querySelectorAll('.channel');
+            if (channelElements[index]) {
+                const channelElement = channelElements[index];
+                channelElement.classList.remove('error');
+                
+                if (status === 'error') {
+                    channelElement.classList.add('error');
+                }
+            }
+        }
+
+        // Mostrar overlay de carregamento
+        function showLoading() {
+            loadingOverlay.style.display = 'flex';
+            errorOverlay.style.display = 'none';
+            loadingText.textContent = 'Conectando ao canal...';
+        }
+
+        // Ocultar overlay de carregamento
+        function hideLoading() {
+            loadingOverlay.style.display = 'none';
+        }
+
+        // Mostrar overlay de erro
+        function showError(message) {
+            errorText.textContent = message;
+            loadingOverlay.style.display = 'none';
+            errorOverlay.style.display = 'flex';
+            statusText.textContent = 'Erro';
+        }
+
+        // Buscar canais
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.toLowerCase();
+            document.querySelectorAll('.channel').forEach((channel) => {
+                const titleElement = channel.querySelector('.channel-title');
+                if (titleElement) {
+                    const title = titleElement.textContent.toLowerCase();
+                    if (title.includes(searchTerm)) {
+                        channel.style.display = 'flex';
+                    } else {
+                        channel.style.display = 'none';
+                    }
+                }
+            });
+        });
+
+        // Botão de tentar novamente
+        retryBtn.addEventListener('click', () => {
+            if (currentChannel) {
+                const channelIndex = channels.findIndex(ch => ch.title === currentChannel.title);
+                if (channelIndex !== -1) {
+                    playChannel(currentChannel.url, channelIndex);
+                }
+            }
+        });
+
+        // Botão de tela cheia
+        fullscreenBtn.addEventListener('click', () => {
+            const playerContainer = document.querySelector('.player-container');
+            if (playerContainer.requestFullscreen) {
+                playerContainer.requestFullscreen();
+            } else if (playerContainer.webkitRequestFullscreen) {
+                playerContainer.webkitRequestFullscreen();
+            } else if (playerContainer.msRequestFullscreen) {
+                playerContainer.msRequestFullscreen();
+            }
+        });
+
+        // Botão de volume
+        volumeBtn.addEventListener('click', () => {
+            if (videoPlayer.muted) {
+                videoPlayer.muted = false;
+                volumeBtn.innerHTML = '🔊';
+                volumeBtn.title = 'Mudo';
+            } else {
+                videoPlayer.muted = true;
+                volumeBtn.innerHTML = '🔇';
+                volumeBtn.title = 'Som';
+            }
+        });
+
+        // Inicializar a aplicação
+        initChannelsList();
+        
+        // Selecionar o primeiro canal automaticamente
+        if (channels.length > 0) {
+            setTimeout(() => {
+                // Selecionar o canal de teste primeiro
+                const testChannelIndex = channels.findIndex(ch => ch.title.includes('TV BILL'));
+                selectChannel(testChannelIndex !== -1 ? testChannelIndex : 0);
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
