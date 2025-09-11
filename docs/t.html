@@ -135,7 +135,7 @@ body {
 <script src="http://vjs.zencdn.net/7.20.2/video.min.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    const listaURL = "https://raw.githubusercontent.com/listadobill/tv/refs/heads/main/servidor1.m3u";
+    const listaURL = "http://raw.githubusercontent.com/listadobill/tv/refs/heads/main/servidor1.m3u";
     const listaCanaisElemento = document.getElementById("lista-canais");
     const searchInput = document.getElementById("search-input");
 
@@ -176,7 +176,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (linha.startsWith('#EXTINF')) {
                     const nome = linha.split(',')[1].trim();
                     const url = linhas[index + 1];
-                    canais.push({ name: nome, url: url });
+                    // Converter URLs HTTPS para HTTP se necessário
+                    const httpUrl = url.startsWith('https://') ? 
+                                   url.replace('https://', 'http://') : url;
+                    canais.push({ name: nome, url: httpUrl });
                 }
             });
 
