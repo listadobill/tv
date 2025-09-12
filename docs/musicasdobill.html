@@ -17,7 +17,7 @@ body { margin:0; font-family:Arial,sans-serif; background:#000; color:#fff; disp
 .results .result-item.playing { background:#f06; color:#000; }
 .player { flex:1; padding:10px; display:flex; flex-direction:column; align-items:center; overflow-y:auto; position:relative; }
 .cover-art { max-width:250px; display:none; margin-bottom:10px; }
-.player-controls button { margin:2px; padding:5px 10px; cursor:pointer; }
+.player-controls button { margin:2px; padding:5px 10px; cursor:pointer; font-size:1.2rem; }
 #volumeControl { width:100px; }
 #track-info { margin-top:10px; font-weight:bold; text-align:center; }
 #startIcon { position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-size:5rem; cursor:pointer; color:#0f0; z-index:1000; }
@@ -41,12 +41,12 @@ body { margin:0; font-family:Arial,sans-serif; background:#000; color:#fff; disp
     <div id="startIcon">▶</div>
     <img id="cover-art" class="cover-art">
     <div class="player-controls">
-      <button onclick="prevTrack()">⏮</button>
-      <button onclick="togglePlayPause()" id="playPauseBtn">▶</button>
-      <button onclick="stopTrack()">⏹</button>
-      <button onclick="nextTrack()">⏭</button>
-      <button onclick="toggleShuffle()">🔀</button>
-      <button onclick="toggleRepeat()">🔁</button>
+      <button id="prevBtn">⏮</button>
+      <button id="playPauseBtn">▶</button>
+      <button id="stopBtn">⏹</button>
+      <button id="nextBtn">⏭</button>
+      <button id="shuffleBtn">🔀</button>
+      <button id="repeatBtn">🔁</button>
       <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5">
     </div>
     <audio id="audio-player" controls></audio>
@@ -68,6 +68,12 @@ var volumeControl=document.getElementById('volumeControl');
 var formatFilters=document.getElementById('formatFilters');
 var searchInput=document.getElementById('searchInput');
 var startIcon=document.getElementById('startIcon');
+
+var prevBtn=document.getElementById('prevBtn');
+var stopBtn=document.getElementById('stopBtn');
+var nextBtn=document.getElementById('nextBtn');
+var shuffleBtn=document.getElementById('shuffleBtn');
+var repeatBtn=document.getElementById('repeatBtn');
 
 var albumLinks=["https://archive.org/details/master-of-puppets_202509"];
 var albums=[];
@@ -146,7 +152,10 @@ function renderTracks(){
         var div=document.createElement('div');
         div.className='result-item';
         div.textContent=track.title;
-        div.onclick=function(){ playTrack(tracks.indexOf(track)); };
+        div.onclick=function(){
+          shuffle=false; // desativa shuffle ao clicar manualmente
+          playTrack(tracks.indexOf(track));
+        };
         track.element=div;
         tracks.push(track);
         resultsContainer.appendChild(div);
@@ -173,18 +182,6 @@ function playRandomTrack(){
   playTrack(r);
 }
 
-function nextTrack(){ 
-  if(shuffle){ playRandomTrack(); } 
-  else { 
-    currentTrack=(currentTrack+1)%tracks.length; 
-    playTrack(currentTrack); 
-  }
-}
-
-function prevTrack(){ 
-  if(currentTrack>0){ playTrack(currentTrack-1); } 
-}
-
 function stopTrack(){ 
   audioPlayer.pause(); audioPlayer.currentTime=0; 
   playPauseBtn.textContent='▶'; 
@@ -195,11 +192,32 @@ function togglePlayPause(){
   else {audioPlayer.pause(); playPauseBtn.textContent='▶';} 
 }
 
-function toggleShuffle(){ shuffle=!shuffle; }
-function toggleRepeat(){ repeat=!repeat; }
+function toggleShuffle(){ 
+  shuffle=!shuffle; 
+  shuffleBtn.style.background = shuffle?'#0f0':'';
+}
+function toggleRepeat(){ 
+  repeat=!repeat; 
+  repeatBtn.style.background = repeat?'#0f0':'';
+}
 
 volumeControl.addEventListener('input',function(){ audioPlayer.volume=volumeControl.value; });
-audioPlayer.addEventListener('ended',function(){ if(repeat){ playTrack(currentTrack); } else { nextTrack(); } });
+
+// Fim da faixa
+audioPlayer.addEventListener('ended', function(){
+  if(repeat){
+    playTrack(currentTrack);
+  } else {
+    if(shuffle){
+      playRandomTrack();
+    } else {
+      currentTrack = (currentTrack + 1) % tracks.length;
+      playTrack(currentTrack);
+    }
+  }
+});
+
+// Busca
 searchInput.addEventListener('input',function(){
   var term=searchInput.value.toLowerCase();
   for(var i=0;i<tracks.length;i++){
@@ -207,11 +225,25 @@ searchInput.addEventListener('input',function(){
   }
 });
 
-// Evento do ícone inicial
+// Ícone inicial
 startIcon.addEventListener('click', function(){
   startIcon.style.display='none';
   playRandomTrack();
 });
+
+// Botões principais
+prevBtn.addEventListener('click', function() {
+  currentTrack = (currentTrack - 1 + tracks.length) % tracks.length;
+  playTrack(currentTrack);
+});
+nextBtn.addEventListener('click', function() {
+  currentTrack = (currentTrack + 1) % tracks.length;
+  playTrack(currentTrack);
+});
+playPauseBtn.addEventListener('click', togglePlayPause);
+stopBtn.addEventListener('click', stopTrack);
+shuffleBtn.addEventListener('click', toggleShuffle);
+repeatBtn.addEventListener('click', toggleRepeat);
 
 carregarAlbuns();
 </script>
