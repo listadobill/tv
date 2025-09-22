@@ -112,3 +112,290 @@ http://fivetv.org:25461/EGBBALDA2530/PMBSH300482/190917
 http://fivetv.org:25461/EGBBALDA2530/PMBSH300482/190918
 #EXTINF:-1 tvg-id="" tvg-name="SBT" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/SBT_logo.svg/1200px-SBT_logo.png" group-title="TV || BRASIL",SBT
 http://fivetv.org:25461/EGBBALDA2530/PMBSH300482/190919
+#EXTM3U
+#EXTINF:-1 tvg-id="" tvg-name="BAND OF Brothers FHD" tvg-logo="" group-title="CINEMANIA SERIES 24/7",BAND OF Brothers FHD
+http://ip96.uk:8080/live/Ghosia104/pathan104/532901.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="LIttle Britain FHD" tvg-logo="" group-title="CINEMANIA SERIES 24/7",LIttle Britain FHD
+http://ip96.uk:8080/live/Ghosia104/pathan104/532954.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BOrder Security FHD" tvg-logo="" group-title="CINEMANIA SERIES 24/7",BOrder Security FHD
+http://ip96.uk:8080/live/Ghosia104/pathan104/532982.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="DRunk History FHD" tvg-logo="" group-title="CINEMANIA SERIES 24/7",DRunk History FHD
+http://ip96.uk:8080/live/Ghosia104/pathan104/532993.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="THE Office FHD" tvg-logo="" group-title="CINEMANIA SERIES 24/7",THE Office FHD
+http://ip96.uk:8080/live/Ghosia104/pathan104/533072.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" ARTE 1 HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/28fbfc2b0f0a676bcfdce95e4aa10b32.png" group-title="Brazil", ARTE 1 HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304134.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" BAND Campinas HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-09/94cff4ded77e04d78ea3ce449e0e3f3b.png" group-title="Brazil", BAND Campinas HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304136.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" BAND VALE HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/ebd85951f6c4ef7cefe147f04f79fd12.png" group-title="Brazil", BAND VALE HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304137.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Camara DOS Deputados HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-02/de4e4de3f04255de4e246add7fc13cb2.png" group-title="Brazil", Camara DOS Deputados HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304140.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Canal OFF HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/d1934276e9e185fb324c51a5444d2b1f.png" group-title="Brazil", Canal OFF HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304142.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Conmebol 1 HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-02/772da3266b9a007bf2767169c6ef82e4.png" group-title="Brazil", Conmebol 1 HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304144.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Conmebol 2 HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-02/c66ee65ee9a5c12d090a931483e0756b.png" group-title="Brazil", Conmebol 2 HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304145.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Conmebol 3 HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-02/ed6a44b88febd29c02e6bc85484d7dae.png" group-title="Brazil", Conmebol 3 HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304146.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Conmebol 4 HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-02/ae2d9df7ebb5cc9afc3fa74257eee65b.png" group-title="Brazil", Conmebol 4 HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304147.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Globo EPTV SAO Carlos HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-02/005b80f06ae6c95ddc7aaa95ba3aefb2.jpg" group-title="Brazil", Globo EPTV SAO Carlos HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304149.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Globo Inter TV Cabugi HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-03/d9341179c616f27ddfe7edcbf9249c3a.png" group-title="Brazil", Globo Inter TV Cabugi HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304150.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Globo Internacional HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-03/5784f5d228af148d05e9d9b6aec098f5.png" group-title="Brazil", Globo Internacional HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304151.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Globo Minas HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-03/b5cc6440c63db89e7a137e82c946b5da.png" group-title="Brazil", Globo Minas HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304152.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Globo NEWS HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-05/2c3ccc72192f58d85006755f44de4ee8.png" group-title="Brazil", Globo NEWS HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304153.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Globo Nordeste HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/fb90de64b7294ef6f6c257cec9eebb52.png" group-title="Brazil", Globo Nordeste HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304154.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Globo NOW HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-04/3031f8d38423f0a37e2d113adcb4fbbd.png" group-title="Brazil", Globo NOW HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304155.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Globo NSC TV HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-05/af0df6b05c9fadc3efcdb89d1b51f0aa.png" group-title="Brazil", Globo NSC TV HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304156.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Globo Premium HD" tvg-logo="http://s3.i3ns.net:2052/cs/etc/blank-icon.png" group-title="Brazil", Globo Premium HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304157.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Globo RBS Porto Alegre HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-05/eddf9dd81103391296dc3de536ace15d.png" group-title="Brazil", Globo RBS Porto Alegre HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304158.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Globo Ribeir HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-03/ac0ab8535c3e04dfd5902fa38a7dad00.png" group-title="Brazil", Globo Ribeir HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304159.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Globo RIO DE Janeiro HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-05/3f54d584d038640291a44d696c47397a.png" group-title="Brazil", Globo RIO DE Janeiro HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304160.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Globo RIO Grande DO Norte HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-03/045d42142034cda9721157fa5582f246.png" group-title="Brazil", Globo RIO Grande DO Norte HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304161.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Globo RJ HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-03/bef3c741b89f5498e966018720c5bc59.png" group-title="Brazil", Globo RJ HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304162.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Globo RPC Curitiba HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-01/6f9b6eaee2dc0e46618ab2e672aaa9b1.png" group-title="Brazil", Globo RPC Curitiba HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304163.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Globo SAO Paulo HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-05/70ce6ee15b1b77963ae064befa94e2f4.png" group-title="Brazil", Globo SAO Paulo HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304164.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Globo Tribuna Santos HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-03/190f031a4ce4b427834210827fc85397.png" group-title="Brazil", Globo Tribuna Santos HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304165.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Globo TV HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-03/cf1aeb34495b2e1303f601221e15a3ef.png" group-title="Brazil", Globo TV HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304166.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" History HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/77158ed2afb6b36f6b2391f9c81e58e9.png" group-title="Brazil", History HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304169.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Prime BOX Brazil HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2023-02/1fce8d250145d550924a512848aeed28.jpg" group-title="Brazil", Prime BOX Brazil HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304175.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Record Nordeste HD" tvg-logo="http://s3.i3ns.net:2052/cs/etc/blank-icon.png" group-title="Brazil", Record Nordeste HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304176.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Record RIO HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2023-05/2ce34669d13230c5f26496e10442eec7.png" group-title="Brazil", Record RIO HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304177.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Record TV HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2023-11/1b57f55e0cb46c5a5b52d8f2521a3532.jfif" group-title="Brazil", Record TV HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304178.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Record TV Americas HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-07/73628198a4031b4a18426516c4852ecb.png" group-title="Brazil", Record TV Americas HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304179.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" TNT Sports 2 HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-01/996fc56d9216496e35f9c1fafc43fc48.png" group-title="Brazil", TNT Sports 2 HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304184.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" TV Camara 2 HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2024-02/f210fcc48ed6f88a0069cee25c9fda56.png" group-title="Brazil", TV Camara 2 HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304186.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" TV Globo Internacional Américas HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-07/735dbda706788d6d111673ea03f37cdb.png" group-title="Brazil", TV Globo Internacional Américas HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304187.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Warner TV HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/a0d05e26a50d5cb1936f963ba580263e.png" group-title="Brazil", Warner TV HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304191.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Discovery Turbo HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/f4ada104772fecc970f160730ac56e3e.png" group-title="Brazil ➾ Motor Sports", Discovery Turbo HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304355.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Premiere FC 1 HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-05/b5e27276ad261e52a66167b0ea08521f.png" group-title="Brazil ➾ Football", Premiere FC 1 HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304357.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Premiere FC 3 HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-07/dbf8357765c676043e8305d199ee7a8d.png" group-title="Brazil ➾ Football", Premiere FC 3 HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304358.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Premiere FC 4 HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-07/6d1777d9b0fa66337bdf19a0025cab6a.png" group-title="Brazil ➾ Football", Premiere FC 4 HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304359.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Premiere FC 5 HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-07/f86fbf59b55119969d8988c445b9fb2e.png" group-title="Brazil ➾ Football", Premiere FC 5 HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304360.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Premiere FC 6 HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-07/644bdf62e752682dfbd2a7ac83b8f441.png" group-title="Brazil ➾ Football", Premiere FC 6 HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304361.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Premiere FC 7 HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-07/644bdf62e752682dfbd2a7ac83b8f441.png" group-title="Brazil ➾ Football", Premiere FC 7 HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304362.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" BAND Sports HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/ceff609636ae03e6425dafdbd72ab1e3.png" group-title="Brazil ➾ Sports", BAND Sports HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304294.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" ESPN HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/9df70541246da4f2f9a65296dc2d5604.png" group-title="Brazil ➾ Sports", ESPN HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304295.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" ESPN 2 HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/68e11cc20e6cca405eeafe623b2bfdde.png" group-title="Brazil ➾ Sports", ESPN 2 HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304296.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" ESPN 3 HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-02/d4eadd237437bdfc6f611165eb5891c8.png" group-title="Brazil ➾ Sports", ESPN 3 HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304297.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" ESPN 4 HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2023-07/7b06a5762fbd3254392827b6c7fd411d.svg" group-title="Brazil ➾ Sports", ESPN 4 HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304298.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" ESPN Extra HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/280bbb819713bcee901695466ef9320a.png" group-title="Brazil ➾ Sports", ESPN Extra HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304299.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" FOX Sports HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/2c324e02d5a437786a2e0e9657c52501.png" group-title="Brazil ➾ Sports", FOX Sports HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304300.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" SporTV HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-05/6eafe5012b43973f31c5ee0b648e0594.png" group-title="Brazil ➾ Sports", SporTV HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304301.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" SporTV 2 HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-05/2f163193ab2de12c120e02e264bc16a7.png" group-title="Brazil ➾ Sports", SporTV 2 HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304302.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" SporTV 3 HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-05/50dc54d140bb68ee92fc1aa01bec5bb5.png" group-title="Brazil ➾ Sports", SporTV 3 HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304303.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Curta HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/cccd63096c349feec570817a3c6e5eda.png" group-title="Brazil ➾ Documentary", Curta HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304218.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Discovery Channel HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2023-08/d14d252c13e235b24691090c4fd47fc6.png" group-title="Brazil ➾ Documentary", Discovery Channel HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304219.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Discovery H&H Brasil HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-05/71b79e5955a16e8552e5b53f114b4311.png" group-title="Brazil ➾ Documentary", Discovery H&H Brasil HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304220.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Discovery Science HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-09/ec34cf34b08cb3aa7e99dddc02a64327.png" group-title="Brazil ➾ Documentary", Discovery Science HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304221.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Discovery World HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-07/163cc77a950cd46b83e24173e037276d.png" group-title="Brazil ➾ Documentary", Discovery World HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304222.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" History 2 HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/8a357a5ab6db772ce2e87f2dbb5256f7.png" group-title="Brazil ➾ Documentary", History 2 HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304223.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Investigation Discovery HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/bc5c44c1809c5a734c7c501031cf5a61.png" group-title="Brazil ➾ Documentary", Investigation Discovery HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304224.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" NAT GEO HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/17bdba6f29d02a26d662d201e5804c35.png" group-title="Brazil ➾ Documentary", NAT GEO HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304225.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" AMC HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/28ce80f56c83746e127421c05b68290c.png" group-title="Brazil ➾ Movie", AMC HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304304.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" AXN HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/81f85350c982e88a4ea07ac7802bd319.png" group-title="Brazil ➾ Movie", AXN HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304305.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Canal VIVA HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-05/d108d4ed6d37f059df3c338a0cc92544.png" group-title="Brazil ➾ Movie", Canal VIVA HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304306.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Cinemax HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/ec43da7ea739837c267ab3a8d00686c9.png" group-title="Brazil ➾ Movie", Cinemax HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304307.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Discovery Theater HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/eccdb9fd544de19f5a47da8c16b7fd94.png" group-title="Brazil ➾ Movie", Discovery Theater HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304309.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" FOX HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/c7f5dd8742f28244a9992857aa579966.png" group-title="Brazil ➾ Movie", FOX HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304312.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" FOX Crime HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/4bfd4a035f282bfca1d50528a4ac7c61.png" group-title="Brazil ➾ Movie", FOX Crime HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304313.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" FOX LIFE HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/a039317fef01e1a724457eed252db22c.png" group-title="Brazil ➾ Movie", FOX LIFE HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304314.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" HBO HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/021ac0dac6526eb0c4d8f609b0981a4a.png" group-title="Brazil ➾ Movie", HBO HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304316.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" HBO 2 HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/de30880a0e32854862b81cebfdff4f32.png" group-title="Brazil ➾ Movie", HBO 2 HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304317.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" HBO Family HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/a5f0e3d6c8aa749bb2a72f1b6c77059a.png" group-title="Brazil ➾ Movie", HBO Family HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304318.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" HBO Mundi HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/0f43c56edfab944cec1a8b9571713c82.png" group-title="Brazil ➾ Movie", HBO Mundi HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304319.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" HBO POP HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/48ac45310042b36f1406d7d73b9bf562.png" group-title="Brazil ➾ Movie", HBO POP HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304320.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" HBO Signature HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/c93e59083a2c4efbb21fd5c43406d7b8.png" group-title="Brazil ➾ Movie", HBO Signature HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304321.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" HBO Xtreme HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/535557537268d0798ae4e911306c09a7.png" group-title="Brazil ➾ Movie", HBO Xtreme HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304322.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" HBO+ HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/73c84cd25a33650a215c8ae7ccd4714f.png" group-title="Brazil ➾ Movie", HBO+ HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304323.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Record TV Europa HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-02/de60ee7c98e39fe66e6e1fa44349d996.png" group-title="Brazil ➾ Movie", Record TV Europa HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304327.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" SONY Channel HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-05/b650d306029b0434e50ff20f55752ce4.jpg" group-title="Brazil ➾ Movie", SONY Channel HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304328.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Space HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-03/0aa43c95d5dc18584371bba243ad6a42.jpg" group-title="Brazil ➾ Movie", Space HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304329.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Studio Universal HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-09/30f203154bb3241f4f40b4ebb08b93fc.png" group-title="Brazil ➾ Movie", Studio Universal HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304331.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" SYFY HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/972867e3ec0db38c275223add00c4d45.png" group-title="Brazil ➾ Movie", SYFY HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304332.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Telecine CULT HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-05/925e3612d2b98fe7d83b4eab71e1a4ec.png" group-title="Brazil ➾ Movie", Telecine CULT HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304335.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Telecine FUN HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-05/b85207092bfc198d2487690fbe3e53ea.png" group-title="Brazil ➾ Movie", Telecine FUN HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304336.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Telecine Pipoca HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-05/c78a744003315a9cb807d6a4e2525a91.png" group-title="Brazil ➾ Movie", Telecine Pipoca HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304337.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Telecine Premium HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-05/2483792e92c1dd609fcfe7ce17a61178.png" group-title="Brazil ➾ Movie", Telecine Premium HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304338.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Telecine Touch HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-05/238fbd6483ed57f1a9a63a993d2bfff0.png" group-title="Brazil ➾ Movie", Telecine Touch HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304339.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" TNT HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/e8f2a7e44e82191ea91b4de87268d3fb.png" group-title="Brazil ➾ Movie", TNT HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304340.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" TNT Series HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-01/faeb9eb91bcb801f619ef9ad721204fd.png" group-title="Brazil ➾ Movie", TNT Series HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304341.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Universal TV HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-05/55f491eb5cf79d059b092c8f419096ff.png" group-title="Brazil ➾ Movie", Universal TV HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304342.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Telecine Action HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-05/382394f54e1cba9d754816738704301a.png" group-title="Brazil ➾ Movie", Telecine Action HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304334.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Cancao NOVA HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-07/666b90b756c7a5d3ad07a2a9d4224898.png" group-title="Brazil ➾ LifeStyle", Cancao NOVA HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304229.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Combate HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/f8ef6dd50c1b857e4927b6acf17e1f5e.png" group-title="Brazil ➾ LifeStyle", Combate HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304230.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Futura HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/67909c2228c64ce8423a828571f3a90e.png" group-title="Brazil ➾ LifeStyle", Futura HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304235.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Globo Amazonas HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-03/8b93df5c5239d146dd92da80ae219881.png" group-title="Brazil ➾ LifeStyle", Globo Amazonas HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304236.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Globo ASA Branca HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-03/d0caa0568014149c197b46a13e451de5.png" group-title="Brazil ➾ LifeStyle", Globo ASA Branca HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304237.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Globo Bahia HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-03/2685a373f3c27a2ece5d24e76c686687.png" group-title="Brazil ➾ LifeStyle", Globo Bahia HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304238.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Globo Brasilia HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-03/c39eae6712f9b6cd39db0e2ec2c504a2.png" group-title="Brazil ➾ LifeStyle", Globo Brasilia HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304239.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Globo EPTV Campinas HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-03/a650d234de959df33510fee28a84e093.png" group-title="Brazil ➾ LifeStyle", Globo EPTV Campinas HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304240.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Globo EPTV Ribeirao Preto HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-03/00dd9cc1f511d4ffb4ede8250f3053a9.png" group-title="Brazil ➾ LifeStyle", Globo EPTV Ribeirao Preto HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304241.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Globo Fortaleza HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-03/ebc1c976266737c0bb8f1fb9b6ff1bbe.png" group-title="Brazil ➾ LifeStyle", Globo Fortaleza HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304242.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" GNT HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/f9e7782911f80ec04ad4fb4fa63f1df9.png" group-title="Brazil ➾ LifeStyle", GNT HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304243.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Multishow HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/29748e0843a2065098876094dc8d6bf5.png" group-title="Brazil ➾ LifeStyle", Multishow HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304252.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" REDE Brasil DE Comunicacao HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-05/5cba7a50d5fc4a60690ce64ca7464812.png" group-title="Brazil ➾ LifeStyle", REDE Brasil DE Comunicacao HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304256.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" REDE Super HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-02/f9e9e6da56fddf18f1a61bf0c1c541f8.jpg" group-title="Brazil ➾ LifeStyle", REDE Super HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304259.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" REDE VIDA HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-05/c1bf1583710090836ce9d45e8685ccf1.png" group-title="Brazil ➾ LifeStyle", REDE VIDA HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304260.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Terra VIVA HD" tvg-logo="http://s3.i3ns.net:2052/cs/etc/blank-icon.png" group-title="Brazil ➾ LifeStyle", Terra VIVA HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304263.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" TLC HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/68957793aa8d6562c337f95a0e2b9ac2.png" group-title="Brazil ➾ LifeStyle", TLC HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304265.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" TV Aparecida HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-07/c2c8ef22c7bb0d94af0445eb6db99f53.png" group-title="Brazil ➾ LifeStyle", TV Aparecida HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304269.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" TV Evangelizar HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-05/3cd4f49776dae7de125ba30ec0d3802d.png" group-title="Brazil ➾ LifeStyle", TV Evangelizar HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304277.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" TV Justica HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-02/330107353618a10510efa46e3bc597fb.jpg" group-title="Brazil ➾ LifeStyle", TV Justica HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304278.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" TV MAX HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-02/69ba44eecceea93cced5aa98bc6e562e.png" group-title="Brazil ➾ LifeStyle", TV MAX HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304279.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" VIVA HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2024-03/73c9b34c46cc04b6d0c53d08ca7ea8ed.png" group-title="Brazil ➾ LifeStyle", VIVA HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304292.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Animal Planet HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/fc6b8a56e3fd60bd26a6377a4f700db4.png" group-title="Brazil ➾ Nature", Animal Planet HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304226.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" NAT GEO WILD HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/2ffcbd5676076e9ba265226e0d30b4ec.png" group-title="Brazil ➾ Nature", NAT GEO WILD HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304227.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" BAND NEWS HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/d28d24f816db20ed14be5bed3411a00f.png" group-title="Brazil ➾ News", BAND NEWS HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304343.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" CNN Brasil HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/ed84a46ac48297c8570ab55c56ce116c.png" group-title="Brazil ➾ News", CNN Brasil HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304344.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Record NEWS HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-07/52ef77f0a1c40b4d7a453ea7b9981dd3.png" group-title="Brazil ➾ News", Record NEWS HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304346.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Record SP HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-05/74e9b600c58db69c39df16a4085e2dc0.png" group-title="Brazil ➾ News", Record SP HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304347.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" REDE Brasil HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/6ac8923fb0d25cd657ca3a6aea32ecd1.png" group-title="Brazil ➾ News", REDE Brasil HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304348.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" SBT HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-09/33ab02258f56ad128c8cd92823906ed1.png" group-title="Brazil ➾ News", SBT HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304349.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" SBT SP HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-05/b4540777f6067f2d74074634399c65ad.png" group-title="Brazil ➾ News", SBT SP HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304350.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Cartoon Network HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/072885790a3958b2fbf1e2ad147e4d16.png" group-title="Brazil ➾ Kids", Cartoon Network HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304195.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Cartoonito HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2023-09/30a1f709f85280ea7460b4f47a986d80.png" group-title="Brazil ➾ Kids", Cartoonito HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304196.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Discovery KIDS HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/6ef28a86d6d91e1ebe8ebfaa2c2723c7.png" group-title="Brazil ➾ Kids", Discovery KIDS HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304200.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Disney Channel HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/50a6bc80d5e23b687df1568a1e850667.png" group-title="Brazil ➾ Kids", Disney Channel HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304201.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Disney XD HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/def76639e5be8fb9e81013303abd42ab.png" group-title="Brazil ➾ Kids", Disney XD HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304202.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" FX HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/29b0fa9fe99cc48a8942c636566b1f3a.png" group-title="Brazil ➾ Kids", FX HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304203.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" NAT GEO KIDS HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/ac4be9cbe3d27492dde3ab5bc37100b2.png" group-title="Brazil ➾ Kids", NAT GEO KIDS HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304206.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" NICK Classico HD" tvg-logo="http://s3.i3ns.net:2052/cs/etc/blank-icon.png" group-title="Brazil ➾ Kids", NICK Classico HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304207.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" NICK Junior HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-09/41ee70fc5cf3340f55d3e56ec6dd04e3.png" group-title="Brazil ➾ Kids", NICK Junior HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304208.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" NICK Junior CLUB HD" tvg-logo="http://s3.i3ns.net:2052/cs/etc/blank-icon.png" group-title="Brazil ➾ Kids", NICK Junior CLUB HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304209.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Nickelodeon HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-09/c1f0d129b5b9e0eef699d00f5c802bee.png" group-title="Brazil ➾ Kids", Nickelodeon HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304210.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Teennick HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2022-01/af243d4e182395f0b05bfbaa36ad4569.png" group-title="Brazil ➾ Kids", Teennick HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304212.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" MTV Brasil HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/e28bcf462d5d2310a16ec7fb6edbc24f.png" group-title="Brazil ➾ Music", MTV Brasil HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304352.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" Music BOX Brazil HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-05/0d04ee1d714d8d0438b6c5ed4844dfe0.png" group-title="Brazil ➾ Music", Music BOX Brazil HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304353.m3u8
+#EXTINF:-1 tvg-id="" tvg-name=" NOVO Tempo HD" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2020-08/83f70bd11eee502c3e2f9224342cf961.png" group-title="Brazil ➾ Music", NOVO Tempo HD
+http://ip96.uk:8080/live/Ghosia104/pathan104/304354.m3u8
