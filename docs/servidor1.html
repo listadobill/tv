@@ -1,273 +1,367 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TV SIMPLES</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+<meta name="theme-color" content="#000000">
+
+<title>TV DO BILL</title>
+
 <style>
-body {
+* {
     margin: 0;
     padding: 0;
-    background: black;
-    color: white;
-    font-family: Arial;
+    box-sizing: border-box;
 }
 
-#header {
-    background: #222;
-    padding: 10px;
-    border-bottom: 3px solid red;
-    text-align: center;
+body {
+    background: #000;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
 }
 
-#header h1 {
-    color: red;
-    margin: 5px 0;
-    font-size: 24px;
-}
-
-#search {
-    width: 90%;
-    padding: 8px;
-    margin: 5px;
-    font-size: 16px;
-}
-
+/* ===== Layout ===== */
 .container {
-    display: table;
-    width: 100%;
-    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
-#player {
-    display: table-cell;
-    width: 70%;
-    vertical-align: top;
+/* ===== Header ===== */
+header {
+    background: #111;
+    border-bottom: 2px solid #dc2626;
+    padding: 14px;
+}
+
+header h1 {
+    color: #dc2626;
+    font-size: 22px;
+}
+
+header p {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 4px;
+}
+
+.search-box input {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    background: #1f2937;
+    color: #fff;
+}
+
+/* ===== Conteúdo ===== */
+.main-content {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+}
+
+/* ===== Player ===== */
+.player-area {
+    flex: 1;
     padding: 10px;
 }
 
-#channels {
-    display: table-cell;
-    width: 30%;
-    background: #111;
-    overflow-y: auto;
-    border-left: 2px solid #333;
+.player-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #000;
 }
 
-.channel {
-    padding: 12px;
-    border-bottom: 1px solid #333;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.channel:hover {
-    background: #333;
-}
-
-.active {
-    background: red !important;
-    font-weight: bold;
-}
-
-#playerFrame {
+.player-container iframe {
     width: 100%;
     height: 100%;
     border: none;
-    background: black;
 }
 
-#message {
+/* ===== Botão sair fullscreen ===== */
+.exit-fullscreen {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0,0,0,0.75);
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 13px;
+    border-radius: 30px;
+    cursor: pointer;
+    display: none;
+    z-index: 9999;
+}
+
+/* ===== Lista de canais ===== */
+.channel-list {
+    width: 300px;
+    background: #0a0a0a;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.channel-item {
+    padding: 12px;
+    border-bottom: 1px solid #222;
+    cursor: pointer;
+    font-size: 14px;
+    outline: none;
+}
+
+.channel-item:hover,
+.channel-item.active,
+.channel-item:focus {
+    background: #dc2626;
+}
+
+/* ===== Footer ===== */
+footer {
+    background: #111;
+    padding: 10px;
+    font-size: 11px;
+    color: #777;
     text-align: center;
-    padding: 40px;
-    color: #999;
+}
+
+/* ===== MODO TV ===== */
+body.tv-mode header,
+body.tv-mode .channel-list,
+body.tv-mode footer {
+    display: none;
 }
 </style>
 </head>
 
 <body>
 
-<div id="header">
-    <h1>📺 TV SIMPLES</h1>
-    <input type="text" id="search" placeholder="Digite para buscar..." onkeyup="search()">
+<div class="container">
+
+<header>
+    <h1>📺 TV DO BILL</h1>
+    <p>Seus canais ao vivo em tela cheia</p>
+    <div class="search-box">
+        <input type="text" placeholder="Buscar canal..." onkeyup="filterChannels(this.value)">
+    </div>
+</header>
+
+<div class="main-content">
+
+    <div class="player-area">
+        <div class="player-container" id="playerContainer">
+            <div class="exit-fullscreen" id="exitBtn" onclick="exitFullscreen()">⬅ Sair da Tela Cheia</div>
+            <p style="color:#777;text-align:center;margin-top:40px;">
+                Selecione um canal
+            </p>
+        </div>
+    </div>
+
+    <div class="channel-list" id="channelList"></div>
+
 </div>
 
-<div class="container">
-    <div id="player">
-        <div id="message">Selecione um canal da lista</div>
-        <iframe id="playerFrame" style="display:none;"></iframe>
-    </div>
-    
-    <div id="channels">
-        <!-- Canais carregados pelo JavaScript -->
-    </div>
+<footer>
+    TV DO BILL © 2026 • Player estilo Smart TV
+</footer>
+
 </div>
 
 <script>
-// CANAIS - array direto no código
-var channels = [
-    ["Globo SP", "https://embedtvonline.com/globosp/"],
-    ["SBT SP", "https://embedtvonline.com/sbtsp/"],
-    ["Record SP", "https://embedtvonline.com/recordsp/"],
-    ["Band SP", "https://embedtvonline.com/bandsp/"],
-    ["RedeTV!", "https://embedtvonline.com/redetv/"],
-    ["TV Cultura", "https://embedtvonline.com/tvcultura/"],
-    ["SporTV", "https://embedtvonline.com/sportv/"],
-    ["SporTV 2", "https://embedtvonline.com/sportv2/"],
-    ["SporTV 3", "https://embedtvonline.com/sportv3/"],
-    ["GloboNews", "https://embedtvonline.com/globonews/"],
-    ["Record News", "https://embedtvonline.com/recordnews/"],
-    ["CNN Brasil", "https://embedtvonline.com/cnnbrasil/"],
-    ["HBO", "https://embedtvonline.com/hbo/"],
-    ["Discovery Kids", "https://embedtvonline.com/discoverykids/"],
-    ["Cartoon Network", "https://embedtvonline.com/cartoonnetwork/"],
-    ["Band Sports", "https://embedtvonline.com/bandsports/"],
-    ["Combate", "https://embedtvonline.com/combate/"],
-    ["TNT", "https://embedtvonline.com/tnt/"],
-    ["Premiere", "https://embedtvonline.com/premiere2/"],
-    ["ESPN", "https://embedtvonline.com/espn/"]
-];
+const channels = [
+    { name: "Amazon Prime Video", category: "Esportes", url: "https://embedtvonline.com/amazonprimevideo/" },
+    { name: "Band Sports", category: "Esportes", url: "https://embedtvonline.com/bandsports/" },
+    { name: "Canal Off", category: "Esportes", url: "https://embedtvonline.com/canaloff/" },
+    { name: "CazéTV", category: "Esportes", url: "https://embedtvonline.com/cazetv/" },
+    { name: "Combate", category: "Esportes", url: "https://embedtvonline.com/combate/" },
+    { name: "DAZN", category: "Esportes", url: "https://embedtvonline.com/dazn/" },
+    { name: "Disney+", category: "Esportes", url: "https://embedtvonline.com/disneyplus/" },
 
-// FUNÇÃO PARA CARREGAR CANAIS
-function loadChannels(filter) {
-    var container = document.getElementById("channels");
-    container.innerHTML = "";
-    
-    for (var i = 0; i < channels.length; i++) {
-        var name = channels[i][0];
-        var url = channels[i][1];
-        
-        // Filtro de busca
-        if (filter) {
-            if (name.toLowerCase().indexOf(filter.toLowerCase()) === -1) {
-                continue;
-            }
-        }
-        
-        var div = document.createElement("div");
-        div.className = "channel";
-        div.innerHTML = name;
-        div.onclick = (function(nome, endereco, idx) {
-            return function() {
-                selectChannel(nome, endereco, idx);
-            };
-        })(name, url, i);
-        
-        container.appendChild(div);
-    }
+    { name: "ESPN", category: "Esportes", url: "https://embedtvonline.com/espn/" },
+    { name: "ESPN 2", category: "Esportes", url: "https://embedtvonline.com/espn2/" },
+    { name: "ESPN 3", category: "Esportes", url: "https://embedtvonline.com/espn3/" },
+    { name: "ESPN 4", category: "Esportes", url: "https://embedtvonline.com/espn4/" },
+    { name: "ESPN 5", category: "Esportes", url: "https://embedtvonline.com/espn5/" },
+    { name: "ESPN 6", category: "Esportes", url: "https://embedtvonline.com/espn6/" },
+
+    { name: "Max", category: "Esportes", url: "https://embedtvonline.com/max/" },
+    { name: "Nosso Futebol", category: "Esportes", url: "https://embedtvonline.com/nossofutebol/" },
+    { name: "N Sports", category: "Esportes", url: "https://embedtvonline.com/nsports/" },
+    { name: "Paramount +", category: "Esportes", url: "https://embedtvonline.com/paramountplus/" },
+
+    { name: "Premiere Clubes", category: "Esportes", url: "https://embedtvonline.com/premiereclubes/" },
+    { name: "Premiere 2", category: "Esportes", url: "https://embedtvonline.com/premiere2/" },
+    { name: "Premiere 3", category: "Esportes", url: "https://embedtvonline.com/premiere3/" },
+    { name: "Premiere 4", category: "Esportes", url: "https://embedtvonline.com/premiere4/" },
+    { name: "Premiere 5", category: "Esportes", url: "https://embedtvonline.com/premiere5/" },
+    { name: "Premiere 6", category: "Esportes", url: "https://embedtvonline.com/premiere6/" },
+    { name: "Premiere 7", category: "Esportes", url: "https://embedtvonline.com/premiere7/" },
+    { name: "Premiere 8", category: "Esportes", url: "https://embedtvonline.com/premiere8/" },
+
+    { name: "SporTV", category: "Esportes", url: "https://embedtvonline.com/sportv/" },
+    { name: "SporTV 2", category: "Esportes", url: "https://embedtvonline.com/sportv2/" },
+    { name: "SporTV 3", category: "Esportes", url: "https://embedtvonline.com/sportv3/" },
+    { name: "TNT", category: "Esportes", url: "https://embedtvonline.com/tnt/" },
+    { name: "UFC Fight Pass", category: "Esportes", url: "https://embedtvonline.com/ufcfightpass/" },
+    { name: "Xsports", category: "Esportes", url: "https://embedtvonline.com/xsports/" },
+
+    { name: "A&E", category: "Filmes e Séries", url: "https://embedtvonline.com/aee/" },
+    { name: "AMC", category: "Filmes e Séries", url: "https://embedtvonline.com/amc/" },
+    { name: "AXN", category: "Filmes e Séries", url: "https://embedtvonline.com/axn/" },
+    { name: "Cinemax", category: "Filmes e Séries", url: "https://embedtvonline.com/cinemax/" },
+    { name: "Globoplay Novelas", category: "Filmes e Séries", url: "https://embedtvonline.com/globoplaynovelas/" },
+
+    { name: "HBO", category: "Filmes e Séries", url: "https://embedtvonline.com/hbo/" },
+    { name: "HBO 2", category: "Filmes e Séries", url: "https://embedtvonline.com/hbo2/" },
+    { name: "HBO Family", category: "Filmes e Séries", url: "https://embedtvonline.com/hbofamily/" },
+    { name: "HBO Mundi", category: "Filmes e Séries", url: "https://embedtvonline.com/hbomundi/" },
+    { name: "HBO Plus", category: "Filmes e Séries", url: "https://embedtvonline.com/hboplus/" },
+    { name: "HBO Pop", category: "Filmes e Séries", url: "https://embedtvonline.com/hbopop/" },
+    { name: "HBO Signature", category: "Filmes e Séries", url: "https://embedtvonline.com/hbosignature/" },
+    { name: "HBO Xtreme", category: "Filmes e Séries", url: "https://embedtvonline.com/hboxtreme/" },
+
+    { name: "Megapix", category: "Filmes e Séries", url: "https://embedtvonline.com/megapix/" },
+    { name: "Sony Channel", category: "Filmes e Séries", url: "https://embedtvonline.com/sonychannel/" },
+    { name: "Space", category: "Filmes e Séries", url: "https://embedtvonline.com/space/" },
+    { name: "Studio Universal", category: "Filmes e Séries", url: "https://embedtvonline.com/studiouniversal/" },
+    { name: "Warner Channel", category: "Filmes e Séries", url: "https://embedtvonline.com/warner/" },
+
+    { name: "Band SP", category: "Canais Abertos", url: "https://embedtvonline.com/bandsp/" },
+    { name: "Globo SP", category: "Canais Abertos", url: "https://embedtvonline.com/globosp/" },
+    { name: "Record SP", category: "Canais Abertos", url: "https://embedtvonline.com/recordsp/" },
+    { name: "RedeTV!", category: "Canais Abertos", url: "https://embedtvonline.com/redetv/" },
+    { name: "SBT SP", category: "Canais Abertos", url: "https://embedtvonline.com/sbtsp/" },
+    { name: "TV Cultura", category: "Canais Abertos", url: "https://embedtvonline.com/tvcultura/" },
+
+    { name: "CNN Brasil", category: "Notícias", url: "https://embedtvonline.com/cnnbrasil/" },
+    { name: "GloboNews", category: "Notícias", url: "https://embedtvonline.com/globonews/" },
+    { name: "Jovem Pan News", category: "Notícias", url: "https://embedtvonline.com/jovempannews/" },
+    { name: "Record News", category: "Notícias", url: "https://embedtvonline.com/recordnews/" },
+
+    { name: "Cartoon Network", category: "Infantil", url: "https://embedtvonline.com/cartoonnetwork/" },
+    { name: "Discovery Kids", category: "Infantil", url: "https://embedtvonline.com/discoverykids/" },
+    { name: "Nickelodeon", category: "Infantil", url: "https://embedtvonline.com/nickelodeon/" },
+    { name: "Nick Jr.", category: "Infantil", url: "https://embedtvonline.com/nickjr/" },
+    { name: "Tooncast", category: "Infantil", url: "https://embedtvonline.com/tooncast/" }
+].sort((a, b) => a.name.localeCompare(b.name));
+
+let currentIndex = 0;
+let currentChannel = null;
+let reconnectTimer = null;
+
+/* ===== Render ===== */
+function renderChannels(list = channels) {
+    const el = document.getElementById("channelList");
+    el.innerHTML = "";
+
+    list.forEach((ch, index) => {
+        const div = document.createElement("div");
+        div.className = "channel-item";
+        div.tabIndex = 0;
+        div.innerText = ch.name;
+        div.onclick = () => selectChannel(ch, index);
+        div.onfocus = () => currentIndex = index;
+        el.appendChild(div);
+    });
 }
 
-// SELECIONAR CANAL
-function selectChannel(name, url, index) {
-    // Remover classe active de todos
-    var allChannels = document.getElementsByClassName("channel");
-    for (var i = 0; i < allChannels.length; i++) {
-        allChannels[i].className = "channel";
-    }
-    
-    // Adicionar active no selecionado
-    allChannels[index].className = "channel active";
-    
-    // Mostrar no player
-    document.getElementById("message").style.display = "none";
-    var frame = document.getElementById("playerFrame");
-    frame.style.display = "block";
-    frame.src = url;
-    
-    // Scroll para o canal selecionado
-    allChannels[index].scrollIntoView();
-    
-    // Salvar último canal (tentativa)
-    try {
-        localStorage.setItem("lastChannel", name);
-    } catch(e) {
-        // Ignora erro se localStorage não funcionar
-    }
+/* ===== Selecionar ===== */
+function selectChannel(channel, index) {
+    currentChannel = channel;
+    currentIndex = index;
+    localStorage.setItem("lastChannel", channel.name);
+
+    document.querySelectorAll(".channel-item").forEach(i => i.classList.remove("active"));
+    const item = document.querySelectorAll(".channel-item")[index];
+    item.classList.add("active");
+    item.scrollIntoView({ block: "center" });
+
+    loadChannel();
 }
 
-// BUSCAR CANAIS
-function search() {
-    var text = document.getElementById("search").value;
-    loadChannels(text);
+/* ===== Player ===== */
+function loadChannel() {
+    const container = document.getElementById("playerContainer");
+
+    container.innerHTML = `
+        <div class="exit-fullscreen" id="exitBtn" onclick="exitFullscreen()">⬅ Sair da Tela Cheia</div>
+        <iframe id="tvPlayer" src="${currentChannel.url}" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    `;
+
+    setTimeout(() => {
+        openFullscreen();
+        startReconnect();
+    }, 400);
 }
 
-// CARREGAR ÚLTIMO CANAL
-function loadLastChannel() {
-    try {
-        var last = localStorage.getItem("lastChannel");
-        if (last) {
-            for (var i = 0; i < channels.length; i++) {
-                if (channels[i][0] === last) {
-                    selectChannel(channels[i][0], channels[i][1], i);
-                    break;
-                }
-            }
-        }
-    } catch(e) {
-        // Ignora erro
-    }
+/* ===== Fullscreen no CONTAINER ===== */
+function openFullscreen() {
+    const container = document.getElementById("playerContainer");
+    if (container.requestFullscreen) container.requestFullscreen();
+    else if (container.webkitRequestFullscreen) container.webkitRequestFullscreen();
 }
 
-// CONTROLE POR TECLADO (para controle remoto)
-document.onkeydown = function(e) {
-    e = e || window.event;
-    
-    var active = document.querySelector(".active");
-    var allChannels = document.getElementsByClassName("channel");
-    
-    if (allChannels.length === 0) return;
-    
-    var currentIndex = 0;
-    if (active) {
-        for (var i = 0; i < allChannels.length; i++) {
-            if (allChannels[i] === active) {
-                currentIndex = i;
-                break;
-            }
-        }
+function exitFullscreen() {
+    if (document.exitFullscreen) document.exitFullscreen();
+}
+
+/* ===== Ajuste ao sair ===== */
+document.addEventListener("fullscreenchange", () => {
+    const btn = document.getElementById("exitBtn");
+    if (document.fullscreenElement) {
+        document.body.classList.add("tv-mode");
+        if (btn) btn.style.display = "block";
+    } else {
+        document.body.classList.remove("tv-mode");
+        if (btn) btn.style.display = "none";
     }
-    
-    // Seta para baixo
-    if (e.keyCode === 40) {
-        e.preventDefault();
-        var nextIndex = Math.min(currentIndex + 1, allChannels.length - 1);
-        allChannels[nextIndex].click();
-    }
-    
-    // Seta para cima
-    if (e.keyCode === 38) {
-        e.preventDefault();
-        var prevIndex = Math.max(currentIndex - 1, 0);
-        allChannels[prevIndex].click();
-    }
-    
-    // Enter para selecionar
-    if (e.keyCode === 13 && active) {
-        // Já selecionado pelo click
-    }
-    
-    // ESC para voltar
-    if (e.keyCode === 27) {
-        document.getElementById("search").focus();
+});
+
+/* ===== Reconexão ===== */
+function startReconnect() {
+    clearInterval(reconnectTimer);
+    reconnectTimer = setInterval(() => {
+        const iframe = document.getElementById("tvPlayer");
+        if (iframe) iframe.src = iframe.src;
+    }, 60000);
+}
+
+/* ===== Busca ===== */
+function filterChannels(text) {
+    renderChannels(
+        channels.filter(c => c.name.toLowerCase().includes(text.toLowerCase()))
+    );
+}
+
+/* ===== Controle remoto ===== */
+document.addEventListener("keydown", e => {
+    const items = document.querySelectorAll(".channel-item");
+    if (!items.length) return;
+
+    if (e.key === "ArrowDown") currentIndex = Math.min(currentIndex + 1, items.length - 1);
+    if (e.key === "ArrowUp") currentIndex = Math.max(currentIndex - 1, 0);
+
+    if (e.key === "Enter") items[currentIndex].click();
+    if (e.key === "Escape" || e.key === "Backspace") exitFullscreen();
+
+    items[currentIndex].focus();
+    items[currentIndex].scrollIntoView({ block: "center" });
+});
+
+/* ===== Modo TV automático + último canal ===== */
+window.onload = () => {
+    renderChannels();
+
+    const last = localStorage.getItem("lastChannel");
+    if (last) {
+        const index = channels.findIndex(c => c.name === last);
+        if (index >= 0) selectChannel(channels[index], index);
     }
 };
-
-// INICIAR TUDO QUANDO A PÁGINA CARREGAR
-window.onload = function() {
-    loadChannels();
-    loadLastChannel();
-    
-    // Focar no campo de busca
-    document.getElementById("search").focus();
-};
-
-// Fallback se window.onload não funcionar
-// Forçar carregamento após 1 segundo
-setTimeout(function() {
-    if (document.getElementById("channels").innerHTML === "") {
-        loadChannels();
-    }
-}, 1000);
 </script>
 
 </body>
