@@ -1,29 +1,85 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="364262" tvg-name="(BR) AE HD" group-title="BR - BRASIL",(BR) AE HD
-http://192.142.44.56:80/play/live.php?mac=00:1A:79:21:D5:02&stream=364262&extension=ts&play_token=dpx3DFyP1p
-#EXTINF:-1 tvg-id="364261" tvg-name="(BR) Animal Planet HD" group-title="BR - BRASIL",(BR) Animal Planet HD
-http://192.142.44.56:80/play/live.php?mac=00:1A:79:21:D5:02&stream=364261&extension=ts&play_token=Rh6T4Qz9TL
-#EXTINF:-1 tvg-id="364260" tvg-name="(BR) Arte 1" group-title="BR - BRASIL",(BR) Arte 1
-http://192.142.44.56:80/play/live.php?mac=00:1A:79:21:D5:02&stream=364260&extension=ts&play_token=AqsB0LchhE
-#EXTINF:-1 tvg-id="364259" tvg-name="(BR) AXN HD" group-title="BR - BRASIL",(BR) AXN HD
-http://192.142.44.56:80/play/live.php?mac=00:1A:79:21:D5:02&stream=364259&extension=ts&play_token=6oMnS91Dke
-#EXTINF:-1 tvg-id="364258" tvg-name="(BR) Band Sport HD" group-title="BR - BRASIL",(BR) Band Sport HD
-http://192.142.44.56:80/play/live.php?mac=00:1A:79:21:D5:02&stream=364258&extension=ts&play_token=t0fIXgJhyV
-#EXTINF:-1 tvg-id="364257" tvg-name="(BR) Can" group-title="BR - BRASIL",(BR) Can
-http://192.142.44.56:80/play/live.php?mac=00:1A:79:21:D5:02&stream=364257&extension=ts&play_token=dQNLJlEE4G
-#EXTINF:-1 tvg-id="364256" tvg-name="(BR) Band News HD" group-title="BR - BRASIL",(BR) Band News HD
-http://192.142.44.56:80/play/live.php?mac=00:1A:79:21:D5:02&stream=364256&extension=ts&play_token=U3GZiafuZn
-#EXTINF:-1 tvg-id="364255" tvg-name="(BR) Discovery TV" group-title="BR - BRASIL",(BR) Discovery TV
-http://192.142.44.56:80/play/live.php?mac=00:1A:79:21:D5:02&stream=364255&extension=ts&play_token=pPAmRU2NNk
-#EXTINF:-1 tvg-id="364254" tvg-name="(BR) DISCOVERY THEATER HD" group-title="BR - BRASIL",(BR) DISCOVERY THEATER HD
-http://192.142.44.56:80/play/live.php?mac=00:1A:79:21:D5:02&stream=364254&extension=ts&play_token=G2PCXq7Stf
-#EXTINF:-1 tvg-id="364253" tvg-name="(BR) Fish TV" group-title="BR - BRASIL",(BR) Fish TV
-http://192.142.44.56:80/play/live.php?mac=00:1A:79:21:D5:02&stream=364253&extension=ts&play_token=IxSbXErE78
-#EXTINF:-1 tvg-id="364252" tvg-name="(BR) FOX Sports HD" group-title="BR - BRASIL",(BR) FOX Sports HD
-http://192.142.44.56:80/play/live.php?mac=00:1A:79:21:D5:02&stream=364252&extension=ts&play_token=4Ue6CLEScI
-#EXTINF:-1 tvg-id="364251" tvg-name="(BR) FOX Sports 2" group-title="BR - BRASIL",(BR) FOX Sports 2
-http://192.142.44.56:80/play/live.php?mac=00:1A:79:21:D5:02&stream=364251&extension=ts&play_token=AvgH7fawHS
-#EXTINF:-1 tvg-id="364250" tvg-name="(BR) Globo News" group-title="BR - BRASIL",(BR) Globo News
-http://192.142.44.56:80/play/live.php?mac=00:1A:79:21:D5:02&stream=364250&extension=ts&play_token=RvmR4GajrY
-#EXTINF:-1 tvg-id="364249" tvg-name="(BR) Globo Nordeste" group-title="BR - BRASIL",(BR) Globo Nordeste
-http://192.142.44.56:80/play/live.php?mac=00:1A:79:21:D5:02&stream=364249&extension=ts&play_token=LkRqErbmg7
+#EXTINF:-1 group-title="BRAZIL  | TV",•●★★--BRAZIL--★★●•
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221502&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| BAND NEWS HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221501&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| GLOBO SP HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221500&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| CNN Brasil HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1225546&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| GLOBO RJ HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221499&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| GLOBONEWS HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221498&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| RECORD RJ HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221497&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| RECORD SP HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221496&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| RECORD NEWS HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221495&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| SBT RJ HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221494&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| REDETV! HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221493&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| REDE VIDA HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221492&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| CANAL BRASIL HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221491&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| NOVO TEMPO HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221490&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",•●★★--BRAZIL--★★●•
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221502&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| BAND NEWS HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221501&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| GLOBO SP HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221500&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| CNN Brasil HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1225546&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| GLOBO RJ HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221499&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| GLOBONEWS HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221498&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| RECORD RJ HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221497&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| RECORD SP HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221496&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| RECORD NEWS HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221495&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| SBT RJ HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221494&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| REDETV! HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221493&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| REDE VIDA HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221492&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| CANAL BRASIL HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221491&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| NOVO TEMPO HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221490&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| APARECIDA HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221489&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| GAZETA HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221488&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",•●★★--ENTRETIMENTO--★★●•
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221487&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| TRU HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221486&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| STAR LIFE HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221485&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| ID HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221484&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| HGTV HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221483&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| DISCOVERY H & H HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221482&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| FUTURA HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221481&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| HBO 1 HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221480&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| HBO 2 HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221479&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| HBO PLUS HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221478&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| HBO FAMILY HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221477&extension=ts
+#EXTINF:-1 group-title="BRAZIL  | TV",|BR| HBO SIGNATURE HD
+http://44.vb4444.com/c/play/live.php?mac=00:1A:79:B1:0B:7E&stream=1221476&extension=ts
