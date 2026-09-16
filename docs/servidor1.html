@@ -1,248 +1,462 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TV DO BILL</title>
-<link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet">
-<style>
-body {
-    font-family: Arial,sans-serif;
-    margin:0;
-    padding:0;
-    background:#000;
-    color:#fff;
-    display:flex;
-    flex-direction:column;
-    height:100vh;
-    overflow:hidden;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TV Player</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-#container { display:flex; flex-direction:column; width:100%; height:100%; }
-#main { display:flex; flex:1; overflow:hidden; }
-#player { flex:2; background:rgba(0,0,0,0.8); position:relative; display:flex; justify-content:center; align-items:center; overflow:hidden; cursor:pointer; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0d0d0d;
+      color: #fff;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+    }
 
-.video-js {
-    width:100% !important;
-    height:100% !important;
-    background:#000;
-    font-size: 1.4em;
-}
+    /* ===== BARRA LATERAL ===== */
+    .sidebar {
+      width: 340px;
+      background: #1a1a1a;
+      display: flex;
+      flex-direction: column;
+      border-right: 2px solid #333;
+      flex-shrink: 0;
+    }
 
-/* Sidebar */
-#sidebar { flex:1; background:rgba(20,20,20,0.9); overflow-y:auto; padding:10px; border-left:3px solid #600; }
-#sidebar ul { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px; }
-#sidebar li { background:rgba(60,60,60,0.85); border-radius:8px; padding:12px; cursor:pointer; transition:all 0.3s; font-size:1.1em; }
-#sidebar li:hover, #sidebar li:focus, #sidebar li.active { background:#900; color:#fff; outline:none; transform:scale(1.03); }
-#search-bar { padding:10px; text-align:center; }
-#search-input { width:95%; padding:10px; border:none; border-radius:5px; font-size:1em; }
+    .search-box {
+      padding: 12px;
+      background: #111;
+      border-bottom: 1px solid #333;
+    }
 
-.vjs-error-display { display:none !important; }
-::-webkit-scrollbar { width:16px; }
-::-webkit-scrollbar-thumb { background:#900; border-radius:10px; }
+    .search-box input {
+      width: 100%;
+      padding: 14px 16px;
+      font-size: 18px;
+      border: none;
+      border-radius: 6px;
+      background: #2a2a2a;
+      color: #fff;
+      outline: none;
+    }
 
-/* ================================
-   Video.js Custom Controls - estilo TV
-================================ */
+    .search-box input:focus {
+      background: #333;
+      box-shadow: 0 0 0 2px #e50914;
+    }
 
-/* Barra de controles no topo */
-.video-js .vjs-control-bar {
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    background: rgba(60,0,0,0.85) !important;
-    padding: 10px 15px !important;
-    display: flex !important;
-    align-items: center !important;
-    box-sizing: border-box;
-    height:70px !important;
-}
+    .channel-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: 8px 0;
+    }
 
-/* Centraliza os controles horizontais */
-.video-js .vjs-control-bar .vjs-control {
-    margin: 0 8px !important;
-}
+    /* Scrollbar mais visível para TV */
+    .channel-list::-webkit-scrollbar {
+      width: 10px;
+    }
+    .channel-list::-webkit-scrollbar-track {
+      background: #1a1a1a;
+    }
+    .channel-list::-webkit-scrollbar-thumb {
+      background: #555;
+      border-radius: 5px;
+    }
 
-/* Botão de play grande central */
-.video-js .vjs-big-play-button {
-    background: rgba(200,0,0,0.85) !important;
-    border:none !important;
-    border-radius:50% !important;
-    width:100px !important;
-    height:100px !important;
-    font-size: 2.8em !important;
-    top:50% !important;
-    left:50% !important;
-    transform: translate(-50%, -50%) !important;
-}
+    .channel-item {
+      padding: 16px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      border-bottom: 1px solid #2a2a2a;
+      transition: background 0.15s;
+      outline: none;
+    }
 
-/* Barra de progresso */
-.video-js .vjs-progress-holder {
-    height: 14px !important;
-    margin: 0 5px !important;
-    border-radius:7px;
-}
-.video-js .vjs-play-progress {
-    background-color: #c00 !important;
-    height: 14px !important;
-    border-radius:7px;
-}
-.video-js .vjs-load-progress {
-    background-color: rgba(255,255,255,0.25) !important;
-    height: 14px !important;
-    border-radius:7px;
-}
-.video-js .vjs-slider { height: 14px !important; }
+    .channel-item:hover,
+    .channel-item:focus {
+      background: #e50914;
+      color: #fff;
+    }
 
-/* Tempo e tooltip */
-.video-js .vjs-time-control, .video-js .vjs-current-time, .video-js .vjs-duration {
-    font-size: 1.3em !important;
-    color: #fff !important;
-}
+    .channel-item.active {
+      background: #e50914;
+      font-weight: bold;
+    }
 
-/* Botões maiores */
-.video-js .vjs-control {
-    width: 50px !important;
-    height: 50px !important;
-}
-.video-js .vjs-play-control .vjs-icon-placeholder,
-.video-js .vjs-fullscreen-control .vjs-icon-placeholder,
-.video-js .vjs-volume-menu-button .vjs-icon-placeholder {
-    font-size: 2.2em !important;
-}
+    /* ===== ÁREA DO PLAYER ===== */
+    .player-area {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background: #000;
+      position: relative;
+    }
 
-/* Volume */
-.video-js .vjs-volume-level { background-color: #c00 !important; }
-.video-js .vjs-volume-bar { height:14px !important; border-radius:7px; }
-</style>
+    .player-header {
+      height: 50px;
+      background: #111;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      font-size: 18px;
+      border-bottom: 1px solid #333;
+      flex-shrink: 0;
+    }
+
+    #current-channel {
+      flex: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .player-container {
+      flex: 1;
+      position: relative;
+      background: #000;
+    }
+
+    #player {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: #000;
+    }
+
+    .placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-size: 22px;
+      gap: 20px;
+    }
+
+    .placeholder svg {
+      width: 80px;
+      height: 80px;
+      fill: #444;
+    }
+
+    /* ===== FULLSCREEN ===== */
+    .fullscreen-btn {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(0,0,0,0.7);
+      border: none;
+      color: white;
+      font-size: 24px;
+      width: 48px;
+      height: 48px;
+      border-radius: 6px;
+      cursor: pointer;
+      z-index: 10;
+      display: none;
+    }
+
+    .player-container:hover .fullscreen-btn,
+    .player-container:focus-within .fullscreen-btn {
+      display: block;
+    }
+
+    /* ===== RESPONSIVO / TV BOX ===== */
+    @media (max-width: 900px) {
+      body {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        height: 40vh;
+      }
+      .player-area {
+        height: 60vh;
+      }
+    }
+  </style>
 </head>
 <body>
-<div id="container">
-    <div id="main">
-        <div id="sidebar">
-            <div id="search-bar">
-                <input type="text" id="search-input" placeholder="Buscar canal...">
-            </div>
-            <ul id="lista-canais"></ul>
-        </div>
-        <div id="player">
-            <video id="video-player" class="video-js vjs-default-skin" controls playsinline></video>
-        </div>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="search-box">
+      <input type="text" id="search" placeholder="Buscar canal..." autofocus>
     </div>
-</div>
+    <div class="channel-list" id="channelList"></div>
+  </div>
 
-<script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    const listaURL = "https://raw.githubusercontent.com/bugsfreeweb/LiveTVCollector/refs/heads/main/LiveTV/Brazil/LiveTV.m3u";
-    const listaCanaisElemento = document.getElementById("lista-canais");
-    const searchInput = document.getElementById("search-input");
+  <!-- PLAYER -->
+  <div class="player-area">
+    <div class="player-header">
+      <span id="current-channel">Selecione um canal</span>
+    </div>
+    <div class="player-container" id="playerContainer">
+      <div class="placeholder" id="placeholder">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        <div>Selecione um canal na lista</div>
+      </div>
+      <iframe id="player" allowfullscreen allow="autoplay; fullscreen; encrypted-media" style="display:none;"></iframe>
+      <button class="fullscreen-btn" onclick="toggleFullscreen()" title="Tela Cheia">⛶</button>
+    </div>
+  </div>
 
-    const video = videojs('video-player', {
-        controls: true,
-        autoplay: true,
-        muted: true,
-        preload: 'auto',
-        fluid: true,
-        responsive: true
-    });
+  <script>
+    // ===== LISTA DE CANAIS (ordem alfabética) =====
+    const channels = [
+      { name: "A&E", url: "http://www.w7.embedtv.lat/ae" },
+      { name: "Adult Swim", url: "http://www.w7.embedtv.lat/adultswim" },
+      { name: "AMC", url: "http://www.w7.embedtv.lat/amc" },
+      { name: "Animal Planet", url: "http://www.w7.embedtv.lat/animalplanet" },
+      { name: "Aparecida", url: "http://www.w7.embedtv.lat/aparecida" },
+      { name: "AXN", url: "http://www.w7.embedtv.lat/axn" },
+      { name: "A Fazenda 18 - 1", url: "http://www.w7.embedtv.lat/afazenda" },
+      { name: "A Fazenda 18 - 2", url: "http://www.w7.embedtv.lat/afazenda2" },
+      { name: "A Fazenda 18 - 3", url: "http://www.w7.embedtv.lat/afazenda3" },
+      { name: "A Fazenda 18 - 4", url: "http://www.w7.embedtv.lat/afazenda4" },
+      { name: "A Fazenda 18 - 5", url: "http://www.w7.embedtv.lat/afazenda5" },
+      { name: "Band News", url: "http://www.w7.embedtv.lat/bandnews" },
+      { name: "Band RJ", url: "http://www.w7.embedtv.lat/bandrj" },
+      { name: "Band SP", url: "http://www.w7.embedtv.lat/bandsp" },
+      { name: "Band Sports", url: "http://www.w7.embedtv.lat/bandsports" },
+      { name: "Canção Nova", url: "http://www.w7.embedtv.lat/cancaonova" },
+      { name: "Cartoonito", url: "http://www.w7.embedtv.lat/cartoonito" },
+      { name: "Cartoon Network", url: "http://www.w7.embedtv.lat/cartoonnetwork" },
+      { name: "CazeTV 1", url: "http://www.w7.embedtv.lat/caze1" },
+      { name: "CazeTV 2", url: "http://www.w7.embedtv.lat/caze2" },
+      { name: "CazeTV 3", url: "http://www.w7.embedtv.lat/caze3" },
+      { name: "Cinemax", url: "http://www.w7.embedtv.lat/cinemax" },
+      { name: "CNN Brasil", url: "http://www.w7.embedtv.lat/cnnbrasil" },
+      { name: "Combate", url: "http://www.w7.embedtv.lat/combate" },
+      { name: "Cultura", url: "http://www.w7.embedtv.lat/cultura" },
+      { name: "Discovery Channel", url: "http://www.w7.embedtv.lat/discoverychannel" },
+      { name: "Discovery H&H", url: "http://www.w7.embedtv.lat/discoveryhh" },
+      { name: "Discovery ID", url: "http://www.w7.embedtv.lat/discoveryid" },
+      { name: "Discovery Kids", url: "http://www.w7.embedtv.lat/discoverykids" },
+      { name: "Discovery Science", url: "http://www.w7.embedtv.lat/discoveryscience" },
+      { name: "Discovery Theater", url: "http://www.w7.embedtv.lat/discoverytheather" },
+      { name: "Discovery Turbo", url: "http://www.w7.embedtv.lat/discoveryturbo" },
+      { name: "Discovery World", url: "http://www.w7.embedtv.lat/discoveryworld" },
+      { name: "Disney Plus 1", url: "http://www.w7.embedtv.lat/disneyplus1" },
+      { name: "Disney Plus 2", url: "http://www.w7.embedtv.lat/disneyplus2" },
+      { name: "Disney Plus 3", url: "http://www.w7.embedtv.lat/disneyplus3" },
+      { name: "ESPN", url: "http://www.w7.embedtv.lat/espn" },
+      { name: "ESPN 2", url: "http://www.w7.embedtv.lat/espn2" },
+      { name: "ESPN 3", url: "http://www.w7.embedtv.lat/espn3" },
+      { name: "ESPN 4", url: "http://www.w7.embedtv.lat/espn4" },
+      { name: "ESPN 5", url: "http://www.w7.embedtv.lat/espn5" },
+      { name: "ESPN 6", url: "http://www.w7.embedtv.lat/espn6" },
+      { name: "Food Network", url: "http://www.w7.embedtv.lat/foodnetwork" },
+      { name: "Globo AM", url: "http://www.w7.embedtv.lat/globoam" },
+      { name: "Globo CE", url: "http://www.w7.embedtv.lat/globoce" },
+      { name: "Globo DF", url: "http://www.w7.embedtv.lat/globodf" },
+      { name: "Globo ES", url: "http://www.w7.embedtv.lat/globoes" },
+      { name: "Globo GO", url: "http://www.w7.embedtv.lat/globogo" },
+      { name: "Globo MG", url: "http://www.w7.embedtv.lat/globomg" },
+      { name: "Globo News", url: "http://www.w7.embedtv.lat/globonews" },
+      { name: "Globo Novelas", url: "http://www.w7.embedtv.lat/globonovelas" },
+      { name: "Globo PB", url: "http://www.w7.embedtv.lat/globopb" },
+      { name: "Globo PE", url: "http://www.w7.embedtv.lat/globope" },
+      { name: "Globo RJ", url: "http://www.w7.embedtv.lat/globorj" },
+      { name: "Globo RS", url: "http://www.w7.embedtv.lat/globors" },
+      { name: "Globo SP", url: "http://www.w7.embedtv.lat/globosp" },
+      { name: "Gloob", url: "http://www.w7.embedtv.lat/gloob" },
+      { name: "GNT", url: "http://www.w7.embedtv.lat/gnt" },
+      { name: "HBO", url: "http://www.w7.embedtv.lat/hbo" },
+      { name: "HBO 2", url: "http://www.w7.embedtv.lat/hbo2" },
+      { name: "HBO Family", url: "http://www.w7.embedtv.lat/hbofamily" },
+      { name: "HBO Mundi", url: "http://www.w7.embedtv.lat/hbomundi" },
+      { name: "HBO Plus", url: "http://www.w7.embedtv.lat/hboplus" },
+      { name: "HBO Pop", url: "http://www.w7.embedtv.lat/hbopop" },
+      { name: "HBO Xtreme", url: "http://www.w7.embedtv.lat/hboxtreme" },
+      { name: "HGTV", url: "http://www.w7.embedtv.lat/hgtv" },
+      { name: "History", url: "http://www.w7.embedtv.lat/history" },
+      { name: "History 2", url: "http://www.w7.embedtv.lat/history2" },
+      { name: "MasterChef", url: "http://www.w7.embedtv.lat/masterchef" },
+      { name: "Max 1", url: "http://www.w7.embedtv.lat/max1" },
+      { name: "Max 2", url: "http://www.w7.embedtv.lat/max2" },
+      { name: "Max 3", url: "http://www.w7.embedtv.lat/max3" },
+      { name: "Megapix", url: "http://www.w7.embedtv.lat/megapix" },
+      { name: "MTV", url: "http://www.w7.embedtv.lat/mtv" },
+      { name: "Multishow", url: "http://www.w7.embedtv.lat/multishow" },
+      { name: "OFF", url: "http://www.w7.embedtv.lat/off" },
+      { name: "Paramount+", url: "http://www.w7.embedtv.lat/paramountplus" },
+      { name: "Paramount+ 2", url: "http://www.w7.embedtv.lat/paramountplus2" },
+      { name: "Premiere 1", url: "http://www.w7.embedtv.lat/premiere" },
+      { name: "Premiere 2", url: "http://www.w7.embedtv.lat/premiere2" },
+      { name: "Premiere 3", url: "http://www.w7.embedtv.lat/premiere3" },
+      { name: "Premiere 4", url: "http://www.w7.embedtv.lat/premiere4" },
+      { name: "Premiere 5", url: "http://www.w7.embedtv.lat/premiere5" },
+      { name: "Premiere 6", url: "http://www.w7.embedtv.lat/premiere6" },
+      { name: "Premiere 7", url: "http://www.w7.embedtv.lat/premiere7" },
+      { name: "Premiere 8", url: "http://www.w7.embedtv.lat/premiere8" },
+      { name: "Prime Video", url: "http://www.w7.embedtv.lat/primevideo" },
+      { name: "Prime Video 2", url: "http://www.w7.embedtv.lat/primevideo2" },
+      { name: "Prime Video 3", url: "http://www.w7.embedtv.lat/primevideo3" },
+      { name: "Prime Video 4", url: "http://www.w7.embedtv.lat/primevideo4" },
+      { name: "PT - A Bola", url: "http://www.w7.embedtv.lat/pt_abola" },
+      { name: "PT - Benfica TV", url: "http://www.w7.embedtv.lat/pt_benficatv" },
+      { name: "PT - Canal 11", url: "http://www.w7.embedtv.lat/pt_canal11" },
+      { name: "PT - Eleven 1", url: "http://www.w7.embedtv.lat/pt_eleven1" },
+      { name: "PT - Eleven 2", url: "http://www.w7.embedtv.lat/pt_eleven2" },
+      { name: "PT - Eleven 3", url: "http://www.w7.embedtv.lat/pt_eleven3" },
+      { name: "PT - Sporttv 1", url: "http://www.w7.embedtv.lat/pt_sportv1" },
+      { name: "PT - Sporttv 2", url: "http://www.w7.embedtv.lat/pt_sportv2" },
+      { name: "PT - Sporttv 3", url: "http://www.w7.embedtv.lat/pt_sportv3" },
+      { name: "PT - Sporttv 4", url: "http://www.w7.embedtv.lat/pt_sportv4" },
+      { name: "PT - Sporttv 5", url: "http://www.w7.embedtv.lat/pt_sportv5" },
+      { name: "PT - Sporttv 6", url: "http://www.w7.embedtv.lat/pt_sportv6" },
+      { name: "PT - Sporttv 7", url: "http://www.w7.embedtv.lat/pt_sportv7" },
+      { name: "Record GO", url: "http://www.w7.embedtv.lat/recordgo" },
+      { name: "Record MG", url: "http://www.w7.embedtv.lat/recordmg" },
+      { name: "Record RJ", url: "http://www.w7.embedtv.lat/recordrj" },
+      { name: "Record SP", url: "http://www.w7.embedtv.lat/recordsp" },
+      { name: "Rede Vida", url: "http://www.w7.embedtv.lat/redevida" },
+      { name: "SBT RJ", url: "http://www.w7.embedtv.lat/sbtrj" },
+      { name: "SBT SP", url: "http://www.w7.embedtv.lat/sbtsp" },
+      { name: "Sony Channel", url: "http://www.w7.embedtv.lat/sonychannel" },
+      { name: "Space", url: "http://www.w7.embedtv.lat/space" },
+      { name: "Sportv", url: "http://www.w7.embedtv.lat/sportv" },
+      { name: "Sportv 2", url: "http://www.w7.embedtv.lat/sportv2" },
+      { name: "Sportv 3", url: "http://www.w7.embedtv.lat/sportv3" },
+      { name: "Sportv 4", url: "http://www.w7.embedtv.lat/sportv4" },
+      { name: "SportyNet", url: "http://www.w7.embedtv.lat/sportynet" },
+      { name: "SportyNet+ 1", url: "http://www.w7.embedtv.lat/sportynetplus1" },
+      { name: "SportyNet+ 2", url: "http://www.w7.embedtv.lat/sportynetplus2" },
+      { name: "SportyNet+ 3", url: "http://www.w7.embedtv.lat/sportynetplus3" },
+      { name: "Star Channel", url: "http://www.w7.embedtv.lat/starchannel" },
+      { name: "Studio Universal", url: "http://www.w7.embedtv.lat/studiouniversal" },
+      { name: "TCM", url: "http://www.w7.embedtv.lat/tcm" },
+      { name: "Telecine Action", url: "http://www.w7.embedtv.lat/telecineaction" },
+      { name: "Telecine Cult", url: "http://www.w7.embedtv.lat/telecinecult" },
+      { name: "Telecine Fun", url: "http://www.w7.embedtv.lat/telecinefun" },
+      { name: "Telecine Pipoca", url: "http://www.w7.embedtv.lat/telecinepipoca" },
+      { name: "Telecine Premium", url: "http://www.w7.embedtv.lat/telecinepremium" },
+      { name: "Telecine Touch", url: "http://www.w7.embedtv.lat/telecinetouch" },
+      { name: "TLC", url: "http://www.w7.embedtv.lat/tlc" },
+      { name: "TNT", url: "http://www.w7.embedtv.lat/tnt" },
+      { name: "TNT Novelas", url: "http://www.w7.embedtv.lat/tntnovelas" },
+      { name: "TNT Series", url: "http://www.w7.embedtv.lat/tntseries" },
+      { name: "TV Pai Eterno", url: "http://www.w7.embedtv.lat/tvpaieterno" },
+      { name: "UFC Fight Pass", url: "http://www.w7.embedtv.lat/ufcfightpass" },
+      { name: "Universal TV", url: "http://www.w7.embedtv.lat/universaltv" },
+      { name: "Warner Channel", url: "http://www.w7.embedtv.lat/warnerchannel" },
+      { name: "XSports", url: "http://www.w7.embedtv.lat/xsports" },
+      { name: "24H Chaves", url: "http://www.w7.embedtv.lat/24h_chaves" },
+      { name: "24H Dragon Ball", url: "http://www.w7.embedtv.lat/24h_dragonball" },
+      { name: "24H Friends", url: "http://www.w7.embedtv.lat/24h_friends" },
+      { name: "24H Naruto", url: "http://www.w7.embedtv.lat/24h_naruto" },
+      { name: "24H Pica-Pau", url: "http://www.w7.embedtv.lat/24h_picapau" },
+      { name: "24H Os Simpsons", url: "http://www.w7.embedtv.lat/24h_simpsons" },
+      { name: "24H Todo Mundo Odeia o Chris", url: "http://www.w7.embedtv.lat/24h_odeiachris" }
+    ];
 
-    function tentarPlay() {
-        video.play().then(() => {
-            if (video.muted()) video.muted(false);
-        }).catch(err => console.log("Autoplay bloqueado:", err));
+    // Ordenar alfabeticamente (já está, mas garante)
+    channels.sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
+
+    const listEl = document.getElementById('channelList');
+    const player = document.getElementById('player');
+    const placeholder = document.getElementById('placeholder');
+    const currentChannel = document.getElementById('current-channel');
+    const searchInput = document.getElementById('search');
+
+    let activeItem = null;
+
+    // Renderiza a lista
+    function renderList(filter = '') {
+      listEl.innerHTML = '';
+      const filtered = channels.filter(c => 
+        c.name.toLowerCase().includes(filter.toLowerCase())
+      );
+
+      filtered.forEach((ch, index) => {
+        const div = document.createElement('div');
+        div.className = 'channel-item';
+        div.textContent = ch.name;
+        div.tabIndex = 0; // permite navegação com controle remoto
+        div.dataset.url = ch.url;
+        div.dataset.name = ch.name;
+
+        div.addEventListener('click', () => playChannel(div));
+        div.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            playChannel(div);
+          }
+        });
+
+        listEl.appendChild(div);
+      });
     }
 
-    // Toggle fullscreen em clique único
-    const playerContainer = document.getElementById('player');
-    playerContainer.addEventListener('click', () => {
-        if (!document.fullscreenElement) {
-            if(video.requestFullscreen) video.requestFullscreen().catch(()=>console.log("Fullscreen não disponível"));
-            else if(video.webkitRequestFullscreen) video.webkitRequestFullscreen();
-        } else {
-            if(document.exitFullscreen) document.exitFullscreen();
-            else if(document.webkitExitFullscreen) document.webkitExitFullscreen();
+    // Toca o canal + tenta fullscreen
+    function playChannel(item) {
+      if (activeItem) activeItem.classList.remove('active');
+      item.classList.add('active');
+      activeItem = item;
+
+      const url = item.dataset.url;
+      const name = item.dataset.name;
+
+      currentChannel.textContent = name;
+      placeholder.style.display = 'none';
+      player.style.display = 'block';
+      player.src = url;
+
+      // Tenta entrar em tela cheia automaticamente
+      setTimeout(() => {
+        const container = document.getElementById('playerContainer');
+        if (container.requestFullscreen) {
+          container.requestFullscreen().catch(() => {});
+        } else if (container.webkitRequestFullscreen) {
+          container.webkitRequestFullscreen();
         }
-    });
-
-    fetch(listaURL)
-        .then(r => r.text())
-        .then(data => {
-            const linhas = data.split('\n');
-            const canais = [];
-
-            linhas.forEach((linha, index) => {
-                if (linha.startsWith('#EXTINF')) {
-                    const nome = linha.split(',')[1].trim();
-                    const url = linhas[index + 1];
-                    canais.push({ name: nome, url: url });
-                }
-            });
-
-            canais.sort((a,b) => a.name.localeCompare(b.name,'pt-BR'));
-
-            function renderizarCanais(lista) {
-                listaCanaisElemento.innerHTML = '';
-                lista.forEach(canal => {
-                    const li = document.createElement('li');
-                    li.tabIndex = 0;
-                    li.textContent = canal.name;
-                    li.addEventListener('click', function() {
-                        video.src({ type:'application/x-mpegURL', src: canal.url });
-                        tentarPlay();
-                        if(video.requestFullscreen) video.requestFullscreen();
-                        reconectar(canal.url);
-                        document.querySelectorAll('#lista-canais li').forEach(el=>el.classList.remove('active'));
-                        li.classList.add('active');
-                    });
-                    listaCanaisElemento.appendChild(li);
-                });
-            }
-
-            renderizarCanais(canais);
-
-            searchInput.addEventListener('input', () => {
-                const filtro = searchInput.value.toLowerCase();
-                const filtrados = canais.filter(c => c.name.toLowerCase().includes(filtro));
-                renderizarCanais(filtrados);
-            });
-
-            listaCanaisElemento.addEventListener('keydown', e => {
-                const ativo = document.activeElement;
-                if(ativo.tagName.toLowerCase() === 'li'){
-                    if(e.key === 'ArrowDown' && ativo.nextElementSibling){
-                        ativo.nextElementSibling.focus();
-                        ativo.nextElementSibling.scrollIntoView({behavior:'smooth', block:'nearest'});
-                        e.preventDefault();
-                    }
-                    if(e.key === 'ArrowUp' && ativo.previousElementSibling){
-                        ativo.previousElementSibling.focus();
-                        ativo.previousElementSibling.scrollIntoView({behavior:'smooth', block:'nearest'});
-                        e.preventDefault();
-                    }
-                    if(e.key === 'Enter') ativo.click();
-                }
-            });
-
-            const primeiro = listaCanaisElemento.querySelector('li');
-            if(primeiro) primeiro.focus();
-        });
-
-    function reconectar(url){
-        video.src({ type:'application/x-mpegURL', src: url });
-        tentarPlay();
-        video.off('error');
-        video.on('error', function() {
-            setTimeout(()=>reconectar(url), 5000);
-        });
+      }, 800);
     }
 
-    video.on('ended', tentarPlay);
-    video.on('pause', () => { if (!video.ended()) tentarPlay(); });
-    video.on('stalled', tentarPlay);
-    video.on('waiting', tentarPlay);
-});
-</script>
+    function toggleFullscreen() {
+      const container = document.getElementById('playerContainer');
+      if (!document.fullscreenElement) {
+        if (container.requestFullscreen) container.requestFullscreen();
+        else if (container.webkitRequestFullscreen) container.webkitRequestFullscreen();
+      } else {
+        if (document.exitFullscreen) document.exitFullscreen();
+        else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+      }
+    }
+
+    // Busca
+    searchInput.addEventListener('input', (e) => {
+      renderList(e.target.value);
+    });
+
+    // Navegação com setas (útil em TV Box)
+    document.addEventListener('keydown', (e) => {
+      const items = [...document.querySelectorAll('.channel-item')];
+      const focused = document.activeElement;
+      const idx = items.indexOf(focused);
+
+      if (e.key === 'ArrowDown' && idx < items.length - 1) {
+        e.preventDefault();
+        items[idx + 1].focus();
+      }
+      if (e.key === 'ArrowUp' && idx > 0) {
+        e.preventDefault();
+        items[idx - 1].focus();
+      }
+    });
+
+    // Inicializa
+    renderList();
+  </script>
 </body>
 </html>
