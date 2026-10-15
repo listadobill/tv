@@ -1,209 +1,170 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="dark" />
-  <title>TV DO BILL</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090d16">
+  <meta name="description" content="TV DO BILL — escolha entre Canais abertos e fechados e Web Canais IPTV ORG.">
+  <title>TV DO BILL — escolha onde entrar</title>
   <style>
-    body{
-      margin:0;
-      font-family: Arial, sans-serif;
-      background:#000;
-      color:#fff;
-      overflow:hidden; /* sem barra de rolagem */
+    :root {
+      color-scheme: dark;
+      --bg: #090d16;
+      --panel: rgba(19, 26, 40, .84);
+      --panel-edge: rgba(190, 204, 231, .13);
+      --ink: #f6f7fb;
+      --muted: #a6b0c1;
+      --gold: #f5b942;
+      --blue: #81baff;
+      --mint: #82e0cf;
     }
-
-    header{
-      text-align:center;
-      padding:10px;
+    * { box-sizing: border-box; }
+    html { min-height: 100%; background: var(--bg); }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse at 50% -15%, rgba(82, 105, 164, .28), transparent 54%),
+        radial-gradient(ellipse at 5% 78%, rgba(20, 157, 165, .10), transparent 34%),
+        radial-gradient(ellipse at 95% 85%, rgba(154, 91, 197, .12), transparent 32%),
+        var(--bg);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      display: flex;
+      flex-direction: column;
     }
-    header h1{
-      font-size:22px;
-      margin:8px 0;
+    .site-header {
+      width: min(1120px, calc(100% - 48px));
+      margin: 0 auto;
+      height: 92px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,.08);
     }
-
-    .grid{
-      display:flex;
-      justify-content:center;
-      align-items:stretch;
-      gap:16px;
-      padding:12px;
-      box-sizing:border-box;
-      flex-wrap: wrap;
+    .brand { display: inline-flex; align-items: center; gap: 13px; color: inherit; text-decoration: none; }
+    .brand-icon {
+      width: 48px; height: 48px; display: grid; place-items: center;
+      border: 1px solid rgba(245,185,66,.42); border-radius: 15px;
+      background: linear-gradient(145deg, rgba(245,185,66,.18), rgba(245,185,66,.035));
+      box-shadow: 0 0 28px rgba(245,185,66,.08), inset 0 1px 0 rgba(255,255,255,.08);
     }
-
-    .card{
-      flex:1;
-      max-width:300px; /* largura máxima de cada card */
-      background:#111;
-      border-radius:12px;
-      overflow:hidden;
-      text-align:center;
-      font-size:14px;
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
+    .brand-icon svg { width: 31px; height: 31px; }
+    .brand-name { font-size: 15px; font-weight: 850; letter-spacing: .19em; }
+    .brand-name span { color: var(--gold); }
+    .header-note { margin-left: auto; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: #8e9aaf; }
+    main { width: min(1050px, calc(100% - 40px)); margin: auto; padding: 68px 0 76px; }
+    .intro { text-align: center; margin: 0 auto 42px; max-width: 680px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 9px; margin-bottom: 18px;
+      color: var(--gold); font-size: 11px; font-weight: 800; letter-spacing: .22em; text-transform: uppercase;
     }
-
-    .card img{
-      width:100%;
-      height:80px;
-      object-fit:contain;
-      padding:10px;
-      box-sizing:border-box;
+    .eyebrow::before, .eyebrow::after { content: ""; width: 23px; height: 1px; background: currentColor; opacity: .65; }
+    h1 { margin: 0; font-size: clamp(37px, 7vw, 66px); line-height: .99; letter-spacing: -.055em; font-weight: 850; }
+    h1 em { color: var(--gold); font-style: normal; }
+    .intro p { margin: 19px 0 0; color: var(--muted); font-size: clamp(14px, 2vw, 17px); line-height: 1.65; }
+    .choices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .choice {
+      position: relative; min-height: 286px; padding: 29px 30px 27px; overflow: hidden;
+      display: flex; flex-direction: column; align-items: flex-start;
+      color: inherit; text-decoration: none; border: 1px solid var(--panel-edge); border-radius: 23px;
+      background: linear-gradient(145deg, rgba(24,33,51,.92), var(--panel));
+      box-shadow: 0 22px 60px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.055);
+      transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+      isolation: isolate;
     }
-
-    .card h2{
-      margin:8px 0 4px;
-      font-size:16px;
+    .choice::before {
+      position: absolute; z-index: -1; content: ""; width: 220px; height: 220px; right: -82px; top: -98px;
+      border-radius: 50%; border: 1px solid rgba(255,255,255,.08);
+      box-shadow: 0 0 0 25px rgba(255,255,255,.018), 0 0 0 52px rgba(255,255,255,.014);
     }
-
-    .card p{
-      margin:4px 0 10px;
-      font-size:13px;
-      color:#bbb;
+    .choice:first-child { --accent: var(--gold); --accent-glow: rgba(245,185,66,.13); }
+    .choice:last-child { --accent: var(--blue); --accent-glow: rgba(100,160,255,.14); }
+    .choice:hover, .choice:focus-visible {
+      transform: translateY(-4px); border-color: color-mix(in srgb, var(--accent) 63%, transparent);
+      box-shadow: 0 27px 70px rgba(0,0,0,.32), 0 0 36px var(--accent-glow), inset 0 1px 0 rgba(255,255,255,.08);
+      outline: none;
     }
-
-    .btn{
-      display:inline-block;
-      padding:6px 10px;
-      margin:4px 0;
-      background:#00d4ff;
-      color:#000;
-      font-weight:bold;
-      text-decoration:none;
-      border-radius:8px;
-      font-size:14px;
+    .choice-icon {
+      width: 58px; height: 58px; display: grid; place-items: center; margin-bottom: 27px;
+      color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 36%, transparent);
+      border-radius: 17px; background: var(--accent-glow);
     }
-
-    .link-download{
-      display:block;
-      margin-top:6px;
-      font-size:12px;
-      color:#ccc;
-      text-decoration:none;
+    .choice-icon svg { width: 31px; height: 31px; }
+    .choice-kicker { color: var(--accent); font-size: 10px; font-weight: 800; letter-spacing: .19em; text-transform: uppercase; }
+    .choice h2 { margin: 8px 0 10px; font-size: clamp(20px, 2.5vw, 25px); letter-spacing: -.035em; line-height: 1.18; }
+    .choice p { max-width: 340px; margin: 0 0 25px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+    .enter { margin-top: auto; min-height: 45px; display: inline-flex; align-items: center; gap: 13px; padding: 0 16px; color: #0c1018; background: var(--accent); border-radius: 11px; font-size: 12px; font-weight: 850; letter-spacing: .035em; }
+    .enter svg { width: 16px; height: 16px; transition: transform .2s ease; }
+    .choice:hover .enter svg, .choice:focus-visible .enter svg { transform: translateX(4px); }
+    .safety {
+      max-width: 700px; margin: 27px auto 0; padding: 15px 18px; display: flex; align-items: flex-start; gap: 12px;
+      border: 1px solid rgba(130,224,207,.18); border-radius: 14px; background: rgba(36,111,105,.10);
+      color: #ccd7e1; font-size: 12px; line-height: 1.55;
     }
-    .link-download:hover{text-decoration:underline}
-
-    .app-cta{
-      margin:10px;
-      text-align:center;
-      padding:10px;
-      border:1px dashed #333;
-      border-radius:10px;
-      background:#111;
-      font-size:14px;
+    .safety svg { flex: 0 0 18px; width: 18px; height: 18px; margin-top: 1px; color: var(--mint); }
+    .safety strong { color: #e8f5f1; }
+    footer { width: min(1120px, calc(100% - 48px)); margin: auto auto 0; padding: 20px 0 23px; border-top: 1px solid rgba(255,255,255,.07); color: #7e899b; font-size: 11px; display: flex; justify-content: space-between; gap: 12px; }
+    footer span:last-child { color: #667286; }
+    @media (max-width: 680px) {
+      .site-header { width: calc(100% - 32px); height: 76px; }
+      .brand-icon { width: 43px; height: 43px; border-radius: 13px; }
+      .header-note { font-size: 9px; letter-spacing: .1em; }
+      main { width: min(460px, calc(100% - 32px)); padding: 49px 0 55px; }
+      .intro { margin-bottom: 29px; }
+      .choices { grid-template-columns: 1fr; gap: 13px; }
+      .choice { min-height: 254px; padding: 23px 23px 22px; border-radius: 19px; }
+      .choice-icon { margin-bottom: 20px; }
+      footer { width: calc(100% - 32px); font-size: 10px; }
     }
-    .app-cta a{
-      display:inline-block;
-      margin-top:8px;
-      padding:8px 14px;
-      background:#7c4dff;
-      color:#fff;
-      border-radius:8px;
-      font-size:14px;
-      text-decoration:none;
-    }
-
-    .iptv-info{
-      margin:15px auto;
-      padding:12px;
-      max-width:600px;
-      text-align:center;
-      font-size:15px;
-      background:#111;
-      border:1px solid #333;
-      border-radius:10px;
-      color:#00d4ff;
-      font-weight:bold;
-    }
-    .iptv-info a{
-      color:#00d4ff;
-      text-decoration:none;
-    }
-    .iptv-info a:hover{text-decoration:underline}
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }
   </style>
 </head>
 <body>
-  <header>
-    <img src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fpng.pngtree.com%2Fpng-clipart%2F20220628%2Foriginal%2Fpngtree-tv-logo-design-flat-icon-illustration-design-png-image_8256689.png&sp=1756833858T5b60b822860eeebce678334ef9ccb4943df756dce9922ea378fd4656511be0ef" alt="logo" style="height:40px;border-radius:6px;vertical-align:middle;">
-    <h1>TV DO BILL</h1>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="TV DO BILL — início">
+      <span class="brand-icon" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none"><path d="m13 7 7 7 7-7M8 15h24v17H8z" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 21h12M14 26h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="28" cy="26" r="1.2" fill="currentColor"/></svg>
+      </span>
+      <span class="brand-name">TV DO <span>BILL</span></span>
+    </a>
+    <span class="header-note">Seu ponto de entrada</span>
   </header>
 
-  <div class="grid">
-    <div class="card">
-      <img src="https://i.ytimg.com/vi/g1Qau6PT4Wk/maxresdefault.jpg" alt="Servidor 1">
-      <h2>Servidor 1</h2>
-      <p>Acesse a lista principal de canais via servidor 1.</p>
-      <a class="btn" href="https://listadobill.github.io/tv/servidor1">Abrir Servidor 1</a>
-      <a href="#" class="link-download" onclick="return downloadSource('https://listadobill.github.io/tv/servidor1','servidor1.html')">Para assistir no computador clique aqui</a>
-    </div>
+  <main id="inicio">
+    <section class="intro" aria-labelledby="title">
+      <div class="eyebrow">Entre e escolha</div>
+      <h1 id="title">Sua TV.<br><em>Do seu jeito.</em></h1>
+      <p>Escolha uma das opções abaixo para continuar.</p>
+    </section>
 
-    <div class="card">
-      <img src="https://www.publicdomainpictures.net/pictures/190000/velka/grunge-flag-of-brazil-state.jpg" alt="Canais WEB Brasileiros">
-      <h2>Canais WEB Brasileiros</h2>
-      <p>Coleção de canais focados no Brasil.</p>
-      <a class="btn" href="https://listadobill.github.io/tv/brasil">Abrir Canais WEB</a>
-      <a href="#" class="link-download" onclick="return downloadSource('https://listadobill.github.io/tv/brasil','canais-web-brasileiros.html')">Para assistir no computador clique aqui</a>
-    </div>
+    <nav class="choices" aria-label="Escolha uma página">
+      <a class="choice" href="https://listadobill.github.io/tv/canaisabertosefechados">
+        <span class="choice-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none"><rect x="4" y="8" width="24" height="17" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="m12 4 4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 14h12M10 18h8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="23" cy="21" r="1" fill="currentColor"/></svg>
+        </span>
+        <span class="choice-kicker">Opção 01 · TV</span>
+        <h2>Canais abertos e fechados</h2>
+        <p>Acesse a página de canais abertos e fechados do TV DO BILL.</p>
+        <span class="enter">Entrar nesta página <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
 
-    <!-- Card Santa Catarina -->
-    <div class="card">
-      <img src="https://aimore.org/brasil/Santa_Catarina.jpg" alt="Canais de Santa Catarina">
-      <h2>Canais de Santa Catarina</h2>
-      <p>Lista exclusiva de canais de SC.</p>
-      <a class="btn" href="https://listadobill.github.io/tv/sc">Abrir SC</a>
-      <a href="#" class="link-download" onclick="return downloadSource('https://listadobill.github.io/tv/sc','canais-sc.html')">Para assistir no computador clique aqui</a>
-    </div>
-  </div>
+      <a class="choice" href="https://listadobill.github.io/tv/webcanais">
+        <span class="choice-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none"><path d="M5 9.5A2.5 2.5 0 0 1 7.5 7h17A2.5 2.5 0 0 1 27 9.5v12a2.5 2.5 0 0 1-2.5 2.5h-17A2.5 2.5 0 0 1 5 21.5z" stroke="currentColor" stroke-width="1.8"/><path d="m13 13 7 3.5-7 3.5z" fill="currentColor"/><path d="M11 28h10M16 24v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </span>
+        <span class="choice-kicker">Opção 02 · IPTV ORG</span>
+        <h2>Web Canais IPTV ORG</h2>
+        <p>Abra o Web Canais e explore as listas de canais do IPTV ORG.</p>
+        <span class="enter">Abrir Web Canais <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+    </nav>
 
-  <!-- Informação IPTV -->
-  <div class="iptv-info">
-    Lista para APP IPTV: <a href="https://bit.ly/bill-iptv" target="_blank">https://bit.ly/bill-iptv</a>
-  </div>
+    <aside class="safety" role="note">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3 20 6v5c0 5.1-3.4 8.7-8 10-4.6-1.3-8-4.9-8-10V6z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M12 8v5m0 3h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <span><strong>Dica de navegação:</strong> use bloqueadores de anúncios e, de preferência, use o Firefox.</span>
+    </aside>
+  </main>
 
-  <div class="app-cta">
-    <div>Quer assistir no Android com app leve?</div>
-    <a href="https://drive.google.com/file/d/1uVNYvaBjf6YI1pS48WQ2W_XoMTgM3CYq/view?usp=sharing">Baixe o APP DO BILL para Android</a>
-  </div>
-
-  <script>
-    function downloadSource(url, filename){
-      try {
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', url, false);
-        xhr.send();
-        
-        if (xhr.status === 200) {
-          var text = xhr.responseText;
-          var blob = new Blob([text], {type:'text/html;charset=utf-8'});
-          triggerDownload(blob, filename);
-        } else {
-          throw new Error('HTTP '+xhr.status);
-        }
-      } catch(err) {
-        var safeUrl = url.replace(/\"/g,'&quot;');
-        var fallback = '<!DOCTYPE html><html><head><meta charset=\"UTF-8\">'+
-          '<meta http-equiv=\"refresh\" content=\"0;url='+safeUrl+'\"></head>'+
-          '<body><p>Abrindo <a href=\"'+safeUrl+'\">'+safeUrl+'</a>...</p></body></html>';
-        var blob = new Blob([fallback], {type:'text/html;charset=utf-8'});
-        triggerDownload(blob, filename);
-      }
-      return false;
-    }
-
-    function triggerDownload(blob, filename){
-      var a = document.createElement('a');
-      a.href = URL.createObjectURL(blob);
-      a.download = filename;
-      document.body.appendChild(a);
-      a.click();
-      setTimeout(function(){
-        document.body.removeChild(a);
-        URL.revokeObjectURL(a.href);
-      }, 100);
-    }
-  </script>
+  <footer><span>TV DO BILL</span><span>Selecione uma opção para acessar.</span></footer>
 </body>
 </html>
